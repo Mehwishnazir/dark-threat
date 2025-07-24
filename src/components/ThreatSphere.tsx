@@ -1,11 +1,10 @@
 import { useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { Sphere, Box } from '@react-three/drei';
 import { Mesh } from 'three';
 
 function RotatingThreatSphere() {
   const sphereRef = useRef<Mesh>(null);
-  const boxesRef = useRef<Mesh[]>([]);
+  const boxRefs = useRef<(Mesh | null)[]>([]);
 
   useFrame((state) => {
     const time = state.clock.getElapsedTime();
@@ -15,7 +14,7 @@ function RotatingThreatSphere() {
       sphereRef.current.rotation.x = Math.sin(time) * 0.1;
     }
 
-    boxesRef.current.forEach((box, index) => {
+    boxRefs.current.forEach((box, index) => {
       if (box) {
         box.rotation.y = time * (1 + index * 0.1);
         box.position.x = Math.sin(time + index * 2) * 3;
@@ -28,7 +27,8 @@ function RotatingThreatSphere() {
   return (
     <>
       {/* Main threat sphere */}
-      <Sphere ref={sphereRef} args={[1.5, 32, 32]} position={[0, 0, 0]}>
+      <mesh ref={sphereRef} position={[0, 0, 0]}>
+        <sphereGeometry args={[1.5, 32, 32]} />
         <meshStandardMaterial
           color="#ff0000"
           metalness={0.8}
@@ -36,16 +36,20 @@ function RotatingThreatSphere() {
           emissive="#330000"
           emissiveIntensity={0.2}
         />
-      </Sphere>
+      </mesh>
 
       {/* Orbiting threat indicators */}
       {Array.from({ length: 6 }, (_, i) => (
-        <Box
+        <mesh
           key={i}
-          ref={(ref) => (boxesRef.current[i] = ref!)}
-          args={[0.2, 0.2, 0.2]}
+          ref={(ref) => {
+            if (boxRefs.current) {
+              boxRefs.current[i] = ref;
+            }
+          }}
           position={[Math.sin(i * Math.PI / 3) * 3, 0, Math.cos(i * Math.PI / 3) * 3]}
         >
+          <boxGeometry args={[0.2, 0.2, 0.2]} />
           <meshStandardMaterial
             color="#ff0000"
             metalness={0.9}
@@ -53,7 +57,7 @@ function RotatingThreatSphere() {
             emissive="#660000"
             emissiveIntensity={0.3}
           />
-        </Box>
+        </mesh>
       ))}
 
       {/* Lighting */}
@@ -70,6 +74,9 @@ export default function ThreatSphere() {
       <Canvas
         camera={{ position: [0, 0, 8], fov: 45 }}
         gl={{ antialias: true, alpha: true }}
+        onCreated={({ gl }) => {
+          gl.setClearColor(0x000000, 0);
+        }}
       >
         <RotatingThreatSphere />
       </Canvas>
