@@ -1,14 +1,43 @@
+
 import { Suspense } from 'react';
 import { Button } from '@/components/ui/button';
 import ThreatSphere from '@/components/ThreatSphere';
 import StatCard from '@/components/StatCard';
 import ServiceCard from '@/components/ServiceCard';
 import PricingCard from '@/components/PricingCard';
+import TrialRegistrationForm from '@/components/TrialRegistrationForm';
+import ComparisonTable from '@/components/ComparisonTable';
+import ReviewsSection from '@/components/ReviewsSection';
+import Banner from '@/components/Banner';
 import { Shield, Search, AlertTriangle, Users, Database, Zap, Eye, Globe, Lock } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      {/* Banner */}
+      <Banner />
+
+      {/* Header */}
+      <header className="py-6 px-6 border-b border-border">
+        <div className="max-w-6xl mx-auto flex items-center justify-between">
+          <div className="text-2xl font-oswald font-bold text-foreground">
+            DARK<span className="text-primary">THREAT</span>
+          </div>
+          <nav className="flex items-center space-x-6">
+            <Link to="/" className="text-primary">
+              Home
+            </Link>
+            <Link to="/data-leak-detection" className="text-muted-foreground hover:text-primary transition-colors">
+              Data Leak Detection
+            </Link>
+            <Button className="hero-button">
+              Start Free Trial
+            </Button>
+          </nav>
+        </div>
+      </header>
+
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center cyber-grid overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background"></div>
@@ -147,11 +176,12 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <PricingCard
               plan="Standard"
-              price="$200"
-              billing="per month"
+              monthlyPrice="$200"
+              annualPrice="$2,000"
+              discount="17%"
               features={[
                 "Basic breach & credential monitoring",
                 "1 API key included",
@@ -162,8 +192,9 @@ const Index = () => {
             />
             <PricingCard
               plan="Enterprise"
-              price="$340"
-              billing="per month"
+              monthlyPrice="$340"
+              annualPrice="$3,400"
+              discount="17%"
               popular={true}
               features={[
                 "Full domain & hacker chatter feeds",
@@ -175,9 +206,25 @@ const Index = () => {
               ]}
             />
             <PricingCard
+              plan="Custom"
+              monthlyPrice="$1,200"
+              annualPrice="$12,000"
+              discount="17%"
+              features={[
+                "Custom threat intelligence feeds",
+                "Unlimited API keys",
+                "Unlimited search credits",
+                "Dedicated analyst team",
+                "Custom integrations",
+                "24/7 priority support"
+              ]}
+            />
+            <PricingCard
               plan="MSSP White-Label"
-              price="Custom"
-              billing="contact sales"
+              monthlyPrice="Custom"
+              annualPrice="Custom"
+              discount=""
+              isCustom={true}
               features={[
                 "White-label portal",
                 "Multi-tenant API",
@@ -197,6 +244,23 @@ const Index = () => {
               Start Free Trial
             </Button>
           </div>
+        </div>
+      </section>
+
+      {/* Comparison Table */}
+      <section className="py-20 px-6 bg-gradient-to-b from-background to-threat-dark">
+        <div className="max-w-6xl mx-auto">
+          <ComparisonTable />
+        </div>
+      </section>
+
+      {/* Reviews Section */}
+      <ReviewsSection />
+
+      {/* Trial Registration */}
+      <section className="py-20 px-6">
+        <div className="max-w-6xl mx-auto">
+          <TrialRegistrationForm />
         </div>
       </section>
 

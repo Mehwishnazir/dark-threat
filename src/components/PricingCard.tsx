@@ -1,14 +1,28 @@
+
 import { Button } from '@/components/ui/button';
+import { useState } from 'react';
 
 interface PricingCardProps {
   plan: string;
-  price: string;
-  billing: string;
+  monthlyPrice: string;
+  annualPrice: string;
+  discount: string;
   features: string[];
   popular?: boolean;
+  isCustom?: boolean;
 }
 
-export default function PricingCard({ plan, price, billing, features, popular }: PricingCardProps) {
+export default function PricingCard({ 
+  plan, 
+  monthlyPrice, 
+  annualPrice, 
+  discount, 
+  features, 
+  popular,
+  isCustom 
+}: PricingCardProps) {
+  const [isAnnual, setIsAnnual] = useState(true);
+
   return (
     <div className={`threat-card relative ${popular ? 'border-primary' : ''}`}>
       {popular && (
@@ -24,12 +38,52 @@ export default function PricingCard({ plan, price, billing, features, popular }:
           <h3 className="text-xl font-oswald font-bold text-foreground mb-2">
             {plan}
           </h3>
-          <div className="text-3xl font-oswald font-bold text-primary mb-1">
-            {price}
-          </div>
-          <div className="text-sm text-muted-foreground">
-            {billing}
-          </div>
+          
+          {!isCustom && (
+            <div className="mb-4">
+              <div className="flex justify-center mb-2">
+                <div className="bg-muted rounded-full p-1 flex">
+                  <button
+                    onClick={() => setIsAnnual(false)}
+                    className={`px-3 py-1 text-xs font-oswald font-semibold rounded-full transition-colors ${
+                      !isAnnual ? 'bg-primary text-black' : 'text-muted-foreground'
+                    }`}
+                  >
+                    Monthly
+                  </button>
+                  <button
+                    onClick={() => setIsAnnual(true)}
+                    className={`px-3 py-1 text-xs font-oswald font-semibold rounded-full transition-colors ${
+                      isAnnual ? 'bg-primary text-black' : 'text-muted-foreground'
+                    }`}
+                  >
+                    Annual
+                  </button>
+                </div>
+              </div>
+              
+              <div className="text-3xl font-oswald font-bold text-primary mb-1">
+                {isAnnual ? annualPrice : monthlyPrice}
+              </div>
+              <div className="text-sm text-muted-foreground">
+                {isAnnual ? 'per year' : 'per month'}
+              </div>
+              
+              {isAnnual && discount && (
+                <div className="mt-2">
+                  <span className="bg-green-900 text-green-400 px-2 py-1 text-xs font-bold rounded-full">
+                    Save {discount}
+                  </span>
+                </div>
+              )}
+            </div>
+          )}
+          
+          {isCustom && (
+            <div className="text-3xl font-oswald font-bold text-primary mb-1">
+              Custom
+            </div>
+          )}
         </div>
 
         <ul className="space-y-3 mb-8">
@@ -44,7 +98,7 @@ export default function PricingCard({ plan, price, billing, features, popular }:
         <Button 
           className={`w-full ${popular ? 'hero-button' : 'border border-border hover:border-primary hover:bg-primary hover:text-black'}`}
         >
-          Get Started
+          {isCustom ? 'Contact Sales' : 'Get Started'}
         </Button>
       </div>
     </div>
