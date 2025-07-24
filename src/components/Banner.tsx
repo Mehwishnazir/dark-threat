@@ -24,7 +24,7 @@ export default function Banner() {
   return (
     <div className="bg-gradient-to-r from-primary to-primary/80 py-4 px-6 overflow-hidden">
       <div className="max-w-6xl mx-auto">
-        <div className="flex items-center justify-center space-x-8 animate-scan">
+        <div className="flex items-center justify-center space-x-8 animate-scan whitespace-nowrap">
           {features.map((feature, index) => (
             <div key={index} className="flex items-center space-x-2 text-black whitespace-nowrap">
               {feature.icon}

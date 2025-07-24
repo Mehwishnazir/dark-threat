@@ -116,4 +116,31 @@ All colors MUST be HSL.
       linear-gradient(90deg, rgba(255,0,0,0.1) 1px, transparent 1px);
     background-size: 20px 20px;
   }
+
+  /* Slow banner animation */
+  .animate-scan {
+    animation: scan 30s linear infinite;
+  }
+
+  @keyframes scan {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }
+
+  /* Enhanced 3D effects */
+  .glow-border {
+    @apply border border-primary/30 shadow-[0_0_20px_hsl(0_100%_50%_/_0.2)] hover:shadow-[0_0_30px_hsl(0_100%_50%_/_0.4)] transition-all duration-300;
+  }
+
+  .glass-effect {
+    @apply bg-black/20 backdrop-blur-xl border border-primary/20;
+  }
+
+  .neon-text {
+    color: hsl(0 100% 50%);
+    text-shadow: 
+      0 0 5px hsl(0 100% 50% / 0.5),
+      0 0 10px hsl(0 100% 50% / 0.3),
+      0 0 15px hsl(0 100% 50% / 0.2);
+  }
 }

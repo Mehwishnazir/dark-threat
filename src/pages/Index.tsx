@@ -31,9 +31,9 @@ const Index = () => {
             <Link to="/data-leak-detection" className="text-muted-foreground hover:text-primary transition-colors">
               Data Leak Detection
             </Link>
-            <Button className="hero-button">
+            <Link to="/signin" className="hero-button">
               Start Free Trial
-            </Button>
+            </Link>
           </nav>
         </div>
       </header>
@@ -61,9 +61,9 @@ const Index = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="hero-button">
+            <Link to="/signin" className="hero-button inline-block text-center">
               Start Free Trial
-            </Button>
+            </Link>
             <Button variant="outline" className="border-border hover:border-primary hover:bg-primary/10">
               Watch Demo
             </Button>
@@ -240,9 +240,9 @@ const Index = () => {
             <p className="text-lg text-muted-foreground mb-6">
               Start with a 7-day free trial • No credit card required
             </p>
-            <Button className="hero-button text-lg px-8 py-4">
+            <Link to="/signin" className="hero-button text-lg px-8 py-4 inline-block text-center">
               Start Free Trial
-            </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -265,14 +265,45 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-6 border-t border-border">
-        <div className="max-w-6xl mx-auto text-center">
-          <div className="text-2xl font-oswald font-bold text-foreground mb-4">
-            DARK<span className="text-primary">THREAT</span>
+      <footer className="bg-card border-t border-border py-12">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="col-span-1 md:col-span-2">
+              <div className="flex items-center space-x-2 mb-4">
+                <Shield className="w-8 h-8 text-primary" />
+                <span className="text-xl font-oswald font-bold text-foreground">DarkThreat</span>
+              </div>
+              <p className="text-muted-foreground mb-4">
+                Advanced dark web monitoring and threat intelligence platform protecting your organization 24/7.
+              </p>
+              <div className="flex space-x-4">
+                <a href="#" className="text-muted-foreground hover:text-primary">Twitter</a>
+                <a href="#" className="text-muted-foreground hover:text-primary">LinkedIn</a>
+                <a href="#" className="text-muted-foreground hover:text-primary">GitHub</a>
+              </div>
+            </div>
+            <div>
+              <h3 className="font-oswald font-semibold text-foreground mb-4">Platform</h3>
+              <ul className="space-y-2">
+                <li><Link to="/data-leak-detection" className="text-muted-foreground hover:text-primary">Data Leak Detection</Link></li>
+                <li><a href="#pricing" className="text-muted-foreground hover:text-primary">Pricing</a></li>
+                <li><Link to="/signin" className="text-muted-foreground hover:text-primary">Sign In</Link></li>
+                <li><Link to="/dashboard" className="text-muted-foreground hover:text-primary">Dashboard</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-oswald font-semibold text-foreground mb-4">Legal</h3>
+              <ul className="space-y-2">
+                <li><Link to="/privacy-policy" className="text-muted-foreground hover:text-primary">Privacy Policy</Link></li>
+                <li><Link to="/platform-terms" className="text-muted-foreground hover:text-primary">Platform Terms of Use</Link></li>
+                <li><Link to="/website-terms" className="text-muted-foreground hover:text-primary">Website Terms of Use</Link></li>
+                <li><a href="#" className="text-muted-foreground hover:text-primary">Support</a></li>
+              </ul>
+            </div>
           </div>
-          <p className="text-muted-foreground">
-            Advanced dark web threat intelligence for modern security teams
-          </p>
+          <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground">
+            <p>&copy; 2025 DarkThreat. All rights reserved.</p>
+          </div>
         </div>
       </footer>
     </div>
