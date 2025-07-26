@@ -32,14 +32,21 @@ export default function SignIn() {
             </div>
 
             {/* Sign In Form */}
-            <form className="space-y-4">
+            <form className="space-y-4" onSubmit={(e) => {
+              e.preventDefault();
+              if (email === 'admin' && password === 'admin') {
+                window.location.href = '/dashboard';
+              } else {
+                alert('Invalid credentials. Use admin/admin for demo.');
+              }
+            }}>
               <div className="space-y-2">
                 <label className="text-sm font-medium text-foreground">Email Address</label>
                 <div className="relative">
                   <Mail className="absolute left-3 top-3 w-4 h-4 text-muted-foreground" />
                   <Input
-                    type="email"
-                    placeholder="your@company.com"
+                    type="text"
+                    placeholder="admin"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     className="pl-10 bg-input border-border focus:border-primary"
@@ -53,7 +60,7 @@ export default function SignIn() {
                   <Lock className="absolute left-3 top-3 w-4 h-4 text-muted-foreground" />
                   <Input
                     type={showPassword ? "text" : "password"}
-                    placeholder="Enter your password"
+                    placeholder="admin"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     className="pl-10 pr-10 bg-input border-border focus:border-primary"

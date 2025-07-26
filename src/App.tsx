@@ -11,6 +11,7 @@ import PlatformTerms from "./pages/PlatformTerms";
 import WebsiteTerms from "./pages/WebsiteTerms";
 import SignIn from "./pages/SignIn";
 import Dashboard from "./pages/Dashboard";
+import ThreatIntelligence from "./pages/ThreatIntelligence";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/website-terms" element={<WebsiteTerms />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/threat-intelligence" element={<ThreatIntelligence />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

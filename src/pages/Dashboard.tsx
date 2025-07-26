@@ -12,13 +12,16 @@ import {
   Search,
   Download,
   Settings,
-  Bell
+  Bell,
+  Lock,
+  LogOut
 } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Link } from 'react-router-dom';
 
 export default function Dashboard() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -46,64 +49,85 @@ export default function Dashboard() {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="border-b border-border bg-card/50 backdrop-blur-xl">
-        <div className="flex items-center justify-between px-6 py-4">
-          <div className="flex items-center space-x-4">
-            <div className="flex items-center space-x-2">
-              <Shield className="w-8 h-8 text-primary" />
-              <h1 className="text-xl font-oswald font-bold text-foreground">DarkThreat</h1>
-            </div>
-            <Badge variant="outline" className="text-xs">Enterprise</Badge>
+    <div className="min-h-screen bg-background flex">
+      {/* Sidebar */}
+      <aside className="w-64 bg-card border-r border-border">
+        <div className="p-6">
+          <div className="flex items-center space-x-2 mb-8">
+            <Shield className="w-8 h-8 text-primary" />
+            <span className="text-xl font-oswald font-bold text-foreground">DarkThreat</span>
           </div>
-          <div className="flex items-center space-x-4">
-            <Button variant="ghost" size="icon">
-              <Bell className="w-4 h-4" />
-            </Button>
-            <Button variant="ghost" size="icon">
-              <Settings className="w-4 h-4" />
-            </Button>
-            <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-              <span className="text-sm font-semibold text-primary-foreground">JD</span>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      <div className="flex">
-        {/* Sidebar */}
-        <aside className="w-64 bg-card/30 backdrop-blur-xl border-r border-border h-[calc(100vh-73px)]">
-          <nav className="p-4 space-y-2">
+          
+          <nav className="space-y-2">
             <Button variant="ghost" className="w-full justify-start bg-primary/10 text-primary">
               <Activity className="w-4 h-4 mr-2" />
-              Dashboard
+              Overview
             </Button>
-            <Button variant="ghost" className="w-full justify-start">
-              <AlertTriangle className="w-4 h-4 mr-2" />
-              Threats
-            </Button>
-            <Button variant="ghost" className="w-full justify-start">
-              <Shield className="w-4 h-4 mr-2" />
-              Assets
-            </Button>
-            <Button variant="ghost" className="w-full justify-start">
+            <Link to="/threat-intelligence">
+              <Button variant="ghost" className="w-full justify-start text-muted-foreground hover:text-foreground">
+                <AlertTriangle className="w-4 h-4 mr-2" />
+                Threat Intelligence
+              </Button>
+            </Link>
+            <Button variant="ghost" className="w-full justify-start text-muted-foreground hover:text-foreground">
               <Eye className="w-4 h-4 mr-2" />
-              Dark Web
+              Dark Web Monitoring
             </Button>
-            <Button variant="ghost" className="w-full justify-start">
-              <Search className="w-4 h-4 mr-2" />
-              Search
+            <Button variant="ghost" className="w-full justify-start text-muted-foreground hover:text-foreground">
+              <Globe className="w-4 h-4 mr-2" />
+              Asset Discovery
             </Button>
-            <Button variant="ghost" className="w-full justify-start">
-              <TrendingUp className="w-4 h-4 mr-2" />
-              Analytics
+            <Button variant="ghost" className="w-full justify-start text-muted-foreground hover:text-foreground">
+              <Lock className="w-4 h-4 mr-2" />
+              Credential Monitoring
+            </Button>
+            <Button variant="ghost" className="w-full justify-start text-muted-foreground hover:text-foreground">
+              <Database className="w-4 h-4 mr-2" />
+              Reports
             </Button>
           </nav>
-        </aside>
+        </div>
+        
+        <div className="absolute bottom-0 w-64 p-6 border-t border-border">
+          <Button variant="ghost" className="w-full justify-start text-muted-foreground hover:text-foreground mb-2">
+            <Settings className="w-4 h-4 mr-2" />
+            Settings
+          </Button>
+          <Link to="/">
+            <Button variant="ghost" className="w-full justify-start text-muted-foreground hover:text-foreground">
+              <LogOut className="w-4 h-4 mr-2" />
+              Sign Out
+            </Button>
+          </Link>
+        </div>
+      </aside>
 
-        {/* Main Content */}
-        <main className="flex-1 p-6 space-y-6">
+      {/* Main Content */}
+      <main className="flex-1">
+        {/* Header */}
+        <header className="bg-card border-b border-border px-6 py-4">
+          <div className="flex items-center justify-between">
+            <div>
+              <h1 className="text-2xl font-oswald font-bold text-foreground">Dashboard Overview</h1>
+              <p className="text-muted-foreground">Monitor your organization's dark web exposure</p>
+            </div>
+            <div className="flex items-center space-x-4">
+              <Button variant="outline" size="sm">
+                <Bell className="w-4 h-4 mr-2" />
+                Notifications
+              </Button>
+              <Badge variant="outline" className="text-green-400 border-green-400">
+                System Online
+              </Badge>
+              <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                <span className="text-sm font-semibold text-primary-foreground">AD</span>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        {/* Dashboard Content */}
+        <div className="p-6 space-y-6">
           {/* Search Bar */}
           <div className="flex items-center space-x-4">
             <div className="relative flex-1">
@@ -236,8 +260,8 @@ export default function Dashboard() {
               </Card>
             </TabsContent>
           </Tabs>
-        </main>
-      </div>
+        </div>
+      </main>
     </div>
   );
 }

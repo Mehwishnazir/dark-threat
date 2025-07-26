@@ -1,22 +1,23 @@
 
-import { Suspense } from 'react';
+import { Suspense, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import ThreatSphere from '@/components/ThreatSphere';
 import StatCard from '@/components/StatCard';
 import ServiceCard from '@/components/ServiceCard';
 import PricingCard from '@/components/PricingCard';
 import TrialRegistrationForm from '@/components/TrialRegistrationForm';
+import TrialModal from '@/components/TrialModal';
 import ComparisonTable from '@/components/ComparisonTable';
 import ReviewsSection from '@/components/ReviewsSection';
-import Banner from '@/components/Banner';
 import { Shield, Search, AlertTriangle, Users, Database, Zap, Eye, Globe, Lock } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Index = () => {
+  const [isTrialModalOpen, setIsTrialModalOpen] = useState(false);
+  const [isAnnual, setIsAnnual] = useState(true);
+
   return (
     <div className="min-h-screen bg-background">
-      {/* Banner */}
-      <Banner />
 
       {/* Header */}
       <header className="py-6 px-6 border-b border-border">
@@ -31,9 +32,12 @@ const Index = () => {
             <Link to="/data-leak-detection" className="text-muted-foreground hover:text-primary transition-colors">
               Data Leak Detection
             </Link>
-            <Link to="/signin" className="hero-button">
+            <Button 
+              onClick={() => setIsTrialModalOpen(true)}
+              className="hero-button"
+            >
               Start Free Trial
-            </Link>
+            </Button>
           </nav>
         </div>
       </header>
@@ -61,9 +65,12 @@ const Index = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/signin" className="hero-button inline-block text-center">
+            <Button 
+              onClick={() => setIsTrialModalOpen(true)}
+              className="hero-button"
+            >
               Start Free Trial
-            </Link>
+            </Button>
             <Button variant="outline" className="border-border hover:border-primary hover:bg-primary/10">
               Watch Demo
             </Button>
@@ -176,62 +183,76 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Pricing Toggle */}
+          <div className="flex justify-center mb-12">
+            <div className="bg-muted rounded-full p-1 flex">
+              <button
+                onClick={() => setIsAnnual(false)}
+                className={`px-6 py-2 text-sm font-oswald font-semibold rounded-full transition-colors ${
+                  !isAnnual ? 'bg-primary text-black' : 'text-muted-foreground'
+                }`}
+              >
+                Monthly
+              </button>
+              <button
+                onClick={() => setIsAnnual(true)}
+                className={`px-6 py-2 text-sm font-oswald font-semibold rounded-full transition-colors ${
+                  isAnnual ? 'bg-primary text-black' : 'text-muted-foreground'
+                }`}
+              >
+                Annual
+              </button>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <PricingCard
               plan="Standard"
-              monthlyPrice="$200"
+              monthlyPrice="$240"
               annualPrice="$2,000"
               discount="17%"
+              isAnnual={isAnnual}
+              onTrialClick={() => setIsTrialModalOpen(true)}
               features={[
                 "Basic breach & credential monitoring",
-                "1 API key included",
-                "5 search credits/month",
+                "1 x Domain coverage",
                 "Email notifications",
                 "Web UI access"
               ]}
             />
             <PricingCard
               plan="Enterprise"
-              monthlyPrice="$340"
+              monthlyPrice="$408"
               annualPrice="$3,400"
               discount="17%"
               popular={true}
+              isAnnual={isAnnual}
+              onTrialClick={() => setIsTrialModalOpen(true)}
               features={[
                 "Full domain & hacker chatter feeds",
-                "3 API keys included",
-                "20 search credits/month",
+                "2 x Domain/IP Coverage",
                 "6 analyst-driven reviews",
                 "SIEM integration",
                 "Priority support"
               ]}
             />
             <PricingCard
-              plan="Custom"
-              monthlyPrice="$1,200"
-              annualPrice="$12,000"
-              discount="17%"
-              features={[
-                "Custom threat intelligence feeds",
-                "Unlimited API keys",
-                "Unlimited search credits",
-                "Dedicated analyst team",
-                "Custom integrations",
-                "24/7 priority support"
-              ]}
-            />
-            <PricingCard
-              plan="MSSP White-Label"
+              plan="MSSP (WhiteLabel)"
               monthlyPrice="Custom"
               annualPrice="Custom"
               discount=""
               isCustom={true}
+              isAnnual={isAnnual}
               features={[
                 "White-label portal",
                 "Multi-tenant API",
                 "Bulk onboarding",
                 "Volume pricing",
                 "Custom branding",
-                "Dedicated support"
+                "Dedicated support",
+                "Custom threat intelligence feeds",
+                "Unlimited API keys",
+                "24/7 priority support"
               ]}
             />
           </div>
@@ -240,29 +261,21 @@ const Index = () => {
             <p className="text-lg text-muted-foreground mb-6">
               Start with a 7-day free trial • No credit card required
             </p>
-            <Link to="/signin" className="hero-button text-lg px-8 py-4 inline-block text-center">
+            <Button 
+              onClick={() => setIsTrialModalOpen(true)}
+              className="hero-button text-lg px-8 py-4"
+            >
               Start Free Trial
-            </Link>
+            </Button>
           </div>
         </div>
       </section>
 
-      {/* Comparison Table */}
-      <section className="py-20 px-6 bg-gradient-to-b from-background to-threat-dark">
-        <div className="max-w-6xl mx-auto">
-          <ComparisonTable />
-        </div>
-      </section>
-
-      {/* Reviews Section */}
-      <ReviewsSection />
-
-      {/* Trial Registration */}
-      <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto">
-          <TrialRegistrationForm />
-        </div>
-      </section>
+      {/* Trial Modal */}
+      <TrialModal 
+        isOpen={isTrialModalOpen} 
+        onClose={() => setIsTrialModalOpen(false)} 
+      />
 
       {/* Footer */}
       <footer className="bg-card border-t border-border py-12">

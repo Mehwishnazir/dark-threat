@@ -1,6 +1,5 @@
 
 import { Button } from '@/components/ui/button';
-import { useState } from 'react';
 
 interface PricingCardProps {
   plan: string;
@@ -10,6 +9,8 @@ interface PricingCardProps {
   features: string[];
   popular?: boolean;
   isCustom?: boolean;
+  isAnnual?: boolean;
+  onTrialClick?: () => void;
 }
 
 export default function PricingCard({ 
@@ -19,9 +20,10 @@ export default function PricingCard({
   discount, 
   features, 
   popular,
-  isCustom 
+  isCustom,
+  isAnnual = true,
+  onTrialClick
 }: PricingCardProps) {
-  const [isAnnual, setIsAnnual] = useState(true);
 
   return (
     <div className={`threat-card relative ${popular ? 'border-primary' : ''}`}>
@@ -41,27 +43,6 @@ export default function PricingCard({
           
           {!isCustom && (
             <div className="mb-4">
-              <div className="flex justify-center mb-2">
-                <div className="bg-muted rounded-full p-1 flex">
-                  <button
-                    onClick={() => setIsAnnual(false)}
-                    className={`px-3 py-1 text-xs font-oswald font-semibold rounded-full transition-colors ${
-                      !isAnnual ? 'bg-primary text-black' : 'text-muted-foreground'
-                    }`}
-                  >
-                    Monthly
-                  </button>
-                  <button
-                    onClick={() => setIsAnnual(true)}
-                    className={`px-3 py-1 text-xs font-oswald font-semibold rounded-full transition-colors ${
-                      isAnnual ? 'bg-primary text-black' : 'text-muted-foreground'
-                    }`}
-                  >
-                    Annual
-                  </button>
-                </div>
-              </div>
-              
               <div className="text-3xl font-oswald font-bold text-primary mb-1">
                 {isAnnual ? annualPrice : monthlyPrice}
               </div>
@@ -96,9 +77,10 @@ export default function PricingCard({
         </ul>
 
         <Button 
+          onClick={isCustom ? undefined : onTrialClick}
           className={`w-full ${popular ? 'hero-button' : 'border border-border hover:border-primary hover:bg-primary hover:text-black'}`}
         >
-          {isCustom ? 'Contact Sales' : 'Get Started'}
+          {isCustom ? 'Contact Sales' : 'Start FREE Trial'}
         </Button>
       </div>
     </div>
