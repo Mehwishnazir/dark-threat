@@ -147,24 +147,65 @@ export default function Dashboard() {
 
           {/* Stats Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {threatStats.map((stat, index) => (
-              <Card key={index} className="bg-card/80 backdrop-blur-xl border-border">
-                <CardContent className="p-6">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <p className="text-sm text-muted-foreground">{stat.label}</p>
-                      <p className="text-2xl font-bold text-foreground">{stat.value}</p>
-                      <p className={`text-xs ${stat.trend === 'up' ? 'text-green-500' : 'text-red-500'}`}>
-                        {stat.change} vs last month
-                      </p>
-                    </div>
-                    <div className={`p-3 rounded-full ${stat.trend === 'up' ? 'bg-green-500/10' : 'bg-red-500/10'}`}>
-                      <stat.icon className={`w-6 h-6 ${stat.trend === 'up' ? 'text-green-500' : 'text-red-500'}`} />
-                    </div>
+            <Card className="bg-card/80 backdrop-blur-xl border-border">
+              <CardContent className="p-6">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="text-sm text-muted-foreground">Active Breaches</p>
+                    <p className="text-2xl font-bold text-foreground">26</p>
+                    <p className="text-xs text-red-500">+18 this week</p>
                   </div>
-                </CardContent>
-              </Card>
-            ))}
+                  <div className="p-3 rounded-full bg-red-500/10">
+                    <AlertTriangle className="w-6 h-6 text-red-500" />
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-card/80 backdrop-blur-xl border-border">
+              <CardContent className="p-6">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="text-sm text-muted-foreground">Compromised Accounts</p>
+                    <p className="text-2xl font-bold text-foreground">847</p>
+                    <p className="text-xs text-orange-500">+12% vs last month</p>
+                  </div>
+                  <div className="p-3 rounded-full bg-orange-500/10">
+                    <Shield className="w-6 h-6 text-orange-500" />
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-card/80 backdrop-blur-xl border-border">
+              <CardContent className="p-6">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="text-sm text-muted-foreground">Stealer Families</p>
+                    <p className="text-2xl font-bold text-foreground">3</p>
+                    <p className="text-xs text-yellow-500">Lumma, RedLine, Vidar</p>
+                  </div>
+                  <div className="p-3 rounded-full bg-yellow-500/10">
+                    <Eye className="w-6 h-6 text-yellow-500" />
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-card/80 backdrop-blur-xl border-border">
+              <CardContent className="p-6">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="text-sm text-muted-foreground">Sources Monitored</p>
+                    <p className="text-2xl font-bold text-foreground">156</p>
+                    <p className="text-xs text-green-500">Telegram, Forums, Markets</p>
+                  </div>
+                  <div className="p-3 rounded-full bg-green-500/10">
+                    <Database className="w-6 h-6 text-green-500" />
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
 
           {/* Main Content Tabs */}

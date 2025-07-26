@@ -12,6 +12,7 @@ import WebsiteTerms from "./pages/WebsiteTerms";
 import SignIn from "./pages/SignIn";
 import Dashboard from "./pages/Dashboard";
 import ThreatIntelligence from "./pages/ThreatIntelligence";
+import Alerts from "./pages/Alerts";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/signin" element={<SignIn />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/threat-intelligence" element={<ThreatIntelligence />} />
+          <Route path="/alerts" element={<Alerts />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
