@@ -14,6 +14,8 @@ import Dashboard from "./pages/Dashboard";
 import ThreatIntelligence from "./pages/ThreatIntelligence";
 import Alerts from "./pages/Alerts";
 import NotFound from "./pages/NotFound";
+import ForgotPassword from "./pages/ForgotPassword";
+import Pricing from "./pages/Pricing";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +32,8 @@ const App = () => (
           <Route path="/platform-terms" element={<PlatformTerms />} />
           <Route path="/website-terms" element={<WebsiteTerms />} />
           <Route path="/signin" element={<SignIn />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/pricing" element={<Pricing />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/threat-intelligence" element={<ThreatIntelligence />} />
           <Route path="/alerts" element={<Alerts />} />

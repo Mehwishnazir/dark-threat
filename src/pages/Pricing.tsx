@@ -1,36 +1,29 @@
-
-import { Suspense, useState } from 'react';
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import ThreatSphere from '@/components/ThreatSphere';
-import StatCard from '@/components/StatCard';
-import ServiceCard from '@/components/ServiceCard';
 import PricingCard from '@/components/PricingCard';
-import TrialRegistrationForm from '@/components/TrialRegistrationForm';
 import TrialModal from '@/components/TrialModal';
 import ComparisonTable from '@/components/ComparisonTable';
-import ReviewsSection from '@/components/ReviewsSection';
-import { Shield, Search, AlertTriangle, Users, Database, Zap, Eye, Globe, Lock } from 'lucide-react';
+import { Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const Index = () => {
+const Pricing = () => {
   const [isTrialModalOpen, setIsTrialModalOpen] = useState(false);
   const [isAnnual, setIsAnnual] = useState(true);
 
   return (
     <div className="min-h-screen bg-background">
-
       {/* Header */}
       <header className="py-6 px-6 border-b border-border">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
-          <div className="text-2xl font-oswald font-bold text-foreground">
+          <Link to="/" className="text-2xl font-oswald font-bold text-foreground">
             DARK<span className="text-primary">THREAT</span>
-          </div>
+          </Link>
           <nav className="flex items-center space-x-6">
-            <Link to="/" className="text-primary">
+            <Link to="/" className="text-muted-foreground hover:text-primary transition-colors">
               Home
             </Link>
-            <Link to="/data-leak-detection" className="text-muted-foreground hover:text-primary transition-colors">
-              Data Leak Detection
+            <Link to="/pricing" className="text-primary">
+              Pricing
             </Link>
             <Button 
               onClick={() => setIsTrialModalOpen(true)}
@@ -42,142 +35,13 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center cyber-grid overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background"></div>
-        
-        {/* 3D Background */}
-        <div className="absolute inset-0 opacity-30">
-          <Suspense fallback={<div className="w-full h-full bg-gradient-glow"></div>}>
-            <ThreatSphere />
-          </Suspense>
-        </div>
-
-        <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
-          <h1 className="text-6xl md:text-8xl font-oswald font-bold text-foreground mb-6">
-            DARK<span className="glow-text">THREAT</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-4">
-            Proactively detect data breaches, credential leaks, and hacker chatter
-          </p>
-          <p className="text-lg text-muted-foreground mb-8">
-            on the Dark Web before they impact your business.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              onClick={() => setIsTrialModalOpen(true)}
-              className="hero-button"
-            >
-              Start Free Trial
-            </Button>
-            <Button variant="outline" className="border-border hover:border-primary hover:bg-primary/10">
-              Watch Demo
-            </Button>
-          </div>
-        </div>
-
-        {/* Floating elements */}
-        <div className="absolute top-20 left-10 animate-float delay-1000">
-          <Shield className="text-primary w-8 h-8 opacity-60" />
-        </div>
-        <div className="absolute bottom-32 right-16 animate-float delay-2000">
-          <AlertTriangle className="text-primary w-6 h-6 opacity-40" />
-        </div>
-      </section>
-
-      {/* Statistics Section */}
-      <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-oswald font-bold text-foreground mb-4">
-              The Dark Web Threat Landscape
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Critical statistics that highlight the importance of dark web monitoring
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <StatCard
-              title="Average Cost"
-              value="$4.37M"
-              description="Average cost of a data breach in 2024"
-              icon={<Database />}
-            />
-            <StatCard
-              title="Detection Time"
-              value="280 Days"
-              description="Average time to identify & contain a breach"
-              icon={<Search />}
-            />
-            <StatCard
-              title="Daily Users"
-              value="2M+"
-              description="Daily TOR browser users accessing dark web"
-              icon={<Users />}
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="py-20 px-6 bg-gradient-to-b from-background to-threat-dark">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-oswald font-bold text-foreground mb-4">
-              Comprehensive Dark Web Monitoring
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Advanced threat intelligence across multiple attack vectors
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <ServiceCard
-              title="Domain & Sub-domain Monitoring"
-              description="Detect exposed corporate domains and sub-domains on paste sites, forums, and marketplaces"
-              features={[
-                "Real-time domain leak alerts",
-                "Sub-domain discovery",
-                "Paste site monitoring",
-                "Forum surveillance"
-              ]}
-              icon={<Globe />}
-            />
-            <ServiceCard
-              title="Credential Leak Detection"
-              description="Monitor for employee or VIP email and password dumps across dark web sources"
-              features={[
-                "Email compromise alerts",
-                "Password database monitoring",
-                "VIP account protection",
-                "Stealer log analysis"
-              ]}
-              icon={<Lock />}
-            />
-            <ServiceCard
-              title="Hacker Chatter Intelligence"
-              description="Scrape dark web forums, chatrooms, and private channels for company mentions"
-              features={[
-                "Forum thread monitoring",
-                "Private channel access",
-                "Threat actor tracking",
-                "Attack planning detection"
-              ]}
-              icon={<Eye />}
-            />
-          </div>
-        </div>
-      </section>
-
       {/* Pricing Section */}
       <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-oswald font-bold text-foreground mb-4">
-              Dark Web Monitoring Pricing
-            </h2>
+            <h1 className="text-5xl md:text-6xl font-oswald font-bold text-foreground mb-6">
+              Dark Web Monitoring <span className="text-primary">Pricing</span>
+            </h1>
             <p className="text-lg text-muted-foreground">
               Choose the plan that fits your security requirements
             </p>
@@ -271,6 +135,21 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Comparison Table */}
+      <section className="py-20 px-6 bg-gradient-to-b from-background to-threat-dark">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-oswald font-bold text-foreground mb-4">
+              Why Choose DarkThreat?
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              See how we compare to traditional monitoring solutions
+            </p>
+          </div>
+          <ComparisonTable />
+        </div>
+      </section>
+
       {/* Trial Modal */}
       <TrialModal 
         isOpen={isTrialModalOpen} 
@@ -299,7 +178,7 @@ const Index = () => {
               <h3 className="font-oswald font-semibold text-foreground mb-4">Platform</h3>
               <ul className="space-y-2">
                 <li><Link to="/data-leak-detection" className="text-muted-foreground hover:text-primary">Data Leak Detection</Link></li>
-                <li><a href="#pricing" className="text-muted-foreground hover:text-primary">Pricing</a></li>
+                <li><Link to="/pricing" className="text-muted-foreground hover:text-primary">Pricing</Link></li>
                 <li><Link to="/signin" className="text-muted-foreground hover:text-primary">Sign In</Link></li>
                 <li><Link to="/dashboard" className="text-muted-foreground hover:text-primary">Dashboard</Link></li>
               </ul>
@@ -323,4 +202,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Pricing;

@@ -10,13 +10,14 @@ import {
   Database,
   Activity,
   Search,
-  Download,
-  Settings,
   Bell,
   Lock,
   LogOut,
   User,
-  Plus
+  Plus,
+  Settings,
+  ChevronDown,
+  MessageSquare
 } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -26,10 +27,16 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { Link, useNavigate } from 'react-router-dom';
+import CollapsibleSidebar from '@/components/CollapsibleSidebar';
+import AssetOnboarding from '@/components/AssetOnboarding';
 
 export default function Dashboard() {
   const [searchQuery, setSearchQuery] = useState('');
   const [onboardingOpen, setOnboardingOpen] = useState(false);
+  const [mfaModalOpen, setMfaModalOpen] = useState(false);
+  const [mfaEnabled, setMfaEnabled] = useState(false);
+  const [mfaCode, setMfaCode] = useState('');
+  const [chatbotOpen, setChatbotOpen] = useState(false);
   const navigate = useNavigate();
 
   const handleSignOut = () => {
@@ -37,13 +44,6 @@ export default function Dashboard() {
   };
 
   // Mock data
-  const threatStats = [
-    { label: 'Active Threats', value: '847', change: '+12%', icon: AlertTriangle, trend: 'up' },
-    { label: 'Monitored Assets', value: '2,341', change: '+5%', icon: Shield, trend: 'up' },
-    { label: 'Dark Web Mentions', value: '156', change: '-8%', icon: Eye, trend: 'down' },
-    { label: 'Breach Alerts', value: '23', change: '+15%', icon: Database, trend: 'up' },
-  ];
-
   const recentAlerts = [
     { id: 1, type: 'Critical', title: 'Employee Credentials Found on Dark Web', domain: 'company.com', time: '2 hours ago' },
     { id: 2, type: 'High', title: 'Domain Spoofing Detected', domain: 'companty.com', time: '4 hours ago' },
@@ -58,63 +58,25 @@ export default function Dashboard() {
     { type: 'Brand', value: 'Company Brand', status: 'Active', threats: 8 },
   ];
 
+  const sendMfaCode = () => {
+    // Simulate sending MFA code
+    alert('6-digit verification code sent to your email');
+  };
+
+  const verifyMfaCode = () => {
+    if (mfaCode === '123456') {
+      setMfaEnabled(true);
+      setMfaModalOpen(false);
+      setMfaCode('');
+      alert('Multi-Factor Authentication enabled successfully');
+    } else {
+      alert('Invalid code. Try 123456 for demo.');
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background flex">
-      {/* Sidebar */}
-      <aside className="w-64 bg-card border-r border-border">
-        <div className="p-6">
-          <div className="flex items-center space-x-2 mb-8">
-            <Shield className="w-8 h-8 text-primary" />
-            <span className="text-xl font-oswald font-bold text-foreground">DarkThreat</span>
-          </div>
-          
-          <nav className="space-y-2">
-            <Button variant="ghost" className="w-full justify-start bg-primary/10 text-primary">
-              <Activity className="w-4 h-4 mr-2" />
-              Overview
-            </Button>
-            <Link to="/threat-intelligence">
-              <Button variant="ghost" className="w-full justify-start text-muted-foreground hover:text-foreground">
-                <AlertTriangle className="w-4 h-4 mr-2" />
-                Threat Intelligence
-              </Button>
-            </Link>
-            <Link to="/alerts">
-              <Button variant="ghost" className="w-full justify-start text-muted-foreground hover:text-foreground">
-                <Eye className="w-4 h-4 mr-2" />
-                Alerts
-              </Button>
-            </Link>
-            <Link to="/data-leak-detection">
-              <Button variant="ghost" className="w-full justify-start text-muted-foreground hover:text-foreground">
-                <Globe className="w-4 h-4 mr-2" />
-                Data Leak Detection
-              </Button>
-            </Link>
-            <Button variant="ghost" className="w-full justify-start text-muted-foreground hover:text-foreground">
-              <Lock className="w-4 h-4 mr-2" />
-              Credential Monitoring
-            </Button>
-            <Button variant="ghost" className="w-full justify-start text-muted-foreground hover:text-foreground">
-              <Database className="w-4 h-4 mr-2" />
-              Reports
-            </Button>
-          </nav>
-        </div>
-        
-        <div className="absolute bottom-0 w-64 p-6 border-t border-border">
-          <Button variant="ghost" className="w-full justify-start text-muted-foreground hover:text-foreground mb-2">
-            <Settings className="w-4 h-4 mr-2" />
-            Settings
-          </Button>
-          <Link to="/">
-            <Button variant="ghost" className="w-full justify-start text-muted-foreground hover:text-foreground">
-              <LogOut className="w-4 h-4 mr-2" />
-              Sign Out
-            </Button>
-          </Link>
-        </div>
-      </aside>
+      <CollapsibleSidebar currentPath="/dashboard" />
 
       {/* Main Content */}
       <main className="flex-1">
@@ -126,13 +88,12 @@ export default function Dashboard() {
               <p className="text-muted-foreground">Monitor your organization's dark web exposure</p>
             </div>
             <div className="flex items-center space-x-4">
-              <Button variant="outline" size="sm">
-                <Bell className="w-4 h-4 mr-2" />
-                Notifications
+              <Button variant="ghost" size="sm">
+                <Search className="w-4 h-4" />
               </Button>
-              <Badge variant="outline" className="text-green-400 border-green-400">
-                System Online
-              </Badge>
+              <Button variant="ghost" size="sm">
+                <Bell className="w-4 h-4" />
+              </Button>
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button variant="ghost" size="sm" className="h-8 w-8 rounded-full bg-primary">
@@ -144,48 +105,19 @@ export default function Dashboard() {
                     <User className="w-4 h-4 mr-2" />
                     Profile
                   </DropdownMenuItem>
+                  <DropdownMenuItem onClick={() => setMfaModalOpen(true)}>
+                    <Lock className="w-4 h-4 mr-2" />
+                    {mfaEnabled ? 'Manage MFA' : 'Enable MFA'}
+                  </DropdownMenuItem>
                   <DropdownMenuItem>
                     <Settings className="w-4 h-4 mr-2" />
                     Settings
                   </DropdownMenuItem>
                   <DropdownMenuSeparator />
-                  <Dialog open={onboardingOpen} onOpenChange={setOnboardingOpen}>
-                    <DialogTrigger asChild>
-                      <DropdownMenuItem onSelect={(e) => e.preventDefault()}>
-                        <Plus className="w-4 h-4 mr-2" />
-                        Asset Onboarding
-                      </DropdownMenuItem>
-                    </DialogTrigger>
-                    <DialogContent className="max-w-md">
-                      <DialogHeader>
-                        <DialogTitle>Asset Onboarding</DialogTitle>
-                      </DialogHeader>
-                      <div className="space-y-4">
-                        <div>
-                          <label className="text-sm font-medium">Asset Type</label>
-                          <select className="w-full mt-1 p-2 border rounded-md bg-background">
-                            <option>Domain</option>
-                            <option>Email</option>
-                            <option>IP Range</option>
-                            <option>Brand</option>
-                          </select>
-                        </div>
-                        <div>
-                          <label className="text-sm font-medium">Asset Value</label>
-                          <Input placeholder="Enter domain, email, IP, or brand name" className="mt-1" />
-                        </div>
-                        <div>
-                          <label className="text-sm font-medium">Monitoring Priority</label>
-                          <select className="w-full mt-1 p-2 border rounded-md bg-background">
-                            <option>High</option>
-                            <option>Medium</option>
-                            <option>Low</option>
-                          </select>
-                        </div>
-                        <Button className="w-full">Add Asset for Monitoring</Button>
-                      </div>
-                    </DialogContent>
-                  </Dialog>
+                  <DropdownMenuItem onClick={() => setOnboardingOpen(true)}>
+                    <Plus className="w-4 h-4 mr-2" />
+                    Asset Onboarding
+                  </DropdownMenuItem>
                   <DropdownMenuSeparator />
                   <DropdownMenuItem onClick={handleSignOut}>
                     <LogOut className="w-4 h-4 mr-2" />
@@ -199,23 +131,6 @@ export default function Dashboard() {
 
         {/* Dashboard Content */}
         <div className="p-6 space-y-6">
-          {/* Search Bar */}
-          <div className="flex items-center space-x-4">
-            <div className="relative flex-1">
-              <Search className="absolute left-3 top-3 w-4 h-4 text-muted-foreground" />
-              <Input
-                placeholder="Search threats, domains, or assets..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-10 bg-input border-border"
-              />
-            </div>
-            <Button variant="outline">
-              <Download className="w-4 h-4 mr-2" />
-              Export
-            </Button>
-          </div>
-
           {/* Stats Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <Card className="bg-card/80 backdrop-blur-xl border-border">
@@ -374,6 +289,96 @@ export default function Dashboard() {
           </Tabs>
         </div>
       </main>
+
+      {/* Asset Onboarding Modal */}
+      <AssetOnboarding isOpen={onboardingOpen} onClose={() => setOnboardingOpen(false)} />
+
+      {/* MFA Setup Modal */}
+      <Dialog open={mfaModalOpen} onOpenChange={setMfaModalOpen}>
+        <DialogContent className="max-w-md">
+          <DialogHeader>
+            <DialogTitle>Multi-Factor Authentication</DialogTitle>
+          </DialogHeader>
+          <div className="space-y-4">
+            {!mfaEnabled ? (
+              <>
+                <p className="text-muted-foreground text-sm">
+                  Enable MFA to add an extra layer of security to your account. 
+                  We'll send a 6-digit code to your email for verification.
+                </p>
+                <Button onClick={sendMfaCode} className="w-full">
+                  Send Verification Code
+                </Button>
+                <div className="space-y-2">
+                  <label className="text-sm font-medium">Enter 6-digit code</label>
+                  <Input
+                    placeholder="123456"
+                    value={mfaCode}
+                    onChange={(e) => setMfaCode(e.target.value)}
+                    maxLength={6}
+                  />
+                </div>
+                <Button onClick={verifyMfaCode} className="w-full" disabled={mfaCode.length !== 6}>
+                  Enable MFA
+                </Button>
+              </>
+            ) : (
+              <div className="text-center space-y-4">
+                <div className="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mx-auto">
+                  <Lock className="w-8 h-8 text-green-500" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-foreground">MFA Enabled</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Your account is protected with multi-factor authentication
+                  </p>
+                </div>
+                <Button 
+                  variant="outline" 
+                  onClick={() => {
+                    setMfaEnabled(false);
+                    setMfaModalOpen(false);
+                  }}
+                  className="w-full"
+                >
+                  Disable MFA
+                </Button>
+              </div>
+            )}
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      {/* AI Chatbot */}
+      <div className="fixed bottom-6 right-6 z-50">
+        <Button
+          onClick={() => setChatbotOpen(!chatbotOpen)}
+          className="w-14 h-14 rounded-full bg-primary hover:bg-primary/90 shadow-lg"
+        >
+          <MessageSquare className="w-6 h-6" />
+        </Button>
+        
+        {chatbotOpen && (
+          <Card className="absolute bottom-16 right-0 w-80 h-96 bg-card/95 backdrop-blur-xl border-border shadow-xl">
+            <CardHeader className="pb-2">
+              <CardTitle className="text-lg">DarkThreat AI Assistant</CardTitle>
+            </CardHeader>
+            <CardContent className="flex flex-col h-72">
+              <div className="flex-1 bg-background/50 rounded-lg p-3 mb-3 overflow-y-auto">
+                <div className="space-y-2">
+                  <div className="bg-primary/10 p-2 rounded text-sm">
+                    Hello! I'm your AI assistant. I can help you with threat analysis, asset monitoring, and security insights. What would you like to know?
+                  </div>
+                </div>
+              </div>
+              <div className="flex space-x-2">
+                <Input placeholder="Ask about your security..." className="flex-1" />
+                <Button size="sm">Send</Button>
+              </div>
+            </CardContent>
+          </Card>
+        )}
+      </div>
     </div>
   );
 }
