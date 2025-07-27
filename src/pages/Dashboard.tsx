@@ -14,17 +14,27 @@ import {
   Settings,
   Bell,
   Lock,
-  LogOut
+  LogOut,
+  User,
+  Plus
 } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Link } from 'react-router-dom';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function Dashboard() {
   const [searchQuery, setSearchQuery] = useState('');
+  const [onboardingOpen, setOnboardingOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const handleSignOut = () => {
+    navigate('/signin');
+  };
 
   // Mock data
   const threatStats = [
@@ -69,14 +79,18 @@ export default function Dashboard() {
                 Threat Intelligence
               </Button>
             </Link>
-            <Button variant="ghost" className="w-full justify-start text-muted-foreground hover:text-foreground">
-              <Eye className="w-4 h-4 mr-2" />
-              Dark Web Monitoring
-            </Button>
-            <Button variant="ghost" className="w-full justify-start text-muted-foreground hover:text-foreground">
-              <Globe className="w-4 h-4 mr-2" />
-              Asset Discovery
-            </Button>
+            <Link to="/alerts">
+              <Button variant="ghost" className="w-full justify-start text-muted-foreground hover:text-foreground">
+                <Eye className="w-4 h-4 mr-2" />
+                Alerts
+              </Button>
+            </Link>
+            <Link to="/data-leak-detection">
+              <Button variant="ghost" className="w-full justify-start text-muted-foreground hover:text-foreground">
+                <Globe className="w-4 h-4 mr-2" />
+                Data Leak Detection
+              </Button>
+            </Link>
             <Button variant="ghost" className="w-full justify-start text-muted-foreground hover:text-foreground">
               <Lock className="w-4 h-4 mr-2" />
               Credential Monitoring
@@ -119,9 +133,66 @@ export default function Dashboard() {
               <Badge variant="outline" className="text-green-400 border-green-400">
                 System Online
               </Badge>
-              <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                <span className="text-sm font-semibold text-primary-foreground">AD</span>
-              </div>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="ghost" size="sm" className="h-8 w-8 rounded-full bg-primary">
+                    <span className="text-sm font-semibold text-primary-foreground">AD</span>
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" className="w-56">
+                  <DropdownMenuItem>
+                    <User className="w-4 h-4 mr-2" />
+                    Profile
+                  </DropdownMenuItem>
+                  <DropdownMenuItem>
+                    <Settings className="w-4 h-4 mr-2" />
+                    Settings
+                  </DropdownMenuItem>
+                  <DropdownMenuSeparator />
+                  <Dialog open={onboardingOpen} onOpenChange={setOnboardingOpen}>
+                    <DialogTrigger asChild>
+                      <DropdownMenuItem onSelect={(e) => e.preventDefault()}>
+                        <Plus className="w-4 h-4 mr-2" />
+                        Asset Onboarding
+                      </DropdownMenuItem>
+                    </DialogTrigger>
+                    <DialogContent className="max-w-md">
+                      <DialogHeader>
+                        <DialogTitle>Asset Onboarding</DialogTitle>
+                      </DialogHeader>
+                      <div className="space-y-4">
+                        <div>
+                          <label className="text-sm font-medium">Asset Type</label>
+                          <select className="w-full mt-1 p-2 border rounded-md bg-background">
+                            <option>Domain</option>
+                            <option>Email</option>
+                            <option>IP Range</option>
+                            <option>Brand</option>
+                          </select>
+                        </div>
+                        <div>
+                          <label className="text-sm font-medium">Asset Value</label>
+                          <Input placeholder="Enter domain, email, IP, or brand name" className="mt-1" />
+                        </div>
+                        <div>
+                          <label className="text-sm font-medium">Monitoring Priority</label>
+                          <select className="w-full mt-1 p-2 border rounded-md bg-background">
+                            <option>High</option>
+                            <option>Medium</option>
+                            <option>Low</option>
+                          </select>
+                        </div>
+                        <Button className="w-full">Add Asset for Monitoring</Button>
+                      </div>
+                    </DialogContent>
+                  </Dialog>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem onClick={handleSignOut}>
+                    <LogOut className="w-4 h-4 mr-2" />
+                    Sign Out
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
             </div>
           </div>
         </header>
