@@ -9,7 +9,8 @@ import {
   Activity,
   Menu,
   X,
-  Settings
+  Settings,
+  FileText
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
@@ -28,8 +29,8 @@ export default function CollapsibleSidebar({ currentPath = '/dashboard' }: Colla
     { icon: AlertTriangle, label: 'Threat Intelligence', path: '/threat-intelligence' },
     { icon: Eye, label: 'Alerts', path: '/alerts' },
     { icon: Globe, label: 'Data Leak Detection', path: '/data-leak-detection' },
+    { icon: FileText, label: 'Reports', path: '/reports' },
     { icon: Lock, label: 'Credential Monitoring', path: '#' },
-    { icon: Database, label: 'Reports', path: '#' },
   ];
 
   return (
