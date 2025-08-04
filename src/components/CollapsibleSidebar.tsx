@@ -8,10 +8,12 @@ import {
   Database, 
   Activity,
   Menu,
-  X
+  X,
+  Settings
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import AssetOnboarding from './AssetOnboarding';
 
 interface CollapsibleSidebarProps {
   currentPath?: string;
@@ -19,6 +21,7 @@ interface CollapsibleSidebarProps {
 
 export default function CollapsibleSidebar({ currentPath = '/dashboard' }: CollapsibleSidebarProps) {
   const [isCollapsed, setIsCollapsed] = useState(false);
+  const [isAssetModalOpen, setIsAssetModalOpen] = useState(false);
 
   const navigationItems = [
     { icon: Activity, label: 'Overview', path: '/dashboard' },
@@ -66,7 +69,23 @@ export default function CollapsibleSidebar({ currentPath = '/dashboard' }: Colla
               </Link>
             );
           })}
+          
+          {/* Asset Management */}
+          <Button 
+            variant="ghost" 
+            onClick={() => setIsAssetModalOpen(true)}
+            className={`w-full ${isCollapsed ? 'justify-center px-0' : 'justify-start'} text-muted-foreground hover:text-foreground`}
+          >
+            <Settings className="w-4 h-4" />
+            {!isCollapsed && <span className="ml-2">Asset Management</span>}
+          </Button>
         </nav>
+        
+        {/* Asset Onboarding Modal */}
+        <AssetOnboarding 
+          isOpen={isAssetModalOpen} 
+          onClose={() => setIsAssetModalOpen(false)} 
+        />
       </div>
     </aside>
   );

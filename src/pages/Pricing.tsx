@@ -97,6 +97,8 @@ const Pricing = () => {
                 "Full domain & hacker chatter feeds",
                 "2 x Domain/IP Coverage",
                 "2 Users",
+                "Email notifications",
+                "Web UI access",
                 "Priority support"
               ]}
             />
@@ -127,7 +129,7 @@ const Pricing = () => {
             </p>
             <Button 
               onClick={() => setIsTrialModalOpen(true)}
-              className="hero-button text-lg px-8 py-4"
+              className="hero-button px-8 py-3"
             >
               Start Free Trial
             </Button>
