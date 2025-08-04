@@ -21,104 +21,152 @@ import CollapsibleSidebar from '@/components/CollapsibleSidebar';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 
-// Mock data based on the breach reports shown
+// Mock data based on the comprehensive breach reports
 const breachData = {
   summary: {
-    emailAddresses: 103,
-    breachedServices: 111,
-    breachesDetected: 224,
+    emailAddresses: 1847,
+    breachedServices: 267,
+    breachesDetected: 524,
     severityBreakdown: {
-      high: { count: 155, percentage: 69 },
-      medium: { count: 0, percentage: 0 },
-      low: { count: 69, percentage: 31 }
+      high: { count: 423, percentage: 81 },
+      medium: { count: 58, percentage: 11 },
+      low: { count: 43, percentage: 8 }
     }
   },
   exposedInformation: [
     {
-      email: "yasmeen.bano@habib.edu.pk",
-      breach: "Combolist 27.06.2025 (83 FILES)",
-      password: "p*****3",
+      email: "john.smith@techcorp.com",
+      breach: "Collection stealer logs and comboblists leakbase May-June 2023",
+      password: "T*****8",
       exposedData: ["Passwords", "Email addresses", "Usernames"]
     },
     {
-      email: "muhammad.faheem@habib.edu.pk", 
-      breach: "Combolist compiled by Chucky (6FILES)",
-      password: "k*****5",
+      email: "sarah.jones@techcorp.com", 
+      breach: "CORP APP corporate credentials leaked may 2023",
+      password: "S*****2",
       exposedData: ["Passwords", "Email addresses", "Usernames"]
     },
     {
-      email: "anam.sophie@habib.edu.pk",
-      breach: "Combolist compiled by Chucky (6FILES)", 
-      password: "s*****7",
+      email: "mike.wilson@techcorp.com",
+      breach: "180M mail-pass by leakbase", 
+      password: "M*****9",
       exposedData: ["Passwords", "Email addresses", "Usernames"]
     },
     {
-      email: "hisar.abbas@habib.edu.pk",
-      breach: "Combolist compiled by Chucky (6FILES)",
-      password: "G*****6", 
+      email: "emma.davis@techcorp.com",
+      breach: "Collection 2",
+      password: "E*****4", 
       exposedData: ["Passwords", "Email addresses", "Usernames"]
     },
     {
-      email: "nadeem.abbas@habib.edu.pk",
-      breach: "Combolist compiled by Chucky (6FILES)",
-      password: "n*****1",
-      exposedData: ["Passwords", "Email addresses", "Usernames"]
+      email: "alex.brown@techcorp.com",
+      breach: "learnable.com",
+      password: "A*****7",
+      exposedData: ["Passwords", "Email addresses", "IP addresses", "Names", "Physical addresses"]
     }
   ],
   breachedServices: [
     {
-      name: "Apollo",
-      count: 52,
-      added: "10/05/2018",
-      severity: "Low",
-      description: "In July 2018, the sales engagement startup Apollo left a database containing billions of data points publicly exposed without a password.",
-      exposedData: ["Email addresses", "Employers", "Geographic locations", "Job titles", "Names", "Phone numbers", "Social media profiles"]
+      name: "Collection stealer logs and comboblists leakbase May-June 2023",
+      count: 42,
+      added: "06/11/2023",
+      severity: "High",
+      description: "This data breach originates from info stealer logs, specifically from RedLine, Meta, Aurora, Racoon and others. The term info stealer is self-explanatory. This type of malware resides in an infected computer and gathers data in order to send it to the attacker.",
+      exposedData: ["Passwords", "Email addresses", "Usernames"]
     },
     {
-      name: "Canva", 
-      count: 11,
-      added: "08/09/2019",
+      name: "CORP APP corporate credentials leaked", 
+      count: 28,
+      added: "05/29/2023",
       severity: "High",
-      description: "In May 2019, the graphic design tool website Canva suffered a data breach that impacted 137 million subscribers.",
-      exposedData: ["Passwords", "Email addresses", "Geographic locations", "Homepage URLs", "Names", "Phone numbers", "Spoken languages", "Usernames"]
+      description: "Corporate application credentials discovered in a dark web marketplace, exposing employee login information.",
+      exposedData: ["Passwords", "Email addresses"]
     },
     {
-      name: "Collection #1",
-      count: 1, 
-      added: "01/16/2019",
+      name: "180M mail-pass by leakbase",
+      count: 167, 
+      added: "02/27/2023",
       severity: "High",
-      description: "In January 2019, a large collection of credential stuffing lists was discovered being distributed on a popular hacking forum.",
+      description: "~180 million lines of data in mail:pass format for half a year of Chucky journey. This database has been shared by the threat actor known as 'Leakbase' or 'Chucky' in a private, paid Telegram channel.",
+      exposedData: ["Passwords", "Email addresses"]
+    },
+    {
+      name: "Collection 2",
+      count: 23,
+      added: "08/14/2021", 
+      severity: "High",
+      description: "Not later than on January 30th, 2019, many security researchers observed that sets of data, named Collections #2 through #5, have been seen for sale on the dark web.",
+      exposedData: ["Passwords", "Email addresses"]
+    },
+    {
+      name: "learnable.com",
+      count: 15,
+      added: "01/27/2021",
+      severity: "High",
+      description: "Online learning platform data breach exposing user registration and profile information.",
+      exposedData: ["Passwords", "Email addresses", "IP addresses", "Names", "Physical addresses"]
+    },
+    {
+      name: "Collection 4",
+      count: 8,
+      added: "11/27/2020",
+      severity: "High", 
+      description: "On January 7, 2019, Collection 4 containing breached databases from different websites has been exposed. Collection 4 includes combo lists from Russia, EU and US databases.",
+      exposedData: ["Passwords", "Email addresses"]
+    },
+    {
+      name: "AntiPublic_RaidForums",
+      count: 34,
+      added: "11/09/2020",
+      severity: "High",
+      description: "AntiPublic - combo list. This database has been discovered by Kaduu team in darknet. In December 2016, a huge list of email address and password pairs appeared in a 'combo list' referred to as 'Anti Public'.",
       exposedData: ["Passwords", "Email addresses"]
     },
     {
       name: "Dailymotion",
-      count: 1,
-      added: "08/07/2017", 
+      count: 12,
+      added: "11/01/2020", 
       severity: "High",
-      description: "In October 2016, the video sharing platform Dailymotion suffered a data breach.",
+      description: "In October 2016, the video sharing platform Dailymotion suffered a data breach. The attack led to the exposure of more than 85 million user accounts.",
       exposedData: ["Passwords", "Email addresses", "Usernames"]
     },
     {
-      name: "Edmodo",
-      count: 1,
-      added: "06/01/2017",
-      severity: "High", 
-      description: "In May 2017, the education platform Edmodo was hacked resulting in the exposure of 77 million records.",
+      name: "swvl.com",
+      count: 89,
+      added: "10/31/2020",
+      severity: "High",
+      description: "Transportation service data breach exposing user account information and travel patterns.",
+      exposedData: ["Passwords", "Email addresses", "Names", "Phone numbers"]
+    },
+    {
+      name: "racoon stealer log 03.10.2024",
+      count: 7,
+      added: "10/04/2024",
+      severity: "High",
+      description: "Recent stealer malware logs containing stolen credentials and sensitive information from infected systems.",
+      exposedData: ["Passwords", "Passwords", "Credit cards", "Email addresses", "Usernames"]
+    },
+    {
+      name: "combolist 24.10.2024",
+      count: 19,
+      added: "10/25/2024",
+      severity: "High",
+      description: "Recent compilation of username and password combinations from various breached sources.",
       exposedData: ["Passwords", "Email addresses", "Usernames"]
     },
     {
-      name: "MyFitnessPal",
-      count: 3,
-      added: "02/21/2019",
+      name: "Pakistan Gov and Edu domains 20.05.2025",
+      count: 156,
+      added: "05/20/2025",
       severity: "High",
-      description: "In February 2018, the diet and exercise service MyFitnessPal suffered a data breach.",
-      exposedData: ["Passwords", "Email addresses", "IP addresses", "Usernames"]
+      description: "Credentials targeting government and educational institutions, potentially affecting critical infrastructure.",
+      exposedData: ["Passwords", "Email addresses", "Usernames"]
     }
   ]
 };
 
 export default function Reports() {
-  const [companyDomain, setCompanyDomain] = useState('habib.edu.pk');
+  const [companyDomain, setCompanyDomain] = useState('techcorp.com');
   const [isGenerating, setIsGenerating] = useState(false);
 
   const generatePDFReport = async () => {
@@ -133,7 +181,7 @@ export default function Reports() {
       // Cover page
       pdf.setFontSize(24);
       pdf.setTextColor(51, 51, 51);
-      pdf.text('Breach Domain Report', 20, yPosition);
+      pdf.text('Dark Web Exposure Report', 20, yPosition);
       
       yPosition += 15;
       pdf.setFontSize(18);
@@ -290,8 +338,13 @@ export default function Reports() {
         pdf.line(20, yPosition - 10, pageWidth - 20, yPosition - 10);
       });
 
-      // Save the PDF
-      pdf.save(`dark-web-breach-report-${companyDomain}-${new Date().toISOString().split('T')[0]}.pdf`);
+      // Save the PDF and open in new tab
+      const pdfBlob = pdf.output('blob');
+      const pdfUrl = URL.createObjectURL(pdfBlob);
+      window.open(pdfUrl, '_blank');
+      
+      // Also trigger download
+      pdf.save(`dark-web-exposure-report-${companyDomain}-${new Date().toISOString().split('T')[0]}.pdf`);
       
     } catch (error) {
       console.error('Error generating PDF:', error);
@@ -318,9 +371,9 @@ export default function Reports() {
           {/* Header */}
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-3xl font-bold text-foreground">Dark Web Reports</h1>
+              <h1 className="text-3xl font-bold text-foreground">Dark Web Exposure Reports</h1>
               <p className="text-muted-foreground mt-2">
-                Generate comprehensive breach reports for your organization
+                Generate comprehensive dark web exposure reports for your organization
               </p>
             </div>
             <Button 
@@ -329,7 +382,7 @@ export default function Reports() {
               className="gap-2"
             >
               <Download className="w-4 h-4" />
-              {isGenerating ? 'Generating...' : 'Generate PDF Report'}
+              {isGenerating ? 'Generating...' : 'Generate Dark Web Exposure Report'}
             </Button>
           </div>
 
@@ -349,12 +402,12 @@ export default function Reports() {
                     id="domain"
                     value={companyDomain}
                     onChange={(e) => setCompanyDomain(e.target.value)}
-                    placeholder="example.com"
+                    placeholder="techcorp.com"
                   />
                 </div>
                 <div className="space-y-2">
                   <Label>Report Type</Label>
-                  <Input value="Comprehensive Breach Analysis" disabled />
+                  <Input value="Dark Web Exposure Analysis" disabled />
                 </div>
               </div>
             </CardContent>
