@@ -29,8 +29,17 @@ const Index = () => {
             <Link to="/" className="text-primary">
               Home
             </Link>
-            <Link to="/data-leak-detection" className="text-muted-foreground hover:text-primary transition-colors">
-              Data Leak Detection
+            <Link to="/solution" className="text-muted-foreground hover:text-primary transition-colors">
+              Solution
+            </Link>
+            <Link to="/pricing" className="text-muted-foreground hover:text-primary transition-colors">
+              Pricing
+            </Link>
+            <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">
+              About
+            </Link>
+            <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">
+              Contact
             </Link>
             <Button 
               onClick={() => setIsTrialModalOpen(true)}

@@ -17,6 +17,9 @@ import Reports from "./pages/Reports";
 import NotFound from "./pages/NotFound";
 import ForgotPassword from "./pages/ForgotPassword";
 import Pricing from "./pages/Pricing";
+import Solution from "./pages/Solution";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 
 const queryClient = new QueryClient();
 
@@ -28,13 +31,16 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/solution" element={<Solution />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/data-leak-detection" element={<DataLeakDetection />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/platform-terms" element={<PlatformTerms />} />
           <Route path="/website-terms" element={<WebsiteTerms />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
-          <Route path="/pricing" element={<Pricing />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/threat-intelligence" element={<ThreatIntelligence />} />
           <Route path="/alerts" element={<Alerts />} />

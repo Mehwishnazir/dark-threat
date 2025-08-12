@@ -1,0 +1,215 @@
+import { Button } from '@/components/ui/button';
+import { Shield, Users, Award, Target } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import TrialModal from '@/components/TrialModal';
+
+const About = () => {
+  const [isTrialModalOpen, setIsTrialModalOpen] = useState(false);
+
+  return (
+    <div className="min-h-screen bg-background">
+      {/* Header */}
+      <header className="py-6 px-6 border-b border-border">
+        <div className="max-w-6xl mx-auto flex items-center justify-between">
+          <Link to="/" className="text-2xl font-oswald font-bold text-foreground">
+            DARK<span className="text-primary">THREAT</span>
+          </Link>
+          <nav className="flex items-center space-x-6">
+            <Link to="/" className="text-muted-foreground hover:text-primary transition-colors">
+              Home
+            </Link>
+            <Link to="/solution" className="text-muted-foreground hover:text-primary transition-colors">
+              Solution
+            </Link>
+            <Link to="/pricing" className="text-muted-foreground hover:text-primary transition-colors">
+              Pricing
+            </Link>
+            <Link to="/about" className="text-primary">
+              About
+            </Link>
+            <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">
+              Contact
+            </Link>
+            <Button 
+              onClick={() => setIsTrialModalOpen(true)}
+              className="hero-button"
+            >
+              Start Free Trial
+            </Button>
+          </nav>
+        </div>
+      </header>
+
+      {/* Hero Section */}
+      <section className="py-20 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-5xl md:text-6xl font-oswald font-bold text-foreground mb-6">
+            About <span className="glow-text">DarkThreat</span>
+          </h1>
+          <p className="text-xl text-muted-foreground mb-8">
+            Leading the fight against cybercrime with advanced dark web intelligence and proactive threat detection.
+          </p>
+        </div>
+      </section>
+
+      {/* Mission Section */}
+      <section className="py-20 px-6 bg-gradient-to-b from-background to-threat-dark">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl font-oswald font-bold text-foreground mb-6">
+                Our Mission
+              </h2>
+              <p className="text-lg text-muted-foreground mb-6">
+                At DarkThreat, we believe that every organization deserves to know when their sensitive data is exposed on the dark web. Our mission is to democratize dark web intelligence, making it accessible and actionable for businesses of all sizes.
+              </p>
+              <p className="text-lg text-muted-foreground mb-8">
+                We combine cutting-edge AI technology with deep cybersecurity expertise to deliver the most comprehensive dark web monitoring platform available today.
+              </p>
+              <Button 
+                onClick={() => setIsTrialModalOpen(true)}
+                className="hero-button"
+              >
+                Get Started Today
+              </Button>
+            </div>
+            <div className="grid grid-cols-2 gap-6">
+              <div className="bg-card border border-border rounded-lg p-6 text-center">
+                <Target className="text-primary w-12 h-12 mx-auto mb-4" />
+                <h3 className="text-2xl font-oswald font-bold text-foreground mb-2">500+</h3>
+                <p className="text-muted-foreground">Organizations Protected</p>
+              </div>
+              <div className="bg-card border border-border rounded-lg p-6 text-center">
+                <Shield className="text-primary w-12 h-12 mx-auto mb-4" />
+                <h3 className="text-2xl font-oswald font-bold text-foreground mb-2">10M+</h3>
+                <p className="text-muted-foreground">Threats Detected</p>
+              </div>
+              <div className="bg-card border border-border rounded-lg p-6 text-center">
+                <Users className="text-primary w-12 h-12 mx-auto mb-4" />
+                <h3 className="text-2xl font-oswald font-bold text-foreground mb-2">24/7</h3>
+                <p className="text-muted-foreground">Continuous Monitoring</p>
+              </div>
+              <div className="bg-card border border-border rounded-lg p-6 text-center">
+                <Award className="text-primary w-12 h-12 mx-auto mb-4" />
+                <h3 className="text-2xl font-oswald font-bold text-foreground mb-2">99.9%</h3>
+                <p className="text-muted-foreground">Uptime Guarantee</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section className="py-20 px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-oswald font-bold text-foreground mb-4">
+              Our Team
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Cybersecurity experts with decades of combined experience
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-card border border-border rounded-lg p-6 text-center">
+              <div className="w-24 h-24 bg-primary/10 rounded-full mx-auto mb-4 flex items-center justify-center">
+                <Users className="w-12 h-12 text-primary" />
+              </div>
+              <h3 className="text-xl font-oswald font-semibold text-foreground mb-2">
+                Security Researchers
+              </h3>
+              <p className="text-muted-foreground">
+                Former government cybersecurity professionals with deep dark web expertise and threat intelligence experience.
+              </p>
+            </div>
+
+            <div className="bg-card border border-border rounded-lg p-6 text-center">
+              <div className="w-24 h-24 bg-primary/10 rounded-full mx-auto mb-4 flex items-center justify-center">
+                <Shield className="w-12 h-12 text-primary" />
+              </div>
+              <h3 className="text-xl font-oswald font-semibold text-foreground mb-2">
+                Engineering Team
+              </h3>
+              <p className="text-muted-foreground">
+                World-class engineers building scalable, secure infrastructure to protect organizations worldwide.
+              </p>
+            </div>
+
+            <div className="bg-card border border-border rounded-lg p-6 text-center">
+              <div className="w-24 h-24 bg-primary/10 rounded-full mx-auto mb-4 flex items-center justify-center">
+                <Award className="w-12 h-12 text-primary" />
+              </div>
+              <h3 className="text-xl font-oswald font-semibold text-foreground mb-2">
+                Advisory Board
+              </h3>
+              <p className="text-muted-foreground">
+                Industry veterans and cybersecurity leaders guiding our strategic vision and product development.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Values Section */}
+      <section className="py-20 px-6 bg-gradient-to-b from-background to-threat-dark">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-oswald font-bold text-foreground mb-4">
+              Our Values
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              The principles that guide everything we do
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-card border border-border rounded-lg p-8">
+              <h3 className="text-2xl font-oswald font-semibold text-foreground mb-4">
+                Transparency
+              </h3>
+              <p className="text-muted-foreground">
+                We believe in complete transparency about our methods, sources, and findings. No black boxes, no hidden agendas.
+              </p>
+            </div>
+
+            <div className="bg-card border border-border rounded-lg p-8">
+              <h3 className="text-2xl font-oswald font-semibold text-foreground mb-4">
+                Innovation
+              </h3>
+              <p className="text-muted-foreground">
+                Continuous innovation in threat detection technology to stay ahead of evolving cybercriminal tactics.
+              </p>
+            </div>
+
+            <div className="bg-card border border-border rounded-lg p-8">
+              <h3 className="text-2xl font-oswald font-semibold text-foreground mb-4">
+                Customer Success
+              </h3>
+              <p className="text-muted-foreground">
+                Your security is our success. We're committed to delivering actionable intelligence that makes a real difference.
+              </p>
+            </div>
+
+            <div className="bg-card border border-border rounded-lg p-8">
+              <h3 className="text-2xl font-oswald font-semibold text-foreground mb-4">
+                Ethical Operations
+              </h3>
+              <p className="text-muted-foreground">
+                We operate with the highest ethical standards, respecting privacy while providing critical security intelligence.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <TrialModal 
+        isOpen={isTrialModalOpen} 
+        onClose={() => setIsTrialModalOpen(false)} 
+      />
+    </div>
+  );
+};
+
+export default About;
