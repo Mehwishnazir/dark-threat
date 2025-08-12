@@ -1,11 +1,74 @@
 import { Button } from '@/components/ui/button';
-import { Shield, Search, AlertTriangle, Users, Database, Zap, Eye, Globe, Lock, CheckCircle } from 'lucide-react';
+import { Shield, Search, AlertTriangle, Users, Database, Zap, Eye, Globe, Lock, CheckCircle, BarChart3, Trash2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import TrialModal from '@/components/TrialModal';
 
 const Solution = () => {
   const [isTrialModalOpen, setIsTrialModalOpen] = useState(false);
+
+  const dataLeakCapabilities = [
+    {
+      icon: <Search className="w-12 h-12 text-primary" />,
+      title: "Dark Web Monitoring",
+      stat: "4.61M",
+      description: "daily users access the Tor network for dark web activity",
+      content: "DarkThreat continuously scans dark web marketplaces, forums, and black-market channels to detect any signs of your organization's sensitive data being sold or traded. This proactive monitoring lets you act before threat actors capitalize on leaked information.",
+      features: [
+        "Discover compromised employee credentials before they're exploited",
+        "Detect customer data being sold in bulk to prevent breaches", 
+        "Receive real-time alerts on new dark web mentions of your organization"
+      ]
+    },
+    {
+      icon: <AlertTriangle className="w-12 h-12 text-primary" />,
+      title: "PII Exposure Detection",
+      stat: "$4.88M",
+      description: "average cost of a data breach",
+      content: "By integrating threat intelligence, DarkThreat helps you prioritize vulnerabilities based on risk, allowing your team to address the most critical threats first and optimize remediation efforts.",
+      features: [
+        "Identify exposed customer information, like names, emails, or credit card numbers",
+        "Detect employee PII, including credentials, before they lead to unauthorized access",
+        "Get notifications on compromised user accounts to prevent unauthorized activity"
+      ]
+    },
+    {
+      icon: <Lock className="w-12 h-12 text-primary" />,
+      title: "Credential Monitoring", 
+      stat: "64%",
+      description: "of data leaks involve personal data, much available on dark web",
+      content: "With DarkThreat's credential monitoring, you're alerted whenever employee or customer login details surface on illicit platforms, helping you prevent potential account takeovers and security breaches.",
+      features: [
+        "Receive alerts for leaked login credentials tied to your organization",
+        "Monitor for compromised passwords that might grant unauthorized access",
+        "Identify accounts that need immediate attention for password resets or other actions"
+      ]
+    },
+    {
+      icon: <BarChart3 className="w-12 h-12 text-primary" />,
+      title: "Automated Leak Reports",
+      stat: "14B+", 
+      description: "leaked credentials monitored on dark web",
+      content: "Regular, automated reports on detected leaks provide your team with up-to-date insights into the security status of your data, enabling swift decision-making and actionable responses.",
+      features: [
+        "Get weekly summaries of detected PII exposures and credential leaks",
+        "Access detailed reports to understand the scope and source of data leaks",
+        "Easily share insights with compliance teams to ensure regulatory adherence"
+      ]
+    },
+    {
+      icon: <Trash2 className="w-12 h-12 text-primary" />,
+      title: "Dark Web Data Removal",
+      stat: "300%",
+      description: "increase in data sold on black markets since 2019",
+      content: "DarkThreat's Dark Web Data Removal protects sensitive information from unauthorized exposure. As data breaches rise and sensitive information reaches the dark web, our removal service safeguards against malicious access.",
+      features: [
+        "Locate and remove sensitive data, such as personal and financial information, being sold on black markets",
+        "Remove confidential information exposed on dark web forums and channels", 
+        "Ongoing monitoring of the dark web to detect and address new data leaks quickly"
+      ]
+    }
+  ];
 
   return (
     <div className="min-h-screen bg-background">
@@ -143,6 +206,73 @@ const Solution = () => {
                 </li>
               </ul>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Data Leak Detection Platform */}
+      <section className="py-20 px-6 bg-gradient-to-b from-threat-dark to-background">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-oswald font-bold text-foreground mb-4">
+              Data Leak Detection <span className="glow-text">Platform</span>
+            </h2>
+            <p className="text-lg text-muted-foreground mb-6">
+              Comprehensive protection against data exposure on the dark web
+            </p>
+            <p className="text-muted-foreground max-w-4xl mx-auto">
+              Unlike breaches, sensitive data leaks often go unnoticed until it turns into a cyberattack. 
+              Hybrid working models and policies like "Bring Your Own Device" (BYOD) make businesses more vulnerable. 
+              Detecting data leaks early plays a key role in counter-measuring any threat that may arise from them.
+            </p>
+          </div>
+
+          <div className="space-y-16">
+            {dataLeakCapabilities.map((capability, index) => (
+              <div key={index} className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-12`}>
+                <div className="flex-1">
+                  <div className="bg-card border border-border rounded-lg p-8">
+                    <div className="flex items-center mb-6">
+                      <div className="p-3 bg-primary/10 rounded-full">
+                        {capability.icon}
+                      </div>
+                      <div className="ml-4">
+                        <h3 className="text-2xl font-oswald font-bold text-foreground">
+                          {capability.title}
+                        </h3>
+                      </div>
+                    </div>
+                    
+                    <p className="text-muted-foreground mb-6 leading-relaxed">
+                      {capability.content}
+                    </p>
+                    
+                    <div className="space-y-3">
+                      <h5 className="font-semibold text-foreground">Key Capabilities:</h5>
+                      <ul className="space-y-2">
+                        {capability.features.map((feature, idx) => (
+                          <li key={idx} className="text-muted-foreground flex items-start">
+                            <CheckCircle className="w-4 h-4 text-primary mr-3 mt-1 flex-shrink-0" />
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="flex-1">
+                  <div className="bg-gradient-to-br from-primary/20 via-primary/10 to-transparent rounded-lg p-12 text-center border border-primary/20">
+                    <div className="text-6xl font-oswald font-bold text-primary mb-4 glow-text">
+                      {capability.stat}
+                    </div>
+                    <p className="text-foreground font-medium text-lg">
+                      {capability.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
