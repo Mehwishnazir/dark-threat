@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Shield, Clock, CheckCircle, Users } from 'lucide-react';
+import { Shield, Clock, CheckCircle, Users, Linkedin, Twitter, Github } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const TrialComingSoon = () => {
@@ -143,9 +143,15 @@ const TrialComingSoon = () => {
                 Advanced dark web monitoring and threat intelligence platform protecting your organization 24/7.
               </p>
               <div className="flex space-x-4">
-                <a href="#" className="text-muted-foreground hover:text-primary">Security</a>
-                <a href="#" className="text-muted-foreground hover:text-primary">Community</a>
-                <a href="#" className="text-muted-foreground hover:text-primary">Resources</a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Linkedin className="w-5 h-5" />
+                </a>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Twitter className="w-5 h-5" />
+                </a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Github className="w-5 h-5" />
+                </a>
               </div>
             </div>
             <div>
