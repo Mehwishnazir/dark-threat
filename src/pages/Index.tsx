@@ -9,7 +9,7 @@ import TrialRegistrationForm from '@/components/TrialRegistrationForm';
 import TrialModal from '@/components/TrialModal';
 import ComparisonTable from '@/components/ComparisonTable';
 import ReviewsSection from '@/components/ReviewsSection';
-import { Shield, Search, AlertTriangle, Users, Database, Zap, Eye, Globe, Lock } from 'lucide-react';
+import { Shield, Search, AlertTriangle, Users, Database, Zap, Eye, Globe, Lock, Linkedin, Twitter, Github } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Index = () => {
@@ -299,9 +299,15 @@ const Index = () => {
                 Advanced dark web monitoring and threat intelligence platform protecting your organization 24/7.
               </p>
               <div className="flex space-x-4">
-                <a href="#" className="text-muted-foreground hover:text-primary">Twitter</a>
-                <a href="#" className="text-muted-foreground hover:text-primary">LinkedIn</a>
-                <a href="#" className="text-muted-foreground hover:text-primary">GitHub</a>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Twitter className="w-5 h-5" />
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Linkedin className="w-5 h-5" />
+                </a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Github className="w-5 h-5" />
+                </a>
               </div>
             </div>
             <div>
@@ -310,7 +316,6 @@ const Index = () => {
                 <li><Link to="/data-leak-detection" className="text-muted-foreground hover:text-primary">Data Leak Detection</Link></li>
                 <li><a href="#pricing" className="text-muted-foreground hover:text-primary">Pricing</a></li>
                 <li><Link to="/signin" className="text-muted-foreground hover:text-primary">Sign In</Link></li>
-                <li><Link to="/dashboard" className="text-muted-foreground hover:text-primary">Dashboard</Link></li>
               </ul>
             </div>
             <div>

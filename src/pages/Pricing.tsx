@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import PricingCard from '@/components/PricingCard';
 import TrialModal from '@/components/TrialModal';
 import ComparisonTable from '@/components/ComparisonTable';
-import { Shield } from 'lucide-react';
+import { Shield, Linkedin, Twitter, Github } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Pricing = () => {
@@ -212,9 +212,15 @@ const Pricing = () => {
                 Advanced dark web monitoring and threat intelligence platform protecting your organization 24/7.
               </p>
               <div className="flex space-x-4">
-                <a href="#" className="text-muted-foreground hover:text-primary">Security</a>
-                <a href="#" className="text-muted-foreground hover:text-primary">Community</a>
-                <a href="#" className="text-muted-foreground hover:text-primary">Resources</a>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Twitter className="w-5 h-5" />
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Linkedin className="w-5 h-5" />
+                </a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Github className="w-5 h-5" />
+                </a>
               </div>
             </div>
             <div>
@@ -223,7 +229,6 @@ const Pricing = () => {
                 <li><Link to="/data-leak-detection" className="text-muted-foreground hover:text-primary">Data Leak Detection</Link></li>
                 <li><Link to="/pricing" className="text-muted-foreground hover:text-primary">Pricing</Link></li>
                 <li><Link to="/signin" className="text-muted-foreground hover:text-primary">Sign In</Link></li>
-                <li><Link to="/dashboard" className="text-muted-foreground hover:text-primary">Dashboard</Link></li>
               </ul>
             </div>
             <div>
