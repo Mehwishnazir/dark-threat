@@ -30,6 +30,8 @@ export default function TrialModal({ isOpen, onClose }: TrialModalProps) {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Trial registration:', formData);
+    // Navigate to coming soon page instead
+    window.open('/trial-coming-soon', '_blank');
     onClose();
   };
 

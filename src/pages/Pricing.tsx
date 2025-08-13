@@ -22,8 +22,17 @@ const Pricing = () => {
             <Link to="/" className="text-muted-foreground hover:text-primary transition-colors">
               Home
             </Link>
+            <Link to="/solution" className="text-muted-foreground hover:text-primary transition-colors">
+              Solution
+            </Link>
             <Link to="/pricing" className="text-primary">
               Pricing
+            </Link>
+            <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">
+              About
+            </Link>
+            <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">
+              Contact
             </Link>
             <Button 
               onClick={() => setIsTrialModalOpen(true)}
@@ -137,6 +146,38 @@ const Pricing = () => {
         </div>
       </section>
 
+      {/* Pricing Platform */}
+      <section className="py-20 px-6 bg-gradient-to-b from-background to-muted/20">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-oswald font-bold text-foreground mb-4">
+              Pricing <span className="text-primary">Platform</span>
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Flexible pricing tailored to your organization's needs
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <div className="threat-card text-center">
+              <Shield className="w-12 h-12 text-primary mx-auto mb-4" />
+              <h3 className="text-xl font-oswald font-semibold mb-2">Scalable Solutions</h3>
+              <p className="text-muted-foreground">Plans that grow with your business needs and security requirements</p>
+            </div>
+            <div className="threat-card text-center">
+              <Shield className="w-12 h-12 text-primary mx-auto mb-4" />
+              <h3 className="text-xl font-oswald font-semibold mb-2">Transparent Pricing</h3>
+              <p className="text-muted-foreground">No hidden fees or surprise charges. What you see is what you pay</p>
+            </div>
+            <div className="threat-card text-center">
+              <Shield className="w-12 h-12 text-primary mx-auto mb-4" />
+              <h3 className="text-xl font-oswald font-semibold mb-2">Enterprise Ready</h3>
+              <p className="text-muted-foreground">Custom solutions for large organizations and MSSP partners</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Comparison Table */}
       <section className="py-20 px-6 bg-gradient-to-b from-background to-threat-dark">
         <div className="max-w-6xl mx-auto">
@@ -171,9 +212,9 @@ const Pricing = () => {
                 Advanced dark web monitoring and threat intelligence platform protecting your organization 24/7.
               </p>
               <div className="flex space-x-4">
-                <a href="#" className="text-muted-foreground hover:text-primary">Twitter</a>
-                <a href="#" className="text-muted-foreground hover:text-primary">LinkedIn</a>
-                <a href="#" className="text-muted-foreground hover:text-primary">GitHub</a>
+                <a href="#" className="text-muted-foreground hover:text-primary">Security</a>
+                <a href="#" className="text-muted-foreground hover:text-primary">Community</a>
+                <a href="#" className="text-muted-foreground hover:text-primary">Resources</a>
               </div>
             </div>
             <div>

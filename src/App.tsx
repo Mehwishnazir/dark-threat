@@ -20,6 +20,7 @@ import Pricing from "./pages/Pricing";
 import Solution from "./pages/Solution";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import TrialComingSoon from "./pages/TrialComingSoon";
 
 const queryClient = new QueryClient();
 
@@ -45,6 +46,7 @@ const App = () => (
           <Route path="/threat-intelligence" element={<ThreatIntelligence />} />
           <Route path="/alerts" element={<Alerts />} />
           <Route path="/reports" element={<Reports />} />
+          <Route path="/trial-coming-soon" element={<TrialComingSoon />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
