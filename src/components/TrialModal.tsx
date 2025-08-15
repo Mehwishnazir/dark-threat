@@ -37,134 +37,51 @@ export default function TrialModal({ isOpen, onClose }: TrialModalProps) {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-2xl bg-card/95 backdrop-blur-xl border-border">
+      <DialogContent className="max-w-md bg-card/95 backdrop-blur-xl border-border">
         <DialogHeader>
           <DialogTitle className="text-center">
             <h2 className="text-3xl font-oswald font-bold text-foreground mb-4">
-              Start Your Free Trial
+              Coming Soon
             </h2>
             <p className="text-lg text-muted-foreground">
-              7-day free trial • No credit card required
+              This feature is under development
             </p>
           </DialogTitle>
         </DialogHeader>
 
-        <form onSubmit={handleSubmit} className="space-y-6 mt-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              <label className="block text-sm font-medium text-foreground mb-2">
-                Business Email Address*
-              </label>
-              <Input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleInputChange}
-                required
-                className="w-full"
-                placeholder="you@company.com"
-              />
+        <div className="py-8 text-center space-y-6">
+          {/* Animated icon */}
+          <div className="relative mx-auto w-16 h-16">
+            <div className="absolute inset-0 animate-pulse">
+              <div className="w-16 h-16 border-4 border-primary rounded-full animate-spin border-t-transparent"></div>
             </div>
-            
-            <div>
-              <label className="block text-sm font-medium text-foreground mb-2">
-                First Name*
-              </label>
-              <Input
-                type="text"
-                name="firstName"
-                value={formData.firstName}
-                onChange={handleInputChange}
-                required
-                className="w-full"
-                placeholder="John"
-              />
-            </div>
-            
-            <div>
-              <label className="block text-sm font-medium text-foreground mb-2">
-                Last Name*
-              </label>
-              <Input
-                type="text"
-                name="lastName"
-                value={formData.lastName}
-                onChange={handleInputChange}
-                required
-                className="w-full"
-                placeholder="Doe"
-              />
-            </div>
-            
-            <div>
-              <label className="block text-sm font-medium text-foreground mb-2">
-                Job Title*
-              </label>
-              <Input
-                type="text"
-                name="jobTitle"
-                value={formData.jobTitle}
-                onChange={handleInputChange}
-                required
-                className="w-full"
-                placeholder="Security Manager"
-              />
-            </div>
-            
-            <div>
-              <label className="block text-sm font-medium text-foreground mb-2">
-                Company Name*
-              </label>
-              <Input
-                type="text"
-                name="companyName"
-                value={formData.companyName}
-                onChange={handleInputChange}
-                required
-                className="w-full"
-                placeholder="Your Company"
-              />
-            </div>
-            
-            <div>
-              <label className="block text-sm font-medium text-foreground mb-2">
-                Company Domain Name*
-              </label>
-              <Input
-                type="text"
-                name="companyDomain"
-                value={formData.companyDomain}
-                onChange={handleInputChange}
-                required
-                className="w-full"
-                placeholder="company.com"
-              />
-            </div>
-            
-            <div className="md:col-span-2">
-              <label className="block text-sm font-medium text-foreground mb-2">
-                Country*
-              </label>
-              <Input
-                type="text"
-                name="country"
-                value={formData.country}
-                onChange={handleInputChange}
-                required
-                className="w-full"
-                placeholder="United States"
-              />
+            <div className="absolute inset-2 bg-primary/20 rounded-full flex items-center justify-center animate-glow-pulse">
+              <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
             </div>
           </div>
 
-          <div className="text-sm text-muted-foreground">
-            By submitting this form, you agree to receive emails from us and to share your information so we can provide the requested service. You may unsubscribe at any time. For more, see our Privacy Policy.
+          {/* Message */}
+          <div className="space-y-3">
+            <h3 className="text-xl font-oswald font-semibold text-foreground">
+              Free Trial Registration
+            </h3>
+            <p className="text-muted-foreground">
+              We're putting the finishing touches on our trial registration system. 
+              Check back soon for full access to DarkThreat monitoring capabilities.
+            </p>
           </div>
 
-          <Button type="submit" className="w-full hero-button text-lg py-4">
-            Start Free Trial
+          {/* Animated progress indicators */}
+          <div className="flex justify-center space-x-2">
+            <div className="w-2 h-2 bg-primary rounded-full animate-pulse delay-0"></div>
+            <div className="w-2 h-2 bg-primary rounded-full animate-pulse delay-150"></div>
+            <div className="w-2 h-2 bg-primary rounded-full animate-pulse delay-300"></div>
+          </div>
+
+          <Button onClick={onClose} variant="outline" className="w-full">
+            Back to Dashboard
           </Button>
-        </form>
+        </div>
       </DialogContent>
     </Dialog>
   );

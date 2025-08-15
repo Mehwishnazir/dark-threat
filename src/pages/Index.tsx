@@ -9,6 +9,7 @@ import TrialRegistrationForm from '@/components/TrialRegistrationForm';
 import TrialModal from '@/components/TrialModal';
 import ComparisonTable from '@/components/ComparisonTable';
 import ReviewsSection from '@/components/ReviewsSection';
+import AnimatedBackground from '@/components/AnimatedBackground';
 import { Shield, Search, AlertTriangle, Users, Database, Zap, Eye, Globe, Lock, Linkedin, Twitter, Github } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -17,7 +18,8 @@ const Index = () => {
   const [isAnnual, setIsAnnual] = useState(true);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background relative">
+      <AnimatedBackground />
 
       {/* Header */}
       <header className="py-6 px-6 border-b border-border">
@@ -73,15 +75,12 @@ const Index = () => {
             on the Dark Web before they impact your business.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <Button 
               onClick={() => setIsTrialModalOpen(true)}
               className="hero-button"
             >
               Start Free Trial
-            </Button>
-            <Button variant="outline" className="border-border hover:border-primary hover:bg-primary/10">
-              Watch Demo
             </Button>
           </div>
         </div>
@@ -287,9 +286,9 @@ const Index = () => {
       />
 
       {/* Footer */}
-      <footer className="bg-card border-t border-border py-12">
+      <footer className="relative bg-card border-t border-border py-12 z-10">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="col-span-1 md:col-span-2">
               <div className="flex items-center space-x-2 mb-4">
                 <Shield className="w-8 h-8 text-primary" />
@@ -311,21 +310,32 @@ const Index = () => {
               </div>
             </div>
             <div>
-              <h3 className="font-oswald font-semibold text-foreground mb-4">Platform</h3>
-              <ul className="space-y-2">
-                <li><Link to="/data-leak-detection" className="text-muted-foreground hover:text-primary">Data Leak Detection</Link></li>
-                <li><a href="#pricing" className="text-muted-foreground hover:text-primary">Pricing</a></li>
-                <li><Link to="/signin" className="text-muted-foreground hover:text-primary">Sign In</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-oswald font-semibold text-foreground mb-4">Legal</h3>
-              <ul className="space-y-2">
-                <li><Link to="/privacy-policy" className="text-muted-foreground hover:text-primary">Privacy Policy</Link></li>
-                <li><Link to="/platform-terms" className="text-muted-foreground hover:text-primary">Platform Terms of Use</Link></li>
-                <li><Link to="/website-terms" className="text-muted-foreground hover:text-primary">Website Terms of Use</Link></li>
-                <li><a href="#" className="text-muted-foreground hover:text-primary">Support</a></li>
-              </ul>
+              <h3 className="font-oswald font-semibold text-foreground mb-4">Navigation</h3>
+              <nav className="space-y-2">
+                <Link to="/" className="block text-muted-foreground hover:text-primary transition-colors">
+                  Home
+                </Link>
+                <Link to="/solution" className="block text-muted-foreground hover:text-primary transition-colors">
+                  Solution
+                </Link>
+                <Link to="/pricing" className="block text-muted-foreground hover:text-primary transition-colors">
+                  Pricing
+                </Link>
+                <Link to="/about" className="block text-muted-foreground hover:text-primary transition-colors">
+                  About
+                </Link>
+                <Link to="/contact" className="block text-muted-foreground hover:text-primary transition-colors">
+                  Contact
+                </Link>
+              </nav>
+              <div className="mt-4">
+                <Button 
+                  onClick={() => setIsTrialModalOpen(true)}
+                  className="hero-button text-sm px-4 py-2"
+                >
+                  Start Free Trial
+                </Button>
+              </div>
             </div>
           </div>
           <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground">
