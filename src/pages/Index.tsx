@@ -22,7 +22,7 @@ const Index = () => {
       <AnimatedBackground />
 
       {/* Header */}
-      <header className="py-6 px-6 border-b border-border">
+      <header className="fixed top-0 left-0 right-0 py-6 px-6 border-b border-border bg-background/95 backdrop-blur-sm z-50">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <div className="text-2xl font-oswald font-bold text-foreground">
             DARK<span className="text-primary">THREAT</span>
@@ -54,7 +54,7 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center cyber-grid overflow-hidden">
+      <section className="relative h-screen flex items-center justify-center cyber-grid overflow-hidden mt-20">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background"></div>
         
         {/* 3D Background */}
@@ -311,31 +311,29 @@ const Index = () => {
             </div>
             <div>
               <h3 className="font-oswald font-semibold text-foreground mb-4">Navigation</h3>
-              <nav className="space-y-2">
-                <Link to="/" className="block text-muted-foreground hover:text-primary transition-colors">
+              <nav className="flex flex-wrap items-center gap-6 mb-4">
+                <Link to="/" className="text-primary transition-colors">
                   Home
                 </Link>
-                <Link to="/solution" className="block text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/solution" className="text-muted-foreground hover:text-primary transition-colors">
                   Solution
                 </Link>
-                <Link to="/pricing" className="block text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/pricing" className="text-muted-foreground hover:text-primary transition-colors">
                   Pricing
                 </Link>
-                <Link to="/about" className="block text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">
                   About
                 </Link>
-                <Link to="/contact" className="block text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">
                   Contact
                 </Link>
-              </nav>
-              <div className="mt-4">
                 <Button 
                   onClick={() => setIsTrialModalOpen(true)}
-                  className="hero-button text-sm px-4 py-2"
+                  className="hero-button"
                 >
                   Start Free Trial
                 </Button>
-              </div>
+              </nav>
             </div>
           </div>
           <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground">

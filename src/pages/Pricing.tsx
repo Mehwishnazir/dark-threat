@@ -223,22 +223,31 @@ const Pricing = () => {
                 </a>
               </div>
             </div>
-            <div>
-              <h3 className="font-oswald font-semibold text-foreground mb-4">Platform</h3>
-              <ul className="space-y-2">
-                <li><Link to="/data-leak-detection" className="text-muted-foreground hover:text-primary">Data Leak Detection</Link></li>
-                <li><Link to="/pricing" className="text-muted-foreground hover:text-primary">Pricing</Link></li>
-                <li><Link to="/signin" className="text-muted-foreground hover:text-primary">Sign In</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-oswald font-semibold text-foreground mb-4">Legal</h3>
-              <ul className="space-y-2">
-                <li><Link to="/privacy-policy" className="text-muted-foreground hover:text-primary">Privacy Policy</Link></li>
-                <li><Link to="/platform-terms" className="text-muted-foreground hover:text-primary">Platform Terms of Use</Link></li>
-                <li><Link to="/website-terms" className="text-muted-foreground hover:text-primary">Website Terms of Use</Link></li>
-                <li><a href="#" className="text-muted-foreground hover:text-primary">Support</a></li>
-              </ul>
+            <div className="col-span-2">
+              <h3 className="font-oswald font-semibold text-foreground mb-4">Navigation</h3>
+              <nav className="flex flex-wrap items-center gap-6">
+                <Link to="/" className="text-muted-foreground hover:text-primary transition-colors">
+                  Home
+                </Link>
+                <Link to="/solution" className="text-muted-foreground hover:text-primary transition-colors">
+                  Solution
+                </Link>
+                <Link to="/pricing" className="text-primary transition-colors">
+                  Pricing
+                </Link>
+                <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">
+                  About
+                </Link>
+                <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">
+                  Contact
+                </Link>
+                <Button 
+                  onClick={() => setIsTrialModalOpen(true)}
+                  className="hero-button"
+                >
+                  Start Free Trial
+                </Button>
+              </nav>
             </div>
           </div>
           <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground">
