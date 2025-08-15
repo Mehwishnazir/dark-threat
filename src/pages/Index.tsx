@@ -288,15 +288,12 @@ const Index = () => {
       {/* Footer */}
       <footer className="relative bg-card border-t border-border py-12 z-10">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="col-span-1 md:col-span-2">
-              <div className="flex items-center space-x-2 mb-4">
+          <div className="space-y-6">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center space-x-2">
                 <Shield className="w-8 h-8 text-primary" />
                 <span className="text-xl font-oswald font-bold text-foreground">DarkThreat</span>
               </div>
-              <p className="text-muted-foreground mb-4">
-                Advanced dark web monitoring and threat intelligence platform protecting your organization 24/7.
-              </p>
               <div className="flex space-x-4">
                 <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                   <Twitter className="w-5 h-5" />
@@ -309,32 +306,36 @@ const Index = () => {
                 </a>
               </div>
             </div>
-            <div>
-              <h3 className="font-oswald font-semibold text-foreground mb-4">Navigation</h3>
-              <nav className="flex flex-wrap items-center gap-6 mb-4">
-                <Link to="/" className="text-primary transition-colors">
-                  Home
-                </Link>
-                <Link to="/solution" className="text-muted-foreground hover:text-primary transition-colors">
-                  Solution
-                </Link>
-                <Link to="/pricing" className="text-muted-foreground hover:text-primary transition-colors">
-                  Pricing
-                </Link>
-                <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">
-                  About
-                </Link>
-                <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">
-                  Contact
-                </Link>
-                <Button 
-                  onClick={() => setIsTrialModalOpen(true)}
-                  className="hero-button"
-                >
-                  Start Free Trial
-                </Button>
-              </nav>
-            </div>
+            
+            <p className="text-muted-foreground max-w-2xl leading-relaxed">
+              Advanced dark web monitoring and threat intelligence platform<br />
+              protecting your organization 24/7 from emerging cyber threats<br />
+              across the hidden corners of the internet.
+            </p>
+            
+            <nav className="flex flex-wrap items-center gap-6">
+              <Link to="/" className="text-primary transition-colors">
+                Home
+              </Link>
+              <Link to="/solution" className="text-muted-foreground hover:text-primary transition-colors">
+                Solution
+              </Link>
+              <Link to="/pricing" className="text-muted-foreground hover:text-primary transition-colors">
+                Pricing
+              </Link>
+              <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">
+                About
+              </Link>
+              <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">
+                Contact
+              </Link>
+              <Button 
+                onClick={() => setIsTrialModalOpen(true)}
+                className="hero-button"
+              >
+                Start Free Trial
+              </Button>
+            </nav>
           </div>
           <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground">
             <p>&copy; 2025 DarkThreat. All rights reserved.</p>
