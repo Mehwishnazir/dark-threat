@@ -171,7 +171,7 @@ const AnimatedBackground = () => {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 pointer-events-none"
+      className="absolute inset-0 pointer-events-none"
       style={{
         background: 'radial-gradient(circle at 20% 50%, hsla(0, 100%, 50%, 0.03) 0%, transparent 50%), radial-gradient(circle at 80% 20%, hsla(0, 100%, 50%, 0.03) 0%, transparent 50%)',
         zIndex: 1
