@@ -19,7 +19,6 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background relative">
-      <AnimatedBackground />
 
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 py-6 px-6 border-b border-border bg-background/95 backdrop-blur-sm z-50">
@@ -55,6 +54,7 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center cyber-grid overflow-hidden mt-20">
+        <AnimatedBackground />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background"></div>
         
         {/* 3D Background */}
@@ -289,53 +289,55 @@ const Index = () => {
       <footer className="relative bg-card border-t border-border py-12 z-10">
         <div className="max-w-6xl mx-auto px-6">
           <div className="space-y-6">
+            {/* Navigation - matching top navigation exactly */}
             <div className="flex items-center justify-between">
-              <div className="flex items-center space-x-2">
-                <Shield className="w-8 h-8 text-primary" />
-                <span className="text-xl font-oswald font-bold text-foreground">DarkThreat</span>
+              <div className="text-2xl font-oswald font-bold text-foreground">
+                DARK<span className="text-primary">THREAT</span>
               </div>
-              <div className="flex space-x-4">
-                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                  <Twitter className="w-5 h-5" />
-                </a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                  <Linkedin className="w-5 h-5" />
-                </a>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                  <Github className="w-5 h-5" />
-                </a>
-              </div>
+              <nav className="flex items-center space-x-6">
+                <Link to="/" className="text-primary">
+                  Home
+                </Link>
+                <Link to="/solution" className="text-muted-foreground hover:text-primary transition-colors">
+                  Solution
+                </Link>
+                <Link to="/pricing" className="text-muted-foreground hover:text-primary transition-colors">
+                  Pricing
+                </Link>
+                <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">
+                  About
+                </Link>
+                <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">
+                  Contact
+                </Link>
+                <Button 
+                  onClick={() => setIsTrialModalOpen(true)}
+                  className="hero-button"
+                >
+                  Start Free Trial
+                </Button>
+              </nav>
             </div>
             
-            <p className="text-muted-foreground max-w-2xl leading-relaxed">
+            {/* Description text below logo */}
+            <p className="text-muted-foreground leading-relaxed">
               Advanced dark web monitoring and threat intelligence platform<br />
               protecting your organization 24/7 from emerging cyber threats<br />
               across the hidden corners of the internet.
             </p>
             
-            <nav className="flex flex-wrap items-center gap-6">
-              <Link to="/" className="text-primary transition-colors">
-                Home
-              </Link>
-              <Link to="/solution" className="text-muted-foreground hover:text-primary transition-colors">
-                Solution
-              </Link>
-              <Link to="/pricing" className="text-muted-foreground hover:text-primary transition-colors">
-                Pricing
-              </Link>
-              <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">
-                About
-              </Link>
-              <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">
-                Contact
-              </Link>
-              <Button 
-                onClick={() => setIsTrialModalOpen(true)}
-                className="hero-button"
-              >
-                Start Free Trial
-              </Button>
-            </nav>
+            {/* Social media icons below text */}
+            <div className="flex space-x-4">
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                <Twitter className="w-5 h-5" />
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                <Github className="w-5 h-5" />
+              </a>
+            </div>
           </div>
           <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground">
             <p>&copy; 2025 DarkThreat. All rights reserved.</p>
