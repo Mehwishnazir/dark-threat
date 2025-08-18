@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import PricingCard from '@/components/PricingCard';
 import TrialModal from '@/components/TrialModal';
 import ComparisonTable from '@/components/ComparisonTable';
-import { Shield } from 'lucide-react';
+import { Shield, Linkedin, Twitter, Github } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Pricing = () => {
@@ -202,39 +202,55 @@ const Pricing = () => {
       {/* Footer */}
       <footer className="bg-card border-t border-border py-12">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="col-span-1 md:col-span-2">
-              <div className="flex items-center space-x-2 mb-4">
-                <Shield className="w-8 h-8 text-primary" />
-                <span className="text-xl font-oswald font-bold text-foreground">DarkThreat</span>
+          <div className="space-y-6">
+            {/* Navigation - matching top navigation exactly */}
+            <div className="flex items-center justify-between">
+              <div className="text-2xl font-oswald font-bold text-foreground">
+                DARK<span className="text-primary">THREAT</span>
               </div>
-              <p className="text-muted-foreground mb-4">
-                Advanced dark web monitoring and threat intelligence platform protecting your organization 24/7.
-              </p>
-              <div className="flex space-x-4">
-                <a href="#" className="text-muted-foreground hover:text-primary">Security</a>
-                <a href="#" className="text-muted-foreground hover:text-primary">Community</a>
-                <a href="#" className="text-muted-foreground hover:text-primary">Resources</a>
-              </div>
+              <nav className="flex items-center space-x-6">
+                <Link to="/" className="text-muted-foreground hover:text-primary transition-colors">
+                  Home
+                </Link>
+                <Link to="/solution" className="text-muted-foreground hover:text-primary transition-colors">
+                  Solution
+                </Link>
+                <Link to="/pricing" className="text-primary">
+                  Pricing
+                </Link>
+                <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">
+                  About
+                </Link>
+                <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">
+                  Contact
+                </Link>
+                <Button 
+                  onClick={() => setIsTrialModalOpen(true)}
+                  className="hero-button"
+                >
+                  Start Free Trial
+                </Button>
+              </nav>
             </div>
-            <div>
-              <h3 className="font-oswald font-semibold text-foreground mb-4">Navigation</h3>
-              <ul className="space-y-2">
-                <li><Link to="/" className="text-muted-foreground hover:text-primary">Home</Link></li>
-                <li><Link to="/solution" className="text-muted-foreground hover:text-primary">Solution</Link></li>
-                <li><Link to="/pricing" className="text-muted-foreground hover:text-primary">Pricing</Link></li>
-                <li><Link to="/about" className="text-muted-foreground hover:text-primary">About</Link></li>
-                <li><Link to="/contact" className="text-muted-foreground hover:text-primary">Contact</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-oswald font-semibold text-foreground mb-4">Legal</h3>
-              <ul className="space-y-2">
-                <li><Link to="/privacy-policy" className="text-muted-foreground hover:text-primary">Privacy Policy</Link></li>
-                <li><Link to="/platform-terms" className="text-muted-foreground hover:text-primary">Platform Terms of Use</Link></li>
-                <li><Link to="/website-terms" className="text-muted-foreground hover:text-primary">Website Terms of Use</Link></li>
-                <li><a href="#" className="text-muted-foreground hover:text-primary">Support</a></li>
-              </ul>
+            
+            {/* Description text below logo */}
+            <p className="text-muted-foreground leading-relaxed">
+              Advanced dark web monitoring and threat intelligence platform<br />
+              protecting your organization 24/7 from emerging cyber threats<br />
+              across the hidden corners of the internet.
+            </p>
+            
+            {/* Social media icons below text */}
+            <div className="flex space-x-4">
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                <Twitter className="w-5 h-5" />
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                <Github className="w-5 h-5" />
+              </a>
             </div>
           </div>
           <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground">
