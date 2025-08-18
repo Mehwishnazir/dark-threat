@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { Shield, Users, Award, Target } from 'lucide-react';
+import { Shield, Users, Award, Target, Twitter, Linkedin, Github } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import TrialModal from '@/components/TrialModal';
@@ -208,6 +208,56 @@ const About = () => {
         isOpen={isTrialModalOpen} 
         onClose={() => setIsTrialModalOpen(false)} 
       />
+
+      {/* Footer */}
+      <footer className="bg-card border-t border-border py-12">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="col-span-1 md:col-span-2">
+              <div className="flex items-center space-x-2 mb-4">
+                <Shield className="w-8 h-8 text-primary" />
+                <span className="text-xl font-oswald font-bold text-foreground">DarkThreat</span>
+              </div>
+              <p className="text-muted-foreground mb-4">
+                Advanced dark web monitoring and threat intelligence platform protecting your organization 24/7.
+              </p>
+              <div className="flex space-x-4">
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Twitter className="w-5 h-5" />
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Linkedin className="w-5 h-5" />
+                </a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Github className="w-5 h-5" />
+                </a>
+              </div>
+            </div>
+            <div>
+              <h3 className="font-oswald font-semibold text-foreground mb-4">Platform</h3>
+              <ul className="space-y-2">
+                <li><Link to="/" className="text-muted-foreground hover:text-primary">Home</Link></li>
+                <li><Link to="/solution" className="text-muted-foreground hover:text-primary">Solution</Link></li>
+                <li><Link to="/pricing" className="text-muted-foreground hover:text-primary">Pricing</Link></li>
+                <li><Link to="/about" className="text-muted-foreground hover:text-primary">About</Link></li>
+                <li><Link to="/contact" className="text-muted-foreground hover:text-primary">Contact</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-oswald font-semibold text-foreground mb-4">Legal</h3>
+              <ul className="space-y-2">
+                <li><Link to="/privacy-policy" className="text-muted-foreground hover:text-primary">Privacy Policy</Link></li>
+                <li><Link to="/platform-terms" className="text-muted-foreground hover:text-primary">Platform Terms of Use</Link></li>
+                <li><Link to="/website-terms" className="text-muted-foreground hover:text-primary">Website Terms of Use</Link></li>
+                <li><a href="#" className="text-muted-foreground hover:text-primary">Support</a></li>
+              </ul>
+            </div>
+          </div>
+          <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground">
+            <p>&copy; 2025 DarkThreat. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
