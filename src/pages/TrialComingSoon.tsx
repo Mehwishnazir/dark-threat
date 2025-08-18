@@ -15,7 +15,7 @@ const TrialComingSoon = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-to-br from-background via-background to-threat-dark">
       {/* Header */}
       <header className="py-6 px-6 border-b border-border">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
@@ -38,12 +38,6 @@ const TrialComingSoon = () => {
             <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">
               Contact
             </Link>
-            <Button 
-              onClick={() => window.open('/trial-coming-soon', '_blank')}
-              className="hero-button"
-            >
-              Start Free Trial
-            </Button>
           </nav>
         </div>
       </header>
@@ -166,6 +160,7 @@ const TrialComingSoon = () => {
                 <li><Link to="/data-leak-detection" className="text-muted-foreground hover:text-primary">Data Leak Detection</Link></li>
                 <li><Link to="/pricing" className="text-muted-foreground hover:text-primary">Pricing</Link></li>
                 <li><Link to="/signin" className="text-muted-foreground hover:text-primary">Sign In</Link></li>
+                <li><Link to="/dashboard" className="text-muted-foreground hover:text-primary">Dashboard</Link></li>
               </ul>
             </div>
             <div>

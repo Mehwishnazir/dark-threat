@@ -9,8 +9,7 @@ import TrialRegistrationForm from '@/components/TrialRegistrationForm';
 import TrialModal from '@/components/TrialModal';
 import ComparisonTable from '@/components/ComparisonTable';
 import ReviewsSection from '@/components/ReviewsSection';
-import AnimatedBackground from '@/components/AnimatedBackground';
-import { Shield, Search, AlertTriangle, Users, Database, Zap, Eye, Globe, Lock, Linkedin, Twitter, Github } from 'lucide-react';
+import { Shield, Search, AlertTriangle, Users, Database, Zap, Eye, Globe, Lock } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Index = () => {
@@ -18,10 +17,10 @@ const Index = () => {
   const [isAnnual, setIsAnnual] = useState(true);
 
   return (
-    <div className="min-h-screen bg-background relative">
+    <div className="min-h-screen bg-background">
 
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 py-6 px-6 border-b border-border bg-background/95 backdrop-blur-sm z-50">
+      <header className="py-6 px-6 border-b border-border">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <div className="text-2xl font-oswald font-bold text-foreground">
             DARK<span className="text-primary">THREAT</span>
@@ -53,8 +52,7 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center cyber-grid overflow-hidden mt-20">
-        <AnimatedBackground />
+      <section className="relative h-screen flex items-center justify-center cyber-grid overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background"></div>
         
         {/* 3D Background */}
@@ -75,12 +73,15 @@ const Index = () => {
             on the Dark Web before they impact your business.
           </p>
           
-          <div className="flex justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               onClick={() => setIsTrialModalOpen(true)}
               className="hero-button"
             >
               Start Free Trial
+            </Button>
+            <Button variant="outline" className="border-border hover:border-primary hover:bg-primary/10">
+              Watch Demo
             </Button>
           </div>
         </div>
@@ -286,57 +287,40 @@ const Index = () => {
       />
 
       {/* Footer */}
-      <footer className="relative bg-card border-t border-border py-12 z-10">
+      <footer className="bg-card border-t border-border py-12">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="space-y-6">
-            {/* Navigation - matching top navigation exactly */}
-            <div className="flex items-center justify-between">
-              <div className="text-2xl font-oswald font-bold text-foreground">
-                DARK<span className="text-primary">THREAT</span>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="col-span-1 md:col-span-2">
+              <div className="flex items-center space-x-2 mb-4">
+                <Shield className="w-8 h-8 text-primary" />
+                <span className="text-xl font-oswald font-bold text-foreground">DarkThreat</span>
               </div>
-              <nav className="flex items-center space-x-6">
-                <Link to="/" className="text-primary">
-                  Home
-                </Link>
-                <Link to="/solution" className="text-muted-foreground hover:text-primary transition-colors">
-                  Solution
-                </Link>
-                <Link to="/pricing" className="text-muted-foreground hover:text-primary transition-colors">
-                  Pricing
-                </Link>
-                <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">
-                  About
-                </Link>
-                <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">
-                  Contact
-                </Link>
-                <Button 
-                  onClick={() => setIsTrialModalOpen(true)}
-                  className="hero-button"
-                >
-                  Start Free Trial
-                </Button>
-              </nav>
+              <p className="text-muted-foreground mb-4">
+                Advanced dark web monitoring and threat intelligence platform protecting your organization 24/7.
+              </p>
+              <div className="flex space-x-4">
+                <a href="#" className="text-muted-foreground hover:text-primary">Twitter</a>
+                <a href="#" className="text-muted-foreground hover:text-primary">LinkedIn</a>
+                <a href="#" className="text-muted-foreground hover:text-primary">GitHub</a>
+              </div>
             </div>
-            
-            {/* Description text below logo */}
-            <p className="text-muted-foreground leading-relaxed">
-              Advanced dark web monitoring and threat intelligence platform<br />
-              protecting your organization 24/7 from emerging cyber threats<br />
-              across the hidden corners of the internet.
-            </p>
-            
-            {/* Social media icons below text */}
-            <div className="flex space-x-4">
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                <Github className="w-5 h-5" />
-              </a>
+            <div>
+              <h3 className="font-oswald font-semibold text-foreground mb-4">Platform</h3>
+              <ul className="space-y-2">
+                <li><Link to="/data-leak-detection" className="text-muted-foreground hover:text-primary">Data Leak Detection</Link></li>
+                <li><a href="#pricing" className="text-muted-foreground hover:text-primary">Pricing</a></li>
+                <li><Link to="/signin" className="text-muted-foreground hover:text-primary">Sign In</Link></li>
+                <li><Link to="/dashboard" className="text-muted-foreground hover:text-primary">Dashboard</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-oswald font-semibold text-foreground mb-4">Legal</h3>
+              <ul className="space-y-2">
+                <li><Link to="/privacy-policy" className="text-muted-foreground hover:text-primary">Privacy Policy</Link></li>
+                <li><Link to="/platform-terms" className="text-muted-foreground hover:text-primary">Platform Terms of Use</Link></li>
+                <li><Link to="/website-terms" className="text-muted-foreground hover:text-primary">Website Terms of Use</Link></li>
+                <li><a href="#" className="text-muted-foreground hover:text-primary">Support</a></li>
+              </ul>
             </div>
           </div>
           <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground">
