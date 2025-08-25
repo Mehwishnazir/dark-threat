@@ -24,8 +24,8 @@ export default function TrialRegistrationForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Trial registration:', formData);
+    // Redirect to auth page to start the trial signup process
+    window.location.href = '/auth';
   };
 
   return (

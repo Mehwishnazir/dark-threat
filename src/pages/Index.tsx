@@ -43,7 +43,7 @@ const Index = () => {
               Contact
             </Link>
             <Button 
-              onClick={() => setIsTrialModalOpen(true)}
+              onClick={() => window.location.href = '/auth'}
               className="hero-button"
             >
               Start Free Trial
@@ -77,7 +77,7 @@ const Index = () => {
           
           <div className="flex justify-center">
             <Button 
-              onClick={() => setIsTrialModalOpen(true)}
+              onClick={() => window.location.href = '/auth'}
               className="hero-button"
             >
               Start Free Trial

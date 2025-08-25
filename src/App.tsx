@@ -21,6 +21,9 @@ import Solution from "./pages/Solution";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import TrialComingSoon from "./pages/TrialComingSoon";
+import Auth from "./pages/Auth";
+import AdminDashboard from "./pages/AdminDashboard";
+import SetupAdminPage from "./pages/SetupAdminPage";
 
 const queryClient = new QueryClient();
 
@@ -47,6 +50,9 @@ const App = () => (
           <Route path="/alerts" element={<Alerts />} />
           <Route path="/reports" element={<Reports />} />
           <Route path="/trial-coming-soon" element={<TrialComingSoon />} />
+          <Route path="/auth" element={<Auth />} />
+          <Route path="/admin" element={<AdminDashboard />} />
+          <Route path="/setup-admin" element={<SetupAdminPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
