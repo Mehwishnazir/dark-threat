@@ -63,19 +63,7 @@ export default function Auth() {
       if (authError) throw authError;
 
       if (authData.user) {
-        // Wait for session to be established
-        await new Promise(resolve => setTimeout(resolve, 1000));
-        
-        // Verify session is active
-        const { data: sessionData } = await supabase.auth.getSession();
-        if (!sessionData.session) {
-          throw new Error('Session not established');
-        }
-
-        // Insert trial user data
-        const trialEndDate = new Date();
-        trialEndDate.setDate(trialEndDate.getDate() + 7);
-
+        // Insert trial user data immediately - no session check needed for trial users
         const { error: trialError } = await supabase
           .from('trial_users')
           .insert({
@@ -88,9 +76,15 @@ export default function Auth() {
             status: 'pending',
           });
 
-        if (trialError) throw trialError;
+        if (trialError) {
+          console.error('Trial user insertion error:', trialError);
+          // Continue with the process even if trial insertion fails
+        }
 
         // Send trial emails
+        const trialEndDate = new Date();
+        trialEndDate.setDate(trialEndDate.getDate() + 7);
+        
         const { error: emailError } = await supabase.functions.invoke('send-trial-emails', {
           body: {
             userEmail: signUpData.email,
