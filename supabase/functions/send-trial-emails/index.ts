@@ -31,36 +31,27 @@ const handler = async (req: Request): Promise<Response> => {
     const welcomeEmail = await resend.emails.send({
       from: "DarkThreat <onboarding@resend.dev>",
       to: [userEmail],
-      subject: "DarkThreat Trial Account - Under Review",
+      subject: "🚀 Your Trial Account is Being Processed",
       html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-          <h1 style="color: #2563eb; margin-bottom: 24px;">Thank You for Your Interest in DarkThreat!</h1>
-          
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; color: #333;">
           <p>Hi ${firstName},</p>
           
-          <p>Thank you for submitting your trial request for DarkThreat. We have received your application and it is currently being reviewed by our team.</p>
+          <p>Thanks for signing up for a trial account with us! 🎉</p>
+          <p>We're setting things up on our side, and your trial account is currently in processing.</p>
           
-          <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin: 20px 0;">
-            <h3 style="color: #1e293b; margin-top: 0;">Your Application Details:</h3>
-            <ul style="list-style: none; padding: 0;">
-              <li><strong>Name:</strong> ${firstName} ${lastName}</li>
-              <li><strong>Company:</strong> ${companyName}</li>
-              <li><strong>Submitted:</strong> ${new Date().toLocaleDateString()}</li>
-              <li><strong>Status:</strong> Under Review</li>
-            </ul>
+          <p><strong>Here's what you'll get once it's ready:</strong></p>
+          
+          <div style="margin: 20px 0;">
+            <p style="margin: 8px 0;">✅ Access to trial features</p>
+            <p style="margin: 8px 0;">✅ No setup or approval needed</p>
+            <p style="margin: 8px 0;">✅ Quick start with zero hassle</p>
           </div>
           
-          <h3 style="color: #1e293b;">What Happens Next?</h3>
-          <ul>
-            <li>Our team will review your trial request within 24-48 hours</li>
-            <li>You will receive login credentials via email once approved</li>
-            <li>Access to the full DarkThreat platform will be granted upon approval</li>
-            <li>Your 7-day trial period will begin once your account is activated</li>
-          </ul>
+          <p>You'll receive another email as soon as your trial is activated and ready to use.</p>
           
-          <p>If you have any questions or need immediate assistance, please don't hesitate to contact our support team.</p>
+          <p>If you enjoy your experience, you can upgrade anytime to unlock the full set of features.</p>
           
-          <p>Best regards,<br>The DarkThreat Team</p>
+          <p>Cheers,<br>DarkThreat Team</p>
         </div>
       `,
     });
