@@ -78,8 +78,10 @@ export default function Auth() {
 
         if (trialError) {
           console.error('Trial user insertion error:', trialError);
-          // Continue with the process even if trial insertion fails
+          throw new Error(`Failed to create trial account: ${trialError.message}`);
         }
+
+        console.log('Trial user successfully inserted for:', signUpData.email);
 
         // Send trial emails
         const trialEndDate = new Date();
