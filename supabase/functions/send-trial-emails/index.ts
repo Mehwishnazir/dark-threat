@@ -27,37 +27,38 @@ const handler = async (req: Request): Promise<Response> => {
 
     console.log("Sending trial emails for:", userEmail);
 
-    // Send welcome email to the trial user
+    // Send processing email to the trial user
     const welcomeEmail = await resend.emails.send({
       from: "DarkThreat <onboarding@resend.dev>",
       to: [userEmail],
-      subject: "Welcome to DarkThreat - Your 7-Day Free Trial Has Started!",
+      subject: "DarkThreat Trial Account - Under Review",
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-          <h1 style="color: #2563eb; margin-bottom: 24px;">Welcome to DarkThreat!</h1>
+          <h1 style="color: #2563eb; margin-bottom: 24px;">Thank You for Your Interest in DarkThreat!</h1>
           
           <p>Hi ${firstName},</p>
           
-          <p>Thank you for starting your free trial with DarkThreat. Your cybersecurity monitoring journey begins now!</p>
+          <p>Thank you for submitting your trial request for DarkThreat. We have received your application and it is currently being reviewed by our team.</p>
           
           <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin: 20px 0;">
-            <h3 style="color: #1e293b; margin-top: 0;">Trial Details:</h3>
+            <h3 style="color: #1e293b; margin-top: 0;">Your Application Details:</h3>
             <ul style="list-style: none; padding: 0;">
-              <li><strong>Trial Start:</strong> ${new Date().toLocaleDateString()}</li>
-              <li><strong>Trial Expires:</strong> ${new Date(trialEndDate).toLocaleDateString()}</li>
+              <li><strong>Name:</strong> ${firstName} ${lastName}</li>
               <li><strong>Company:</strong> ${companyName}</li>
+              <li><strong>Submitted:</strong> ${new Date().toLocaleDateString()}</li>
+              <li><strong>Status:</strong> Under Review</li>
             </ul>
           </div>
           
-          <h3 style="color: #1e293b;">What's Next?</h3>
+          <h3 style="color: #1e293b;">What Happens Next?</h3>
           <ul>
-            <li>Access your dashboard to start monitoring</li>
-            <li>Set up your first threat intelligence feeds</li>
-            <li>Configure alerts for your organization</li>
-            <li>Explore our comprehensive security reports</li>
+            <li>Our team will review your trial request within 24-48 hours</li>
+            <li>You will receive login credentials via email once approved</li>
+            <li>Access to the full DarkThreat platform will be granted upon approval</li>
+            <li>Your 7-day trial period will begin once your account is activated</li>
           </ul>
           
-          <p>If you have any questions or need assistance, our support team is here to help.</p>
+          <p>If you have any questions or need immediate assistance, please don't hesitate to contact our support team.</p>
           
           <p>Best regards,<br>The DarkThreat Team</p>
         </div>

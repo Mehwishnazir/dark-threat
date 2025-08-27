@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { 
   Shield, 
   AlertTriangle, 
@@ -38,12 +38,89 @@ export default function Dashboard() {
   const [mfaEnabled, setMfaEnabled] = useState(false);
   const [mfaCode, setMfaCode] = useState('');
   const [chatbotOpen, setChatbotOpen] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [trialStatus, setTrialStatus] = useState<string | null>(null);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const checkUserAccess = async () => {
+      try {
+        const { data: { session } } = await supabase.auth.getSession();
+        
+        if (!session) {
+          navigate('/auth');
+          return;
+        }
+
+        // Check trial status
+        const { data: trialData, error } = await supabase
+          .from('trial_users')
+          .select('status')
+          .eq('user_id', session.user.id)
+          .single();
+
+        if (error || !trialData) {
+          console.error('Error fetching trial status:', error);
+          navigate('/auth');
+          return;
+        }
+
+        if (trialData.status !== 'active') {
+          setTrialStatus(trialData.status);
+          setLoading(false);
+          return;
+        }
+
+        setTrialStatus('active');
+        setLoading(false);
+      } catch (error) {
+        console.error('Error checking user access:', error);
+        navigate('/auth');
+      }
+    };
+
+    checkUserAccess();
+  }, [navigate]);
 
   const handleSignOut = async () => {
     await supabase.auth.signOut();
-    navigate('/signin');
+    navigate('/auth');
   };
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <div className="text-center space-y-4">
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto"></div>
+          <p className="text-muted-foreground">Loading...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (trialStatus !== 'active') {
+    return (
+      <div className="min-h-screen bg-background flex items-center justify-center p-4">
+        <Card className="w-full max-w-md">
+          <CardHeader className="text-center">
+            <CardTitle className="text-2xl font-oswald">Account Pending</CardTitle>
+          </CardHeader>
+          <CardContent className="text-center space-y-4">
+            <p className="text-muted-foreground">
+              Your trial account is currently being reviewed by our team. 
+              You will receive access once your account is approved.
+            </p>
+            <p className="text-sm text-muted-foreground">
+              Status: <span className="font-medium capitalize">{trialStatus}</span>
+            </p>
+            <Button onClick={handleSignOut} variant="outline" className="w-full">
+              Sign Out
+            </Button>
+          </CardContent>
+        </Card>
+      </div>
+    );
+  }
 
   // Mock data
   const recentAlerts = [

@@ -7,10 +7,12 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
 import { supabase } from '@/integrations/supabase/client';
 import { useNavigate } from 'react-router-dom';
 import { AlertCircle, Loader2 } from 'lucide-react';
+import TrialProcessingDialog from '@/components/TrialProcessingDialog';
 
 export default function Auth() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const [showProcessingDialog, setShowProcessingDialog] = useState(false);
   const navigate = useNavigate();
   
   const [signUpData, setSignUpData] = useState({
@@ -75,6 +77,7 @@ export default function Auth() {
             company_name: signUpData.companyName,
             job_title: signUpData.jobTitle,
             trial_end: trialEndDate.toISOString(),
+            status: 'pending',
           });
 
         if (trialError) throw trialError;
@@ -95,7 +98,8 @@ export default function Auth() {
           // Don't throw error for email failure, continue with signup
         }
 
-        navigate('/dashboard');
+        // Show processing dialog instead of navigating to dashboard
+        setShowProcessingDialog(true);
       }
     } catch (error: any) {
       setError(error.message || 'An error occurred during signup');
@@ -110,13 +114,34 @@ export default function Auth() {
     setError('');
 
     try {
-      const { error } = await supabase.auth.signInWithPassword({
+      const { data, error } = await supabase.auth.signInWithPassword({
         email: signInData.email,
         password: signInData.password,
       });
 
       if (error) throw error;
-      navigate('/dashboard');
+
+      // Check trial status before navigating to dashboard
+      if (data.user) {
+        const { data: trialData, error: trialError } = await supabase
+          .from('trial_users')
+          .select('status')
+          .eq('user_id', data.user.id)
+          .single();
+
+        if (trialError || !trialData) {
+          // User might be admin or not have trial status - allow dashboard access
+          navigate('/dashboard');
+          return;
+        }
+
+        if (trialData.status === 'active') {
+          navigate('/dashboard');
+        } else {
+          // Show processing dialog for non-active trial users
+          setShowProcessingDialog(true);
+        }
+      }
     } catch (error: any) {
       setError(error.message || 'An error occurred during sign in');
     } finally {
@@ -253,6 +278,11 @@ export default function Auth() {
           </Tabs>
         </CardContent>
       </Card>
+      
+      <TrialProcessingDialog 
+        open={showProcessingDialog} 
+        onClose={() => setShowProcessingDialog(false)} 
+      />
     </div>
   );
 }
