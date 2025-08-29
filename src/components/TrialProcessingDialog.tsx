@@ -15,11 +15,9 @@ export default function TrialProcessingDialog({ open, onClose }: TrialProcessing
           <div className="mx-auto mb-4 h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center">
             <CheckCircle className="h-6 w-6 text-primary" />
           </div>
-          <DialogTitle className="text-xl font-oswald">Trial Account Submitted</DialogTitle>
+          <DialogTitle className="text-xl font-oswald">Account Processing</DialogTitle>
           <DialogDescription className="text-base space-y-2">
-            <p>Thank you for your interest in DarkThreat!</p>
-            <p className="font-medium">Your trial account is currently being processed by our team.</p>
-            <p>You will receive an email with your login credentials once your account is approved and activated.</p>
+            <p className="font-medium">Your account is under processing. You will be notified once the process is complete.</p>
           </DialogDescription>
         </DialogHeader>
         <div className="flex justify-center mt-6">

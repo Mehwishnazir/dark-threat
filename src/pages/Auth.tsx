@@ -125,26 +125,9 @@ export default function Auth() {
 
       if (error) throw error;
 
-      // Check trial status before navigating to dashboard
+      // Show processing dialog for all successful sign-ins
       if (data.user) {
-        const { data: trialData, error: trialError } = await supabase
-          .from('trial_users')
-          .select('status')
-          .eq('user_id', data.user.id)
-          .single();
-
-        if (trialError || !trialData) {
-          // User might be admin or not have trial status - allow dashboard access
-          navigate('/dashboard');
-          return;
-        }
-
-        if (trialData.status === 'active') {
-          navigate('/dashboard');
-        } else {
-          // Show processing dialog for non-active trial users
-          setShowProcessingDialog(true);
-        }
+        setShowProcessingDialog(true);
       }
     } catch (error: any) {
       setError(error.message || 'An error occurred during sign in');
