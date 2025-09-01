@@ -30,11 +30,25 @@ export default function Auth() {
   });
 
   useEffect(() => {
-    // Check if user is already authenticated
+    // Check if user is already authenticated and has active trial
     const checkAuth = async () => {
-      const { data: { session } } = await supabase.auth.getSession();
-      if (session) {
-        navigate('/dashboard');
+      try {
+        const { data: { session } } = await supabase.auth.getSession();
+        if (!session) return;
+
+        // Check trial status before redirecting
+        const { data: trialData } = await supabase
+          .from('trial_users')
+          .select('status')
+          .eq('user_id', session.user.id)
+          .single();
+
+        // Only redirect to dashboard if user has active trial
+        if (trialData?.status === 'active') {
+          navigate('/dashboard');
+        }
+      } catch (error) {
+        console.error('Auth check error:', error);
       }
     };
     checkAuth();

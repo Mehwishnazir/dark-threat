@@ -61,17 +61,14 @@ export default function Dashboard() {
 
         if (error || !trialData) {
           console.error('Error fetching trial status:', error);
-          navigate('/auth');
-          return;
-        }
-
-        if (trialData.status !== 'active') {
-          setTrialStatus(trialData.status);
+          // Don't redirect to auth if user exists but no trial data
+          // This handles admin users or users created outside trial flow
+          setTrialStatus('active');
           setLoading(false);
           return;
         }
 
-        setTrialStatus('active');
+        setTrialStatus(trialData.status);
         setLoading(false);
       } catch (error) {
         console.error('Error checking user access:', error);
