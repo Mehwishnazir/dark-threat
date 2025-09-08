@@ -14,62 +14,62 @@ export type Database = {
   }
   public: {
     Tables: {
-      trial_users: {
+      users: {
         Row: {
-          company_name: string | null
+          account_activated: boolean | null
+          business_email: string
+          company_domain: string
+          company_name: string
+          country: string
           created_at: string | null
-          email: string
-          first_name: string | null
+          email_verified: boolean | null
+          first_name: string
           id: string
-          job_title: string | null
-          last_name: string | null
-          status: string | null
+          job_title: string
+          last_name: string
+          role: Database["public"]["Enums"]["app_role"] | null
+          subscription_status: string | null
           trial_end: string | null
+          trial_start: string | null
+          updated_at: string | null
           user_id: string
         }
         Insert: {
-          company_name?: string | null
+          account_activated?: boolean | null
+          business_email: string
+          company_domain: string
+          company_name: string
+          country: string
           created_at?: string | null
-          email: string
-          first_name?: string | null
+          email_verified?: boolean | null
+          first_name: string
           id?: string
-          job_title?: string | null
-          last_name?: string | null
-          status?: string | null
+          job_title: string
+          last_name: string
+          role?: Database["public"]["Enums"]["app_role"] | null
+          subscription_status?: string | null
           trial_end?: string | null
+          trial_start?: string | null
+          updated_at?: string | null
           user_id: string
         }
         Update: {
-          company_name?: string | null
+          account_activated?: boolean | null
+          business_email?: string
+          company_domain?: string
+          company_name?: string
+          country?: string
           created_at?: string | null
-          email?: string
-          first_name?: string | null
+          email_verified?: boolean | null
+          first_name?: string
           id?: string
-          job_title?: string | null
-          last_name?: string | null
-          status?: string | null
+          job_title?: string
+          last_name?: string
+          role?: Database["public"]["Enums"]["app_role"] | null
+          subscription_status?: string | null
           trial_end?: string | null
-          user_id?: string
-        }
-        Relationships: []
-      }
-      user_roles: {
-        Row: {
-          created_at: string | null
-          id: string
-          role: Database["public"]["Enums"]["app_role"]
-          user_id: string
-        }
-        Insert: {
-          created_at?: string | null
-          id?: string
-          role: Database["public"]["Enums"]["app_role"]
-          user_id: string
-        }
-        Update: {
-          created_at?: string | null
-          id?: string
-          role?: Database["public"]["Enums"]["app_role"]
+          trial_start?: string | null
+          updated_at?: string | null
           user_id?: string
         }
         Relationships: []
@@ -88,7 +88,7 @@ export type Database = {
       }
     }
     Enums: {
-      app_role: "super_admin" | "user"
+      app_role: "admin" | "superadmin" | "trialuser"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -216,7 +216,7 @@ export type CompositeTypes<
 export const Constants = {
   public: {
     Enums: {
-      app_role: ["super_admin", "user"],
+      app_role: ["admin", "superadmin", "trialuser"],
     },
   },
 } as const
