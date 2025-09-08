@@ -80,10 +80,10 @@ export default function Auth() {
 
       if (authError) throw authError;
 
-      if (authData.user && authData.user.email_confirmed_at === null) {
+      if (authData.user) {
         console.log('User successfully registered:', signUpData.email);
 
-        // Send custom confirmation email instead of Supabase's default
+        // Send custom confirmation email
         const { error: confirmEmailError } = await supabase.functions.invoke('send-confirmation-email', {
           body: {
             userEmail: signUpData.email,
