@@ -8,7 +8,9 @@ const corsHeaders = {
 
 interface ConfirmationRequest {
   userEmail: string;
-  confirmationUrl: string;
+  token: string;
+  tokenHash: string;
+  redirectTo?: string;
   firstName: string;
 }
 
@@ -18,7 +20,11 @@ const handler = async (req: Request): Promise<Response> => {
   }
 
   try {
-    const { userEmail, confirmationUrl, firstName }: ConfirmationRequest = await req.json();
+    const { userEmail, token, tokenHash, redirectTo, firstName }: ConfirmationRequest = await req.json();
+    
+    // Construct the official Supabase email verification URL
+    const supabaseUrl = "https://hguzgggcdnerycccihov.supabase.co";
+    const confirmationUrl = `${supabaseUrl}/auth/v1/verify?token=${tokenHash}&type=email${redirectTo ? `&redirect_to=${encodeURIComponent(redirectTo)}` : ''}`;
     
     console.log('Sending confirmation email to:', userEmail);
 
