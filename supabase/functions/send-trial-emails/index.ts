@@ -29,7 +29,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send processing email to the trial user
     const welcomeEmail = await resend.emails.send({
-      from: "DarkThreat <onboarding@resend.dev>",
+      from: "DarkThreat <noreply@cybersilo.tech>",
       to: [userEmail],
       subject: "🚀 Your Trial Account is Being Processed",
       html: `
@@ -58,7 +58,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send notification email to super admin
     const adminEmail = await resend.emails.send({
-      from: "DarkThreat <onboarding@resend.dev>",
+      from: "DarkThreat <noreply@cybersilo.tech>",
       to: ["admin@darkthreat.com"], // Replace with actual admin email
       subject: "New Trial Registration - Action Required",
       html: `
