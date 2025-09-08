@@ -13,8 +13,6 @@ export default function Auth() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [showProcessingDialog, setShowProcessingDialog] = useState(false);
-  const [emailSent, setEmailSent] = useState(false);
-  const [resendLoading, setResendLoading] = useState(false);
   const navigate = useNavigate();
   
   const [signUpData, setSignUpData] = useState({
@@ -121,42 +119,6 @@ export default function Auth() {
       setError(error.message || 'An error occurred during signup');
     } finally {
       setLoading(false);
-    }
-  };
-
-  const handleResendConfirmation = async () => {
-    setResendLoading(true);
-    setError('');
-
-    try {
-      const { data: { user } } = await supabase.auth.getUser();
-      
-      if (!user) {
-        setError('No user found. Please sign up first.');
-        return;
-      }
-
-      // Send custom confirmation email
-      const { error: confirmEmailError } = await supabase.functions.invoke('send-confirmation-email', {
-        body: {
-          userEmail: user.email,
-          firstName: user.user_metadata?.first_name || 'User',
-          token: user.id,
-          tokenHash: user.id,
-          redirectTo: `${window.location.origin}/dashboard`
-        }
-      });
-
-      if (confirmEmailError) {
-        throw confirmEmailError;
-      }
-
-      setEmailSent(true);
-      setTimeout(() => setEmailSent(false), 5000); // Hide message after 5 seconds
-    } catch (error: any) {
-      setError(error.message || 'Failed to send confirmation email');
-    } finally {
-      setResendLoading(false);
     }
   };
 
@@ -293,34 +255,6 @@ export default function Auth() {
                   {loading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
                   Start 7-Day Free Trial
                 </Button>
-
-                {/* Manual Email Confirmation Section */}
-                <div className="mt-6 p-4 border rounded-lg bg-muted/50">
-                  <h3 className="text-sm font-medium mb-2">Email Confirmation</h3>
-                  <p className="text-xs text-muted-foreground mb-3">
-                    Need to resend your confirmation email? Click the button below.
-                  </p>
-                  
-                  {emailSent && (
-                    <Alert className="mb-3">
-                      <AlertCircle className="h-4 w-4" />
-                      <AlertDescription>
-                        Confirmation email sent! Check your inbox for "Welcome to DarkThreat" email.
-                      </AlertDescription>
-                    </Alert>
-                  )}
-
-                  <Button 
-                    type="button" 
-                    variant="outline" 
-                    onClick={handleResendConfirmation}
-                    disabled={resendLoading}
-                    className="w-full"
-                  >
-                    {resendLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-                    Send Confirmation Email
-                  </Button>
-                </div>
               </form>
             </TabsContent>
             
