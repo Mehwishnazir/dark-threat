@@ -80,11 +80,25 @@ export default function Auth() {
 
       if (authError) throw authError;
 
-      if (authData.user) {
-        // Insert user data immediately - handled by trigger but we can also call activation
+      if (authData.user && authData.user.email_confirmed_at === null) {
         console.log('User successfully registered:', signUpData.email);
 
-        // Send activation email
+        // Send custom confirmation email instead of Supabase's default
+        const { error: confirmEmailError } = await supabase.functions.invoke('send-confirmation-email', {
+          body: {
+            userEmail: signUpData.email,
+            firstName: signUpData.firstName,
+            token: authData.user.id, // Use user ID as token
+            tokenHash: authData.user.id, // This should be the actual token hash from Supabase
+            redirectTo: `${window.location.origin}/dashboard`
+          }
+        });
+
+        if (confirmEmailError) {
+          console.error('Confirmation email sending failed:', confirmEmailError);
+        }
+
+        // Also send activation email for admin notification
         const { error: emailError } = await supabase.functions.invoke('send-activation-email', {
           body: {
             userEmail: signUpData.email,
@@ -95,8 +109,7 @@ export default function Auth() {
         });
 
         if (emailError) {
-          console.error('Email sending failed:', emailError);
-          // Don't throw error for email failure, continue with signup
+          console.error('Activation email sending failed:', emailError);
         }
 
         // Show processing dialog instead of navigating to dashboard
