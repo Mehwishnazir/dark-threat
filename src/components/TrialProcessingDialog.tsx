@@ -16,8 +16,8 @@ export default function TrialProcessingDialog({ open, onClose }: TrialProcessing
             <CheckCircle className="h-6 w-6 text-primary" />
           </div>
           <DialogTitle className="text-xl font-oswald">Account Processing</DialogTitle>
-          <DialogDescription className="text-base space-y-2">
-            <p className="font-medium">Your account is under processing. You will be notified once the process is complete.</p>
+          <DialogDescription className="text-base">
+            Your account is under processing. You will be notified once the process is complete.
           </DialogDescription>
         </DialogHeader>
         <div className="flex justify-center mt-6">

@@ -30,7 +30,7 @@ const handler = async (req: Request): Promise<Response> => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: 'DarkThreat Security <noreply@cybersilo.tech>',
+        from: "DarkThreat Security <noreply@resend.dev>",
         to: [userEmail],
         subject: '🔐 Confirm Your DarkThreat Account',
         html: `

@@ -36,7 +36,7 @@ const handler = async (req: Request): Promise<Response> => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: 'DarkThreat Security <noreply@cybersilo.tech>',
+        from: "DarkThreat <noreply@resend.dev>",
         to: [userEmail],
         subject: '🎉 Your DarkThreat Account is Activated!',
         html: `
@@ -144,7 +144,7 @@ const handler = async (req: Request): Promise<Response> => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: 'DarkThreat System <noreply@cybersilo.tech>',
+        from: "DarkThreat System <noreply@resend.dev>",
         to: ['admin@darkthreat.com'],
         subject: '🎯 New User Account Activated',
         html: `
