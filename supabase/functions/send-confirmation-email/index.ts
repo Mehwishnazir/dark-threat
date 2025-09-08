@@ -36,7 +36,7 @@ const handler = async (req: Request): Promise<Response> => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: "DarkThreat Security <noreply@resend.dev>",
+        from: "noreply@resend.dev",
         to: [userEmail],
         subject: '🔐 Confirm Your DarkThreat Account',
         html: `
@@ -67,7 +67,7 @@ const handler = async (req: Request): Promise<Response> => {
                     <span style="font-size: 24px;">📧</span>
                   </div>
                   <h2 style="margin: 0 0 16px; font-size: 28px; font-weight: 600; color: #ffffff;">
-                    Confirm Your Email Address
+                    Welcome to Dark Threat
                   </h2>
                   <p style="margin: 0; color: #d1d5db; font-size: 18px; line-height: 1.6;">
                     Hi ${firstName}, please confirm your email to complete your registration.
