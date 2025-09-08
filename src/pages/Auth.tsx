@@ -21,6 +21,8 @@ export default function Auth() {
     firstName: '',
     lastName: '',
     companyName: '',
+    companyDomain: '',
+    country: '',
     jobTitle: '',
   });
 
@@ -36,15 +38,15 @@ export default function Auth() {
         const { data: { session } } = await supabase.auth.getSession();
         if (!session) return;
 
-        // Check trial status before redirecting
-        const { data: trialData } = await supabase
-          .from('trial_users')
-          .select('status')
+        // Check user status before redirecting
+        const { data: userData } = await supabase
+          .from('users')
+          .select('subscription_status, account_activated')
           .eq('user_id', session.user.id)
           .single();
 
-        // Only redirect to dashboard if user has active trial
-        if (trialData?.status === 'active') {
+        // Only redirect to dashboard if user has active subscription or trial
+        if (userData?.subscription_status === 'active' || userData?.subscription_status === 'trial') {
           navigate('/dashboard');
         }
       } catch (error) {
@@ -63,51 +65,32 @@ export default function Auth() {
       const { data: authData, error: authError } = await supabase.auth.signUp({
         email: signUpData.email,
         password: signUpData.password,
-        options: {
-          emailRedirectTo: `${window.location.origin}/dashboard`,
-          data: {
-            first_name: signUpData.firstName,
-            last_name: signUpData.lastName,
-            company_name: signUpData.companyName,
-            job_title: signUpData.jobTitle,
+          options: {
+            emailRedirectTo: `${window.location.origin}/dashboard`,
+            data: {
+              first_name: signUpData.firstName,
+              last_name: signUpData.lastName,
+              company_name: signUpData.companyName,
+              company_domain: signUpData.companyDomain,
+              country: signUpData.country,
+              job_title: signUpData.jobTitle,
+            }
           }
-        }
       });
 
       if (authError) throw authError;
 
       if (authData.user) {
-        // Insert trial user data immediately - no session check needed for trial users
-        const { error: trialError } = await supabase
-          .from('trial_users')
-          .insert({
-            user_id: authData.user.id,
-            email: signUpData.email,
-            first_name: signUpData.firstName,
-            last_name: signUpData.lastName,
-            company_name: signUpData.companyName,
-            job_title: signUpData.jobTitle,
-            status: 'pending',
-          });
+        // Insert user data immediately - handled by trigger but we can also call activation
+        console.log('User successfully registered:', signUpData.email);
 
-        if (trialError) {
-          console.error('Trial user insertion error:', trialError);
-          throw new Error(`Failed to create trial account: ${trialError.message}`);
-        }
-
-        console.log('Trial user successfully inserted for:', signUpData.email);
-
-        // Send trial emails
-        const trialEndDate = new Date();
-        trialEndDate.setDate(trialEndDate.getDate() + 7);
-        
-        const { error: emailError } = await supabase.functions.invoke('send-trial-emails', {
+        // Send activation email
+        const { error: emailError } = await supabase.functions.invoke('send-activation-email', {
           body: {
             userEmail: signUpData.email,
             firstName: signUpData.firstName,
             lastName: signUpData.lastName,
             companyName: signUpData.companyName,
-            trialEndDate: trialEndDate.toISOString(),
           }
         });
 
@@ -213,6 +196,27 @@ export default function Auth() {
                     type="text"
                     value={signUpData.companyName}
                     onChange={(e) => setSignUpData({...signUpData, companyName: e.target.value})}
+                    required
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium mb-1">Company Domain</label>
+                  <Input
+                    type="text"
+                    placeholder="example.com"
+                    value={signUpData.companyDomain}
+                    onChange={(e) => setSignUpData({...signUpData, companyDomain: e.target.value})}
+                    required
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium mb-1">Country</label>
+                  <Input
+                    type="text"
+                    value={signUpData.country}
+                    onChange={(e) => setSignUpData({...signUpData, country: e.target.value})}
                     required
                   />
                 </div>

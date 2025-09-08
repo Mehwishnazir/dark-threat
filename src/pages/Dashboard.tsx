@@ -52,23 +52,23 @@ export default function Dashboard() {
           return;
         }
 
-        // Check trial status
-        const { data: trialData, error } = await supabase
-          .from('trial_users')
-          .select('status')
+        // Check user status
+        const { data: userData, error } = await supabase
+          .from('users')
+          .select('subscription_status, account_activated')
           .eq('user_id', session.user.id)
           .single();
 
-        if (error || !trialData) {
-          console.error('Error fetching trial status:', error);
-          // Don't redirect to auth if user exists but no trial data
-          // This handles admin users or users created outside trial flow
+        if (error || !userData) {
+          console.error('Error fetching user status:', error);
+          // Don't redirect to auth if user exists but no user data
+          // This handles admin users or users created outside normal flow
           setTrialStatus('active');
           setLoading(false);
           return;
         }
 
-        setTrialStatus(trialData.status);
+        setTrialStatus(userData.subscription_status || 'active');
         setLoading(false);
       } catch (error) {
         console.error('Error checking user access:', error);

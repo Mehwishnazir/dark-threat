@@ -40,13 +40,13 @@ export default function SetupAdmin() {
       if (authError) throw authError;
 
       if (authData.user) {
-        // Wait a moment for the trigger to create the user role
+        // Wait a moment for the trigger to create the user profile
         await new Promise(resolve => setTimeout(resolve, 1000));
 
-        // Update user role to super_admin
+        // Update user role to superadmin
         const { error: roleError } = await supabase
-          .from('user_roles')
-          .update({ role: 'super_admin' })
+          .from('users')
+          .update({ role: 'superadmin' })
           .eq('user_id', authData.user.id);
 
         if (roleError) throw roleError;

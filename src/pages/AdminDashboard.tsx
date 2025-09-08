@@ -11,21 +11,23 @@ import { useNavigate } from 'react-router-dom';
 import { AlertCircle, Calendar, Mail, Building, User, LogOut, Filter } from 'lucide-react';
 import { format } from 'date-fns';
 
-interface TrialUser {
+interface User {
   id: string;
-  email: string;
+  business_email: string;
   first_name: string;
   last_name: string;
   company_name: string;
   job_title: string;
   created_at: string;
   trial_end: string;
-  status: 'active' | 'expired' | 'cancelled';
+  subscription_status: 'trial' | 'active' | 'expired' | 'canceled';
+  account_activated: boolean;
+  role: 'admin' | 'superadmin' | 'trialuser';
 }
 
 export default function AdminDashboard() {
-  const [trialUsers, setTrialUsers] = useState<TrialUser[]>([]);
-  const [filteredUsers, setFilteredUsers] = useState<TrialUser[]>([]);
+  const [users, setUsers] = useState<User[]>([]);
+  const [filteredUsers, setFilteredUsers] = useState<User[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const [statusFilter, setStatusFilter] = useState<string>('all');
@@ -34,12 +36,12 @@ export default function AdminDashboard() {
 
   useEffect(() => {
     checkAdminAccess();
-    fetchTrialUsers();
+    fetchUsers();
   }, []);
 
   useEffect(() => {
     filterUsers();
-  }, [trialUsers, statusFilter]);
+  }, [users, statusFilter]);
 
   const checkAdminAccess = async () => {
     try {
@@ -50,14 +52,14 @@ export default function AdminDashboard() {
         return;
       }
 
-      const { data: roles, error } = await supabase
-        .from('user_roles')
+      const { data: userData, error } = await supabase
+        .from('users')
         .select('role')
         .eq('user_id', session.user.id)
-        .eq('role', 'super_admin')
+        .eq('role', 'superadmin')
         .single();
 
-      if (error || !roles) {
+      if (error || !userData) {
         setError('Access denied. Super admin privileges required.');
         return;
       }
@@ -68,17 +70,17 @@ export default function AdminDashboard() {
     }
   };
 
-  const fetchTrialUsers = async () => {
+  const fetchUsers = async () => {
     try {
       const { data, error } = await supabase
-        .from('trial_users')
+        .from('users')
         .select('*')
         .order('created_at', { ascending: false });
 
       if (error) throw error;
-      setTrialUsers((data || []) as TrialUser[]);
+      setUsers((data || []) as User[]);
     } catch (error: any) {
-      setError('Error fetching trial users');
+      setError('Error fetching users');
     } finally {
       setLoading(false);
     }
@@ -86,29 +88,29 @@ export default function AdminDashboard() {
 
   const filterUsers = () => {
     if (statusFilter === 'all') {
-      setFilteredUsers(trialUsers);
+      setFilteredUsers(users);
     } else {
-      const filtered = trialUsers.filter(user => {
+      const filtered = users.filter(user => {
         if (statusFilter === 'expired') {
-          return new Date(user.trial_end) < new Date() || user.status === 'expired';
+          return new Date(user.trial_end) < new Date() || user.subscription_status === 'expired';
         }
-        return user.status === statusFilter;
+        return user.subscription_status === statusFilter;
       });
       setFilteredUsers(filtered);
     }
   };
 
-  const updateUserStatus = async (userId: string, newStatus: 'active' | 'expired' | 'cancelled') => {
+  const updateUserStatus = async (userId: string, newStatus: 'trial' | 'active' | 'expired' | 'canceled') => {
     try {
       const { error } = await supabase
-        .from('trial_users')
-        .update({ status: newStatus })
+        .from('users')
+        .update({ subscription_status: newStatus })
         .eq('id', userId);
 
       if (error) throw error;
       
       // Refresh the data
-      fetchTrialUsers();
+      fetchUsers();
     } catch (error: any) {
       setError('Error updating user status');
     }
@@ -116,23 +118,23 @@ export default function AdminDashboard() {
 
   const extendTrial = async (userId: string, days: number) => {
     try {
-      const user = trialUsers.find(u => u.id === userId);
+      const user = users.find(u => u.id === userId);
       if (!user) return;
 
       const newTrialEnd = new Date(user.trial_end);
       newTrialEnd.setDate(newTrialEnd.getDate() + days);
 
       const { error } = await supabase
-        .from('trial_users')
+        .from('users')
         .update({ 
           trial_end: newTrialEnd.toISOString(),
-          status: 'active'
+          subscription_status: 'active'
         })
         .eq('id', userId);
 
       if (error) throw error;
       
-      fetchTrialUsers();
+      fetchUsers();
     } catch (error: any) {
       setError('Error extending trial');
     }
@@ -143,14 +145,15 @@ export default function AdminDashboard() {
     navigate('/');
   };
 
-  const getStatusBadge = (user: TrialUser) => {
+  const getStatusBadge = (user: User) => {
     const isExpired = new Date(user.trial_end) < new Date();
-    const status = isExpired ? 'expired' : user.status;
+    const status = isExpired ? 'expired' : user.subscription_status;
     
     const variants = {
+      trial: 'default',
       active: 'default',
       expired: 'destructive',
-      cancelled: 'secondary'
+      canceled: 'secondary'
     } as const;
 
     return (
@@ -198,7 +201,7 @@ export default function AdminDashboard() {
               <User className="h-4 w-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold">{trialUsers.length}</div>
+              <div className="text-2xl font-bold">{users.length}</div>
             </CardContent>
           </Card>
           
@@ -209,7 +212,7 @@ export default function AdminDashboard() {
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">
-                {trialUsers.filter(u => u.status === 'active' && new Date(u.trial_end) > new Date()).length}
+                {users.filter(u => (u.subscription_status === 'active' || u.subscription_status === 'trial') && new Date(u.trial_end) > new Date()).length}
               </div>
             </CardContent>
           </Card>
@@ -221,7 +224,7 @@ export default function AdminDashboard() {
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">
-                {trialUsers.filter(u => new Date(u.trial_end) < new Date() || u.status === 'expired').length}
+                {users.filter(u => new Date(u.trial_end) < new Date() || u.subscription_status === 'expired').length}
               </div>
             </CardContent>
           </Card>
@@ -233,7 +236,7 @@ export default function AdminDashboard() {
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">
-                {trialUsers.filter(u => {
+                {users.filter(u => {
                   const weekAgo = new Date();
                   weekAgo.setDate(weekAgo.getDate() - 7);
                   return new Date(u.created_at) > weekAgo;
@@ -258,9 +261,10 @@ export default function AdminDashboard() {
                   </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="all">All Status</SelectItem>
+                    <SelectItem value="trial">Trial</SelectItem>
                     <SelectItem value="active">Active</SelectItem>
                     <SelectItem value="expired">Expired</SelectItem>
-                    <SelectItem value="cancelled">Cancelled</SelectItem>
+                    <SelectItem value="canceled">Canceled</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
@@ -268,7 +272,7 @@ export default function AdminDashboard() {
           </CardHeader>
           <CardContent>
             {loading ? (
-              <div className="text-center py-8">Loading trial users...</div>
+              <div className="text-center py-8">Loading users...</div>
             ) : (
               <Table>
                 <TableHeader>
@@ -288,7 +292,7 @@ export default function AdminDashboard() {
                       <TableCell className="font-medium">
                         {user.first_name} {user.last_name}
                       </TableCell>
-                      <TableCell>{user.email}</TableCell>
+                      <TableCell>{user.business_email}</TableCell>
                       <TableCell>{user.company_name}</TableCell>
                       <TableCell>{format(new Date(user.created_at), 'MMM dd, yyyy')}</TableCell>
                       <TableCell>{format(new Date(user.trial_end), 'MMM dd, yyyy')}</TableCell>
@@ -308,8 +312,9 @@ export default function AdminDashboard() {
                               <SelectValue placeholder="Action" />
                             </SelectTrigger>
                             <SelectContent>
+                              <SelectItem value="trial">Set Trial</SelectItem>
                               <SelectItem value="active">Activate</SelectItem>
-                              <SelectItem value="cancelled">Cancel</SelectItem>
+                              <SelectItem value="canceled">Cancel</SelectItem>
                               <SelectItem value="extend-7">Extend +7 days</SelectItem>
                               <SelectItem value="extend-14">Extend +14 days</SelectItem>
                             </SelectContent>
@@ -321,7 +326,7 @@ export default function AdminDashboard() {
                   {filteredUsers.length === 0 && (
                     <TableRow>
                       <TableCell colSpan={7} className="text-center py-8 text-muted-foreground">
-                        No trial users found
+                        No users found
                       </TableCell>
                     </TableRow>
                   )}
