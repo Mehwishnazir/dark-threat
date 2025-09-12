@@ -12,7 +12,7 @@ export default function PrivacyPolicy() {
 
         <div className="space-y-8">
           <div>
-            <h1 className="text-4xl font-oswald font-bold text-foreground mb-4">Privacy Policy</h1>
+            <h1 className="text-4xl font-oswald font-bold text-red-500 mb-4">Privacy Policy</h1>
             <p className="text-muted-foreground">Last updated: January 2025</p>
           </div>
 
@@ -30,7 +30,7 @@ export default function PrivacyPolicy() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-oswald font-semibold text-foreground mb-4">2. Information We Collect</h2>
+              <h2 className="text-2xl font-oswald font-semibold text-foreground mb-4">Information We Collect</h2>
               <p className="text-foreground/90 leading-relaxed mb-6">
                 At DarkThreat.ai, we collect information to provide accurate and effective threat intelligence services while keeping your experience safe and secure. Knowing what data we gather helps you understand how we protect your organization and why this information is important for our services.
               </p>
@@ -57,7 +57,7 @@ export default function PrivacyPolicy() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-oswald font-semibold text-foreground mb-4">3. How We Use Your Information</h2>
+              <h2 className="text-2xl font-oswald font-semibold text-foreground mb-4">How We Use Your Information</h2>
               <p className="text-foreground/90 leading-relaxed mb-6">
                 At DarkThreat.ai, we use the information we collect to provide safe, reliable, and effective services. Knowing how we use your data helps you understand the value it provides in keeping your organization secure.
               </p>
@@ -90,7 +90,7 @@ export default function PrivacyPolicy() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-oswald font-semibold text-foreground mb-4">4. Sharing of Information</h2>
+              <h2 className="text-2xl font-oswald font-semibold text-foreground mb-4">Sharing of Information</h2>
               <p className="text-foreground/90 leading-relaxed mb-6">
                 At DarkThreat.ai, we take your privacy very seriously and have strict rules about how your data is shared. We only share information when it is necessary to provide our services, maintain security, or comply with legal requirements. Our goal is to ensure your data is handled responsibly while keeping our platform reliable and secure.
               </p>
@@ -123,7 +123,7 @@ export default function PrivacyPolicy() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-oswald font-semibold text-foreground mb-4">5. Data Retention</h2>
+              <h2 className="text-2xl font-oswald font-semibold text-foreground mb-4">Data Retention</h2>
               <p className="text-foreground/90 leading-relaxed mb-6">
                 At DarkThreat.ai, we keep your data only as long as it is needed to provide our services, maintain security, and comply with legal requirements. This approach ensures your information is used responsibly and not stored longer than necessary. Storing data for the appropriate amount of time also helps us continue delivering reliable monitoring, accurate alerts, and ongoing support for your organization.
               </p>
@@ -150,7 +150,7 @@ export default function PrivacyPolicy() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-oswald font-semibold text-foreground mb-4">6. Security of Your Data</h2>
+              <h2 className="text-2xl font-oswald font-semibold text-foreground mb-4">Security of Your Data</h2>
               <p className="text-foreground/90 leading-relaxed mb-6">
                 At DarkThreat.ai, keeping your data secure is one of our highest priorities. We use strict measures to protect your information from unauthorized access, misuse, or disclosure. This ensures your data is always safe when you use our platform and services.
               </p>
@@ -183,7 +183,7 @@ export default function PrivacyPolicy() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-oswald font-semibold text-foreground mb-4">7. User Rights</h2>
+              <h2 className="text-2xl font-oswald font-semibold text-foreground mb-4">User Rights</h2>
               <p className="text-foreground/90 leading-relaxed mb-6">
                 At DarkThreat.ai, we respect your right to control your personal data. You have several rights regarding the information we collect and process, and we make it easy for you to exercise them. Understanding these rights helps you manage your data and ensures transparency in how we handle it.
               </p>
@@ -216,7 +216,7 @@ export default function PrivacyPolicy() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-oswald font-semibold text-foreground mb-4">8. Cookies and Tracking</h2>
+              <h2 className="text-2xl font-oswald font-semibold text-foreground mb-4">Cookies and Tracking</h2>
               <p className="text-foreground/90 leading-relaxed mb-6">
                 At DarkThreat.ai, we use cookies and tracking technologies to improve platform functionality, enhance security, and provide a better user experience. These tools help us understand how our platform is used and ensure it works smoothly and safely for all users. Using these technologies allows us to identify and fix potential issues quickly and keep the platform reliable. It also helps us provide more personalized and efficient services to our clients.
               </p>
@@ -243,7 +243,7 @@ export default function PrivacyPolicy() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-oswald font-semibold text-foreground mb-4">9. Third-Party Services</h2>
+              <h2 className="text-2xl font-oswald font-semibold text-foreground mb-4">Third-Party Services</h2>
               <p className="text-foreground/90 leading-relaxed mb-6">
                 To provide smooth and reliable services, DarkThreat.ai works with selected third-party providers. These partnerships help us deliver key features, improve platform performance, and ensure a secure experience for all users. Working with trusted providers allows us to focus on our core services while still offering high-quality support and functionality.
               </p>
@@ -270,7 +270,7 @@ export default function PrivacyPolicy() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-oswald font-semibold text-foreground mb-4">10. International Data Transfers</h2>
+              <h2 className="text-2xl font-oswald font-semibold text-foreground mb-4">International Data Transfers</h2>
               <p className="text-foreground/90 leading-relaxed mb-6">
                 DarkThreat.ai serves clients around the world and takes careful measures to ensure that data is handled securely across borders. We are committed to protecting your information no matter where it is processed or stored. This approach ensures that your data remains safe while you use our services globally.
               </p>
@@ -297,7 +297,7 @@ export default function PrivacyPolicy() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-oswald font-semibold text-foreground mb-4">11. Changes to This Privacy Policy</h2>
+              <h2 className="text-2xl font-oswald font-semibold text-foreground mb-4">Changes to This Privacy Policy</h2>
               <p className="text-foreground/90 leading-relaxed mb-6">
                 DarkThreat.ai may update this Privacy Policy from time to time to reflect changes in our services, legal requirements, or data handling practices. We are committed to keeping you informed and maintaining full transparency about how your data is collected, used, and protected. Regular updates allow us to stay aligned with new privacy laws, enhance security measures, and improve our services. These updates also help ensure that your rights are always respected and clearly communicated.
               </p>
@@ -324,7 +324,7 @@ export default function PrivacyPolicy() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-oswald font-semibold text-foreground mb-4">12. Contact Information</h2>
+              <h2 className="text-2xl font-oswald font-semibold text-foreground mb-4">Contact Information</h2>
               <p className="text-foreground/90 leading-relaxed mb-6">
                 If you have any questions, concerns, or requests regarding your privacy, DarkThreat.ai provides dedicated support channels to assist you promptly. We are committed to responding clearly, efficiently, and professionally, so you can feel confident about how your information is handled. Our goal is to make it easy for you to contact us and get accurate answers regarding your personal data and privacy rights.
               </p>
