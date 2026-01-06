@@ -52,7 +52,7 @@ export default function AdminDashboard() {
         return;
       }
 
-      const { data: userData, error } = await supabase
+      const { data: userData, error } = await (supabase as any)
         .from('users')
         .select('role')
         .eq('user_id', session.user.id)
@@ -72,7 +72,7 @@ export default function AdminDashboard() {
 
   const fetchUsers = async () => {
     try {
-      const { data, error } = await supabase
+      const { data, error } = await (supabase as any)
         .from('users')
         .select('*')
         .order('created_at', { ascending: false });
@@ -102,7 +102,7 @@ export default function AdminDashboard() {
 
   const updateUserStatus = async (userId: string, newStatus: 'trial' | 'active' | 'expired' | 'canceled') => {
     try {
-      const { error } = await supabase
+      const { error } = await (supabase as any)
         .from('users')
         .update({ subscription_status: newStatus })
         .eq('id', userId);
@@ -124,7 +124,7 @@ export default function AdminDashboard() {
       const newTrialEnd = new Date(user.trial_end);
       newTrialEnd.setDate(newTrialEnd.getDate() + days);
 
-      const { error } = await supabase
+      const { error } = await (supabase as any)
         .from('users')
         .update({ 
           trial_end: newTrialEnd.toISOString(),

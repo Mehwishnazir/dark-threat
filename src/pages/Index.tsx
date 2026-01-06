@@ -36,6 +36,9 @@ const Index = () => {
             <Link to="/pricing" className="text-muted-foreground hover:text-primary transition-colors">
               Pricing
             </Link>
+            <Link to="/blog" className="text-muted-foreground hover:text-primary transition-colors">
+              Blog
+            </Link>
             <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">
               About
             </Link>
@@ -315,6 +318,7 @@ const Index = () => {
                 <li><Link to="/" className="text-muted-foreground hover:text-primary">Home</Link></li>
                 <li><Link to="/solution" className="text-muted-foreground hover:text-primary">Solution</Link></li>
                 <li><Link to="/pricing" className="text-muted-foreground hover:text-primary">Pricing</Link></li>
+                <li><Link to="/blog" className="text-muted-foreground hover:text-primary">Blog</Link></li>
                 <li><Link to="/about" className="text-muted-foreground hover:text-primary">About</Link></li>
                 <li><Link to="/contact" className="text-muted-foreground hover:text-primary">Contact</Link></li>
               </ul>
