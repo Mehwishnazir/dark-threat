@@ -4,6 +4,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import Index from "./pages/Index";
 import DataLeakDetection from "./pages/DataLeakDetection";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
@@ -25,42 +26,46 @@ import Auth from "./pages/Auth";
 import AdminDashboard from "./pages/AdminDashboard";
 import SetupAdminPage from "./pages/SetupAdminPage";
 import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 
 const queryClient = new QueryClient();
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/solution" element={<Solution />} />
-          <Route path="/pricing" element={<Pricing />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/data-leak-detection" element={<DataLeakDetection />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/platform-terms" element={<PlatformTerms />} />
-          <Route path="/website-terms" element={<WebsiteTerms />} />
-          <Route path="/signin" element={<SignIn />} />
-          <Route path="/forgot-password" element={<ForgotPassword />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/threat-intelligence" element={<ThreatIntelligence />} />
-          <Route path="/alerts" element={<Alerts />} />
-          <Route path="/reports" element={<Reports />} />
-          <Route path="/trial-coming-soon" element={<TrialComingSoon />} />
-          <Route path="/auth" element={<Auth />} />
-          <Route path="/admin" element={<AdminDashboard />} />
-          <Route path="/setup-admin" element={<SetupAdminPage />} />
-          <Route path="/blog" element={<Blog />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
+  <HelmetProvider>
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/solution" element={<Solution />} />
+            <Route path="/pricing" element={<Pricing />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/data-leak-detection" element={<DataLeakDetection />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/platform-terms" element={<PlatformTerms />} />
+            <Route path="/website-terms" element={<WebsiteTerms />} />
+            <Route path="/signin" element={<SignIn />} />
+            <Route path="/forgot-password" element={<ForgotPassword />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/threat-intelligence" element={<ThreatIntelligence />} />
+            <Route path="/alerts" element={<Alerts />} />
+            <Route path="/reports" element={<Reports />} />
+            <Route path="/trial-coming-soon" element={<TrialComingSoon />} />
+            <Route path="/auth" element={<Auth />} />
+            <Route path="/admin" element={<AdminDashboard />} />
+            <Route path="/setup-admin" element={<SetupAdminPage />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
+  </HelmetProvider>
 );
 
 export default App;
