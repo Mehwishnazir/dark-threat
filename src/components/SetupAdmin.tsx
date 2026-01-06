@@ -44,7 +44,7 @@ export default function SetupAdmin() {
         await new Promise(resolve => setTimeout(resolve, 1000));
 
         // Update user role to superadmin
-        const { error: roleError } = await supabase
+        const { error: roleError } = await (supabase as any)
           .from('users')
           .update({ role: 'superadmin' })
           .eq('user_id', authData.user.id);

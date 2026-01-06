@@ -10,85 +10,20 @@ export type Database = {
   // Allows to automatically instantiate createClient with right options
   // instead of createClient<Database, { PostgrestVersion: 'XX' }>(URL, KEY)
   __InternalSupabase: {
-    PostgrestVersion: "13.0.4"
+    PostgrestVersion: "14.1"
   }
   public: {
     Tables: {
-      users: {
-        Row: {
-          account_activated: boolean | null
-          business_email: string
-          company_domain: string
-          company_name: string
-          country: string
-          created_at: string | null
-          email_verified: boolean | null
-          first_name: string
-          id: string
-          job_title: string
-          last_name: string
-          role: Database["public"]["Enums"]["app_role"] | null
-          subscription_status: string | null
-          trial_end: string | null
-          trial_start: string | null
-          updated_at: string | null
-          user_id: string
-        }
-        Insert: {
-          account_activated?: boolean | null
-          business_email: string
-          company_domain: string
-          company_name: string
-          country: string
-          created_at?: string | null
-          email_verified?: boolean | null
-          first_name: string
-          id?: string
-          job_title: string
-          last_name: string
-          role?: Database["public"]["Enums"]["app_role"] | null
-          subscription_status?: string | null
-          trial_end?: string | null
-          trial_start?: string | null
-          updated_at?: string | null
-          user_id: string
-        }
-        Update: {
-          account_activated?: boolean | null
-          business_email?: string
-          company_domain?: string
-          company_name?: string
-          country?: string
-          created_at?: string | null
-          email_verified?: boolean | null
-          first_name?: string
-          id?: string
-          job_title?: string
-          last_name?: string
-          role?: Database["public"]["Enums"]["app_role"] | null
-          subscription_status?: string | null
-          trial_end?: string | null
-          trial_start?: string | null
-          updated_at?: string | null
-          user_id?: string
-        }
-        Relationships: []
-      }
+      [_ in never]: never
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      has_role: {
-        Args: {
-          _role: Database["public"]["Enums"]["app_role"]
-          _user_id: string
-        }
-        Returns: boolean
-      }
+      [_ in never]: never
     }
     Enums: {
-      app_role: "admin" | "superadmin" | "trialuser"
+      [_ in never]: never
     }
     CompositeTypes: {
       [_ in never]: never
@@ -215,8 +150,6 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {
-      app_role: ["admin", "superadmin", "trialuser"],
-    },
+    Enums: {},
   },
 } as const

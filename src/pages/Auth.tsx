@@ -39,14 +39,15 @@ export default function Auth() {
         if (!session) return;
 
         // Check user status before redirecting
-        const { data: userData } = await supabase
+        const { data: userData } = await (supabase as any)
           .from('users')
           .select('subscription_status, account_activated')
           .eq('user_id', session.user.id)
           .single();
 
         // Only redirect to dashboard if user has active subscription or trial
-        if (userData?.subscription_status === 'active' || userData?.subscription_status === 'trial') {
+        const userRecord = userData as { subscription_status?: string; account_activated?: boolean } | null;
+        if (userRecord?.subscription_status === 'active' || userRecord?.subscription_status === 'trial') {
           navigate('/dashboard');
         }
       } catch (error) {

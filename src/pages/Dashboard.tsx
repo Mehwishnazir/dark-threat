@@ -53,7 +53,7 @@ export default function Dashboard() {
         }
 
         // Check user status
-        const { data: userData, error } = await supabase
+        const { data: userData, error } = await (supabase as any)
           .from('users')
           .select('subscription_status, account_activated')
           .eq('user_id', session.user.id)
@@ -68,7 +68,8 @@ export default function Dashboard() {
           return;
         }
 
-        setTrialStatus(userData.subscription_status || 'active');
+        const userRecord = userData as { subscription_status?: string } | null;
+        setTrialStatus(userRecord?.subscription_status || 'active');
         setLoading(false);
       } catch (error) {
         console.error('Error checking user access:', error);
