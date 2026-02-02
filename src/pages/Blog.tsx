@@ -1,9 +1,11 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo,Suspense } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Shield, Linkedin, Twitter, Github, ChevronLeft, ChevronRight, Menu, X } from 'lucide-react';
+import { Input } from '@/components/ui/input';
+import { Shield, Linkedin, Twitter, Github, ChevronLeft, ChevronRight, Search,AlertTriangle  } from 'lucide-react';
 import BlogCard, { type BlogPost } from '@/components/blog/BlogCard';
-import BlogSidebar from '@/components/blog/BlogSidebar';
+import AnimatedBackground from '@/components/AnimatedBackground';
+import ThreatSphere from '@/components/ThreatSphere';
 
 // Sample blog data - replace with CMS/API data
 const samplePosts: BlogPost[] = [
@@ -67,22 +69,32 @@ const samplePosts: BlogPost[] = [
     publishDate: 'Dec 10, 2024',
     readingTime: '9 min read',
   },
+  {
+    id: '7',
+    slug: 'threat-actor-profiling-guide',
+    title: 'Threat Actor Profiling: Understanding Your Adversaries',
+    excerpt: 'Knowing your enemy is half the battle. This guide explains how to profile threat actors and anticipate their tactics, techniques, and procedures.',
+    featuredImage: 'https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&q=80',
+    category: 'Threat Intelligence',
+    publishDate: 'Dec 10, 2024',
+    readingTime: '9 min read',
+  },
 ];
 
 const categories = [
-  { name: 'Threat Intelligence', count: 2 },
-  { name: 'Security', count: 2 },
-  { name: 'Research', count: 1 },
-  { name: 'Best Practices', count: 1 },
+  'All Blogs',
+  'Threat Intelligence',
+  'Security',
+  'Research',
+  'Best Practices',
 ];
 
-const POSTS_PER_PAGE = 4;
+const POSTS_PER_PAGE = 6;
 
 const Blog = () => {
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState('All Blogs');
   const [currentPage, setCurrentPage] = useState(1);
-  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   // Filter posts based on search and category
   const filteredPosts = useMemo(() => {
@@ -92,7 +104,7 @@ const Blog = () => {
         post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         post.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
       const matchesCategory =
-        selectedCategory === null || post.category === selectedCategory;
+        selectedCategory === 'All Blogs' || post.category === selectedCategory;
       return matchesSearch && matchesCategory;
     });
   }, [searchQuery, selectedCategory]);
@@ -147,136 +159,142 @@ const Blog = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-6 border-b border-border">
-        <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-oswald font-bold text-foreground mb-4">
-            DARK<span className="text-primary">THREAT</span> BLOG
+      <section className="relative pt-32 pb-20 px-6 bg-gradient-to-b from-background to-threat-dark overflow-hidden">
+        <AnimatedBackground />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background"></div>
+        <div className="absolute inset-0 opacity-30">
+          <Suspense fallback={<div className="w-full h-full bg-gradient-glow"></div>}>
+            <ThreatSphere />
+          </Suspense>
+        </div>
+        
+        <div className="relative max-w-6xl mx-auto text-center mt-10 z-10">
+          <h1 className="text-5xl md:text-7xl font-oswald font-bold text-foreground mb-6">
+            DARK<span className="glow-text">THREAT</span> BLOG
           </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
             Insights, research, and best practices from the frontlines of dark web threat intelligence
           </p>
         </div>
       </section>
 
       {/* Main Content */}
-      <main className="py-12 px-6">
+      <main className="py-16 px-6">
         <div className="max-w-6xl mx-auto">
-          {/* Mobile Sidebar Toggle */}
-          <div className="lg:hidden mb-6">
-            <Button
-              variant="outline"
-              onClick={() => setSidebarOpen(!sidebarOpen)}
-              className="w-full justify-between"
-            >
-              <span>Filters & Search</span>
-              {sidebarOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
-            </Button>
+          {/* Search Bar */}
+          <div className="mb-8 max-w-2xl mx-auto">
+            <div className="relative">
+              <Input
+                type="text"
+                placeholder="Search blogs..."
+                value={searchQuery}
+                onChange={(e) => {
+                  setSearchQuery(e.target.value);
+                  setCurrentPage(1);
+                }}
+                className="w-full h-14 pl-6 pr-14 text-base bg-card border-primary/20 focus:border-primary rounded-full"
+              />
+              <Button
+                size="icon"
+                className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-primary hover:bg-primary/90"
+              >
+                <Search className="w-5 h-5" />
+              </Button>
+            </div>
           </div>
 
-          <div className="flex flex-col lg:flex-row gap-8">
-            {/* Sidebar - Mobile Collapsible */}
-            <div
-              className={`lg:w-80 flex-shrink-0 ${
-                sidebarOpen ? 'block' : 'hidden lg:block'
-              }`}
-            >
-              <div className="lg:sticky lg:top-28">
-                <BlogSidebar
-                  categories={categories}
-                  recentPosts={samplePosts}
-                  searchQuery={searchQuery}
-                  onSearchChange={(query) => {
-                    setSearchQuery(query);
-                    setCurrentPage(1);
-                  }}
-                  selectedCategory={selectedCategory}
-                  onCategorySelect={(category) => {
-                    setSelectedCategory(category);
-                    setCurrentPage(1);
-                    setSidebarOpen(false);
-                  }}
-                />
-              </div>
-            </div>
+          {/* Category Filters */}
+          <div className="mb-12 flex flex-wrap justify-center gap-3">
+            {categories.map((category) => (
+              <Button
+                key={category}
+                variant={selectedCategory === category ? 'default' : 'outline'}
+                onClick={() => {
+                  setSelectedCategory(category);
+                  setCurrentPage(1);
+                }}
+                className={`rounded-full px-6 py-2 transition-all ${selectedCategory === category
+                    ? 'bg-primary text-primary-foreground'
+                    : 'bg-card border-primary/20 hover:border-primary hover:bg-primary/10'
+                  }`}
+              >
+                {category}
+              </Button>
+            ))}
+          </div>
 
-            {/* Blog Grid */}
-            <div className="flex-1">
-              {/* Results Count */}
-              <div className="mb-6 text-sm text-muted-foreground">
-                {filteredPosts.length} {filteredPosts.length === 1 ? 'article' : 'articles'} found
-                {selectedCategory && (
-                  <span>
-                    {' '}in <span className="text-primary">{selectedCategory}</span>
-                  </span>
-                )}
+          {/* Results Info */}
+          <div className="mb-12 bg-card/50 backdrop-blur-sm border border-primary/20 rounded-2xl p-8">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+              <div className="text-center md:text-left">
+                <div className="text-5xl font-bold text-primary mb-2">
+                  {filteredPosts.length}
+                </div>
+                <div className="text-sm text-muted-foreground uppercase tracking-wider">
+                  TOTAL BLOGS
+                </div>
               </div>
 
-              {/* Posts Grid */}
-              {paginatedPosts.length > 0 ? (
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {paginatedPosts.map((post) => (
-                    <BlogCard key={post.id} post={post} />
-                  ))}
+              <div className="text-center">
+                <div className="text-lg text-foreground mb-1">
+                  Showing <span className="font-semibold text-primary">
+                    {filteredPosts.length === 0 ? 0 : (currentPage - 1) * POSTS_PER_PAGE + 1}-{Math.min(currentPage * POSTS_PER_PAGE, filteredPosts.length)}
+                  </span> of <span className="font-semibold">{filteredPosts.length}</span>
                 </div>
-              ) : (
-                <div className="text-center py-16 bg-card border border-border rounded-lg">
-                  <p className="text-muted-foreground">No articles found matching your criteria.</p>
-                  <Button
-                    variant="outline"
-                    onClick={() => {
-                      setSearchQuery('');
-                      setSelectedCategory(null);
-                    }}
-                    className="mt-4"
-                  >
-                    Clear Filters
-                  </Button>
-                </div>
-              )}
+              </div>
 
-              {/* Pagination */}
               {totalPages > 1 && (
-                <nav
-                  className="flex items-center justify-center gap-2 mt-12"
-                  aria-label="Pagination"
-                >
+                <div className="flex items-center gap-3">
                   <Button
                     variant="outline"
                     size="icon"
                     onClick={() => handlePageChange(currentPage - 1)}
                     disabled={currentPage === 1}
-                    aria-label="Previous page"
+                    className="rounded-full border-primary/20 hover:border-primary hover:bg-primary/10"
                   >
                     <ChevronLeft className="w-4 h-4" />
                   </Button>
 
-                  {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-                    <Button
-                      key={page}
-                      variant={currentPage === page ? 'default' : 'outline'}
-                      size="icon"
-                      onClick={() => handlePageChange(page)}
-                      aria-label={`Page ${page}`}
-                      aria-current={currentPage === page ? 'page' : undefined}
-                      className={currentPage === page ? 'bg-primary text-primary-foreground' : ''}
-                    >
-                      {page}
-                    </Button>
-                  ))}
+                  <div className="text-lg font-semibold text-foreground">
+                    {currentPage} / {totalPages}
+                  </div>
 
                   <Button
                     variant="outline"
                     size="icon"
                     onClick={() => handlePageChange(currentPage + 1)}
                     disabled={currentPage === totalPages}
-                    aria-label="Next page"
+                    className="rounded-full border-primary/20 hover:border-primary hover:bg-primary/10"
                   >
                     <ChevronRight className="w-4 h-4" />
                   </Button>
-                </nav>
+                </div>
               )}
             </div>
           </div>
+
+          {/* Blog Grid */}
+          {paginatedPosts.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+              {paginatedPosts.map((post) => (
+                <BlogCard key={post.id} post={post} />
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-20 bg-card/50 backdrop-blur-sm border border-primary/20 rounded-2xl">
+              <p className="text-lg text-muted-foreground mb-4">No articles found matching your criteria.</p>
+              <Button
+                variant="outline"
+                onClick={() => {
+                  setSearchQuery('');
+                  setSelectedCategory('All Blogs');
+                }}
+                className="hero-button"
+              >
+                Clear Filters
+              </Button>
+            </div>
+          )}
         </div>
       </main>
 

@@ -48,7 +48,7 @@ export default function ComparisonTable() {
       <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent rounded-2xl"></div>
       
       <div className="threat-card relative z-10 border-2 border-primary/20 shadow-2xl">
-        <div className="text-center mb-12">
+        {/* <div className="text-center mb-12">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-6">
             <Check className="w-8 h-8 text-primary" />
           </div>
@@ -58,7 +58,7 @@ export default function ComparisonTable() {
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             See how we compare to traditional dark web monitoring solutions
           </p>
-        </div>
+        </div> */}
 
         <div className="overflow-x-auto rounded-xl border border-border/50">
           <Table>

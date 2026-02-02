@@ -1,8 +1,10 @@
 import { Button } from '@/components/ui/button';
 import { Shield, Search, AlertTriangle, Users, Database, Zap, Eye, Globe, Lock, CheckCircle, BarChart3, Trash2, Twitter, Linkedin, Github } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, Suspense } from 'react';
 import TrialModal from '@/components/TrialModal';
+import AnimatedBackground from '@/components/AnimatedBackground';
+import ThreatSphere from '@/components/ThreatSphere';
 
 const Solution = () => {
   const [isTrialModalOpen, setIsTrialModalOpen] = useState(false);
@@ -16,7 +18,7 @@ const Solution = () => {
       content: "DarkThreat continuously scans dark web marketplaces, forums, and black-market channels to detect any signs of your organization's sensitive data being sold or traded. This proactive monitoring lets you act before threat actors capitalize on leaked information.",
       features: [
         "Discover compromised employee credentials before they're exploited",
-        "Detect customer data being sold in bulk to prevent breaches", 
+        "Detect customer data being sold in bulk to prevent breaches",
         "Receive real-time alerts on new dark web mentions of your organization"
       ]
     },
@@ -34,7 +36,7 @@ const Solution = () => {
     },
     {
       icon: <Lock className="w-12 h-12 text-primary" />,
-      title: "Credential Monitoring", 
+      title: "Credential Monitoring",
       stat: "64%",
       description: "of data leaks involve personal data, much available on dark web",
       content: "With DarkThreat's credential monitoring, you're alerted whenever employee or customer login details surface on illicit platforms, helping you prevent potential account takeovers and security breaches.",
@@ -47,7 +49,7 @@ const Solution = () => {
     {
       icon: <BarChart3 className="w-12 h-12 text-primary" />,
       title: "Automated Leak Reports",
-      stat: "14B+", 
+      stat: "14B+",
       description: "leaked credentials monitored on dark web",
       content: "Regular, automated reports on detected leaks provide your team with up-to-date insights into the security status of your data, enabling swift decision-making and actionable responses.",
       features: [
@@ -64,7 +66,7 @@ const Solution = () => {
       content: "DarkThreat's Dark Web Data Removal protects sensitive information from unauthorized exposure. As data breaches rise and sensitive information reaches the dark web, our removal service safeguards against malicious access.",
       features: [
         "Locate and remove sensitive data, such as personal and financial information, being sold on black markets",
-        "Remove confidential information exposed on dark web forums and channels", 
+        "Remove confidential information exposed on dark web forums and channels",
         "Ongoing monitoring of the dark web to detect and address new data leaks quickly"
       ]
     }
@@ -94,7 +96,7 @@ const Solution = () => {
             <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">
               Contact
             </Link>
-            <Button 
+            <Button
               onClick={() => setIsTrialModalOpen(true)}
               className="hero-button"
             >
@@ -105,20 +107,38 @@ const Solution = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto text-center">
+      <section className="relative h-screen flex items-center justify-center cyber-grid overflow-hidden ">
+        <AnimatedBackground />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background"></div>
+        
+        {/* 3D Background */}
+        <div className="absolute inset-0 opacity-30">
+          <Suspense fallback={<div className="w-full h-full bg-gradient-glow"></div>}>
+            <ThreatSphere />
+          </Suspense>
+        </div>
+
+        <div className="relative z-10 text-center max-w-4xl mx-auto ">
           <h1 className="text-5xl md:text-6xl font-oswald font-bold text-foreground mb-6">
             Complete Dark Web <span className="glow-text">Monitoring Solution</span>
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
             Proactive threat intelligence that identifies your organization's exposure on the dark web before cybercriminals can exploit it.
           </p>
-          <Button 
+          <Button
             onClick={() => setIsTrialModalOpen(true)}
             className="hero-button text-lg px-8 py-4"
           >
             Start Free Trial
           </Button>
+        </div>
+
+        {/* Floating elements */}
+        <div className="absolute top-20 left-10 animate-float delay-1000">
+          <Shield className="text-primary w-8 h-8 opacity-60" />
+        </div>
+        <div className="absolute bottom-32 right-16 animate-float delay-2000">
+          <AlertTriangle className="text-primary w-6 h-6 opacity-40" />
         </div>
       </section>
 
@@ -221,8 +241,8 @@ const Solution = () => {
               Comprehensive protection against data exposure on the dark web
             </p>
             <p className="text-muted-foreground max-w-4xl mx-auto">
-              Unlike breaches, sensitive data leaks often go unnoticed until it turns into a cyberattack. 
-              Hybrid working models and policies like "Bring Your Own Device" (BYOD) make businesses more vulnerable. 
+              Unlike breaches, sensitive data leaks often go unnoticed until it turns into a cyberattack.
+              Hybrid working models and policies like "Bring Your Own Device" (BYOD) make businesses more vulnerable.
               Detecting data leaks early plays a key role in counter-measuring any threat that may arise from them.
             </p>
           </div>
@@ -242,11 +262,11 @@ const Solution = () => {
                         </h3>
                       </div>
                     </div>
-                    
+
                     <p className="text-muted-foreground mb-6 leading-relaxed">
                       {capability.content}
                     </p>
-                    
+
                     <div className="space-y-3">
                       <h5 className="font-semibold text-foreground">Key Capabilities:</h5>
                       <ul className="space-y-2">
@@ -260,7 +280,7 @@ const Solution = () => {
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="flex-1">
                   <div className="bg-gradient-to-br from-primary/20 via-primary/10 to-transparent rounded-lg p-12 text-center border border-primary/20">
                     <div className="text-6xl font-oswald font-bold text-primary mb-4 glow-text">
@@ -329,10 +349,25 @@ const Solution = () => {
         </div>
       </section>
 
-      <TrialModal 
-        isOpen={isTrialModalOpen} 
-        onClose={() => setIsTrialModalOpen(false)} 
+      <TrialModal
+        isOpen={isTrialModalOpen}
+        onClose={() => setIsTrialModalOpen(false)}
       />
+
+      <div className="text-center mt-12 mb-10">
+        <h2 className="text-4xl font-oswald font-bold text-foreground mb-4">
+          Let's <span className="glow-text">Connect</span> With Us
+        </h2>
+        <p className="text-lg text-muted-foreground mb-6">
+          Ready to secure your organization? We're here to help you get started with dark web monitoring.
+        </p>
+        <Button
+          onClick={() => window.location.href = '/contact'}
+          className="hero-button text-lg px-8 py-4"
+        >
+          Contact us
+        </Button>
+      </div>
 
       {/* Footer */}
       <footer className="bg-card border-t border-border py-12">
