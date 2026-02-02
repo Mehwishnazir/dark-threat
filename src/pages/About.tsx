@@ -1,8 +1,10 @@
 import { Button } from '@/components/ui/button';
-import { Shield, Users, Award, Target, Twitter, Linkedin, Github } from 'lucide-react';
+import { Shield, Users, Award, Target, Twitter, Linkedin, Github,  AlertTriangle } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, Suspense } from 'react';
 import TrialModal from '@/components/TrialModal';
+import AnimatedBackground from '@/components/AnimatedBackground';
+import ThreatSphere from '@/components/ThreatSphere';
 
 const About = () => {
   const [isTrialModalOpen, setIsTrialModalOpen] = useState(false);
@@ -31,7 +33,7 @@ const About = () => {
             <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">
               Contact
             </Link>
-            <Button 
+            <Button
               onClick={() => setIsTrialModalOpen(true)}
               className="hero-button"
             >
@@ -42,14 +44,32 @@ const About = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="py-20 px-6">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="relative pt-40 flex items-center justify-center cyber-grid overflow-hidden ">
+        <AnimatedBackground />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background"></div>
+
+        {/* 3D Background */}
+        <div className="absolute inset-0 opacity-30">
+          <Suspense fallback={<div className="w-full h-full bg-gradient-glow"></div>}>
+            <ThreatSphere />
+          </Suspense>
+        </div>
+
+        <div className="relative z-10 text-center max-w-4xl mx-auto pt-[-10px] ">
           <h1 className="text-5xl md:text-6xl font-oswald font-bold text-foreground mb-6">
             About <span className="glow-text">DarkThreat</span>
           </h1>
-          <p className="text-xl text-muted-foreground mb-8">
-            Leading the fight against cybercrime with advanced dark web intelligence and proactive threat detection.
+          <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+          Leading the fight against cybercrime with advanced dark web intelligence and proactive threat detection.
           </p>
+        </div>
+
+        {/* Floating elements */}
+        <div className="absolute top-20 left-10 animate-float delay-1000">
+          <Shield className="text-primary w-8 h-8 opacity-60" />
+        </div>
+        <div className="absolute bottom-32 right-16 animate-float delay-2000">
+          <AlertTriangle className="text-primary w-6 h-6 opacity-40" />
         </div>
       </section>
 
@@ -67,7 +87,7 @@ const About = () => {
               <p className="text-lg text-muted-foreground mb-8">
                 We combine cutting-edge AI technology with deep cybersecurity expertise to deliver the most comprehensive dark web monitoring platform available today.
               </p>
-              <Button 
+              <Button
                 onClick={() => setIsTrialModalOpen(true)}
                 className="hero-button"
               >
@@ -204,9 +224,9 @@ const About = () => {
         </div>
       </section>
 
-      <TrialModal 
-        isOpen={isTrialModalOpen} 
-        onClose={() => setIsTrialModalOpen(false)} 
+      <TrialModal
+        isOpen={isTrialModalOpen}
+        onClose={() => setIsTrialModalOpen(false)}
       />
 
       {/* Footer */}
