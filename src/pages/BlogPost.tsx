@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { Button } from '@/components/ui/button';
 import { Shield, Linkedin, Twitter, Github, Calendar, Clock, User, ChevronLeft, Share2, Link as LinkIcon, ArrowUp } from 'lucide-react';
 import BlogCard, { type BlogPost as BlogPostType } from '@/components/blog/BlogCard';
+import './blog.css';
 
 // Sample blog data - replace with CMS/API data
 const samplePosts: BlogPostType[] = [
@@ -211,6 +212,11 @@ const BlogPost = () => {
   const postContent = slug ? getPostContent(slug) : null;
   const relatedPosts = samplePosts.filter((p) => p.slug !== slug).slice(0, 3);
 
+  // Scroll to top when component mounts or slug changes
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, [slug]);
+
   useEffect(() => {
     const handleScroll = () => {
       setShowScrollTop(window.scrollY > 500);
@@ -268,7 +274,7 @@ const BlogPost = () => {
       name: 'DarkThreat',
       logo: {
         '@type': 'ImageObject',
-        url: '/favicon.ico',
+        url: '/logo.png',
       },
     },
   };
@@ -287,7 +293,7 @@ const BlogPost = () => {
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 
-      <div className="min-h-screen bg-background">
+      <div className="blog-post-container">
         {/* Header */}
         <header className="fixed top-0 left-0 right-0 py-6 px-6 border-b border-border bg-background/95 backdrop-blur-sm z-50">
           <div className="max-w-6xl mx-auto flex items-center justify-between">
@@ -323,94 +329,75 @@ const BlogPost = () => {
           </div>
         </header>
 
-        {/* Hero Section */}
-        <section className="pt-28 pb-0">
+        {/* Hero Section with Featured Image Background */}
+        <section className="blog-post-hero" style={{
+          backgroundImage: `url(${post.featuredImage})`,
+        }}>
+          <div className="blog-post-hero-overlay"></div>
+          
           {/* Back to Blog */}
-          <div className="max-w-4xl mx-auto px-6 mb-8">
+          <div className="blog-post-hero-back">
             <Link
               to="/blog"
-              className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors text-sm"
+              className="inline-flex items-center gap-2 text-white/90 hover:text-white transition-colors text-sm font-medium backdrop-blur-sm bg-black/20 px-4 py-2 rounded-full"
             >
               <ChevronLeft className="w-4 h-4" />
               Back to Blog
             </Link>
           </div>
 
-          {/* Post Header */}
-          <div className="max-w-4xl mx-auto px-6 text-center mb-8">
-            <span className="inline-block px-4 py-1.5 bg-primary text-primary-foreground text-xs font-oswald font-semibold uppercase tracking-wider rounded mb-6">
-              {post.category}
-            </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-oswald font-bold text-foreground mb-6 leading-tight">
-              {post.title}
-            </h1>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">{post.excerpt}</p>
+          {/* Post Header Content */}
+          <div className="blog-post-hero-content">
+            <div className="text-center">
+              <div className="mb-6">
+                <span className="blog-post-hero-category-badge">
+                  {post.category}
+                </span>
+              </div>
+              <h1 className="blog-post-hero-title font-oswald">
+                {post.title}
+              </h1>
+              <p className="blog-post-hero-excerpt">{post.excerpt}</p>
 
-            {/* Meta Row */}
-            <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                {post.author || 'DarkThreat Team'}
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                {post.publishDate}
-              </span>
-              <span className="flex items-center gap-2">
-                <Clock className="w-4 h-4" />
-                {post.readingTime}
-              </span>
-            </div>
-          </div>
-
-          {/* Featured Image */}
-          <div className="max-w-5xl mx-auto px-6 mb-12">
-            <div className="relative aspect-video rounded-lg overflow-hidden border border-border">
-              <img
-                src={post.featuredImage}
-                alt={post.title}
-                className="w-full h-full object-cover"
-                loading="eager"
-              />
+              {/* Meta Row */}
+              <div className="blog-post-hero-meta">
+                <div className="blog-post-hero-meta-item">
+                  <Calendar className="w-4 h-4" />
+                  <span>Published: {post.publishDate}</span>
+                </div>
+                <div className="blog-post-hero-meta-item">
+                  <span>•</span>
+                </div>
+                <div className="blog-post-hero-meta-item">
+                  <span>{post.category} • SIEM</span>
+                </div>
+                <div className="blog-post-hero-meta-item">
+                  <span>•</span>
+                </div>
+                <div className="blog-post-hero-meta-item">
+                  <Clock className="w-4 h-4" />
+                  <span>{post.readingTime}</span>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
         {/* Main Content Area */}
         <main className="pb-16 px-6">
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-7xl mx-auto">
             <div className="flex flex-col lg:flex-row gap-12">
               {/* Article Content */}
-              <article className="flex-1 max-w-3xl">
-                <div
-                  className="prose prose-invert prose-lg max-w-none
-                    prose-headings:font-oswald prose-headings:font-bold prose-headings:text-foreground prose-headings:uppercase prose-headings:tracking-wide
-                    prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:border-b prose-h2:border-border prose-h2:pb-3
-                    prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-4
-                    prose-p:text-muted-foreground prose-p:leading-relaxed prose-p:mb-6
-                    prose-a:text-primary prose-a:no-underline hover:prose-a:underline
-                    prose-strong:text-foreground prose-strong:font-semibold
-                    prose-ul:text-muted-foreground prose-ul:my-6 prose-ul:space-y-2
-                    prose-ol:text-muted-foreground prose-ol:my-6 prose-ol:space-y-2
-                    prose-li:pl-2
-                    prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:bg-card prose-blockquote:py-4 prose-blockquote:px-6 prose-blockquote:my-8 prose-blockquote:rounded-r-lg prose-blockquote:not-italic
-                    prose-blockquote:text-foreground prose-blockquote:font-medium
-                    prose-pre:bg-card prose-pre:border prose-pre:border-border prose-pre:rounded-lg prose-pre:my-8
-                    prose-code:text-primary prose-code:bg-card prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-code:before:content-none prose-code:after:content-none
-                    prose-figure:my-8
-                    prose-img:rounded-lg prose-img:border prose-img:border-border
-                    prose-figcaption:text-center prose-figcaption:text-sm prose-figcaption:text-muted-foreground prose-figcaption:mt-3
-                  "
-                  dangerouslySetInnerHTML={{ __html: postContent.content }}
-                />
+              <article className="flex-1 max-w-4xl">
+                <div className="blog-post-article" dangerouslySetInnerHTML={{ __html: postContent.content }} />
 
                 {/* Share Section */}
-                <div className="mt-12 pt-8 border-t border-border">
-                  <div className="flex flex-wrap items-center justify-between gap-4">
-                    <span className="text-sm font-oswald font-semibold text-foreground uppercase tracking-wide">
+                <div className="blog-post-share-section">
+                  <div className="blog-post-share-buttons">
+                    <span className="blog-post-share-label font-oswald">
                       Share this article
                     </span>
-                    <div className="flex items-center gap-3">
+                    <div className="blog-post-share-icons">
                       <Button
                         variant="outline"
                         size="icon"
@@ -444,37 +431,34 @@ const BlogPost = () => {
               </article>
 
               {/* Sidebar */}
-              <aside className="lg:w-72 flex-shrink-0">
-                <div className="lg:sticky lg:top-28 space-y-8">
+              <aside className="lg:w-96 flex-shrink-0">
+                <div className="blog-post-sidebar">
                   {/* Author Card */}
-                  <div className="bg-card border border-border rounded-lg p-6">
-                    <h3 className="text-sm font-oswald font-semibold text-foreground uppercase tracking-wide mb-4">
+                  <div className="blog-post-sidebar-card">
+                    <h3 className="blog-post-sidebar-title font-oswald">
                       Written By
                     </h3>
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-primary font-oswald font-bold">
+                    <div className="blog-post-author">
+                      <div className="blog-post-author-avatar font-oswald">
                         {(post.author || 'DT').charAt(0)}
                       </div>
                       <div>
-                        <p className="font-medium text-foreground">{post.author || 'DarkThreat Team'}</p>
-                        <p className="text-sm text-muted-foreground">Security Researcher</p>
+                        <p className="blog-post-author-name">{post.author || 'DarkThreat Team'}</p>
+                        <p className="blog-post-author-role">Security Researcher</p>
                       </div>
                     </div>
                   </div>
 
                   {/* Table of Contents */}
-                  <div className="bg-card border border-border rounded-lg p-6">
-                    <h3 className="text-sm font-oswald font-semibold text-foreground uppercase tracking-wide mb-4">
+                  <div className="blog-post-sidebar-card">
+                    <h3 className="blog-post-sidebar-title font-oswald">
                       Table of Contents
                     </h3>
                     <nav>
-                      <ul className="space-y-2">
+                      <ul className="blog-post-toc">
                         {postContent.tableOfContents.map((item) => (
                           <li key={item.id}>
-                            <a
-                              href={`#${item.id}`}
-                              className="text-sm text-muted-foreground hover:text-primary transition-colors block py-1"
-                            >
+                            <a href={`#${item.id}`}>
                               {item.title}
                             </a>
                           </li>
@@ -484,11 +468,11 @@ const BlogPost = () => {
                   </div>
 
                   {/* CTA Card */}
-                  <div className="bg-card border border-primary/30 rounded-lg p-6">
-                    <h3 className="text-lg font-oswald font-bold text-foreground mb-2">
+                  <div className="blog-post-cta-card">
+                    <h3 className="blog-post-cta-title font-oswald">
                       Protect Your Organization
                     </h3>
-                    <p className="text-sm text-muted-foreground mb-4">
+                    <p className="blog-post-cta-text">
                       Get real-time dark web monitoring and threat intelligence.
                     </p>
                     <Link to="/auth">
@@ -504,9 +488,9 @@ const BlogPost = () => {
         </main>
 
         {/* Related Posts */}
-        <section className="py-16 px-6 border-t border-border">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-oswald font-bold text-foreground mb-8 text-center">
+        <section className="blog-post-related-section">
+          <div className="max-w-6xl mx-auto px-6">
+            <h2 className="blog-post-related-title font-oswald">
               Related Articles
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -578,9 +562,7 @@ const BlogPost = () => {
         {/* Scroll to Top Button */}
         <button
           onClick={scrollToTop}
-          className={`fixed bottom-8 right-8 w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center shadow-red transition-all duration-300 hover:shadow-red-intense z-50 ${
-            showScrollTop ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
-          }`}
+          className={`blog-post-scroll-top ${!showScrollTop ? 'hidden' : ''}`}
           aria-label="Scroll to top"
         >
           <ArrowUp className="w-5 h-5" />
