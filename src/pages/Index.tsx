@@ -9,6 +9,11 @@ import TrialRegistrationForm from '@/components/TrialRegistrationForm';
 import TrialModal from '@/components/TrialModal';
 import ComparisonTable from '@/components/ComparisonTable';
 import ReviewsSection from '@/components/ReviewsSection';
+import ContactUs from '@/components/Contactus';
+import Testimonials from '@/components/Testimonials';
+import FAQ from '@/components/FAQ';
+import WhyChooseUs from '@/components/WhyChooseUs';
+import OurProcess from '@/components/OurProcess';
 import AnimatedBackground from '@/components/AnimatedBackground';
 import { Shield, Search, AlertTriangle, Users, Database, Zap, Eye, Globe, Lock, Linkedin, Twitter, Github } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -45,7 +50,7 @@ const Index = () => {
             <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">
               Contact
             </Link>
-            <Button 
+            <Button
               onClick={() => window.location.href = '/auth'}
               className="hero-button"
             >
@@ -59,7 +64,7 @@ const Index = () => {
       <section className="relative h-screen flex items-center justify-center cyber-grid overflow-hidden mt-20">
         <AnimatedBackground />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background"></div>
-        
+
         {/* 3D Background */}
         <div className="absolute inset-0 opacity-30">
           <Suspense fallback={<div className="w-full h-full bg-gradient-glow"></div>}>
@@ -77,13 +82,20 @@ const Index = () => {
           <p className="text-lg text-muted-foreground mb-8">
             on the Dark Web before they impact your business.
           </p>
-          
-          <div className="flex justify-center">
-            <Button 
+
+          <div className="flex justify-center gap-4">
+            <Button
               onClick={() => window.location.href = '/auth'}
               className="hero-button"
             >
               Start Free Trial
+            </Button>
+            <Button
+              variant="outline"
+              onClick={() => window.location.href = '/contact'}
+              className="hero-button border border-white text-white bg-transparent hover:bg-primary/10 hover:text-primary hover:border-primary"
+            >
+              Contact Us
             </Button>
           </div>
         </div>
@@ -182,11 +194,17 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Testimonials Section */}
+      <Testimonials />
+
+      {/* Our Process Section */}
+      <OurProcess />
+
       {/* Pricing Section */}
       <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-oswald font-bold text-foreground mb-4">
+            <h2 className="text-4xl  font-oswald font-bold text-foreground mb-4">
               Dark Web Monitoring Pricing
             </h2>
             <p className="text-lg text-muted-foreground">
@@ -199,17 +217,15 @@ const Index = () => {
             <div className="bg-muted rounded-full p-1 flex">
               <button
                 onClick={() => setIsAnnual(false)}
-                className={`px-6 py-2 text-sm font-oswald font-semibold rounded-full transition-colors ${
-                  !isAnnual ? 'bg-primary text-black' : 'text-muted-foreground'
-                }`}
+                className={`px-6 py-2 text-sm font-oswald font-semibold rounded-full transition-colors ${!isAnnual ? 'bg-primary text-black' : 'text-muted-foreground'
+                  }`}
               >
                 Monthly
               </button>
               <button
                 onClick={() => setIsAnnual(true)}
-                className={`px-6 py-2 text-sm font-oswald font-semibold rounded-full transition-colors ${
-                  isAnnual ? 'bg-primary text-black' : 'text-muted-foreground'
-                }`}
+                className={`px-6 py-2 text-sm font-oswald font-semibold rounded-full transition-colors ${isAnnual ? 'bg-primary text-black' : 'text-muted-foreground'
+                  }`}
               >
                 Annual
               </button>
@@ -267,26 +283,55 @@ const Index = () => {
               ]}
             />
           </div>
-
-          <div className="text-center mt-12">
-            <p className="text-lg text-muted-foreground mb-6">
-              Start with a 7-day free trial • No credit card required
-            </p>
-            <Button 
-              onClick={() => setIsTrialModalOpen(true)}
-              className="hero-button text-lg px-8 py-4"
-            >
-              Start Free Trial
-            </Button>
-          </div>
         </div>
       </section>
 
       {/* Trial Modal */}
-      <TrialModal 
-        isOpen={isTrialModalOpen} 
-        onClose={() => setIsTrialModalOpen(false)} 
+      <TrialModal
+        isOpen={isTrialModalOpen}
+        onClose={() => setIsTrialModalOpen(false)}
       />
+
+      {/* Contact Section */}
+      <section className="py-20 px-6 bg-gradient-to-b from-background to-threat-dark">
+        <div className="max-w-8xl mx-auto">
+          <ContactUs />
+        </div>
+      </section>
+
+      {/* Why Choose Us Section */}
+      {/* <WhyChooseUs /> */}
+      <section className="py-20 px-6 bg-threat-dark ">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-oswald font-bold text-foreground mb-4">
+              Why Choose <span className="glow-text">Dark Threat?</span>
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              See how we compare to traditional monitoring solutions
+            </p>
+          </div>
+          <ComparisonTable />
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <FAQ />
+
+      <div className="text-center mt-12 mb-10">
+        <h2 className="text-4xl font-oswald font-bold text-foreground mb-4">
+          Let's <span className="glow-text">Connect</span> With Us
+        </h2>
+        <p className="text-lg text-muted-foreground mb-6">
+          Start with a 7-day free trial • No credit card required
+        </p>
+        <Button
+          onClick={() => setIsTrialModalOpen(true)}
+          className="hero-button text-lg px-8 py-4"
+        >
+          Start Free Trial
+        </Button>
+      </div>
 
       {/* Footer */}
       <footer className="relative bg-card border-t border-border py-12 z-10">
