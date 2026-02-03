@@ -28,13 +28,16 @@ const Pricing = () => {
             <Link to="/pricing" className="text-primary">
               Pricing
             </Link>
+            <Link to="/blog" className="text-muted-foreground hover:text-primary transition-colors">
+              Blog
+            </Link>
             <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">
               About
             </Link>
             <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">
               Contact
             </Link>
-            <Button 
+            <Button
               onClick={() => setIsTrialModalOpen(true)}
               className="hero-button"
             >
@@ -61,17 +64,15 @@ const Pricing = () => {
             <div className="bg-muted rounded-full p-1 flex">
               <button
                 onClick={() => setIsAnnual(false)}
-                className={`px-6 py-2 text-sm font-oswald font-semibold rounded-full transition-colors ${
-                  !isAnnual ? 'bg-primary text-black' : 'text-muted-foreground'
-                }`}
+                className={`px-6 py-2 text-sm font-oswald font-semibold rounded-full transition-colors ${!isAnnual ? 'bg-primary text-black' : 'text-muted-foreground'
+                  }`}
               >
                 Monthly
               </button>
               <button
                 onClick={() => setIsAnnual(true)}
-                className={`px-6 py-2 text-sm font-oswald font-semibold rounded-full transition-colors ${
-                  isAnnual ? 'bg-primary text-black' : 'text-muted-foreground'
-                }`}
+                className={`px-6 py-2 text-sm font-oswald font-semibold rounded-full transition-colors ${isAnnual ? 'bg-primary text-black' : 'text-muted-foreground'
+                  }`}
               >
                 Annual
               </button>
@@ -136,7 +137,7 @@ const Pricing = () => {
             <p className="text-lg text-muted-foreground mb-6">
               Start with a 7-day free trial • No credit card required
             </p>
-            <Button 
+            <Button
               onClick={() => setIsTrialModalOpen(true)}
               className="hero-button px-8 py-3"
             >
@@ -157,7 +158,7 @@ const Pricing = () => {
               Flexible pricing tailored to your organization's needs
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             <div className="threat-card text-center">
               <Shield className="w-12 h-12 text-primary mx-auto mb-4" />
@@ -194,9 +195,9 @@ const Pricing = () => {
       </section>
 
       {/* Trial Modal */}
-      <TrialModal 
-        isOpen={isTrialModalOpen} 
-        onClose={() => setIsTrialModalOpen(false)} 
+      <TrialModal
+        isOpen={isTrialModalOpen}
+        onClose={() => setIsTrialModalOpen(false)}
       />
 
       {/* Footer */}

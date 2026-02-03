@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { Shield, Users, Award, Target, Twitter, Linkedin, Github,  AlertTriangle } from 'lucide-react';
+import { Shield, Users, Award, Target, Twitter, Linkedin, Github, AlertTriangle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useState, Suspense } from 'react';
 import TrialModal from '@/components/TrialModal';
@@ -26,6 +26,9 @@ const About = () => {
             </Link>
             <Link to="/pricing" className="text-muted-foreground hover:text-primary transition-colors">
               Pricing
+            </Link>
+            <Link to="/blog" className="text-muted-foreground hover:text-primary transition-colors">
+              Blog
             </Link>
             <Link to="/about" className="text-primary">
               About
@@ -60,7 +63,7 @@ const About = () => {
             About <span className="glow-text">DarkThreat</span>
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-          Leading the fight against cybercrime with advanced dark web intelligence and proactive threat detection.
+            Leading the fight against cybercrime with advanced dark web intelligence and proactive threat detection.
           </p>
         </div>
 

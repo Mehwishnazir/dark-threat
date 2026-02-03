@@ -90,6 +90,9 @@ const Solution = () => {
             <Link to="/pricing" className="text-muted-foreground hover:text-primary transition-colors">
               Pricing
             </Link>
+            <Link to="/blog" className="text-muted-foreground hover:text-primary transition-colors">
+              Blog
+            </Link>
             <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">
               About
             </Link>
@@ -110,7 +113,7 @@ const Solution = () => {
       <section className="relative h-screen flex items-center justify-center cyber-grid overflow-hidden ">
         <AnimatedBackground />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background"></div>
-        
+
         {/* 3D Background */}
         <div className="absolute inset-0 opacity-30">
           <Suspense fallback={<div className="w-full h-full bg-gradient-glow"></div>}>

@@ -53,13 +53,16 @@ const Contact = () => {
             <Link to="/pricing" className="text-muted-foreground hover:text-primary transition-colors">
               Pricing
             </Link>
+            <Link to="/blog" className="text-muted-foreground hover:text-primary transition-colors">
+              Blog
+            </Link>
             <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">
               About
             </Link>
             <Link to="/contact" className="text-primary">
               Contact
             </Link>
-            <Button 
+            <Button
               onClick={() => setIsTrialModalOpen(true)}
               className="hero-button"
             >
@@ -94,7 +97,7 @@ const Contact = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <Label htmlFor="name">Name *</Label>
-                    <Input 
+                    <Input
                       id="name"
                       name="name"
                       value={formData.name}
@@ -105,7 +108,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <Label htmlFor="email">Email *</Label>
-                    <Input 
+                    <Input
                       id="email"
                       name="email"
                       type="email"
@@ -118,7 +121,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <Label htmlFor="company">Company</Label>
-                  <Input 
+                  <Input
                     id="company"
                     name="company"
                     value={formData.company}
@@ -128,7 +131,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <Label htmlFor="message">Message *</Label>
-                  <Textarea 
+                  <Textarea
                     id="message"
                     name="message"
                     value={formData.message}
@@ -228,7 +231,7 @@ const Contact = () => {
           <p className="text-lg text-muted-foreground mb-8">
             Start your free trial today and see what threats are lurking in the shadows.
           </p>
-          <Button 
+          <Button
             onClick={() => setIsTrialModalOpen(true)}
             className="hero-button text-lg px-8 py-4"
           >
@@ -237,9 +240,9 @@ const Contact = () => {
         </div>
       </section>
 
-      <TrialModal 
-        isOpen={isTrialModalOpen} 
-        onClose={() => setIsTrialModalOpen(false)} 
+      <TrialModal
+        isOpen={isTrialModalOpen}
+        onClose={() => setIsTrialModalOpen(false)}
       />
 
       {/* Footer */}
