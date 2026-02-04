@@ -3,7 +3,7 @@ import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
 };
 
 interface ConfirmationRequest {
@@ -14,19 +14,115 @@ interface ConfirmationRequest {
   firstName: string;
 }
 
+// Simple email validation
+const isValidEmail = (email: string): boolean => {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email) && email.length <= 254;
+};
+
+// Input sanitization - remove potentially dangerous characters for HTML
+const sanitizeInput = (input: string, maxLength: number = 100): string => {
+  if (!input || typeof input !== 'string') return '';
+  return input.slice(0, maxLength).replace(/[<>\"'&]/g, '');
+};
+
+// URL validation - only allow safe redirect URLs
+const isValidRedirectUrl = (url: string): boolean => {
+  if (!url) return true; // Optional field
+  try {
+    const parsed = new URL(url);
+    // Only allow https and specific allowed domains
+    const allowedDomains = [
+      'darkthreat-ai-main-website.lovable.app',
+      'jfbisirfpbhkcskwaaov.supabase.co',
+      'localhost'
+    ];
+    return parsed.protocol === 'https:' && 
+           allowedDomains.some(domain => parsed.hostname === domain || parsed.hostname.endsWith('.' + domain));
+  } catch {
+    return false;
+  }
+};
+
 const handler = async (req: Request): Promise<Response> => {
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
   }
 
   try {
-    const { userEmail, token, tokenHash, redirectTo, firstName }: ConfirmationRequest = await req.json();
+    // Verify authorization header exists
+    const authHeader = req.headers.get('Authorization');
+    if (!authHeader || !authHeader.startsWith('Bearer ')) {
+      return new Response(
+        JSON.stringify({ error: 'Unauthorized - Missing or invalid authorization header' }),
+        { status: 401, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
+    // Initialize Supabase client with auth context
+    const supabaseUrl = Deno.env.get('SUPABASE_URL')!;
+    const supabaseAnonKey = Deno.env.get('SUPABASE_ANON_KEY')!;
+    
+    const supabaseAuth = createClient(supabaseUrl, supabaseAnonKey, {
+      global: { headers: { Authorization: authHeader } }
+    });
+
+    // Verify the JWT and get claims
+    const token = authHeader.replace('Bearer ', '');
+    const { data: claimsData, error: claimsError } = await supabaseAuth.auth.getClaims(token);
+    
+    if (claimsError || !claimsData?.claims) {
+      return new Response(
+        JSON.stringify({ error: 'Unauthorized - Invalid token' }),
+        { status: 401, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
+    const authenticatedUserEmail = claimsData.claims.email;
+
+    // Parse and validate input
+    const body = await req.json();
+    const { userEmail, token: emailToken, tokenHash, redirectTo, firstName }: ConfirmationRequest = body;
+    
+    // Validate required fields
+    if (!userEmail || !emailToken || !tokenHash || !firstName) {
+      return new Response(
+        JSON.stringify({ error: 'Missing required fields' }),
+        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
+    // Validate email format
+    if (!isValidEmail(userEmail)) {
+      return new Response(
+        JSON.stringify({ error: 'Invalid email format' }),
+        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
+    // Ensure user can only send confirmation to their own email
+    if (authenticatedUserEmail !== userEmail) {
+      return new Response(
+        JSON.stringify({ error: 'Forbidden - You can only request confirmation for your own email' }),
+        { status: 403, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
+    // Validate redirect URL if provided
+    if (redirectTo && !isValidRedirectUrl(redirectTo)) {
+      return new Response(
+        JSON.stringify({ error: 'Invalid redirect URL' }),
+        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
+    // Sanitize inputs
+    const sanitizedFirstName = sanitizeInput(firstName, 50);
     
     // Construct the official Supabase email verification URL
-    const supabaseUrl = "https://hguzgggcdnerycccihov.supabase.co";
-    const confirmationUrl = `${supabaseUrl}/auth/v1/verify?token=${tokenHash}&type=email${redirectTo ? `&redirect_to=${encodeURIComponent(redirectTo)}` : ''}`;
+    const confirmationUrl = `${supabaseUrl}/auth/v1/verify?token=${encodeURIComponent(tokenHash)}&type=email${redirectTo ? `&redirect_to=${encodeURIComponent(redirectTo)}` : ''}`;
     
-    console.log('Sending confirmation email to:', userEmail);
+    console.log('Sending confirmation email to authenticated user');
 
     // Send confirmation email using Resend
     const emailResponse = await fetch('https://api.resend.com/emails', {
@@ -70,7 +166,7 @@ const handler = async (req: Request): Promise<Response> => {
                     Welcome to Dark Threat
                   </h2>
                   <p style="margin: 0; color: #d1d5db; font-size: 18px; line-height: 1.6;">
-                    Hi ${firstName}, please confirm your email to complete your registration.
+                    Hi ${sanitizedFirstName}, please confirm your email to complete your registration.
                   </p>
                 </div>
 
@@ -128,7 +224,7 @@ const handler = async (req: Request): Promise<Response> => {
     });
 
     const emailResult = await emailResponse.json();
-    console.log('Confirmation email sent:', emailResult);
+    console.log('Confirmation email sent successfully');
 
     return new Response(JSON.stringify({ 
       success: true,
@@ -138,10 +234,11 @@ const handler = async (req: Request): Promise<Response> => {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
 
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error("Error in send-confirmation-email function:", error);
+    const errorMessage = error instanceof Error ? error.message : 'An unexpected error occurred';
     return new Response(
-      JSON.stringify({ error: error.message }),
+      JSON.stringify({ error: errorMessage }),
       {
         status: 500,
         headers: { ...corsHeaders, "Content-Type": "application/json" },

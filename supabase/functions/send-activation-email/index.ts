@@ -3,7 +3,7 @@ import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
 };
 
 interface EmailRequest {
@@ -13,20 +13,113 @@ interface EmailRequest {
   companyName: string;
 }
 
+// Simple email validation
+const isValidEmail = (email: string): boolean => {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email) && email.length <= 254;
+};
+
+// Input sanitization - remove potentially dangerous characters
+const sanitizeInput = (input: string, maxLength: number = 100): string => {
+  if (!input || typeof input !== 'string') return '';
+  return input.slice(0, maxLength).replace(/[<>\"'&]/g, '');
+};
+
 const handler = async (req: Request): Promise<Response> => {
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
   }
 
   try {
-    const { userEmail, firstName, lastName, companyName }: EmailRequest = await req.json();
-    
-    console.log('Sending activation email to:', userEmail);
+    // Verify authorization header exists
+    const authHeader = req.headers.get('Authorization');
+    if (!authHeader || !authHeader.startsWith('Bearer ')) {
+      return new Response(
+        JSON.stringify({ error: 'Unauthorized - Missing or invalid authorization header' }),
+        { status: 401, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
 
-    // Initialize Supabase client for updating user status
+    // Initialize Supabase client with auth context
     const supabaseUrl = Deno.env.get('SUPABASE_URL')!;
-    const supabaseKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
-    const supabase = createClient(supabaseUrl, supabaseKey);
+    const supabaseAnonKey = Deno.env.get('SUPABASE_ANON_KEY')!;
+    const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
+    
+    const supabaseAuth = createClient(supabaseUrl, supabaseAnonKey, {
+      global: { headers: { Authorization: authHeader } }
+    });
+
+    // Verify the JWT and get claims
+    const token = authHeader.replace('Bearer ', '');
+    const { data: claimsData, error: claimsError } = await supabaseAuth.auth.getClaims(token);
+    
+    if (claimsError || !claimsData?.claims) {
+      return new Response(
+        JSON.stringify({ error: 'Unauthorized - Invalid token' }),
+        { status: 401, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
+    const userId = claimsData.claims.sub;
+    
+    // Use service role client for admin operations
+    const supabaseAdmin = createClient(supabaseUrl, supabaseServiceKey);
+
+    // Check if the caller has admin/superadmin role
+    const { data: roleData, error: roleError } = await supabaseAdmin
+      .from('user_roles')
+      .select('role')
+      .eq('user_id', userId)
+      .in('role', ['admin', 'superadmin'])
+      .single();
+
+    if (roleError || !roleData) {
+      return new Response(
+        JSON.stringify({ error: 'Forbidden - Admin access required' }),
+        { status: 403, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
+    // Parse and validate input
+    const body = await req.json();
+    const { userEmail, firstName, lastName, companyName }: EmailRequest = body;
+    
+    // Validate required fields
+    if (!userEmail || !firstName || !lastName || !companyName) {
+      return new Response(
+        JSON.stringify({ error: 'Missing required fields' }),
+        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
+    // Validate email format
+    if (!isValidEmail(userEmail)) {
+      return new Response(
+        JSON.stringify({ error: 'Invalid email format' }),
+        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
+    // Sanitize inputs
+    const sanitizedFirstName = sanitizeInput(firstName, 50);
+    const sanitizedLastName = sanitizeInput(lastName, 50);
+    const sanitizedCompanyName = sanitizeInput(companyName, 100);
+
+    // Verify the target user exists in the database
+    const { data: targetUser, error: userError } = await supabaseAdmin
+      .from('users')
+      .select('id, business_email')
+      .eq('business_email', userEmail)
+      .single();
+
+    if (userError || !targetUser) {
+      return new Response(
+        JSON.stringify({ error: 'User not found' }),
+        { status: 404, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
+    console.log('Admin sending activation email to user');
 
     // Send activation email using SMTP
     const emailResponse = await fetch('https://api.resend.com/emails', {
@@ -70,7 +163,7 @@ const handler = async (req: Request): Promise<Response> => {
                     Account Activated Successfully!
                   </h2>
                   <p style="margin: 0; color: #d1d5db; font-size: 18px; line-height: 1.6;">
-                    Welcome to DarkThreat, ${firstName}!
+                    Welcome to DarkThreat, ${sanitizedFirstName}!
                   </p>
                 </div>
 
@@ -79,15 +172,14 @@ const handler = async (req: Request): Promise<Response> => {
                     Your Account Details:
                   </h3>
                   <div style="color: #e5e7eb; line-height: 1.6;">
-                    <p style="margin: 8px 0;"><strong>Name:</strong> ${firstName} ${lastName}</p>
-                    <p style="margin: 8px 0;"><strong>Company:</strong> ${companyName}</p>
-                    <p style="margin: 8px 0;"><strong>Email:</strong> ${userEmail}</p>
+                    <p style="margin: 8px 0;"><strong>Name:</strong> ${sanitizedFirstName} ${sanitizedLastName}</p>
+                    <p style="margin: 8px 0;"><strong>Company:</strong> ${sanitizedCompanyName}</p>
                     <p style="margin: 8px 0;"><strong>Trial Period:</strong> 7 days (full access)</p>
                   </div>
                 </div>
 
                 <div style="text-align: center; margin: 30px 0;">
-                  <a href="${supabaseUrl.replace('.supabase.co', '')}.vercel.app/dashboard" 
+                  <a href="https://darkthreat-ai-main-website.lovable.app/dashboard" 
                      style="display: inline-block; background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); color: white; text-decoration: none; padding: 16px 32px; border-radius: 8px; font-weight: 600; font-size: 16px; box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3); transition: all 0.3s ease;">
                     Access Your Dashboard
                   </a>
@@ -124,10 +216,10 @@ const handler = async (req: Request): Promise<Response> => {
     });
 
     const emailResult = await emailResponse.json();
-    console.log('Activation email sent:', emailResult);
+    console.log('Activation email sent successfully');
 
     // Update user account as activated
-    const { error: updateError } = await supabase
+    const { error: updateError } = await supabaseAdmin
       .from('users')
       .update({ account_activated: true })
       .eq('business_email', userEmail);
@@ -153,14 +245,13 @@ const handler = async (req: Request): Promise<Response> => {
             <div style="background: #f8fafc; padding: 20px; border-radius: 8px; border-left: 4px solid #3b82f6;">
               <p><strong>User Details:</strong></p>
               <ul>
-                <li><strong>Name:</strong> ${firstName} ${lastName}</li>
-                <li><strong>Email:</strong> ${userEmail}</li>
-                <li><strong>Company:</strong> ${companyName}</li>
+                <li><strong>Name:</strong> ${sanitizedFirstName} ${sanitizedLastName}</li>
+                <li><strong>Company:</strong> ${sanitizedCompanyName}</li>
                 <li><strong>Activated:</strong> ${new Date().toLocaleString()}</li>
               </ul>
             </div>
             <p style="margin-top: 20px;">
-              <a href="${supabaseUrl.replace('.supabase.co', '')}.vercel.app/admin" style="background: #3b82f6; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; display: inline-block;">
+              <a href="https://darkthreat-ai-main-website.lovable.app/admin" style="background: #3b82f6; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; display: inline-block;">
                 View in Admin Dashboard
               </a>
             </p>
@@ -170,7 +261,7 @@ const handler = async (req: Request): Promise<Response> => {
     });
 
     const adminResult = await adminEmailResponse.json();
-    console.log('Admin notification sent:', adminResult);
+    console.log('Admin notification sent successfully');
 
     return new Response(JSON.stringify({ 
       success: true,
@@ -181,10 +272,11 @@ const handler = async (req: Request): Promise<Response> => {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
 
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error("Error in send-activation-email function:", error);
+    const errorMessage = error instanceof Error ? error.message : 'An unexpected error occurred';
     return new Response(
-      JSON.stringify({ error: error.message }),
+      JSON.stringify({ error: errorMessage }),
       {
         status: 500,
         headers: { ...corsHeaders, "Content-Type": "application/json" },
