@@ -20,8 +20,10 @@ import "./blog.css";
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
+
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [isTrialModalOpen, setIsTrialModalOpen] = useState(false);
 
   const post = allBlogs.find((p) => p.slug === slug);
   const relatedPosts = allBlogs.filter((p) => p.slug !== slug).slice(0, 3);
@@ -83,6 +85,40 @@ const BlogPost = () => {
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 
+      {/* HEADER */}
+      <header className="py-6 px-6 border-b border-border">
+        <div className="max-w-6xl mx-auto flex items-center justify-between">
+          <Link to="/" className="text-2xl font-oswald font-bold text-foreground">
+            DARK<span className="text-primary">THREAT</span>
+          </Link>
+
+          <nav className="flex items-center space-x-6">
+            <Link to="/" className="text-muted-foreground hover:text-primary">
+              Home
+            </Link>
+            <Link to="/solution" className="text-muted-foreground hover:text-primary">
+              Solution
+            </Link>
+            <Link to="/pricing" className="text-muted-foreground hover:text-primary">
+              Pricing
+            </Link>
+            <Link to="/blog" className="text-muted-foreground hover:text-primary">
+              Blog
+            </Link>
+            <Link to="/about" className="text-primary">
+              About
+            </Link>
+            <Link to="/contact" className="text-muted-foreground hover:text-primary">
+              Contact
+            </Link>
+
+            <Button onClick={() => setIsTrialModalOpen(true)} className="hero-button">
+              Start Free Trial
+            </Button>
+          </nav>
+        </div>
+      </header>
+
       {/* HERO */}
       <section
         className="blog-post-hero"
@@ -113,7 +149,6 @@ const BlogPost = () => {
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
 
-        {/* SHARE */}
         <div className="mt-10 flex gap-3">
           <Button onClick={handleShare}>
             {copied ? <LinkIcon /> : <Share2 />}
@@ -131,7 +166,56 @@ const BlogPost = () => {
         </div>
       </section>
 
-      {/* SCROLL TOP */}
+      {/* FOOTER */}
+      <footer className="bg-card border-t border-border py-12">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid md:grid-cols-4 gap-8">
+            <div className="md:col-span-2">
+              <div className="flex items-center space-x-2 mb-4">
+                <Shield className="w-8 h-8 text-primary" />
+                <span className="text-xl font-oswald font-bold text-foreground">
+                  DarkThreat
+                </span>
+              </div>
+              <p className="text-muted-foreground mb-4">
+                Advanced dark web monitoring and threat intelligence platform
+                protecting your organization 24/7.
+              </p>
+              <div className="flex space-x-4">
+                <Twitter className="w-5 h-5 text-muted-foreground hover:text-primary" />
+                <Linkedin className="w-5 h-5 text-muted-foreground hover:text-primary" />
+                <Github className="w-5 h-5 text-muted-foreground hover:text-primary" />
+              </div>
+            </div>
+
+            <div>
+              <h3 className="font-oswald font-semibold mb-4">Platform</h3>
+              <ul className="space-y-2">
+                <li><Link to="/" className="text-muted-foreground hover:text-primary">Home</Link></li>
+                <li><Link to="/solution" className="text-muted-foreground hover:text-primary">Solution</Link></li>
+                <li><Link to="/pricing" className="text-muted-foreground hover:text-primary">Pricing</Link></li>
+                <li><Link to="/about" className="text-muted-foreground hover:text-primary">About</Link></li>
+                <li><Link to="/contact" className="text-muted-foreground hover:text-primary">Contact</Link></li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="font-oswald font-semibold mb-4">Legal</h3>
+              <ul className="space-y-2">
+                <li><Link to="/privacy-policy" className="text-muted-foreground hover:text-primary">Privacy Policy</Link></li>
+                <li><Link to="/platform-terms" className="text-muted-foreground hover:text-primary">Platform Terms</Link></li>
+                <li><Link to="/website-terms" className="text-muted-foreground hover:text-primary">Website Terms</Link></li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground">
+            © 2025 DarkThreat. All rights reserved.
+          </div>
+        </div>
+      </footer>
+
+      {/* SCROLL TO TOP */}
       {showScrollTop && (
         <button className="blog-post-scroll-top" onClick={scrollToTop}>
           <ArrowUp />
