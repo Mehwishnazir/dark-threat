@@ -66,14 +66,13 @@ const handler = async (req: Request): Promise<Response> => {
     const supabaseAdmin = createClient(supabaseUrl, supabaseServiceKey);
 
     // Check if the caller has admin/superadmin role
-    const { data: roleData, error: roleError } = await supabaseAdmin
-      .from('user_roles')
+    const { data: userData, error: roleError } = await supabaseAdmin
+      .from('users')
       .select('role')
       .eq('user_id', userId)
-      .in('role', ['admin', 'superadmin'])
       .single();
 
-    if (roleError || !roleData) {
+    if (roleError || !userData || !['admin', 'superadmin'].includes(userData.role)) {
       return new Response(
         JSON.stringify({ error: 'Forbidden - Admin access required' }),
         { status: 403, headers: { ...corsHeaders, "Content-Type": "application/json" } }
