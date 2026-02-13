@@ -10,7 +10,7 @@ export const whyDarkWebMonitoringIsCriticalForYourBusiness: BlogPostType & {
   slug: "why-dark-web-monitoring-is-critical-for-your-business",
   title: "Why Dark Web Monitoring is Critical for Your Business",
   excerpt: "Explore why dark web monitoring is essential for businesses to detect breaches, protect sensitive data, and stay ahead of cyber threats in 2025.",
-  featuredImage: "https://images.unsplash.com/photo-1605902711622-cfb43c4439e8?w=1200&q=80",
+  featuredImage: "/dark-threat-4.webp",
   category: "Cybersecurity",
   publishDate: "February 10, 2025",
   readingTime: "11 min read",
