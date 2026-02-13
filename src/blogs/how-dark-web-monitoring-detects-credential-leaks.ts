@@ -33,20 +33,8 @@ tableOfContents: [
 
 content: `
 
-<div class="blog-post-container"> <section class="blog-post-hero" style="background-image:url(https://images.unsplash.com/photo-1605902711623-d4e1f2fc9b82?w=1200&q=80)"> <div class="blog-post-hero-overlay"></div>
-<div class="blog-post-hero-content">
-  <span class="blog-post-hero-category-badge">Cybersecurity</span>
-  <h1 class="blog-post-hero-title">How Dark Web Monitoring Detects Credential Leaks</h1>
-  <p class="blog-post-hero-excerpt">Understand how dark web monitoring identifies compromised credentials, detects leaks, and helps organizations prevent unauthorized access in 2025.</p>
-
-  <div class="blog-post-hero-meta">
-    <span>By Dr. Ayaan Rahman</span>
-    <span>February 10, 2025</span>
-    <span>13 min read</span>
-  </div>
-</div>
-
-</section> <div class="blog-post-content"> <article class="blog-post-article">
+<div class="blog-post-container"> 
+<div class="blog-post-content"> <article class="blog-post-article">
   <h2 id="introduction">Introduction to Credential Leaks</h2>
   <p>
     Credential leaks, including exposed usernames and passwords, are among the most common attack vectors for cybercriminals. In 2025, these leaks are increasingly sold and traded on dark web marketplaces and forums, enabling attackers to gain unauthorized access to business systems, customer accounts, and sensitive data.
