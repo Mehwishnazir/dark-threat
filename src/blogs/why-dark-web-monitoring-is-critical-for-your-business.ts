@@ -32,21 +32,8 @@ export const whyDarkWebMonitoringIsCriticalForYourBusiness: BlogPostType & {
 
   content: `
 <div class="blog-post-container">
-  <section class="blog-post-hero" style="background-image:url(https://images.unsplash.com/photo-1605902711622-cfb43c4439e8?w=1200&q=80)">
-    <div class="blog-post-hero-overlay"></div>
-    <div class="blog-post-hero-content">
-      <span class="blog-post-hero-category-badge">Cybersecurity</span>
-      <h1 class="blog-post-hero-title">Why Dark Web Monitoring is Critical for Your Business</h1>
-      <p class="blog-post-hero-excerpt">Discover why dark web monitoring is essential for identifying threats, securing sensitive data, and ensuring business resilience in the digital era of 2025.</p>
-      <div class="blog-post-hero-meta">
-        <span>By Dr. Ayaan Rahman</span>
-        <span>February 10, 2025</span>
-        <span>11 min read</span>
-      </div>
-    </div>
-  </section>
-
-  <div class="blog-post-content">
+ 
+ <div class="blog-post-content">
     <article class="blog-post-article">
       <h2 id="introduction">Introduction to Dark Web Monitoring</h2>
       <p>
