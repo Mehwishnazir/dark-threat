@@ -33,20 +33,8 @@ tableOfContents: [
 
 content: `
 
-<div class="blog-post-container"> <section class="blog-post-hero" style="background-image:url(https://images.unsplash.com/photo-1622495893622-9c79efc7b1bc?w=1200&q=80)"> <div class="blog-post-hero-overlay"></div>
-<div class="blog-post-hero-content">
-  <span class="blog-post-hero-category-badge">Cybersecurity</span>
-  <h1 class="blog-post-hero-title">The Role of Dark Web Monitoring in Cybersecurity</h1>
-  <p class="blog-post-hero-excerpt">Discover how dark web monitoring plays a pivotal role in cybersecurity by detecting threats, preventing data breaches, and enhancing proactive defense for businesses in 2025.</p>
-
-  <div class="blog-post-hero-meta">
-    <span>By Dr. Ayaan Rahman</span>
-    <span>February 10, 2025</span>
-    <span>13 min read</span>
-  </div>
-</div>
-
-</section> <div class="blog-post-content"> <article class="blog-post-article">
+<div class="blog-post-container"> 
+<div class="blog-post-content"> <article class="blog-post-article">
   <h2 id="introduction">Introduction to Dark Web Monitoring in Cybersecurity</h2>
   <p>
     In 2025, cyber threats continue to evolve, targeting businesses with greater sophistication. Dark web monitoring is a crucial component of modern cybersecurity, allowing organizations to detect, analyze, and respond to threats that originate from hidden and anonymized online environments.
