@@ -8,6 +8,8 @@ import { darkWebMonitoringRole } from "./the-role-of-dark-web-monitoring-in-cybe
 import { darkWebCredentialLeaks } from "./how-dark-web-monitoring-detects-credential-leaks";
 import { darkWebCredentialMonitoring } from "./what-you-need-to-know-about-dark-web-credential-monitoring";
 import { darkWebMonitoringThreatIntelligence } from "./dark-web-monitoring-threat-intelligence";
+import { topBenefitsOfUsingDarkWebMonitoringForBusinesses } from "./top-benefits-of-using-dark-web-monitoring-for-businesses";
+
 
 export const allBlogs = [
   whyDarkWebMonitoringIsCriticalForYourBusiness,
@@ -20,4 +22,5 @@ export const allBlogs = [
   darkWebCredentialLeaks,
   darkWebCredentialMonitoring,
   darkWebMonitoringThreatIntelligence,
+  topBenefitsOfUsingDarkWebMonitoringForBusinesses
 ];
