@@ -33,20 +33,7 @@ tableOfContents: [
 
 content: `
 
-<div class="blog-post-container"> <section class="blog-post-hero" style="background-image:url(https://images.unsplash.com/photo-1605902711622-cfb43c443ad1?w=1200&q=80)"> <div class="blog-post-hero-overlay"></div>
-<div class="blog-post-hero-content">
-  <span class="blog-post-hero-category-badge">Cybersecurity</span>
-  <h1 class="blog-post-hero-title">How to Protect Your Business from Dark Web Threats</h1>
-  <p class="blog-post-hero-excerpt">Discover strategies to safeguard your business from dark web threats using monitoring, intelligence, employee training, and proactive cybersecurity measures in 2025.</p>
-
-  <div class="blog-post-hero-meta">
-    <span>By Dr. Ayaan Rahman</span>
-    <span>February 10, 2025</span>
-    <span>14 min read</span>
-  </div>
-</div>
-
-</section> <div class="blog-post-content"> <article class="blog-post-article">
+<div class="blog-post-container">  <div class="blog-post-content"> <article class="blog-post-article">
   <h2 id="introduction">Introduction to Dark Web Threats</h2>
   <p>
     The dark web is a hidden portion of the internet where cybercriminals trade stolen data, malware, and hacking services. For businesses in 2025, threats originating from this hidden ecosystem have grown increasingly sophisticated. Protecting your organization requires understanding the nature of dark web activities and implementing proactive cybersecurity strategies.
