@@ -548,3 +548,43 @@ html {
     font-size: 1.25rem;
   }
 }
+
+/* Blog Tables */
+.blog-table {
+  margin: 2rem 0;
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  background: hsl(var(--card));
+  border-bottom: 2px solid hsl(var(--border));
+  font-weight: 600;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+.table-row:hover {
+  background: hsl(var(--card) / 0.5);
+}
+
+.table-cell {
+  padding: 1rem;
+  border-right: 1px solid hsl(var(--border));
+}
+
+.table-cell:last-child {
+  border-right: none;
+}
+
