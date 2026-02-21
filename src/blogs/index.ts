@@ -28,21 +28,21 @@ import { protectyouremployeeswithdarkwebcredentialleakalerts } from "./protect-y
 import { howdarkwebmonitoringcansaveyourbusinessmillions } from "./how-dark-web-monitoring-can-save-your-business-millions";
 import { whyyourbusinessshouldusedarkwebmonitoringfordataprotection } from "./why-your-business-should-use-dark-web-monitoring-for-data-protection";
 import { howtousedarkwebtoolsforeffectivebreachdetection } from "./how-to-use-dark-web-tools-for-effective-breach-detection";
-import { whatToDoIfYourCredentialsAreLeakedOnTheDarkWeb } from "./what-to-do-if-your-credentials-are-leaked-on-the-dark-web";
-import { whyYouNeedDarkWebMonitoringForCredentialLeakDetection } from "./why-you-need-dark-web-monitoring-for-credential-leak-detection";
-import { howDarkWebCredentialMonitoringProtectsVipAccounts } from "./how-dark-web-credential-monitoring-protects-vip-accounts";
-import { realTimeDarkWebAlertsForProtectingYourBusinessData } from "./real-time-dark-web-alerts-for-protecting-your-business-data";
-import { howToTrackAndMitigateDarkWebCredentialDumps } from "./how-to-track-and-mitigate-dark-web-credential-dumps";
-import { understandingTheThreatOfDarkWebCredentialLeaks } from "./understanding-the-threat-of-dark-web-credential-leaks";
-import { theImportanceOfMonitoringStealerLogsForSecurity } from "./the-importance-of-monitoring-stealer-logs-for-security";
-import { howHackersUseLeakedCredentialsFromTheDarkWeb } from "./how-hackers-use-leaked-credentials-from-the-dark-web";
+import { whattodoifyourcredentialsareleakedonthedarkweb } from "./what-to-do-if-your-credentials-are-leaked-on-the-dark-web";
+import { whyyouneeddarkwebmonitoringforcredentialleakdetection } from "./why-you-need-dark-web-monitoring-for-credential-leak-detection";
+import { howdarkwebcredentialmonitoringprotectsvipaccounts } from "./how-dark-web-credential-monitoring-protects-vip-accounts";
+import { realtimedarkwebalertsforprotectingyourbusinessdata } from "./real-time-dark-web-alerts-for-protecting-your-business-data";
+import { howtotrackandmitigatedarkwebcredentialdumps } from "./how-to-track-and-mitigate-dark-web-credential-dumps";
+import { understandingthethreatofdarkwebcredentialleaks } from "./understanding-the-threat-of-dark-web-credential-leaks";
+import { theimportanceofmonitoringstealerlogsforsecurity } from "./the-importance-of-monitoring-stealer-logs-for-security";
+import { howhackersuseleakedcredentialsfromthedarkweb } from "./how-hackers-use-leaked-credentials-from-the-dark-web";
 import { threeWaysDarkWebMonitoringPreventsCorporateDataLeaks } from "./3-ways-dark-web-monitoring-prevents-corporate-data-leaks";
-import { howToDetectAndRespondToDarkWebDataBreaches } from "./how-to-detect-and-respond-to-dark-web-data-breaches";
-import { keyStepsToPreventCredentialLeaksWithDarkWebMonitoring } from "./key-steps-to-prevent-credential-leaks-with-dark-web-monitoring";
-import { monitoringDarkWebForumsForLeakedBusinessCredentials } from "./monitoring-dark-web-forums-for-leaked-business-credentials";
-import { cybersecurityThreatsAndHackerActivity } from "./cybersecurity-threats-and-hacker-activity";
-import { howDarkWebChatterCanPredictFutureCyberattacks } from "./how-dark-web-chatter-can-predict-future-cyberattacks";
-import { trackingHackerChatterWhyItsCriticalForBusinessSecurity } from "./tracking-hacker-chatter-why-its-critical-for-business-security";
+import { howtodetectandrespondtodarkwebdatabreaches } from "./how-to-detect-and-respond-to-dark-web-data-breaches";
+import { keystepstopreventcredentialleakswithdarkwebmonitoring } from "./key-steps-to-prevent-credential-leaks-with-dark-web-monitoring";
+import { monitoringdarkwebforumsforleakedbusinesscredentials } from "./monitoring-dark-web-forums-for-leaked-business-credentials";
+import { cybersecuritythreatsandhackeractivity } from "./cybersecurity-threats-and-hacker-activity";
+import { howdarkwebchattercanpredictfuturecyberattacks } from "./how-dark-web-chatter-can-predict-future-cyberattacks";
+import { trackinghackerchatterwhyitscriticalforbusinesssecurity } from "./tracking-hacker-chatter-why-its-critical-for-business-security";
 
 export const allBlogs = [
   darkWebMonitoringThreatIntelligence,
@@ -75,19 +75,19 @@ export const allBlogs = [
   howdarkwebmonitoringcansaveyourbusinessmillions,
   whyyourbusinessshouldusedarkwebmonitoringfordataprotection,
   howtousedarkwebtoolsforeffectivebreachdetection,
-  whatToDoIfYourCredentialsAreLeakedOnTheDarkWeb,
-  whyYouNeedDarkWebMonitoringForCredentialLeakDetection,
-  howDarkWebCredentialMonitoringProtectsVipAccounts,
-  realTimeDarkWebAlertsForProtectingYourBusinessData,
-  howToTrackAndMitigateDarkWebCredentialDumps,
-  understandingTheThreatOfDarkWebCredentialLeaks,
-  theImportanceOfMonitoringStealerLogsForSecurity,
-  howHackersUseLeakedCredentialsFromTheDarkWeb,
+  whattodoifyourcredentialsareleakedonthedarkweb,
+  whyyouneeddarkwebmonitoringforcredentialleakdetection,
+  howdarkwebcredentialmonitoringprotectsvipaccounts,
+  realtimedarkwebalertsforprotectingyourbusinessdata,
+  howtotrackandmitigatedarkwebcredentialdumps,
+  understandingthethreatofdarkwebcredentialleaks,
+  theimportanceofmonitoringstealerlogsforsecurity,
+  howhackersuseleakedcredentialsfromthedarkweb,
   threeWaysDarkWebMonitoringPreventsCorporateDataLeaks,
-  howToDetectAndRespondToDarkWebDataBreaches,
-  keyStepsToPreventCredentialLeaksWithDarkWebMonitoring,
-  monitoringDarkWebForumsForLeakedBusinessCredentials,
-  cybersecurityThreatsAndHackerActivity,
-  howDarkWebChatterCanPredictFutureCyberattacks,
-  trackingHackerChatterWhyItsCriticalForBusinessSecurity,
+  howtodetectandrespondtodarkwebdatabreaches,
+  keystepstopreventcredentialleakswithdarkwebmonitoring,
+  monitoringdarkwebforumsforleakedbusinesscredentials,
+  cybersecuritythreatsandhackeractivity,
+  howdarkwebchattercanpredictfuturecyberattacks,
+  trackinghackerchatterwhyitscriticalforbusinesssecurity,
 ];
