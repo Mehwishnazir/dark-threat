@@ -43,6 +43,21 @@ import { monitoringdarkwebforumsforleakedbusinesscredentials } from "./monitorin
 import { cybersecuritythreatsandhackeractivity } from "./cybersecurity-threats-and-hacker-activity";
 import { howdarkwebchattercanpredictfuturecyberattacks } from "./how-dark-web-chatter-can-predict-future-cyberattacks";
 import { trackinghackerchatterwhyitscriticalforbusinesssecurity } from "./tracking-hacker-chatter-why-its-critical-for-business-security";
+import { howtodetectcyberattackplanningthroughdarkwebmonitoring } from "./how-to-detect-cyberattack-planning-through-dark-web-monitoring";
+import { whyhackeractivityonthedarkwebmattersforbusinesses } from "./why-hacker-activity-on-the-dark-web-matters-for-businesses";
+import { monitoringhackerforumstodetectattackplansearly } from "./monitoring-hacker-forums-to-detect-attack-plans-early";
+import { howtospotahackbeforeithappensusingdarkwebintelligence } from "./how-to-spot-a-hack-before-it-happens-using-dark-web-intelligence";
+import { theroledarkwebmonitoringindetectingattackplans } from "./the-role-of-dark-web-monitoring-in-detecting-attack-plans";
+import { howtodetectadvancedpersistentthreatsaptonthedarkweb } from "./how-to-detect-advanced-persistent-threats-apt-on-the-dark-web";
+import { usingdarkwebintelligencetostayonestepaheadofhackers } from "./using-dark-web-intelligence-to-stay-one-step-ahead-of-hackers";
+import { whydarkwebsurveillanceiskeyforpreventingdatatheft } from "./why-dark-web-surveillance-is-key-for-preventing-data-theft";
+import { howtotrackthreatactorsusingdarkwebmonitoringtools } from "./how-to-track-threat-actors-using-dark-web-monitoring-tools";
+import { darkwebmonitoringhowtospotpotentialcyberattackers } from "./dark-web-monitoring-how-to-spot-potential-cyberattackers";
+import { howdarkwebmonitoringhelpsyoudetecthackersinrealtime } from "./how-dark-web-monitoring-helps-you-detect-hackers-in-real-time";
+import { trackingcybercriminalshowdarkwebmonitoringhelpsyoustaysafe } from "./tracking-cybercriminals-how-dark-web-monitoring-helps-you-stay-safe";
+import { howdarkwebmonitoringtoolsidentifythreatactormovements } from "./how-dark-web-monitoring-tools-identify-threat-actor-movements";
+import { theimportanceofmonitoringdarkweb hackersplans } from "./the-importance-of-monitoring-dark-web-hackers-plans";
+import { howtoprotectyourcompanysassetsbymonitoringhackeractivity } from "./how-to-protect-your-companys-assets-by-monitoring-hacker-activity";
 
 export const allBlogs = [
   darkWebMonitoringThreatIntelligence,
@@ -90,4 +105,19 @@ export const allBlogs = [
   cybersecuritythreatsandhackeractivity,
   howdarkwebchattercanpredictfuturecyberattacks,
   trackinghackerchatterwhyitscriticalforbusinesssecurity,
+  howtodetectcyberattackplanningthroughdarkwebmonitoring,
+  whyhackeractivityonthedarkwebmattersforbusinesses,
+  monitoringhackerforumstodetectattackplansearly,
+  howtospotahackbeforeithappensusingdarkwebintelligence,
+  theroledarkwebmonitoringindetectingattackplans,
+  howtodetectadvancedpersistentthreatsaptonthedarkweb,
+  usingdarkwebintelligencetostayonestepaheadofhackers,
+  whydarkwebsurveillanceiskeyforpreventingdatatheft,
+  howtotrackthreatactorsusingdarkwebmonitoringtools,
+  darkwebmonitoringhowtospotpotentialcyberattackers,
+  howdarkwebmonitoringhelpsyoudetecthackersinrealtime,
+  trackingcybercriminalshowdarkwebmonitoringhelpsyoustaysafe,
+  howdarkwebmonitoringtoolsidentifythreatactormovements,
+  theimportanceofmonitoringdarkwebhackersplans,
+  howtoprotectyourcompanysassetsbymonitoringhackeractivity,
 ];
