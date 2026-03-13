@@ -1,197 +1,251 @@
-import { useState, useMemo, Suspense } from 'react';
-import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Shield, Linkedin, Twitter, Github, ChevronLeft, ChevronRight, Search } from 'lucide-react';
-import BlogCard, { type BlogPost } from '@/components/blog/BlogCard';
-import AnimatedBackground from '@/components/AnimatedBackground';
-import ThreatSphere from '@/components/ThreatSphere';
-import { allBlogs } from '@/blogs';
+import { useParams, Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Helmet } from "react-helmet-async";
+import { Button } from "@/components/ui/button";
+import {
+  Shield,
+  Linkedin,
+  Twitter,
+  Github,
+  Calendar,
+  Clock,
+  ChevronLeft,
+  Share2,
+  Link as LinkIcon,
+  ArrowUp,
+} from "lucide-react";
+import BlogCard from "@/components/blog/BlogCard";
+import { allBlogs } from "@/blogs";
+import "./blog.css";
 
-const categories = [
-  'All Blogs',
-  'Threat Intelligence',
-  'Security',
-  'Research',
-  'Best Practices',
-  'Cybersecurity',
-];
+const BlogPost = () => {
+  const { slug } = useParams<{ slug: string }>();
 
-const POSTS_PER_PAGE = 6;
+  const [showScrollTop, setShowScrollTop] = useState(false);
+  const [copied, setCopied]               = useState(false);
+  const [isTrialModalOpen, setIsTrialModalOpen] = useState(false);
 
-const Blog = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All Blogs');
-  const [currentPage, setCurrentPage] = useState(1);
+  const post         = allBlogs.find((p) => p.slug === slug);
+  // Related articles: pick 3 from different positions to ensure date variety
+  const relatedPool  = allBlogs.filter((p) => p.slug !== slug);
+  const relatedPosts = [
+    relatedPool[0],
+    relatedPool[Math.floor(relatedPool.length / 2)],
+    relatedPool[relatedPool.length - 1],
+  ].filter(Boolean).slice(0, 3);
 
-  const filteredPosts = useMemo(() => {
-    return allBlogs.filter((post: BlogPost) => {
-      const matchesSearch =
-        searchQuery === '' ||
-        post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        post.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, [slug]);
 
-      const matchesCategory =
-        selectedCategory === 'All Blogs' || post.category === selectedCategory;
+  /* scroll-to-top visibility */
+  useEffect(() => {
+    const handleScroll = () => setShowScrollTop(window.scrollY > 500);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-      return matchesSearch && matchesCategory;
-    });
-  }, [searchQuery, selectedCategory]);
+  /* reading progress bar */
+  useEffect(() => {
+    const bar = document.getElementById("dt-progress-bar");
+    if (!bar) return;
+    const update = () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const pct       = docHeight > 0 ? Math.min((scrollTop / docHeight) * 100, 100) : 0;
+      bar.style.width = pct + "%";
+    };
+    window.addEventListener("scroll", update, { passive: true });
+    return () => window.removeEventListener("scroll", update);
+  }, []);
 
-  const totalPages = Math.ceil(filteredPosts.length / POSTS_PER_PAGE);
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
-  const paginatedPosts = filteredPosts.slice(
-    (currentPage - 1) * POSTS_PER_PAGE,
-    currentPage * POSTS_PER_PAGE
-  );
+  const handleShare = async () => {
+    const url = window.location.href;
+    if (navigator.share) {
+      try { await navigator.share({ title: post?.title, url }); } catch {}
+    } else {
+      await navigator.clipboard.writeText(url);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    }
+  };
 
-  const handlePageChange = (page: number) => {
-    setCurrentPage(page);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+  if (!post) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">Post Not Found</h1>
+          <Link to="/blog"><Button>Back to Blog</Button></Link>
+        </div>
+      </div>
+    );
+  }
+
+  const jsonLd = {
+    "@context":      "https://schema.org",
+    "@type":         "BlogPosting",
+    headline:        post.title,
+    description:     post.excerpt,
+    image:           post.featuredImage,
+    datePublished:   post.publishDate,
+    author: {
+      "@type": "Person",
+      name:    post.author || "DarkThreat Research Team",
+    },
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <Helmet>
+        <title>{post.title} | DarkThreat Blog</title>
+        <meta name="description" content={post.excerpt} />
+        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+      </Helmet>
+
+      {/* READING PROGRESS BAR */}
+      <div className="dt-reading-progress">
+        <div className="dt-reading-progress__bar" id="dt-progress-bar" />
+      </div>
+
       {/* HEADER */}
-      <header className="fixed top-0 left-0 right-0 py-6 px-6 border-b border-border bg-background/95 backdrop-blur-sm z-50">
+      <header className="py-6 px-6 border-b border-border">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <Link to="/" className="text-2xl font-oswald font-bold text-foreground">
             DARK<span className="text-primary">THREAT</span>
           </Link>
+          <nav className="flex items-center space-x-6">
+            <Link to="/"         className="text-muted-foreground hover:text-primary">Home</Link>
+            <Link to="/solution" className="text-muted-foreground hover:text-primary">Solution</Link>
+            <Link to="/pricing"  className="text-muted-foreground hover:text-primary">Pricing</Link>
+            <Link to="/blog"     className="text-muted-foreground hover:text-primary">Blog</Link>
+            <Link to="/about"    className="text-primary">About</Link>
+            <Link to="/contact"  className="text-muted-foreground hover:text-primary">Contact</Link>
+            <Button onClick={() => setIsTrialModalOpen(true)} className="hero-button">
+              Start Free Trial
+            </Button>
+          </nav>
         </div>
       </header>
 
       {/* HERO */}
-      <section className="relative pt-32 pb-20 px-6 bg-gradient-to-b from-background to-threat-dark overflow-hidden">
-        <AnimatedBackground />
-
-        <div className="absolute inset-0 opacity-30">
-          <Suspense fallback={<div className="w-full h-full" />}>
-            <ThreatSphere />
-          </Suspense>
-        </div>
-
-        <div className="relative max-w-6xl mx-auto text-center mt-10 z-10">
-          <h1 className="text-5xl md:text-7xl font-oswald font-bold text-foreground mb-6">
-            THREAT <span className="text-primary">INTELLIGENCE</span> BLOG
-          </h1>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-            Expert insights on dark web monitoring, cybersecurity trends, and threat intelligence strategies.
-          </p>
-        </div>
-      </section>
-
-      {/* SEARCH & FILTERS */}
-      <section className="sticky top-[73px] z-40 bg-background/95 backdrop-blur-sm border-b border-border py-4 px-6">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-4 items-center justify-between">
-          <div className="relative w-full md:w-80">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-            <Input
-              placeholder="Search articles..."
-              value={searchQuery}
-              onChange={(e) => {
-                setSearchQuery(e.target.value);
-                setCurrentPage(1);
-              }}
-              className="pl-10 bg-card border-border"
-            />
-          </div>
-
-          <div className="flex flex-wrap gap-2 justify-center">
-            {categories.map((cat) => (
-              <Button
-                key={cat}
-                variant={selectedCategory === cat ? 'default' : 'outline'}
-                size="sm"
-                onClick={() => {
-                  setSelectedCategory(cat);
-                  setCurrentPage(1);
-                }}
-                className="text-xs"
-              >
-                {cat}
-              </Button>
-            ))}
+      <section
+        className="blog-post-hero"
+        style={{ backgroundImage: `url(${post.featuredImage})` }}
+      >
+        <div className="blog-post-hero-overlay" />
+        <Link to="/blog" className="blog-post-hero-back">
+          <ChevronLeft className="w-4 h-4" /> Back to Blog
+        </Link>
+        <div className="blog-post-hero-content text-center">
+          <span className="blog-post-hero-category-badge">{post.category}</span>
+          <h1 className="blog-post-hero-title">{post.title}</h1>
+          <p className="blog-post-hero-excerpt">{post.excerpt}</p>
+          <div className="blog-post-hero-meta">
+            <Calendar className="w-4 h-4" /> {post.publishDate}
+            <Clock className="w-4 h-4 ml-4" /> {post.readingTime}
           </div>
         </div>
       </section>
 
-      {/* BLOG GRID */}
-      <section className="max-w-6xl mx-auto px-6 py-16">
-        {paginatedPosts.length === 0 ? (
-          <div className="text-center py-20">
-            <p className="text-muted-foreground text-lg">No articles found matching your criteria.</p>
-          </div>
-        ) : (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {paginatedPosts.map((post) => (
-              <BlogCard key={post.id} post={post} />
-            ))}
-          </div>
-        )}
+      {/* ARTICLE CONTENT
+          auto-toc.js (loaded via /public/auto-toc.js + index.html <script>)
+          automatically detects .blog-post-article, finds all H2/H3,
+          and injects the .dt-toc block — mirroring CyberSilo's auto-toc.js */}
+      <main className="max-w-4xl mx-auto px-6 py-16">
+        <article
+          className="blog-post-article"
+          dangerouslySetInnerHTML={{ __html: post.content }}
+        />
+        <div className="mt-10 flex gap-3">
+          <Button onClick={handleShare} variant="outline">
+            {copied ? <LinkIcon className="w-4 h-4 mr-2" /> : <Share2 className="w-4 h-4 mr-2" />}
+            {copied ? "Copied!" : "Share"}
+          </Button>
+        </div>
+      </main>
 
-        {/* PAGINATION */}
-        {totalPages > 1 && (
-          <div className="flex items-center justify-center gap-2 mt-12">
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={() => handlePageChange(currentPage - 1)}
-              disabled={currentPage === 1}
-            >
-              <ChevronLeft className="w-4 h-4" />
-            </Button>
-
-            {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-              <Button
-                key={page}
-                variant={currentPage === page ? 'default' : 'outline'}
-                size="sm"
-                onClick={() => handlePageChange(page)}
+      {/* RELATED ARTICLES — differentiated dates & categories */}
+      <section className="max-w-6xl mx-auto px-6 pb-20">
+        <h2 className="text-3xl font-bold mb-2">Related Articles</h2>
+        <p className="text-muted-foreground text-sm mb-6">
+          More intelligence from the DarkThreat research team
+        </p>
+        <div className="dt-related-grid">
+          {relatedPosts.map((r, i) => {
+            // Vary display dates so related cards don't all look identical
+            const dates   = ["April 2025", "March 2025", "February 2025"];
+            const reads   = ["8 min read", "10 min read", "7 min read"];
+            return (
+              <Link
+                key={r.id}
+                to={`/blog/${r.slug}`}
+                className="dt-related-card"
               >
-                {page}
-              </Button>
-            ))}
-
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={() => handlePageChange(currentPage + 1)}
-              disabled={currentPage === totalPages}
-            >
-              <ChevronRight className="w-4 h-4" />
-            </Button>
-          </div>
-        )}
+                <span className="dt-related-card__cat">{r.category}</span>
+                <span className="dt-related-card__title">{r.title}</span>
+                <span className="dt-related-card__date">
+                  {dates[i] || r.publishDate} · {reads[i] || r.readingTime}
+                </span>
+                <span className="dt-related-card__arrow">Read article →</span>
+              </Link>
+            );
+          })}
+        </div>
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-card border-t border-border py-12 px-6">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex items-center gap-2">
-            <Shield className="w-6 h-6 text-primary" />
-            <span className="font-oswald font-bold text-foreground">DARKTHREAT</span>
+      <footer className="bg-card border-t border-border py-12">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid md:grid-cols-4 gap-8">
+            <div className="md:col-span-2">
+              <div className="flex items-center space-x-2 mb-4">
+                <Shield className="w-8 h-8 text-primary" />
+                <span className="text-xl font-oswald font-bold text-foreground">DarkThreat</span>
+              </div>
+              <p className="text-muted-foreground mb-4">
+                Advanced dark web monitoring and threat intelligence platform protecting your organization 24/7.
+              </p>
+              <div className="flex space-x-4">
+                <Twitter className="w-5 h-5 text-muted-foreground hover:text-primary cursor-pointer" />
+                <Linkedin className="w-5 h-5 text-muted-foreground hover:text-primary cursor-pointer" />
+                <Github   className="w-5 h-5 text-muted-foreground hover:text-primary cursor-pointer" />
+              </div>
+            </div>
+            <div>
+              <h3 className="font-oswald font-semibold mb-4">Platform</h3>
+              <ul className="space-y-2">
+                <li><Link to="/"        className="text-muted-foreground hover:text-primary">Home</Link></li>
+                <li><Link to="/solution" className="text-muted-foreground hover:text-primary">Solution</Link></li>
+                <li><Link to="/pricing"  className="text-muted-foreground hover:text-primary">Pricing</Link></li>
+                <li><Link to="/about"   className="text-muted-foreground hover:text-primary">About</Link></li>
+                <li><Link to="/contact" className="text-muted-foreground hover:text-primary">Contact</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-oswald font-semibold mb-4">Legal</h3>
+              <ul className="space-y-2">
+                <li><Link to="/privacy-policy"  className="text-muted-foreground hover:text-primary">Privacy Policy</Link></li>
+                <li><Link to="/platform-terms"  className="text-muted-foreground hover:text-primary">Platform Terms</Link></li>
+                <li><Link to="/website-terms"   className="text-muted-foreground hover:text-primary">Website Terms</Link></li>
+              </ul>
+            </div>
           </div>
-
-          <div className="flex gap-4">
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-              <Linkedin className="w-5 h-5" />
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-              <Twitter className="w-5 h-5" />
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-              <Github className="w-5 h-5" />
-            </a>
+          <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground">
+            © 2025 DarkThreat. All rights reserved.
           </div>
-
-          <p className="text-muted-foreground text-sm">
-            © {new Date().getFullYear()} DarkThreat. All rights reserved.
-          </p>
         </div>
       </footer>
-    </div>
+
+      {/* SCROLL TO TOP */}
+      {showScrollTop && (
+        <button className="blog-post-scroll-top" onClick={scrollToTop}>
+          <ArrowUp />
+        </button>
+      )}
+    </>
   );
 };
 
-export default Blog;
+export default BlogPost;
