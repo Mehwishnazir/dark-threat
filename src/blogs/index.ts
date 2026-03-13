@@ -56,7 +56,7 @@ import { darkwebmonitoringhowtospotpotentialcyberattackers } from "./dark-web-mo
 import { howdarkwebmonitoringhelpsyoudetecthackersinrealtime } from "./how-dark-web-monitoring-helps-you-detect-hackers-in-real-time";
 import { trackingcybercriminalshowdarkwebmonitoringhelpsyoustaysafe } from "./tracking-cybercriminals-how-dark-web-monitoring-helps-you-stay-safe";
 import { howdarkwebmonitoringtoolsidentifythreatactormovements } from "./how-dark-web-monitoring-tools-identify-threat-actor-movements";
-import { theimportanceofmonitoringdarkweb hackersplans } from "./the-importance-of-monitoring-dark-web-hackers-plans";
+import { theimportanceofmonitoringdarkwebhackersplans } from "./the-importance-of-monitoring-dark-web-hackers-plans";
 import { howtoprotectyourcompanysassetsbymonitoringhackeractivity } from "./how-to-protect-your-companys-assets-by-monitoring-hacker-activity";
 
 export const allBlogs = [
