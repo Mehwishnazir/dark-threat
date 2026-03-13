@@ -109,7 +109,7 @@ export const allBlogs = [
   whyhackeractivityonthedarkwebmattersforbusinesses,
   monitoringhackerforumstodetectattackplansearly,
   howtospotahackbeforeithappensusingdarkwebintelligence,
-  theroledarkwebmonitoringindetectingattackplans,
+  theroleofdarkwebmonitoringindetectingattackplans,
   howtodetectadvancedpersistentthreatsaptonthedarkweb,
   usingdarkwebintelligencetostayonestepaheadofhackers,
   whydarkwebsurveillanceiskeyforpreventingdatatheft,
