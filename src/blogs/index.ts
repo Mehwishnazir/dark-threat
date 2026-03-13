@@ -47,7 +47,7 @@ import { howtodetectcyberattackplanningthroughdarkwebmonitoring } from "./how-to
 import { whyhackeractivityonthedarkwebmattersforbusinesses } from "./why-hacker-activity-on-the-dark-web-matters-for-businesses";
 import { monitoringhackerforumstodetectattackplansearly } from "./monitoring-hacker-forums-to-detect-attack-plans-early";
 import { howtospotahackbeforeithappensusingdarkwebintelligence } from "./how-to-spot-a-hack-before-it-happens-using-dark-web-intelligence";
-import { theroledarkwebmonitoringindetectingattackplans } from "./the-role-of-dark-web-monitoring-in-detecting-attack-plans";
+import { theroleofdarkwebmonitoringindetectingattackplans } from "./the-role-of-dark-web-monitoring-in-detecting-attack-plans";
 import { howtodetectadvancedpersistentthreatsaptonthedarkweb } from "./how-to-detect-advanced-persistent-threats-apt-on-the-dark-web";
 import { usingdarkwebintelligencetostayonestepaheadofhackers } from "./using-dark-web-intelligence-to-stay-one-step-ahead-of-hackers";
 import { whydarkwebsurveillanceiskeyforpreventingdatatheft } from "./why-dark-web-surveillance-is-key-for-preventing-data-theft";
