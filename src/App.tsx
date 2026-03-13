@@ -24,7 +24,7 @@ import Contact from "./pages/Contact";
 import TrialComingSoon from "./pages/TrialComingSoon";
 import Auth from "./pages/Auth";
 import AdminDashboard from "./pages/AdminDashboard";
-import SetupAdminPage from "./pages/SetupAdminPage";
+
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 
