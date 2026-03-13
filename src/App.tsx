@@ -56,7 +56,7 @@ const App = () => (
             <Route path="/trial-coming-soon" element={<TrialComingSoon />} />
             <Route path="/auth" element={<Auth />} />
             <Route path="/admin" element={<AdminDashboard />} />
-            <Route path="/setup-admin" element={<SetupAdminPage />} />
+            
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
