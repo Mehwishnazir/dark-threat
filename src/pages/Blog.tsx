@@ -1,326 +1,197 @@
-import { useState, useMemo } from "react";
-import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
-import { Button } from "@/components/ui/button";
-import { Shield, Linkedin, Twitter, Github, Search, X } from "lucide-react";
-import BlogCard from "@/components/blog/BlogCard";
-import { allBlogs } from "@/blogs";
-import "./blog.css";
- 
-const CATEGORIES = ["All", "Threat Intelligence", "Cybersecurity"];
-const PAGE_SIZE = 12;
- 
+import { useState, useMemo, Suspense } from 'react';
+import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Shield, Linkedin, Twitter, Github, ChevronLeft, ChevronRight, Search } from 'lucide-react';
+import BlogCard, { type BlogPost } from '@/components/blog/BlogCard';
+import AnimatedBackground from '@/components/AnimatedBackground';
+import ThreatSphere from '@/components/ThreatSphere';
+import { allBlogs } from '@/blogs';
+
+const categories = [
+  'All Blogs',
+  'Threat Intelligence',
+  'Security',
+  'Research',
+  'Best Practices',
+  'Cybersecurity',
+];
+
+const POSTS_PER_PAGE = 6;
+
 const Blog = () => {
-  const [search, setSearch]     = useState("");
-  const [category, setCategory] = useState("All");
-  const [page, setPage]         = useState(1);
-  const [isTrialModalOpen, setIsTrialModalOpen] = useState(false);
- 
-  const filtered = useMemo(() => {
-    return allBlogs.filter((p) => {
-      const matchesCat = category === "All" || p.category === category;
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All Blogs');
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const filteredPosts = useMemo(() => {
+    return allBlogs.filter((post: BlogPost) => {
       const matchesSearch =
-        !search ||
-        p.title.toLowerCase().includes(search.toLowerCase()) ||
-        p.excerpt.toLowerCase().includes(search.toLowerCase());
-      return matchesCat && matchesSearch;
+        searchQuery === '' ||
+        post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        post.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
+
+      const matchesCategory =
+        selectedCategory === 'All Blogs' || post.category === selectedCategory;
+
+      return matchesSearch && matchesCategory;
     });
-  }, [search, category]);
- 
-  const totalPages = Math.ceil(filtered.length / PAGE_SIZE);
-  const paginated  = filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
- 
-  const handleSearch = (val: string) => {
-    setSearch(val);
-    setPage(1);
+  }, [searchQuery, selectedCategory]);
+
+  const totalPages = Math.ceil(filteredPosts.length / POSTS_PER_PAGE);
+
+  const paginatedPosts = filteredPosts.slice(
+    (currentPage - 1) * POSTS_PER_PAGE,
+    currentPage * POSTS_PER_PAGE
+  );
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
- 
-  const handleCategory = (cat: string) => {
-    setCategory(cat);
-    setPage(1);
-  };
- 
+
   return (
-    <>
-      <Helmet>
-        <title>Blog | DarkThreat — Dark Web Monitoring Insights</title>
-        <meta
-          name="description"
-          content="Expert articles on dark web monitoring, threat intelligence, credential leak detection, and cybersecurity best practices."
-        />
-      </Helmet>
- 
+    <div className="min-h-screen bg-background">
       {/* HEADER */}
-      <header className="py-6 px-6 border-b border-border">
+      <header className="fixed top-0 left-0 right-0 py-6 px-6 border-b border-border bg-background/95 backdrop-blur-sm z-50">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <Link to="/" className="text-2xl font-oswald font-bold text-foreground">
             DARK<span className="text-primary">THREAT</span>
           </Link>
-          <nav className="flex items-center space-x-6">
-            <Link to="/"         className="text-muted-foreground hover:text-primary">Home</Link>
-            <Link to="/solution" className="text-muted-foreground hover:text-primary">Solution</Link>
-            <Link to="/pricing"  className="text-muted-foreground hover:text-primary">Pricing</Link>
-            <Link to="/blog"     className="text-primary font-semibold">Blog</Link>
-            <Link to="/about"    className="text-muted-foreground hover:text-primary">About</Link>
-            <Link to="/contact"  className="text-muted-foreground hover:text-primary">Contact</Link>
-            <Button onClick={() => setIsTrialModalOpen(true)} className="hero-button">
-              Start Free Trial
-            </Button>
-          </nav>
         </div>
       </header>
- 
+
       {/* HERO */}
-      <section
-        style={{
-          background:
-            "linear-gradient(135deg, hsl(var(--background)) 0%, hsl(0 0% 6%) 50%, hsl(0 60% 5%) 100%)",
-          padding: "5rem 1.5rem 4rem",
-          textAlign: "center",
-          borderBottom: "1px solid hsl(var(--border))",
-          position: "relative",
-          overflow: "hidden",
-        }}
-      >
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            backgroundImage:
-              "linear-gradient(rgba(255,255,255,.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.02) 1px, transparent 1px)",
-            backgroundSize: "36px 36px",
-            pointerEvents: "none",
-          }}
-        />
-        <div style={{ position: "relative", zIndex: 1 }}>
-          <span
-            style={{
-              display: "inline-block",
-              padding: ".4rem 1.25rem",
-              background: "rgba(255,0,0,.12)",
-              color: "hsl(var(--primary))",
-              fontSize: ".72rem",
-              fontWeight: 700,
-              textTransform: "uppercase",
-              letterSpacing: ".12em",
-              borderRadius: "9999px",
-              border: "1px solid rgba(255,0,0,.3)",
-              marginBottom: "1.25rem",
-            }}
-          >
-            DarkThreat Intelligence Hub
-          </span>
-          <h1
-            style={{
-              fontFamily: "'Oswald', sans-serif",
-              fontSize: "clamp(2rem, 5vw, 3.5rem)",
-              fontWeight: 700,
-              color: "hsl(var(--foreground))",
-              marginBottom: "1rem",
-              lineHeight: 1.1,
-            }}
-          >
-            DARK WEB SECURITY BLOG
+      <section className="relative pt-32 pb-20 px-6 bg-gradient-to-b from-background to-threat-dark overflow-hidden">
+        <AnimatedBackground />
+
+        <div className="absolute inset-0 opacity-30">
+          <Suspense fallback={<div className="w-full h-full" />}>
+            <ThreatSphere />
+          </Suspense>
+        </div>
+
+        <div className="relative max-w-6xl mx-auto text-center mt-10 z-10">
+          <h1 className="text-5xl md:text-7xl font-oswald font-bold text-foreground mb-6">
+            THREAT <span className="text-primary">INTELLIGENCE</span> BLOG
           </h1>
-          <p
-            style={{
-              color: "hsl(var(--muted-foreground))",
-              fontSize: "1.05rem",
-              maxWidth: "560px",
-              margin: "0 auto 2rem",
-              lineHeight: 1.75,
-            }}
-          >
-            Expert insights on dark web monitoring, threat intelligence, credential leaks, and protecting your business from cybercriminals.
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+            Expert insights on dark web monitoring, cybersecurity trends, and threat intelligence strategies.
           </p>
- 
-          {/* Search bar */}
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              maxWidth: "480px",
-              margin: "0 auto",
-              background: "hsl(var(--card))",
-              border: "1px solid hsl(var(--border))",
-              borderRadius: ".65rem",
-              padding: ".5rem .75rem",
-              gap: ".5rem",
-            }}
-          >
-            <Search style={{ width: 18, height: 18, color: "hsl(var(--muted-foreground))", flexShrink: 0 }} />
-            <input
-              type="text"
+        </div>
+      </section>
+
+      {/* SEARCH & FILTERS */}
+      <section className="sticky top-[73px] z-40 bg-background/95 backdrop-blur-sm border-b border-border py-4 px-6">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-4 items-center justify-between">
+          <div className="relative w-full md:w-80">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+            <Input
               placeholder="Search articles..."
-              value={search}
-              onChange={(e) => handleSearch(e.target.value)}
-              style={{
-                flex: 1,
-                background: "transparent",
-                border: "none",
-                outline: "none",
-                color: "hsl(var(--foreground))",
-                fontSize: ".9rem",
+              value={searchQuery}
+              onChange={(e) => {
+                setSearchQuery(e.target.value);
+                setCurrentPage(1);
               }}
+              className="pl-10 bg-card border-border"
             />
-            {search && (
-              <button
-                onClick={() => handleSearch("")}
-                style={{ background: "none", border: "none", cursor: "pointer", color: "hsl(var(--muted-foreground))", lineHeight: 0 }}
+          </div>
+
+          <div className="flex flex-wrap gap-2 justify-center">
+            {categories.map((cat) => (
+              <Button
+                key={cat}
+                variant={selectedCategory === cat ? 'default' : 'outline'}
+                size="sm"
+                onClick={() => {
+                  setSelectedCategory(cat);
+                  setCurrentPage(1);
+                }}
+                className="text-xs"
               >
-                <X style={{ width: 15, height: 15 }} />
-              </button>
-            )}
+                {cat}
+              </Button>
+            ))}
           </div>
         </div>
       </section>
- 
-      {/* FILTERS + COUNT */}
-      <div className="max-w-6xl mx-auto px-6 py-6 flex flex-wrap items-center justify-between gap-4">
-        <div style={{ display: "flex", gap: ".5rem", flexWrap: "wrap" }}>
-          {CATEGORIES.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => handleCategory(cat)}
-              style={{
-                padding: ".4rem 1rem",
-                borderRadius: "9999px",
-                border: `1px solid ${category === cat ? "hsl(var(--primary))" : "hsl(var(--border))"}`,
-                background: category === cat ? "rgba(255,0,0,.12)" : "transparent",
-                color: category === cat ? "hsl(var(--primary))" : "hsl(var(--muted-foreground))",
-                fontWeight: category === cat ? 700 : 400,
-                fontSize: ".82rem",
-                cursor: "pointer",
-                transition: "all .15s",
-              }}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
-        <span style={{ fontSize: ".82rem", color: "hsl(var(--muted-foreground))" }}>
-          {filtered.length} article{filtered.length !== 1 ? "s" : ""}
-        </span>
-      </div>
- 
-      {/* GRID */}
-      <main className="max-w-6xl mx-auto px-6 pb-20">
-        {paginated.length === 0 ? (
-          <div style={{ textAlign: "center", padding: "5rem 0", color: "hsl(var(--muted-foreground))" }}>
-            <p style={{ fontSize: "1.1rem" }}>No articles found for your search.</p>
-            <button
-              onClick={() => { setSearch(""); setCategory("All"); }}
-              style={{ marginTop: "1rem", color: "hsl(var(--primary))", background: "none", border: "none", cursor: "pointer", fontWeight: 600 }}
-            >
-              Clear filters
-            </button>
+
+      {/* BLOG GRID */}
+      <section className="max-w-6xl mx-auto px-6 py-16">
+        {paginatedPosts.length === 0 ? (
+          <div className="text-center py-20">
+            <p className="text-muted-foreground text-lg">No articles found matching your criteria.</p>
           </div>
         ) : (
-          <div className="grid md:grid-cols-3 gap-6">
-            {paginated.map((post) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {paginatedPosts.map((post) => (
               <BlogCard key={post.id} post={post} />
             ))}
           </div>
         )}
- 
+
         {/* PAGINATION */}
         {totalPages > 1 && (
-          <div style={{ display: "flex", justifyContent: "center", gap: ".5rem", marginTop: "3rem", flexWrap: "wrap" }}>
-            <button
-              disabled={page === 1}
-              onClick={() => setPage((p) => p - 1)}
-              style={{
-                padding: ".45rem 1rem",
-                borderRadius: ".45rem",
-                border: "1px solid hsl(var(--border))",
-                background: "transparent",
-                color: page === 1 ? "hsl(var(--muted-foreground))" : "hsl(var(--foreground))",
-                cursor: page === 1 ? "not-allowed" : "pointer",
-                fontSize: ".85rem",
-              }}
+          <div className="flex items-center justify-center gap-2 mt-12">
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={() => handlePageChange(currentPage - 1)}
+              disabled={currentPage === 1}
             >
-              Prev
-            </button>
-            {Array.from({ length: totalPages }, (_, i) => i + 1).map((n) => (
-              <button
-                key={n}
-                onClick={() => setPage(n)}
-                style={{
-                  padding: ".45rem .85rem",
-                  borderRadius: ".45rem",
-                  border: `1px solid ${n === page ? "hsl(var(--primary))" : "hsl(var(--border))"}`,
-                  background: n === page ? "rgba(255,0,0,.12)" : "transparent",
-                  color: n === page ? "hsl(var(--primary))" : "hsl(var(--muted-foreground))",
-                  fontWeight: n === page ? 700 : 400,
-                  cursor: "pointer",
-                  fontSize: ".85rem",
-                }}
+              <ChevronLeft className="w-4 h-4" />
+            </Button>
+
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+              <Button
+                key={page}
+                variant={currentPage === page ? 'default' : 'outline'}
+                size="sm"
+                onClick={() => handlePageChange(page)}
               >
-                {n}
-              </button>
+                {page}
+              </Button>
             ))}
-            <button
-              disabled={page === totalPages}
-              onClick={() => setPage((p) => p + 1)}
-              style={{
-                padding: ".45rem 1rem",
-                borderRadius: ".45rem",
-                border: "1px solid hsl(var(--border))",
-                background: "transparent",
-                color: page === totalPages ? "hsl(var(--muted-foreground))" : "hsl(var(--foreground))",
-                cursor: page === totalPages ? "not-allowed" : "pointer",
-                fontSize: ".85rem",
-              }}
+
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={() => handlePageChange(currentPage + 1)}
+              disabled={currentPage === totalPages}
             >
-              Next
-            </button>
+              <ChevronRight className="w-4 h-4" />
+            </Button>
           </div>
         )}
-      </main>
- 
+      </section>
+
       {/* FOOTER */}
-      <footer className="bg-card border-t border-border py-12">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="md:col-span-2">
-              <div className="flex items-center space-x-2 mb-4">
-                <Shield className="w-8 h-8 text-primary" />
-                <span className="text-xl font-oswald font-bold text-foreground">DarkThreat</span>
-              </div>
-              <p className="text-muted-foreground mb-4">
-                Advanced dark web monitoring and threat intelligence platform protecting your organization 24/7.
-              </p>
-              <div className="flex space-x-4">
-                <Twitter className="w-5 h-5 text-muted-foreground hover:text-primary cursor-pointer" />
-                <Linkedin className="w-5 h-5 text-muted-foreground hover:text-primary cursor-pointer" />
-                <Github   className="w-5 h-5 text-muted-foreground hover:text-primary cursor-pointer" />
-              </div>
-            </div>
-            <div>
-              <h3 className="font-oswald font-semibold mb-4">Platform</h3>
-              <ul className="space-y-2">
-                <li><Link to="/"         className="text-muted-foreground hover:text-primary">Home</Link></li>
-                <li><Link to="/solution" className="text-muted-foreground hover:text-primary">Solution</Link></li>
-                <li><Link to="/pricing"  className="text-muted-foreground hover:text-primary">Pricing</Link></li>
-                <li><Link to="/about"    className="text-muted-foreground hover:text-primary">About</Link></li>
-                <li><Link to="/contact"  className="text-muted-foreground hover:text-primary">Contact</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-oswald font-semibold mb-4">Legal</h3>
-              <ul className="space-y-2">
-                <li><Link to="/privacy-policy"  className="text-muted-foreground hover:text-primary">Privacy Policy</Link></li>
-                <li><Link to="/platform-terms"  className="text-muted-foreground hover:text-primary">Platform Terms</Link></li>
-                <li><Link to="/website-terms"   className="text-muted-foreground hover:text-primary">Website Terms</Link></li>
-              </ul>
-            </div>
+      <footer className="bg-card border-t border-border py-12 px-6">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="flex items-center gap-2">
+            <Shield className="w-6 h-6 text-primary" />
+            <span className="font-oswald font-bold text-foreground">DARKTHREAT</span>
           </div>
-          <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground">
-            © 2025 DarkThreat. All rights reserved.
+
+          <div className="flex gap-4">
+            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <Linkedin className="w-5 h-5" />
+            </a>
+            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <Twitter className="w-5 h-5" />
+            </a>
+            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <Github className="w-5 h-5" />
+            </a>
           </div>
+
+          <p className="text-muted-foreground text-sm">
+            © {new Date().getFullYear()} DarkThreat. All rights reserved.
+          </p>
         </div>
       </footer>
-    </>
+    </div>
   );
 };
- 
+
+export default Blog;
