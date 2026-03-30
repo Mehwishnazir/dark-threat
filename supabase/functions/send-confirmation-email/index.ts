@@ -34,7 +34,6 @@ const isValidRedirectUrl = (url: string): boolean => {
     const allowedDomains = [
       'darkthreat-ai-main-website.lovable.app',
       'jfbisirfpbhkcskwaaov.supabase.co',
-      'localhost'
     ];
     return parsed.protocol === 'https:' && 
            allowedDomains.some(domain => parsed.hostname === domain || parsed.hostname.endsWith('.' + domain));
