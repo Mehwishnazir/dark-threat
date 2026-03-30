@@ -235,7 +235,7 @@ const handler = async (req: Request): Promise<Response> => {
       },
       body: JSON.stringify({
         from: "DarkThreat System <noreply@resend.dev>",
-        to: ['admin@darkthreat.com'],
+        to: [Deno.env.get('ADMIN_NOTIFICATION_EMAIL') ?? 'admin@darkthreat.com'],
         subject: '🎯 New User Account Activated',
         html: `
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
