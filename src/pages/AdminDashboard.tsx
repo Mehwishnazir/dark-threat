@@ -178,7 +178,7 @@ export default function AdminDashboard() {
     <div className="min-h-screen bg-background">
       <header className="border-b bg-card">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-oswald font-bold">DarkThreat Admin Dashboard</h1>
+          <h1 className="text-2xl font-montserrat font-bold">DarkThreat Admin Dashboard</h1>
           <Button onClick={handleSignOut} variant="outline" size="sm">
             <LogOut className="w-4 h-4 mr-2" />
             Sign Out

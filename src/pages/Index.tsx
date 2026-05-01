@@ -28,7 +28,7 @@ const Index = () => {
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 py-6 px-6 border-b border-border bg-background/95 backdrop-blur-sm z-50">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
-          <div className="text-2xl font-oswald font-bold text-foreground">
+          <div className="text-2xl font-montserrat font-bold text-foreground">
             DARK<span className="text-primary">THREAT</span>
           </div>
           <nav className="flex items-center space-x-6">
@@ -73,7 +73,7 @@ const Index = () => {
         </div>
 
         <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
-          <h1 className="text-6xl md:text-8xl font-oswald font-bold text-foreground mb-6">
+          <h1 className="text-6xl md:text-8xl font-montserrat font-bold text-foreground mb-6">
             DARK<span className="glow-text">THREAT</span>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-4">
@@ -113,7 +113,7 @@ const Index = () => {
       <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-oswald font-bold text-foreground mb-4">
+            <h2 className="text-4xl font-montserrat font-bold text-foreground mb-4">
               The Dark Web Threat Landscape
             </h2>
             <p className="text-lg text-muted-foreground">
@@ -148,7 +148,7 @@ const Index = () => {
       <section className="py-20 px-6 bg-gradient-to-b from-background to-threat-dark">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-oswald font-bold text-foreground mb-4">
+            <h2 className="text-4xl font-montserrat font-bold text-foreground mb-4">
               Comprehensive Dark Web Monitoring
             </h2>
             <p className="text-lg text-muted-foreground">
@@ -204,7 +204,7 @@ const Index = () => {
       <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl  font-oswald font-bold text-foreground mb-4">
+            <h2 className="text-4xl  font-montserrat font-bold text-foreground mb-4">
               Dark Web Monitoring Pricing
             </h2>
             <p className="text-lg text-muted-foreground">
@@ -217,14 +217,14 @@ const Index = () => {
             <div className="bg-muted rounded-full p-1 flex">
               <button
                 onClick={() => setIsAnnual(false)}
-                className={`px-6 py-2 text-sm font-oswald font-semibold rounded-full transition-colors ${!isAnnual ? 'bg-primary text-black' : 'text-muted-foreground'
+                className={`px-6 py-2 text-sm font-montserrat font-semibold rounded-full transition-colors ${!isAnnual ? 'bg-primary text-black' : 'text-muted-foreground'
                   }`}
               >
                 Monthly
               </button>
               <button
                 onClick={() => setIsAnnual(true)}
-                className={`px-6 py-2 text-sm font-oswald font-semibold rounded-full transition-colors ${isAnnual ? 'bg-primary text-black' : 'text-muted-foreground'
+                className={`px-6 py-2 text-sm font-montserrat font-semibold rounded-full transition-colors ${isAnnual ? 'bg-primary text-black' : 'text-muted-foreground'
                   }`}
               >
                 Annual
@@ -304,7 +304,7 @@ const Index = () => {
       <section className="py-20 px-6 bg-threat-dark ">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-oswald font-bold text-foreground mb-4">
+            <h2 className="text-4xl font-montserrat font-bold text-foreground mb-4">
               Why Choose <span className="glow-text">Dark Threat?</span>
             </h2>
             <p className="text-lg text-muted-foreground">
@@ -319,7 +319,7 @@ const Index = () => {
       <FAQ />
 
       <div className="text-center mt-12 mb-10">
-        <h2 className="text-4xl font-oswald font-bold text-foreground mb-4">
+        <h2 className="text-4xl font-montserrat font-bold text-foreground mb-4">
           Let's <span className="glow-text">Connect</span> With Us
         </h2>
         <p className="text-lg text-muted-foreground mb-6">
@@ -340,7 +340,7 @@ const Index = () => {
             <div className="col-span-1 md:col-span-2">
               <div className="flex items-center space-x-2 mb-4">
                 <Shield className="w-8 h-8 text-primary" />
-                <span className="text-xl font-oswald font-bold text-foreground">DarkThreat</span>
+                <span className="text-xl font-montserrat font-bold text-foreground">DarkThreat</span>
               </div>
               <p className="text-muted-foreground mb-4">
                 Advanced dark web monitoring and threat intelligence platform protecting your organization 24/7.
@@ -358,7 +358,7 @@ const Index = () => {
               </div>
             </div>
             <div>
-              <h3 className="font-oswald font-semibold text-foreground mb-4">Platform</h3>
+              <h3 className="font-montserrat font-semibold text-foreground mb-4">Platform</h3>
               <ul className="space-y-2">
                 <li><Link to="/" className="text-muted-foreground hover:text-primary">Home</Link></li>
                 <li><Link to="/solution" className="text-muted-foreground hover:text-primary">Solution</Link></li>
@@ -369,7 +369,7 @@ const Index = () => {
               </ul>
             </div>
             <div>
-              <h3 className="font-oswald font-semibold text-foreground mb-4">Legal</h3>
+              <h3 className="font-montserrat font-semibold text-foreground mb-4">Legal</h3>
               <ul className="space-y-2">
                 <li><Link to="/privacy-policy" className="text-muted-foreground hover:text-primary">Privacy Policy</Link></li>
                 <li><Link to="/platform-terms" className="text-muted-foreground hover:text-primary">Platform Terms of Use</Link></li>

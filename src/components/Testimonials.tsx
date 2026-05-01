@@ -38,7 +38,7 @@ const Testimonials = () => {
     <section className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl  font-oswald font-bold text-foreground mb-4">
+          <h2 className="text-4xl  font-montserrat font-bold text-foreground mb-4">
             <span className="glow-text">Our Customers</span> Say It Best
           </h2>
         </div>
@@ -61,7 +61,7 @@ const Testimonials = () => {
 
                   {/* Role & Company */}
                   <div>
-                    <h3 className="font-oswald font-bold text-foreground text-lg">
+                    <h3 className="font-montserrat font-bold text-foreground text-lg">
                       {testimonial.role}, {testimonial.company}
                     </h3>
                   </div>

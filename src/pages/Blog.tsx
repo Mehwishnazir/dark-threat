@@ -55,7 +55,7 @@ const Blog = () => {
       {/* HEADER */}
       <header className="fixed top-0 left-0 right-0 py-6 px-6 border-b border-border bg-background/95 backdrop-blur-sm z-50">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
-          <Link to="/" className="text-2xl font-oswald font-bold text-foreground">
+          <Link to="/" className="text-2xl font-montserrat font-bold text-foreground">
             DARK<span className="text-primary">THREAT</span>
           </Link>
         </div>
@@ -72,7 +72,7 @@ const Blog = () => {
         </div>
 
         <div className="relative max-w-6xl mx-auto text-center mt-10 z-10">
-          <h1 className="text-5xl md:text-7xl font-oswald font-bold text-foreground mb-6">
+          <h1 className="text-5xl md:text-7xl font-montserrat font-bold text-foreground mb-6">
             THREAT <span className="text-primary">INTELLIGENCE</span> BLOG
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -170,7 +170,7 @@ const Blog = () => {
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-2">
             <Shield className="w-6 h-6 text-primary" />
-            <span className="font-oswald font-bold text-foreground">DARKTHREAT</span>
+            <span className="font-montserrat font-bold text-foreground">DARKTHREAT</span>
           </div>
 
           <div className="flex gap-4">

@@ -19,8 +19,11 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				oswald: ['Oswald', 'sans-serif'],
-				roboto: ['Roboto', 'sans-serif'],
+				montserrat: ['Montserrat', 'sans-serif'],
+				kumbh: ['Kumbh Sans', 'sans-serif'],
+				// Backwards-compat aliases
+				oswald: ['Montserrat', 'sans-serif'],
+				roboto: ['Kumbh Sans', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',

@@ -151,7 +151,7 @@ export default function Auth() {
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5 flex items-center justify-center p-4">
       <Card className="w-full max-w-md">
         <CardHeader className="text-center">
-          <CardTitle className="text-2xl font-oswald">DarkThreat</CardTitle>
+          <CardTitle className="text-2xl font-montserrat">DarkThreat</CardTitle>
           <CardDescription>Access your cybersecurity intelligence platform</CardDescription>
         </CardHeader>
         <CardContent>

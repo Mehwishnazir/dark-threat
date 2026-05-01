@@ -26,7 +26,7 @@ const BlogSidebar = ({
     <aside className="space-y-8">
       {/* Search */}
       <div className="bg-card border border-border rounded-lg p-5">
-        <h3 className="font-oswald font-bold text-foreground mb-4 uppercase tracking-wide text-sm">
+        <h3 className="font-montserrat font-bold text-foreground mb-4 uppercase tracking-wide text-sm">
           Search
         </h3>
         <div className="relative">
@@ -43,7 +43,7 @@ const BlogSidebar = ({
 
       {/* Categories */}
       <div className="bg-card border border-border rounded-lg p-5">
-        <h3 className="font-oswald font-bold text-foreground mb-4 uppercase tracking-wide text-sm">
+        <h3 className="font-montserrat font-bold text-foreground mb-4 uppercase tracking-wide text-sm">
           Categories
         </h3>
         <ul className="space-y-2">
@@ -83,7 +83,7 @@ const BlogSidebar = ({
 
       {/* Recent Posts */}
       <div className="bg-card border border-border rounded-lg p-5">
-        <h3 className="font-oswald font-bold text-foreground mb-4 uppercase tracking-wide text-sm">
+        <h3 className="font-montserrat font-bold text-foreground mb-4 uppercase tracking-wide text-sm">
           Recent Posts
         </h3>
         <ul className="space-y-4">

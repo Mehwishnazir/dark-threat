@@ -15,7 +15,7 @@ const Pricing = () => {
       {/* Header */}
       <header className="py-6 px-6 border-b border-border">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
-          <Link to="/" className="text-2xl font-oswald font-bold text-foreground">
+          <Link to="/" className="text-2xl font-montserrat font-bold text-foreground">
             DARK<span className="text-primary">THREAT</span>
           </Link>
           <nav className="flex items-center space-x-6">
@@ -51,7 +51,7 @@ const Pricing = () => {
       <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-oswald font-bold text-foreground mb-6">
+            <h1 className="text-5xl md:text-6xl font-montserrat font-bold text-foreground mb-6">
               Dark Web Monitoring <span className="text-primary">Pricing</span>
             </h1>
             <p className="text-lg text-muted-foreground">
@@ -64,14 +64,14 @@ const Pricing = () => {
             <div className="bg-muted rounded-full p-1 flex">
               <button
                 onClick={() => setIsAnnual(false)}
-                className={`px-6 py-2 text-sm font-oswald font-semibold rounded-full transition-colors ${!isAnnual ? 'bg-primary text-black' : 'text-muted-foreground'
+                className={`px-6 py-2 text-sm font-montserrat font-semibold rounded-full transition-colors ${!isAnnual ? 'bg-primary text-black' : 'text-muted-foreground'
                   }`}
               >
                 Monthly
               </button>
               <button
                 onClick={() => setIsAnnual(true)}
-                className={`px-6 py-2 text-sm font-oswald font-semibold rounded-full transition-colors ${isAnnual ? 'bg-primary text-black' : 'text-muted-foreground'
+                className={`px-6 py-2 text-sm font-montserrat font-semibold rounded-full transition-colors ${isAnnual ? 'bg-primary text-black' : 'text-muted-foreground'
                   }`}
               >
                 Annual
@@ -151,7 +151,7 @@ const Pricing = () => {
       <section className="py-20 px-6 bg-gradient-to-b from-background to-muted/20">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-oswald font-bold text-foreground mb-4">
+            <h2 className="text-4xl font-montserrat font-bold text-foreground mb-4">
               Pricing <span className="text-primary">Platform</span>
             </h2>
             <p className="text-lg text-muted-foreground">
@@ -162,17 +162,17 @@ const Pricing = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             <div className="threat-card text-center">
               <Shield className="w-12 h-12 text-primary mx-auto mb-4" />
-              <h3 className="text-xl font-oswald font-semibold mb-2">Scalable Solutions</h3>
+              <h3 className="text-xl font-montserrat font-semibold mb-2">Scalable Solutions</h3>
               <p className="text-muted-foreground">Plans that grow with your business needs and security requirements</p>
             </div>
             <div className="threat-card text-center">
               <Shield className="w-12 h-12 text-primary mx-auto mb-4" />
-              <h3 className="text-xl font-oswald font-semibold mb-2">Transparent Pricing</h3>
+              <h3 className="text-xl font-montserrat font-semibold mb-2">Transparent Pricing</h3>
               <p className="text-muted-foreground">No hidden fees or surprise charges. What you see is what you pay</p>
             </div>
             <div className="threat-card text-center">
               <Shield className="w-12 h-12 text-primary mx-auto mb-4" />
-              <h3 className="text-xl font-oswald font-semibold mb-2">Enterprise Ready</h3>
+              <h3 className="text-xl font-montserrat font-semibold mb-2">Enterprise Ready</h3>
               <p className="text-muted-foreground">Custom solutions for large organizations and MSSP partners</p>
             </div>
           </div>
@@ -183,7 +183,7 @@ const Pricing = () => {
       <section className="py-20 px-6 bg-gradient-to-b from-background to-threat-dark">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-oswald font-bold text-foreground mb-4">
+            <h2 className="text-4xl font-montserrat font-bold text-foreground mb-4">
               Why Choose DarkThreat?
             </h2>
             <p className="text-lg text-muted-foreground">
@@ -207,7 +207,7 @@ const Pricing = () => {
             <div className="col-span-1 md:col-span-2">
               <div className="flex items-center space-x-2 mb-4">
                 <Shield className="w-8 h-8 text-primary" />
-                <span className="text-xl font-oswald font-bold text-foreground">DarkThreat</span>
+                <span className="text-xl font-montserrat font-bold text-foreground">DarkThreat</span>
               </div>
               <p className="text-muted-foreground mb-4">
                 Advanced dark web monitoring and threat intelligence platform protecting your organization 24/7.
@@ -225,7 +225,7 @@ const Pricing = () => {
               </div>
             </div>
             <div>
-              <h3 className="font-oswald font-semibold text-foreground mb-4">Platform</h3>
+              <h3 className="font-montserrat font-semibold text-foreground mb-4">Platform</h3>
               <ul className="space-y-2">
                 <li><Link to="/" className="text-muted-foreground hover:text-primary">Home</Link></li>
                 <li><Link to="/solution" className="text-muted-foreground hover:text-primary">Solution</Link></li>
@@ -235,7 +235,7 @@ const Pricing = () => {
               </ul>
             </div>
             <div>
-              <h3 className="font-oswald font-semibold text-foreground mb-4">Legal</h3>
+              <h3 className="font-montserrat font-semibold text-foreground mb-4">Legal</h3>
               <ul className="space-y-2">
                 <li><Link to="/privacy-policy" className="text-muted-foreground hover:text-primary">Privacy Policy</Link></li>
                 <li><Link to="/platform-terms" className="text-muted-foreground hover:text-primary">Platform Terms of Use</Link></li>

@@ -88,7 +88,7 @@ const BlogPost = () => {
       {/* HEADER */}
       <header className="py-6 px-6 border-b border-border">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
-          <Link to="/" className="text-2xl font-oswald font-bold text-foreground">
+          <Link to="/" className="text-2xl font-montserrat font-bold text-foreground">
             DARK<span className="text-primary">THREAT</span>
           </Link>
 
@@ -173,7 +173,7 @@ const BlogPost = () => {
             <div className="md:col-span-2">
               <div className="flex items-center space-x-2 mb-4">
                 <Shield className="w-8 h-8 text-primary" />
-                <span className="text-xl font-oswald font-bold text-foreground">
+                <span className="text-xl font-montserrat font-bold text-foreground">
                   DarkThreat
                 </span>
               </div>
@@ -189,7 +189,7 @@ const BlogPost = () => {
             </div>
 
             <div>
-              <h3 className="font-oswald font-semibold mb-4">Platform</h3>
+              <h3 className="font-montserrat font-semibold mb-4">Platform</h3>
               <ul className="space-y-2">
                 <li><Link to="/" className="text-muted-foreground hover:text-primary">Home</Link></li>
                 <li><Link to="/solution" className="text-muted-foreground hover:text-primary">Solution</Link></li>
@@ -200,7 +200,7 @@ const BlogPost = () => {
             </div>
 
             <div>
-              <h3 className="font-oswald font-semibold mb-4">Legal</h3>
+              <h3 className="font-montserrat font-semibold mb-4">Legal</h3>
               <ul className="space-y-2">
                 <li><Link to="/privacy-policy" className="text-muted-foreground hover:text-primary">Privacy Policy</Link></li>
                 <li><Link to="/platform-terms" className="text-muted-foreground hover:text-primary">Platform Terms</Link></li>

@@ -29,7 +29,7 @@ const BlogCard = ({ post }: BlogCardProps) => {
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
         {/* Category Badge */}
-        <span className="absolute top-4 left-4 px-3 py-1 bg-primary text-primary-foreground text-xs font-oswald font-semibold uppercase tracking-wider rounded">
+        <span className="absolute top-4 left-4 px-3 py-1 bg-primary text-primary-foreground text-xs font-montserrat font-semibold uppercase tracking-wider rounded">
           {post.category}
         </span>
         {/* Gradient Overlay */}
@@ -39,7 +39,7 @@ const BlogCard = ({ post }: BlogCardProps) => {
       {/* Content */}
       <div className="p-6">
         <Link to={`/blog/${post.slug}`}>
-          <h2 className="text-xl font-oswald font-bold text-foreground mb-3 line-clamp-2 transition-colors duration-300 group-hover:text-primary">
+          <h2 className="text-xl font-montserrat font-bold text-foreground mb-3 line-clamp-2 transition-colors duration-300 group-hover:text-primary">
             {post.title}
           </h2>
         </Link>

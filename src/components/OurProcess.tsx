@@ -39,7 +39,7 @@ const OurProcess = () => {
     <section className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-oswald font-bold text-foreground mb-4">
+          <h2 className="text-4xl font-montserrat font-bold text-foreground mb-4">
             How <span className="glow-text">DarkThreat</span> Platform Work
           </h2>
           <p className="text-lg text-muted-foreground">
@@ -58,7 +58,7 @@ const OurProcess = () => {
               <div key={index} className="flex flex-col items-center text-center h-full">
                 {/* Number Badge */}
                 <div className="relative z-10 w-16 h-16 rounded-full bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center mb-6 shadow-lg shadow-primary/20">
-                  <span className="text-2xl font-oswald font-bold text-black">{step.number}</span>
+                  <span className="text-2xl font-montserrat font-bold text-black">{step.number}</span>
                 </div>
 
                 {/* Icon & Card */}
@@ -68,7 +68,7 @@ const OurProcess = () => {
                       {step.icon}
                     </div>
                     {/* Title */}
-                    <h3 className="font-oswald font-bold text-foreground text-xl mb-3 uppercase">
+                    <h3 className="font-montserrat font-bold text-foreground text-xl mb-3 uppercase">
                       {step.title}
                     </h3>
                     {/* Description */}

@@ -12,13 +12,13 @@ export default function WebsiteTerms() {
 
         <div className="space-y-8">
           <div>
-            <h1 className="text-4xl font-oswald font-bold text-foreground mb-4">Website Terms of Use</h1>
+            <h1 className="text-4xl font-montserrat font-bold text-foreground mb-4">Website Terms of Use</h1>
             <p className="text-muted-foreground">Last updated: January 2025</p>
           </div>
 
           <div className="prose prose-invert max-w-none space-y-6">
             <section>
-              <h2 className="text-2xl font-oswald font-semibold text-foreground mb-4">Website Usage</h2>
+              <h2 className="text-2xl font-montserrat font-semibold text-foreground mb-4">Website Usage</h2>
               <p className="text-foreground/90 leading-relaxed">
                 By accessing and using the DarkThreat website, you agree to comply with these terms of use. 
                 The website is provided for informational purposes and to facilitate access to our services.
@@ -26,7 +26,7 @@ export default function WebsiteTerms() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-oswald font-semibold text-foreground mb-4">Intellectual Property</h2>
+              <h2 className="text-2xl font-montserrat font-semibold text-foreground mb-4">Intellectual Property</h2>
               <p className="text-foreground/90 leading-relaxed">
                 All content on this website, including text, graphics, logos, and software, is the property of 
                 DarkThreat or its licensors and is protected by copyright and other intellectual property laws. 
@@ -35,7 +35,7 @@ export default function WebsiteTerms() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-oswald font-semibold text-foreground mb-4">Prohibited Activities</h2>
+              <h2 className="text-2xl font-montserrat font-semibold text-foreground mb-4">Prohibited Activities</h2>
               <ul className="space-y-2 text-foreground/90">
                 <li>• Attempting to gain unauthorized access to our systems</li>
                 <li>• Using automated tools to scrape or download content</li>
@@ -46,7 +46,7 @@ export default function WebsiteTerms() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-oswald font-semibold text-foreground mb-4">User Content</h2>
+              <h2 className="text-2xl font-montserrat font-semibold text-foreground mb-4">User Content</h2>
               <p className="text-foreground/90 leading-relaxed">
                 Any content you submit through our website (such as contact forms or support requests) becomes 
                 the property of DarkThreat. You grant us a perpetual, worldwide license to use such content for 
@@ -55,7 +55,7 @@ export default function WebsiteTerms() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-oswald font-semibold text-foreground mb-4">Disclaimers</h2>
+              <h2 className="text-2xl font-montserrat font-semibold text-foreground mb-4">Disclaimers</h2>
               <p className="text-foreground/90 leading-relaxed">
                 The information on this website is provided "as is" without warranties of any kind. We do not 
                 guarantee the accuracy, completeness, or timeliness of the information presented. Use of this 
@@ -64,7 +64,7 @@ export default function WebsiteTerms() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-oswald font-semibold text-foreground mb-4">Changes to Terms</h2>
+              <h2 className="text-2xl font-montserrat font-semibold text-foreground mb-4">Changes to Terms</h2>
               <p className="text-foreground/90 leading-relaxed">
                 We reserve the right to modify these terms at any time. Changes will be posted on this page with 
                 an updated "last modified" date. Your continued use of the website constitutes acceptance of the 

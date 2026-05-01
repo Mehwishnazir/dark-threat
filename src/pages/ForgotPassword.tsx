@@ -57,7 +57,7 @@ export default function ForgotPassword() {
               <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
                 <Shield className="w-8 h-8 text-primary" />
               </div>
-              <h1 className="text-2xl font-oswald font-bold text-foreground">Forgot Password</h1>
+              <h1 className="text-2xl font-montserrat font-bold text-foreground">Forgot Password</h1>
               <p className="text-muted-foreground text-sm">
                 {sent ? 'Check your email' : 'Enter your email to reset your password'}
               </p>

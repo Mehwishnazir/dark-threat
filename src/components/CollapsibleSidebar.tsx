@@ -40,7 +40,7 @@ export default function CollapsibleSidebar({ currentPath = '/dashboard' }: Colla
           {!isCollapsed && (
             <div className="flex items-center space-x-2">
               <Shield className="w-8 h-8 text-primary" />
-              <span className="text-xl font-oswald font-bold text-foreground">DarkThreat</span>
+              <span className="text-xl font-montserrat font-bold text-foreground">DarkThreat</span>
             </div>
           )}
           <Button

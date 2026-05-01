@@ -40,7 +40,7 @@ export default function TrialModal({ isOpen, onClose }: TrialModalProps) {
       <DialogContent className="max-w-md bg-card/95 backdrop-blur-xl border-border">
         <DialogHeader>
           <DialogTitle className="text-center">
-            <h2 className="text-3xl font-oswald font-bold text-foreground mb-4">
+            <h2 className="text-3xl font-montserrat font-bold text-foreground mb-4">
               Coming Soon
             </h2>
             <p className="text-lg text-muted-foreground">
@@ -62,7 +62,7 @@ export default function TrialModal({ isOpen, onClose }: TrialModalProps) {
 
           {/* Message */}
           <div className="space-y-3">
-            <h3 className="text-xl font-oswald font-semibold text-foreground">
+            <h3 className="text-xl font-montserrat font-semibold text-foreground">
               Free Trial Registration
             </h3>
             <p className="text-muted-foreground">

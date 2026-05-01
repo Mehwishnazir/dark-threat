@@ -73,7 +73,7 @@ export default function Alerts() {
         <div className="p-6">
           <div className="flex items-center space-x-2 mb-8">
             <Shield className="w-8 h-8 text-primary" />
-            <span className="text-xl font-oswald font-bold text-foreground">DarkThreat</span>
+            <span className="text-xl font-montserrat font-bold text-foreground">DarkThreat</span>
           </div>
           <nav className="space-y-2">
             <Button variant="ghost" className="w-full justify-start text-muted-foreground hover:text-foreground">
@@ -92,7 +92,7 @@ export default function Alerts() {
         <header className="bg-card border-b border-border px-6 py-4">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-2xl font-oswald font-bold text-foreground">Security Alerts</h1>
+              <h1 className="text-2xl font-montserrat font-bold text-foreground">Security Alerts</h1>
               <p className="text-muted-foreground">Monitor and manage dark web breach alerts</p>
             </div>
             <div className="flex items-center space-x-4">

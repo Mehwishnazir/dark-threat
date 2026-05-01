@@ -29,7 +29,7 @@ export default function PricingCard({
     <div className={`threat-card relative ${popular ? 'border-primary' : ''}`}>
       {popular && (
         <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-          <span className="bg-primary text-black px-4 py-1 text-xs font-oswald font-bold uppercase tracking-wider rounded-full">
+          <span className="bg-primary text-black px-4 py-1 text-xs font-montserrat font-bold uppercase tracking-wider rounded-full">
             Most Popular
           </span>
         </div>
@@ -37,13 +37,13 @@ export default function PricingCard({
       
       <div className="relative z-10">
         <div className="text-center mb-6">
-          <h3 className="text-xl font-oswald font-bold text-foreground mb-2">
+          <h3 className="text-xl font-montserrat font-bold text-foreground mb-2">
             {plan}
           </h3>
           
           {!isCustom && (
             <div className="mb-4">
-              <div className="text-3xl font-oswald font-bold text-primary mb-1">
+              <div className="text-3xl font-montserrat font-bold text-primary mb-1">
                 {isAnnual ? annualPrice : monthlyPrice}
               </div>
               <div className="text-sm text-muted-foreground">
@@ -61,7 +61,7 @@ export default function PricingCard({
           )}
           
           {isCustom && (
-            <div className="text-3xl font-oswald font-bold text-primary mb-1">
+            <div className="text-3xl font-montserrat font-bold text-primary mb-1">
               Custom
             </div>
           )}
