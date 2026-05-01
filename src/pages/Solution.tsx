@@ -75,8 +75,13 @@ const Solution = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Dark Web Monitoring Solution | DarkThreat.ai</title>
+        <meta name="description" content="Explore DarkThreat's complete dark web monitoring solution: credential leak detection, PII exposure alerts, hacker chatter intelligence and automated leak reports." />
+        <link rel="canonical" href="https://darkthreat.ai/solution" />
+      </Helmet>
       {/* Header */}
-      <header className="py-6 px-6 border-b border-border">
+      <header className="fixed top-0 left-0 right-0 py-6 px-6 border-b border-border bg-background/95 backdrop-blur-sm z-50">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <Link to="/" className="text-2xl font-montserrat font-bold text-foreground">
             DARK<span className="text-primary">THREAT</span>
