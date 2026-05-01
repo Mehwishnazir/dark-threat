@@ -87,7 +87,7 @@ const Blog = () => {
               value={searchQuery}
               onChange={(e) => {
                 setSearchQuery(e.target.value);
-                setCurrentPage(1);
+                setVisibleCount(POSTS_PER_PAGE);
               }}
               className="pl-10 bg-card border-border"
             />
@@ -101,7 +101,7 @@ const Blog = () => {
                 size="sm"
                 onClick={() => {
                   setSelectedCategory(cat);
-                  setCurrentPage(1);
+                  setVisibleCount(POSTS_PER_PAGE);
                 }}
                 className="text-xs"
               >
@@ -126,36 +126,11 @@ const Blog = () => {
           </div>
         )}
 
-        {/* PAGINATION */}
-        {totalPages > 1 && (
-          <div className="flex items-center justify-center gap-2 mt-12">
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={() => handlePageChange(currentPage - 1)}
-              disabled={currentPage === 1}
-            >
-              <ChevronLeft className="w-4 h-4" />
-            </Button>
-
-            {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-              <Button
-                key={page}
-                variant={currentPage === page ? 'default' : 'outline'}
-                size="sm"
-                onClick={() => handlePageChange(page)}
-              >
-                {page}
-              </Button>
-            ))}
-
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={() => handlePageChange(currentPage + 1)}
-              disabled={currentPage === totalPages}
-            >
-              <ChevronRight className="w-4 h-4" />
+        {/* LOAD MORE */}
+        {hasMore && (
+          <div className="flex items-center justify-center mt-12">
+            <Button onClick={handleLoadMore} className="hero-button">
+              Load More
             </Button>
           </div>
         )}
