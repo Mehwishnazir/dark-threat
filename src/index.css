@@ -1,147 +1,126 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Kumbh+Sans:wght@300;400;500;600;700&display=swap');
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* DarkThreat Design System - Black & Red Cybersecurity Theme
-All colors MUST be HSL.
-*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Kumbh+Sans:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 4%;
-    --foreground: 0 0% 95%;
+    /* ── Base Surfaces ── */
+    --background: 5 30% 5%;          /* #0D0A0A — Void Black (warm, not blue) */
+    --foreground: 0 30% 95%;          /* #F5E6E6 — Ash White (warm tinted) */
 
-    --card: 0 0% 8%;
-    --card-foreground: 0 0% 95%;
+    --card: 5 30% 8%;                 /* #160F0F — Ember Dark */
+    --card-foreground: 0 30% 95%;
 
-    --popover: 0 0% 8%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 5 30% 8%;
+    --popover-foreground: 0 30% 95%;
 
-    --primary: 0 100% 50%;
+    /* ── Brand Accent — Dragon Red ── */
+    --primary: 0 78% 45%;             /* #CC1C1C — matches logo red exactly */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 12%;
-    --secondary-foreground: 0 0% 95%;
+    --secondary: 5 30% 11%;           /* #1E1212 — Smoldering */
+    --secondary-foreground: 0 30% 95%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 65%;
+    --muted: 5 20% 14%;
+    --muted-foreground: 0 12% 55%;    /* #9A7878 — Smoke (warm gray) */
 
-    --accent: 0 100% 50%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 30 100% 50%;            /* #FF8C00 — Ember Orange (secondary) */
+    --accent-foreground: 0 0% 5%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 0 85% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 12%;
-    --ring: 0 100% 50%;
+    --border: 0 78% 45% / 0.2;        /* rgba(204,28,28,0.2) */
+    --input: 5 30% 10%;
+    --ring: 0 78% 45%;
 
     --radius: 0.8rem;
 
-    /* DarkThreat Custom Colors */
-    --threat-red: 0 100% 50%;
-    --threat-red-glow: 0 100% 60%;
-    --threat-dark: 0 0% 8%;
-    --threat-darker: 0 0% 4%;
-    --threat-gray: 0 0% 20%;
-    --threat-light-gray: 0 0% 65%;
+    /* ── DarkThreat Custom ── */
+    --threat-red: 0 78% 45%;          /* #CC1C1C — logo red */
+    --threat-red-bright: 0 78% 56%;   /* #E83232 — hover state */
+    --threat-fire: 0 100% 67%;        /* #FF5555 — glow highlights */
+    --threat-ember: 30 100% 50%;      /* #FF8C00 — orange accent */
+    --threat-dark: 5 30% 8%;
+    --threat-darker: 5 30% 5%;
+    --threat-smoke: 0 12% 55%;
+    --threat-ash: 0 30% 95%;
 
-    /* Gradients */
-    --gradient-red: linear-gradient(135deg, hsl(0 100% 50%), hsl(0 100% 40%));
-    --gradient-dark: linear-gradient(180deg, hsl(0 0% 8%), hsl(0 0% 4%));
-    --gradient-glow: radial-gradient(circle, hsl(0 100% 50% / 0.2), transparent 70%);
+    /* ── Gradients ── */
+    --gradient-red: linear-gradient(135deg, hsl(0 78% 45%), hsl(0 78% 32%));
+    --gradient-fire: linear-gradient(135deg, hsl(0 78% 45%), hsl(30 100% 50%));
+    --gradient-dark: linear-gradient(180deg, hsl(5 30% 8%), hsl(5 30% 5%));
+    --gradient-glow: radial-gradient(circle, hsl(0 78% 45% / 0.15), transparent 70%);
 
-    /* Shadows & Effects */
-    --shadow-red: 0 0 20px hsl(0 100% 50% / 0.3);
-    --shadow-red-intense: 0 0 40px hsl(0 100% 50% / 0.5);
-    --shadow-dark: 0 10px 30px hsl(0 0% 0% / 0.3);
-
-    /* Animations */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-glow: box-shadow 0.3s ease;
-
-    --sidebar-background: 0 0% 6%;
-    --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 0 100% 50%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 12%;
-    --sidebar-accent-foreground: 0 0% 95%;
-    --sidebar-border: 0 0% 20%;
-    --sidebar-ring: 0 100% 50%;
+    /* ── Shadows ── */
+    --shadow-red: 0 0 20px hsl(0 78% 45% / 0.25);
+    --shadow-red-intense: 0 0 40px hsl(0 78% 45% / 0.45), 0 0 80px hsl(0 78% 45% / 0.15);
+    --shadow-dark: 0 10px 30px hsl(0 0% 0% / 0.4);
   }
 
   .dark {
-    /* Dark mode uses same colors for DarkThreat theme */
-    --background: 0 0% 4%;
-    --foreground: 0 0% 95%;
+    --background: 5 30% 5%;
+    --foreground: 0 30% 95%;
   }
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
+  * { @apply border-border; }
 
   body {
-    @apply bg-background text-foreground font-kumbh;
+    @apply bg-background text-foreground;
     font-family: 'Kumbh Sans', sans-serif;
+    background-image: radial-gradient(ellipse at top, hsl(0 78% 20% / 0.08) 0%, transparent 60%);
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    font-weight: 700;
+    letter-spacing: 0.04em;
   }
 }
 
+/* ── Elite Component Overrides ── */
 @layer components {
   .hero-button {
-    @apply relative overflow-hidden bg-transparent border-2 border-primary text-primary px-8 py-4 text-lg font-montserrat font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-primary hover:text-black hover:shadow-[0_0_30px_hsl(0_100%_50%_/_0.5)] before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-primary/20 before:to-transparent before:translate-x-[-100%] hover:before:translate-x-[100%] before:transition-transform before:duration-700;
-  }
-
-  .threat-card {
-    @apply relative bg-card border border-border rounded-lg p-6 transition-all duration-300 hover:border-primary hover:shadow-[0_0_20px_hsl(0_100%_50%_/_0.3)] hover:bg-card/80 before:absolute before:inset-0 before:bg-gradient-to-br before:from-primary/5 before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300 before:rounded-lg;
+    @apply relative overflow-hidden bg-transparent border-2 border-primary text-primary
+           px-8 py-4 text-base font-semibold uppercase tracking-wider
+           transition-all duration-300
+           hover:bg-primary hover:text-white
+           hover:shadow-[0_0_30px_hsl(0_78%_45%_/_0.5)];
   }
 
   .glow-text {
-    @apply text-primary animate-pulse;
-    text-shadow: 0 0 10px hsl(0 100% 50% / 0.5);
+    color: hsl(var(--threat-fire));
+    text-shadow:
+      0 0 8px hsl(0 78% 45% / 0.6),
+      0 0 20px hsl(0 78% 45% / 0.35),
+      0 0 40px hsl(0 78% 45% / 0.15);
+  }
+
+  .threat-card {
+    @apply relative bg-card border rounded-lg p-6 transition-all duration-300
+           hover:border-primary/60
+           hover:shadow-[0_0_25px_hsl(0_78%_45%_/_0.2)]
+           hover:bg-[#1E1212];
+    border-color: hsl(0 78% 45% / 0.18);
   }
 
   .cyber-grid {
-    background-image: 
-      linear-gradient(rgba(255,0,0,0.1) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,0,0,0.1) 1px, transparent 1px);
-    background-size: 20px 20px;
-  }
-
-  /* Slow banner animation */
-  .animate-scan {
-    animation: scan 30s linear infinite;
-  }
-
-  @keyframes scan {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
-  }
-
-  /* Enhanced 3D effects */
-  .glow-border {
-    @apply border border-primary/30 shadow-[0_0_20px_hsl(0_100%_50%_/_0.2)] hover:shadow-[0_0_30px_hsl(0_100%_50%_/_0.4)] transition-all duration-300;
-  }
-
-  .glass-effect {
-    @apply bg-black/20 backdrop-blur-xl border border-primary/20;
+    background-image:
+      linear-gradient(hsl(0 78% 45% / 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(0 78% 45% / 0.06) 1px, transparent 1px);
+    background-size: 24px 24px;
   }
 
   .neon-text {
-    color: hsl(0 100% 50%);
-    text-shadow: 
-      0 0 5px hsl(0 100% 50% / 0.5),
-      0 0 10px hsl(0 100% 50% / 0.3),
-      0 0 15px hsl(0 100% 50% / 0.2);
+    color: hsl(var(--threat-fire));
+    text-shadow:
+      0 0 5px hsl(0 100% 67% / 0.6),
+      0 0 12px hsl(0 78% 45% / 0.4);
+  }
+
+  .glass-effect {
+    background: hsl(5 30% 8% / 0.7);
+    backdrop-filter: blur(16px);
+    border: 1px solid hsl(0 78% 45% / 0.15);
   }
 }
