@@ -111,7 +111,7 @@ const Solution = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center cyber-grid overflow-hidden ">
+      <section className="relative h-screen flex items-center justify-center cyber-grid overflow-hidden pt-24 ">
         <AnimatedBackground />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background"></div>
 
