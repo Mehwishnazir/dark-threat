@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Shield, Search, AlertTriangle, Users, Database, Zap, Eye, Globe, Lock, CheckCircle, BarChart3, Trash2, Twitter, Linkedin, Github } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useState, Suspense } from 'react';
+import { Helmet } from 'react-helmet-async';
 import TrialModal from '@/components/TrialModal';
 import AnimatedBackground from '@/components/AnimatedBackground';
 import ThreatSphere from '@/components/ThreatSphere';
@@ -74,10 +75,15 @@ const Solution = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Dark Web Monitoring Solution | DarkThreat.ai</title>
+        <meta name="description" content="Explore DarkThreat's complete dark web monitoring solution: credential leak detection, PII exposure alerts, hacker chatter intelligence and automated leak reports." />
+        <link rel="canonical" href="https://darkthreat.ai/solution" />
+      </Helmet>
       {/* Header */}
-      <header className="py-6 px-6 border-b border-border">
+      <header className="fixed top-0 left-0 right-0 py-6 px-6 border-b border-border bg-background/95 backdrop-blur-sm z-50">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
-          <Link to="/" className="text-2xl font-oswald font-bold text-foreground">
+          <Link to="/" className="text-2xl font-montserrat font-bold text-foreground">
             DARK<span className="text-primary">THREAT</span>
           </Link>
           <nav className="flex items-center space-x-6">
@@ -110,7 +116,7 @@ const Solution = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center cyber-grid overflow-hidden ">
+      <section className="relative h-screen flex items-center justify-center cyber-grid overflow-hidden pt-24 ">
         <AnimatedBackground />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background"></div>
 
@@ -122,7 +128,7 @@ const Solution = () => {
         </div>
 
         <div className="relative z-10 text-center max-w-4xl mx-auto ">
-          <h1 className="text-5xl md:text-6xl font-oswald font-bold text-foreground mb-6">
+          <h1 className="text-5xl md:text-6xl font-montserrat font-bold text-foreground mb-6">
             Complete Dark Web <span className="glow-text">Monitoring Solution</span>
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
@@ -149,7 +155,7 @@ const Solution = () => {
       <section className="py-20 px-6 bg-gradient-to-b from-background to-threat-dark">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-oswald font-bold text-foreground mb-4">
+            <h2 className="text-4xl font-montserrat font-bold text-foreground mb-4">
               Advanced Threat Detection
             </h2>
             <p className="text-lg text-muted-foreground">
@@ -160,7 +166,7 @@ const Solution = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-card border border-border rounded-lg p-6">
               <Globe className="text-primary w-12 h-12 mb-4" />
-              <h3 className="text-xl font-oswald font-semibold text-foreground mb-3">
+              <h3 className="text-xl font-montserrat font-semibold text-foreground mb-3">
                 Domain Monitoring
               </h3>
               <p className="text-muted-foreground mb-4">
@@ -184,7 +190,7 @@ const Solution = () => {
 
             <div className="bg-card border border-border rounded-lg p-6">
               <Lock className="text-primary w-12 h-12 mb-4" />
-              <h3 className="text-xl font-oswald font-semibold text-foreground mb-3">
+              <h3 className="text-xl font-montserrat font-semibold text-foreground mb-3">
                 Credential Protection
               </h3>
               <p className="text-muted-foreground mb-4">
@@ -208,7 +214,7 @@ const Solution = () => {
 
             <div className="bg-card border border-border rounded-lg p-6">
               <Eye className="text-primary w-12 h-12 mb-4" />
-              <h3 className="text-xl font-oswald font-semibold text-foreground mb-3">
+              <h3 className="text-xl font-montserrat font-semibold text-foreground mb-3">
                 Threat Intelligence
               </h3>
               <p className="text-muted-foreground mb-4">
@@ -237,7 +243,7 @@ const Solution = () => {
       <section className="py-20 px-6 bg-gradient-to-b from-threat-dark to-background">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-oswald font-bold text-foreground mb-4">
+            <h2 className="text-4xl font-montserrat font-bold text-foreground mb-4">
               Data Leak Detection <span className="glow-text">Platform</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-6">
@@ -260,7 +266,7 @@ const Solution = () => {
                         {capability.icon}
                       </div>
                       <div className="ml-4">
-                        <h3 className="text-2xl font-oswald font-bold text-foreground">
+                        <h3 className="text-2xl font-montserrat font-bold text-foreground">
                           {capability.title}
                         </h3>
                       </div>
@@ -286,7 +292,7 @@ const Solution = () => {
 
                 <div className="flex-1">
                   <div className="bg-gradient-to-br from-primary/20 via-primary/10 to-transparent rounded-lg p-12 text-center border border-primary/20">
-                    <div className="text-6xl font-oswald font-bold text-primary mb-4 glow-text">
+                    <div className="text-6xl font-montserrat font-bold text-primary mb-4 glow-text">
                       {capability.stat}
                     </div>
                     <p className="text-foreground font-medium text-lg">
@@ -304,7 +310,7 @@ const Solution = () => {
       <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-oswald font-bold text-foreground mb-4">
+            <h2 className="text-4xl font-montserrat font-bold text-foreground mb-4">
               How It Works
             </h2>
             <p className="text-lg text-muted-foreground">
@@ -315,9 +321,9 @@ const Solution = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-oswald font-bold text-primary">1</span>
+                <span className="text-2xl font-montserrat font-bold text-primary">1</span>
               </div>
-              <h3 className="text-xl font-oswald font-semibold text-foreground mb-3">
+              <h3 className="text-xl font-montserrat font-semibold text-foreground mb-3">
                 Setup Monitoring
               </h3>
               <p className="text-muted-foreground">
@@ -327,9 +333,9 @@ const Solution = () => {
 
             <div className="text-center">
               <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-oswald font-bold text-primary">2</span>
+                <span className="text-2xl font-montserrat font-bold text-primary">2</span>
               </div>
-              <h3 className="text-xl font-oswald font-semibold text-foreground mb-3">
+              <h3 className="text-xl font-montserrat font-semibold text-foreground mb-3">
                 Continuous Scanning
               </h3>
               <p className="text-muted-foreground">
@@ -339,9 +345,9 @@ const Solution = () => {
 
             <div className="text-center">
               <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-oswald font-bold text-primary">3</span>
+                <span className="text-2xl font-montserrat font-bold text-primary">3</span>
               </div>
-              <h3 className="text-xl font-oswald font-semibold text-foreground mb-3">
+              <h3 className="text-xl font-montserrat font-semibold text-foreground mb-3">
                 Instant Alerts
               </h3>
               <p className="text-muted-foreground">
@@ -358,7 +364,7 @@ const Solution = () => {
       />
 
       <div className="text-center mt-12 mb-10">
-        <h2 className="text-4xl font-oswald font-bold text-foreground mb-4">
+        <h2 className="text-4xl font-montserrat font-bold text-foreground mb-4">
           Let's <span className="glow-text">Connect</span> With Us
         </h2>
         <p className="text-lg text-muted-foreground mb-6">
@@ -379,25 +385,25 @@ const Solution = () => {
             <div className="col-span-1 md:col-span-2">
               <div className="flex items-center space-x-2 mb-4">
                 <Shield className="w-8 h-8 text-primary" />
-                <span className="text-xl font-oswald font-bold text-foreground">DarkThreat</span>
+                <span className="text-xl font-montserrat font-bold text-foreground">DarkThreat</span>
               </div>
               <p className="text-muted-foreground mb-4">
                 Advanced dark web monitoring and threat intelligence platform protecting your organization 24/7.
               </p>
               <div className="flex space-x-4">
-                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="https://twitter.com/DarkThreatAI" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                   <Twitter className="w-5 h-5" />
                 </a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="https://linkedin.com/company/darkthreat" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                   <Linkedin className="w-5 h-5" />
                 </a>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="https://github.com/darkthreat" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                   <Github className="w-5 h-5" />
                 </a>
               </div>
             </div>
             <div>
-              <h3 className="font-oswald font-semibold text-foreground mb-4">Platform</h3>
+              <h3 className="font-montserrat font-semibold text-foreground mb-4">Platform</h3>
               <ul className="space-y-2">
                 <li><Link to="/" className="text-muted-foreground hover:text-primary">Home</Link></li>
                 <li><Link to="/solution" className="text-muted-foreground hover:text-primary">Solution</Link></li>
@@ -407,7 +413,7 @@ const Solution = () => {
               </ul>
             </div>
             <div>
-              <h3 className="font-oswald font-semibold text-foreground mb-4">Legal</h3>
+              <h3 className="font-montserrat font-semibold text-foreground mb-4">Legal</h3>
               <ul className="space-y-2">
                 <li><Link to="/privacy-policy" className="text-muted-foreground hover:text-primary">Privacy Policy</Link></li>
                 <li><Link to="/platform-terms" className="text-muted-foreground hover:text-primary">Platform Terms of Use</Link></li>

@@ -1,8 +1,9 @@
 import { useState, useMemo, Suspense } from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Shield, Linkedin, Twitter, Github, ChevronLeft, ChevronRight, Search } from 'lucide-react';
+import { Shield, Linkedin, Twitter, Github, Search } from 'lucide-react';
 import BlogCard, { type BlogPost } from '@/components/blog/BlogCard';
 import AnimatedBackground from '@/components/AnimatedBackground';
 import ThreatSphere from '@/components/ThreatSphere';
@@ -17,12 +18,12 @@ const categories = [
   'Cybersecurity',
 ];
 
-const POSTS_PER_PAGE = 6;
+const POSTS_PER_PAGE = 12;
 
 const Blog = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All Blogs');
-  const [currentPage, setCurrentPage] = useState(1);
+  const [visibleCount, setVisibleCount] = useState(POSTS_PER_PAGE);
 
   const filteredPosts = useMemo(() => {
     return allBlogs.filter((post: BlogPost) => {
@@ -38,24 +39,24 @@ const Blog = () => {
     });
   }, [searchQuery, selectedCategory]);
 
-  const totalPages = Math.ceil(filteredPosts.length / POSTS_PER_PAGE);
+  const paginatedPosts = filteredPosts.slice(0, visibleCount);
+  const hasMore = visibleCount < filteredPosts.length;
 
-  const paginatedPosts = filteredPosts.slice(
-    (currentPage - 1) * POSTS_PER_PAGE,
-    currentPage * POSTS_PER_PAGE
-  );
-
-  const handlePageChange = (page: number) => {
-    setCurrentPage(page);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+  const handleLoadMore = () => {
+    setVisibleCount((c) => c + POSTS_PER_PAGE);
   };
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Threat Intelligence Blog | DarkThreat.ai</title>
+        <meta name="description" content="Expert insights on dark web monitoring, credential leak detection, and threat intelligence strategies from the DarkThreat research team." />
+        <link rel="canonical" href="https://darkthreat.ai/blog" />
+      </Helmet>
       {/* HEADER */}
       <header className="fixed top-0 left-0 right-0 py-6 px-6 border-b border-border bg-background/95 backdrop-blur-sm z-50">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
-          <Link to="/" className="text-2xl font-oswald font-bold text-foreground">
+          <Link to="/" className="text-2xl font-montserrat font-bold text-foreground">
             DARK<span className="text-primary">THREAT</span>
           </Link>
         </div>
@@ -72,7 +73,7 @@ const Blog = () => {
         </div>
 
         <div className="relative max-w-6xl mx-auto text-center mt-10 z-10">
-          <h1 className="text-5xl md:text-7xl font-oswald font-bold text-foreground mb-6">
+          <h1 className="text-5xl md:text-7xl font-montserrat font-bold text-foreground mb-6">
             THREAT <span className="text-primary">INTELLIGENCE</span> BLOG
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -91,7 +92,7 @@ const Blog = () => {
               value={searchQuery}
               onChange={(e) => {
                 setSearchQuery(e.target.value);
-                setCurrentPage(1);
+                setVisibleCount(POSTS_PER_PAGE);
               }}
               className="pl-10 bg-card border-border"
             />
@@ -105,7 +106,7 @@ const Blog = () => {
                 size="sm"
                 onClick={() => {
                   setSelectedCategory(cat);
-                  setCurrentPage(1);
+                  setVisibleCount(POSTS_PER_PAGE);
                 }}
                 className="text-xs"
               >
@@ -130,36 +131,11 @@ const Blog = () => {
           </div>
         )}
 
-        {/* PAGINATION */}
-        {totalPages > 1 && (
-          <div className="flex items-center justify-center gap-2 mt-12">
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={() => handlePageChange(currentPage - 1)}
-              disabled={currentPage === 1}
-            >
-              <ChevronLeft className="w-4 h-4" />
-            </Button>
-
-            {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-              <Button
-                key={page}
-                variant={currentPage === page ? 'default' : 'outline'}
-                size="sm"
-                onClick={() => handlePageChange(page)}
-              >
-                {page}
-              </Button>
-            ))}
-
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={() => handlePageChange(currentPage + 1)}
-              disabled={currentPage === totalPages}
-            >
-              <ChevronRight className="w-4 h-4" />
+        {/* LOAD MORE */}
+        {hasMore && (
+          <div className="flex items-center justify-center mt-12">
+            <Button onClick={handleLoadMore} className="hero-button">
+              Load More
             </Button>
           </div>
         )}
@@ -170,7 +146,7 @@ const Blog = () => {
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-2">
             <Shield className="w-6 h-6 text-primary" />
-            <span className="font-oswald font-bold text-foreground">DARKTHREAT</span>
+            <span className="font-montserrat font-bold text-foreground">DARKTHREAT</span>
           </div>
 
           <div className="flex gap-4">

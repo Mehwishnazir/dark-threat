@@ -52,7 +52,7 @@ export default function ComparisonTable() {
           <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-6">
             <Check className="w-8 h-8 text-primary" />
           </div>
-          <h2 className="text-4xl font-oswald font-bold text-foreground mb-6 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+          <h2 className="text-4xl font-montserrat font-bold text-foreground mb-6 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
             Why Choose DarkThreat?
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -64,14 +64,14 @@ export default function ComparisonTable() {
           <Table>
             <TableHeader>
               <TableRow className="bg-gradient-to-r from-primary/10 to-primary/5">
-                <TableHead className="text-foreground font-oswald font-bold text-lg py-6">Feature</TableHead>
-                <TableHead className="text-primary font-oswald font-bold text-lg py-6">
+                <TableHead className="text-foreground font-montserrat font-bold text-lg py-6">Feature</TableHead>
+                <TableHead className="text-primary font-montserrat font-bold text-lg py-6">
                   <div className="flex items-center gap-2">
                     <Check className="w-5 h-5" />
                     DarkThreat
                   </div>
                 </TableHead>
-                <TableHead className="text-muted-foreground font-oswald font-bold text-lg py-6">
+                <TableHead className="text-muted-foreground font-montserrat font-bold text-lg py-6">
                   <div className="flex items-center gap-2">
                     <X className="w-5 h-5" />
                     Traditional Monitoring

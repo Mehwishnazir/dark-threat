@@ -14,7 +14,7 @@ export default function ServiceCard({ title, description, features, icon }: Serv
         <div className="text-primary text-4xl mb-6 group-hover:animate-float">
           {icon}
         </div>
-        <h3 className="text-xl font-oswald font-bold text-foreground mb-4">
+        <h3 className="text-xl font-montserrat font-bold text-foreground mb-4">
           {title}
         </h3>
         <p className="text-muted-foreground mb-6 flex-grow">

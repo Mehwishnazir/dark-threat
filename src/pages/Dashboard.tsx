@@ -101,7 +101,7 @@ export default function Dashboard() {
       <div className="min-h-screen bg-background flex items-center justify-center p-4">
         <Card className="w-full max-w-md">
           <CardHeader className="text-center">
-            <CardTitle className="text-2xl font-oswald">Account Pending</CardTitle>
+            <CardTitle className="text-2xl font-montserrat">Account Pending</CardTitle>
           </CardHeader>
           <CardContent className="text-center space-y-4">
             <p className="text-muted-foreground">
@@ -161,7 +161,7 @@ export default function Dashboard() {
         <header className="bg-card border-b border-border px-6 py-4">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-2xl font-oswald font-bold text-foreground">Dashboard Overview</h1>
+              <h1 className="text-2xl font-montserrat font-bold text-foreground">Dashboard Overview</h1>
               <p className="text-muted-foreground">Monitor your organization's dark web exposure</p>
             </div>
             <div className="flex items-center space-x-4">

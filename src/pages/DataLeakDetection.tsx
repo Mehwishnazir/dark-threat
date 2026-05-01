@@ -72,7 +72,7 @@ const DataLeakDetection = () => {
       {/* Header */}
       <header className="py-6 px-6 border-b border-border">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
-          <Link to="/" className="text-2xl font-oswald font-bold text-foreground">
+          <Link to="/" className="text-2xl font-montserrat font-bold text-foreground">
             DARK<span className="text-primary">THREAT</span>
           </Link>
           <nav className="flex items-center space-x-6">
@@ -92,7 +92,7 @@ const DataLeakDetection = () => {
       {/* Hero Section */}
       <section className="py-20 px-6 bg-gradient-to-b from-background to-threat-dark">
         <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-oswald font-bold text-foreground mb-6">
+          <h1 className="text-5xl md:text-6xl font-montserrat font-bold text-foreground mb-6">
             Data Leak & <span className="text-primary">PII Detection</span>
           </h1>
           <p className="text-xl text-muted-foreground mb-4">
@@ -111,7 +111,7 @@ const DataLeakDetection = () => {
       <section className="py-20 px-6 bg-gradient-to-b from-background to-threat-dark">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-oswald font-bold text-foreground mb-4">
+            <h2 className="text-4xl font-montserrat font-bold text-foreground mb-4">
               The Challenge We Solve
             </h2>
             <p className="text-lg text-muted-foreground">
@@ -126,7 +126,7 @@ const DataLeakDetection = () => {
                 <div className="w-20 h-20 bg-red-900/30 rounded-full flex items-center justify-center mx-auto mb-6 glow-border">
                   <AlertTriangle className="w-10 h-10 text-red-400" />
                 </div>
-                <h3 className="text-2xl font-oswald font-bold text-foreground mb-4 glow-text">The Problem</h3>
+                <h3 className="text-2xl font-montserrat font-bold text-foreground mb-4 glow-text">The Problem</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   Organizations constantly face new vulnerabilities and data exposure risks. Without continuous dark web monitoring, sensitive data can be sold or traded before companies even know about the breach.
                 </p>
@@ -143,7 +143,7 @@ const DataLeakDetection = () => {
                 <div className="w-20 h-20 bg-orange-900/30 rounded-full flex items-center justify-center mx-auto mb-6 glow-border">
                   <AlertTriangle className="w-10 h-10 text-orange-400" />
                 </div>
-                <h3 className="text-2xl font-oswald font-bold text-foreground mb-4 glow-text">The Impact</h3>
+                <h3 className="text-2xl font-montserrat font-bold text-foreground mb-4 glow-text">The Impact</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   When PII is exposed on the dark web, it leads to identity fraud, financial theft, business email compromise attacks, and unauthorized access to critical systems and accounts.
                 </p>
@@ -160,7 +160,7 @@ const DataLeakDetection = () => {
                 <div className="w-20 h-20 bg-green-900/30 rounded-full flex items-center justify-center mx-auto mb-6 glow-border">
                   <Shield className="w-10 h-10 text-green-400" />
                 </div>
-                <h3 className="text-2xl font-oswald font-bold text-foreground mb-4 glow-text">Our Solution</h3>
+                <h3 className="text-2xl font-montserrat font-bold text-foreground mb-4 glow-text">Our Solution</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   DarkThreat's advanced monitoring continuously scans dark web channels, detecting exposed data in real-time and enabling immediate response to prevent security incidents.
                 </p>
@@ -187,7 +187,7 @@ const DataLeakDetection = () => {
       <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-oswald font-bold text-foreground mb-4">
+            <h2 className="text-4xl font-montserrat font-bold text-foreground mb-4">
               Comprehensive Protection Capabilities
             </h2>
             <p className="text-lg text-muted-foreground">
@@ -207,10 +207,10 @@ const DataLeakDetection = () => {
                           {challenge.icon}
                         </div>
                         <div className="ml-4">
-                          <h3 className="text-2xl font-oswald font-bold text-foreground mb-2">
+                          <h3 className="text-2xl font-montserrat font-bold text-foreground mb-2">
                             Protection
                           </h3>
-                          <h4 className="text-xl font-oswald font-bold text-primary">
+                          <h4 className="text-xl font-montserrat font-bold text-primary">
                             {challenge.title}
                           </h4>
                         </div>
@@ -239,7 +239,7 @@ const DataLeakDetection = () => {
                   <div className="relative bg-gradient-to-br from-primary/20 via-primary/10 to-transparent rounded-lg p-12 text-center glow-border">
                     <div className="absolute inset-0 bg-gradient-glow opacity-20 rounded-lg"></div>
                     <div className="relative z-10">
-                      <div className="text-7xl font-oswald font-bold text-primary mb-4 glow-text">
+                      <div className="text-7xl font-montserrat font-bold text-primary mb-4 glow-text">
                         {challenge.stat}
                       </div>
                       <p className="text-foreground font-medium text-lg">
@@ -257,7 +257,7 @@ const DataLeakDetection = () => {
       {/* CTA */}
       <section className="py-20 px-6 bg-gradient-to-b from-background to-threat-dark">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-oswald font-bold text-foreground mb-6">
+          <h2 className="text-4xl font-montserrat font-bold text-foreground mb-6">
             Ready to Protect Your Data?
           </h2>
           <p className="text-lg text-muted-foreground mb-8">
@@ -276,7 +276,7 @@ const DataLeakDetection = () => {
             <div className="col-span-1 md:col-span-2">
               <div className="flex items-center space-x-2 mb-4">
                 <Shield className="w-8 h-8 text-primary" />
-                <span className="text-xl font-oswald font-bold text-foreground">DarkThreat</span>
+                <span className="text-xl font-montserrat font-bold text-foreground">DarkThreat</span>
               </div>
               <p className="text-muted-foreground mb-4">
                 Advanced dark web monitoring and threat intelligence platform protecting your organization 24/7.
@@ -288,7 +288,7 @@ const DataLeakDetection = () => {
               </div>
             </div>
             <div>
-              <h3 className="font-oswald font-semibold text-foreground mb-4">Platform</h3>
+              <h3 className="font-montserrat font-semibold text-foreground mb-4">Platform</h3>
               <ul className="space-y-2">
                 <li><Link to="/data-leak-detection" className="text-muted-foreground hover:text-primary">Data Leak Detection</Link></li>
                 <li><Link to="/pricing" className="text-muted-foreground hover:text-primary">Pricing</Link></li>
@@ -297,7 +297,7 @@ const DataLeakDetection = () => {
               </ul>
             </div>
             <div>
-              <h3 className="font-oswald font-semibold text-foreground mb-4">Legal</h3>
+              <h3 className="font-montserrat font-semibold text-foreground mb-4">Legal</h3>
               <ul className="space-y-2">
                 <li><Link to="/privacy-policy" className="text-muted-foreground hover:text-primary">Privacy Policy</Link></li>
                 <li><Link to="/platform-terms" className="text-muted-foreground hover:text-primary">Platform Terms of Use</Link></li>

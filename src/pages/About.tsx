@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Shield, Users, Award, Target, Twitter, Linkedin, Github, AlertTriangle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useState, Suspense } from 'react';
+import { Helmet } from 'react-helmet-async';
 import TrialModal from '@/components/TrialModal';
 import AnimatedBackground from '@/components/AnimatedBackground';
 import ThreatSphere from '@/components/ThreatSphere';
@@ -11,10 +12,15 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>About DarkThreat | Dark Web Intelligence Experts</title>
+        <meta name="description" content="Meet the team behind DarkThreat — cybersecurity researchers and engineers building the most comprehensive dark web monitoring platform for modern businesses." />
+        <link rel="canonical" href="https://darkthreat.ai/about" />
+      </Helmet>
       {/* Header */}
-      <header className="py-6 px-6 border-b border-border">
+      <header className="fixed top-0 left-0 right-0 py-6 px-6 border-b border-border bg-background/95 backdrop-blur-sm z-50">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
-          <Link to="/" className="text-2xl font-oswald font-bold text-foreground">
+          <Link to="/" className="text-2xl font-montserrat font-bold text-foreground">
             DARK<span className="text-primary">THREAT</span>
           </Link>
           <nav className="flex items-center space-x-6">
@@ -59,7 +65,7 @@ const About = () => {
         </div>
 
         <div className="relative z-10 text-center max-w-4xl mx-auto pt-[-10px] ">
-          <h1 className="text-5xl md:text-6xl font-oswald font-bold text-foreground mb-6">
+          <h1 className="text-5xl md:text-6xl font-montserrat font-bold text-foreground mb-6">
             About <span className="glow-text">DarkThreat</span>
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
@@ -81,7 +87,7 @@ const About = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-oswald font-bold text-foreground mb-6">
+              <h2 className="text-4xl font-montserrat font-bold text-foreground mb-6">
                 Our Mission
               </h2>
               <p className="text-lg text-muted-foreground mb-6">
@@ -100,22 +106,22 @@ const About = () => {
             <div className="grid grid-cols-2 gap-6">
               <div className="bg-card border border-border rounded-lg p-6 text-center">
                 <Target className="text-primary w-12 h-12 mx-auto mb-4" />
-                <h3 className="text-2xl font-oswald font-bold text-foreground mb-2">500+</h3>
+                <h3 className="text-2xl font-montserrat font-bold text-foreground mb-2">500+</h3>
                 <p className="text-muted-foreground">Organizations Protected</p>
               </div>
               <div className="bg-card border border-border rounded-lg p-6 text-center">
                 <Shield className="text-primary w-12 h-12 mx-auto mb-4" />
-                <h3 className="text-2xl font-oswald font-bold text-foreground mb-2">10M+</h3>
+                <h3 className="text-2xl font-montserrat font-bold text-foreground mb-2">10M+</h3>
                 <p className="text-muted-foreground">Threats Detected</p>
               </div>
               <div className="bg-card border border-border rounded-lg p-6 text-center">
                 <Users className="text-primary w-12 h-12 mx-auto mb-4" />
-                <h3 className="text-2xl font-oswald font-bold text-foreground mb-2">24/7</h3>
+                <h3 className="text-2xl font-montserrat font-bold text-foreground mb-2">24/7</h3>
                 <p className="text-muted-foreground">Continuous Monitoring</p>
               </div>
               <div className="bg-card border border-border rounded-lg p-6 text-center">
                 <Award className="text-primary w-12 h-12 mx-auto mb-4" />
-                <h3 className="text-2xl font-oswald font-bold text-foreground mb-2">99.9%</h3>
+                <h3 className="text-2xl font-montserrat font-bold text-foreground mb-2">99.9%</h3>
                 <p className="text-muted-foreground">Uptime Guarantee</p>
               </div>
             </div>
@@ -127,7 +133,7 @@ const About = () => {
       <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-oswald font-bold text-foreground mb-4">
+            <h2 className="text-4xl font-montserrat font-bold text-foreground mb-4">
               Our Team
             </h2>
             <p className="text-lg text-muted-foreground">
@@ -140,7 +146,7 @@ const About = () => {
               <div className="w-24 h-24 bg-primary/10 rounded-full mx-auto mb-4 flex items-center justify-center">
                 <Users className="w-12 h-12 text-primary" />
               </div>
-              <h3 className="text-xl font-oswald font-semibold text-foreground mb-2">
+              <h3 className="text-xl font-montserrat font-semibold text-foreground mb-2">
                 Security Researchers
               </h3>
               <p className="text-muted-foreground">
@@ -152,7 +158,7 @@ const About = () => {
               <div className="w-24 h-24 bg-primary/10 rounded-full mx-auto mb-4 flex items-center justify-center">
                 <Shield className="w-12 h-12 text-primary" />
               </div>
-              <h3 className="text-xl font-oswald font-semibold text-foreground mb-2">
+              <h3 className="text-xl font-montserrat font-semibold text-foreground mb-2">
                 Engineering Team
               </h3>
               <p className="text-muted-foreground">
@@ -164,7 +170,7 @@ const About = () => {
               <div className="w-24 h-24 bg-primary/10 rounded-full mx-auto mb-4 flex items-center justify-center">
                 <Award className="w-12 h-12 text-primary" />
               </div>
-              <h3 className="text-xl font-oswald font-semibold text-foreground mb-2">
+              <h3 className="text-xl font-montserrat font-semibold text-foreground mb-2">
                 Advisory Board
               </h3>
               <p className="text-muted-foreground">
@@ -179,7 +185,7 @@ const About = () => {
       <section className="py-20 px-6 bg-gradient-to-b from-background to-threat-dark">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-oswald font-bold text-foreground mb-4">
+            <h2 className="text-4xl font-montserrat font-bold text-foreground mb-4">
               Our Values
             </h2>
             <p className="text-lg text-muted-foreground">
@@ -189,7 +195,7 @@ const About = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-card border border-border rounded-lg p-8">
-              <h3 className="text-2xl font-oswald font-semibold text-foreground mb-4">
+              <h3 className="text-2xl font-montserrat font-semibold text-foreground mb-4">
                 Transparency
               </h3>
               <p className="text-muted-foreground">
@@ -198,7 +204,7 @@ const About = () => {
             </div>
 
             <div className="bg-card border border-border rounded-lg p-8">
-              <h3 className="text-2xl font-oswald font-semibold text-foreground mb-4">
+              <h3 className="text-2xl font-montserrat font-semibold text-foreground mb-4">
                 Innovation
               </h3>
               <p className="text-muted-foreground">
@@ -207,7 +213,7 @@ const About = () => {
             </div>
 
             <div className="bg-card border border-border rounded-lg p-8">
-              <h3 className="text-2xl font-oswald font-semibold text-foreground mb-4">
+              <h3 className="text-2xl font-montserrat font-semibold text-foreground mb-4">
                 Customer Success
               </h3>
               <p className="text-muted-foreground">
@@ -216,7 +222,7 @@ const About = () => {
             </div>
 
             <div className="bg-card border border-border rounded-lg p-8">
-              <h3 className="text-2xl font-oswald font-semibold text-foreground mb-4">
+              <h3 className="text-2xl font-montserrat font-semibold text-foreground mb-4">
                 Ethical Operations
               </h3>
               <p className="text-muted-foreground">
@@ -239,25 +245,25 @@ const About = () => {
             <div className="col-span-1 md:col-span-2">
               <div className="flex items-center space-x-2 mb-4">
                 <Shield className="w-8 h-8 text-primary" />
-                <span className="text-xl font-oswald font-bold text-foreground">DarkThreat</span>
+                <span className="text-xl font-montserrat font-bold text-foreground">DarkThreat</span>
               </div>
               <p className="text-muted-foreground mb-4">
                 Advanced dark web monitoring and threat intelligence platform protecting your organization 24/7.
               </p>
               <div className="flex space-x-4">
-                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="https://twitter.com/DarkThreatAI" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                   <Twitter className="w-5 h-5" />
                 </a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="https://linkedin.com/company/darkthreat" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                   <Linkedin className="w-5 h-5" />
                 </a>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="https://github.com/darkthreat" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                   <Github className="w-5 h-5" />
                 </a>
               </div>
             </div>
             <div>
-              <h3 className="font-oswald font-semibold text-foreground mb-4">Platform</h3>
+              <h3 className="font-montserrat font-semibold text-foreground mb-4">Platform</h3>
               <ul className="space-y-2">
                 <li><Link to="/" className="text-muted-foreground hover:text-primary">Home</Link></li>
                 <li><Link to="/solution" className="text-muted-foreground hover:text-primary">Solution</Link></li>
@@ -267,7 +273,7 @@ const About = () => {
               </ul>
             </div>
             <div>
-              <h3 className="font-oswald font-semibold text-foreground mb-4">Legal</h3>
+              <h3 className="font-montserrat font-semibold text-foreground mb-4">Legal</h3>
               <ul className="space-y-2">
                 <li><Link to="/privacy-policy" className="text-muted-foreground hover:text-primary">Privacy Policy</Link></li>
                 <li><Link to="/platform-terms" className="text-muted-foreground hover:text-primary">Platform Terms of Use</Link></li>

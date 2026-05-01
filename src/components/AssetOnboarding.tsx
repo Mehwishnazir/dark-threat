@@ -97,7 +97,7 @@ export default function AssetOnboarding({ isOpen, onClose }: AssetOnboardingProp
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
         <DialogHeader>
-          <DialogTitle className="text-2xl font-oswald font-bold">Asset Management</DialogTitle>
+          <DialogTitle className="text-2xl font-montserrat font-bold">Asset Management</DialogTitle>
         </DialogHeader>
         
         <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-4">

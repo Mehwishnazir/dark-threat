@@ -45,7 +45,7 @@ const WhyChooseUs = () => {
     <section className="py-20 px-6 bg-threat-dark ">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-oswald font-bold text-foreground mb-4">
+          <h2 className="text-4xl font-montserrat font-bold text-foreground mb-4">
             Why Choose <span className="glow-text">DarkThreat</span>
           </h2>
           <p className="text-lg text-muted-foreground">
@@ -67,7 +67,7 @@ const WhyChooseUs = () => {
                   </div>
 
                   {/* Title */}
-                  <h3 className="font-oswald font-bold text-foreground text-xl">
+                  <h3 className="font-montserrat font-bold text-foreground text-xl">
                     {benefit.title}
                   </h3>
 

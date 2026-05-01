@@ -52,7 +52,7 @@ const FAQ = () => {
     <section className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl  font-oswald font-bold text-foreground mb-4">
+          <h2 className="text-4xl  font-montserrat font-bold text-foreground mb-4">
             Frequently Asked <span className="glow-text">Questions</span>
           </h2>
           <p className="text-lg text-muted-foreground">
@@ -70,7 +70,7 @@ const FAQ = () => {
                 onClick={() => toggleFAQ(index)}
                 className="w-full px-6 py-5 flex items-center justify-between text-left"
               >
-                <h3 className="font-oswald font-semibold text-white text-lg pr-4">
+                <h3 className="font-montserrat font-semibold text-white text-lg pr-4">
                   {faq.question}
                 </h3>
                 <div className="flex-shrink-0">

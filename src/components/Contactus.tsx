@@ -41,7 +41,7 @@ const ContactUs = () => {
       {/* Hero Section */}
       <section className="py-10 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl font-oswald font-bold text-foreground mb-6">
+          <h1 className="text-4xl font-montserrat font-bold text-foreground mb-6">
             Get In <span className="glow-text">Touch</span>
           </h1>
           <p className="text-xl text-muted-foreground mb-8">
@@ -56,7 +56,7 @@ const ContactUs = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div>
-              <h2 className="text-3xl font-oswald font-bold text-foreground mb-6">
+              <h2 className="text-3xl font-montserrat font-bold text-foreground mb-6">
                 Send us a message
               </h2>
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -115,7 +115,7 @@ const ContactUs = () => {
 
             {/* Contact Information */}
             <div>
-              <h2 className="text-3xl font-oswald font-bold text-foreground mb-6">
+              <h2 className="text-3xl font-montserrat font-bold text-foreground mb-6">
                 Contact Information
               </h2>
               <div className="space-y-6">
@@ -126,7 +126,7 @@ const ContactUs = () => {
                         <Mail className="w-6 h-6 text-primary" />
                       </div>
                       <div>
-                        <h3 className="font-oswald font-semibold text-foreground">Email</h3>
+                        <h3 className="font-montserrat font-semibold text-foreground">Email</h3>
                         <p className="text-muted-foreground">contact@darkthreat.io</p>
                       </div>
                     </div>
@@ -140,7 +140,7 @@ const ContactUs = () => {
                         <Phone className="w-6 h-6 text-primary" />
                       </div>
                       <div>
-                        <h3 className="font-oswald font-semibold text-foreground">Phone</h3>
+                        <h3 className="font-montserrat font-semibold text-foreground">Phone</h3>
                         <p className="text-muted-foreground">+1 (555) 123-4567</p>
                       </div>
                     </div>
@@ -154,7 +154,7 @@ const ContactUs = () => {
                         <MapPin className="w-6 h-6 text-primary" />
                       </div>
                       <div>
-                        <h3 className="font-oswald font-semibold text-foreground">Address</h3>
+                        <h3 className="font-montserrat font-semibold text-foreground">Address</h3>
                         <p className="text-muted-foreground">
                           123 Security Street<br />
                           Cyber City, CC 12345<br />
@@ -172,7 +172,7 @@ const ContactUs = () => {
                         <Clock className="w-6 h-6 text-primary" />
                       </div>
                       <div>
-                        <h3 className="font-oswald font-semibold text-foreground">Business Hours</h3>
+                        <h3 className="font-montserrat font-semibold text-foreground">Business Hours</h3>
                         <p className="text-muted-foreground">
                           Monday - Friday: 9:00 AM - 6:00 PM<br />
                           Saturday - Sunday: Closed<br />

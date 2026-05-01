@@ -19,7 +19,7 @@ const TrialComingSoon = () => {
       {/* Header */}
       <header className="py-6 px-6 border-b border-border">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
-          <Link to="/" className="text-2xl font-oswald font-bold text-foreground">
+          <Link to="/" className="text-2xl font-montserrat font-bold text-foreground">
             DARK<span className="text-primary">THREAT</span>
           </Link>
           <nav className="flex items-center space-x-6">
@@ -53,7 +53,7 @@ const TrialComingSoon = () => {
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-8">
             <Clock className="w-20 h-20 text-primary mx-auto mb-6 animate-pulse" />
-            <h1 className="text-5xl md:text-6xl font-oswald font-bold text-foreground mb-6">
+            <h1 className="text-5xl md:text-6xl font-montserrat font-bold text-foreground mb-6">
               Interactive Trial <span className="text-primary">Coming Soon</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
@@ -66,21 +66,21 @@ const TrialComingSoon = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <div className="threat-card">
               <Shield className="w-12 h-12 text-primary mx-auto mb-4" />
-              <h3 className="text-xl font-oswald font-semibold mb-2">Live Demo Environment</h3>
+              <h3 className="text-xl font-montserrat font-semibold mb-2">Live Demo Environment</h3>
               <p className="text-muted-foreground">
                 Experience real-time dark web monitoring in a safe, controlled environment
               </p>
             </div>
             <div className="threat-card">
               <Users className="w-12 h-12 text-primary mx-auto mb-4" />
-              <h3 className="text-xl font-oswald font-semibold mb-2">Guided Walkthrough</h3>
+              <h3 className="text-xl font-montserrat font-semibold mb-2">Guided Walkthrough</h3>
               <p className="text-muted-foreground">
                 Step-by-step guided tour of all DarkThreat features and capabilities
               </p>
             </div>
             <div className="threat-card">
               <CheckCircle className="w-12 h-12 text-primary mx-auto mb-4" />
-              <h3 className="text-xl font-oswald font-semibold mb-2">Instant Access</h3>
+              <h3 className="text-xl font-montserrat font-semibold mb-2">Instant Access</h3>
               <p className="text-muted-foreground">
                 No setup required - jump straight into exploring our platform
               </p>
@@ -143,7 +143,7 @@ const TrialComingSoon = () => {
             <div className="col-span-1 md:col-span-2">
               <div className="flex items-center space-x-2 mb-4">
                 <Shield className="w-8 h-8 text-primary" />
-                <span className="text-xl font-oswald font-bold text-foreground">DarkThreat</span>
+                <span className="text-xl font-montserrat font-bold text-foreground">DarkThreat</span>
               </div>
               <p className="text-muted-foreground mb-4">
                 Advanced dark web monitoring and threat intelligence platform protecting your organization 24/7.
@@ -161,7 +161,7 @@ const TrialComingSoon = () => {
               </div>
             </div>
             <div>
-              <h3 className="font-oswald font-semibold text-foreground mb-4">Platform</h3>
+              <h3 className="font-montserrat font-semibold text-foreground mb-4">Platform</h3>
               <ul className="space-y-2">
                 <li><Link to="/data-leak-detection" className="text-muted-foreground hover:text-primary">Data Leak Detection</Link></li>
                 <li><Link to="/pricing" className="text-muted-foreground hover:text-primary">Pricing</Link></li>
@@ -169,7 +169,7 @@ const TrialComingSoon = () => {
               </ul>
             </div>
             <div>
-              <h3 className="font-oswald font-semibold text-foreground mb-4">Legal</h3>
+              <h3 className="font-montserrat font-semibold text-foreground mb-4">Legal</h3>
               <ul className="space-y-2">
                 <li><Link to="/privacy-policy" className="text-muted-foreground hover:text-primary">Privacy Policy</Link></li>
                 <li><Link to="/platform-terms" className="text-muted-foreground hover:text-primary">Platform Terms of Use</Link></li>

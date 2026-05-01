@@ -28,7 +28,7 @@ export default function Banner() {
           {features.map((feature, index) => (
             <div key={index} className="flex items-center space-x-2 text-black whitespace-nowrap">
               {feature.icon}
-              <span className="font-oswald font-semibold text-sm">
+              <span className="font-montserrat font-semibold text-sm">
                 {feature.text}
               </span>
             </div>

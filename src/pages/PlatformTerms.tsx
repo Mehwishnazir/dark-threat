@@ -12,13 +12,13 @@ export default function PlatformTerms() {
 
         <div className="space-y-8">
           <div>
-            <h1 className="text-4xl font-oswald font-bold text-foreground text-primary mb-4">Platform Terms of Use</h1>
+            <h1 className="text-4xl font-montserrat font-bold text-foreground text-primary mb-4">Platform Terms of Use</h1>
             <p className="text-muted-foreground">Last updated: January 2025</p>
           </div>
 
           <div className="prose prose-invert max-w-none space-y-8">
             <section>
-              <h2 className="text-2xl font-oswald font-semibold text-primary mb-4">Acceptance of Terms</h2>
+              <h2 className="text-2xl font-montserrat font-semibold text-primary mb-4">Acceptance of Terms</h2>
               <div className="space-y-4 text-foreground/90 leading-relaxed">
                 <p>
                   DarkThreat.ai is a platform designed to help organizations identify and respond to data breaches, leaked credentials, and hacker activity before they impact business operations. The Terms of Service (ToS) set out the rules and responsibilities for using the platform, providing clear guidance and protection for both the Company and its Users.
@@ -41,7 +41,7 @@ export default function PlatformTerms() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-oswald font-semibold text-primary mb-4">Eligibility</h2>
+              <h2 className="text-2xl font-montserrat font-semibold text-primary mb-4">Eligibility</h2>
               <div className="space-y-4 text-foreground/90 leading-relaxed">
                 <p>
                   DarkThreat.ai services are only for individuals and organizations that meet legal and regulatory requirements. Users must be at least 18 years old or the minimum legal age in their country. Minors, unregistered organizations, and users in restricted regions are not allowed to use the platform.
@@ -56,7 +56,7 @@ export default function PlatformTerms() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-oswald font-semibold text-primary mb-4">Account Registration & Security</h2>
+              <h2 className="text-2xl font-montserrat font-semibold text-primary mb-4">Account Registration & Security</h2>
               <div className="space-y-4 text-foreground/90 leading-relaxed">
                 <p>
                   To use DarkThreat.ai, Users must create an account with accurate and valid information. This includes a verified email address and, if required, organizational credentials. Registration may also involve identity verification to confirm that the User is authorized to access the platform. This ensures that only legitimate individuals or organizations can use the services.
@@ -71,7 +71,7 @@ export default function PlatformTerms() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-oswald font-semibold text-primary mb-4">Services Provided</h2>
+              <h2 className="text-2xl font-montserrat font-semibold text-primary mb-4">Services Provided</h2>
               <div className="space-y-4 text-foreground/90 leading-relaxed">
                 <p>DarkThreat.ai offers three key services to help organizations detect and respond to cyber threats efficiently:</p>
                 <div className="space-y-3 ml-4">
@@ -95,7 +95,7 @@ export default function PlatformTerms() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-oswald font-semibold text-primary mb-4">Subscription & Payment Terms</h2>
+              <h2 className="text-2xl font-montserrat font-semibold text-primary mb-4">Subscription & Payment Terms</h2>
               <div className="space-y-4 text-foreground/90 leading-relaxed">
                 <p>
                   DarkThreat.ai offers three subscription plans: Standard, Enterprise, and MSSP/White-label. Each plan provides different levels of domain coverage, user access, and support, allowing organizations to choose the plan that best fits their size and security needs.
@@ -113,7 +113,7 @@ export default function PlatformTerms() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-oswald font-semibold text-primary mb-4">User Obligations & Prohibited Use</h2>
+              <h2 className="text-2xl font-montserrat font-semibold text-primary mb-4">User Obligations & Prohibited Use</h2>
               <div className="space-y-4 text-foreground/90 leading-relaxed">
                 <p>
                   Users of DarkThreat.ai must use the platform responsibly, ethically, and in compliance with all applicable laws. All activities should follow professional standards and avoid any actions that could harm the platform, other Users, or third parties. Users are expected to act with integrity and report any suspicious activity they notice on the platform. Following these rules helps create a safe environment for everyone using the services.
@@ -128,7 +128,7 @@ export default function PlatformTerms() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-oswald font-semibold text-primary mb-4">Data Privacy & Confidentiality</h2>
+              <h2 className="text-2xl font-montserrat font-semibold text-primary mb-4">Data Privacy & Confidentiality</h2>
               <div className="space-y-4 text-foreground/90 leading-relaxed">
                 <p>
                   DarkThreat.ai collects, processes, and stores user data to provide reliable monitoring and threat intelligence services. All user information, including login credentials, account details, and monitored results, is kept strictly confidential. The platform uses strong security measures to protect data from unauthorized access, theft, or misuse. Users are also responsible for keeping their account information secure and private.
@@ -143,7 +143,7 @@ export default function PlatformTerms() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-oswald font-semibold text-primary mb-4">Intellectual Property</h2>
+              <h2 className="text-2xl font-montserrat font-semibold text-primary mb-4">Intellectual Property</h2>
               <div className="space-y-4 text-foreground/90 leading-relaxed">
                 <p>
                   All software, reports, analytics, dashboards, and trademarks related to DarkThreat.ai are the exclusive intellectual property of the Company. Users must not copy, share, distribute, modify, or create derivative works from any Platform content without explicit written permission. This includes any data, visualizations, or analytical results provided by the services.
@@ -158,7 +158,7 @@ export default function PlatformTerms() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-oswald font-semibold text-primary mb-4">Third-Party Services</h2>
+              <h2 className="text-2xl font-montserrat font-semibold text-primary mb-4">Third-Party Services</h2>
               <div className="space-y-4 text-foreground/90 leading-relaxed">
                 <p>
                   DarkThreat.ai may connect with third-party tools, data sources, or APIs to improve monitoring and threat intelligence. These integrations give additional information and help provide more complete and timely alerts to Users.
@@ -173,7 +173,7 @@ export default function PlatformTerms() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-oswald font-semibold text-primary mb-4">Disclaimers & Limitation of Liability</h2>
+              <h2 className="text-2xl font-montserrat font-semibold text-primary mb-4">Disclaimers & Limitation of Liability</h2>
               <div className="space-y-4 text-foreground/90 leading-relaxed">
                 <p>
                   DarkThreat.ai services are provided "as-is" without any guarantee that data breaches will be prevented or that all threats will be detected. While the platform provides advanced monitoring and intelligence, no system can offer complete protection or identify every risk. Users should use the platform as part of a wider security strategy to protect their organization.
@@ -188,7 +188,7 @@ export default function PlatformTerms() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-oswald font-semibold text-primary mb-4">Indemnification</h2>
+              <h2 className="text-2xl font-montserrat font-semibold text-primary mb-4">Indemnification</h2>
               <div className="space-y-4 text-foreground/90 leading-relaxed">
                 <p>
                   Users agree to indemnify, defend, and hold harmless DarkThreat.ai and its affiliates from any claims, damages, or losses that result from misuse of the platform, violations of the Terms of Service, or illegal activities conducted using the service. This includes any legal costs or expenses that may arise from such actions.
@@ -203,7 +203,7 @@ export default function PlatformTerms() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-oswald font-semibold text-primary mb-4">Termination</h2>
+              <h2 className="text-2xl font-montserrat font-semibold text-primary mb-4">Termination</h2>
               <div className="space-y-4 text-foreground/90 leading-relaxed">
                 <p>
                   DarkThreat.ai has the right to suspend or terminate accounts if Users violate the Terms of Service, engage in illegal activities, or use the platform unethically. In serious cases, repeated violations, or security threats, accounts may be terminated immediately without prior notice.
@@ -218,7 +218,7 @@ export default function PlatformTerms() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-oswald font-semibold text-primary mb-4">Governing Law & Dispute Resolution</h2>
+              <h2 className="text-2xl font-montserrat font-semibold text-primary mb-4">Governing Law & Dispute Resolution</h2>
               <div className="space-y-4 text-foreground/90 leading-relaxed">
                 <p>
                   The Terms of Service are governed by the laws of the jurisdiction where DarkThreat.ai is legally registered. Any disputes or disagreements related to the platform, its services, or these terms may be resolved through arbitration, mediation, or in courts, depending on the situation and applicable law.
@@ -233,7 +233,7 @@ export default function PlatformTerms() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-oswald font-semibold text-primary mb-4">Changes to Terms</h2>
+              <h2 className="text-2xl font-montserrat font-semibold text-primary mb-4">Changes to Terms</h2>
               <div className="space-y-4 text-foreground/90 leading-relaxed">
                 <p>
                   DarkThreat.ai can update or change the Terms of Service at any time. Users will be notified of important updates through email or platform announcements. Continuing to use the platform after these updates means that Users agree to and accept the new terms.
@@ -248,7 +248,7 @@ export default function PlatformTerms() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-oswald font-semibold text-primary mb-4">Contact Information</h2>
+              <h2 className="text-2xl font-montserrat font-semibold text-primary mb-4">Contact Information</h2>
               <div className="space-y-4 text-foreground/90 leading-relaxed">
                 <p>
                   For any questions, concerns, or clarifications about the Terms of Service, Users can contact DarkThreat.ai support. The support team is available to provide clear guidance, answer inquiries, and help Users understand their rights, responsibilities, and obligations under the ToS.

@@ -30,7 +30,7 @@ export default function ReviewsSection() {
     <section className="py-20 px-6 bg-gradient-to-b from-threat-dark to-background">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-oswald font-bold text-foreground mb-4">
+          <h2 className="text-4xl font-montserrat font-bold text-foreground mb-4">
             Trusted by Security Leaders
           </h2>
           <p className="text-lg text-muted-foreground">

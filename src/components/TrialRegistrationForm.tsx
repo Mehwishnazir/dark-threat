@@ -31,7 +31,7 @@ export default function TrialRegistrationForm() {
   return (
     <div className="threat-card max-w-2xl mx-auto">
       <div className="text-center mb-8">
-        <h2 className="text-3xl font-oswald font-bold text-foreground mb-4">
+        <h2 className="text-3xl font-montserrat font-bold text-foreground mb-4">
           Start Your Free Trial
         </h2>
         <p className="text-lg text-muted-foreground">

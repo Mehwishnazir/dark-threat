@@ -6,6 +6,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Mail, Phone, MapPin, Clock, Shield, Twitter, Linkedin, Github } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import TrialModal from '@/components/TrialModal';
 import { useToast } from '@/components/ui/use-toast';
 
@@ -37,10 +38,15 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Contact DarkThreat | Talk to a Dark Web Monitoring Expert</title>
+        <meta name="description" content="Contact the DarkThreat team to discuss dark web monitoring, credential leak detection, or to start your 7-day free trial. We respond within 24 hours." />
+        <link rel="canonical" href="https://darkthreat.ai/contact" />
+      </Helmet>
       {/* Header */}
-      <header className="py-6 px-6 border-b border-border">
+      <header className="fixed top-0 left-0 right-0 py-6 px-6 border-b border-border bg-background/95 backdrop-blur-sm z-50">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
-          <Link to="/" className="text-2xl font-oswald font-bold text-foreground">
+          <Link to="/" className="text-2xl font-montserrat font-bold text-foreground">
             DARK<span className="text-primary">THREAT</span>
           </Link>
           <nav className="flex items-center space-x-6">
@@ -73,9 +79,9 @@ const Contact = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="py-20 px-6">
+      <section className="pt-24 py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-oswald font-bold text-foreground mb-6">
+          <h1 className="text-5xl md:text-6xl font-montserrat font-bold text-foreground mb-6">
             Get In <span className="glow-text">Touch</span>
           </h1>
           <p className="text-xl text-muted-foreground mb-8">
@@ -90,7 +96,7 @@ const Contact = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div>
-              <h2 className="text-3xl font-oswald font-bold text-foreground mb-6">
+              <h2 className="text-3xl font-montserrat font-bold text-foreground mb-6">
                 Send us a message
               </h2>
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -149,7 +155,7 @@ const Contact = () => {
 
             {/* Contact Information */}
             <div>
-              <h2 className="text-3xl font-oswald font-bold text-foreground mb-6">
+              <h2 className="text-3xl font-montserrat font-bold text-foreground mb-6">
                 Contact Information
               </h2>
               <div className="space-y-6">
@@ -160,7 +166,7 @@ const Contact = () => {
                         <Mail className="w-6 h-6 text-primary" />
                       </div>
                       <div>
-                        <h3 className="font-oswald font-semibold text-foreground">Email</h3>
+                        <h3 className="font-montserrat font-semibold text-foreground">Email</h3>
                         <p className="text-muted-foreground">contact@darkthreat.io</p>
                       </div>
                     </div>
@@ -174,7 +180,7 @@ const Contact = () => {
                         <Phone className="w-6 h-6 text-primary" />
                       </div>
                       <div>
-                        <h3 className="font-oswald font-semibold text-foreground">Phone</h3>
+                        <h3 className="font-montserrat font-semibold text-foreground">Phone</h3>
                         <p className="text-muted-foreground">+1 (555) 123-4567</p>
                       </div>
                     </div>
@@ -188,7 +194,7 @@ const Contact = () => {
                         <MapPin className="w-6 h-6 text-primary" />
                       </div>
                       <div>
-                        <h3 className="font-oswald font-semibold text-foreground">Address</h3>
+                        <h3 className="font-montserrat font-semibold text-foreground">Address</h3>
                         <p className="text-muted-foreground">
                           123 Security Street<br />
                           Cyber City, CC 12345<br />
@@ -206,7 +212,7 @@ const Contact = () => {
                         <Clock className="w-6 h-6 text-primary" />
                       </div>
                       <div>
-                        <h3 className="font-oswald font-semibold text-foreground">Business Hours</h3>
+                        <h3 className="font-montserrat font-semibold text-foreground">Business Hours</h3>
                         <p className="text-muted-foreground">
                           Monday - Friday: 9:00 AM - 6:00 PM<br />
                           Saturday - Sunday: Closed<br />
@@ -225,7 +231,7 @@ const Contact = () => {
       {/* CTA Section */}
       <section className="py-20 px-6 bg-gradient-to-b from-background to-threat-dark">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-oswald font-bold text-foreground mb-4">
+          <h2 className="text-4xl font-montserrat font-bold text-foreground mb-4">
             Ready to Get Started?
           </h2>
           <p className="text-lg text-muted-foreground mb-8">
@@ -252,7 +258,7 @@ const Contact = () => {
             <div className="col-span-1 md:col-span-2">
               <div className="flex items-center space-x-2 mb-4">
                 <Shield className="w-8 h-8 text-primary" />
-                <span className="text-xl font-oswald font-bold text-foreground">DarkThreat</span>
+                <span className="text-xl font-montserrat font-bold text-foreground">DarkThreat</span>
               </div>
               <p className="text-muted-foreground mb-4">
                 Advanced dark web monitoring and threat intelligence platform protecting your organization 24/7.
@@ -270,7 +276,7 @@ const Contact = () => {
               </div>
             </div>
             <div>
-              <h3 className="font-oswald font-semibold text-foreground mb-4">Platform</h3>
+              <h3 className="font-montserrat font-semibold text-foreground mb-4">Platform</h3>
               <ul className="space-y-2">
                 <li><Link to="/" className="text-muted-foreground hover:text-primary">Home</Link></li>
                 <li><Link to="/solution" className="text-muted-foreground hover:text-primary">Solution</Link></li>
@@ -280,7 +286,7 @@ const Contact = () => {
               </ul>
             </div>
             <div>
-              <h3 className="font-oswald font-semibold text-foreground mb-4">Legal</h3>
+              <h3 className="font-montserrat font-semibold text-foreground mb-4">Legal</h3>
               <ul className="space-y-2">
                 <li><Link to="/privacy-policy" className="text-muted-foreground hover:text-primary">Privacy Policy</Link></li>
                 <li><Link to="/platform-terms" className="text-muted-foreground hover:text-primary">Platform Terms of Use</Link></li>
