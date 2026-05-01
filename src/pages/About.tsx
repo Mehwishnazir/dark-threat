@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Shield, Users, Award, Target, Twitter, Linkedin, Github, AlertTriangle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useState, Suspense } from 'react';
+import { Helmet } from 'react-helmet-async';
 import TrialModal from '@/components/TrialModal';
 import AnimatedBackground from '@/components/AnimatedBackground';
 import ThreatSphere from '@/components/ThreatSphere';
@@ -11,8 +12,13 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>About DarkThreat | Dark Web Intelligence Experts</title>
+        <meta name="description" content="Meet the team behind DarkThreat — cybersecurity researchers and engineers building the most comprehensive dark web monitoring platform for modern businesses." />
+        <link rel="canonical" href="https://darkthreat.ai/about" />
+      </Helmet>
       {/* Header */}
-      <header className="py-6 px-6 border-b border-border">
+      <header className="fixed top-0 left-0 right-0 py-6 px-6 border-b border-border bg-background/95 backdrop-blur-sm z-50">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <Link to="/" className="text-2xl font-montserrat font-bold text-foreground">
             DARK<span className="text-primary">THREAT</span>
@@ -245,13 +251,13 @@ const About = () => {
                 Advanced dark web monitoring and threat intelligence platform protecting your organization 24/7.
               </p>
               <div className="flex space-x-4">
-                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="https://twitter.com/DarkThreatAI" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                   <Twitter className="w-5 h-5" />
                 </a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="https://linkedin.com/company/darkthreat" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                   <Linkedin className="w-5 h-5" />
                 </a>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="https://github.com/darkthreat" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                   <Github className="w-5 h-5" />
                 </a>
               </div>

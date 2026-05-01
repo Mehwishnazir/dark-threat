@@ -80,8 +80,9 @@ const BlogPost = () => {
   return (
     <>
       <Helmet>
-        <title>{post.title} | DarkThreat Blog</title>
-        <meta name="description" content={post.excerpt} />
+        <title>{(post as any).metaTitle || post.title} | DarkThreat Blog</title>
+        <meta name="description" content={(post as any).metaDescription || post.excerpt} />
+        <link rel="canonical" href={`https://darkthreat.ai/blog/${post.slug}`} />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 
@@ -182,9 +183,15 @@ const BlogPost = () => {
                 protecting your organization 24/7.
               </p>
               <div className="flex space-x-4">
-                <Twitter className="w-5 h-5 text-muted-foreground hover:text-primary" />
-                <Linkedin className="w-5 h-5 text-muted-foreground hover:text-primary" />
-                <Github className="w-5 h-5 text-muted-foreground hover:text-primary" />
+                <a href="https://twitter.com/DarkThreatAI" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Twitter className="w-5 h-5" />
+                </a>
+                <a href="https://linkedin.com/company/darkthreat" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Linkedin className="w-5 h-5" />
+                </a>
+                <a href="https://github.com/darkthreat" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Github className="w-5 h-5" />
+                </a>
               </div>
             </div>
 

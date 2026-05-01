@@ -6,6 +6,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Mail, Phone, MapPin, Clock, Shield, Twitter, Linkedin, Github } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import TrialModal from '@/components/TrialModal';
 import { useToast } from '@/components/ui/use-toast';
 
@@ -37,8 +38,13 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Contact DarkThreat | Talk to a Dark Web Monitoring Expert</title>
+        <meta name="description" content="Contact the DarkThreat team to discuss dark web monitoring, credential leak detection, or to start your 7-day free trial. We respond within 24 hours." />
+        <link rel="canonical" href="https://darkthreat.ai/contact" />
+      </Helmet>
       {/* Header */}
-      <header className="py-6 px-6 border-b border-border">
+      <header className="fixed top-0 left-0 right-0 py-6 px-6 border-b border-border bg-background/95 backdrop-blur-sm z-50">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <Link to="/" className="text-2xl font-montserrat font-bold text-foreground">
             DARK<span className="text-primary">THREAT</span>
@@ -73,7 +79,7 @@ const Contact = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="py-20 px-6">
+      <section className="pt-24 py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-montserrat font-bold text-foreground mb-6">
             Get In <span className="glow-text">Touch</span>
