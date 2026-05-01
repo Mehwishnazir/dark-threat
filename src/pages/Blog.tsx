@@ -1,8 +1,9 @@
 import { useState, useMemo, Suspense } from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Shield, Linkedin, Twitter, Github, ChevronLeft, ChevronRight, Search } from 'lucide-react';
+import { Shield, Linkedin, Twitter, Github, Search } from 'lucide-react';
 import BlogCard, { type BlogPost } from '@/components/blog/BlogCard';
 import AnimatedBackground from '@/components/AnimatedBackground';
 import ThreatSphere from '@/components/ThreatSphere';
@@ -17,12 +18,12 @@ const categories = [
   'Cybersecurity',
 ];
 
-const POSTS_PER_PAGE = 6;
+const POSTS_PER_PAGE = 12;
 
 const Blog = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All Blogs');
-  const [currentPage, setCurrentPage] = useState(1);
+  const [visibleCount, setVisibleCount] = useState(POSTS_PER_PAGE);
 
   const filteredPosts = useMemo(() => {
     return allBlogs.filter((post: BlogPost) => {
@@ -38,16 +39,11 @@ const Blog = () => {
     });
   }, [searchQuery, selectedCategory]);
 
-  const totalPages = Math.ceil(filteredPosts.length / POSTS_PER_PAGE);
+  const paginatedPosts = filteredPosts.slice(0, visibleCount);
+  const hasMore = visibleCount < filteredPosts.length;
 
-  const paginatedPosts = filteredPosts.slice(
-    (currentPage - 1) * POSTS_PER_PAGE,
-    currentPage * POSTS_PER_PAGE
-  );
-
-  const handlePageChange = (page: number) => {
-    setCurrentPage(page);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+  const handleLoadMore = () => {
+    setVisibleCount((c) => c + POSTS_PER_PAGE);
   };
 
   return (
