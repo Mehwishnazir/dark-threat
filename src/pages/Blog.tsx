@@ -48,6 +48,11 @@ const Blog = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Threat Intelligence Blog | DarkThreat.ai</title>
+        <meta name="description" content="Expert insights on dark web monitoring, credential leak detection, and threat intelligence strategies from the DarkThreat research team." />
+        <link rel="canonical" href="https://darkthreat.ai/blog" />
+      </Helmet>
       {/* HEADER */}
       <header className="fixed top-0 left-0 right-0 py-6 px-6 border-b border-border bg-background/95 backdrop-blur-sm z-50">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
