@@ -76,6 +76,13 @@ export default {
 					darker: 'hsl(var(--threat-darker))',
 					gray: 'hsl(var(--threat-gray))',
 					'light-gray': 'hsl(var(--threat-light-gray))'
+				},
+				cyan: {
+					DEFAULT: 'hsl(var(--cyan))',
+					deep: 'hsl(var(--cyan-deep))',
+				},
+				navy: {
+					deep: 'hsl(var(--navy-deep))',
 				}
 			},
 			borderRadius: {
@@ -127,12 +134,24 @@ export default {
 					}
 				},
 				'scan': {
-					'0%': {
-						transform: 'translateX(-100%)'
-					},
-					'100%': {
-						transform: 'translateX(100%)'
-					}
+					'0%': { transform: 'translateX(-100%)' },
+					'100%': { transform: 'translateX(100%)' }
+				},
+				'fade-up': {
+					'0%': { opacity: '0', transform: 'translateY(24px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
+				'marquee': {
+					'0%': { transform: 'translateX(0)' },
+					'100%': { transform: 'translateX(-50%)' }
+				},
+				'blink': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0' }
+				},
+				'circuit-pulse': {
+					'0%, 100%': { opacity: '0.15' },
+					'50%': { opacity: '0.4' }
 				}
 			},
 			animation: {
@@ -140,7 +159,11 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'glow-pulse': 'glow-pulse 2s ease-in-out infinite',
 				'float': 'float 3s ease-in-out infinite',
-				'scan': 'scan 2s linear infinite'
+				'scan': 'scan 2s linear infinite',
+				'fade-up': 'fade-up 0.7s ease-out forwards',
+				'marquee': 'marquee 30s linear infinite',
+				'blink': 'blink 1s step-end infinite',
+				'circuit-pulse': 'circuit-pulse 4s ease-in-out infinite'
 			}
 		}
 	},
