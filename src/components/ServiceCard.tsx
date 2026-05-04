@@ -9,7 +9,7 @@ interface ServiceCardProps {
 
 export default function ServiceCard({ title, description, features, icon }: ServiceCardProps) {
   return (
-    <div className="threat-card group h-full">
+    <div className="threat-card service-card-glow group h-full">
       <div className="relative z-10 h-full flex flex-col">
         <div className="text-primary text-4xl mb-6 group-hover:animate-float">
           {icon}
