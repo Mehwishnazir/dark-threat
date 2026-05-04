@@ -48,6 +48,11 @@
     --threat-smoke: 0 12% 55%;
     --threat-ash: 0 30% 95%;
 
+    /* ── Cyan accent (secondary CTA / hero gradient) ── */
+    --cyan: 188 95% 55%;
+    --cyan-deep: 200 90% 25%;
+    --navy-deep: 220 50% 8%;
+
     /* ── Gradients ── */
     --gradient-red: linear-gradient(135deg, hsl(0 78% 45%), hsl(0 78% 32%));
     --gradient-fire: linear-gradient(135deg, hsl(0 78% 45%), hsl(30 100% 50%));
