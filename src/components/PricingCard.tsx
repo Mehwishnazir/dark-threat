@@ -26,7 +26,7 @@ export default function PricingCard({
 }: PricingCardProps) {
 
   return (
-    <div className={`threat-card relative ${popular ? 'border-primary' : ''}`}>
+    <div className={`threat-card relative ${popular ? 'border-primary pricing-scale-featured' : 'pricing-scale'}`}>
       {popular && (
         <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
           <span className="bg-primary text-black px-4 py-1 text-xs font-montserrat font-bold uppercase tracking-wider rounded-full">
