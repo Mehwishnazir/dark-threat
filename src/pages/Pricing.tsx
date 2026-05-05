@@ -231,6 +231,15 @@ const Pricing = () => {
               </div>
             </div>
             <div>
+              <h3 className="font-montserrat font-semibold text-foreground mb-4">Solutions</h3>
+              <ul className="space-y-2">
+                <li><Link to="/dark-web-monitoring" className="text-muted-foreground hover:text-primary">Dark Web Monitoring</Link></li>
+                <li><Link to="/credential-leak-detection" className="text-muted-foreground hover:text-primary">Credential Leak Detection</Link></li>
+                <li><Link to="/data-leak-detection" className="text-muted-foreground hover:text-primary">Data Leak Detection</Link></li>
+                <li><Link to="/compare/darkthreat-vs-darkowl" className="text-muted-foreground hover:text-primary">vs DarkOwl</Link></li>
+              </ul>
+            </div>
+            <div>
               <h3 className="font-montserrat font-semibold text-foreground mb-4">Platform</h3>
               <ul className="space-y-2">
                 <li><Link to="/" className="text-muted-foreground hover:text-primary">Home</Link></li>
