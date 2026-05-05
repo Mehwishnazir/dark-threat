@@ -27,6 +27,9 @@ import AdminDashboard from "./pages/AdminDashboard";
 
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
+import DarkWebMonitoring from "./pages/DarkWebMonitoring";
+import CredentialLeakDetection from "./pages/CredentialLeakDetection";
+import ComparisonDarkOwl from "./pages/ComparisonDarkOwl";
 
 const queryClient = new QueryClient();
 
@@ -59,6 +62,9 @@ const App = () => (
             
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
+            <Route path="/dark-web-monitoring" element={<DarkWebMonitoring />} />
+            <Route path="/credential-leak-detection" element={<CredentialLeakDetection />} />
+            <Route path="/compare/darkthreat-vs-darkowl" element={<ComparisonDarkOwl />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
