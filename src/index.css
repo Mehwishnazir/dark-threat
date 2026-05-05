@@ -48,10 +48,10 @@
     --threat-smoke: 0 12% 55%;
     --threat-ash: 0 30% 95%;
 
-    /* ── Cyan accent (secondary CTA / hero gradient) ── */
-    --cyan: 188 95% 55%;
-    --cyan-deep: 200 90% 25%;
-    --navy-deep: 220 50% 8%;
+    /* ── Reddish accent (replaces former cyan; keeps token name for compat) ── */
+    --cyan: 0 78% 50%;
+    --cyan-deep: 0 85% 32%;
+    --navy-deep: 5 30% 6%;
 
     /* ── Gradients ── */
     --gradient-red: linear-gradient(135deg, hsl(0 78% 45%), hsl(0 78% 32%));
@@ -133,11 +133,11 @@
     border: 1px solid hsl(0 78% 45% / 0.15);
   }
 
-  /* ── Cyan accent CTA (secondary brand color) ── */
+  /* ── Reddish accent CTA (was cyan) ── */
   .cta-cyan {
-    @apply relative overflow-hidden text-background font-semibold uppercase tracking-wider
+    @apply relative overflow-hidden text-white font-semibold uppercase tracking-wider
            px-8 py-4 rounded-md transition-all duration-300
-           hover:shadow-[0_0_30px_hsl(188_95%_55%_/_0.55)] hover:-translate-y-0.5;
+           hover:shadow-[0_0_30px_hsl(0_78%_50%_/_0.55)] hover:-translate-y-0.5;
     background: linear-gradient(135deg, hsl(var(--cyan)), hsl(var(--cyan-deep)));
   }
 
@@ -145,23 +145,23 @@
     @apply relative bg-transparent border-2 border-foreground/40 text-foreground
            px-8 py-4 rounded-md font-semibold uppercase tracking-wider
            transition-all duration-300
-           hover:border-cyan hover:text-cyan
-           hover:shadow-[0_0_25px_hsl(188_95%_55%_/_0.35)];
+           hover:border-primary hover:text-primary
+           hover:shadow-[0_0_25px_hsl(0_78%_45%_/_0.35)];
   }
 
   /* ── Hero layered navy + ember gradient ── */
   .hero-bg-layered {
     background:
-      radial-gradient(ellipse at 20% 10%, hsl(0 78% 35% / 0.18) 0%, transparent 55%),
-      radial-gradient(ellipse at 80% 80%, hsl(188 95% 45% / 0.10) 0%, transparent 55%),
+      radial-gradient(ellipse at 20% 10%, hsl(0 78% 35% / 0.22) 0%, transparent 55%),
+      radial-gradient(ellipse at 80% 80%, hsl(0 85% 25% / 0.18) 0%, transparent 55%),
       linear-gradient(180deg, hsl(var(--navy-deep)) 0%, hsl(5 30% 5%) 100%);
   }
 
   /* ── Animated circuit board pattern ── */
   .circuit-pattern {
     background-image:
-      linear-gradient(hsl(188 95% 55% / 0.08) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(188 95% 55% / 0.08) 1px, transparent 1px),
+      linear-gradient(hsl(0 78% 50% / 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(0 78% 50% / 0.08) 1px, transparent 1px),
       radial-gradient(circle at 1px 1px, hsl(0 78% 55% / 0.5) 1px, transparent 0);
     background-size: 60px 60px, 60px 60px, 60px 60px;
     animation: circuit-pulse 6s ease-in-out infinite;
@@ -206,8 +206,8 @@
     @apply transition-all duration-300;
   }
   .service-card-glow:hover {
-    border-color: hsl(188 95% 55% / 0.55);
-    box-shadow: 0 0 28px hsl(188 95% 55% / 0.22), 0 0 60px hsl(0 78% 45% / 0.12);
+    border-color: hsl(0 78% 50% / 0.55);
+    box-shadow: 0 0 28px hsl(0 78% 50% / 0.22), 0 0 60px hsl(0 78% 45% / 0.12);
   }
 
   /* ── Pricing card hover scale ── */
