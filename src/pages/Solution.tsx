@@ -381,7 +381,7 @@ const Solution = () => {
       {/* Footer */}
       <footer className="bg-card border-t border-border py-12">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
             <div className="col-span-1 md:col-span-2">
               <div className="flex items-center space-x-2 mb-4">
                 <Shield className="w-8 h-8 text-primary" />
@@ -401,6 +401,15 @@ const Solution = () => {
                   <Github className="w-5 h-5" />
                 </a>
               </div>
+            </div>
+            <div>
+              <h3 className="font-montserrat font-semibold text-foreground mb-4">Solutions</h3>
+              <ul className="space-y-2">
+                <li><Link to="/dark-web-monitoring" className="text-muted-foreground hover:text-primary">Dark Web Monitoring</Link></li>
+                <li><Link to="/credential-leak-detection" className="text-muted-foreground hover:text-primary">Credential Leak Detection</Link></li>
+                <li><Link to="/data-leak-detection" className="text-muted-foreground hover:text-primary">Data Leak Detection</Link></li>
+                <li><Link to="/compare/darkthreat-vs-darkowl" className="text-muted-foreground hover:text-primary">vs DarkOwl</Link></li>
+              </ul>
             </div>
             <div>
               <h3 className="font-montserrat font-semibold text-foreground mb-4">Platform</h3>
