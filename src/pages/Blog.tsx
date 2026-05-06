@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Shield, Linkedin, Twitter, Github, Search } from 'lucide-react';
 import BlogCard, { type BlogPost } from '@/components/blog/BlogCard';
+import Breadcrumb from '@/components/Breadcrumb';
 import AnimatedBackground from '@/components/AnimatedBackground';
 import ThreatSphere from '@/components/ThreatSphere';
 import { allBlogs } from '@/blogs';
@@ -119,6 +120,7 @@ const Blog = () => {
 
       {/* BLOG GRID */}
       <section className="max-w-6xl mx-auto px-6 py-16">
+        <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Blog' }]} />
         {paginatedPosts.length === 0 ? (
           <div className="text-center py-20">
             <p className="text-muted-foreground text-lg">No articles found matching your criteria.</p>

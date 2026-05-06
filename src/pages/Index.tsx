@@ -24,6 +24,23 @@ import {
   Linkedin, Twitter, Github, ArrowRight, PlayCircle,
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+
+const ORG_JSON_LD = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'DarkThreat',
+  url: 'https://darkthreat.ai',
+  logo: { '@type': 'ImageObject', url: 'https://darkthreat.ai/logo.png' },
+  sameAs: ['https://twitter.com/DarkThreatAI', 'https://linkedin.com/company/darkthreat'],
+  description: 'AI-powered dark web monitoring and threat intelligence platform',
+  foundingDate: '2024',
+  contactPoint: {
+    '@type': 'ContactPoint',
+    contactType: 'customer support',
+    email: 'support@darkthreat.ai',
+  },
+};
 
 const Index = () => {
   const [isTrialModalOpen, setIsTrialModalOpen] = useState(false);
@@ -32,6 +49,9 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background relative">
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify(ORG_JSON_LD)}</script>
+      </Helmet>
 
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 py-4 md:py-6 px-6 border-b border-border bg-background/95 backdrop-blur-sm z-50">

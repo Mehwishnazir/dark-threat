@@ -30,6 +30,7 @@ import BlogPost from "./pages/BlogPost";
 import DarkWebMonitoring from "./pages/DarkWebMonitoring";
 import CredentialLeakDetection from "./pages/CredentialLeakDetection";
 import ComparisonDarkOwl from "./pages/ComparisonDarkOwl";
+import Author from "./pages/Author";
 
 const queryClient = new QueryClient();
 
@@ -65,6 +66,7 @@ const App = () => (
             <Route path="/dark-web-monitoring" element={<DarkWebMonitoring />} />
             <Route path="/credential-leak-detection" element={<CredentialLeakDetection />} />
             <Route path="/compare/darkthreat-vs-darkowl" element={<ComparisonDarkOwl />} />
+            <Route path="/author/:slug" element={<Author />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

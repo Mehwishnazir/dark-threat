@@ -15,6 +15,7 @@ import {
   ArrowUp,
 } from "lucide-react";
 import BlogCard from "@/components/blog/BlogCard";
+import Breadcrumb from "@/components/Breadcrumb";
 import { allBlogs } from "@/blogs";
 import "./blog.css";
 
@@ -26,7 +27,13 @@ const BlogPost = () => {
   const [isTrialModalOpen, setIsTrialModalOpen] = useState(false);
 
   const post = allBlogs.find((p) => p.slug === slug);
-  const relatedPosts = allBlogs.filter((p) => p.slug !== slug).slice(0, 3);
+  const sameCategory = post
+    ? allBlogs.filter((p) => p.slug !== slug && p.category === post.category).slice(0, 3)
+    : [];
+  const relatedPosts =
+    sameCategory.length > 0
+      ? sameCategory
+      : allBlogs.filter((p) => p.slug !== slug).slice(0, 3);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" });
@@ -140,11 +147,24 @@ const BlogPost = () => {
             <Calendar className="w-4 h-4" /> {post.publishDate}
             <Clock className="w-4 h-4 ml-4" /> {post.readingTime}
           </div>
+          <div className="mt-3 text-sm text-white/80">
+            By{' '}
+            <Link to="/author/dr-ayaan-rahman" className="text-primary hover:underline font-medium">
+              {post.author || 'Dr. Ayaan Rahman'}
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* CONTENT */}
       <main className="max-w-4xl mx-auto px-6 py-16">
+        <Breadcrumb
+          items={[
+            { label: 'Home', href: '/' },
+            { label: 'Blog', href: '/blog' },
+            { label: post.title },
+          ]}
+        />
         <article
           className="blog-post-article"
           dangerouslySetInnerHTML={{ __html: post.content }}
