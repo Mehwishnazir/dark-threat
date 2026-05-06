@@ -26,7 +26,13 @@ const BlogPost = () => {
   const [isTrialModalOpen, setIsTrialModalOpen] = useState(false);
 
   const post = allBlogs.find((p) => p.slug === slug);
-  const relatedPosts = allBlogs.filter((p) => p.slug !== slug).slice(0, 3);
+  const sameCategory = post
+    ? allBlogs.filter((p) => p.slug !== slug && p.category === post.category).slice(0, 3)
+    : [];
+  const relatedPosts =
+    sameCategory.length > 0
+      ? sameCategory
+      : allBlogs.filter((p) => p.slug !== slug).slice(0, 3);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" });
