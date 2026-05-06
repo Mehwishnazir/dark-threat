@@ -15,6 +15,7 @@ import {
   ArrowUp,
 } from "lucide-react";
 import BlogCard from "@/components/blog/BlogCard";
+import Breadcrumb from "@/components/Breadcrumb";
 import { allBlogs } from "@/blogs";
 import "./blog.css";
 
@@ -146,11 +147,24 @@ const BlogPost = () => {
             <Calendar className="w-4 h-4" /> {post.publishDate}
             <Clock className="w-4 h-4 ml-4" /> {post.readingTime}
           </div>
+          <div className="mt-3 text-sm text-white/80">
+            By{' '}
+            <Link to="/author/dr-ayaan-rahman" className="text-primary hover:underline font-medium">
+              {post.author || 'Dr. Ayaan Rahman'}
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* CONTENT */}
       <main className="max-w-4xl mx-auto px-6 py-16">
+        <Breadcrumb
+          items={[
+            { label: 'Home', href: '/' },
+            { label: 'Blog', href: '/blog' },
+            { label: post.title },
+          ]}
+        />
         <article
           className="blog-post-article"
           dangerouslySetInnerHTML={{ __html: post.content }}
