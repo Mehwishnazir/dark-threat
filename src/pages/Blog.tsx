@@ -22,9 +22,18 @@ const categories = [
 const POSTS_PER_PAGE = 12;
 
 const Blog = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All Blogs');
-  const [visibleCount, setVisibleCount] = useState(POSTS_PER_PAGE);
+  const page = Math.max(1, parseInt(searchParams.get('page') || '1', 10) || 1);
+
+  const setPage = (next: number) => {
+    const params = new URLSearchParams(searchParams);
+    if (next <= 1) params.delete('page');
+    else params.set('page', String(next));
+    setSearchParams(params);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   const filteredPosts = useMemo(() => {
     return allBlogs.filter((post: BlogPost) => {
@@ -40,12 +49,12 @@ const Blog = () => {
     });
   }, [searchQuery, selectedCategory]);
 
-  const paginatedPosts = filteredPosts.slice(0, visibleCount);
-  const hasMore = visibleCount < filteredPosts.length;
-
-  const handleLoadMore = () => {
-    setVisibleCount((c) => c + POSTS_PER_PAGE);
-  };
+  const totalPages = Math.max(1, Math.ceil(filteredPosts.length / POSTS_PER_PAGE));
+  const currentPage = Math.min(page, totalPages);
+  const paginatedPosts = filteredPosts.slice(
+    (currentPage - 1) * POSTS_PER_PAGE,
+    currentPage * POSTS_PER_PAGE,
+  );
 
   return (
     <div className="min-h-screen bg-background">
