@@ -86,7 +86,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/40 to-background pointer-events-none" />
 
         {/* 3D Background */}
-        <div className="absolute inset-0 opacity-25 pointer-events-none">
+        <div className="absolute inset-0 opacity-20 pointer-events-none">
           <Suspense fallback={<div className="w-full h-full bg-gradient-glow" />}>
             <ThreatSphere />
           </Suspense>
