@@ -1,6 +1,6 @@
-import { Suspense, useState } from 'react';
+import { Suspense, useState, lazy } from 'react';
 import { Button } from '@/components/ui/button';
-import ThreatSphere from '@/components/ThreatSphere';
+const ThreatSphere = lazy(() => import('@/components/ThreatSphere'));
 import StatCard from '@/components/StatCard';
 import ServiceCard from '@/components/ServiceCard';
 import PricingCard from '@/components/PricingCard';
