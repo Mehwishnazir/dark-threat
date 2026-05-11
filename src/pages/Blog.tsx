@@ -142,11 +142,25 @@ const Blog = () => {
           </div>
         )}
 
-        {/* LOAD MORE */}
-        {hasMore && (
-          <div className="flex items-center justify-center mt-12">
-            <Button onClick={handleLoadMore} className="hero-button">
-              Load More
+        {/* PAGINATION */}
+        {totalPages > 1 && (
+          <div className="flex items-center justify-center gap-4 mt-12">
+            <Button
+              variant="outline"
+              onClick={() => setPage(currentPage - 1)}
+              disabled={currentPage <= 1}
+            >
+              Previous
+            </Button>
+            <span className="text-muted-foreground text-sm">
+              Page {currentPage} of {totalPages}
+            </span>
+            <Button
+              variant="outline"
+              onClick={() => setPage(currentPage + 1)}
+              disabled={currentPage >= totalPages}
+            >
+              Next
             </Button>
           </div>
         )}
