@@ -116,7 +116,7 @@ const Blog = () => {
                 size="sm"
                 onClick={() => {
                   setSelectedCategory(cat);
-                  setVisibleCount(POSTS_PER_PAGE);
+                  setPage(1);
                 }}
                 className="text-xs"
               >
