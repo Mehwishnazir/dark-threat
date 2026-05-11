@@ -218,3 +218,7 @@
   .marquee-track { animation: marquee 30s linear infinite; }
 }
 
+
+@media (max-width: 768px) {
+  .cyber-grid { background-image: none; }
+}
