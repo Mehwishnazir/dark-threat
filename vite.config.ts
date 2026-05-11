@@ -11,12 +11,24 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     react(),
-    mode === 'development' &&
-    componentTagger(),
+    mode === 'development' && componentTagger(),
   ].filter(Boolean),
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
+    },
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'vendor-react': ['react', 'react-dom', 'react-router-dom'],
+          'vendor-three': ['three'],
+          'vendor-radix': ['@radix-ui/react-dialog', '@radix-ui/react-accordion'],
+          'vendor-query': ['@tanstack/react-query'],
+          'blogs': ['./src/blogs/index.ts'],
+        },
+      },
     },
   },
 }));

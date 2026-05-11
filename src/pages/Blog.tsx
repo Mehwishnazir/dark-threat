@@ -1,5 +1,5 @@
 import { useState, useMemo, Suspense } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -22,9 +22,18 @@ const categories = [
 const POSTS_PER_PAGE = 12;
 
 const Blog = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All Blogs');
-  const [visibleCount, setVisibleCount] = useState(POSTS_PER_PAGE);
+  const page = Math.max(1, parseInt(searchParams.get('page') || '1', 10) || 1);
+
+  const setPage = (next: number) => {
+    const params = new URLSearchParams(searchParams);
+    if (next <= 1) params.delete('page');
+    else params.set('page', String(next));
+    setSearchParams(params);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   const filteredPosts = useMemo(() => {
     return allBlogs.filter((post: BlogPost) => {
@@ -40,12 +49,12 @@ const Blog = () => {
     });
   }, [searchQuery, selectedCategory]);
 
-  const paginatedPosts = filteredPosts.slice(0, visibleCount);
-  const hasMore = visibleCount < filteredPosts.length;
-
-  const handleLoadMore = () => {
-    setVisibleCount((c) => c + POSTS_PER_PAGE);
-  };
+  const totalPages = Math.max(1, Math.ceil(filteredPosts.length / POSTS_PER_PAGE));
+  const currentPage = Math.min(page, totalPages);
+  const paginatedPosts = filteredPosts.slice(
+    (currentPage - 1) * POSTS_PER_PAGE,
+    currentPage * POSTS_PER_PAGE,
+  );
 
   return (
     <div className="min-h-screen bg-background">
@@ -93,7 +102,7 @@ const Blog = () => {
               value={searchQuery}
               onChange={(e) => {
                 setSearchQuery(e.target.value);
-                setVisibleCount(POSTS_PER_PAGE);
+                setPage(1);
               }}
               className="pl-10 bg-card border-border"
             />
@@ -107,7 +116,7 @@ const Blog = () => {
                 size="sm"
                 onClick={() => {
                   setSelectedCategory(cat);
-                  setVisibleCount(POSTS_PER_PAGE);
+                  setPage(1);
                 }}
                 className="text-xs"
               >
@@ -133,11 +142,25 @@ const Blog = () => {
           </div>
         )}
 
-        {/* LOAD MORE */}
-        {hasMore && (
-          <div className="flex items-center justify-center mt-12">
-            <Button onClick={handleLoadMore} className="hero-button">
-              Load More
+        {/* PAGINATION */}
+        {totalPages > 1 && (
+          <div className="flex items-center justify-center gap-4 mt-12">
+            <Button
+              variant="outline"
+              onClick={() => setPage(currentPage - 1)}
+              disabled={currentPage <= 1}
+            >
+              Previous
+            </Button>
+            <span className="text-muted-foreground text-sm">
+              Page {currentPage} of {totalPages}
+            </span>
+            <Button
+              variant="outline"
+              onClick={() => setPage(currentPage + 1)}
+              disabled={currentPage >= totalPages}
+            >
+              Next
             </Button>
           </div>
         )}

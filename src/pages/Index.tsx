@@ -1,6 +1,6 @@
-import { Suspense, useState } from 'react';
+import { Suspense, useState, lazy } from 'react';
 import { Button } from '@/components/ui/button';
-import ThreatSphere from '@/components/ThreatSphere';
+const ThreatSphere = lazy(() => import('@/components/ThreatSphere'));
 import StatCard from '@/components/StatCard';
 import ServiceCard from '@/components/ServiceCard';
 import PricingCard from '@/components/PricingCard';
@@ -86,7 +86,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/40 to-background pointer-events-none" />
 
         {/* 3D Background */}
-        <div className="absolute inset-0 opacity-25 pointer-events-none">
+        <div className="absolute inset-0 opacity-20 pointer-events-none">
           <Suspense fallback={<div className="w-full h-full bg-gradient-glow" />}>
             <ThreatSphere />
           </Suspense>
