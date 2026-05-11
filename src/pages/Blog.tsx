@@ -102,7 +102,7 @@ const Blog = () => {
               value={searchQuery}
               onChange={(e) => {
                 setSearchQuery(e.target.value);
-                setVisibleCount(POSTS_PER_PAGE);
+                setPage(1);
               }}
               className="pl-10 bg-card border-border"
             />
