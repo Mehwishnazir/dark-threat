@@ -17,6 +17,29 @@ const Pricing = () => {
         <title>Pricing | DarkThreat Dark Web Monitoring Plans</title>
         <meta name="description" content="Transparent pricing for DarkThreat's dark web monitoring plans. Standard, Enterprise, and MSSP white-label tiers with a 7-day free trial. No credit card required." />
         <link rel="canonical" href="https://darkthreat.ai/pricing" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Product",
+          "name": "DarkThreat Dark Web Monitoring",
+          "description": "AI-powered dark web monitoring platform with real-time credential leak detection, hacker chatter alerts, and automated breach reports.",
+          "brand": { "@type": "Brand", "name": "DarkThreat" },
+          "offers": [
+            { "@type": "Offer", "name": "Standard Plan", "price": "288", "priceCurrency": "USD", "billingIncrement": "monthly", "url": "https://darkthreat.ai/pricing" },
+            { "@type": "Offer", "name": "Enterprise Plan", "price": "490", "priceCurrency": "USD", "billingIncrement": "monthly", "url": "https://darkthreat.ai/pricing" }
+          ],
+          "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "ratingCount": "127", "bestRating": "5" }
+        })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            { "@type": "Question", "name": "Is there a free trial?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. DarkThreat offers a 7-day free trial with full platform access. No credit card required to start." } },
+            { "@type": "Question", "name": "Can I cancel anytime?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Monthly plans can be cancelled anytime with no cancellation fees. Annual plans are non-refundable after the first 30 days." } },
+            { "@type": "Question", "name": "What is included in the Standard plan?", "acceptedAnswer": { "@type": "Answer", "text": "The Standard plan includes basic breach and credential monitoring for 1 domain, 1 user account, email notifications, and web UI access." } },
+            { "@type": "Question", "name": "Does DarkThreat offer annual discounts?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Annual billing saves up to 42% compared to monthly pricing. The Enterprise annual plan is $3,400/year vs $5,880 billed monthly." } },
+            { "@type": "Question", "name": "Is there a white-label MSSP option?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The MSSP plan includes a white-label portal, multi-tenant API, bulk onboarding, custom branding, and volume pricing. Contact us for a quote." } }
+          ]
+        })}</script>
       </Helmet>
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 py-6 px-6 border-b border-border bg-background/95 backdrop-blur-sm z-50">
