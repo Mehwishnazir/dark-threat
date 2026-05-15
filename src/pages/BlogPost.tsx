@@ -77,11 +77,31 @@ const BlogPost = () => {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    headline: post.title,
-    description: post.excerpt,
-    image: post.featuredImage,
-    datePublished: post.publishDate,
-    author: { "@type": "Person", name: post.author || "DarkThreat Team" },
+    "headline": (post as any).metaTitle || post.title,
+    "description": (post as any).metaDescription || post.excerpt,
+    "image": post.featuredImage,
+    "datePublished": post.publishDate,
+    "dateModified": post.publishDate,
+    "url": `https://darkthreat.ai/blog/${post.slug}`,
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://darkthreat.ai/blog/${post.slug}`
+    },
+    "author": {
+      "@type": "Person",
+      "name": post.author || "Dr. Ayaan Rahman",
+      "url": "https://darkthreat.ai/author/dr-ayaan-rahman"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "DarkThreat",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://darkthreat.ai/logo.png",
+        "width": 200,
+        "height": 60
+      }
+    }
   };
 
   return (

@@ -79,6 +79,16 @@ const Solution = () => {
         <title>Dark Web Monitoring Solution | DarkThreat.ai</title>
         <meta name="description" content="Explore DarkThreat's complete dark web monitoring solution: credential leak detection, PII exposure alerts, hacker chatter intelligence and automated leak reports." />
         <link rel="canonical" href="https://darkthreat.ai/solution" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Dark Web Monitoring Solution",
+          "provider": { "@type": "Organization", "name": "DarkThreat", "url": "https://darkthreat.ai" },
+          "serviceType": "Cybersecurity Monitoring",
+          "areaServed": "Worldwide",
+          "description": "Comprehensive dark web monitoring including credential leak detection, PII exposure alerts, hacker chatter intelligence, and automated breach reports.",
+          "offers": { "@type": "Offer", "url": "https://darkthreat.ai/pricing" }
+        })}</script>
       </Helmet>
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 py-6 px-6 border-b border-border bg-background/95 backdrop-blur-sm z-50">

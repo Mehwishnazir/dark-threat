@@ -49,6 +49,32 @@ const DarkWebMonitoring = () => {
         <meta name="description" content="DarkThreat's AI-powered dark web monitoring service scans millions of dark web sources 24/7 to detect credential leaks and data breaches before attackers exploit them." />
         <link rel="canonical" href="https://darkthreat.ai/dark-web-monitoring" />
         <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "HowTo",
+          "name": "How to Set Up Dark Web Monitoring for Your Business",
+          "description": "A step-by-step guide to implementing dark web monitoring using DarkThreat",
+          "step": [
+            {
+              "@type": "HowToStep",
+              "position": "1",
+              "name": "Connect Your Assets",
+              "text": "Add your company domains, employee email domains, IP ranges, and brand keywords to the DarkThreat monitoring dashboard. Setup takes under 5 minutes."
+            },
+            {
+              "@type": "HowToStep",
+              "position": "2",
+              "name": "AI Monitors 24/7",
+              "text": "DarkThreat's AI engine continuously scans 2M+ dark web sources including Tor hidden services, paste sites, hacker forums, Telegram channels, and stealer log marketplaces for your assets."
+            },
+            {
+              "@type": "HowToStep",
+              "position": "3",
+              "name": "Receive Instant Alerts",
+              "text": "When a match is detected, you receive real-time alerts via email, dashboard notification, or webhook integration with your SIEM. Average alert delivery: under 5 minutes from detection."
+            }
+          ]
+        })}</script>
       </Helmet>
 
       {/* Header */}
