@@ -2,6 +2,70 @@
 import { Button } from '@/components/ui/button';
 import { Shield, AlertTriangle, Search, BarChart3, Trash2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+
+const FAQ_JSON_LD = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is data leak detection?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "Data leak detection is automated monitoring of paste sites, dark web forums, breach databases, and hacker channels to identify when your company's sensitive data — credentials, documents, PII — appears without authorization.",
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How is data leak detection different from dark web monitoring?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Data leak detection focuses specifically on finding your data in breach dumps, paste sites, and public repositories. Dark web monitoring is broader, covering hacker chatter, forum discussions, and threat actor planning as well as data leaks.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How fast are data leak alerts delivered?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'DarkThreat delivers alerts within minutes of detecting your data on monitored sources.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What types of data leaks can you detect?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'We detect credential dumps, document leaks, source code exposure, API key leaks, customer PII, financial records, and internal communications appearing on unauthorized platforms.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is there a free trial for data leak detection?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes, DarkThreat offers a 7-day free trial with full data leak detection capabilities. No credit card required.',
+      },
+    },
+  ],
+};
+
+const SERVICE_JSON_LD = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Data Leak Detection',
+  name: 'DarkThreat Data Leak Detection',
+  provider: {
+    '@type': 'Organization',
+    name: 'DarkThreat',
+    url: 'https://darkthreat.ai',
+  },
+  areaServed: 'Global',
+  description:
+    "DarkThreat's data leak detection monitors paste sites, dark web forums, and breach databases to alert you the moment your company data surfaces online.",
+  url: 'https://darkthreat.ai/data-leak-detection',
+};
 
 const DataLeakDetection = () => {
   const challenges = [
@@ -69,6 +133,16 @@ const DataLeakDetection = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Data Leak Detection Service | DarkThreat.ai</title>
+        <meta
+          name="description"
+          content="DarkThreat's data leak detection monitors paste sites, dark web forums, and breach databases to alert you the moment your company data surfaces online. Start free."
+        />
+        <link rel="canonical" href="https://darkthreat.ai/data-leak-detection" />
+        <script type="application/ld+json">{JSON.stringify(FAQ_JSON_LD)}</script>
+        <script type="application/ld+json">{JSON.stringify(SERVICE_JSON_LD)}</script>
+      </Helmet>
       {/* Header */}
       <header className="py-6 px-6 border-b border-border">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
