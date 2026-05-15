@@ -51,6 +51,40 @@ const Index = () => {
     <div className="min-h-screen bg-background relative">
       <Helmet>
         <script type="application/ld+json">{JSON.stringify(ORG_JSON_LD)}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "DarkThreat",
+          "url": "https://darkthreat.ai",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://darkthreat.ai/blog?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "DarkThreat",
+          "applicationCategory": "SecurityApplication",
+          "operatingSystem": "Web",
+          "url": "https://darkthreat.ai",
+          "offers": {
+            "@type": "Offer",
+            "price": "288",
+            "priceCurrency": "USD",
+            "priceValidUntil": "2026-12-31"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "127",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "description": "AI-powered dark web monitoring and threat intelligence platform",
+          "screenshot": "https://darkthreat.ai/og-image.png"
+        })}</script>
       </Helmet>
 
       {/* Header */}
