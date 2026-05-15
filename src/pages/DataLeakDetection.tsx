@@ -133,6 +133,16 @@ const DataLeakDetection = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Data Leak Detection Service | DarkThreat.ai</title>
+        <meta
+          name="description"
+          content="DarkThreat's data leak detection monitors paste sites, dark web forums, and breach databases to alert you the moment your company data surfaces online. Start free."
+        />
+        <link rel="canonical" href="https://darkthreat.ai/data-leak-detection" />
+        <script type="application/ld+json">{JSON.stringify(FAQ_JSON_LD)}</script>
+        <script type="application/ld+json">{JSON.stringify(SERVICE_JSON_LD)}</script>
+      </Helmet>
       {/* Header */}
       <header className="py-6 px-6 border-b border-border">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
