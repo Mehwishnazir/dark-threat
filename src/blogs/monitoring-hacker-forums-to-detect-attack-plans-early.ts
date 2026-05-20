@@ -1,6 +1,6 @@
 import type { BlogPost as BlogPostType } from "@/components/blog/BlogCard";
 
-export const monitoringhackerforumstodetectattackplansearly: BlogPostType & {
+export const monitoringHackerForumsToDetectAttackPlansEarly: BlogPostType & {
   content: string;
   tableOfContents: { id: string; title: string }[];
   metaTitle: string;

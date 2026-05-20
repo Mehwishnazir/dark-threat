@@ -1,6 +1,6 @@
 import type { BlogPost as BlogPostType } from "@/components/blog/BlogCard";
 
-export const darkWebMonitoringPreventsLeaks: BlogPostType & {
+export const howDarkWebMonitoringHelpsPreventDataLeaks: BlogPostType & {
 content: string;
 tableOfContents: { id: string; title: string }[];
 metaTitle: string;

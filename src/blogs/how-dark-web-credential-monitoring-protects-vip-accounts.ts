@@ -1,6 +1,6 @@
 import type { BlogPost as BlogPostType } from "@/components/blog/BlogCard";
 
-export const howdarkwebcredentialmonitoringprotectsvipaccounts: BlogPostType & {
+export const howDarkWebCredentialMonitoringProtectsVipAccounts: BlogPostType & {
   content: string;
   tableOfContents: { id: string; title: string }[];
   metaTitle: string;

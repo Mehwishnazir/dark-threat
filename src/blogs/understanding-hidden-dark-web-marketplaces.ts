@@ -1,6 +1,6 @@
 import type { BlogPost as BlogPostType } from "@/components/blog/BlogCard";
 
-export const understandinghiddendarkwebmarketplaces: BlogPostType & {
+export const understandingHiddenDarkWebMarketplaces: BlogPostType & {
   content: string;
   tableOfContents: { id: string; title: string }[];
   metaTitle: string;

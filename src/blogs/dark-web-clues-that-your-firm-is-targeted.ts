@@ -1,6 +1,6 @@
 import type { BlogPost as BlogPostType } from "@/components/blog/BlogCard";
 
-export const darkwebcluesthatyourfirmistargeted: BlogPostType & {
+export const darkWebCluesThatYourFirmIsTargeted: BlogPostType & {
   content: string;
   tableOfContents: { id: string; title: string }[];
   metaTitle: string;

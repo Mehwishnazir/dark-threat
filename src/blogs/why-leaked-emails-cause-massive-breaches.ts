@@ -1,6 +1,6 @@
 import type { BlogPost as BlogPostType } from "@/components/blog/BlogCard";
 
-export const whyleakedemailscausemassivebreaches: BlogPostType & {
+export const whyLeakedEmailsCauseMassiveBreaches: BlogPostType & {
   content: string;
   tableOfContents: { id: string; title: string }[];
   metaTitle: string;
