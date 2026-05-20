@@ -876,19 +876,19 @@ html { scroll-behavior: smooth; }
 /* Category pills */
 .blog-listing-filters__cats {
   display: flex;
-  flex-wrap: nowrap;
-  gap: .5rem;
+  flex-wrap: wrap;
+  gap: .75rem .75rem;
   justify-content: flex-start;
-  overflow-x: auto;
-  padding-bottom: .25rem;
-  -webkit-overflow-scrolling: touch;
+  align-items: center;
+  overflow-x: visible;
+  padding-bottom: 0;
   min-width: 0;
 }
 .blog-listing-filters__cat-btn {
   display: inline-flex;
   align-items: center;
   gap: .35rem;
-  padding: .65rem 1rem;
+  padding: .75rem 1rem;
   font-size: .82rem;
   font-weight: 700;
   font-family: 'Montserrat', sans-serif;
@@ -900,20 +900,21 @@ html { scroll-behavior: smooth; }
   transition: all .25s ease;
   white-space: nowrap;
   box-shadow: inset 0 0 0 1px transparent;
+  min-width: 0;
 }
 .blog-listing-filters__cat-btn:hover {
   color: hsl(var(--foreground));
-  border-color: hsl(var(--blog-accent) / .5);
-  background: hsl(var(--blog-accent) / .08);
+  border-color: hsl(var(--primary) / .5);
+  background: hsl(var(--primary) / .08);
 }
 .blog-listing-filters__cat-btn--active {
   color: hsl(var(--foreground));
-  background: linear-gradient(135deg, hsl(var(--blog-accent) / .22), hsl(var(--primary) / .12));
-  border-color: hsl(var(--blog-accent));
-  box-shadow: 0 10px 30px rgba(20, 140, 255, .1);
+  background: linear-gradient(135deg, hsl(var(--primary) / .22), hsl(var(--primary) / .12));
+  border-color: hsl(var(--primary));
+  box-shadow: 0 10px 30px rgba(220, 40, 40, .12);
 }
 .blog-listing-filters__cat-btn--active:hover {
-  background: linear-gradient(135deg, hsl(var(--blog-accent) / .28), hsl(var(--primary) / .16));
+  background: linear-gradient(135deg, hsl(var(--primary) / .28), hsl(var(--primary) / .16));
 }
 .blog-listing-filters__cat-count {
   font-size: .7rem;
@@ -1502,12 +1503,14 @@ html { scroll-behavior: smooth; }
   }
   .blog-listing-filters__cats {
     justify-content: flex-start;
-    overflow-x: auto;
-    flex-wrap: nowrap;
-    padding-bottom: .25rem;
-    -webkit-overflow-scrolling: touch;
+    overflow-x: visible;
+    flex-wrap: wrap;
+    gap: .75rem;
+    padding-bottom: 0;
+    -webkit-overflow-scrolling: auto;
   }
   .blog-listing-filters__cat-btn {
-    flex-shrink: 0;
+    flex-shrink: 1;
+    min-width: 0;
   }
 }
