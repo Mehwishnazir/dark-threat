@@ -26,16 +26,18 @@ const Blog = () => {
   const [selectedCategory, setSelectedCategory] = useState('All Blogs');
   const page = Math.max(1, parseInt(searchParams.get('page') || '1', 10) || 1);
 
-  const setPage = (next: number) => {
+  const setPage = (next: number, scroll = true) => {
     const params = new URLSearchParams(searchParams);
     if (next <= 1) params.delete('page');
     else params.set('page', String(next));
     setSearchParams(params);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (scroll) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   };
 
   const filteredPosts = useMemo(() => {
-    return allBlogs.filter((post: BlogPost) => {
+    const posts = allBlogs.filter((post: BlogPost) => {
       const matchesSearch =
         searchQuery === '' ||
         post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -46,36 +48,25 @@ const Blog = () => {
 
       return matchesSearch && matchesCategory;
     });
+
+    return posts
+      .slice()
+      .sort((a, b) => {
+        const aTimestamp = Date.parse(a.publishDate) || 0;
+        const bTimestamp = Date.parse(b.publishDate) || 0;
+        return bTimestamp - aTimestamp;
+      });
   }, [searchQuery, selectedCategory]);
 
   const totalPages = Math.max(1, Math.ceil(filteredPosts.length / POSTS_PER_PAGE));
   const currentPage = Math.min(page, totalPages);
-  const paginatedPosts = filteredPosts.slice(
-    (currentPage - 1) * POSTS_PER_PAGE,
-    currentPage * POSTS_PER_PAGE,
-  );
+  const loadedCount = Math.min(currentPage * POSTS_PER_PAGE, filteredPosts.length);
+  const paginatedPosts = filteredPosts.slice(0, currentPage * POSTS_PER_PAGE);
 
   // Hero post is the first post on page 1 when no search is active
   const showHero = currentPage === 1 && searchQuery === '';
   const heroPost = showHero ? paginatedPosts[0] : null;
   const gridPosts = showHero ? paginatedPosts.slice(1) : paginatedPosts;
-
-  // Build numbered pagination
-  const getPageNumbers = () => {
-    const pages: (number | '...')[] = [];
-    if (totalPages <= 7) {
-      for (let i = 1; i <= totalPages; i++) pages.push(i);
-    } else {
-      pages.push(1);
-      if (currentPage > 3) pages.push('...');
-      const start = Math.max(2, currentPage - 1);
-      const end = Math.min(totalPages - 1, currentPage + 1);
-      for (let i = start; i <= end; i++) pages.push(i);
-      if (currentPage < totalPages - 2) pages.push('...');
-      pages.push(totalPages);
-    }
-    return pages;
-  };
 
   // Count posts per category for badges
   const categoryCounts = useMemo(() => {
@@ -137,9 +128,13 @@ const Blog = () => {
       <section className="blog-listing-filters">
         <div className="blog-listing-filters__inner">
           <div className="blog-listing-filters__search">
+            <label htmlFor="blog-search-input" className="sr-only">
+              Search blog articles
+            </label>
             <Search className="blog-listing-filters__search-icon" />
             <input
-              type="text"
+              id="blog-search-input"
+              type="search"
               placeholder="Search articles..."
               value={searchQuery}
               onChange={(e) => {
@@ -147,6 +142,7 @@ const Blog = () => {
                 setPage(1);
               }}
               className="blog-listing-filters__search-input"
+              aria-label="Search blog articles"
             />
           </div>
 
@@ -154,11 +150,13 @@ const Blog = () => {
             {categories.map((cat) => (
               <button
                 key={cat}
+                type="button"
                 onClick={() => {
                   setSelectedCategory(cat);
                   setPage(1);
                 }}
                 className={`blog-listing-filters__cat-btn ${selectedCategory === cat ? 'blog-listing-filters__cat-btn--active' : ''}`}
+                aria-pressed={selectedCategory === cat}
               >
                 {cat}
                 {categoryCounts[cat] != null && (
@@ -175,10 +173,17 @@ const Blog = () => {
         <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Blog' }]} />
 
         {/* Results info bar */}
-        <div className="blog-listing-results-bar">
-          <span>
-            Showing <strong>{(currentPage - 1) * POSTS_PER_PAGE + 1}</strong>–<strong>{Math.min(currentPage * POSTS_PER_PAGE, filteredPosts.length)}</strong> of <strong>{filteredPosts.length}</strong> articles
-          </span>
+        <div className="blog-listing-focus-line">
+          Important and recent articles are shown first.
+        </div>
+        <div className="blog-listing-results-bar" aria-live="polite" aria-atomic="true">
+          <div className="blog-listing-results-bar__summary">
+            <span className="blog-listing-results-bar__label">Showing</span>
+            <strong>{loadedCount}</strong>
+            <span className="blog-listing-results-bar__label">of</span>
+            <strong>{filteredPosts.length}</strong>
+            <span className="blog-listing-results-bar__label">articles</span>
+          </div>
           {searchQuery && (
             <span className="blog-listing-results-bar__query">
               for "<em>{searchQuery}</em>"
@@ -237,41 +242,17 @@ const Blog = () => {
           </>
         )}
 
-        {/* NUMBERED PAGINATION */}
-        {totalPages > 1 && (
-          <nav className="blog-pagination" aria-label="Blog pagination">
+        {currentPage < totalPages && (
+          <div className="blog-load-more">
             <button
-              className="blog-pagination__arrow"
-              onClick={() => setPage(currentPage - 1)}
-              disabled={currentPage <= 1}
-              aria-label="Previous page"
+              type="button"
+              className="blog-load-more__button"
+              onClick={() => setPage(currentPage + 1, false)}
+              aria-label="Load more articles"
             >
-              <ChevronLeft className="blog-pagination__arrow-icon" />
+              Load more articles
             </button>
-
-            {getPageNumbers().map((p, i) =>
-              p === '...' ? (
-                <span key={`ellipsis-${i}`} className="blog-pagination__ellipsis">…</span>
-              ) : (
-                <button
-                  key={p}
-                  onClick={() => setPage(p)}
-                  className={`blog-pagination__page ${currentPage === p ? 'blog-pagination__page--active' : ''}`}
-                >
-                  {p}
-                </button>
-              )
-            )}
-
-            <button
-              className="blog-pagination__arrow"
-              onClick={() => setPage(currentPage + 1)}
-              disabled={currentPage >= totalPages}
-              aria-label="Next page"
-            >
-              <ChevronRight className="blog-pagination__arrow-icon" />
-            </button>
-          </nav>
+          </div>
         )}
       </section>
 
