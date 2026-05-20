@@ -10,7 +10,7 @@ export const trackingcybercriminalshowdarkwebmonitoringhelpsyoustaysafe: BlogPos
   slug: "tracking-cybercriminals-how-dark-web-monitoring-helps-you-stay-safe",
   title: "Tracking Cybercriminals: How Dark Web Monitoring Helps You Stay Safe",
   excerpt: "Explore dark web monitoring techniques to track cybercriminals, enhance cybersecurity, and protect your organization from emerging threats.",
-  featuredImage: "/dark-threat-8.webp",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "Thursday, 26 February 2026",
   readingTime: "4 min read",

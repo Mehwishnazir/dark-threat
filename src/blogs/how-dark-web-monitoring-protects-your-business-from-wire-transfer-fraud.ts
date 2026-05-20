@@ -10,7 +10,7 @@ export const howDarkWebMonitoringProtectsYourBusinessFromWireTransferFraud: Blog
   slug: "how-dark-web-monitoring-protects-your-business-from-wire-transfer-fraud",
   title: "How Dark Web Monitoring Protects Your Business from Wire Transfer Fraud",
   excerpt: "Explore wire transfer fraud risks linked to dark web activity and learn how proactive monitoring and threat intelligence prevent costly business email compromise attacks",
-  featuredImage: "/images/blog/how-dark-web-monitoring-protects-your-business-from-wire-transfer-fraud.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "May 12, 2026",
   readingTime: "7 min read",

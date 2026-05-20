@@ -10,7 +10,7 @@ export const howsecurityteamsusedarkwebinsights: BlogPostType & {
   slug: "how-security-teams-use-dark-web-insights",
   title: "How Security Teams Use Dark Web Insights",
   excerpt: "Explore how security teams leverage dark web insights for threat detection and vulnerability management to enhance cybersecurity strategies.",
-  featuredImage: "/dark-threat-9.webp",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "Thursday, 26 March 2026",
   readingTime: "3 min read",

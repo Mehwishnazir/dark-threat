@@ -10,7 +10,7 @@ export const understandingthethreatofdarkwebcredentialleaks: BlogPostType & {
   slug: "understanding-the-threat-of-dark-web-credential-leaks",
   title: "Understanding the Threat of Dark Web Credential Leaks",
   excerpt: "Explore the threats posed by dark web credential leaks and discover practical strategies for identification, prevention, and response to safeguard your data.",
-  featuredImage: "/dark-threat-7.webp",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "Tuesday, 17 February 2026",
   readingTime: "3 min read",

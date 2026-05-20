@@ -10,7 +10,7 @@ export const emailAndPasswordCombosForSaleTheDarkWebCredentialEconomy: BlogPostT
   slug: "email-and-password-combos-for-sale-the-dark-web-credential-economy",
   title: "Email and Password Combos for Sale — The Dark Web Credential Economy",
   excerpt: "Explore the dark web credential economy its marketplace threats pricing trends and mitigation strategies for organizational cybersecurity and proactive defense.",
-  featuredImage: "/images/blog/email-and-password-combos-for-sale-the-dark-web-credential-economy.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "May 14, 2026",
   readingTime: "7 min read",

@@ -10,7 +10,7 @@ export const hiddenthreatslurkingindarkwebchannels: BlogPostType & {
   slug: "hidden-threats-lurking-in-dark-web-channels",
   title: "Hidden Threats Lurking in Dark Web Channels",
   excerpt: "Explore hidden threats in Dark Web channels, focusing on cybersecurity insights, risks, and effective mitigation strategies for organizations.",
-  featuredImage: "/dark-threat-8.webp",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "Tuesday, 24 March 2026",
   readingTime: "3 min read",

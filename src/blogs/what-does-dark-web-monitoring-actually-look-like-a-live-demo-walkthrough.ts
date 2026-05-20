@@ -10,7 +10,7 @@ export const whatDoesDarkWebMonitoringActuallyLookLikeALiveDemoWalkthrough: Blog
   slug: "what-does-dark-web-monitoring-actually-look-like-a-live-demo-walkthrough",
   title: "What Does Dark Web Monitoring Actually Look Like? A Live Demo Walkthrough",
   excerpt: "Discover how DarkThreat.AI provides comprehensive dark web monitoring. Learn about its features for proactive threat intelligence, protecting against data breaches and brand abuse.",
-  featuredImage: "/images/blog/what-does-dark-web-monitoring-actually-look-like-a-live-demo-walkthrough.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "May 1, 2026",
   readingTime: "12 min read",

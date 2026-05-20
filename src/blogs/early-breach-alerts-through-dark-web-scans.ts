@@ -10,7 +10,7 @@ export const earlybreachalertsthroughdarkwebscans: BlogPostType & {
   slug: "early-breach-alerts-through-dark-web-scans",
   title: "Early Breach Alerts Through Dark Web Scans",
   excerpt: "Explore the importance of early breach alerts through dark web scans in enhancing cybersecurity and protecting sensitive data against cyber threats.",
-  featuredImage: "/dark-threat-10.webp",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "Friday, 13 March 2026",
   readingTime: "4 min read",

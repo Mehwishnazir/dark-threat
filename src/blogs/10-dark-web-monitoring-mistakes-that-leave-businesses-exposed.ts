@@ -10,7 +10,7 @@ export const tenDarkWebMonitoringMistakesThatLeaveBusinessesExposed: BlogPostTyp
   slug: "10-dark-web-monitoring-mistakes-that-leave-businesses-exposed",
   title: "10 Dark Web Monitoring Mistakes That Leave Businesses Exposed",
   excerpt: "Avoid the top 10 critical dark web monitoring mistakes leaving businesses vulnerable to cyber threats. Enhance cybersecurity with comprehensive, real-time threat intelligence and proactive remediation.",
-  featuredImage: "/images/blog/10-dark-web-monitoring-mistakes-that-leave-businesses-exposed.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "May 1, 2026",
   readingTime: "22 min read",

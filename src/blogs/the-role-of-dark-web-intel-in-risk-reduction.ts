@@ -10,7 +10,7 @@ export const theroleofdarkwebintelinriskreduction: BlogPostType & {
   slug: "the-role-of-dark-web-intel-in-risk-reduction",
   title: "The Role of Dark Web Intel in Risk Reduction",
   excerpt: "Explore how dark web intelligence enhances risk management strategies to protect organizations from cyber threats",
-  featuredImage: "/dark-threat-7.webp",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "Wednesday, 25 March 2026",
   readingTime: "4 min read",

@@ -10,7 +10,7 @@ export const whyleakedemailscausemassivebreaches: BlogPostType & {
   slug: "why-leaked-emails-cause-massive-breaches",
   title: "Why Leaked Emails Cause Massive Breaches",
   excerpt: "Explore how leaked emails lead to significant breaches and discover strategies for protecting your organization in this comprehensive cybersecurity guide.",
-  featuredImage: "/dark-threat-9.webp",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "Wednesday, 25 March 2026",
   readingTime: "3 min read",

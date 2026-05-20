@@ -10,7 +10,7 @@ export const threatHuntingUsingDarkWebDataAPractitionersGuide: BlogPostType & {
   slug: "threat-hunting-using-dark-web-data-a-practitioners-guide",
   title: "Threat Hunting Using Dark Web Data — A Practitioner's Guide",
   excerpt: "Explore advanced threat hunting using dark web data including critical sources tools methodologies and integration to enhance cybersecurity detection and mitigation strategies",
-  featuredImage: "/images/blog/threat-hunting-using-dark-web-data-a-practitioners-guide.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "May 14, 2026",
   readingTime: "8 min read",

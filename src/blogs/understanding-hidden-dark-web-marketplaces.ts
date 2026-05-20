@@ -10,7 +10,7 @@ export const understandinghiddendarkwebmarketplaces: BlogPostType & {
   slug: "understanding-hidden-dark-web-marketplaces",
   title: "Understanding Hidden Dark Web Marketplaces",
   excerpt: "Explore the complexities of dark web marketplaces, their operational dynamics, security threats, and strategies for mitigating associated risks.",
-  featuredImage: "/dark-threat-9.webp",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "Wednesday, 18 March 2026",
   readingTime: "4 min read",

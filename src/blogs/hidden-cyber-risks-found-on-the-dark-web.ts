@@ -10,7 +10,7 @@ export const hiddencyberrisksfoundonthedarkweb: BlogPostType & {
   slug: "hidden-cyber-risks-found-on-the-dark-web",
   title: "Hidden Cyber Risks Found on the Dark Web",
   excerpt: "Explore vital insights on hidden cyber risks from the dark web and strategies for detection and prevention to enhance organizational cybersecurity.",
-  featuredImage: "/dark-threat-8.webp",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "Friday, 13 March 2026",
   readingTime: "3 min read",

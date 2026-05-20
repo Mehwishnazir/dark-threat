@@ -10,7 +10,7 @@ export const howtostayaheadofdarkwebthreatswithearlydetection: BlogPostType & {
   slug: "how-to-stay-ahead-of-dark-web-threats-with-early-detection",
   title: "How to Stay Ahead of Dark Web Threats with Early Detection",
   excerpt: "Discover how early detection can protect against dark web threats. Learn strategies to enhance cybersecurity and safeguard your organization's data.",
-  featuredImage: "/dark-threat-10.webp",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "Thursday, 5 March 2026",
   readingTime: "3 min read",

@@ -10,7 +10,7 @@ export const darkwebmonitoringforidentityprotection: BlogPostType & {
   slug: "dark-web-monitoring-for-identity-protection",
   title: "Dark Web Monitoring for Identity Protection",
   excerpt: "Explore dark web monitoring for identity protection, its importance, effective strategies, and real-world examples to safeguard sensitive information.",
-  featuredImage: "/dark-threat-7.webp",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "Wednesday, 11 March 2026",
   readingTime: "4 min read",

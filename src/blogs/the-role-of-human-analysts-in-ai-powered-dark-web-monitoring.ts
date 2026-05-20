@@ -10,7 +10,7 @@ export const theRoleOfHumanAnalystsInAiPoweredDarkWebMonitoring: BlogPostType & 
   slug: "the-role-of-human-analysts-in-ai-powered-dark-web-monitoring",
   title: "The Role of Human Analysts in AI-Powered Dark Web Monitoring",
   excerpt: "Discover how human analysts and AI collaboration enhance dark web monitoring by reducing false positives improving threat prioritization and boosting cybersecurity effectiveness.",
-  featuredImage: "/images/blog/the-role-of-human-analysts-in-ai-powered-dark-web-monitoring.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "May 12, 2026",
   readingTime: "7 min read",

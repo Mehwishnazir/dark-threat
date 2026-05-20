@@ -10,7 +10,7 @@ export const spottingcybercrimetrendsonthedarkweb: BlogPostType & {
   slug: "spotting-cybercrime-trends-on-the-dark-web",
   title: "Spotting Cybercrime Trends on the Dark Web",
   excerpt: "Explore cybercrime trends on the dark web, tracking tools, and risk mitigation strategies for cybersecurity professionals and law enforcement.",
-  featuredImage: "/dark-threat-7.webp",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "Thursday, 19 March 2026",
   readingTime: "3 min read",

@@ -10,7 +10,7 @@ export const howhackersusechatroomstoplanattacks: BlogPostType & {
   slug: "how-hackers-use-chatrooms-to-plan-attacks",
   title: "How Hackers Use Chatrooms to Plan Attacks",
   excerpt: "Explore how hackers use chatrooms to plan attacks and strategies cybersecurity professionals can employ to mitigate these threats effectively.",
-  featuredImage: "/dark-threat-10.webp",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "Friday, 20 March 2026",
   readingTime: "3 min read",

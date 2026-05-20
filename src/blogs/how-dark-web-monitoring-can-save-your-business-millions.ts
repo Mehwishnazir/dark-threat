@@ -10,7 +10,7 @@ export const howdarkwebmonitoringcansaveyourbusinessmillions: BlogPostType & {
   slug: "how-dark-web-monitoring-can-save-your-business-millions",
   title: "How Dark Web Monitoring Can Save Your Business Millions",
   excerpt: "Explore the importance of dark web monitoring, its benefits, real-world examples, and implementation strategies for cybersecurity.",
-  featuredImage: "/dark-threat-9.webp",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "Friday, 13 February 2026",
   readingTime: "3 min read",

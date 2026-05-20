@@ -10,7 +10,7 @@ export const howDarkWebMonitoringIntegratesWithYourExistingSecurityStack: BlogPo
   slug: "how-dark-web-monitoring-integrates-with-your-existing-security-stack",
   title: "How Dark Web Monitoring Integrates with Your Existing Security Stack",
   excerpt: "Explore integration of dark web monitoring with SIEM SOAR and ticketing systems to enhance cybersecurity with actionable intelligence early detection and automated response",
-  featuredImage: "/images/blog/how-dark-web-monitoring-integrates-with-your-existing-security-stack.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "May 12, 2026",
   readingTime: "8 min read",

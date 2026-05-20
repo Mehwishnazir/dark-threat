@@ -10,7 +10,7 @@ export const protectingdigitalfootprintswithmonitoring: BlogPostType & {
   slug: "protecting-digital-footprints-with-monitoring",
   title: "Protecting Digital Footprints with Monitoring",
   excerpt: "Understand the importance of monitoring and protecting your digital footprint for enhanced security and privacy in today's digital landscape.",
-  featuredImage: "/dark-threat-10.webp",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "Wednesday, 25 March 2026",
   readingTime: "3 min read",

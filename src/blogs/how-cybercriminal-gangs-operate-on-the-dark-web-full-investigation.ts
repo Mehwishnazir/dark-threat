@@ -10,7 +10,7 @@ export const howCybercriminalGangsOperateOnTheDarkWebFullInvestigation: BlogPost
   slug: "how-cybercriminal-gangs-operate-on-the-dark-web-full-investigation",
   title: "How Cybercriminal Gangs Operate on the Dark Web — Full Investigation",
   excerpt: "Explore the organizational structure recruitment tactics tooling and real-world cases of cybercriminal gangs on the dark web for effective cybersecurity defense",
-  featuredImage: "/images/blog/how-cybercriminal-gangs-operate-on-the-dark-web-full-investigation.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "May 14, 2026",
   readingTime: "7 min read",

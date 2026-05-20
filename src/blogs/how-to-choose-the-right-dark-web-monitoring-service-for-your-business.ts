@@ -10,7 +10,7 @@ export const howtochoosetherightdarkwebmonitoringserviceforyourbusiness: BlogPos
   slug: "how-to-choose-the-right-dark-web-monitoring-service-for-your-business",
   title: "How to Choose the Right Dark Web Monitoring Service for Your Business",
   excerpt: "Explore essential aspects of dark web monitoring services to strengthen your organization's cybersecurity and mitigate potential breaches effectively.",
-  featuredImage: "/dark-threat-7.webp",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "Tuesday, 3 March 2026",
   readingTime: "5 min read",

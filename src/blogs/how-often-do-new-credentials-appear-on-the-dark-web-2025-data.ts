@@ -10,7 +10,7 @@ export const howOftenDoNewCredentialsAppearOnTheDarkWeb2025Data: BlogPostType & 
   slug: "how-often-do-new-credentials-appear-on-the-dark-web-2025-data",
   title: "How Often Do New Credentials Appear on the Dark Web? (2025 Data)",
   excerpt: "Explore the relentless influx of compromised credentials on the dark web, understanding leak dynamics, 2025 forecasts, exploitation, and escalating costs. Learn why real-time monitoring is critical.",
-  featuredImage: "/images/blog/how-often-do-new-credentials-appear-on-the-dark-web-2025-data.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "May 1, 2026",
   readingTime: "14 min read",

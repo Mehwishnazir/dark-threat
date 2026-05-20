@@ -10,7 +10,7 @@ export const monitoringpastesitesforemergingbreaches: BlogPostType & {
   slug: "monitoring-paste-sites-for-emerging-breaches",
   title: "Monitoring Paste Sites for Emerging Breaches",
   excerpt: "Learn the significance of monitoring paste sites for cybersecurity to protect against data breaches and improve incident response strategies.",
-  featuredImage: "/dark-threat-9.webp",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "Friday, 20 March 2026",
   readingTime: "3 min read",

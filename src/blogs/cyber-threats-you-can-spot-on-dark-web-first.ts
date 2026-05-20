@@ -10,7 +10,7 @@ export const cyberthreatsyoucanspotondarkwebfirst: BlogPostType & {
   slug: "cyber-threats-you-can-spot-on-dark-web-first",
   title: "Cyber Threats You Can Spot on Dark Web First",
   excerpt: "Explore cyber threats on the dark web, including stolen data and malware, while learning effective monitoring and response strategies for cybersecurity professionals.",
-  featuredImage: "/dark-threat-9.webp",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "Tuesday, 17 March 2026",
   readingTime: "2 min read",

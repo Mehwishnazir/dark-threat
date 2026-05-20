@@ -10,7 +10,7 @@ export const howMultiFactorAuthenticationFailsAgainstDarkWebCredentialAttacks: B
   slug: "how-multi-factor-authentication-fails-against-dark-web-credential-attacks",
   title: "How Multi-Factor Authentication Fails Against Dark Web Credential Attacks",
   excerpt: "Explore the limitations of multi factor authentication MFA against dark web credential attacks including MFA fatigue session hijacking and best defense practices",
-  featuredImage: "/images/blog/how-multi-factor-authentication-fails-against-dark-web-credential-attacks.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "May 14, 2026",
   readingTime: "6 min read",

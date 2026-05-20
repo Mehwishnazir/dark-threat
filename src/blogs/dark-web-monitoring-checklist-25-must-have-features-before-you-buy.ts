@@ -10,7 +10,7 @@ export const darkWebMonitoringChecklist25MustHaveFeaturesBeforeYouBuy: BlogPostT
   slug: "dark-web-monitoring-checklist-25-must-have-features-before-you-buy",
   title: "Dark Web Monitoring Checklist — 25 Must-Have Features Before You Buy",
   excerpt: "Evaluate dark web monitoring solutions with this comprehensive 25-feature checklist. Enhance cybersecurity, gain actionable threat intelligence, and protect your organization from hidden threats.",
-  featuredImage: "/images/blog/dark-web-monitoring-checklist-25-must-have-features-before-you-buy.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "May 1, 2026",
   readingTime: "8 min read",

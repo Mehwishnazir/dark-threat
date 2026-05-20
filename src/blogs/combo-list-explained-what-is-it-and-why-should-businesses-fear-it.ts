@@ -10,7 +10,7 @@ export const comboListExplainedWhatIsItAndWhyShouldBusinessesFearIt: BlogPostTyp
   slug: "combo-list-explained-what-is-it-and-why-should-businesses-fear-it",
   title: "Combo List Explained — What Is It and Why Should Businesses Fear It?",
   excerpt: "Comprehensive guide on combo lists detailing their composition criminal use and mitigation strategies enhancing cybersecurity defenses against credential stuffing attacks",
-  featuredImage: "/images/blog/combo-list-explained-what-is-it-and-why-should-businesses-fear-it.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "May 14, 2026",
   readingTime: "8 min read",

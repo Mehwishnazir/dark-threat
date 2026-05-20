@@ -10,7 +10,7 @@ export const theDarkWebAsAnEarlyWarningSystemHowSecurityTeamsUseIt: BlogPostType
   slug: "the-dark-web-as-an-early-warning-system-how-security-teams-use-it",
   title: "The Dark Web as an Early Warning System — How Security Teams Use It",
   excerpt: "Explore how leveraging the dark web as an early warning system enhances cybersecurity by detecting emerging threats data leaks credential compromises ransomware and APT activities proactively",
-  featuredImage: "/images/blog/the-dark-web-as-an-early-warning-system-how-security-teams-use-it.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "May 14, 2026",
   readingTime: "8 min read",

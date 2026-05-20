@@ -10,7 +10,7 @@ export const trackinghighriskforumsforcyberthreats: BlogPostType & {
   slug: "tracking-high-risk-forums-for-cyber-threats",
   title: "Tracking High-Risk Forums for Cyber Threats",
   excerpt: "Learn effective strategies for monitoring high-risk forums to counter cyber threats and enhance your cybersecurity measures in the digital world.",
-  featuredImage: "/dark-threat-10.webp",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "Monday, 16 March 2026",
   readingTime: "4 min read",

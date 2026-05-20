@@ -10,7 +10,7 @@ export const threeWaysDarkWebMonitoringPreventsCorporateDataLeaks: BlogPostType 
   slug: "3-ways-dark-web-monitoring-prevents-corporate-data-leaks",
   title: "3 Ways Dark Web Monitoring Prevents Corporate Data Leaks",
   excerpt: "Explore how Dark Web monitoring helps prevent corporate data leaks through early detection, threat intelligence, and social engineering mitigation.",
-  featuredImage: "/dark-threat-10.webp",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "Wednesday, 18 February 2026",
   readingTime: "3 min read",

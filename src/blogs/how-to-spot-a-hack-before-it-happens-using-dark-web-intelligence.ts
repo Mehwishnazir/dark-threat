@@ -10,7 +10,7 @@ export const howtospotahackbeforeithappensusingdarkwebintelligence: BlogPostType
   slug: "how-to-spot-a-hack-before-it-happens-using-dark-web-intelligence",
   title: "How to Spot a Hack Before It Happens Using Dark Web Intelligence",
   excerpt: "Explore dark web intelligence, its importance in cybersecurity, and strategies for monitoring threats effectively to safeguard your organization.",
-  featuredImage: "/dark-threat-10.webp",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "Tuesday, 24 February 2026",
   readingTime: "4 min read",

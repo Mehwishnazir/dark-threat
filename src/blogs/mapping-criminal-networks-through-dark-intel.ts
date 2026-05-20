@@ -10,7 +10,7 @@ export const mappingcriminalnetworksthroughdarkintel: BlogPostType & {
   slug: "mapping-criminal-networks-through-dark-intel",
   title: "Mapping Criminal Networks Through Dark Intel",
   excerpt: "Explore dark intel methods for mapping criminal networks, enhancing cybersecurity, and promoting collaboration among law enforcement and cybersecurity experts.",
-  featuredImage: "/dark-threat-8.webp",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "Thursday, 26 March 2026",
   readingTime: "3 min read",

@@ -10,7 +10,7 @@ export const howtodetectemailcompromiseonthedarkweb: BlogPostType & {
   slug: "how-to-detect-email-compromise-on-the-dark-web",
   title: "How to Detect Email Compromise on the Dark Web",
   excerpt: "Learn how to detect email compromise on the dark web with effective tools, indicators of compromise, and prevention best practices.",
-  featuredImage: "/dark-threat-7.webp",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "Thursday, 12 February 2026",
   readingTime: "3 min read",

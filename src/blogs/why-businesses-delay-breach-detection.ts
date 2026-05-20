@@ -10,7 +10,7 @@ export const whybusinessesdelaybreachdetection: BlogPostType & {
   slug: "why-businesses-delay-breach-detection",
   title: "Why Businesses Delay Breach Detection",
   excerpt: "Explore barriers to breach detection, training gaps, tactics, and real-world examples to strengthen cybersecurity measures and mitigate risks.",
-  featuredImage: "/dark-threat-9.webp",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "Tuesday, 24 March 2026",
   readingTime: "4 min read",

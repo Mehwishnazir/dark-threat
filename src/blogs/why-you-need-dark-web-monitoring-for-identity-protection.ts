@@ -10,7 +10,7 @@ export const whyyouneeddarkwebmonitoringforidentityprotection: BlogPostType & {
   slug: "why-you-need-dark-web-monitoring-for-identity-protection",
   title: "Why You Need Dark Web Monitoring for Identity Protection",
   excerpt: "Explore the importance of dark web monitoring for identity protection and learn effective strategies to safeguard your personal information against cyber threats.",
-  featuredImage: "/dark-threat-8.webp",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "Wednesday, 11 March 2026",
   readingTime: "3 min read",

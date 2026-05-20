@@ -10,7 +10,7 @@ export const darkWebMonitoringForRemoteTeamsSecuringDistributedWorkforces: BlogP
   slug: "dark-web-monitoring-for-remote-teams-securing-distributed-workforces",
   title: "Dark Web Monitoring for Remote Teams — Securing Distributed Workforces",
   excerpt: "Explore effective dark web monitoring strategies for remote teams to protect credentials VPNs and SaaS passwords preventing cyber risks in distributed workforces",
-  featuredImage: "/images/blog/dark-web-monitoring-for-remote-teams-securing-distributed-workforces.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "May 12, 2026",
   readingTime: "7 min read",

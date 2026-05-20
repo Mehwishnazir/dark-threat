@@ -10,7 +10,7 @@ export const whattoexpectfromadarkwebmonitoringserviceatdifferentpricepoints: Bl
   slug: "what-to-expect-from-a-dark-web-monitoring-service-at-different-price-points",
   title: "What to Expect from a Dark Web Monitoring Service at Different Price Points",
   excerpt: "Discover dark web monitoring services, their features at varying price points, and how they enhance cybersecurity for organizations.",
-  featuredImage: "/dark-threat-10.webp",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "Monday, 9 March 2026",
   readingTime: "3 min read",

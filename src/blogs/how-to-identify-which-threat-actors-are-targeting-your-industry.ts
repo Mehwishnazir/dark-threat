@@ -10,7 +10,7 @@ export const howToIdentifyWhichThreatActorsAreTargetingYourIndustry: BlogPostTyp
   slug: "how-to-identify-which-threat-actors-are-targeting-your-industry",
   title: "How to Identify Which Threat Actors Are Targeting Your Industry",
   excerpt: "Explore how to identify threat actors targeting industries using advanced cybersecurity intelligence focused on APTs FIN7 Wizard Spider and Sandworm for proactive defense.",
-  featuredImage: "/images/blog/how-to-identify-which-threat-actors-are-targeting-your-industry.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "May 14, 2026",
   readingTime: "8 min read",

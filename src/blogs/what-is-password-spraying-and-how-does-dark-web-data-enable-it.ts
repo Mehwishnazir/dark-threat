@@ -10,7 +10,7 @@ export const whatIsPasswordSprayingAndHowDoesDarkWebDataEnableIt: BlogPostType &
   slug: "what-is-password-spraying-and-how-does-dark-web-data-enable-it",
   title: "What Is Password Spraying and How Does Dark Web Data Enable It?",
   excerpt: "Explore password spraying attacks their reliance on dark web data and how proactive dark web monitoring enhances cybersecurity defenses to prevent credential breaches and compromises",
-  featuredImage: "/images/blog/what-is-password-spraying-and-how-does-dark-web-data-enable-it.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "May 14, 2026",
   readingTime: "7 min read",

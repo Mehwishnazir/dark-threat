@@ -10,7 +10,7 @@ export const howRdpCredentialsFuelRansomwareTheDarkWebConnection: BlogPostType &
   slug: "how-rdp-credentials-fuel-ransomware-the-dark-web-connection",
   title: "How RDP Credentials Fuel Ransomware — The Dark Web Connection",
   excerpt: "Explore how stolen RDP credentials on dark web marketplaces fuel ransomware attacks Learn mitigation strategies AI threats and industry case studies to enhance cybersecurity defenses",
-  featuredImage: "/images/blog/how-rdp-credentials-fuel-ransomware-the-dark-web-connection.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "May 14, 2026",
   readingTime: "8 min read",

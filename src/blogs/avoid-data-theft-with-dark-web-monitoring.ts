@@ -10,7 +10,7 @@ export const avoiddatatheftwithdarkwebmonitoring: BlogPostType & {
   slug: "avoid-data-theft-with-dark-web-monitoring",
   title: "Avoid Data Theft with Dark Web Monitoring",
   excerpt: "Explore dark web monitoring to protect sensitive data, identify risks, and ensure compliance with evolving cybersecurity threats.",
-  featuredImage: "/dark-threat-9.webp",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "Monday, 16 March 2026",
   readingTime: "4 min read",

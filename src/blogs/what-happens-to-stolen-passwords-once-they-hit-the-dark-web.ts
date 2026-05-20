@@ -10,7 +10,7 @@ export const whatHappensToStolenPasswordsOnceTheyHitTheDarkWeb: BlogPostType & {
   slug: "what-happens-to-stolen-passwords-once-they-hit-the-dark-web",
   title: "What Happens to Stolen Passwords Once They Hit the Dark Web?",
   excerpt: "Explore the lifecycle of stolen passwords on the dark web including distribution methods exploitation strategies and defense solutions with advanced monitoring platforms.",
-  featuredImage: "/images/blog/what-happens-to-stolen-passwords-once-they-hit-the-dark-web.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "May 14, 2026",
   readingTime: "7 min read",

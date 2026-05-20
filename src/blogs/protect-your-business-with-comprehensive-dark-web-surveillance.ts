@@ -10,7 +10,7 @@ export const protectyourbusinesswithcomprehensivedarkwebsurveillance: BlogPostTy
   slug: "protect-your-business-with-comprehensive-dark-web-surveillance",
   title: "Protect Your Business with Comprehensive Dark Web Surveillance",
   excerpt: "Explore the significance of dark web surveillance, its implementation, and real-world examples to enhance cybersecurity for your organization.",
-  featuredImage: "/dark-threat-10.webp",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "Tuesday, 10 February 2026",
   readingTime: "4 min read",

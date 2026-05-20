@@ -10,7 +10,7 @@ export const whatbusinessesmisswithoutdarkwebtools: BlogPostType & {
   slug: "what-businesses-miss-without-dark-web-tools",
   title: "What Businesses Miss Without Dark Web Tools",
   excerpt: "Explore the importance, risks, benefits, and implementation of dark web tools for enhanced business security and risk management.",
-  featuredImage: "/dark-threat-8.webp",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "Tuesday, 17 March 2026",
   readingTime: "3 min read",

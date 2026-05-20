@@ -10,7 +10,7 @@ export const darkwebmonitoringwhichpricingplanfitsyourbusinessneeds: BlogPostTyp
   slug: "dark-web-monitoring-which-pricing-plan-fits-your-business-needs",
   title: "Dark Web Monitoring: Which Pricing Plan Fits Your Business Needs?",
   excerpt: "Explore essential aspects of dark web monitoring services to identify suitable pricing plans and vital features for your organization.",
-  featuredImage: "/dark-threat-8.webp",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "Monday, 9 March 2026",
   readingTime: "3 min read",

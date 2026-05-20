@@ -10,7 +10,7 @@ export const howNationStateActorsUseTheDarkWebForCyberEspionage: BlogPostType & 
   slug: "how-nation-state-actors-use-the-dark-web-for-cyber-espionage",
   title: "How Nation-State Actors Use the Dark Web for Cyber Espionage",
   excerpt: "Explore the role of the dark web in nation-state cyber espionage uncover tactics threat actors case studies and defense strategies for cybersecurity professionals",
-  featuredImage: "/images/blog/how-nation-state-actors-use-the-dark-web-for-cyber-espionage.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "May 14, 2026",
   readingTime: "10 min read",

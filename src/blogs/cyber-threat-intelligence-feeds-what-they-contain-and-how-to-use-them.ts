@@ -10,7 +10,7 @@ export const cyberThreatIntelligenceFeedsWhatTheyContainAndHowToUseThem: BlogPos
   slug: "cyber-threat-intelligence-feeds-what-they-contain-and-how-to-use-them",
   title: "Cyber Threat Intelligence Feeds — What They Contain and How to Use Them",
   excerpt: "Explore comprehensive cyber threat intelligence feeds including STIX TAXII IOC lists and dark web monitoring for enhanced cybersecurity defense and operational efficiency",
-  featuredImage: "/images/blog/cyber-threat-intelligence-feeds-what-they-contain-and-how-to-use-them.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "May 14, 2026",
   readingTime: "8 min read",

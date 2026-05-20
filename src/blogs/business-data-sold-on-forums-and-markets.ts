@@ -10,7 +10,7 @@ export const businessdatasoldonforumsandmarkets: BlogPostType & {
   slug: "business-data-sold-on-forums-and-markets",
   title: "Business Data Sold on Forums and Markets",
   excerpt: "Explore the sale of business data on underground markets, its implications, motivations, and preventive strategies for organizations.",
-  featuredImage: "/dark-threat-8.webp",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "Thursday, 19 March 2026",
   readingTime: "4 min read",

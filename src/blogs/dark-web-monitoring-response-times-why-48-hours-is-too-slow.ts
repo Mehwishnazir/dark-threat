@@ -10,7 +10,7 @@ export const darkWebMonitoringResponseTimesWhy48HoursIsTooSlow: BlogPostType & {
   slug: "dark-web-monitoring-response-times-why-48-hours-is-too-slow",
   title: "Dark Web Monitoring Response Times — Why 48 Hours Is Too Slow",
   excerpt: "Explore the dangers of slow dark web monitoring alert response times and discover why real-time alerts are essential for faster cybersecurity threat detection and risk mitigation",
-  featuredImage: "/images/blog/dark-web-monitoring-response-times-why-48-hours-is-too-slow.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "May 12, 2026",
   readingTime: "5 min read",

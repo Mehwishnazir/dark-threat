@@ -10,7 +10,7 @@ export const darkwebwarningsignsfirmsmusttrack: BlogPostType & {
   slug: "dark-web-warning-signs-firms-must-track",
   title: "Dark Web Warning Signs Firms Must Track",
   excerpt: "Explore essential dark web warning signs firms must track to safeguard their data and reputation against increasing cyber threats effectively.",
-  featuredImage: "/dark-threat-10.webp",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "Thursday, 26 March 2026",
   readingTime: "3 min read",

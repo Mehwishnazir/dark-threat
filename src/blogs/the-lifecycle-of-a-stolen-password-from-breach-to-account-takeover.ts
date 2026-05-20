@@ -10,7 +10,7 @@ export const theLifecycleOfAStolenPasswordFromBreachToAccountTakeover: BlogPostT
   slug: "the-lifecycle-of-a-stolen-password-from-breach-to-account-takeover",
   title: "The Lifecycle of a Stolen Password — From Breach to Account Takeover",
   excerpt: "Explore the stolen password lifecycle including breach origins dark web trading account takeover techniques and defense strategies using DarkThreat AI for cybersecurity professionals",
-  featuredImage: "/images/blog/the-lifecycle-of-a-stolen-password-from-breach-to-account-takeover.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "May 12, 2026",
   readingTime: "6 min read",

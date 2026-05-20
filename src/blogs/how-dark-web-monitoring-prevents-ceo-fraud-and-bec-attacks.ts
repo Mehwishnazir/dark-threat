@@ -10,7 +10,7 @@ export const howDarkWebMonitoringPreventsCeoFraudAndBecAttacks: BlogPostType & {
   slug: "how-dark-web-monitoring-prevents-ceo-fraud-and-bec-attacks",
   title: "How Dark Web Monitoring Prevents CEO Fraud and BEC Attacks",
   excerpt: "Explore how dark web monitoring prevents CEO fraud in Business Email Compromise attacks by detecting leaked executive credentials to protect organizations and reduce financial loss",
-  featuredImage: "/images/blog/how-dark-web-monitoring-prevents-ceo-fraud-and-bec-attacks.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "May 12, 2026",
   readingTime: "7 min read",

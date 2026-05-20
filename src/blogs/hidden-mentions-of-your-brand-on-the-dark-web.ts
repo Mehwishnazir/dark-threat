@@ -10,7 +10,7 @@ export const hiddenmentionsofyourbrandonthedarkweb: BlogPostType & {
   slug: "hidden-mentions-of-your-brand-on-the-dark-web",
   title: "Hidden Mentions of Your Brand on the Dark Web",
   excerpt: "Discover how hidden brand mentions on the dark web affect reputation and explore effective monitoring strategies to protect your organization.",
-  featuredImage: "/dark-threat-10.webp",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "Thursday, 19 March 2026",
   readingTime: "5 min read",

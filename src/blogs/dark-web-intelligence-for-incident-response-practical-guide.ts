@@ -10,7 +10,7 @@ export const darkWebIntelligenceForIncidentResponsePracticalGuide: BlogPostType 
   slug: "dark-web-intelligence-for-incident-response-practical-guide",
   title: "Dark Web Intelligence for Incident Response — Practical Guide",
   excerpt: "Explore how dark web intelligence enhances incident response by accelerating detection containment and attribution through actionable threat insights and modern tools.",
-  featuredImage: "/images/blog/dark-web-intelligence-for-incident-response-practical-guide.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "May 14, 2026",
   readingTime: "8 min read",

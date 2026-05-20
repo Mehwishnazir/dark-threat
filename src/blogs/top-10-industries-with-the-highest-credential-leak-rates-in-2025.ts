@@ -10,7 +10,7 @@ export const top10IndustriesWithTheHighestCredentialLeakRatesIn2025: BlogPostTyp
   slug: "top-10-industries-with-the-highest-credential-leak-rates-in-2025",
   title: "Top 10 Industries with the Highest Credential Leak Rates in 2025",
   excerpt: "Explore the top industries affected by credential leaks in 2025 with data driven insights on threats defense strategies and real world cybersecurity case studies",
-  featuredImage: "/images/blog/top-10-industries-with-the-highest-credential-leak-rates-in-2025.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "May 14, 2026",
   readingTime: "7 min read",

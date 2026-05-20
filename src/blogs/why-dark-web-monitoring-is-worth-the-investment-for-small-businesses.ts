@@ -10,7 +10,7 @@ export const whydarkwebmonitoringisworththeinvestmentforsmallbusinesses: BlogPos
   slug: "why-dark-web-monitoring-is-worth-the-investment-for-small-businesses",
   title: "Why Dark Web Monitoring is Worth the Investment for Small Businesses",
   excerpt: "Explore dark web monitoring and its importance for small businesses in safeguarding data, enhancing security, and preserving customer trust.",
-  featuredImage: "/dark-threat-9.webp",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "Monday, 9 March 2026",
   readingTime: "3 min read",

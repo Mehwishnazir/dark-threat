@@ -10,7 +10,7 @@ export const domainexposurerisksonthedarkweb: BlogPostType & {
   slug: "domain-exposure-risks-on-the-dark-web",
   title: "Domain Exposure Risks on the Dark Web",
   excerpt: "Explore the risks of domain exposure on the dark web and learn strategies to enhance cybersecurity for organizations and individuals alike.",
-  featuredImage: "/dark-threat-7.webp",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "Monday, 16 March 2026",
   readingTime: "3 min read",

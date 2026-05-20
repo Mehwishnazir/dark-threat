@@ -10,7 +10,7 @@ export const theimportanceofmonitoringstealerlogsforsecurity: BlogPostType & {
   slug: "the-importance-of-monitoring-stealer-logs-for-security",
   title: "The Importance of Monitoring Stealer Logs for Security",
   excerpt: "Learn the importance of monitoring stealer logs to enhance cybersecurity and protect sensitive data from evolving threats in today's digital landscape.",
-  featuredImage: "/dark-threat-8.webp",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "Wednesday, 18 February 2026",
   readingTime: "4 min read",

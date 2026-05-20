@@ -10,7 +10,7 @@ export const thehiddenthreatsonthedarkwebhowtodetectthem: BlogPostType & {
   slug: "the-hidden-threats-on-the-dark-web-how-to-detect-them",
   title: "The Hidden Threats on the Dark Web: How to Detect Them",
   excerpt: "Explore hidden threats on the dark web, detection methods, and mitigation strategies to safeguard your organization from potential risks.",
-  featuredImage: "/dark-threat-8.webp",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "Monday, 9 February 2026",
   readingTime: "3 min read",

@@ -10,7 +10,7 @@ export const darkwebindicatorsofcorporaterisk: BlogPostType & {
   slug: "dark-web-indicators-of-corporate-risk",
   title: "Dark Web Indicators of Corporate Risk",
   excerpt: "Explore dark web indicators of corporate risk and enhance cybersecurity. Learn key signs and mitigation strategies to protect your organization effectively.",
-  featuredImage: "/dark-threat-9.webp",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "Monday, 23 March 2026",
   readingTime: "3 min read",

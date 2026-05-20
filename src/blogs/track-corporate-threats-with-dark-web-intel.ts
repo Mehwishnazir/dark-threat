@@ -10,7 +10,7 @@ export const trackcorporatethreatswithdarkwebintel: BlogPostType & {
   slug: "track-corporate-threats-with-dark-web-intel",
   title: "Track Corporate Threats with Dark Web Intel",
   excerpt: "Understand dark web intelligence's impact on cybersecurity and how it helps organizations detect threats and protect sensitive information.",
-  featuredImage: "/dark-threat-9.webp",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "Friday, 13 March 2026",
   readingTime: "3 min read",

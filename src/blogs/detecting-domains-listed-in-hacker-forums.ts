@@ -10,7 +10,7 @@ export const detectingdomainslistedinhackerforums: BlogPostType & {
   slug: "detecting-domains-listed-in-hacker-forums",
   title: "Detecting Domains Listed in Hacker Forums",
   excerpt: "Explore how to detect compromised domains listed in hacker forums to enhance cybersecurity defenses and mitigate potential risks effectively.",
-  featuredImage: "/dark-threat-10.webp",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "Tuesday, 24 March 2026",
   readingTime: "3 min read",

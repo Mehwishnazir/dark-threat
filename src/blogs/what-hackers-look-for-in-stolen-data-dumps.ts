@@ -10,7 +10,7 @@ export const whathackerslookforinstolendatadumps: BlogPostType & {
   slug: "what-hackers-look-for-in-stolen-data-dumps",
   title: "What Hackers Look For in Stolen Data Dumps",
   excerpt: "Learn about what hackers seek in stolen data dumps, their impacts, and best practices for organizations to protect their sensitive information.",
-  featuredImage: "/dark-threat-7.webp",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "Friday, 20 March 2026",
   readingTime: "3 min read",

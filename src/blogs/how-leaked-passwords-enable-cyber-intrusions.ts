@@ -10,7 +10,7 @@ export const howleakedpasswordsenablecyberintrusions: BlogPostType & {
   slug: "how-leaked-passwords-enable-cyber-intrusions",
   title: "How Leaked Passwords Enable Cyber Intrusions",
   excerpt: "Explore how leaked passwords lead to cyber intrusions and discover strategies to enhance cybersecurity and protect sensitive data.",
-  featuredImage: "/dark-threat-7.webp",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "Thursday, 26 March 2026",
   readingTime: "3 min read",

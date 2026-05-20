@@ -10,7 +10,7 @@ export const darkWebMonitoringSetupGuideFromTrialToFullDeployment: BlogPostType 
   slug: "dark-web-monitoring-setup-guide-from-trial-to-full-deployment",
   title: "Dark Web Monitoring Setup Guide — From Trial to Full Deployment",
   excerpt: "Learn how to set up and optimize dark web monitoring with DarkThreat AI including trial onboarding full deployment best practices compliance and advanced threat intelligence.",
-  featuredImage: "/images/blog/dark-web-monitoring-setup-guide-from-trial-to-full-deployment.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "May 12, 2026",
   readingTime: "9 min read",

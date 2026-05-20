@@ -10,7 +10,7 @@ export const darkWebForumsVsTelegramChannelsWhereCybercriminalsAreMoving: BlogPo
   slug: "dark-web-forums-vs-telegram-channels-where-cybercriminals-are-moving",
   title: "Dark Web Forums vs Telegram Channels — Where Cybercriminals Are Moving",
   excerpt: "Explore the shift in cybercrime platforms from dark web forums to Telegram channels in 2025 with insights on monitoring strategies and emerging threat landscapes",
-  featuredImage: "/images/blog/dark-web-forums-vs-telegram-channels-where-cybercriminals-are-moving.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "May 14, 2026",
   readingTime: "7 min read",

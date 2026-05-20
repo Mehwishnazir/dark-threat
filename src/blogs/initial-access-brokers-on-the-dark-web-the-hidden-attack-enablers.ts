@@ -10,7 +10,7 @@ export const initialAccessBrokersOnTheDarkWebTheHiddenAttackEnablers: BlogPostTy
   slug: "initial-access-brokers-on-the-dark-web-the-hidden-attack-enablers",
   title: "Initial Access Brokers on the Dark Web — The Hidden Attack Enablers",
   excerpt: "Explore the dark web market for initial access brokers uncovering pricing models detection strategies and disruption tactics to enhance cybersecurity defense against ransomware and espionage threats",
-  featuredImage: "/images/blog/initial-access-brokers-on-the-dark-web-the-hidden-attack-enablers.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "May 14, 2026",
   readingTime: "6 min read",

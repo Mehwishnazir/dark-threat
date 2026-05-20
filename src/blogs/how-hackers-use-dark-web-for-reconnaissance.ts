@@ -10,7 +10,7 @@ export const howhackersusedarkwebforreconnaissance: BlogPostType & {
   slug: "how-hackers-use-dark-web-for-reconnaissance",
   title: "How Hackers Use Dark Web for Reconnaissance",
   excerpt: "Explore how hackers use the dark web for reconnaissance, including techniques, tools, and potential risks to organizations and individuals.",
-  featuredImage: "/dark-threat-8.webp",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "Wednesday, 18 March 2026",
   readingTime: "4 min read",

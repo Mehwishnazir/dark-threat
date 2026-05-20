@@ -10,7 +10,7 @@ export const theroleofdarkwebmonitoringinpersonalidentityprotection: BlogPostTyp
   slug: "the-role-of-dark-web-monitoring-in-personal-identity-protection",
   title: "The Role of Dark Web Monitoring in Personal Identity Protection",
   excerpt: "Learn about dark web monitoring, its importance in protecting personal identity, and essential practices for cybersecurity in the digital age.",
-  featuredImage: "/dark-threat-10.webp",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "Wednesday, 11 March 2026",
   readingTime: "3 min read",

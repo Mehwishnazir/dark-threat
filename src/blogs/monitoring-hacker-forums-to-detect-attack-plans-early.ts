@@ -10,7 +10,7 @@ export const monitoringhackerforumstodetectattackplansearly: BlogPostType & {
   slug: "monitoring-hacker-forums-to-detect-attack-plans-early",
   title: "Monitoring Hacker Forums to Detect Attack Plans Early",
   excerpt: "Discover best practices for monitoring hacker forums to enhance cybersecurity and threat intelligence in the evolving digital landscape.",
-  featuredImage: "/dark-threat-9.webp",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "Monday, 23 February 2026",
   readingTime: "4 min read",

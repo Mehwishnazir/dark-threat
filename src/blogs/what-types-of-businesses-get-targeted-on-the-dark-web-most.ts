@@ -10,7 +10,7 @@ export const whatTypesOfBusinessesGetTargetedOnTheDarkWebMost: BlogPostType & {
   slug: "what-types-of-businesses-get-targeted-on-the-dark-web-most",
   title: "What Types of Businesses Get Targeted on the Dark Web Most?",
   excerpt: "Explore the primary industries targeted on the dark web including finance healthcare legal technology and emerging sectors with insights on threats data breaches and defense strategies",
-  featuredImage: "/images/blog/what-types-of-businesses-get-targeted-on-the-dark-web-most.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "May 12, 2026",
   readingTime: "8 min read",

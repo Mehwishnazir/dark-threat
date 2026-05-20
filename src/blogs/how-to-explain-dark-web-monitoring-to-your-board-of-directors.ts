@@ -10,7 +10,7 @@ export const howToExplainDarkWebMonitoringToYourBoardOfDirectors: BlogPostType &
   slug: "how-to-explain-dark-web-monitoring-to-your-board-of-directors",
   title: "How to Explain Dark Web Monitoring to Your Board of Directors",
   excerpt: "Learn how to effectively communicate dark web monitoring to your board with focus on risk mitigation budget justification and strategic cybersecurity value for informed decision making",
-  featuredImage: "/images/blog/how-to-explain-dark-web-monitoring-to-your-board-of-directors.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "May 12, 2026",
   readingTime: "7 min read",

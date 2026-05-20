@@ -10,7 +10,7 @@ export const thekeyfeaturestolookforinadarkwebmonitoringtool: BlogPostType & {
   slug: "the-key-features-to-look-for-in-a-dark-web-monitoring-tool",
   title: "The Key Features to Look for in a Dark Web Monitoring Tool",
   excerpt: "Learn key features of dark web monitoring tools to protect your organization against credential breaches and enhance cybersecurity measures.",
-  featuredImage: "/dark-threat-10.webp",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "Tuesday, 3 March 2026",
   readingTime: "5 min read",

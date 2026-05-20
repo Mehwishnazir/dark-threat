@@ -10,7 +10,7 @@ export const howtoidentifyleakedcredentialsearly: BlogPostType & {
   slug: "how-to-identify-leaked-credentials-early",
   title: "How to Identify Leaked Credentials Early",
   excerpt: "Explore effective strategies for identifying leaked credentials to safeguard your organization and enhance cybersecurity measures against threats.",
-  featuredImage: "/dark-threat-7.webp",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "Tuesday, 17 March 2026",
   readingTime: "3 min read",

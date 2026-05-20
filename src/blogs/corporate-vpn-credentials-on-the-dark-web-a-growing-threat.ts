@@ -10,7 +10,7 @@ export const corporateVpnCredentialsOnTheDarkWebAGrowingThreat: BlogPostType & {
   slug: "corporate-vpn-credentials-on-the-dark-web-a-growing-threat",
   title: "Corporate VPN Credentials on the Dark Web — A Growing Threat",
   excerpt: "Explore the risks of corporate VPN credentials on the dark web threats targeting Pulse Secure Fortinet and Cisco ASA with strategies for mitigation and future industry trends",
-  featuredImage: "/images/blog/corporate-vpn-credentials-on-the-dark-web-a-growing-threat.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "May 14, 2026",
   readingTime: "6 min read",

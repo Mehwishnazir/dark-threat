@@ -10,7 +10,7 @@ export const whatspywarelogsrevealaboutdatatheft: BlogPostType & {
   slug: "what-spyware-logs-reveal-about-data-theft",
   title: "What Spyware Logs Reveal About Data Theft",
   excerpt: "Explore how spyware logs can help detect data theft and improve cybersecurity practices for enhanced protection against digital threats",
-  featuredImage: "/dark-threat-8.webp",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "Wednesday, 25 March 2026",
   readingTime: "3 min read",

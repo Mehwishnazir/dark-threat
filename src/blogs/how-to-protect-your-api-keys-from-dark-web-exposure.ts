@@ -10,7 +10,7 @@ export const howToProtectYourApiKeysFromDarkWebExposure: BlogPostType & {
   slug: "how-to-protect-your-api-keys-from-dark-web-exposure",
   title: "How to Protect Your API Keys from Dark Web Exposure",
   excerpt: "Learn how API key dark web exposure risks arise through stealer logs public repos and forums with expert protection strategies and advanced DarkThreat AI monitoring",
-  featuredImage: "/images/blog/how-to-protect-your-api-keys-from-dark-web-exposure.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "May 14, 2026",
   readingTime: "7 min read",

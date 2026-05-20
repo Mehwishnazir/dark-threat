@@ -10,7 +10,7 @@ export const whatTheDarkWebActuallyLooksLikeAVisualGuide: BlogPostType & {
   slug: "what-the-dark-web-actually-looks-like-a-visual-guide",
   title: "What the Dark Web Actually Looks Like — A Visual Guide",
   excerpt: "Comprehensive visual guide to the dark web's architecture interfaces marketplaces and monitoring importance for cybersecurity professionals and business leaders",
-  featuredImage: "/images/blog/what-the-dark-web-actually-looks-like-a-visual-guide.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "May 12, 2026",
   readingTime: "7 min read",

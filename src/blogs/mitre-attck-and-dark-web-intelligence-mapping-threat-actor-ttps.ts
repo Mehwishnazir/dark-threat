@@ -10,7 +10,7 @@ export const mitreAttckAndDarkWebIntelligenceMappingThreatActorTtps: BlogPostTyp
   slug: "mitre-attck-and-dark-web-intelligence-mapping-threat-actor-ttps",
   title: "MITRE ATT&CK and Dark Web Intelligence — Mapping Threat Actor TTPs",
   excerpt: "Explore how integrating MITRE ATTCK framework with dark web intelligence enhances cybersecurity by improving threat detection response through real world adversary behavior analysis.",
-  featuredImage: "/images/blog/mitre-attck-and-dark-web-intelligence-mapping-threat-actor-ttps.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "May 14, 2026",
   readingTime: "7 min read",

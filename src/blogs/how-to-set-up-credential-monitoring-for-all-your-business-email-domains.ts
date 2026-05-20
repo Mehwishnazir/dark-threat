@@ -10,7 +10,7 @@ export const howToSetUpCredentialMonitoringForAllYourBusinessEmailDomains: BlogP
   slug: "how-to-set-up-credential-monitoring-for-all-your-business-email-domains",
   title: "How to Set Up Credential Monitoring for All Your Business Email Domains",
   excerpt: "Learn how to set up effective credential monitoring for business email domains with DarkThreat AI reducing risk of breaches ransomware and compliance issues",
-  featuredImage: "/images/blog/how-to-set-up-credential-monitoring-for-all-your-business-email-domains.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "May 14, 2026",
   readingTime: "7 min read",

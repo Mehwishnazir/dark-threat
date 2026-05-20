@@ -10,7 +10,7 @@ export const howstolenpasswordsspreadondarkweb: BlogPostType & {
   slug: "how-stolen-passwords-spread-on-dark-web",
   title: "How Stolen Passwords Spread on Dark Web",
   excerpt: "Explore how stolen passwords proliferate on the dark web and uncover vital strategies for protecting sensitive information and enhancing security.",
-  featuredImage: "/dark-threat-10.webp",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "Tuesday, 17 March 2026",
   readingTime: "4 min read",

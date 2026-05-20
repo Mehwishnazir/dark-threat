@@ -10,7 +10,7 @@ export const canSmallBusinessOwnersMonitorTheDarkWebThemselves: BlogPostType & {
   slug: "can-small-business-owners-monitor-the-dark-web-themselves",
   title: "Can Small Business Owners Monitor the Dark Web Themselves?",
   excerpt: "Small businesses face sophisticated dark web threats. Learn why DIY dark web monitoring is inadequate and discover how professional solutions like DarkThreat.AI offer essential protection.",
-  featuredImage: "/images/blog/can-small-business-owners-monitor-the-dark-web-themselves.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "May 1, 2026",
   readingTime: "14 min read",

@@ -10,7 +10,7 @@ export const howtochoosetherightdarkwebmonitoringplanforyourbusiness: BlogPostTy
   slug: "how-to-choose-the-right-dark-web-monitoring-plan-for-your-business",
   title: "How to Choose the Right Dark Web Monitoring Plan for Your Business",
   excerpt: "Learn how dark web monitoring can protect your business from data breaches and secure sensitive information with the right plan and strategies.",
-  featuredImage: "/dark-threat-7.webp",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "Monday, 9 March 2026",
   readingTime: "3 min read",

@@ -10,7 +10,7 @@ export const howDarkWebMonitoringSavedThisCompany23mCaseStudy: BlogPostType & {
   slug: "how-dark-web-monitoring-saved-this-company-23m-case-study",
   title: "How Dark Web Monitoring Saved This Company \$2.3M — Case Study",
   excerpt: "Discover how dark web monitoring saved FinancialCorp \$2.3M by preventing a major cyberattack. This case study highlights the ROI of proactive threat intelligence for financial services cybersecurity.",
-  featuredImage: "/images/blog/how-dark-web-monitoring-saved-this-company-23m-case-study.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "May 1, 2026",
   readingTime: "14 min read",

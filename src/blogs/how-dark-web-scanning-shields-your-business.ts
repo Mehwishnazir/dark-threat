@@ -10,7 +10,7 @@ export const howdarkwebscanningshieldsyourbusiness: BlogPostType & {
   slug: "how-dark-web-scanning-shields-your-business",
   title: "How Dark Web Scanning Shields Your Business",
   excerpt: "Explore the importance of dark web scanning for businesses, understanding its risks and benefits for enhanced cybersecurity measures.",
-  featuredImage: "/dark-threat-7.webp",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "Friday, 13 March 2026",
   readingTime: "3 min read",

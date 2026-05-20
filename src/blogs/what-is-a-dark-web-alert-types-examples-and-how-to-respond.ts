@@ -10,7 +10,7 @@ export const whatIsADarkWebAlertTypesExamplesAndHowToRespond: BlogPostType & {
   slug: "what-is-a-dark-web-alert-types-examples-and-how-to-respond",
   title: "What Is a Dark Web Alert? Types, Examples, and How to Respond",
   excerpt: "Explore dark web alerts for proactive cybersecurity including credential leaks domain monitoring threat intelligence and effective response playbooks to mitigate cyber risks",
-  featuredImage: "/images/blog/what-is-a-dark-web-alert-types-examples-and-how-to-respond.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "May 12, 2026",
   readingTime: "7 min read",

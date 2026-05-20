@@ -10,7 +10,7 @@ export const passwordDumpVsCredentialListWhatSecurityTeamsNeedToKnow: BlogPostTy
   slug: "password-dump-vs-credential-list-what-security-teams-need-to-know",
   title: "Password Dump vs Credential List — What Security Teams Need to Know",
   excerpt: "Explore the key differences between password dumps and credential lists including combo lists and stealer logs with insights on detection remediation and dark web monitoring benefits",
-  featuredImage: "/images/blog/password-dump-vs-credential-list-what-security-teams-need-to-know.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "May 12, 2026",
   readingTime: "6 min read",

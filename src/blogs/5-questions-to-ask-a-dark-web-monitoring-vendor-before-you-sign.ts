@@ -10,7 +10,7 @@ export const fiveQuestionsToAskADarkWebMonitoringVendorBeforeYouSign: BlogPostTy
   slug: "5-questions-to-ask-a-dark-web-monitoring-vendor-before-you-sign",
   title: "5 Questions to Ask a Dark Web Monitoring Vendor Before You Sign",
   excerpt: "Explore crucial questions to ask dark web monitoring vendors covering visibility alert accuracy data integration compliance and incident response for enhanced cybersecurity",
-  featuredImage: "/images/blog/5-questions-to-ask-a-dark-web-monitoring-vendor-before-you-sign.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "May 12, 2026",
   readingTime: "7 min read",

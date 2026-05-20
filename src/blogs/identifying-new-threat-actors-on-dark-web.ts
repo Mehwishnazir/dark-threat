@@ -10,7 +10,7 @@ export const identifyingnewthreatactorsondarkweb: BlogPostType & {
   slug: "identifying-new-threat-actors-on-dark-web",
   title: "Identifying New Threat Actors on Dark Web",
   excerpt: "Explore effective strategies and tools for identifying new threat actors on the dark web to enhance cybersecurity resilience and protection.",
-  featuredImage: "/dark-threat-7.webp",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "Monday, 23 March 2026",
   readingTime: "4 min read",

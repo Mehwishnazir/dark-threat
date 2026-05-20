@@ -10,7 +10,7 @@ export const theHistoryOfDarkWebMonitoringFromManualOsintToAiAutomation: BlogPos
   slug: "the-history-of-dark-web-monitoring-from-manual-osint-to-ai-automation",
   title: "The History of Dark Web Monitoring — From Manual OSINT to AI Automation",
   excerpt: "Explore the history of dark web monitoring from manual OSINT to AI-driven threat intelligence. Understand its evolution, challenges, and solutions for proactive cybersecurity with DarkThreat.AI.",
-  featuredImage: "/images/blog/the-history-of-dark-web-monitoring-from-manual-osint-to-ai-automation.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "May 1, 2026",
   readingTime: "12 min read",

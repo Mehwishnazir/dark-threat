@@ -10,7 +10,7 @@ export const howHackersValidateStolenCredentialsBeforeUsingThem: BlogPostType & 
   slug: "how-hackers-validate-stolen-credentials-before-using-them",
   title: "How Hackers Validate Stolen Credentials Before Using Them",
   excerpt: "Explore how hackers validate stolen credentials using advanced tools and speed to maximize value Learn defense strategies and industry insights for effective cybersecurity protection",
-  featuredImage: "/images/blog/how-hackers-validate-stolen-credentials-before-using-them.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "May 14, 2026",
   readingTime: "6 min read",

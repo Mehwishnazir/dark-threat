@@ -10,7 +10,7 @@ export const sessionTokenHijackingTheCredentialAttackDarkWebMonitoringCatches: B
   slug: "session-token-hijacking-the-credential-attack-dark-web-monitoring-catches",
   title: "Session Token Hijacking — The Credential Attack Dark Web Monitoring Catches",
   excerpt: "Explore session token hijacking threats techniques real breach cases and effective dark web monitoring strategies to detect mitigate and prevent token based cyber attacks",
-  featuredImage: "/images/blog/session-token-hijacking-the-credential-attack-dark-web-monitoring-catches.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "May 14, 2026",
   readingTime: "6 min read",

@@ -10,7 +10,7 @@ export const howFrequentlyShouldYouRunDarkWebScansTheAnswerSurprisesMost: BlogPo
   slug: "how-frequently-should-you-run-dark-web-scans-the-answer-surprises-most",
   title: "How Frequently Should You Run Dark Web Scans? (The Answer Surprises Most)",
   excerpt: "Discover why scheduled dark web monitoring is inadequate. Real-time surveillance provides immediate threat detection, minimizing data breaches and strengthening your cybersecurity posture.",
-  featuredImage: "/images/blog/how-frequently-should-you-run-dark-web-scans-the-answer-surprises-most.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "May 1, 2026",
   readingTime: "11 min read",

@@ -10,7 +10,7 @@ export const breachedPasswordDatabasesHowTheyreBuiltSoldAndUsed: BlogPostType & 
   slug: "breached-password-databases-how-theyre-built-sold-and-used",
   title: "Breached Password Databases — How They're Built, Sold, and Used",
   excerpt: "Explore how breached password databases on the dark web threaten cybersecurity Learn their creation trade exploitation and defense strategies with DarkThreat AI insights",
-  featuredImage: "/images/blog/breached-password-databases-how-theyre-built-sold-and-used.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "May 14, 2026",
   readingTime: "8 min read",

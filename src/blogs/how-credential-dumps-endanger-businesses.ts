@@ -10,7 +10,7 @@ export const howcredentialdumpsendangerbusinesses: BlogPostType & {
   slug: "how-credential-dumps-endanger-businesses",
   title: "How Credential Dumps Endanger Businesses",
   excerpt: "Credential dumps pose serious risks to businesses, impacting finances and reputation. Learn to mitigate these threats with effective strategies.",
-  featuredImage: "/dark-threat-10.webp",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "Wednesday, 18 March 2026",
   readingTime: "4 min read",

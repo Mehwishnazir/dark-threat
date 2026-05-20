@@ -10,7 +10,7 @@ export const whyhackeractivityonthedarkwebmattersforbusinesses: BlogPostType & {
   slug: "why-hacker-activity-on-the-dark-web-matters-for-businesses",
   title: "Why Hacker Activity on the Dark Web Matters for Businesses",
   excerpt: "Explore strategies for businesses to combat hacker threats on the dark web and safeguard their data against cybercrime risks.",
-  featuredImage: "/dark-threat-8.webp",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "Monday, 23 February 2026",
   readingTime: "4 min read",

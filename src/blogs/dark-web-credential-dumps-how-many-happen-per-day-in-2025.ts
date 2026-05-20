@@ -10,7 +10,7 @@ export const darkWebCredentialDumpsHowManyHappenPerDayIn2025: BlogPostType & {
   slug: "dark-web-credential-dumps-how-many-happen-per-day-in-2025",
   title: "Dark Web Credential Dumps — How Many Happen Per Day in 2025?",
   excerpt: "Explore the 2025 landscape of daily credential dumps on the dark web revealing rising cybersecurity risks and best practices for detection mitigation and response.",
-  featuredImage: "/images/blog/dark-web-credential-dumps-how-many-happen-per-day-in-2025.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "May 14, 2026",
   readingTime: "8 min read",

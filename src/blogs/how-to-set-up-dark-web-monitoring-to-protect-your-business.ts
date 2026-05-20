@@ -10,7 +10,7 @@ export const howtosetupdarkwebmonitoringtoprotectyourbusiness: BlogPostType & {
   slug: "how-to-set-up-dark-web-monitoring-to-protect-your-business",
   title: "How to Set Up Dark Web Monitoring to Protect Your Business",
   excerpt: "Learn how to effectively monitor the dark web for stolen credentials and safeguard your organization against data breaches.",
-  featuredImage: "/dark-threat-8.webp",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "Tuesday, 3 March 2026",
   readingTime: "5 min read",

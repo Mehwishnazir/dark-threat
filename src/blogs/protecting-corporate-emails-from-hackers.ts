@@ -10,7 +10,7 @@ export const protectingcorporateemailsfromhackers: BlogPostType & {
   slug: "protecting-corporate-emails-from-hackers",
   title: "Protecting Corporate Emails from Hackers",
   excerpt: "Learn how to protect corporate emails from hackers with effective strategies and security measures to safeguard sensitive information.",
-  featuredImage: "/dark-threat-8.webp",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "Monday, 16 March 2026",
   readingTime: "3 min read",

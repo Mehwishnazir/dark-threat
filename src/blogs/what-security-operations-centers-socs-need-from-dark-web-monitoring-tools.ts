@@ -10,7 +10,7 @@ export const whatSecurityOperationsCentersSocsNeedFromDarkWebMonitoringTools: Bl
   slug: "what-security-operations-centers-socs-need-from-dark-web-monitoring-tools",
   title: "What Security Operations Centers (SOCs) Need from Dark Web Monitoring Tools",
   excerpt: "Equip your SOC with vital dark web monitoring capabilities. Learn about seamless SIEM/SOAR integration and AI/ML for proactive defense against cyber threats, compromised credentials, and data leaks.",
-  featuredImage: "/images/blog/what-security-operations-centers-socs-need-from-dark-web-monitoring-tools.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "May 1, 2026",
   readingTime: "12 min read",

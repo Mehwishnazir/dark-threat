@@ -10,7 +10,7 @@ export const howcompanieslosedatawithoutknowing: BlogPostType & {
   slug: "how-companies-lose-data-without-knowing",
   title: "How Companies Lose Data Without Knowing",
   excerpt: "Explore the critical causes of data loss in companies and learn effective prevention strategies to safeguard your organizational data.",
-  featuredImage: "/dark-threat-8.webp",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "Monday, 23 March 2026",
   readingTime: "3 min read",

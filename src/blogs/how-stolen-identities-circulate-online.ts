@@ -10,7 +10,7 @@ export const howstolenidentitiescirculateonline: BlogPostType & {
   slug: "how-stolen-identities-circulate-online",
   title: "How Stolen Identities Circulate Online",
   excerpt: "Explore how stolen identities circulate online, the impact of identity theft, effective prevention strategies, and technology's role in combating this issue.",
-  featuredImage: "/dark-threat-7.webp",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "Tuesday, 24 March 2026",
   readingTime: "4 min read",

@@ -10,7 +10,7 @@ export const howCredentialStuffingWorksStepByStepAttackAnatomy: BlogPostType & {
   slug: "how-credential-stuffing-works-step-by-step-attack-anatomy",
   title: "How Credential Stuffing Works — Step-by-Step Attack Anatomy",
   excerpt: "Explore credential stuffing attack anatomy including dark web credential harvesting automated testing monetization and defenses like MFA behavioral analysis and dark web intelligence",
-  featuredImage: "/images/blog/how-credential-stuffing-works-step-by-step-attack-anatomy.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "May 12, 2026",
   readingTime: "6 min read",

@@ -10,7 +10,7 @@ export const howToAuditYourCompanysCredentialExposureIn24Hours: BlogPostType & {
   slug: "how-to-audit-your-companys-credential-exposure-in-24-hours",
   title: "How to Audit Your Company's Credential Exposure in 24 Hours",
   excerpt: "Comprehensive guide on conducting a credential exposure audit in 24 hours using DarkThreatAI automated dark web monitoring to quickly detect and mitigate credential leaks",
-  featuredImage: "/images/blog/how-to-audit-your-companys-credential-exposure-in-24-hours.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "May 12, 2026",
   readingTime: "7 min read",

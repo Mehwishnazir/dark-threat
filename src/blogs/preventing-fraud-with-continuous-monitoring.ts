@@ -10,7 +10,7 @@ export const preventingfraudwithcontinuousmonitoring: BlogPostType & {
   slug: "preventing-fraud-with-continuous-monitoring",
   title: "Preventing Fraud with Continuous Monitoring",
   excerpt: "Explore continuous monitoring strategies for fraud prevention, its importance, key components, real-world applications, and future trends in cybersecurity.",
-  featuredImage: "/dark-threat-10.webp",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "Monday, 23 March 2026",
   readingTime: "4 min read",

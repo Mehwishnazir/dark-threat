@@ -10,7 +10,7 @@ export const darkWebMonitoringIn2025WhatsChangedAndWhatMattersNow: BlogPostType 
   slug: "dark-web-monitoring-in-2025-whats-changed-and-what-matters-now",
   title: "Dark Web Monitoring in 2025 — What's Changed and What Matters Now",
   excerpt: "Explore 2025 dark web monitoring trends featuring AI driven intelligence platform migrations to Telegram and the rise of stealer logs for enhanced cybersecurity strategies",
-  featuredImage: "/images/blog/dark-web-monitoring-in-2025-whats-changed-and-what-matters-now.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "May 12, 2026",
   readingTime: "8 min read",

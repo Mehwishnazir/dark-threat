@@ -10,7 +10,7 @@ export const whyyourbusinessshouldusedarkwebmonitoringfordataprotection: BlogPos
   slug: "why-your-business-should-use-dark-web-monitoring-for-data-protection",
   title: "Why Your Business Should Use Dark Web Monitoring for Data Protection",
   excerpt: "Discover the essential role of dark web monitoring for cybersecurity, protecting sensitive data from breaches and enhancing organizational security measures.",
-  featuredImage: "/dark-threat-10.webp",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "Friday, 13 February 2026",
   readingTime: "4 min read",

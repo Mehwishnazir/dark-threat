@@ -10,7 +10,7 @@ export const howtoincorporatedarkwebintelligenceintoyourcybersecurityplan: BlogP
   slug: "how-to-incorporate-dark-web-intelligence-into-your-cybersecurity-plan",
   title: "How to Incorporate Dark Web Intelligence into Your Cybersecurity Plan",
   excerpt: "Explore dark web intelligence benefits, methodologies, and strategies for enhancing cybersecurity and integrating vital insights into your security plans.",
-  featuredImage: "/dark-threat-8.webp",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "Thursday, 5 March 2026",
   readingTime: "4 min read",

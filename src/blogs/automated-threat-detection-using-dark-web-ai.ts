@@ -10,7 +10,7 @@ export const automatedthreatdetectionusingdarkwebai: BlogPostType & {
   slug: "automated-threat-detection-using-dark-web-ai",
   title: "Automated Threat Detection Using Dark Web AI",
   excerpt: "Explore automated threat detection with AI and dark web monitoring strategies to enhance cybersecurity and preemptively counter threats effectively.",
-  featuredImage: "/dark-threat-8.webp",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "Friday, 20 March 2026",
   readingTime: "4 min read",

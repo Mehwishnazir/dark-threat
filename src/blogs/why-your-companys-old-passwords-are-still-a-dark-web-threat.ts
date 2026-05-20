@@ -10,7 +10,7 @@ export const whyYourCompanysOldPasswordsAreStillADarkWebThreat: BlogPostType & {
   slug: "why-your-companys-old-passwords-are-still-a-dark-web-threat",
   title: "Why Your Company's Old Passwords Are Still a Dark Web Threat",
   excerpt: "Understand the persistent threats of old passwords on the dark web leveraging continuous monitoring threat intelligence and best practices for enterprise cybersecurity protection",
-  featuredImage: "/images/blog/why-your-companys-old-passwords-are-still-a-dark-web-threat.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "May 12, 2026",
   readingTime: "7 min read",

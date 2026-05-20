@@ -10,7 +10,7 @@ export const thetruevalueofcontinuouswebmonitoring: BlogPostType & {
   slug: "the-true-value-of-continuous-web-monitoring",
   title: "The True Value of Continuous Web Monitoring",
   excerpt: "Explore the importance and best practices of continuous web monitoring in cybersecurity to protect your organization against emerging threats.",
-  featuredImage: "/dark-threat-7.webp",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "Wednesday, 18 March 2026",
   readingTime: "3 min read",

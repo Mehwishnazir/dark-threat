@@ -10,7 +10,7 @@ export const darkWebMonitoringExplainedForNonTechnicalCeos: BlogPostType & {
   slug: "dark-web-monitoring-explained-for-non-technical-ceos",
   title: "Dark Web Monitoring Explained for Non-Technical CEOs",
   excerpt: "CEOs: Understand dark web monitoring. Learn what it is, why it matters for business security, and how it protects assets, reputation, and compliance from cyber threats.",
-  featuredImage: "/images/blog/dark-web-monitoring-explained-for-non-technical-ceos.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "May 1, 2026",
   readingTime: "14 min read",

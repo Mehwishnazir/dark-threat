@@ -10,7 +10,7 @@ export const darkWebMonitoringVsThreatIntelligenceWhichDoesYourBusinessActuallyN
   slug: "dark-web-monitoring-vs-threat-intelligence-which-does-your-business-actually-nee",
   title: "Dark Web Monitoring vs Threat Intelligence — Which Does Your Business Actually Need",
   excerpt: "Demystify dark web monitoring vs. threat intelligence. Understand their distinct roles, overlaps, and why a unified approach is crucial for robust cybersecurity. Protect your digital assets proactively.",
-  featuredImage: "/images/blog/dark-web-monitoring-vs-threat-intelligence-which-does-your-business-actually-nee.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "May 1, 2026",
   readingTime: "11 min read",

@@ -10,7 +10,7 @@ export const darkwebmonitoringforcyberinsurancewhyitsimportant: BlogPostType & {
   slug: "dark-web-monitoring-for-cyber-insurance-why-its-important",
   title: "Dark Web Monitoring for Cyber Insurance: Why It’s Important",
   excerpt: "Explore dark web monitoring for cyber insurance. Learn its importance, benefits, and best practices to enhance cybersecurity and maintain coverage.",
-  featuredImage: "/dark-threat-7.webp",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "Thursday, 5 March 2026",
   readingTime: "3 min read",

@@ -10,7 +10,7 @@ export const howtousedarkwebmonitoringtoprotectyourbrand: BlogPostType & {
   slug: "how-to-use-dark-web-monitoring-to-protect-your-brand",
   title: "How to Use Dark Web Monitoring to Protect Your Brand",
   excerpt: "Explore dark web monitoring to protect your brand from cyber threats and enhance your cybersecurity strategies effectively. Learn tips and case studies.",
-  featuredImage: "/dark-threat-7.webp",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "Monday, 9 February 2026",
   readingTime: "4 min read",

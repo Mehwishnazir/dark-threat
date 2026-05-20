@@ -10,7 +10,7 @@ export const theimportanceofmonitoringdarkwebhackersplans: BlogPostType & {
   slug: "the-importance-of-monitoring-dark-web-hackers-plans",
   title: "The Importance of Monitoring Dark Web Hackers’ Plans",
   excerpt: "Discover the essential role of dark web monitoring in cybersecurity to protect sensitive data and identify emerging threats for organizations.",
-  featuredImage: "/dark-threat-10.webp",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "Friday, 27 February 2026",
   readingTime: "3 min read",

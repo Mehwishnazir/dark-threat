@@ -10,7 +10,7 @@ export const howLongDoesItTakeForStolenDataToAppearOnTheDarkWeb: BlogPostType & 
   slug: "how-long-does-it-take-for-stolen-data-to-appear-on-the-dark-web",
   title: "How Long Does It Take for Stolen Data to Appear on the Dark Web?",
   excerpt: "Explore the timeline of stolen data appearing on dark web marketplaces and learn why real-time monitoring is essential for cybersecurity defense and incident response effectiveness",
-  featuredImage: "/images/blog/how-long-does-it-take-for-stolen-data-to-appear-on-the-dark-web.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "May 12, 2026",
   readingTime: "8 min read",

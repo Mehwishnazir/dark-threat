@@ -10,7 +10,7 @@ export const protectyouremployeeswithdarkwebcredentialleakalerts: BlogPostType &
   slug: "protect-your-employees-with-dark-web-credential-leak-alerts",
   title: "Protect Your Employees with Dark Web Credential Leak Alerts",
   excerpt: "Explore the importance of dark web credential leak alerts, protective measures for organizations and strategies for employee security in the evolving cyber landscape.",
-  featuredImage: "/dark-threat-8.webp",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "Thursday, 12 February 2026",
   readingTime: "3 min read",

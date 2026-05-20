@@ -10,7 +10,7 @@ export const cyberThreatIntelligenceLifecycleFromCollectionToAction: BlogPostTyp
   slug: "cyber-threat-intelligence-lifecycle-from-collection-to-action",
   title: "Cyber Threat Intelligence Lifecycle — From Collection to Action",
   excerpt: "Explore the threat intelligence lifecycle phases from collection to feedback Learn how DarkThreatAI enhances cybersecurity with actionable intelligence insights",
-  featuredImage: "/images/blog/cyber-threat-intelligence-lifecycle-from-collection-to-action.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "May 14, 2026",
   readingTime: "9 min read",

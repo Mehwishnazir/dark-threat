@@ -10,7 +10,7 @@ export const whatIsCybersixgillAndHowDoesDarkthreatCompare: BlogPostType & {
   slug: "what-is-cybersixgill-and-how-does-darkthreat-compare",
   title: "What Is Cybersixgill and How Does DarkThreat Compare?",
   excerpt: "Explore Cybersixgill dark web monitoring features pricing and advantages along with DarkThreat AI as a scalable alternative for enhanced threat intelligence solutions",
-  featuredImage: "/images/blog/what-is-cybersixgill-and-how-does-darkthreat-compare.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "May 14, 2026",
   readingTime: "6 min read",

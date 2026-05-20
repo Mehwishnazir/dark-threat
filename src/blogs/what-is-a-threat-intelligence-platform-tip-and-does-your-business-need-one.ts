@@ -10,7 +10,7 @@ export const whatIsAThreatIntelligencePlatformTipAndDoesYourBusinessNeedOne: Blo
   slug: "what-is-a-threat-intelligence-platform-tip-and-does-your-business-need-one",
   title: "What Is a Threat Intelligence Platform (TIP) and Does Your Business Need One?",
   excerpt: "Comprehensive guide on threat intelligence platforms including benefits, SME versus enterprise needs, selecting tips, industry trends and DarkThreat AI solutions",
-  featuredImage: "/images/blog/what-is-a-threat-intelligence-platform-tip-and-does-your-business-need-one.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "May 14, 2026",
   readingTime: "10 min read",

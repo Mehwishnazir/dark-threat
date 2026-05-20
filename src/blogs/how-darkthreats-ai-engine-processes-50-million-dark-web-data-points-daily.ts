@@ -10,7 +10,7 @@ export const howDarkthreatsAiEngineProcesses50MillionDarkWebDataPointsDaily: Blo
   slug: "how-darkthreats-ai-engine-processes-50-million-dark-web-data-points-daily",
   title: "How DarkThreat's AI Engine Processes 50 Million Dark Web Data Points Daily",
   excerpt: "Explore how DarkThreat AI processes over 50 million dark web data points daily delivering scalable real-time cybersecurity threat intelligence with advanced analytics and integration",
-  featuredImage: "/images/blog/how-darkthreats-ai-engine-processes-50-million-dark-web-data-points-daily.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "May 12, 2026",
   readingTime: "8 min read",

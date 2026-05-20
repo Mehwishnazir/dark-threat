@@ -10,7 +10,7 @@ export const credentialRotationPolicyHowOftenShouldPasswordsBeChanged: BlogPostT
   slug: "credential-rotation-policy-how-often-should-passwords-be-changed",
   title: "Credential Rotation Policy — How Often Should Passwords Be Changed?",
   excerpt: "Explore best practices for credential rotation policy including NIST updates continuous monitoring and integration of DarkThreat AI to enhance cybersecurity defenses",
-  featuredImage: "/images/blog/credential-rotation-policy-how-often-should-passwords-be-changed.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "May 14, 2026",
   readingTime: "7 min read",

@@ -10,7 +10,7 @@ export const howdarkwebmonitoringhelpsyoudetecthackersinrealtime: BlogPostType &
   slug: "how-dark-web-monitoring-helps-you-detect-hackers-in-real-time",
   title: "How Dark Web Monitoring Helps You Detect Hackers in Real-Time",
   excerpt: "Learn about dark web monitoring, its importance, methods, tools, and best practices for safeguarding sensitive information against cyber threats.",
-  featuredImage: "/dark-threat-7.webp",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "Thursday, 26 February 2026",
   readingTime: "3 min read",

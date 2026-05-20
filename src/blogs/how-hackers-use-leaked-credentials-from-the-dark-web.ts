@@ -10,7 +10,7 @@ export const howhackersuseleakedcredentialsfromthedarkweb: BlogPostType & {
   slug: "how-hackers-use-leaked-credentials-from-the-dark-web",
   title: "How Hackers Use Leaked Credentials from the Dark Web",
   excerpt: "Explore how leaked credentials from the dark web threaten security and learn strategies for mitigation and protection against cybercrime.",
-  featuredImage: "/dark-threat-9.webp",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "Wednesday, 18 February 2026",
   readingTime: "4 min read",

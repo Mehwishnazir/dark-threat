@@ -10,7 +10,7 @@ export const darkWebMonitoringForStartupsWhatYouNeedBeforeSeriesA: BlogPostType 
   slug: "dark-web-monitoring-for-startups-what-you-need-before-series-a",
   title: "Dark Web Monitoring for Startups — What You Need Before Series A",
   excerpt: "Learn why dark web monitoring is crucial for startups before Series A. Protect your IP, mitigate credential theft, and boost investor confidence with cybersecurity.",
-  featuredImage: "/images/blog/dark-web-monitoring-for-startups-what-you-need-before-series-a.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "May 1, 2026",
   readingTime: "16 min read",

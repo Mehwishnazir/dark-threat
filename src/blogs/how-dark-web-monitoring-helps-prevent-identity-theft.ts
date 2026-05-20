@@ -10,7 +10,7 @@ export const howdarkwebmonitoringhelpspreventidentitytheft: BlogPostType & {
   slug: "how-dark-web-monitoring-helps-prevent-identity-theft",
   title: "How Dark Web Monitoring Helps Prevent Identity Theft",
   excerpt: "Explore the essentials of dark web monitoring, its impact on identity theft prevention, and proactive measures for safeguarding personal information.",
-  featuredImage: "/dark-threat-9.webp",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "Wednesday, 11 March 2026",
   readingTime: "3 min read",

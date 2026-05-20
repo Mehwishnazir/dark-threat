@@ -10,7 +10,7 @@ export const theDifferenceBetweenDarkWebMonitoringAndDarkWebSurveillance: BlogPo
   slug: "the-difference-between-dark-web-monitoring-and-dark-web-surveillance",
   title: "The Difference Between Dark Web Monitoring and Dark Web Surveillance",
   excerpt: "Differentiate dark web monitoring from surveillance for enterprise cybersecurity. Learn objectives, methodologies, and legal/ethical implications to ensure compliant threat intelligence.",
-  featuredImage: "/images/blog/the-difference-between-dark-web-monitoring-and-dark-web-surveillance.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "May 1, 2026",
   readingTime: "14 min read",

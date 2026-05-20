@@ -10,7 +10,7 @@ export const howtodetectcyberattackplanningthroughdarkwebmonitoring: BlogPostTyp
   slug: "how-to-detect-cyberattack-planning-through-dark-web-monitoring",
   title: "How to Detect Cyberattack Planning Through Dark Web Monitoring",
   excerpt: "Explore dark web monitoring for cybersecurity, types of threats, strategies, real-world examples, and challenges in detecting cyberattacks effectively.",
-  featuredImage: "/dark-threat-7.webp",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "Monday, 23 February 2026",
   readingTime: "4 min read",

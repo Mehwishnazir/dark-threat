@@ -10,7 +10,7 @@ export const whatAreIndicatorsOfCompromiseIocsAndWhereDoTheyComeFrom: BlogPostTy
   slug: "what-are-indicators-of-compromise-iocs-and-where-do-they-come-from",
   title: "What Are Indicators of Compromise (IOCs) and Where Do They Come From?",
   excerpt: "Indicators of Compromise play a critical role in cybersecurity by enabling early detection response and mitigation of threats sourced from internal logs public feeds and the dark web",
-  featuredImage: "/images/blog/what-are-indicators-of-compromise-iocs-and-where-do-they-come-from.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "May 14, 2026",
   readingTime: "9 min read",

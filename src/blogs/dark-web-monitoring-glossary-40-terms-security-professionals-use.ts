@@ -10,7 +10,7 @@ export const darkWebMonitoringGlossary40TermsSecurityProfessionalsUse: BlogPostT
   slug: "dark-web-monitoring-glossary-40-terms-security-professionals-use",
   title: "Dark Web Monitoring Glossary — 40 Terms Security Professionals Use",
   excerpt: "Comprehensive dark web monitoring glossary covering 40 key cybersecurity terms critical for threat intelligence and protecting organizational assets from evolving dark web risks",
-  featuredImage: "/images/blog/dark-web-monitoring-glossary-40-terms-security-professionals-use.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "May 12, 2026",
   readingTime: "10 min read",
