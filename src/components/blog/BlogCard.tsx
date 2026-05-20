@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Calendar, Clock } from 'lucide-react';
+import { Calendar, Clock, ArrowRight } from 'lucide-react';
 
 export interface BlogPost {
   id: string;
@@ -19,43 +19,41 @@ interface BlogCardProps {
 
 const BlogCard = ({ post }: BlogCardProps) => {
   return (
-    <article className="group relative bg-card border border-border rounded-lg overflow-hidden transition-all duration-300 hover:shadow-threat hover:border-primary/30">
+    <article className="blog-card">
       {/* Featured Image */}
-      <Link to={`/blog/${post.slug}`} className="block relative aspect-video overflow-hidden">
+      <Link to={`/blog/${post.slug}`} className="blog-card__image-wrap">
         <img
           src={post.featuredImage}
           alt={post.title}
           loading="lazy"
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          className="blog-card__image"
         />
         {/* Category Badge */}
-        <span className="absolute top-4 left-4 px-3 py-1 bg-primary text-primary-foreground text-xs font-montserrat font-semibold uppercase tracking-wider rounded">
-          {post.category}
-        </span>
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <span className="blog-card__category">{post.category}</span>
+        {/* Hover overlay */}
+        <div className="blog-card__overlay">
+          <span className="blog-card__read-cta">
+            Read Article <ArrowRight className="blog-card__arrow" />
+          </span>
+        </div>
       </Link>
 
       {/* Content */}
-      <div className="p-6">
-        <Link to={`/blog/${post.slug}`}>
-          <h2 className="text-xl font-montserrat font-bold text-foreground mb-3 line-clamp-2 transition-colors duration-300 group-hover:text-primary">
-            {post.title}
-          </h2>
+      <div className="blog-card__body">
+        <Link to={`/blog/${post.slug}`} className="blog-card__title-link">
+          <h2 className="blog-card__title">{post.title}</h2>
         </Link>
 
-        <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3 mb-4">
-          {post.excerpt}
-        </p>
+        <p className="blog-card__excerpt">{post.excerpt}</p>
 
         {/* Meta Row */}
-        <div className="flex items-center gap-4 text-xs text-muted-foreground">
-          <span className="flex items-center gap-1.5">
-            <Calendar className="w-3.5 h-3.5" />
+        <div className="blog-card__meta">
+          <span className="blog-card__meta-item">
+            <Calendar className="blog-card__meta-icon" />
             {post.publishDate}
           </span>
-          <span className="flex items-center gap-1.5">
-            <Clock className="w-3.5 h-3.5" />
+          <span className="blog-card__meta-item">
+            <Clock className="blog-card__meta-icon" />
             {post.readingTime}
           </span>
         </div>
