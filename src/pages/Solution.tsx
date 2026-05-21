@@ -6,6 +6,7 @@ import { Helmet } from 'react-helmet-async';
 import TrialModal from '@/components/TrialModal';
 import AnimatedBackground from '@/components/AnimatedBackground';
 import ThreatSphere from '@/components/ThreatSphere';
+import Breadcrumb from '@/components/Breadcrumb';
 
 const Solution = () => {
   const [isTrialModalOpen, setIsTrialModalOpen] = useState(false);
@@ -164,7 +165,8 @@ const Solution = () => {
       {/* Key Features */}
       <section className="py-20 px-6 bg-gradient-to-b from-background to-threat-dark">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
+          <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Solution' }]} />
+          <div className="text-center mb-16 mt-8">
             <h2 className="text-4xl font-montserrat font-bold text-foreground mb-4">
               Advanced Threat Detection
             </h2>

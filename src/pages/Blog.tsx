@@ -6,6 +6,13 @@ import BlogCard, { type BlogPost } from '@/components/blog/BlogCard';
 import Breadcrumb from '@/components/Breadcrumb';
 import AnimatedBackground from '@/components/AnimatedBackground';
 import ThreatSphere from '@/components/ThreatSphere';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
 import { allBlogs } from '@/blogs';
 import './blog.css';
 
@@ -25,6 +32,19 @@ const Blog = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All Blogs');
   const page = Math.max(1, parseInt(searchParams.get('page') || '1', 10) || 1);
+
+  const blogCollectionSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'Threat Intelligence Blog',
+    description: 'Expert insights on dark web monitoring, cybersecurity trends, and threat intelligence strategies.',
+    url: 'https://darkthreat.ai/blog',
+    isPartOf: {
+      '@type': 'WebSite',
+      name: 'DarkThreat',
+      url: 'https://darkthreat.ai'
+    }
+  };
 
   const setPage = (next: number, scroll = true) => {
     const params = new URLSearchParams(searchParams);
@@ -83,6 +103,7 @@ const Blog = () => {
         <title>Threat Intelligence Blog | DarkThreat.ai</title>
         <meta name="description" content="Expert insights on dark web monitoring, credential leak detection, and threat intelligence strategies from the DarkThreat research team." />
         <link rel="canonical" href="https://darkthreat.ai/blog" />
+        <script type="application/ld+json">{JSON.stringify(blogCollectionSchema)}</script>
       </Helmet>
 
       {/* HEADER */}
@@ -146,24 +167,28 @@ const Blog = () => {
             />
           </div>
 
-          <div className="blog-listing-filters__cats">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                type="button"
-                onClick={() => {
-                  setSelectedCategory(cat);
-                  setPage(1);
-                }}
-                className={`blog-listing-filters__cat-btn ${selectedCategory === cat ? 'blog-listing-filters__cat-btn--active' : ''}`}
-                aria-pressed={selectedCategory === cat}
-              >
-                {cat}
-                {categoryCounts[cat] != null && (
-                  <span className="blog-listing-filters__cat-count">{categoryCounts[cat]}</span>
-                )}
-              </button>
-            ))}
+          <div className="blog-listing-filters__dropdown">
+            <label htmlFor="category-select" className="blog-listing-filters__dropdown-label">
+              Filter by Category:
+            </label>
+            <Select value={selectedCategory} onValueChange={(value) => {
+              setSelectedCategory(value);
+              setPage(1);
+            }}>
+              <SelectTrigger id="category-select" className="blog-listing-filters__select-trigger">
+                <SelectValue placeholder="Select a category" />
+              </SelectTrigger>
+              <SelectContent className="blog-listing-filters__select-content">
+                {categories.map((cat) => (
+                  <SelectItem key={cat} value={cat} className="blog-listing-filters__select-item">
+                    <span>{cat}</span>
+                    {categoryCounts[cat] != null && (
+                      <span className="blog-listing-filters__select-count">({categoryCounts[cat]})</span>
+                    )}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
           </div>
         </div>
       </section>

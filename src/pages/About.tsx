@@ -6,9 +6,34 @@ import { Helmet } from 'react-helmet-async';
 import TrialModal from '@/components/TrialModal';
 import AnimatedBackground from '@/components/AnimatedBackground';
 import ThreatSphere from '@/components/ThreatSphere';
+import Breadcrumb from '@/components/Breadcrumb';
 
 const About = () => {
   const [isTrialModalOpen, setIsTrialModalOpen] = useState(false);
+
+  const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'DarkThreat',
+    url: 'https://darkthreat.ai',
+    logo: 'https://darkthreat.ai/logo.png',
+    description: 'AI-powered dark web monitoring and threat intelligence platform protecting organizations worldwide',
+    foundingDate: '2024',
+    sameAs: [
+      'https://twitter.com/DarkThreatAI',
+      'https://linkedin.com/company/darkthreat',
+      'https://github.com/darkthreat'
+    ],
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'customer support',
+      email: 'support@darkthreat.ai'
+    },
+    address: {
+      '@type': 'PostalAddress',
+      addressCountry: 'US'
+    }
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -16,6 +41,7 @@ const About = () => {
         <title>About DarkThreat | Dark Web Intelligence Experts</title>
         <meta name="description" content="Meet the team behind DarkThreat — cybersecurity researchers and engineers building the most comprehensive dark web monitoring platform for modern businesses." />
         <link rel="canonical" href="https://darkthreat.ai/about" />
+        <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
       </Helmet>
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 py-6 px-6 border-b border-border bg-background/95 backdrop-blur-sm z-50">
@@ -85,7 +111,8 @@ const About = () => {
       {/* Mission Section */}
       <section className="py-20 px-6 bg-gradient-to-b from-background to-threat-dark">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'About' }]} />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mt-8">
             <div>
               <h2 className="text-4xl font-montserrat font-bold text-foreground mb-6">
                 Our Mission

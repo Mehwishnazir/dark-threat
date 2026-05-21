@@ -85,6 +85,20 @@ const Index = () => {
           "description": "AI-powered dark web monitoring and threat intelligence platform",
           "screenshot": "https://darkthreat.ai/og-image.png"
         })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ProfilePage",
+          "mainEntity": {
+            "@type": "Organization",
+            "name": "DarkThreat",
+            "url": "https://darkthreat.ai",
+            "sameAs": [
+              "https://twitter.com/DarkThreatAI",
+              "https://linkedin.com/company/darkthreat",
+              "https://github.com/darkthreat"
+            ]
+          }
+        })}</script>
       </Helmet>
 
       {/* Header */}

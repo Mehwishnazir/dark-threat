@@ -6,6 +6,7 @@ import TrialModal from '@/components/TrialModal';
 import ComparisonTable from '@/components/ComparisonTable';
 import { Shield, Linkedin, Twitter, Github } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import Breadcrumb from '@/components/Breadcrumb';
 
 const Pricing = () => {
   const [isTrialModalOpen, setIsTrialModalOpen] = useState(false);
@@ -79,7 +80,8 @@ const Pricing = () => {
       {/* Pricing Section */}
       <section className="pt-24 py-20 px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
+          <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Pricing' }]} />
+          <div className="text-center mb-16 mt-8">
             <h1 className="text-5xl md:text-6xl font-montserrat font-bold text-foreground mb-6">
               Dark Web Monitoring <span className="text-primary">Pricing</span>
             </h1>

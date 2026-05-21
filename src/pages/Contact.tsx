@@ -9,6 +9,7 @@ import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import TrialModal from '@/components/TrialModal';
 import { useToast } from '@/components/ui/use-toast';
+import Breadcrumb from '@/components/Breadcrumb';
 
 const Contact = () => {
   const [isTrialModalOpen, setIsTrialModalOpen] = useState(false);
@@ -36,12 +37,32 @@ const Contact = () => {
     }));
   };
 
+  const contactPointSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    name: 'DarkThreat',
+    url: 'https://darkthreat.ai',
+    logo: 'https://darkthreat.ai/logo.png',
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'customer support',
+      email: 'support@darkthreat.ai',
+      areaServed: ['US', 'GB', 'AU', 'CA'],
+      availableLanguage: ['en']
+    },
+    sameAs: [
+      'https://twitter.com/DarkThreatAI',
+      'https://linkedin.com/company/darkthreat'
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Contact DarkThreat | Talk to a Dark Web Monitoring Expert</title>
         <meta name="description" content="Contact the DarkThreat team to discuss dark web monitoring, credential leak detection, or to start your 7-day free trial. We respond within 24 hours." />
         <link rel="canonical" href="https://darkthreat.ai/contact" />
+        <script type="application/ld+json">{JSON.stringify(contactPointSchema)}</script>
       </Helmet>
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 py-6 px-6 border-b border-border bg-background/95 backdrop-blur-sm z-50">
@@ -81,7 +102,8 @@ const Contact = () => {
       {/* Hero Section */}
       <section className="pt-24 py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-montserrat font-bold text-foreground mb-6">
+          <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Contact' }]} />
+          <h1 className="text-5xl md:text-6xl font-montserrat font-bold text-foreground mb-6 mt-6">
             Get In <span className="glow-text">Touch</span>
           </h1>
           <p className="text-xl text-muted-foreground mb-8">
