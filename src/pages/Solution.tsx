@@ -7,6 +7,7 @@ import TrialModal from '@/components/TrialModal';
 import AnimatedBackground from '@/components/AnimatedBackground';
 import ThreatSphere from '@/components/ThreatSphere';
 import Breadcrumb from '@/components/Breadcrumb';
+import AppHeader from '@/components/AppHeader';
 
 const Solution = () => {
   const [isTrialModalOpen, setIsTrialModalOpen] = useState(false);
@@ -91,40 +92,7 @@ const Solution = () => {
           "offers": { "@type": "Offer", "url": "https://darkthreat.ai/pricing" }
         })}</script>
       </Helmet>
-      {/* Header */}
-      <header className="fixed top-0 left-0 right-0 py-6 px-6 border-b border-border bg-background/95 backdrop-blur-sm z-50">
-        <div className="max-w-6xl mx-auto flex items-center justify-between">
-          <Link to="/" className="text-2xl font-montserrat font-bold text-foreground">
-            DARK<span className="text-primary">THREAT</span>
-          </Link>
-          <nav className="flex items-center space-x-6">
-            <Link to="/" className="text-muted-foreground hover:text-primary transition-colors">
-              Home
-            </Link>
-            <Link to="/solution" className="text-primary">
-              Solution
-            </Link>
-            <Link to="/pricing" className="text-muted-foreground hover:text-primary transition-colors">
-              Pricing
-            </Link>
-            <Link to="/blog" className="text-muted-foreground hover:text-primary transition-colors">
-              Blog
-            </Link>
-            <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">
-              About
-            </Link>
-            <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">
-              Contact
-            </Link>
-            <Button
-              onClick={() => setIsTrialModalOpen(true)}
-              className="hero-button"
-            >
-              Start Free Trial
-            </Button>
-          </nav>
-        </div>
-      </header>
+      <AppHeader />
 
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center cyber-grid overflow-hidden pt-24 ">
@@ -247,6 +215,40 @@ const Solution = () => {
                 </li>
               </ul>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-6 bg-card/10">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-montserrat font-bold text-foreground mb-4">Explore our core services</h2>
+            <p className="text-lg text-muted-foreground">
+              Jump directly to the service you need: monitoring, credential protection, or dark web data removal.
+            </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-3">
+            <Link to="/dark-web-monitoring" className="group block rounded-3xl border border-border bg-background p-8 text-left transition-shadow hover:shadow-xl">
+              <div className="mb-4 inline-flex items-center rounded-full bg-primary/10 px-3 py-2 text-primary text-sm font-semibold">Dark Web Monitoring</div>
+              <h3 className="text-2xl font-montserrat font-bold text-foreground mb-3">Continuous threat detection</h3>
+              <p className="text-muted-foreground mb-6">Scan hacker forums, paste sites, and dark marketplaces for exposed assets linked to your organization.</p>
+              <span className="text-primary font-semibold">View service details →</span>
+            </Link>
+
+            <Link to="/credential-leak-detection" className="group block rounded-3xl border border-border bg-background p-8 text-left transition-shadow hover:shadow-xl">
+              <div className="mb-4 inline-flex items-center rounded-full bg-primary/10 px-3 py-2 text-primary text-sm font-semibold">Credential Leak Detection</div>
+              <h3 className="text-2xl font-montserrat font-bold text-foreground mb-3">Protect logins and secrets</h3>
+              <p className="text-muted-foreground mb-6">Get alerts the moment employee passwords, API keys, or session tokens appear in breach data.</p>
+              <span className="text-primary font-semibold">View service details →</span>
+            </Link>
+
+            <Link to="/dark-web-data-removal" className="group block rounded-3xl border border-border bg-background p-8 text-left transition-shadow hover:shadow-xl">
+              <div className="mb-4 inline-flex items-center rounded-full bg-primary/10 px-3 py-2 text-primary text-sm font-semibold">Dark Web Data Removal</div>
+              <h3 className="text-2xl font-montserrat font-bold text-foreground mb-3">Remove exposed data fast</h3>
+              <p className="text-muted-foreground mb-6">Take down leaked documents and listings before attackers can reuse your sensitive assets.</p>
+              <span className="text-primary font-semibold">View service details →</span>
+            </Link>
           </div>
         </div>
       </section>

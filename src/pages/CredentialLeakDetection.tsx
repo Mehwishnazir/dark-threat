@@ -1,11 +1,14 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Lock, Key, AlertTriangle, Mail, Code, Cookie, ArrowRight, CheckCircle } from 'lucide-react';
-import MobileNav from '@/components/MobileNav';
+import { Lock, Key, AlertTriangle, Mail, Cookie, ArrowRight, CheckCircle } from 'lucide-react';
+import AppHeader from '@/components/AppHeader';
 import FinalCTA from '@/components/FinalCTA';
 import {
-  Accordion, AccordionContent, AccordionItem, AccordionTrigger,
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
 } from '@/components/ui/accordion';
 
 const faqs = [
@@ -18,9 +21,11 @@ const faqs = [
 
 const CredentialLeakDetection = () => {
   const faqJsonLd = {
-    '@context': 'https://schema.org', '@type': 'FAQPage',
-    mainEntity: faqs.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
   };
+
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
@@ -30,125 +35,172 @@ const CredentialLeakDetection = () => {
         <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
       </Helmet>
 
-      <header className="fixed top-0 left-0 right-0 py-4 md:py-6 px-6 border-b border-border bg-background/95 backdrop-blur-sm z-50">
-        <div className="max-w-6xl mx-auto flex items-center justify-between">
-          <Link to="/" className="text-2xl font-montserrat font-bold text-foreground">DARK<span className="text-primary">THREAT</span></Link>
-          <nav className="hidden md:flex items-center space-x-6">
-            <Link to="/" className="text-muted-foreground hover:text-primary">Home</Link>
-            <Link to="/solution" className="text-muted-foreground hover:text-primary">Solution</Link>
-            <Link to="/pricing" className="text-muted-foreground hover:text-primary">Pricing</Link>
-            <Link to="/blog" className="text-muted-foreground hover:text-primary">Blog</Link>
-            <Button onClick={() => (window.location.href = '/auth')} className="hero-button">Start Free Trial</Button>
-          </nav>
-          <MobileNav />
-        </div>
-      </header>
+      <AppHeader />
 
-      <section className="relative pt-32 pb-20 px-6 hero-bg-layered overflow-hidden">
+      <section className="relative pt-32 pb-20 px-6 overflow-hidden hero-bg-layered">
         <div aria-hidden className="absolute inset-0 circuit-pattern pointer-events-none opacity-50" />
-        <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-montserrat font-bold text-foreground mb-6">
-            Credential Leak Detection — Monitor Employee &amp; VIP <span className="glow-text">Account Exposure</span> on the Dark Web
-          </h1>
-          <p className="text-lg md:text-xl text-muted-foreground mb-8">
-            Real-time alerts the moment a corporate credential, API key, or session token surfaces in a breach dump or stealer log.
-          </p>
-          <Button onClick={() => (window.location.href = '/auth')} className="cta-cyan inline-flex items-center gap-2">
-            Start Free Trial <ArrowRight className="w-4 h-4" />
-          </Button>
-        </div>
-      </section>
-
-      <section className="py-20 px-6">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-montserrat font-bold mb-6">What are credential leaks?</h2>
-          <p className="text-lg text-muted-foreground mb-4">
-            Credential leaks are exposures of valid login data — emails, passwords, API tokens, or session cookies — that end up on the dark web after a breach, phishing attack, or infostealer malware infection on an employee device.
-          </p>
-          <p className="text-lg text-muted-foreground">
-            Once leaked, these credentials are weaponized within hours. Attackers run automated credential-stuffing tools across thousands of services, knowing that password reuse will hand them access to corporate inboxes, SaaS apps, VPNs, and admin panels.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-20 px-6 bg-card/30">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-montserrat font-bold mb-12">How hackers exploit stolen credentials</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="threat-card"><div className="text-4xl glow-text font-bold mb-2">61%</div><p className="text-muted-foreground">of breaches involve stolen credentials</p></div>
-            <div className="threat-card"><div className="text-4xl glow-text font-bold mb-2">24h</div><p className="text-muted-foreground">avg. time from leak to first credential-stuffing attempt</p></div>
-            <div className="threat-card"><div className="text-4xl glow-text font-bold mb-2">15B+</div><p className="text-muted-foreground">credentials currently circulating on the dark web</p></div>
+        <div className="relative z-10 max-w-6xl mx-auto grid gap-10 lg:grid-cols-[1.6fr_0.9fr] items-start">
+          <div>
+            <span className="hero-badge mb-6 inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold text-primary">
+              Credential Leak Detection
+            </span>
+            <h1 className="text-4xl md:text-6xl font-montserrat font-bold text-foreground mb-6">
+              Credential Leak Detection � <span className="glow-text">Protect accounts</span> before attackers log in
+            </h1>
+            <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl">
+              DarkThreat detects leaked usernames, passwords, API keys, and session tokens across breach dumps, paste sites, public repos, and stealer logs so you can shut down account takeover before it begins.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button onClick={() => (window.location.href = '/auth')} className="cta-cyan inline-flex items-center gap-2">
+                Start Free Trial <ArrowRight className="w-4 h-4" />
+              </Button>
+              <Link to="/pricing" className="cta-outline inline-flex items-center gap-2 justify-center">
+                View Pricing
+              </Link>
+            </div>
           </div>
+
+          <aside className="rounded-[2rem] border border-border bg-card p-8 shadow-xl">
+            <h2 className="text-2xl font-montserrat font-bold text-foreground mb-5">Get Free Cybersecurity Consultation</h2>
+            <form className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-foreground mb-2">Full Name *</label>
+                <input type="text" placeholder="Enter your name" className="w-full rounded-2xl border border-border bg-background px-4 py-3 text-foreground outline-none focus:border-primary focus:ring-2 focus:ring-primary/20" />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-foreground mb-2">Work Email *</label>
+                <input type="email" placeholder="your@company.com" className="w-full rounded-2xl border border-border bg-background px-4 py-3 text-foreground outline-none focus:border-primary focus:ring-2 focus:ring-primary/20" />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-foreground mb-2">Company Name</label>
+                <input type="text" placeholder="Your company" className="w-full rounded-2xl border border-border bg-background px-4 py-3 text-foreground outline-none focus:border-primary focus:ring-2 focus:ring-primary/20" />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-foreground mb-2">Phone Number</label>
+                <input type="text" placeholder="+1234567890" className="w-full rounded-2xl border border-border bg-background px-4 py-3 text-foreground outline-none focus:border-primary focus:ring-2 focus:ring-primary/20" />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-foreground mb-2">Reason for Contact *</label>
+                <select className="w-full rounded-2xl border border-border bg-background px-4 py-3 text-foreground outline-none focus:border-primary focus:ring-2 focus:ring-primary/20">
+                  <option>Select a reason</option>
+                  <option>General Inquiry</option>
+                  <option>Sales Question</option>
+                  <option>Demo Request</option>
+                  <option>Technical Support</option>
+                </select>
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-foreground mb-2">How Can We Help? *</label>
+                <textarea rows={4} placeholder="Tell us about your security needs..." className="w-full rounded-2xl border border-border bg-background px-4 py-3 text-foreground outline-none focus:border-primary focus:ring-2 focus:ring-primary/20" />
+              </div>
+              <Button className="w-full">Request Free Assessment</Button>
+              <p className="text-xs text-muted-foreground">By submitting, you agree to our Privacy Policy.</p>
+            </form>
+          </aside>
         </div>
       </section>
 
-      <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-montserrat font-bold text-center mb-12">DarkThreat's detection process</h2>
-          <div className="grid md:grid-cols-3 gap-8">
+      <section className="py-10 px-6">
+        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
+          {[
+            { label: 'VIP account monitoring', detail: 'Executive visibility' },
+            { label: 'API key discovery', detail: 'Public repo + paste scans' },
+            { label: 'Session token alerting', detail: 'Active credential compromise' },
+            { label: 'Rapid response', detail: 'Minutes from detection' },
+          ].map((item) => (
+            <div key={item.label} className="rounded-3xl border border-border bg-card p-6 text-center">
+              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary mb-3">{item.label}</p>
+              <p className="text-foreground font-semibold text-lg">{item.detail}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="py-20 px-6 bg-card/10">
+        <div className="max-w-6xl mx-auto grid gap-10 lg:grid-cols-[1.6fr_1fr] items-start">
+          <div>
+            <h2 className="text-4xl font-montserrat font-bold text-foreground mb-6">What is credential leak detection?</h2>
+            <p className="text-lg text-muted-foreground mb-5">
+              Credential leak detection identifies compromised passwords, API keys, and session tokens before attackers can use them. DarkThreat monitors breach dumps, paste sites, GitHub, and stealer logs for data tied to your users and systems.
+            </p>
+            <p className="text-lg text-muted-foreground">
+              When leaked credentials are found, your team receives verified alerts with the impacted account, source, and recommended mitigation so you can reset access and block abuse fast.
+            </p>
+          </div>
+
+          <div className="grid gap-4">
             {[
-              { t: '1. Onboard assets', d: 'Add your domains, executive emails, and key API key prefixes.' },
-              { t: '2. Continuous scan', d: 'We match new dumps and stealer logs against your asset list 24/7.' },
-              { t: '3. Verified alert', d: 'You receive a contextualized alert with the source, exposure type, and recommended action.' },
-            ].map((s) => (
-              <div key={s.t} className="threat-card text-center">
-                <h3 className="text-xl font-montserrat font-bold mb-3">{s.t}</h3>
-                <p className="text-muted-foreground">{s.d}</p>
+              { title: 'Email + password leaks', detail: 'Compromised employee logins and SaaS accounts.' },
+              { title: 'API keys', detail: 'Public repo and paste site exposures for cloud secrets.' },
+              { title: 'Session cookies', detail: 'Active tokens found in malware and stealer logs.' },
+            ].map((item) => (
+              <div key={item.title} className="rounded-3xl border border-border bg-background p-6">
+                <p className="text-sm uppercase tracking-[0.3em] text-primary mb-3">{item.title}</p>
+                <p className="text-muted-foreground">{item.detail}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-20 px-6 bg-card/30">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-montserrat font-bold text-center mb-12">Types of credentials monitored</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              { icon: <Mail />, t: 'Email + password', d: 'Corporate logins from breach dumps and combolists.' },
-              { icon: <Key />, t: 'API keys', d: 'AWS, Stripe, GitHub, and custom keys exposed in pastes.' },
-              { icon: <Cookie />, t: 'Session tokens', d: 'Active session cookies from infostealer logs.' },
-            ].map((c) => (
-              <div key={c.t} className="threat-card">
-                <div className="text-primary mb-3">{c.icon}</div>
-                <h3 className="font-montserrat font-bold mb-2">{c.t}</h3>
-                <p className="text-sm text-muted-foreground">{c.d}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Alert demo mockup */}
       <section className="py-20 px-6">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-montserrat font-bold text-center mb-12">Real-time alert</h2>
-          <div className="threat-card border-primary/50">
-            <div className="flex items-start gap-3">
-              <AlertTriangle className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-              <div className="flex-1">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="font-montserrat font-bold">CRITICAL — Credential Exposure</span>
-                  <span className="text-xs text-muted-foreground">2 min ago</span>
-                </div>
-                <p className="text-sm text-muted-foreground mb-3">
-                  <span className="text-foreground font-mono">cfo@yourcompany.com</span> exposed in stealer log <span className="font-mono">RedLine_2026_03_batch.txt</span>
-                </p>
-                <div className="flex gap-2">
-                  <span className="text-xs px-2 py-1 rounded bg-primary/10 text-primary">Stealer log</span>
-                  <span className="text-xs px-2 py-1 rounded bg-primary/10 text-primary">Plaintext password</span>
-                  <span className="text-xs px-2 py-1 rounded bg-primary/10 text-primary">VIP</span>
-                </div>
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-montserrat font-bold text-foreground mb-4">How DarkThreat detects exposed credentials</h2>
+            <p className="text-lg text-muted-foreground">A layered detection process built for the real credential economy on the dark web.</p>
+          </div>
+          <div className="grid gap-8 lg:grid-cols-3">
+            <div className="rounded-3xl border border-border bg-card p-8">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary mb-6">
+                <Lock className="w-6 h-6" />
               </div>
+              <h3 className="text-2xl font-montserrat font-bold mb-4">Targeted asset onboarding</h3>
+              <p className="text-muted-foreground">Onboard executive emails, SaaS domains, cloud accounts, and service names so detections are tied to your business.</p>
+            </div>
+            <div className="rounded-3xl border border-border bg-card p-8">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary mb-6">
+                <Key className="w-6 h-6" />
+              </div>
+              <h3 className="text-2xl font-montserrat font-bold mb-4">Leak discovery</h3>
+              <p className="text-muted-foreground">Scan breach dumps, paste archives, GitHub leaks, and stealer log feeds for tokens, passwords, and exposed secrets.</p>
+            </div>
+            <div className="rounded-3xl border border-border bg-card p-8">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary mb-6">
+                <AlertTriangle className="w-6 h-6" />
+              </div>
+              <h3 className="text-2xl font-montserrat font-bold mb-4">Verified alerting</h3>
+              <p className="text-muted-foreground">Deliver verified credential alerts with risk, source, and impact so your team can act before abuse occurs.</p>
             </div>
           </div>
         </div>
       </section>
 
       <section className="py-20 px-6 bg-card/30">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-montserrat font-bold text-foreground mb-4">Why DarkThreat is the right fit for credential protection</h2>
+            <p className="text-lg text-muted-foreground">Our service is built to detect not just leaks, but the actual credentials attackers use to breach business systems.</p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {[
+              { title: 'High-value account coverage', desc: 'Executive and admin credentials are prioritized for immediate alerting.' },
+              { title: 'API and secret detection', desc: 'Exposed cloud keys and tokens are identified before they are abused.' },
+              { title: 'Minimal noise', desc: 'AI filters remove irrelevant findings and ground alerts in real risk.' },
+              { title: 'Action-first alerts', desc: 'Each alert includes context and recommended remediation steps.' },
+            ].map((item) => (
+              <div key={item.title} className="rounded-3xl border border-border bg-background p-8">
+                <h3 className="text-xl font-montserrat font-semibold mb-3">{item.title}</h3>
+                <p className="text-muted-foreground">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-6">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-montserrat font-bold text-center mb-12">FAQ</h2>
-          <Accordion type="single" collapsible>
+          <h2 className="text-4xl font-montserrat font-bold text-foreground text-center mb-12">FAQ</h2>
+          <Accordion type="single" collapsible className="w-full">
             {faqs.map((f, i) => (
               <AccordionItem key={i} value={`q-${i}`}>
                 <AccordionTrigger className="text-left font-montserrat">{f.q}</AccordionTrigger>
@@ -161,8 +213,10 @@ const CredentialLeakDetection = () => {
 
       <FinalCTA />
 
-      <footer className="bg-card border-t border-border py-8 text-center text-muted-foreground">
-        <p>&copy; 2025 DarkThreat. All rights reserved.</p>
+      <footer className="bg-card border-t border-border py-12">
+        <div className="max-w-6xl mx-auto px-6 text-center text-muted-foreground">
+          <p>&copy; 2025 DarkThreat. All rights reserved.</p>
+        </div>
       </footer>
     </div>
   );

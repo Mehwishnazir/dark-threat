@@ -5,11 +5,17 @@ import { Button } from '@/components/ui/button';
 
 const links = [
   { to: '/', label: 'Home' },
-  { to: '/solution', label: 'Solution' },
   { to: '/pricing', label: 'Pricing' },
   { to: '/blog', label: 'Blog' },
   { to: '/about', label: 'About' },
   { to: '/contact', label: 'Contact' },
+];
+
+const serviceLinks = [
+  { to: '/solution', label: 'Platform Overview' },
+  { to: '/dark-web-monitoring', label: 'Dark Web Monitoring' },
+  { to: '/credential-leak-detection', label: 'Credential Leak Detection' },
+  { to: '/dark-web-data-removal', label: 'Dark Web Data Removal' },
 ];
 
 export default function MobileNav() {
@@ -74,6 +80,20 @@ export default function MobileNav() {
               {l.label}
             </Link>
           ))}
+
+          <div className="mt-4 border-t border-border pt-4">
+            <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-3">Solutions</p>
+            {serviceLinks.map((l) => (
+              <Link
+                key={l.to}
+                to={l.to}
+                onClick={() => setOpen(false)}
+                className="block px-3 py-3 text-lg font-montserrat text-foreground hover:text-primary hover:bg-primary/5 rounded-md transition-colors"
+              >
+                {l.label}
+              </Link>
+            ))}
+          </div>
         </nav>
 
         <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-border">

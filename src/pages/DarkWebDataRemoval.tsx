@@ -1,0 +1,213 @@
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Shield, Trash2, Globe, AlertTriangle, CheckCircle, ArrowRight } from 'lucide-react';
+import AppHeader from '@/components/AppHeader';
+import FinalCTA from '@/components/FinalCTA';
+import { Button } from '@/components/ui/button';
+
+const DarkWebDataRemoval = () => {
+  return (
+    <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Dark Web Data Removal | DarkThreat.ai</title>
+        <meta
+          name="description"
+          content="DarkThreat's Dark Web Data Removal service finds and removes leaked company data from underground marketplaces, hacker forums, and paste sites before it is weaponized."
+        />
+        <link rel="canonical" href="https://darkthreat.ai/dark-web-data-removal" />
+      </Helmet>
+
+      <AppHeader />
+
+      <section className="relative pt-32 pb-20 px-6 overflow-hidden hero-bg-layered">
+        <div aria-hidden className="absolute inset-0 circuit-pattern pointer-events-none opacity-50" />
+        <div className="relative z-10 max-w-6xl mx-auto grid gap-10 lg:grid-cols-[1.6fr_0.9fr] items-start">
+          <div>
+            <span className="hero-badge mb-6 inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold text-primary">
+              Dark Web Data Removal
+            </span>
+            <h1 className="text-4xl md:text-6xl font-montserrat font-bold text-foreground mb-6">
+              Dark Web Data Removal — <span className="glow-text">Erase exposed assets</span> from underground markets
+            </h1>
+            <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl">
+              DarkThreat locates leaked credentials, documents, and sensitive records across hidden channels, then works to take them down before attackers reuse or resell them.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button onClick={() => (window.location.href = '/auth')} className="cta-cyan inline-flex items-center gap-2">
+                Start Free Trial <ArrowRight className="w-4 h-4" />
+              </Button>
+              <Link to="/pricing" className="cta-outline inline-flex items-center gap-2 justify-center">
+                View Pricing
+              </Link>
+            </div>
+          </div>
+
+          <aside className="rounded-[2rem] border border-border bg-card p-8 shadow-xl">
+            <h2 className="text-2xl font-montserrat font-bold text-foreground mb-5">Get Free Cybersecurity Consultation</h2>
+            <form className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-foreground mb-2">Full Name *</label>
+                <input
+                  type="text"
+                  placeholder="Enter your name"
+                  className="w-full rounded-2xl border border-border bg-background px-4 py-3 text-foreground outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-foreground mb-2">Work Email *</label>
+                <input
+                  type="email"
+                  placeholder="your@company.com"
+                  className="w-full rounded-2xl border border-border bg-background px-4 py-3 text-foreground outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-foreground mb-2">Company Name</label>
+                <input
+                  type="text"
+                  placeholder="Your company"
+                  className="w-full rounded-2xl border border-border bg-background px-4 py-3 text-foreground outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-foreground mb-2">Phone Number</label>
+                <input
+                  type="text"
+                  placeholder="+1234567890"
+                  className="w-full rounded-2xl border border-border bg-background px-4 py-3 text-foreground outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-foreground mb-2">Reason for Contact *</label>
+                <select className="w-full rounded-2xl border border-border bg-background px-4 py-3 text-foreground outline-none focus:border-primary focus:ring-2 focus:ring-primary/20">
+                  <option>Select a reason</option>
+                  <option>General Inquiry</option>
+                  <option>Sales Question</option>
+                  <option>Demo Request</option>
+                  <option>Technical Support</option>
+                </select>
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-foreground mb-2">How Can We Help? *</label>
+                <textarea
+                  rows={4}
+                  placeholder="Tell us about your security needs..."
+                  className="w-full rounded-2xl border border-border bg-background px-4 py-3 text-foreground outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
+                />
+              </div>
+              <Button className="w-full">Request Free Assessment</Button>
+              <p className="text-xs text-muted-foreground">By submitting, you agree to our Privacy Policy.</p>
+            </form>
+          </aside>
+        </div>
+      </section>
+
+      <section className="py-10 px-6">
+        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
+          {[
+            { label: 'Global coverage', detail: 'Tor, forums, markets, paste sites' },
+            { label: 'Priority takedowns', detail: 'High-risk exposure first' },
+            { label: 'Repeat monitoring', detail: 'Watch for reappearances' },
+            { label: 'Brand protection', detail: 'Limit data resale and abuse' },
+          ].map((item) => (
+            <div key={item.label} className="rounded-3xl border border-border bg-card p-6 text-center">
+              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary mb-3">{item.label}</p>
+              <p className="text-foreground font-semibold text-lg">{item.detail}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="py-20 px-6 bg-card/10">
+        <div className="max-w-6xl mx-auto grid gap-10 lg:grid-cols-[1.6fr_1fr] items-start">
+          <div>
+            <h2 className="text-4xl font-montserrat font-bold text-foreground mb-6">What is dark web data removal?</h2>
+            <p className="text-lg text-muted-foreground mb-5">
+              Dark web data removal is a service that locates exposed credentials, documents, and sensitive assets on underground channels and then works to remove them to reduce attacker access.
+            </p>
+            <p className="text-lg text-muted-foreground">
+              DarkThreat combines investigation, removal requests, and ongoing monitoring so removed data is less likely to be reused or resold across hidden marketplaces.
+            </p>
+          </div>
+
+          <div className="grid gap-4">
+            {[
+              { title: 'Leaked credentials', detail: 'Remove login data before it spreads.' },
+              { title: 'Hidden documents', detail: 'Take down exposed files shared in private channels.' },
+              { title: 'Market listings', detail: 'Target listings on dark web shops and forums.' },
+            ].map((item) => (
+              <div key={item.title} className="rounded-3xl border border-border bg-background p-6">
+                <p className="text-sm uppercase tracking-[0.3em] text-primary mb-3">{item.title}</p>
+                <p className="text-muted-foreground">{item.detail}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-montserrat font-bold text-foreground mb-4">Removal process designed for the underground</h2>
+            <p className="text-lg text-muted-foreground">We find exposed assets quickly, verify risk, remove listings, and continue monitoring to prevent recurrence.</p>
+          </div>
+          <div className="grid gap-8 lg:grid-cols-3">
+            <div className="rounded-3xl border border-border bg-card p-8">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary mb-6">
+                <Shield className="w-6 h-6" />
+              </div>
+              <h3 className="text-2xl font-montserrat font-bold mb-4">Discovery</h3>
+              <p className="text-muted-foreground">Identify leaked credentials, documents, private keys, and other exposed assets in hidden channels.</p>
+            </div>
+            <div className="rounded-3xl border border-border bg-card p-8">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary mb-6">
+                <Trash2 className="w-6 h-6" />
+              </div>
+              <h3 className="text-2xl font-montserrat font-bold mb-4">Verification</h3>
+              <p className="text-muted-foreground">Validate each exposure and prioritize takedowns based on risk to the business.</p>
+            </div>
+            <div className="rounded-3xl border border-border bg-card p-8">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary mb-6">
+                <Globe className="w-6 h-6" />
+              </div>
+              <h3 className="text-2xl font-montserrat font-bold mb-4">Removal</h3>
+              <p className="text-muted-foreground">Work with operators and hidden marketplaces to take down leaked data listings and reduce the window of exposure.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-6 bg-card/30">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid gap-8 lg:grid-cols-3">
+            <div className="rounded-3xl border border-border bg-background p-8 text-center">
+              <div className="text-primary mb-4"><Trash2 className="w-10 h-10" /></div>
+              <h3 className="text-2xl font-montserrat font-bold text-foreground mb-3">60% faster incident response</h3>
+              <p className="text-muted-foreground">Remove dark web exposures quickly so your team can focus on remediation instead of endless investigation.</p>
+            </div>
+            <div className="rounded-3xl border border-border bg-background p-8 text-center">
+              <div className="text-primary mb-4"><Globe className="w-10 h-10" /></div>
+              <h3 className="text-2xl font-montserrat font-bold text-foreground mb-3">Global underground coverage</h3>
+              <p className="text-muted-foreground">We work across Tor, chat groups, forums, and black market shops to eliminate your data from hidden sources.</p>
+            </div>
+            <div className="rounded-3xl border border-border bg-background p-8 text-center">
+              <div className="text-primary mb-4"><AlertTriangle className="w-10 h-10" /></div>
+              <h3 className="text-2xl font-montserrat font-bold text-foreground mb-3">Ongoing exposure visibility</h3>
+              <p className="text-muted-foreground">Even after removal, we keep tracking reappearances so leaked assets stay contained.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <FinalCTA />
+
+      <footer className="bg-card border-t border-border py-12">
+        <div className="max-w-6xl mx-auto px-6 text-center text-muted-foreground">
+          <p>&copy; 2025 DarkThreat. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default DarkWebDataRemoval;

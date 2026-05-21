@@ -29,6 +29,7 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import DarkWebMonitoring from "./pages/DarkWebMonitoring";
 import CredentialLeakDetection from "./pages/CredentialLeakDetection";
+import DarkWebDataRemoval from "./pages/DarkWebDataRemoval";
 import ComparisonDarkOwl from "./pages/ComparisonDarkOwl";
 import Author from "./pages/Author";
 
@@ -65,6 +66,7 @@ const App = () => (
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/dark-web-monitoring" element={<DarkWebMonitoring />} />
             <Route path="/credential-leak-detection" element={<CredentialLeakDetection />} />
+            <Route path="/dark-web-data-removal" element={<DarkWebDataRemoval />} />
             <Route path="/compare/darkthreat-vs-darkowl" element={<ComparisonDarkOwl />} />
             <Route path="/author/:slug" element={<Author />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Shield, AlertTriangle, Search, BarChart3, Trash2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import AppHeader from '@/components/AppHeader';
 
 const FAQ_JSON_LD = {
   '@context': 'https://schema.org',
@@ -143,25 +144,7 @@ const DataLeakDetection = () => {
         <script type="application/ld+json">{JSON.stringify(FAQ_JSON_LD)}</script>
         <script type="application/ld+json">{JSON.stringify(SERVICE_JSON_LD)}</script>
       </Helmet>
-      {/* Header */}
-      <header className="py-6 px-6 border-b border-border">
-        <div className="max-w-6xl mx-auto flex items-center justify-between">
-          <Link to="/" className="text-2xl font-montserrat font-bold text-foreground">
-            DARK<span className="text-primary">THREAT</span>
-          </Link>
-          <nav className="flex items-center space-x-6">
-            <Link to="/" className="text-muted-foreground hover:text-primary transition-colors">
-              Home
-            </Link>
-            <Link to="/data-leak-detection" className="text-primary">
-              Data Leak Detection
-            </Link>
-            <Button className="hero-button">
-              Start Free Trial
-            </Button>
-          </nav>
-        </div>
-      </header>
+      <AppHeader />
 
       {/* Hero Section */}
       <section className="py-20 px-6 bg-gradient-to-b from-background to-threat-dark">
