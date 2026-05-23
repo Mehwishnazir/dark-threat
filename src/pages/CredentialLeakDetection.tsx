@@ -208,7 +208,7 @@ const CredentialLeakDetection = () => {
         </div>
       </section>
 
-      <section className="py-12 px-6">
+      <section className="py-8 px-6">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-4xl font-montserrat font-bold text-foreground text-center mb-10">Frequently Asked Questions</h2>
           <Accordion type="single" collapsible className="w-full">

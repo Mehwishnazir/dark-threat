@@ -168,7 +168,7 @@ const DarkWebDataRemoval = () => {
         </div>
       </section>
 
-      <section className="py-12 px-6 bg-card/30">
+      <section className="py-8 px-6 bg-card/30">
         <div className="max-w-6xl mx-auto">
           <div className="grid gap-8 lg:grid-cols-3">
             <div className="rounded-3xl border border-border bg-background p-8 text-center">
