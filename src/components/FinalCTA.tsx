@@ -6,7 +6,7 @@ export default function FinalCTA() {
     <section className="pt-8 pb-16 px-6">
       <div
         className="max-w-6xl mx-auto rounded-2xl p-10 md:p-16 text-center relative overflow-hidden
-                   border border-primary/30 reveal"
+                   border border-primary/30"
         style={{
           background:
             'linear-gradient(120deg, hsl(var(--navy-deep)) 0%, hsl(5 30% 8%) 50%, hsl(var(--cyan-deep) / 0.5) 100%)',
