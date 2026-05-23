@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Lock, Key, AlertTriangle, Mail, Cookie, ArrowRight, CheckCircle } from 'lucide-react';
 import AppHeader from '@/components/AppHeader';
-import FinalCTA from '@/components/FinalCTA';
 import {
   Accordion,
   AccordionContent,
@@ -221,8 +220,6 @@ const CredentialLeakDetection = () => {
           </Accordion>
         </div>
       </section>
-
-      <FinalCTA />
 
       <footer className="bg-card border-t border-border py-12">
         <div className="max-w-6xl mx-auto px-6 text-center text-muted-foreground">

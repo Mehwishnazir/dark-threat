@@ -2,7 +2,6 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Shield, Trash2, Globe, AlertTriangle, CheckCircle, ArrowRight } from 'lucide-react';
 import AppHeader from '@/components/AppHeader';
-import FinalCTA from '@/components/FinalCTA';
 import { Button } from '@/components/ui/button';
 
 const DarkWebDataRemoval = () => {
@@ -189,8 +188,6 @@ const DarkWebDataRemoval = () => {
           </div>
         </div>
       </section>
-
-      <FinalCTA />
 
       <footer className="bg-card border-t border-border py-12">
         <div className="max-w-6xl mx-auto px-6 text-center text-muted-foreground">
