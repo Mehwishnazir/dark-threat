@@ -3,6 +3,35 @@ import { Link } from 'react-router-dom';
 import { Shield, Trash2, Globe, AlertTriangle, CheckCircle, ArrowRight } from 'lucide-react';
 import AppHeader from '@/components/AppHeader';
 import { Button } from '@/components/ui/button';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
+
+const faqs = [
+  {
+    q: 'What kinds of dark web content can DarkThreat remove?',
+    a: 'DarkThreat targets exposed credentials, leaked documents, private keys, compromised account data, and market listings on underground forums, marketplaces, paste sites, and malware dump feeds.',
+  },
+  {
+    q: 'How does the removal process work for underground listings?',
+    a: 'We verify the exposure, prioritize the riskiest listings, submit takedown requests or operator contacts, and then continue monitoring for reposts or related exposures.',
+  },
+  {
+    q: 'Can you remove data that has already been copied or resold?',
+    a: 'We focus on eliminating active listings and reducing reuse. While copies may still exist, our ongoing coverage greatly limits the window in which attackers can find and use exposed assets.',
+  },
+  {
+    q: 'How quickly can my leaked data be taken down?',
+    a: 'Response time depends on source and operator cooperation, but priority removals are typically completed within hours to a few days, with continuous review afterward.',
+  },
+  {
+    q: 'Does the service include monitoring after removal?',
+    a: 'Yes. DarkThreat keeps tracking the dark web for reappearances and follows up on removed listings so your exposure stays contained over time.',
+  },
+];
 
 const DarkWebDataRemoval = () => {
   return (
@@ -14,6 +43,15 @@ const DarkWebDataRemoval = () => {
           content="DarkThreat's Dark Web Data Removal service finds and removes leaked company data from underground marketplaces, hacker forums, and paste sites before it is weaponized."
         />
         <link rel="canonical" href="https://darkthreat.ai/dark-web-data-removal" />
+        <script type="application/ld+json">{JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: faqs.map((f) => ({
+            '@type': 'Question',
+            name: f.q,
+            acceptedAnswer: { '@type': 'Answer', text: f.a },
+          })),
+        })}</script>
       </Helmet>
 
       <AppHeader />
@@ -186,6 +224,20 @@ const DarkWebDataRemoval = () => {
               <p className="text-muted-foreground">Even after removal, we keep tracking reappearances so leaked assets stay contained.</p>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="py-8 px-6">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-4xl font-montserrat font-bold text-foreground text-center mb-10">Frequently Asked Questions</h2>
+          <Accordion type="single" collapsible className="w-full">
+            {faqs.map((f, i) => (
+              <AccordionItem key={i} value={`faq-${i}`}>
+                <AccordionTrigger className="text-left font-montserrat">{f.q}</AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">{f.a}</AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
       </section>
 
