@@ -1,4 +1,4 @@
-﻿import { Suspense, useState, lazy } from 'react';
+import { Suspense, useState, lazy } from 'react';
 import { Button } from '@/components/ui/button';
 const ThreatSphere = lazy(() => import('@/components/ThreatSphere'));
 import AppHeader from '@/components/AppHeader';
@@ -114,8 +114,8 @@ const Index = () => {
         <div className="max-w-6xl mx-auto grid gap-12 lg:grid-cols-[1.1fr_0.9fr] items-center">
           <div className="relative rounded-[2rem] border border-border bg-card/80 p-6 shadow-2xl overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent" />
-            <div className="h-[420px] rounded-[1.75rem] overflow-hidden border border-border bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 shadow-inner p-8 text-white">
-              <div className="flex flex-col h-full justify-between">
+            <div className="min-h-[420px] h-full rounded-[1.75rem] border border-border bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 shadow-inner p-8 text-white">
+              <div className="flex flex-col h-full justify-between gap-6">
                 <div>
                   <span className="inline-flex rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-primary">About DarkThreat</span>
                   <h2 className="mt-6 text-3xl font-montserrat font-bold leading-tight">The cybersecurity partner built for modern threats</h2>

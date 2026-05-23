@@ -45,7 +45,7 @@ const CredentialLeakDetection = () => {
               Credential Leak Detection
             </span>
             <h1 className="text-4xl md:text-6xl font-montserrat font-bold text-foreground mb-6">
-              Credential Leak Detection � <span className="glow-text">Protect accounts</span> before attackers log in
+              Credential Leak Detection — <span className="glow-text">Protect accounts</span> before attackers log in
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl">
               DarkThreat detects leaked usernames, passwords, API keys, and session tokens across breach dumps, paste sites, public repos, and stealer logs so you can shut down account takeover before it begins.
@@ -60,42 +60,53 @@ const CredentialLeakDetection = () => {
             </div>
           </div>
 
-          <aside className="rounded-[2rem] border border-border bg-card p-8 shadow-xl">
-            <h2 className="text-2xl font-montserrat font-bold text-foreground mb-5">Get Free Cybersecurity Consultation</h2>
-            <form className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium text-foreground mb-2">Full Name *</label>
-                <input type="text" placeholder="Enter your name" className="w-full rounded-2xl border border-border bg-background px-4 py-3 text-foreground outline-none focus:border-primary focus:ring-2 focus:ring-primary/20" />
+          <aside className="rounded-[2rem] border border-primary/20 bg-card/80 backdrop-blur-xl p-8 shadow-2xl shadow-primary/5 relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent pointer-events-none" />
+            <div className="relative z-10">
+              <div className="flex items-center gap-2 mb-1">
+                <span className="inline-block h-2 w-2 rounded-full bg-primary animate-pulse" />
+                <span className="text-xs font-semibold uppercase tracking-[0.25em] text-primary">Free Consultation</span>
               </div>
-              <div>
-                <label className="block text-sm font-medium text-foreground mb-2">Work Email *</label>
-                <input type="email" placeholder="your@company.com" className="w-full rounded-2xl border border-border bg-background px-4 py-3 text-foreground outline-none focus:border-primary focus:ring-2 focus:ring-primary/20" />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-foreground mb-2">Company Name</label>
-                <input type="text" placeholder="Your company" className="w-full rounded-2xl border border-border bg-background px-4 py-3 text-foreground outline-none focus:border-primary focus:ring-2 focus:ring-primary/20" />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-foreground mb-2">Phone Number</label>
-                <input type="text" placeholder="+1234567890" className="w-full rounded-2xl border border-border bg-background px-4 py-3 text-foreground outline-none focus:border-primary focus:ring-2 focus:ring-primary/20" />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-foreground mb-2">Reason for Contact *</label>
-                <select className="w-full rounded-2xl border border-border bg-background px-4 py-3 text-foreground outline-none focus:border-primary focus:ring-2 focus:ring-primary/20">
-                  <option>Select a reason</option>
-                  <option>General Inquiry</option>
-                  <option>Sales Question</option>
-                  <option>Demo Request</option>
-                  <option>Technical Support</option>
-                </select>
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-foreground mb-2">How Can We Help? *</label>
-                <textarea rows={4} placeholder="Tell us about your security needs..." className="w-full rounded-2xl border border-border bg-background px-4 py-3 text-foreground outline-none focus:border-primary focus:ring-2 focus:ring-primary/20" />
-              </div>
-              <Button className="w-full">Request Free Assessment</Button>
-              <p className="text-xs text-muted-foreground">By submitting, you agree to our Privacy Policy.</p>
-            </form>
+              <h2 className="text-2xl font-montserrat font-bold text-foreground mb-6">Get Your Free Cybersecurity Assessment</h2>
+              <form className="space-y-4">
+                <div className="grid grid-cols-1 gap-4">
+                  <div>
+                    <label className="block text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground mb-2">Full Name *</label>
+                    <input type="text" placeholder="Enter your full name" className="w-full rounded-xl border border-border/60 bg-background/60 backdrop-blur-sm px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 outline-none transition-all duration-200 focus:border-primary focus:bg-background focus:ring-2 focus:ring-primary/30 hover:border-border" />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground mb-2">Work Email *</label>
+                    <input type="email" placeholder="you@company.com" className="w-full rounded-xl border border-border/60 bg-background/60 backdrop-blur-sm px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 outline-none transition-all duration-200 focus:border-primary focus:bg-background focus:ring-2 focus:ring-primary/30 hover:border-border" />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground mb-2">Company Name</label>
+                    <input type="text" placeholder="Your organization" className="w-full rounded-xl border border-border/60 bg-background/60 backdrop-blur-sm px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 outline-none transition-all duration-200 focus:border-primary focus:bg-background focus:ring-2 focus:ring-primary/30 hover:border-border" />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground mb-2">Phone Number</label>
+                    <input type="tel" placeholder="+1 (555) 000-0000" className="w-full rounded-xl border border-border/60 bg-background/60 backdrop-blur-sm px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 outline-none transition-all duration-200 focus:border-primary focus:bg-background focus:ring-2 focus:ring-primary/30 hover:border-border" />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground mb-2">Reason for Contact *</label>
+                    <select className="w-full rounded-xl border border-border/60 bg-background/60 backdrop-blur-sm px-4 py-3 text-sm text-foreground outline-none transition-all duration-200 focus:border-primary focus:bg-background focus:ring-2 focus:ring-primary/30 hover:border-border">
+                      <option value="">Select a reason</option>
+                      <option>General Inquiry</option>
+                      <option>Sales Question</option>
+                      <option>Demo Request</option>
+                      <option>Technical Support</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label className="block text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground mb-2">How Can We Help? *</label>
+                    <textarea rows={3} placeholder="Describe your security needs or challenges..." className="w-full rounded-xl border border-border/60 bg-background/60 backdrop-blur-sm px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 outline-none transition-all duration-200 focus:border-primary focus:bg-background focus:ring-2 focus:ring-primary/30 hover:border-border resize-none" />
+                  </div>
+                </div>
+                <button type="submit" className="w-full rounded-xl bg-gradient-to-r from-primary to-primary/80 px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition-all duration-200 hover:shadow-primary/40 hover:scale-[1.02] active:scale-[0.98]">
+                  Request Free Assessment →
+                </button>
+                <p className="text-center text-xs text-muted-foreground/70">By submitting, you agree to our <span className="underline underline-offset-2 hover:text-primary cursor-pointer transition-colors">Privacy Policy</span>.</p>
+              </form>
+            </div>
           </aside>
         </div>
       </section>
@@ -197,9 +208,9 @@ const CredentialLeakDetection = () => {
         </div>
       </section>
 
-      <section className="py-20 px-6">
+      <section className="py-12 px-6">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-4xl font-montserrat font-bold text-foreground text-center mb-12">FAQ</h2>
+          <h2 className="text-4xl font-montserrat font-bold text-foreground text-center mb-10">Frequently Asked Questions</h2>
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((f, i) => (
               <AccordionItem key={i} value={`q-${i}`}>
