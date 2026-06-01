@@ -14,7 +14,18 @@ const solutionLinks = [
   { to: '/solution', label: 'Platform Overview' },
   { to: '/dark-web-monitoring', label: 'Dark Web Monitoring' },
   { to: '/credential-leak-detection', label: 'Credential Leak Detection' },
+  { to: '/data-leak-detection', label: 'Data Leak Detection' },
   { to: '/dark-web-data-removal', label: 'Dark Web Data Removal' },
+];
+
+const industryLinks = [
+  { to: '/industries', label: 'All Industries' },
+  { to: '/industries/financial-services', label: 'Financial Services' },
+  { to: '/industries/healthcare', label: 'Healthcare' },
+  { to: '/industries/legal', label: 'Legal' },
+  { to: '/industries/government', label: 'Government' },
+  { to: '/industries/ecommerce', label: 'E-Commerce & Retail' },
+  { to: '/industries/saas-technology', label: 'SaaS & Technology' },
 ];
 
 export default function AppHeader() {
@@ -37,6 +48,23 @@ export default function AppHeader() {
                 <NavigationMenuContent className="md:w-[320px] rounded-xl border border-border bg-card shadow-lg">
                   <div className="grid gap-2 p-4">
                     {solutionLinks.map((item) => (
+                      <NavigationMenuLink asChild key={item.to}>
+                        <Link
+                          to={item.to}
+                          className="block rounded-xl px-4 py-3 text-left text-sm font-medium text-foreground hover:bg-primary/5 transition-colors"
+                        >
+                          {item.label}
+                        </Link>
+                      </NavigationMenuLink>
+                    ))}
+                  </div>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>Industries</NavigationMenuTrigger>
+                <NavigationMenuContent className="md:w-[320px] rounded-xl border border-border bg-card shadow-lg">
+                  <div className="grid gap-2 p-4">
+                    {industryLinks.map((item) => (
                       <NavigationMenuLink asChild key={item.to}>
                         <Link
                           to={item.to}
