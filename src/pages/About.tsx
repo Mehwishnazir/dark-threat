@@ -108,7 +108,7 @@ const About = () => {
       </section>
 
       {/* SECTION 2: Our Origin / The Story */}
-      <section className="py-24 px-6 bg-gradient-to-b from-background to-threat-dark border-t border-border/20">
+      <section className="py-24 px-6 bg-gradient-to-b from-background to-threat-dark">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-7">
@@ -235,7 +235,7 @@ const About = () => {
       </section>
 
       {/* SECTION 4: Proprietary Technology Hub */}
-      <section className="py-24 px-6 bg-gradient-to-b from-threat-dark to-background border-t border-b border-border/20">
+      <section className="py-24 px-6 bg-gradient-to-b from-threat-dark to-background">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <span className="inline-flex rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-primary mb-4">

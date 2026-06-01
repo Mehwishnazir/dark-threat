@@ -148,7 +148,7 @@ const Contact = () => {
       </section>
 
       {/* SECTION 2: Form & Request Assessment */}
-      <section className="py-20 px-6 bg-gradient-to-b from-background to-threat-dark border-t border-border/20">
+      <section className="py-20 px-6 bg-gradient-to-b from-background to-threat-dark">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             
@@ -290,7 +290,7 @@ const Contact = () => {
       </section>
 
       {/* SECTION 3: Global Presence */}
-      <section className="py-24 px-6 relative overflow-hidden border-t border-border/20 bg-background">
+      <section className="py-24 px-6 relative overflow-hidden bg-background">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <span className="inline-flex rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-primary mb-4">
@@ -361,7 +361,7 @@ const Contact = () => {
       </section>
 
       {/* SECTION 4: Department Direct Lines */}
-      <section className="py-24 px-6 bg-gradient-to-b from-background to-threat-dark border-t border-b border-border/20">
+      <section className="py-24 px-6 bg-gradient-to-b from-background to-threat-dark">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <span className="inline-flex rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-primary mb-4">
@@ -433,7 +433,7 @@ const Contact = () => {
       </section>
 
       {/* SECTION 6: FAQ / Accordion Section */}
-      <section className="py-24 px-6 border-t border-border/20 bg-card/15">
+      <section className="py-24 px-6 bg-card/15">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <span className="inline-flex rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-primary mb-4">

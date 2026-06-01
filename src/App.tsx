@@ -32,6 +32,9 @@ import CredentialLeakDetection from "./pages/CredentialLeakDetection";
 import DarkWebDataRemoval from "./pages/DarkWebDataRemoval";
 import ComparisonDarkOwl from "./pages/ComparisonDarkOwl";
 import Author from "./pages/Author";
+import IndustriesPage from "./pages/IndustriesPage";
+import FinancialServicesIndustry from "./pages/FinancialServicesIndustry";
+import HealthcareIndustry from "./pages/HealthcareIndustry";
 
 const queryClient = new QueryClient();
 
@@ -69,6 +72,10 @@ const App = () => (
             <Route path="/dark-web-data-removal" element={<DarkWebDataRemoval />} />
             <Route path="/compare/darkthreat-vs-darkowl" element={<ComparisonDarkOwl />} />
             <Route path="/author/:slug" element={<Author />} />
+            <Route path="/industries" element={<IndustriesPage />} />
+            <Route path="/industries/financial-services" element={<FinancialServicesIndustry />} />
+            <Route path="/industries/healthcare" element={<HealthcareIndustry />} />
+            <Route path="/industries/*" element={<TrialComingSoon />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
