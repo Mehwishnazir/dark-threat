@@ -35,7 +35,7 @@ const industries = [
     slug: '/industries/legal',
     desc: 'Protect privileged client communications, case files, and attorney credentials.',
     tags: ['ABA Rules', 'GDPR', 'State Bar'],
-    available: false,
+    available: true,
   },
   {
     icon: Landmark,
@@ -43,7 +43,7 @@ const industries = [
     slug: '/industries/government',
     desc: 'Monitor for nation-state threat activity, citizen data leaks, and critical infrastructure exposure.',
     tags: ['FISMA', 'NIST 800-53', 'FedRAMP'],
-    available: false,
+    available: true,
   },
   {
     icon: ShoppingCart,
@@ -51,7 +51,7 @@ const industries = [
     slug: '/industries/ecommerce',
     desc: 'Detect stolen customer credentials, carding activity, and brand impersonation campaigns.',
     tags: ['PCI-DSS', 'GDPR', 'CCPA'],
-    available: false,
+    available: true,
   },
   {
     icon: Cloud,
