@@ -10,7 +10,7 @@ export const howToMonitorYourDomainsReputationOnTheDarkWeb: BlogPostType & {
   slug: "how-to-monitor-your-domains-reputation-on-the-dark-web",
   title: "How to Monitor Your Domain's Reputation on the Dark Web",
   excerpt: "Learn how to protect your domain reputation with dark web monitoring covering subdomain abuse email spoofing and blacklisting threats for cybersecurity professionals.",
-  featuredImage: "/images/blog/how-to-monitor-your-domains-reputation-on-the-dark-web.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 1, 2026",
   readingTime: "15 min read",

@@ -10,7 +10,7 @@ export const howRansomwareGroupsRecruitOnDarkWebForums: BlogPostType & {
   slug: "how-ransomware-groups-recruit-on-dark-web-forums",
   title: "How Ransomware Groups Recruit on Dark Web Forums",
   excerpt: "A deep research-backed examination of the ransomware recruitment dark web ecosystem including anatomy of recruitment posts roles in demand vetting processes and defender strategies for detection and disruption.",
-  featuredImage: "/images/blog/how-ransomware-groups-recruit-on-dark-web-forums.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 2, 2026",
   readingTime: "14 min read",

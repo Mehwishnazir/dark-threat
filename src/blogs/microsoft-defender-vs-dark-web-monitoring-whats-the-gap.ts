@@ -10,7 +10,7 @@ export const microsoftDefenderVsDarkWebMonitoringWhatsTheGap: BlogPostType & {
   slug: "microsoft-defender-vs-dark-web-monitoring-whats-the-gap",
   title: "Microsoft Defender vs Dark Web Monitoring — What's the Gap?",
   excerpt: "Analyzing the critical gap between Microsoft Defender dark web monitoring and dedicated threat intelligence. Learn how proactive monitoring closes identity-based attack vectors.",
-  featuredImage: "/images/blog/microsoft-defender-vs-dark-web-monitoring-whats-the-gap.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "May 21, 2026",
   readingTime: "16 min read",

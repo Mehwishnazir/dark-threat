@@ -10,7 +10,7 @@ export const theRansomwareEconomyIn2025HowCybercriminalsMakeBillions: BlogPostTy
   slug: "the-ransomware-economy-in-2025-how-cybercriminals-make-billions",
   title: "The Ransomware Economy in 2025 — How Cybercriminals Make Billions",
   excerpt: "Explore the ransomware economy 2025 with revenue estimates payment rates RaaS business models and underground supply chain essential for cybersecurity professionals",
-  featuredImage: "/images/blog/the-ransomware-economy-in-2025-how-cybercriminals-make-billions.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 2, 2026",
   readingTime: "16 min read",

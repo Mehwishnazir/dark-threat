@@ -10,7 +10,7 @@ export const howUniversitiesBecomeDarkWebTargetsStudentAndFacultyData: BlogPostT
   slug: "how-universities-become-dark-web-targets-student-and-faculty-data",
   title: "How Universities Become Dark Web Targets — Student and Faculty Data",
   excerpt: "Explore how university data ends up on the dark web, from student credentials to research data, and learn proactive dark web monitoring strategies to protect higher education institutions.",
-  featuredImage: "/images/blog/how-universities-become-dark-web-targets-student-and-faculty-data.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "May 21, 2026",
   readingTime: "17 min read",

@@ -10,7 +10,7 @@ export const dataBreachResponsePlaybook2025HourByHourGuideForSecurityTeams: Blog
   slug: "data-breach-response-playbook-2025-hour-by-hour-guide-for-security-teams",
   title: "Data Breach Response Playbook 2025 — Hour-by-Hour Guide for Security Teams",
   excerpt: "A tactical 72-hour data breach response playbook for 2025 covering detection, containment, forensic preservation, threat intelligence, regulatory notification, and recovery planning for SOC teams and CISOs.",
-  featuredImage: "/images/blog/data-breach-response-playbook-2025-hour-by-hour-guide-for-security-teams.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 1, 2026",
   readingTime: "11 min read",

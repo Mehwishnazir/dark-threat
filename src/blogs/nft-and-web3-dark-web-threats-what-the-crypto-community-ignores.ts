@@ -10,7 +10,7 @@ export const nftAndWeb3DarkWebThreatsWhatTheCryptoCommunityIgnores: BlogPostType
   slug: "nft-and-web3-dark-web-threats-what-the-crypto-community-ignores",
   title: "NFT and Web3 Dark Web Threats — What the Crypto Community Ignores",
   excerpt: "Explore critical NFT Web3 dark web threats including wallet drainers Discord token loggers smart contract exploits and phishing infrastructure in this comprehensive security analysis",
-  featuredImage: "/images/blog/nft-and-web3-dark-web-threats-what-the-crypto-community-ignores.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "May 21, 2026",
   readingTime: "16 min read",

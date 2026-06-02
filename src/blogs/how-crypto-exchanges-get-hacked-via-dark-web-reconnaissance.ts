@@ -10,7 +10,7 @@ export const howCryptoExchangesGetHackedViaDarkWebReconnaissance: BlogPostType &
   slug: "how-crypto-exchanges-get-hacked-via-dark-web-reconnaissance",
   title: "How Crypto Exchanges Get Hacked via Dark Web Reconnaissance",
   excerpt: "Learn how threat actors use dark web reconnaissance to target crypto exchanges, covering credential markets, API theft, phishing, and mitigation strategies with real-world cases.",
-  featuredImage: "/images/blog/how-crypto-exchanges-get-hacked-via-dark-web-reconnaissance.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "May 21, 2026",
   readingTime: "13 min read",

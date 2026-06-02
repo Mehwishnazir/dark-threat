@@ -10,7 +10,7 @@ export const howLongDoHackersSitInsideYourNetworkBeforeBeingDetected: BlogPostTy
   slug: "how-long-do-hackers-sit-inside-your-network-before-being-detected",
   title: "How Long Do Hackers Sit Inside Your Network Before Being Detected?",
   excerpt: "Learn about the 241-day average hacker dwell time in networks, its impact on breach costs, and strategies to reduce detection gaps using threat hunting and dark web intelligence.",
-  featuredImage: "/images/blog/how-long-do-hackers-sit-inside-your-network-before-being-detected.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 2, 2026",
   readingTime: "23 min read",

@@ -10,7 +10,7 @@ export const howFintechStartupsGetTargetedOnTheDarkWebAndHowToStopIt: BlogPostTy
   slug: "how-fintech-startups-get-targeted-on-the-dark-web-and-how-to-stop-it",
   title: "How Fintech Startups Get Targeted on the Dark Web — And How to Stop It",
   excerpt: "Explore how fintech startups face dark web threats like OAuth token theft, open banking credential risks, and crypto API key exposure, with detection and mitigation strategies.",
-  featuredImage: "/images/blog/how-fintech-startups-get-targeted-on-the-dark-web-and-how-to-stop-it.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "May 21, 2026",
   readingTime: "13 min read",

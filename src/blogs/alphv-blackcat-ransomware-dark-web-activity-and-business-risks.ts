@@ -10,7 +10,7 @@ export const alphvBlackcatRansomwareDarkWebActivityAndBusinessRisks: BlogPostTyp
   slug: "alphv-blackcat-ransomware-dark-web-activity-and-business-risks",
   title: "ALPHV BlackCat Ransomware — Dark Web Activity and Business Risks",
   excerpt: "An in-depth analysis of ALPHV BlackCat ransomware in 2025 covering its dark web footprint technical capabilities targeted sectors business risks detection strategies and regulatory implications for cybersecurity professionals.",
-  featuredImage: "/images/blog/alphv-blackcat-ransomware-dark-web-activity-and-business-risks.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 2, 2026",
   readingTime: "13 min read",

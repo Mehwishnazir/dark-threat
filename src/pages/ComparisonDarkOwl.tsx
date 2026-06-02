@@ -23,6 +23,21 @@ const ComparisonDarkOwl = () => {
         <title>DarkOwl Alternative | DarkThreat vs DarkOwl</title>
         <meta name="description" content="Looking for a DarkOwl alternative? Compare DarkThreat vs DarkOwl on pricing, coverage, ease-of-use, and self-serve onboarding. Start a free 7-day trial today." />
         <link rel="canonical" href="https://darkthreat.ai/compare/darkthreat-vs-darkowl" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "DarkOwl Alternative | DarkThreat vs DarkOwl",
+          "description": "Compare DarkThreat vs DarkOwl on pricing, coverage, ease-of-use, and onboarding. DarkThreat is a modern, transparent, self-serve DarkOwl alternative.",
+          "url": "https://darkthreat.ai/compare/darkthreat-vs-darkowl",
+          "publisher": {
+            "@type": "Organization",
+            "name": "DarkThreat",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://darkthreat.ai/logo.png"
+            }
+          }
+        })}</script>
       </Helmet>
 
       <header className="fixed top-0 left-0 right-0 py-4 md:py-6 px-6 border-b border-border bg-background/95 backdrop-blur-sm z-50">

@@ -10,7 +10,7 @@ export const protectingYourShopifyStoreFromDarkWebThreats: BlogPostType & {
   slug: "protecting-your-shopify-store-from-dark-web-threats",
   title: "Protecting Your Shopify Store from Dark Web Threats",
   excerpt: "Learn how Shopify dark web protection helps merchants detect credential theft, API token leaks, and payment data breaches before they cause financial loss and reputational damage.",
-  featuredImage: "/images/blog/protecting-your-shopify-store-from-dark-web-threats.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "May 21, 2026",
   readingTime: "17 min read",

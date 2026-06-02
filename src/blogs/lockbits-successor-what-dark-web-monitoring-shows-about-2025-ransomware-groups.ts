@@ -10,7 +10,7 @@ export const lockbitsSuccessorWhatDarkWebMonitoringShowsAbout2025RansomwareGroup
   slug: "lockbits-successor-what-dark-web-monitoring-shows-about-2025-ransomware-groups",
   title: "LockBit's Successor — What Dark Web Monitoring Shows About 2025 Ransomware Groups",
   excerpt: "Explore the lockbit successor ransomware 2025 landscape with dark web monitoring insights. Analysis of RansomHub BlackCat Play and defense strategies against evolving threats.",
-  featuredImage: "/images/blog/lockbits-successor-what-dark-web-monitoring-shows-about-2025-ransomware-groups.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 2, 2026",
   readingTime: "15 min read",

@@ -10,7 +10,7 @@ export const mandatoryBreachReportingWhatUsEuAndUkLawsRequireIn2025: BlogPostTyp
   slug: "mandatory-breach-reporting-what-us-eu-and-uk-laws-require-in-2025",
   title: "Mandatory Breach Reporting — What US, EU, and UK Laws Require in 2025",
   excerpt: "A comprehensive guide to mandatory data breach reporting laws in 2025 across the US, EU, and UK covering notification timelines, triggers, fines, and compliance strategies for cybersecurity professionals.",
-  featuredImage: "/images/blog/mandatory-breach-reporting-what-us-eu-and-uk-laws-require-in-2025.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 2, 2026",
   readingTime: "18 min read",

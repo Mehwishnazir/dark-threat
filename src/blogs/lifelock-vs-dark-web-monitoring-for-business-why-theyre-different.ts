@@ -10,7 +10,7 @@ export const lifelockVsDarkWebMonitoringForBusinessWhyTheyreDifferent: BlogPostT
   slug: "lifelock-vs-dark-web-monitoring-for-business-why-theyre-different",
   title: "LifeLock vs Dark Web Monitoring for Business — Why They're Different",
   excerpt: "Explore the critical differences between LifeLock consumer identity theft protection and enterprise dark web monitoring platforms like DarkThreat.AI for robust corporate security.",
-  featuredImage: "/images/blog/lifelock-vs-dark-web-monitoring-for-business-why-theyre-different.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "May 21, 2026",
   readingTime: "15 min read",

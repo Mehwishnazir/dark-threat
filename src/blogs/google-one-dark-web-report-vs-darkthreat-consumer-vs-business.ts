@@ -10,7 +10,7 @@ export const googleOneDarkWebReportVsDarkthreatConsumerVsBusiness: BlogPostType 
   slug: "google-one-dark-web-report-vs-darkthreat-consumer-vs-business",
   title: "Google One Dark Web Report vs DarkThreat — Consumer vs Business",
   excerpt: "Google dark web report vs business monitoring comparison: discover why consumer tools like Google One lack enterprise-grade threat intelligence, real-time alerts, and forensic depth needed for security operations centers.",
-  featuredImage: "/images/blog/google-one-dark-web-report-vs-darkthreat-consumer-vs-business.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "May 21, 2026",
   readingTime: "13 min read",

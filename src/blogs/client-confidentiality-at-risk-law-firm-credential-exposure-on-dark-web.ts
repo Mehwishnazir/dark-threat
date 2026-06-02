@@ -10,7 +10,7 @@ export const clientConfidentialityAtRiskLawFirmCredentialExposureOnDarkWeb: Blog
   slug: "client-confidentiality-at-risk-law-firm-credential-exposure-on-dark-web",
   title: "Client Confidentiality at Risk — Law Firm Credential Exposure on Dark Web",
   excerpt: "Learn how law firm credentials are stolen and traded on the dark web, the legal risks of credential exposure, and proactive strategies to protect client confidentiality and avoid malpractice.",
-  featuredImage: "/images/blog/client-confidentiality-at-risk-law-firm-credential-exposure-on-dark-web.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "May 21, 2026",
   readingTime: "13 min read",

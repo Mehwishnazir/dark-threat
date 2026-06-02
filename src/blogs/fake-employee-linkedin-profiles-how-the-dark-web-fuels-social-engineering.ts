@@ -10,7 +10,7 @@ export const fakeEmployeeLinkedinProfilesHowTheDarkWebFuelsSocialEngineering: Bl
   slug: "fake-employee-linkedin-profiles-how-the-dark-web-fuels-social-engineering",
   title: "Fake Employee LinkedIn Profiles — How the Dark Web Fuels Social Engineering",
   excerpt: "Learn how dark web data fuels fake LinkedIn profiles for social engineering attacks. Explore tactics detection methods and defense strategies to protect your organization from impersonation-driven threats.",
-  featuredImage: "/images/blog/fake-employee-linkedin-profiles-how-the-dark-web-fuels-social-engineering.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 1, 2026",
   readingTime: "14 min read",

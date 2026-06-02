@@ -10,7 +10,7 @@ export const howToTellIfYourBusinessIsBeingTargetedByRansomwareBeforeItHits: Blo
   slug: "how-to-tell-if-your-business-is-being-targeted-by-ransomware-before-it-hits",
   title: "How to Tell If Your Business Is Being Targeted by Ransomware Before It Hits",
   excerpt: "Learn to detect ransomware pre-attack indicators including dark web chatter credential sales and reconnaissance signals to prevent attacks before encryption",
-  featuredImage: "/images/blog/how-to-tell-if-your-business-is-being-targeted-by-ransomware-before-it-hits.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 2, 2026",
   readingTime: "15 min read",

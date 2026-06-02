@@ -10,7 +10,7 @@ export const clopRansomwareGroupDarkWebIntelligenceAndBusinessExposure: BlogPost
   slug: "clop-ransomware-group-dark-web-intelligence-and-business-exposure",
   title: "Clop Ransomware Group — Dark Web Intelligence and Business Exposure",
   excerpt: "An in-depth analysis of the Clop ransomware group, its MOVEit campaign aftermath, current dark web activity, and strategies for dark web intelligence and proactive defense against supply chain data extortion threats.",
-  featuredImage: "/images/blog/clop-ransomware-group-dark-web-intelligence-and-business-exposure.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 2, 2026",
   readingTime: "17 min read",

@@ -10,7 +10,7 @@ export const crowdstrikeFalconIntelligenceVsDarkthreatPositioningPricing: BlogPo
   slug: "crowdstrike-falcon-intelligence-vs-darkthreat-positioning-pricing",
   title: "CrowdStrike Falcon Intelligence vs DarkThreat — Positioning & Pricing",
   excerpt: "Compare CrowdStrike Falcon Intelligence vs DarkThreat AI for dark web monitoring capabilities pricing and value including feature comparisons integration options threat intelligence quality and ideal use cases for cybersecurity teams",
-  featuredImage: "/images/blog/crowdstrike-falcon-intelligence-vs-darkthreat-positioning-pricing.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "May 21, 2026",
   readingTime: "13 min read",

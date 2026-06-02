@@ -10,7 +10,7 @@ export const howECommerceMerchantsLoseCustomerDataToDarkWebMarkets: BlogPostType
   slug: "how-e-commerce-merchants-lose-customer-data-to-dark-web-markets",
   title: "How E-Commerce Merchants Lose Customer Data to Dark Web Markets",
   excerpt: "Learn how e-commerce merchants lose customer data to dark web markets through SQL injection, credential stuffing, formjacking, and supply chain attacks. Includes forensic detection signals, data pricing, and tactical defense strategies.",
-  featuredImage: "/images/blog/how-e-commerce-merchants-lose-customer-data-to-dark-web-markets.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "May 21, 2026",
   readingTime: "15 min read",

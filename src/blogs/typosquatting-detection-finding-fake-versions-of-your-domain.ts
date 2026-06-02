@@ -10,7 +10,7 @@ export const typosquattingDetectionFindingFakeVersionsOfYourDomain: BlogPostType
   slug: "typosquatting-detection-finding-fake-versions-of-your-domain",
   title: "Typosquatting Detection — Finding Fake Versions of Your Domain",
   excerpt: "Learn how typosquatting dark web detection protects enterprises from domain impersonation, phishing, and credential theft. This guide covers detection methodology, criminal ecosystems, and takedown workflows.",
-  featuredImage: "/images/blog/typosquatting-detection-finding-fake-versions-of-your-domain.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "May 21, 2026",
   readingTime: "13 min read",

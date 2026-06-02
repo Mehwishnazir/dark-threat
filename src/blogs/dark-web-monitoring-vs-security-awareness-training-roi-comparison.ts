@@ -10,7 +10,7 @@ export const darkWebMonitoringVsSecurityAwarenessTrainingRoiComparison: BlogPost
   slug: "dark-web-monitoring-vs-security-awareness-training-roi-comparison",
   title: "Dark Web Monitoring vs Security Awareness Training — ROI Comparison",
   excerpt: "Compare dark web monitoring vs security training ROI in this data-driven analysis. Learn which cybersecurity investment delivers higher risk reduction and how to build an optimal hybrid strategy for your organization.",
-  featuredImage: "/images/blog/dark-web-monitoring-vs-security-awareness-training-roi-comparison.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "May 21, 2026",
   readingTime: "18 min read",

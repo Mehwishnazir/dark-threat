@@ -10,7 +10,7 @@ export const howToGetMaliciousDarkWebListingsRemovedTakedownGuide: BlogPostType 
   slug: "how-to-get-malicious-dark-web-listings-removed-takedown-guide",
   title: "How to Get Malicious Dark Web Listings Removed — Takedown Guide",
   excerpt: "A comprehensive guide for cybersecurity teams on executing dark web takedown of malicious listings covering removable vs non-removable data legal procedures and proactive strategies.",
-  featuredImage: "/images/blog/how-to-get-malicious-dark-web-listings-removed-takedown-guide.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 1, 2026",
   readingTime: "15 min read",

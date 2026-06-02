@@ -10,7 +10,7 @@ export const darkWebMonitoringForMaDueDiligenceInTheDealRoom: BlogPostType & {
   slug: "dark-web-monitoring-for-ma-due-diligence-in-the-deal-room",
   title: "Dark Web Monitoring for M&A — Due Diligence in the Deal Room",
   excerpt: "Explore how dark web monitoring for M&A due diligence uncovers hidden cyber risks, credential leaks, and ransomware threats to protect deal value and prevent billion-dollar write-downs.",
-  featuredImage: "/images/blog/dark-web-monitoring-for-ma-due-diligence-in-the-deal-room.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 1, 2026",
   readingTime: "16 min read",

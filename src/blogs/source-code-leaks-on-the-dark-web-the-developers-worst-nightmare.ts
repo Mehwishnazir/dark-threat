@@ -10,7 +10,7 @@ export const sourceCodeLeaksOnTheDarkWebTheDevelopersWorstNightmare: BlogPostTyp
   slug: "source-code-leaks-on-the-dark-web-the-developers-worst-nightmare",
   title: "Source Code Leaks on the Dark Web — The Developer's Worst Nightmare",
   excerpt: "Learn about source code dark web leaks including theft vectors monetization case studies and a detection framework for developers and security teams.",
-  featuredImage: "/images/blog/source-code-leaks-on-the-dark-web-the-developers-worst-nightmare.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 1, 2026",
   readingTime: "14 min read",

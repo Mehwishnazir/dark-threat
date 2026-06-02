@@ -10,7 +10,7 @@ export const darkWebPriceOfYourBusinessDataWhatCriminalsArePaying: BlogPostType 
   slug: "dark-web-price-of-your-business-data-what-criminals-are-paying",
   title: "Dark Web Price of Your Business Data — What Criminals Are Paying",
   excerpt: "Explore the current dark web pricing for stolen business credentials, databases, financial records, and corporate intelligence. Learn how cybercriminals value data and how monitoring can protect your organization.",
-  featuredImage: "/images/blog/dark-web-price-of-your-business-data-what-criminals-are-paying.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 1, 2026",
   readingTime: "13 min read",

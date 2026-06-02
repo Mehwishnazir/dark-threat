@@ -10,7 +10,7 @@ export const howHackersUseYourBrandAgainstYourCustomersPhishingKitSales: BlogPos
   slug: "how-hackers-use-your-brand-against-your-customers-phishing-kit-sales",
   title: "How Hackers Use Your Brand Against Your Customers — Phishing Kit Sales",
   excerpt: "Explore how brand spoofing phishing kits are sold on dark web marketplaces, the economics of PhaaS, and strategies for detection and takedown to protect your brand.",
-  featuredImage: "/images/blog/how-hackers-use-your-brand-against-your-customers-phishing-kit-sales.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 1, 2026",
   readingTime: "13 min read",

@@ -10,7 +10,7 @@ export const darkWebThreatsFacingTheBankingSectorIn2025: BlogPostType & {
   slug: "dark-web-threats-facing-the-banking-sector-in-2025",
   title: "Dark Web Threats Facing the Banking Sector in 2025",
   excerpt: "Explore the top dark web threats targeting banks in 2025 including credential compromise wire fraud ATM skimmer data ransomware and regulatory compliance strategies for proactive threat intelligence and monitoring.",
-  featuredImage: "/images/blog/dark-web-threats-facing-the-banking-sector-in-2025.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "May 21, 2026",
   readingTime: "11 min read",

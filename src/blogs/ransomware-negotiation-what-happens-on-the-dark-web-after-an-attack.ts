@@ -10,7 +10,7 @@ export const ransomwareNegotiationWhatHappensOnTheDarkWebAfterAnAttack: BlogPost
   slug: "ransomware-negotiation-what-happens-on-the-dark-web-after-an-attack",
   title: "Ransomware Negotiation — What Happens on the Dark Web After an Attack",
   excerpt: "Explore the hidden mechanics of ransomware negotiation on the dark web, from Tor portals and psychological tactics to cryptocurrency payments and professional negotiators, with insights from DarkThreat.AI threat intelligence.",
-  featuredImage: "/images/blog/ransomware-negotiation-what-happens-on-the-dark-web-after-an-attack.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 2, 2026",
   readingTime: "17 min read",

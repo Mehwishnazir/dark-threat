@@ -10,7 +10,7 @@ export const proofpointDigitalRiskProtectionVsDarkthreatFullReview: BlogPostType
   slug: "proofpoint-digital-risk-protection-vs-darkthreat-full-review",
   title: "Proofpoint Digital Risk Protection vs DarkThreat — Full Review",
   excerpt: "This article compares Proofpoint DRP and DarkThreat AI for dark web intelligence assessing credential exposure ransomware leak site monitoring and threat actor detection with detailed source coverage analysis",
-  featuredImage: "/images/blog/proofpoint-digital-risk-protection-vs-darkthreat-full-review.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "May 21, 2026",
   readingTime: "16 min read",

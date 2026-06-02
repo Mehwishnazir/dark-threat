@@ -10,7 +10,7 @@ export const darkWebMonitoringVsPenetrationTestingWhenDoYouNeedWhich: BlogPostTy
   slug: "dark-web-monitoring-vs-penetration-testing-when-do-you-need-which",
   title: "Dark Web Monitoring vs Penetration Testing — When Do You Need Which?",
   excerpt: "A comprehensive guide comparing dark web monitoring vs penetration testing covering strategic differences use cases integration strategies and a decision framework for cybersecurity leaders",
-  featuredImage: "/images/blog/dark-web-monitoring-vs-penetration-testing-when-do-you-need-which.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "May 21, 2026",
   readingTime: "19 min read",

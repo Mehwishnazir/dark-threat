@@ -10,7 +10,7 @@ export const darkthreatVsResecurityIntelligencePlatformComparison: BlogPostType 
   slug: "darkthreat-vs-resecurity-intelligence-platform-comparison",
   title: "DarkThreat vs Resecurity — Intelligence Platform Comparison",
   excerpt: "Compare Resecurity vs DarkThreat.AI for threat intelligence. Analyze features, pricing, dark web coverage, and usability to find the best Resecurity alternative for your security team.",
-  featuredImage: "/images/blog/darkthreat-vs-resecurity-intelligence-platform-comparison.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "May 21, 2026",
   readingTime: "13 min read",

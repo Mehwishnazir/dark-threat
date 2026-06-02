@@ -10,7 +10,7 @@ export const darkWebThreatsForAccountingAndCpaFirmsFullRiskAssessment: BlogPostT
   slug: "dark-web-threats-for-accounting-and-cpa-firms-full-risk-assessment",
   title: "Dark Web Threats for Accounting and CPA Firms — Full Risk Assessment",
   excerpt: "Learn how dark web threats target accounting firms including credential theft ransomware and BEC attacks plus a risk assessment framework and defense strategies using threat intelligence monitoring.",
-  featuredImage: "/images/blog/dark-web-threats-for-accounting-and-cpa-firms-full-risk-assessment.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "May 21, 2026",
   readingTime: "14 min read",

@@ -10,7 +10,7 @@ export const howToConductADarkWebScanAfterASuspectedBreach: BlogPostType & {
   slug: "how-to-conduct-a-dark-web-scan-after-a-suspected-breach",
   title: "How to Conduct a Dark Web Scan After a Suspected Breach",
   excerpt: "Learn how to conduct a dark web scan after a data breach with a step-by-step guide for cybersecurity teams covering preparation, tools, analysis, and remediation.",
-  featuredImage: "/images/blog/how-to-conduct-a-dark-web-scan-after-a-suspected-breach.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 2, 2026",
   readingTime: "12 min read",

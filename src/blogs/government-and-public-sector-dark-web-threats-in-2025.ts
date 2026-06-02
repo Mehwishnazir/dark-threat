@@ -10,7 +10,7 @@ export const governmentAndPublicSectorDarkWebThreatsIn2025: BlogPostType & {
   slug: "government-and-public-sector-dark-web-threats-in-2025",
   title: "Government and Public Sector Dark Web Threats in 2025",
   excerpt: "Explore government dark web threats 2025 including stolen credentials, critical infrastructure access, state-sponsored espionage, and data extortion with defense strategies for public sector cybersecurity.",
-  featuredImage: "/images/blog/government-and-public-sector-dark-web-threats-in-2025.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "May 21, 2026",
   readingTime: "11 min read",

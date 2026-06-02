@@ -10,7 +10,7 @@ export const whatIsDoubleExtortionRansomwareAndHowDoesDarkWebMonitoringHelp: Blo
   slug: "what-is-double-extortion-ransomware-and-how-does-dark-web-monitoring-help",
   title: "What Is Double Extortion Ransomware and How Does Dark Web Monitoring Help?",
   excerpt: "Learn how double extortion ransomware uses encryption and data exposure on the dark web to pressure victims. This guide covers attack phases, dark web leak sites, and monitoring strategies.",
-  featuredImage: "/images/blog/what-is-double-extortion-ransomware-and-how-does-dark-web-monitoring-help.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 2, 2026",
   readingTime: "19 min read",

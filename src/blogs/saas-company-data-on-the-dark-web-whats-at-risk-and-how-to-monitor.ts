@@ -10,7 +10,7 @@ export const saasCompanyDataOnTheDarkWebWhatsAtRiskAndHowToMonitor: BlogPostType
   slug: "saas-company-data-on-the-dark-web-whats-at-risk-and-how-to-monitor",
   title: "SaaS Company Data on the Dark Web — What's at Risk and How to Monitor",
   excerpt: "Learn about dark web threats specific to SaaS companies including credential theft API key leaks and source code exposure with proactive monitoring strategies and incident response guidance.",
-  featuredImage: "/images/blog/saas-company-data-on-the-dark-web-whats-at-risk-and-how-to-monitor.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "May 21, 2026",
   readingTime: "16 min read",

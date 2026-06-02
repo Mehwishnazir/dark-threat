@@ -10,7 +10,7 @@ export const dataBreachStatistics2025TheNumbersEveryCisoMustKnow: BlogPostType &
   slug: "data-breach-statistics-2025-the-numbers-every-ciso-must-know",
   title: "Data Breach Statistics 2025 — The Numbers Every CISO Must Know",
   excerpt: "Explore 2025 data breach statistics with cost analysis MTTD attack vectors and dark web exposure insights from IBM Verizon and SpyCloud for cybersecurity professionals.",
-  featuredImage: "/images/blog/data-breach-statistics-2025-the-numbers-every-ciso-must-know.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 2, 2026",
   readingTime: "14 min read",

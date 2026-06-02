@@ -10,7 +10,7 @@ export const whyHealthcareIsTheMostTargetedIndustryOnTheDarkWeb: BlogPostType & 
   slug: "why-healthcare-is-the-most-targeted-industry-on-the-dark-web",
   title: "Why Healthcare Is the Most Targeted Industry on the Dark Web",
   excerpt: "Healthcare is the most targeted industry on the dark web due to the high value of medical records, ransomware attacks, and vulnerabilities in legacy systems, requiring proactive dark web monitoring and threat intelligence for defense.",
-  featuredImage: "/images/blog/why-healthcare-is-the-most-targeted-industry-on-the-dark-web.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "May 21, 2026",
   readingTime: "14 min read",

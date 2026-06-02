@@ -10,7 +10,7 @@ export const theMostCommonCausesOfDataBreachesIn2025: BlogPostType & {
   slug: "the-most-common-causes-of-data-breaches-in-2025",
   title: "The Most Common Causes of Data Breaches in 2025",
   excerpt: "Explore the top data breach causes in 2025 including phishing, stolen credentials, cloud misconfiguration, insider threats, ransomware, and unpatched vulnerabilities with expert analysis and defensive strategies.",
-  featuredImage: "/images/blog/the-most-common-causes-of-data-breaches-in-2025.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 2, 2026",
   readingTime: "19 min read",

@@ -10,7 +10,7 @@ export const howDarkWebMonitoringProtectsYourCompanysIntellectualProperty: BlogP
   slug: "how-dark-web-monitoring-protects-your-companys-intellectual-property",
   title: "How Dark Web Monitoring Protects Your Company's Intellectual Property",
   excerpt: "Learn how dark web IP theft targets source code trade secrets and product roadmaps and discover proactive monitoring strategies for intellectual property dark web protection.",
-  featuredImage: "/images/blog/how-dark-web-monitoring-protects-your-companys-intellectual-property.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 1, 2026",
   readingTime: "15 min read",

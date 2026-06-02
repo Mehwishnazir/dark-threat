@@ -10,7 +10,7 @@ export const whatToDoInTheFirst48HoursOfADataBreach: BlogPostType & {
   slug: "what-to-do-in-the-first-48-hours-of-a-data-breach",
   title: "What to Do in the First 48 Hours of a Data Breach",
   excerpt: "A step-by-step incident response plan for the first 48 hours of a data breach covering triage dark web intelligence forensic preservation legal obligations and communication management",
-  featuredImage: "/images/blog/what-to-do-in-the-first-48-hours-of-a-data-breach.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 1, 2026",
   readingTime: "12 min read",

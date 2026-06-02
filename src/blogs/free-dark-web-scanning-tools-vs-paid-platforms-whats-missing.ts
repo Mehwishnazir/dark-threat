@@ -10,7 +10,7 @@ export const freeDarkWebScanningToolsVsPaidPlatformsWhatsMissing: BlogPostType &
   slug: "free-dark-web-scanning-tools-vs-paid-platforms-whats-missing",
   title: "Free Dark Web Scanning Tools vs Paid Platforms — What's Missing?",
   excerpt: "Comparing free vs paid dark web scanning tools for enterprise threat intelligence: uncover critical gaps in data coverage, real-time monitoring, and actionable insights that free tools miss.",
-  featuredImage: "/images/blog/free-dark-web-scanning-tools-vs-paid-platforms-whats-missing.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "May 21, 2026",
   readingTime: "12 min read",

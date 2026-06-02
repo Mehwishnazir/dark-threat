@@ -10,7 +10,7 @@ export const brandImpersonationOnTheDarkWebHowToDetectAndRespond: BlogPostType &
   slug: "brand-impersonation-on-the-dark-web-how-to-detect-and-respond",
   title: "Brand Impersonation on the Dark Web — How to Detect and Respond",
   excerpt: "Learn how dark web monitoring detects brand impersonation attacks including phishing kits domain spoofing and credential theft with a technical framework for cybersecurity professionals",
-  featuredImage: "/images/blog/brand-impersonation-on-the-dark-web-how-to-detect-and-respond.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "May 21, 2026",
   readingTime: "15 min read",

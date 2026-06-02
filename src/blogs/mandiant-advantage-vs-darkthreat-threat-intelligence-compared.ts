@@ -10,7 +10,7 @@ export const mandiantAdvantageVsDarkthreatThreatIntelligenceCompared: BlogPostTy
   slug: "mandiant-advantage-vs-darkthreat-threat-intelligence-compared",
   title: "Mandiant Advantage vs DarkThreat — Threat Intelligence Compared",
   excerpt: "Compare Mandiant Advantage vs DarkThreat.AI for dark web monitoring threat intelligence platform with pricing data sources and use cases for mid-market security teams",
-  featuredImage: "/images/blog/mandiant-advantage-vs-darkthreat-threat-intelligence-compared.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "May 21, 2026",
   readingTime: "14 min read",

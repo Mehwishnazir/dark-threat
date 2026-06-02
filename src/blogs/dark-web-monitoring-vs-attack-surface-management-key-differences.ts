@@ -10,7 +10,7 @@ export const darkWebMonitoringVsAttackSurfaceManagementKeyDifferences: BlogPostT
   slug: "dark-web-monitoring-vs-attack-surface-management-key-differences",
   title: "Dark Web Monitoring vs Attack Surface Management — Key Differences",
   excerpt: "Explore the key differences between dark web monitoring and attack surface management, how they complement each other, and why a unified strategy is essential for modern cybersecurity defense.",
-  featuredImage: "/images/blog/dark-web-monitoring-vs-attack-surface-management-key-differences.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "May 21, 2026",
   readingTime: "14 min read",

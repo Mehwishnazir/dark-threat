@@ -10,7 +10,7 @@ export const hotelAndHospitalityIndustryDarkWebExposureAndGuestDataRisks: BlogPo
   slug: "hotel-and-hospitality-industry-dark-web-exposure-and-guest-data-risks",
   title: "Hotel and Hospitality Industry — Dark Web Exposure and Guest Data Risks",
   excerpt: "Explore hotel industry dark web threats including loyalty point fraud, POS breaches, ransomware, and identity theft. Learn proactive dark web monitoring strategies for hospitality.",
-  featuredImage: "/images/blog/hotel-and-hospitality-industry-dark-web-exposure-and-guest-data-risks.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "May 21, 2026",
   readingTime: "14 min read",

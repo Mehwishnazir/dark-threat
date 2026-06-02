@@ -10,7 +10,7 @@ export const haveibeenpwnedVsDarkWebMonitoringServicesTheRealDifference: BlogPos
   slug: "haveibeenpwned-vs-dark-web-monitoring-services-the-real-difference",
   title: "HaveIBeenPwned vs Dark Web Monitoring Services — The Real Difference",
   excerpt: "Explore the differences between HaveIBeenPwned and paid dark web monitoring. Learn why enterprises need proactive threat intelligence to combat modern cyber threats.",
-  featuredImage: "/images/blog/haveibeenpwned-vs-dark-web-monitoring-services-the-real-difference.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "May 21, 2026",
   readingTime: "9 min read",

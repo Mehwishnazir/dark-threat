@@ -10,7 +10,7 @@ export const howLawFirmsBecomeDarkWebTargetsAndHowToRespond: BlogPostType & {
   slug: "how-law-firms-become-dark-web-targets-and-how-to-respond",
   title: "How Law Firms Become Dark Web Targets — and How to Respond",
   excerpt: "Learn how law firms become dark web targets with high-value data. This guide covers attack vectors, threat intelligence, incident response, and proactive mitigation strategies to protect attorney-client privilege.",
-  featuredImage: "/images/blog/how-law-firms-become-dark-web-targets-and-how-to-respond.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "May 21, 2026",
   readingTime: "15 min read",

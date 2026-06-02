@@ -10,7 +10,7 @@ export const howToTellYourCustomersAboutADataBreachLegalAndPrGuide: BlogPostType
   slug: "how-to-tell-your-customers-about-a-data-breach-legal-and-pr-guide",
   title: "How to Tell Your Customers About a Data Breach — Legal and PR Guide",
   excerpt: "Learn how to notify customers after a data breach with expert guidance on regulatory compliance, notification letters, PR strategy, and operational preparation to preserve trust and minimize legal risk.",
-  featuredImage: "/images/blog/how-to-tell-your-customers-about-a-data-breach-legal-and-pr-guide.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 1, 2026",
   readingTime: "18 min read",

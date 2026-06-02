@@ -10,7 +10,7 @@ export const hospitalAndClinicDataOnTheDarkWebWhatGetsExposed: BlogPostType & {
   slug: "hospital-and-clinic-data-on-the-dark-web-what-gets-exposed",
   title: "Hospital and Clinic Data on the Dark Web — What Gets Exposed",
   excerpt: "Explore the types of hospital data sold on the dark web from PII and PHI to credentials and operational files and learn strategies for detection and mitigation",
-  featuredImage: "/images/blog/hospital-and-clinic-data-on-the-dark-web-what-gets-exposed.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "May 21, 2026",
   readingTime: "18 min read",

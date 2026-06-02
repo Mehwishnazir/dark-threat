@@ -10,7 +10,7 @@ export const ransomwareBreachVsDataBreachAreTheyTheSame: BlogPostType & {
   slug: "ransomware-breach-vs-data-breach-are-they-the-same",
   title: "Ransomware Breach vs Data Breach — Are They the Same?",
   excerpt: "Understand the key differences between ransomware breach and data breach including double extortion dark web indicators incident response and how DarkThreat.AI monitors both threat types for comprehensive security",
-  featuredImage: "/images/blog/ransomware-breach-vs-data-breach-are-they-the-same.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 2, 2026",
   readingTime: "15 min read",
