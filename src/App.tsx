@@ -38,6 +38,7 @@ import HealthcareIndustry from "./pages/HealthcareIndustry";
 import LegalIndustry from "./pages/LegalIndustry";
 import GovernmentIndustry from "./pages/GovernmentIndustry";
 import EcommerceIndustry from "./pages/EcommerceIndustry";
+import SaasTechnologyIndustry from "./pages/SaasTechnologyIndustry";
 
 const queryClient = new QueryClient();
 
@@ -81,6 +82,7 @@ const App = () => (
             <Route path="/industries/legal" element={<LegalIndustry />} />
             <Route path="/industries/government" element={<GovernmentIndustry />} />
             <Route path="/industries/ecommerce" element={<EcommerceIndustry />} />
+            <Route path="/industries/saas-technology" element={<SaasTechnologyIndustry />} />
             <Route path="/industries/*" element={<TrialComingSoon />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

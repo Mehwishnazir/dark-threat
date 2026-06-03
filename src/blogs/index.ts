@@ -152,6 +152,21 @@ import { howToUseDarkWebToolsForEffectiveBreachDetection } from "./how-to-use-da
 import { identifyingHighRiskMentionsOfYourBrand } from "./identifying-high-risk-mentions-of-your-brand";
 import { identifyingNewThreatActorsOnDarkWeb } from "./identifying-new-threat-actors-on-dark-web";
 import { initialAccessBrokersOnTheDarkWebTheHiddenAttackEnablers } from "./initial-access-brokers-on-the-dark-web-the-hidden-attack-enablers";
+import { insiderThreatStatistics2025TheNumbersBehindTheRisk } from "./insider-threat-statistics-2025-the-numbers-behind-the-risk";
+import { howMaliciousInsidersUseTheDarkWebToSellCompanyData } from "./how-malicious-insiders-use-the-dark-web-to-sell-company-data";
+import { negligentInsiderVsMaliciousInsiderWhatDarkWebMonitoringCatches } from "./negligent-insider-vs-malicious-insider-what-dark-web-monitoring-catches";
+import { howToDetectARogueEmployeeSellingDataBeforeTheyLeave } from "./how-to-detect-a-rogue-employee-selling-data-before-they-leave";
+import { howToBuildAnInsiderThreatDetectionProgramIn6Steps } from "./how-to-build-an-insider-threat-detection-program-in-6-steps";
+import { thePsychologyOfInsiderThreatsWarningSignsToWatchFor } from "./the-psychology-of-insider-threats-warning-signs-to-watch-for";
+import { howEmployeeOffboardingCreatesDarkWebRisk } from "./how-employee-offboarding-creates-dark-web-risk";
+import { thirdPartyVendorCredentialMonitoringManagingSupplyChainRisk } from "./third-party-vendor-credential-monitoring-managing-supply-chain-risk";
+import { shadowItAndTheDarkWebWhatUnauthorisedAppsCreate } from "./shadow-it-and-the-dark-web-what-unauthorised-apps-create";
+import { ransomwareStatistics2025AttackFrequencyCostAndRecoveryTime } from "./ransomware-statistics-2025-attack-frequency-cost-and-recovery-time";
+import { ransomwareAsAServiceAffiliateProgramsHowTheBusinessModelWorks } from "./ransomware-as-a-service-affiliate-programs-how-the-business-model-works";
+import { darkWebLeakSites15ActiveRansomwareGroupPagesIn2025 } from "./dark-web-leak-sites-15-active-ransomware-group-pages-in-2025";
+import { howToHardenYourOrganisationAgainstRansomwareUsingDarkWebIntelligence } from "./how-to-harden-your-organisation-against-ransomware-using-dark-web-intelligence";
+import { howToProtectYourBackupsFromRansomwareAndWhyDarkWebMonitoringHelps } from "./how-to-protect-your-backups-from-ransomware-and-why-dark-web-monitoring-helps";
+import { healthcareRansomwareAttacksHowDarkWebMonitoringProvidesEarlyWarning } from "./healthcare-ransomware-attacks-how-dark-web-monitoring-provides-early-warning";
 import { keyStepsToPreventCredentialLeaksWithDarkWebMonitoring } from "./key-steps-to-prevent-credential-leaks-with-dark-web-monitoring";
 import { malwareAsAServiceHowCybercriminalsBuyAttackKitsOnTheDarkWeb } from "./malware-as-a-service-how-cybercriminals-buy-attack-kits-on-the-dark-web";
 import { mappingCriminalNetworksThroughDarkIntel } from "./mapping-criminal-networks-through-dark-intel";
@@ -424,6 +439,21 @@ export const allBlogs = [
   identifyingHighRiskMentionsOfYourBrand,
   identifyingNewThreatActorsOnDarkWeb,
   initialAccessBrokersOnTheDarkWebTheHiddenAttackEnablers,
+  insiderThreatStatistics2025TheNumbersBehindTheRisk,
+  howMaliciousInsidersUseTheDarkWebToSellCompanyData,
+  negligentInsiderVsMaliciousInsiderWhatDarkWebMonitoringCatches,
+  howToDetectARogueEmployeeSellingDataBeforeTheyLeave,
+  howToBuildAnInsiderThreatDetectionProgramIn6Steps,
+  thePsychologyOfInsiderThreatsWarningSignsToWatchFor,
+  howEmployeeOffboardingCreatesDarkWebRisk,
+  thirdPartyVendorCredentialMonitoringManagingSupplyChainRisk,
+  shadowItAndTheDarkWebWhatUnauthorisedAppsCreate,
+  ransomwareStatistics2025AttackFrequencyCostAndRecoveryTime,
+  ransomwareAsAServiceAffiliateProgramsHowTheBusinessModelWorks,
+  darkWebLeakSites15ActiveRansomwareGroupPagesIn2025,
+  howToHardenYourOrganisationAgainstRansomwareUsingDarkWebIntelligence,
+  howToProtectYourBackupsFromRansomwareAndWhyDarkWebMonitoringHelps,
+  healthcareRansomwareAttacksHowDarkWebMonitoringProvidesEarlyWarning,
   keyStepsToPreventCredentialLeaksWithDarkWebMonitoring,
   malwareAsAServiceHowCybercriminalsBuyAttackKitsOnTheDarkWeb,
   mappingCriminalNetworksThroughDarkIntel,
