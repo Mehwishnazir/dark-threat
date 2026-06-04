@@ -1,5 +1,5 @@
 import { Suspense, useState } from 'react';
-import { Helmet } from 'react-helmet-async';
+import { serviceSchema, breadcrumbSchema, organizationSchema } from '@/utils/seoSchemas';
 import { Link } from 'react-router-dom';
 import {
   Banknote, Shield, Lock, AlertTriangle, Database, CheckCircle2,
@@ -51,14 +51,6 @@ export default function FinancialServicesIndustry() {
     setForm({ name: '', email: '', institution: '', message: '' });
   };
 
-  const schema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    name: 'Dark Web Monitoring for Financial Services & Banks — DarkThreat',
-    url: 'https://darkthreat.ai/industries/financial-services',
-    description: 'Protect your bank, credit union, or fintech from SWIFT fraud, carding attacks, and credential theft with DarkThreat\'s financial-sector dark web monitoring.',
-  };
-
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
@@ -66,6 +58,8 @@ export default function FinancialServicesIndustry() {
         <meta name="description" content="DarkThreat protects banks, credit unions, and fintechs from SWIFT credential theft, carding attacks, insider threats, and dark web data exposure. PCI-DSS & GLBA aligned." />
         <link rel="canonical" href="https://darkthreat.ai/industries/financial-services" />
         <script type="application/ld+json">{JSON.stringify(schema)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumb)}</script>
+        <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
       </Helmet>
 
       <AppHeader />

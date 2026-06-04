@@ -17,22 +17,6 @@
   <url><loc>https://darkthreat.ai/industries/legal</loc><lastmod>2026-06-02</lastmod><priority>0.8</priority></url>
   <url><loc>https://darkthreat.ai/industries/government</loc><lastmod>2026-06-02</lastmod><priority>0.8</priority></url>
   <url><loc>https://darkthreat.ai/industries/ecommerce</loc><lastmod>2026-06-02</lastmod><priority>0.8</priority></url>
-  <url><loc>https://darkthreat.ai/industries/saas-technology</loc><lastmod>2026-06-03</lastmod><priority>0.8</priority></url>
-  <url><loc>https://darkthreat.ai/blog/insider-threat-statistics-2025-the-numbers-behind-the-risk</loc><lastmod>2026-06-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://darkthreat.ai/blog/how-malicious-insiders-use-the-dark-web-to-sell-company-data</loc><lastmod>2026-06-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://darkthreat.ai/blog/negligent-insider-vs-malicious-insider-what-dark-web-monitoring-catches</loc><lastmod>2026-06-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://darkthreat.ai/blog/how-to-detect-a-rogue-employee-selling-data-before-they-leave</loc><lastmod>2026-06-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://darkthreat.ai/blog/how-to-build-an-insider-threat-detection-program-in-6-steps</loc><lastmod>2026-06-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://darkthreat.ai/blog/the-psychology-of-insider-threats-warning-signs-to-watch-for</loc><lastmod>2026-06-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://darkthreat.ai/blog/how-employee-offboarding-creates-dark-web-risk</loc><lastmod>2026-06-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://darkthreat.ai/blog/third-party-vendor-credential-monitoring-managing-supply-chain-risk</loc><lastmod>2026-06-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://darkthreat.ai/blog/shadow-it-and-the-dark-web-what-unauthorised-apps-create</loc><lastmod>2026-06-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://darkthreat.ai/blog/ransomware-statistics-2025-attack-frequency-cost-and-recovery-time</loc><lastmod>2026-06-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://darkthreat.ai/blog/ransomware-as-a-service-affiliate-programs-how-the-business-model-works</loc><lastmod>2026-06-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://darkthreat.ai/blog/dark-web-leak-sites-15-active-ransomware-group-pages-in-2025</loc><lastmod>2026-06-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://darkthreat.ai/blog/how-to-harden-your-organisation-against-ransomware-using-dark-web-intelligence</loc><lastmod>2026-06-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://darkthreat.ai/blog/how-to-protect-your-backups-from-ransomware-and-why-dark-web-monitoring-helps</loc><lastmod>2026-06-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://darkthreat.ai/blog/healthcare-ransomware-attacks-how-dark-web-monitoring-provides-early-warning</loc><lastmod>2026-06-03</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/10-best-practices-for-effective-dark-web-monitoring</loc><lastmod>2026-03-02</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/10-dark-web-monitoring-mistakes-that-leave-businesses-exposed</loc><lastmod>2026-05-01</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/3-ways-dark-web-monitoring-prevents-corporate-data-leaks</loc><lastmod>2026-02-18</lastmod><priority>0.7</priority></url>
@@ -46,8 +30,10 @@
   <url><loc>https://darkthreat.ai/blog/best-strategies-for-dark-web-monitoring-in-2024</loc><lastmod>2026-03-06</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/brand-impersonation-on-the-dark-web-how-to-detect-and-respond</loc><lastmod>2026-05-21</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/breached-password-databases-how-theyre-built-sold-and-used</loc><lastmod>2026-05-14</lastmod><priority>0.7</priority></url>
+  <url><loc>https://darkthreat.ai/blog/building-a-cyber-incident-response-policy-that-includes-dark-web-monitoring</loc><lastmod>2026-06-04</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/business-data-sold-on-forums-and-markets</loc><lastmod>2026-03-19</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/can-small-business-owners-monitor-the-dark-web-themselves</loc><lastmod>2026-05-01</lastmod><priority>0.7</priority></url>
+  <url><loc>https://darkthreat.ai/blog/ccpa-and-dark-web-monitoring-california-businesses-must-know-this</loc><lastmod>2026-06-04</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/choosing-between-basic-and-advanced-dark-web-monitoring-plans</loc><lastmod>2026-03-10</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/client-confidentiality-at-risk-law-firm-credential-exposure-on-dark-web</loc><lastmod>2026-05-21</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/clop-ransomware-group-dark-web-intelligence-and-business-exposure</loc><lastmod>2026-06-02</lastmod><priority>0.7</priority></url>
@@ -57,6 +43,7 @@
   <url><loc>https://darkthreat.ai/blog/corporate-vpn-credentials-on-the-dark-web-a-growing-threat</loc><lastmod>2026-05-14</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/credential-rotation-policy-how-often-should-passwords-be-changed</loc><lastmod>2026-05-14</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/crowdstrike-falcon-intelligence-vs-darkthreat-positioning-pricing</loc><lastmod>2026-05-21</lastmod><priority>0.7</priority></url>
+  <url><loc>https://darkthreat.ai/blog/cyber-resilience-act-dark-web-intelligence-requirements-for-eu-businesses</loc><lastmod>2026-06-04</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/cyber-threat-intelligence-feeds-what-they-contain-and-how-to-use-them</loc><lastmod>2026-05-14</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/cyber-threat-intelligence-lifecycle-from-collection-to-action</loc><lastmod>2026-05-14</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/cyber-threats-you-can-spot-on-dark-web-first</loc><lastmod>2026-03-17</lastmod><priority>0.7</priority></url>
@@ -65,17 +52,23 @@
   <url><loc>https://darkthreat.ai/blog/dark-web-chatter-how-monitoring-can-prevent-attacks</loc><lastmod>2026-02-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/dark-web-clues-that-your-firm-is-targeted</loc><lastmod>2026-03-20</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/dark-web-credential-dumps-how-many-happen-per-day-in-2025</loc><lastmod>2026-05-14</lastmod><priority>0.7</priority></url>
+  <url><loc>https://darkthreat.ai/blog/dark-web-evidence-in-cybersecurity-litigation-what-lawyers-need-to-know</loc><lastmod>2026-06-04</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/dark-web-forums-vs-telegram-channels-where-cybercriminals-are-moving</loc><lastmod>2026-05-14</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/dark-web-identity-theft-how-to-stay-protected</loc><lastmod>2026-03-12</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/dark-web-indicators-of-corporate-risk</loc><lastmod>2026-03-23</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/dark-web-indicators-of-imminent-cyber-risk</loc><lastmod>2026-03-25</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/dark-web-intelligence-for-incident-response-practical-guide</loc><lastmod>2026-05-14</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/dark-web-keyword-tracking-for-threat-insight</loc><lastmod>2026-03-19</lastmod><priority>0.7</priority></url>
+  <url><loc>https://darkthreat.ai/blog/dark-web-leak-sites-15-active-ransomware-group-pages-in-2025</loc><lastmod>2026-06-03</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/dark-web-leaks-that-cost-firms-millions</loc><lastmod>2026-03-23</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/dark-web-monitoring-a-vital-tool-for-identity-protection</loc><lastmod>2026-02-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://darkthreat.ai/blog/dark-web-monitoring-app-what-features-should-it-have</loc><lastmod>2026-06-04</lastmod><priority>0.7</priority></url>
+  <url><loc>https://darkthreat.ai/blog/dark-web-monitoring-as-a-compensating-control-in-security-audits</loc><lastmod>2026-06-04</lastmod><priority>0.7</priority></url>
+  <url><loc>https://darkthreat.ai/blog/dark-web-monitoring-as-part-of-your-third-party-risk-management-programme</loc><lastmod>2026-06-04</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/dark-web-monitoring-checklist-25-must-have-features-before-you-buy</loc><lastmod>2026-05-01</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/dark-web-monitoring-explained-for-non-technical-ceos</loc><lastmod>2026-05-01</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/dark-web-monitoring-for-cyber-insurance-why-its-important</loc><lastmod>2026-03-05</lastmod><priority>0.7</priority></url>
+  <url><loc>https://darkthreat.ai/blog/dark-web-monitoring-for-families-protecting-kids-personal-information</loc><lastmod>2026-06-04</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/dark-web-monitoring-for-identity-protection</loc><lastmod>2026-03-11</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/dark-web-monitoring-for-ma-due-diligence-in-the-deal-room</loc><lastmod>2026-06-01</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/dark-web-monitoring-for-remote-teams-securing-distributed-workforces</loc><lastmod>2026-05-12</lastmod><priority>0.7</priority></url>
@@ -99,6 +92,7 @@
   <url><loc>https://darkthreat.ai/blog/dark-web-threats-facing-the-banking-sector-in-2025</loc><lastmod>2026-05-21</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/dark-web-threats-for-accounting-and-cpa-firms-full-risk-assessment</loc><lastmod>2026-05-21</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/dark-web-threats-rising-in-2025-and-beyond</loc><lastmod>2026-03-19</lastmod><priority>0.7</priority></url>
+  <url><loc>https://darkthreat.ai/blog/dark-web-vs-credit-monitoring-what-most-people-get-wrong</loc><lastmod>2026-06-04</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/dark-web-warning-signs-firms-must-track</loc><lastmod>2026-03-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/darkthreat-vs-resecurity-intelligence-platform-comparison</loc><lastmod>2026-05-21</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/data-breach-response-playbook-2025-hour-by-hour-guide-for-security-teams</loc><lastmod>2026-06-01</lastmod><priority>0.7</priority></url>
@@ -112,17 +106,22 @@
   <url><loc>https://darkthreat.ai/blog/exploring-hidden-dark-web-data-exchanges</loc><lastmod>2026-03-24</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/fake-employee-linkedin-profiles-how-the-dark-web-fuels-social-engineering</loc><lastmod>2026-06-01</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/free-dark-web-scanning-tools-vs-paid-platforms-whats-missing</loc><lastmod>2026-05-21</lastmod><priority>0.7</priority></url>
+  <url><loc>https://darkthreat.ai/blog/ftc-safeguards-rule-and-dark-web-monitoring-for-financial-institutions</loc><lastmod>2026-06-04</lastmod><priority>0.7</priority></url>
+  <url><loc>https://darkthreat.ai/blog/gdpr-breach-notification-and-dark-web-monitoring-a-compliance-guide</loc><lastmod>2026-06-04</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/google-one-dark-web-report-vs-darkthreat-consumer-vs-business</loc><lastmod>2026-05-21</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/government-and-public-sector-dark-web-threats-in-2025</loc><lastmod>2026-05-21</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/haveibeenpwned-vs-dark-web-monitoring-services-the-real-difference</loc><lastmod>2026-05-21</lastmod><priority>0.7</priority></url>
+  <url><loc>https://darkthreat.ai/blog/healthcare-ransomware-attacks-how-dark-web-monitoring-provides-early-warning</loc><lastmod>2026-06-03</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/hidden-cyber-risks-found-on-the-dark-web</loc><lastmod>2026-03-13</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/hidden-hacker-markets-that-sell-business-data</loc><lastmod>2026-03-17</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/hidden-mentions-of-your-brand-on-the-dark-web</loc><lastmod>2026-03-19</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/hidden-threats-lurking-in-dark-web-channels</loc><lastmod>2026-03-24</lastmod><priority>0.7</priority></url>
+  <url><loc>https://darkthreat.ai/blog/hipaa-security-rule-and-dark-web-monitoring-what-healthcare-must-do</loc><lastmod>2026-06-04</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/hospital-and-clinic-data-on-the-dark-web-what-gets-exposed</loc><lastmod>2026-05-21</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/hotel-and-hospitality-industry-dark-web-exposure-and-guest-data-risks</loc><lastmod>2026-05-21</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/how-attackers-exploit-leaked-subdomains</loc><lastmod>2026-03-23</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/how-attackers-share-corporate-secrets-online</loc><lastmod>2026-03-19</lastmod><priority>0.7</priority></url>
+  <url><loc>https://darkthreat.ai/blog/how-childrens-social-security-numbers-end-up-on-the-dark-web</loc><lastmod>2026-06-04</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/how-companies-lose-data-without-knowing</loc><lastmod>2026-03-23</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/how-credential-dumps-endanger-businesses</loc><lastmod>2026-03-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/how-credential-stuffing-works-step-by-step-attack-anatomy</loc><lastmod>2026-05-12</lastmod><priority>0.7</priority></url>
@@ -152,6 +151,7 @@
   <url><loc>https://darkthreat.ai/blog/how-darkthreats-ai-engine-processes-50-million-dark-web-data-points-daily</loc><lastmod>2026-05-12</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/how-data-ends-up-on-the-dark-web-quickly</loc><lastmod>2026-03-23</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/how-e-commerce-merchants-lose-customer-data-to-dark-web-markets</loc><lastmod>2026-05-21</lastmod><priority>0.7</priority></url>
+  <url><loc>https://darkthreat.ai/blog/how-employee-offboarding-creates-dark-web-risk</loc><lastmod>2026-06-03</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/how-fast-monitoring-limits-cyber-damage</loc><lastmod>2026-03-19</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/how-fintech-startups-get-targeted-on-the-dark-web-and-how-to-stop-it</loc><lastmod>2026-05-21</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/how-frequently-should-you-run-dark-web-scans-the-answer-surprises-most</loc><lastmod>2026-05-01</lastmod><priority>0.7</priority></url>
@@ -164,26 +164,33 @@
   <url><loc>https://darkthreat.ai/blog/how-hackers-use-leaked-credentials-from-the-dark-web</loc><lastmod>2026-02-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/how-hackers-use-your-brand-against-your-customers-phishing-kit-sales</loc><lastmod>2026-06-01</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/how-hackers-validate-stolen-credentials-before-using-them</loc><lastmod>2026-05-14</lastmod><priority>0.7</priority></url>
+  <url><loc>https://darkthreat.ai/blog/how-identity-theft-starts-on-the-dark-web-and-how-to-stop-it</loc><lastmod>2026-06-04</lastmod><priority>0.7</priority></url>
+  <url><loc>https://darkthreat.ai/blog/how-infostealer-malware-enables-ransomware-the-attack-kill-chain</loc><lastmod>2026-06-02</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/how-law-firms-become-dark-web-targets-and-how-to-respond</loc><lastmod>2026-05-21</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/how-leaked-passwords-enable-cyber-intrusions</loc><lastmod>2026-03-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/how-long-do-hackers-sit-inside-your-network-before-being-detected</loc><lastmod>2026-06-02</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/how-long-does-it-take-for-stolen-data-to-appear-on-the-dark-web</loc><lastmod>2026-05-12</lastmod><priority>0.7</priority></url>
+  <url><loc>https://darkthreat.ai/blog/how-malicious-insiders-use-the-dark-web-to-sell-company-data</loc><lastmod>2026-06-03</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/how-much-should-you-pay-for-dark-web-monitoring-services</loc><lastmod>2026-03-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/how-multi-factor-authentication-fails-against-dark-web-credential-attacks</loc><lastmod>2026-05-14</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/how-nation-state-actors-use-the-dark-web-for-cyber-espionage</loc><lastmod>2026-05-14</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/how-often-do-new-credentials-appear-on-the-dark-web-2025-data</loc><lastmod>2026-05-01</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/how-ransomware-groups-recruit-on-dark-web-forums</loc><lastmod>2026-06-02</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/how-rdp-credentials-fuel-ransomware-the-dark-web-connection</loc><lastmod>2026-05-14</lastmod><priority>0.7</priority></url>
+  <url><loc>https://darkthreat.ai/blog/how-scammers-use-dark-web-data-to-run-targeted-phone-fraud</loc><lastmod>2026-06-04</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/how-security-teams-use-dark-web-insights</loc><lastmod>2026-03-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/how-stolen-identities-circulate-online</loc><lastmod>2026-03-24</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/how-stolen-passwords-spread-on-dark-web</loc><lastmod>2026-03-17</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/how-threat-actors-discuss-future-attacks</loc><lastmod>2026-03-24</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/how-to-audit-your-companys-credential-exposure-in-24-hours</loc><lastmod>2026-05-12</lastmod><priority>0.7</priority></url>
+  <url><loc>https://darkthreat.ai/blog/how-to-build-an-insider-threat-detection-program-in-6-steps</loc><lastmod>2026-06-03</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/how-to-calculate-the-roi-of-dark-web-monitoring-for-your-business</loc><lastmod>2026-03-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://darkthreat.ai/blog/how-to-check-if-your-password-is-on-the-dark-web-for-free</loc><lastmod>2026-06-04</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/how-to-choose-the-right-dark-web-monitoring-plan-for-your-business</loc><lastmod>2026-03-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/how-to-choose-the-right-dark-web-monitoring-service-for-your-business</loc><lastmod>2026-03-03</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/how-to-combine-dark-web-monitoring-with-other-cybersecurity-solutions</loc><lastmod>2026-03-05</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/how-to-conduct-a-dark-web-scan-after-a-suspected-breach</loc><lastmod>2026-06-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://darkthreat.ai/blog/how-to-detect-a-rogue-employee-selling-data-before-they-leave</loc><lastmod>2026-06-03</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/how-to-detect-advanced-persistent-threats-apt-on-the-dark-web</loc><lastmod>2026-02-24</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/how-to-detect-and-respond-to-dark-web-data-breaches</loc><lastmod>2026-02-19</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/how-to-detect-cyberattack-planning-through-dark-web-monitoring</loc><lastmod>2026-02-23</lastmod><priority>0.7</priority></url>
@@ -191,9 +198,12 @@
   <url><loc>https://darkthreat.ai/blog/how-to-detect-email-compromise-on-the-dark-web</loc><lastmod>2026-02-12</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/how-to-detect-organized-cybercrime-on-the-dark-web</loc><lastmod>2026-03-02</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/how-to-explain-dark-web-monitoring-to-your-board-of-directors</loc><lastmod>2026-05-12</lastmod><priority>0.7</priority></url>
+  <url><loc>https://darkthreat.ai/blog/how-to-freeze-your-credit-after-a-dark-web-data-exposure</loc><lastmod>2026-06-04</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/how-to-get-malicious-dark-web-listings-removed-takedown-guide</loc><lastmod>2026-06-01</lastmod><priority>0.7</priority></url>
+  <url><loc>https://darkthreat.ai/blog/how-to-harden-your-organisation-against-ransomware-using-dark-web-intelligence</loc><lastmod>2026-06-03</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/how-to-identify-leaked-credentials-early</loc><lastmod>2026-03-17</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/how-to-identify-which-threat-actors-are-targeting-your-industry</loc><lastmod>2026-05-14</lastmod><priority>0.7</priority></url>
+  <url><loc>https://darkthreat.ai/blog/how-to-include-dark-web-monitoring-in-your-vendor-risk-questionnaire</loc><lastmod>2026-06-04</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/how-to-incorporate-dark-web-intelligence-into-your-cybersecurity-plan</loc><lastmod>2026-03-05</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/how-to-integrate-dark-web-monitoring-into-your-security-strategy</loc><lastmod>2026-03-03</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/how-to-maximize-the-value-of-your-dark-web-monitoring-service</loc><lastmod>2026-03-04</lastmod><priority>0.7</priority></url>
@@ -203,9 +213,11 @@
   <url><loc>https://darkthreat.ai/blog/how-to-monitor-your-domains-reputation-on-the-dark-web</loc><lastmod>2026-06-01</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/how-to-prevent-cyberattacks-with-proactive-dark-web-monitoring</loc><lastmod>2026-03-06</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/how-to-protect-your-api-keys-from-dark-web-exposure</loc><lastmod>2026-05-14</lastmod><priority>0.7</priority></url>
+  <url><loc>https://darkthreat.ai/blog/how-to-protect-your-backups-from-ransomware-and-why-dark-web-monitoring-helps</loc><lastmod>2026-06-03</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/how-to-protect-your-business-from-dark-web-threats</loc><lastmod>2025-02-10</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/how-to-protect-your-companys-assets-by-monitoring-hacker-activity</loc><lastmod>2026-02-27</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/how-to-protect-your-identity-from-dark-web-threats</loc><lastmod>2026-03-11</lastmod><priority>0.7</priority></url>
+  <url><loc>https://darkthreat.ai/blog/how-to-remove-your-personal-information-from-the-dark-web</loc><lastmod>2026-06-04</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/how-to-set-up-alerts-for-data-leaks-on-the-dark-web</loc><lastmod>2026-03-04</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/how-to-set-up-credential-monitoring-for-all-your-business-email-domains</loc><lastmod>2026-05-14</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/how-to-set-up-dark-web-monitoring-to-protect-your-business</loc><lastmod>2026-03-03</lastmod><priority>0.7</priority></url>
@@ -223,6 +235,9 @@
   <url><loc>https://darkthreat.ai/blog/identifying-high-risk-mentions-of-your-brand</loc><lastmod>2026-03-27</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/identifying-new-threat-actors-on-dark-web</loc><lastmod>2026-03-23</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/initial-access-brokers-on-the-dark-web-the-hidden-attack-enablers</loc><lastmod>2026-05-14</lastmod><priority>0.7</priority></url>
+  <url><loc>https://darkthreat.ai/blog/insider-threat-statistics-2025-the-numbers-behind-the-risk</loc><lastmod>2026-06-03</lastmod><priority>0.7</priority></url>
+  <url><loc>https://darkthreat.ai/blog/is-your-home-address-on-the-dark-web-how-to-find-out</loc><lastmod>2026-06-04</lastmod><priority>0.7</priority></url>
+  <url><loc>https://darkthreat.ai/blog/iso-27001-annex-a-controls-and-dark-web-intelligence-mapping-guide</loc><lastmod>2026-06-04</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/key-steps-to-prevent-credential-leaks-with-dark-web-monitoring</loc><lastmod>2026-02-19</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/lifelock-vs-dark-web-monitoring-for-business-why-theyre-different</loc><lastmod>2026-05-21</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/lockbits-successor-what-dark-web-monitoring-shows-about-2025-ransomware-groups</loc><lastmod>2026-06-02</lastmod><priority>0.7</priority></url>
@@ -238,8 +253,12 @@
   <url><loc>https://darkthreat.ai/blog/monitoring-hacker-forums-to-detect-attack-plans-early</loc><lastmod>2026-02-23</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/monitoring-hidden-chats-for-attack-signals</loc><lastmod>2026-03-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/monitoring-paste-sites-for-emerging-breaches</loc><lastmod>2026-03-20</lastmod><priority>0.7</priority></url>
+  <url><loc>https://darkthreat.ai/blog/my-social-security-number-is-on-the-dark-web-what-do-i-do-now</loc><lastmod>2026-06-04</lastmod><priority>0.7</priority></url>
+  <url><loc>https://darkthreat.ai/blog/negligent-insider-vs-malicious-insider-what-dark-web-monitoring-catches</loc><lastmod>2026-06-03</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/nft-and-web3-dark-web-threats-what-the-crypto-community-ignores</loc><lastmod>2026-05-21</lastmod><priority>0.7</priority></url>
+  <url><loc>https://darkthreat.ai/blog/nis2-directive-what-european-businesses-need-from-dark-web-monitoring</loc><lastmod>2026-06-04</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/password-dump-vs-credential-list-what-security-teams-need-to-know</loc><lastmod>2026-05-12</lastmod><priority>0.7</priority></url>
+  <url><loc>https://darkthreat.ai/blog/pci-dss-40-and-dark-web-monitoring-what-payment-processors-need-to-know</loc><lastmod>2026-06-04</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/preventing-data-breaches-using-dark-intel</loc><lastmod>2026-03-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/preventing-fraud-with-continuous-monitoring</loc><lastmod>2026-03-23</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/pricing-and-plan-selection-for-dark-web-monitoring-services</loc><lastmod>2026-03-06</lastmod><priority>0.7</priority></url>
@@ -250,14 +269,20 @@
   <url><loc>https://darkthreat.ai/blog/protecting-businesses-from-credential-fraud</loc><lastmod>2026-03-20</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/protecting-corporate-emails-from-hackers</loc><lastmod>2026-03-16</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/protecting-digital-footprints-with-monitoring</loc><lastmod>2026-03-25</lastmod><priority>0.7</priority></url>
+  <url><loc>https://darkthreat.ai/blog/protecting-elderly-parents-from-dark-web-identity-theft</loc><lastmod>2026-06-04</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/protecting-your-shopify-store-from-dark-web-threats</loc><lastmod>2026-05-21</lastmod><priority>0.7</priority></url>
+  <url><loc>https://darkthreat.ai/blog/ransomware-as-a-service-affiliate-programs-how-the-business-model-works</loc><lastmod>2026-06-03</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/ransomware-breach-vs-data-breach-are-they-the-same</loc><lastmod>2026-06-02</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/ransomware-negotiation-what-happens-on-the-dark-web-after-an-attack</loc><lastmod>2026-06-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://darkthreat.ai/blog/ransomware-statistics-2025-attack-frequency-cost-and-recovery-time</loc><lastmod>2026-06-03</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/reading-hacker-chatter-for-threat-warnings</loc><lastmod>2026-03-17</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/real-time-dark-web-alerts-for-protecting-your-business-data</loc><lastmod>2026-02-17</lastmod><priority>0.7</priority></url>
+  <url><loc>https://darkthreat.ai/blog/remote-access-tool-abuse-how-insiders-use-dark-web-tools</loc><lastmod>2026-06-04</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/saas-company-data-on-the-dark-web-whats-at-risk-and-how-to-monitor</loc><lastmod>2026-05-21</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/session-token-hijacking-the-credential-attack-dark-web-monitoring-catches</loc><lastmod>2026-05-14</lastmod><priority>0.7</priority></url>
+  <url><loc>https://darkthreat.ai/blog/shadow-it-and-the-dark-web-what-unauthorised-apps-create</loc><lastmod>2026-06-03</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/signs-your-data-is-circulating-on-dark-web</loc><lastmod>2026-03-17</lastmod><priority>0.7</priority></url>
+  <url><loc>https://darkthreat.ai/blog/soc-2-type-ii-security-requirements-where-dark-web-monitoring-fits</loc><lastmod>2026-06-04</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/source-code-leaks-on-the-dark-web-the-developers-worst-nightmare</loc><lastmod>2026-06-01</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/spot-stolen-emails-with-monitoring-tools</loc><lastmod>2026-03-16</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/spotting-cybercrime-trends-on-the-dark-web</loc><lastmod>2026-03-19</lastmod><priority>0.7</priority></url>
@@ -275,6 +300,7 @@
   <url><loc>https://darkthreat.ai/blog/the-lifecycle-of-a-stolen-password-from-breach-to-account-takeover</loc><lastmod>2026-05-12</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/the-lifecycle-of-stolen-corporate-credentials</loc><lastmod>2026-03-20</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/the-most-common-causes-of-data-breaches-in-2025</loc><lastmod>2026-06-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://darkthreat.ai/blog/the-psychology-of-insider-threats-warning-signs-to-watch-for</loc><lastmod>2026-06-03</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/the-ransomware-economy-in-2025-how-cybercriminals-make-billions</loc><lastmod>2026-06-02</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/the-role-of-dark-web-intel-in-risk-reduction</loc><lastmod>2026-03-25</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/the-role-of-dark-web-monitoring-in-cybersecurity</loc><lastmod>2025-02-10</lastmod><priority>0.7</priority></url>
@@ -283,6 +309,7 @@
   <url><loc>https://darkthreat.ai/blog/the-role-of-human-analysts-in-ai-powered-dark-web-monitoring</loc><lastmod>2026-05-12</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/the-top-dark-web-monitoring-tools-for-identity-protection</loc><lastmod>2026-03-12</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/the-true-value-of-continuous-web-monitoring</loc><lastmod>2026-03-18</lastmod><priority>0.7</priority></url>
+  <url><loc>https://darkthreat.ai/blog/third-party-vendor-credential-monitoring-managing-supply-chain-risk</loc><lastmod>2026-06-03</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/threat-detection-powered-by-dark-web-data</loc><lastmod>2026-03-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/threat-hunting-using-dark-web-data-a-practitioners-guide</loc><lastmod>2026-05-14</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/top-10-industries-with-the-highest-credential-leak-rates-in-2025</loc><lastmod>2026-05-14</lastmod><priority>0.7</priority></url>
@@ -318,11 +345,13 @@
   <url><loc>https://darkthreat.ai/blog/what-is-cybersixgill-and-how-does-darkthreat-compare</loc><lastmod>2026-05-14</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/what-is-dark-web-monitoring-and-how-does-it-work</loc><lastmod>2025-02-10</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/what-is-double-extortion-ransomware-and-how-does-dark-web-monitoring-help</loc><lastmod>2026-06-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://darkthreat.ai/blog/what-is-identity-monitoring-and-how-does-it-work-in-2025</loc><lastmod>2026-06-04</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/what-is-identity-protection-and-how-does-dark-web-monitoring-help</loc><lastmod>2026-03-12</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/what-is-password-spraying-and-how-does-dark-web-data-enable-it</loc><lastmod>2026-05-14</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/what-security-operations-centers-socs-need-from-dark-web-monitoring-tools</loc><lastmod>2026-05-01</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/what-spyware-logs-reveal-about-data-theft</loc><lastmod>2026-03-25</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/what-the-dark-web-actually-looks-like-a-visual-guide</loc><lastmod>2026-05-12</lastmod><priority>0.7</priority></url>
+  <url><loc>https://darkthreat.ai/blog/what-to-do-after-identity-theft-dark-web-monitoring-as-recovery-tool</loc><lastmod>2026-06-04</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/what-to-do-if-your-credentials-are-leaked-on-the-dark-web</loc><lastmod>2026-02-16</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/what-to-do-in-the-first-48-hours-of-a-data-breach</loc><lastmod>2026-06-01</lastmod><priority>0.7</priority></url>
   <url><loc>https://darkthreat.ai/blog/what-to-expect-from-a-dark-web-monitoring-service-at-different-price-points</loc><lastmod>2026-03-09</lastmod><priority>0.7</priority></url>
