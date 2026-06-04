@@ -65,51 +65,134 @@ const Contact = () => {
     setActiveFaq(activeFaq === index ? null : index);
   };
 
-  const contactPointSchema = {
+  const contactPageSchema = {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    name: 'DarkThreat',
-    url: 'https://darkthreat.ai',
-    logo: 'https://darkthreat.ai/logo.png',
-    contactPoint: {
-      '@type': 'ContactPoint',
-      contactType: 'customer support',
-      email: 'support@darkthreat.ai',
-      areaServed: ['US', 'GB', 'AU', 'CA'],
-      availableLanguage: ['en'],
-    },
-    sameAs: [
-      'https://twitter.com/DarkThreatAI',
-      'https://linkedin.com/company/darkthreat',
-    ],
+    '@type': 'ContactPage',
+    'name': 'Contact DarkThreat | Connect with Threat Intelligence & Monitoring Experts',
+    'description': 'Contact the DarkThreat team to discuss dark web monitoring, credential leak detection, or to start your 7-day free trial. We respond within 24 hours.',
+    'url': 'https://darkthreat.ai/contact',
+    'mainEntity': {
+      '@type': 'Organization',
+      'name': 'DarkThreat',
+      'alternateName': ['DarkThreat AI', 'DarkThreat Security', 'DarkThreat.ai'],
+      'url': 'https://darkthreat.ai',
+      'logo': 'https://darkthreat.ai/logo.png',
+      'sameAs': [
+        'https://twitter.com/DarkThreatAI',
+        'https://linkedin.com/company/darkthreat',
+        'https://github.com/darkthreat'
+      ],
+      'contactPoint': [
+        {
+          '@type': 'ContactPoint',
+          'telephone': '+1-888-555-3275',
+          'contactType': 'customer support',
+          'email': 'support@darkthreat.ai',
+          'availableLanguage': 'English'
+        },
+        {
+          '@type': 'ContactPoint',
+          'telephone': '+1-888-555-3275',
+          'contactType': 'sales',
+          'email': 'sales@darkthreat.ai',
+          'availableLanguage': 'English'
+        },
+        {
+          '@type': 'ContactPoint',
+          'telephone': '+1-888-555-3275',
+          'contactType': 'emergency',
+          'email': 'soc@darkthreat.ai',
+          'availableLanguage': 'English'
+        }
+      ]
+    }
+  };
+
+  const contactFaqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    'mainEntity': [
+      {
+        '@type': 'Question',
+        'name': 'How long does a standard dark web exposure scan take?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'Once onboarding is completed externally, our automated systems begin indexing public, deep, and dark web repositories immediately. Initial baseline reports are generated and sent to your dashboard within 10 minutes.'
+        }
+      },
+      {
+        '@type': 'Question',
+        'name': 'How does DarkThreat secure the credentials registered for monitoring?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'All threat intelligence data and telemetry collected are encrypted at rest and in transit. We align with ISO 27001 and NIST frameworks, ensuring zero exposure of your active internal environments.'
+        }
+      },
+      {
+        '@type': 'Question',
+        'name': 'Can we request a custom security assessment for third-party vendors?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'Yes. Our platform supports third-party domain and supply-chain exposure monitoring. You can configure vendor alerts via the platform solutions dashboard or reach out to our MSSP division.'
+        }
+      },
+      {
+        '@type': 'Question',
+        'name': 'Do you offer white-labeled reporting for security partners?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'Yes. Our MSSP tier features complete API access, white-label dashboards, custom notification routing, and co-branded PDF report generation.'
+        }
+      }
+    ]
   };
 
   const faqs = [
     {
       q: "How long does a standard dark web exposure scan take?",
-      a: "Once onboarding is completed externally, our automated systems begin indexing public, deep, and dark web repositories immediately. Initial baseline reports are generated and sent to your dashboard within 10 minutes.",
+      a: "Once onboarding is completed externally, our automated systems begin indexing public, deep, and dark web repositories immediately. Initial baseline reports are generated and sent to your dashboard within 10 minutes."
+    },
+    {
+      q: "How does DarkThreat secure the credentials registered for monitoring?",
+      a: "All threat intelligence data and telemetry collected are encrypted at rest and in transit. We align with ISO 27001 and NIST frameworks, ensuring zero exposure of your active internal environments."
     },
     {
       q: "Can we request a custom security assessment for third-party vendors?",
-      a: "Yes. Our platform supports third-party domain and supply-chain exposure monitoring. You can configure vendor alerts via the platform solutions dashboard or reach out to our MSSP division.",
-    },
-    {
-      q: "How does DarkThreat ensure my company's data is kept secure?",
-      a: "All threat intelligence data and telemetry collected are encrypted at rest and in transit. We align with ISO 27001 and NIST frameworks, ensuring zero exposure of your active internal environments.",
+      a: "Yes. Our platform supports third-party domain and supply-chain exposure monitoring. You can configure vendor alerts via the platform solutions dashboard or reach out to our MSSP division."
     },
     {
       q: "Do you offer white-labeled reporting for security partners?",
-      a: "Yes. Our MSSP tier features complete API access, white-label dashboards, custom notification routing, and co-branded PDF report generation.",
-    },
+      a: "Yes. Our MSSP tier features complete API access, white-label dashboards, custom notification routing, and co-branded PDF report generation."
+    }
   ];
 
   return (
     <div className="min-h-screen bg-background relative">
       <Helmet>
-        <title>Contact DarkThreat | Talk to a Dark Web Monitoring Expert</title>
+        <title>Contact DarkThreat | Connect with Threat Intelligence &amp; Monitoring Experts</title>
         <meta name="description" content="Contact the DarkThreat team to discuss dark web monitoring, credential leak detection, or to start your 7-day free trial. We respond within 24 hours." />
+        <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://darkthreat.ai/contact" />
-        <script type="application/ld+json">{JSON.stringify(contactPointSchema)}</script>
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Contact DarkThreat | Connect with Threat Intelligence &amp; Monitoring Experts" />
+        <meta property="og:description" content="Connect with DarkThreat's cybersecurity researchers, threat hunting analysts, and enterprise integration specialists. Let us show you what threat actors can see about your external attack surface." />
+        <meta property="og:url" content="https://darkthreat.ai/contact" />
+        <meta property="og:image" content="https://darkthreat.ai/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="DarkThreat" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@DarkThreatAI" />
+        <meta name="twitter:title" content="Contact DarkThreat | Threat Intelligence Specialists" />
+        <meta name="twitter:description" content="Connect with DarkThreat's cybersecurity researchers, threat hunting analysts, and enterprise integration specialists. Let us show you what threat actors can see about your external attack surface." />
+        <meta name="twitter:image" content="https://darkthreat.ai/og-image.png" />
+
+        <script type="application/ld+json">{JSON.stringify(contactPageSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(contactFaqSchema)}</script>
       </Helmet>
 
       {/* Header */}
@@ -135,14 +218,19 @@ const Contact = () => {
 
           <div className="mb-6 inline-flex items-center justify-center rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-semibold text-primary shadow-sm">
             <span className="mr-2 h-2 w-2 rounded-full bg-primary animate-pulse" />
-            Global Operations Center
+            GLOBAL THREAT OPERATIONS
           </div>
 
           <h1 className="text-4xl md:text-6xl font-montserrat font-bold text-foreground leading-tight mb-6">
-            Talk to a Threat <span className="glow-text">Intelligence Specialist</span>
+            We Are Online 24/7/365 to Protect Your <span className="glow-text">Digital Footprint</span>
           </h1>
-          <p className="mx-auto max-w-2xl text-lg text-muted-foreground leading-relaxed">
-            Have questions about our dark web monitoring capabilities or need immediate response assistance from our Security Operations Center? We're online 24/7.
+          
+          <p className="mx-auto max-w-3xl text-lg text-muted-foreground leading-relaxed mb-4">
+            Connect with DarkThreat's cybersecurity researchers, threat hunting analysts, and enterprise integration specialists. Let us show you what threat actors can see about your external attack surface.
+          </p>
+          
+          <p className="mx-auto max-w-3xl text-base text-muted-foreground leading-relaxed">
+            Whether you are investigating a suspicious credential leak alert, need to set up multi-tenant white-label reporting for an MSSP, or require emergency incident dispatch support from our active Security Operations Center (SOC), our team is standing by. Choose a direct contact channel or fill out our secure inquiry routing form. Our average response time for standard inquiries is under 2 hours, and emergency threat escalations are triaged within 15 minutes.
           </p>
         </div>
       </section>
@@ -207,7 +295,7 @@ const Contact = () => {
                       onChange={handleChange}
                       className="w-full mt-2 rounded-md border border-border bg-background/50 px-3 py-2.5 text-sm text-foreground shadow-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary/50"
                     >
-                      <option value="Dark Web Monitoring">Dark Web Monitoring</option>
+                      <option value="Dark Web Monitoring">Dark Web Monitoring Service</option>
                       <option value="Credential Leak Detection">Credential Leak Detection</option>
                       <option value="Dark Web Data Removal">Dark Web Data Removal</option>
                       <option value="Custom MSSP Partnering">Custom MSSP Partnering</option>
@@ -238,7 +326,7 @@ const Contact = () => {
 
             {/* Direct Channels */}
             <div className="lg:col-span-5 flex flex-col justify-between gap-6">
-              <Card className="border border-border/80 bg-card/30 backdrop-blur-md">
+              <Card className="border border-border/80 bg-card/30 backdrop-blur-md hover:border-primary/50 transition-colors">
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4">
                     <div className="bg-primary/10 p-3 rounded-2xl text-primary">
@@ -253,14 +341,14 @@ const Contact = () => {
                 </CardContent>
               </Card>
 
-              <Card className="border border-border/80 bg-card/30 backdrop-blur-md">
+              <Card className="border border-border/80 bg-card/30 backdrop-blur-md hover:border-primary/50 transition-colors">
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4">
                     <div className="bg-primary/10 p-3 rounded-2xl text-primary">
                       <Phone className="w-6 h-6" />
                     </div>
                     <div>
-                      <h3 className="font-montserrat font-bold text-foreground mb-1">Enterprise Advisory</h3>
+                      <h3 className="font-montserrat font-bold text-foreground mb-1">Enterprise Threat Advisory</h3>
                       <p className="text-muted-foreground text-sm">Call us directly to set up custom domains or MSSP licensing</p>
                       <p className="text-primary font-semibold mt-2 text-sm">+1 (888) 555-DARK</p>
                     </div>
@@ -268,7 +356,7 @@ const Contact = () => {
                 </CardContent>
               </Card>
 
-              <Card className="border border-border/80 bg-card/30 backdrop-blur-md">
+              <Card className="border border-border/80 bg-card/30 backdrop-blur-md hover:border-primary/50 transition-colors">
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4">
                     <div className="bg-primary/10 p-3 rounded-2xl text-primary">
@@ -278,7 +366,7 @@ const Contact = () => {
                       <h3 className="font-montserrat font-bold text-foreground mb-1">Response Schedule</h3>
                       <p className="text-muted-foreground text-sm">
                         Enterprise Sales: Mon - Fri, 9am - 6pm EST<br />
-                        Threat Support: <span className="text-primary font-semibold">24/7/365 Available</span>
+                        Threat Support: <span className="text-primary font-semibold font-bold">24/7/365 Available</span>
                       </p>
                     </div>
                   </div>
@@ -297,15 +385,15 @@ const Contact = () => {
               Regional Hubs
             </span>
             <h2 className="text-3xl md:text-4xl font-montserrat font-bold text-foreground mb-4">
-              Our Global Offices
+              Our Global Security Offices
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Decentralized analyst presence across key security centers worldwide.
+              Decentralized analyst presence across key cybersecurity centers worldwide.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="rounded-2xl border border-border bg-card p-6 flex flex-col justify-between">
+            <div className="rounded-2xl border border-border bg-card p-6 flex flex-col justify-between hover:border-primary/50 transition-colors">
               <div>
                 <Building className="w-8 h-8 text-primary mb-4" />
                 <h3 className="text-lg font-montserrat font-bold text-foreground mb-2">Singapore (APAC)</h3>
@@ -315,10 +403,10 @@ const Contact = () => {
                   Singapore 018981
                 </p>
               </div>
-              <span className="text-[10px] uppercase font-bold tracking-widest text-primary mt-4">Security Operations</span>
+              <span className="text-[10px] uppercase font-bold tracking-widest text-primary mt-4">Security Operations Center (SOC)</span>
             </div>
 
-            <div className="rounded-2xl border border-border bg-card p-6 flex flex-col justify-between">
+            <div className="rounded-2xl border border-border bg-card p-6 flex flex-col justify-between hover:border-primary/50 transition-colors">
               <div>
                 <Building className="w-8 h-8 text-primary mb-4" />
                 <h3 className="text-lg font-montserrat font-bold text-foreground mb-2">London (EMEA)</h3>
@@ -328,10 +416,10 @@ const Contact = () => {
                   London EC3A 8BF
                 </p>
               </div>
-              <span className="text-[10px] uppercase font-bold tracking-widest text-primary mt-4">Corporate Office</span>
+              <span className="text-[10px] uppercase font-bold tracking-widest text-primary mt-4">Corporate Office &amp; Compliance</span>
             </div>
 
-            <div className="rounded-2xl border border-border bg-card p-6 flex flex-col justify-between">
+            <div className="rounded-2xl border border-border bg-card p-6 flex flex-col justify-between hover:border-primary/50 transition-colors">
               <div>
                 <Building className="w-8 h-8 text-primary mb-4" />
                 <h3 className="text-lg font-montserrat font-bold text-foreground mb-2">Bengaluru (India)</h3>
@@ -341,10 +429,10 @@ const Contact = () => {
                   Bengaluru, KA 560103
                 </p>
               </div>
-              <span className="text-[10px] uppercase font-bold tracking-widest text-primary mt-4">Engineering Hub</span>
+              <span className="text-[10px] uppercase font-bold tracking-widest text-primary mt-4">AI Engineering &amp; Dev Hub</span>
             </div>
 
-            <div className="rounded-2xl border border-border bg-card p-6 flex flex-col justify-between">
+            <div className="rounded-2xl border border-border bg-card p-6 flex flex-col justify-between hover:border-primary/50 transition-colors">
               <div>
                 <Building className="w-8 h-8 text-primary mb-4" />
                 <h3 className="text-lg font-montserrat font-bold text-foreground mb-2">Delaware (Americas)</h3>
@@ -368,32 +456,32 @@ const Contact = () => {
               Inquiry Routing
             </span>
             <h2 className="text-3xl md:text-4xl font-montserrat font-bold text-foreground mb-4">
-              Direct Contact Channels
+              Direct Threat Channels
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Get in touch with the specific team handling your type of inquiry.
+              Get in touch with the specific team handling your cybersecurity needs.
             </p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            <div className="rounded-2xl border border-border bg-background p-6">
+            <div className="rounded-2xl border border-border bg-background p-6 hover:border-primary/30 transition-colors">
               <h3 className="font-montserrat font-bold text-foreground mb-2">Enterprise Sales</h3>
-              <p className="text-xs text-muted-foreground mb-4">Request product pricing, MSSP customization, or proof-of-concept setup.</p>
+              <p className="text-xs text-muted-foreground mb-4">Request custom dark web monitoring pricing, MSSP integrations, or proof-of-concept setup.</p>
               <a href="mailto:sales@darkthreat.ai" className="text-sm font-semibold text-primary hover:underline">sales@darkthreat.ai</a>
             </div>
-            <div className="rounded-2xl border border-border bg-background p-6">
-              <h3 className="font-montserrat font-bold text-foreground mb-2">Media &amp; Relations</h3>
-              <p className="text-xs text-muted-foreground mb-4">Connect with our researchers for press quotes, reports, or articles.</p>
+            <div className="rounded-2xl border border-border bg-background p-6 hover:border-primary/30 transition-colors">
+              <h3 className="font-montserrat font-bold text-foreground mb-2">Media &amp; Threat Reports</h3>
+              <p className="text-xs text-muted-foreground mb-4">Connect with our external attack surface monitoring researchers for press quotes or data insights.</p>
               <a href="mailto:press@darkthreat.ai" className="text-sm font-semibold text-primary hover:underline">press@darkthreat.ai</a>
             </div>
-            <div className="rounded-2xl border border-border bg-background p-6">
-              <h3 className="font-montserrat font-bold text-foreground mb-2">Careers &amp; Culture</h3>
-              <p className="text-xs text-muted-foreground mb-4">Interested in threat research or AI platform engineering? Contact us.</p>
+            <div className="rounded-2xl border border-border bg-background p-6 hover:border-primary/30 transition-colors">
+              <h3 className="font-montserrat font-bold text-foreground mb-2">Careers &amp; Threat Hunting</h3>
+              <p className="text-xs text-muted-foreground mb-4">Interested in threat actor profiling, NLP engineering, or 24/7 security analyst roles?</p>
               <a href="mailto:careers@darkthreat.ai" className="text-sm font-semibold text-primary hover:underline">careers@darkthreat.ai</a>
             </div>
-            <div className="rounded-2xl border border-border bg-background p-6">
+            <div className="rounded-2xl border border-border bg-background p-6 hover:border-primary/30 transition-colors">
               <h3 className="font-montserrat font-bold text-foreground mb-2">Vulnerability Program</h3>
-              <p className="text-xs text-muted-foreground mb-4">Report potential security issues discovered in our crawlers or platform.</p>
+              <p className="text-xs text-muted-foreground mb-4">Report potential security issues discovered in our crawlers or threat intelligence platform.</p>
               <a href="mailto:security@darkthreat.ai" className="text-sm font-semibold text-primary hover:underline">security@darkthreat.ai</a>
             </div>
           </div>
@@ -476,7 +564,7 @@ const Contact = () => {
           </div>
 
           <div className="mt-12 text-center text-sm text-muted-foreground">
-            Have a different question? Join our Discord community or visit our <a href="#" className="text-primary hover:underline">Knowledge Base</a>.
+            Have a different question? Join our Discord community or visit our <Link to="/blog" className="text-primary hover:underline">Knowledge Base</Link>.
           </div>
         </div>
       </section>
@@ -499,7 +587,7 @@ const Contact = () => {
                 <span className="text-xl font-montserrat font-bold text-foreground">DarkThreat</span>
               </div>
               <p className="text-muted-foreground mb-4">
-                Advanced dark web monitoring and threat intelligence platform protecting your organization 24/7.
+                DarkThreat is an AI-powered <span className="font-semibold text-foreground">dark web monitoring service</span> and <span className="font-semibold text-foreground">threat intelligence platform</span> protecting enterprises from credential leaks, ransomware targeting, data breaches, and external cyber threats. Our 24/7 monitoring engine indexes 2M+ underground sources to deliver real-time alerts before attacks occur.
               </p>
               <div className="flex space-x-4">
                 <a href="https://twitter.com/DarkThreatAI" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
@@ -516,10 +604,11 @@ const Contact = () => {
             <div>
               <h3 className="font-montserrat font-semibold text-foreground mb-4">Solutions</h3>
               <ul className="space-y-2">
-                <li><Link to="/dark-web-monitoring" className="text-muted-foreground hover:text-primary">Dark Web Monitoring</Link></li>
+                <li><Link to="/dark-web-monitoring" className="text-muted-foreground hover:text-primary">Dark Web Monitoring Service</Link></li>
                 <li><Link to="/credential-leak-detection" className="text-muted-foreground hover:text-primary">Credential Leak Detection</Link></li>
                 <li><Link to="/data-leak-detection" className="text-muted-foreground hover:text-primary">Data Leak Detection</Link></li>
-                <li><Link to="/compare/darkthreat-vs-darkowl" className="text-muted-foreground hover:text-primary">vs DarkOwl</Link></li>
+                <li><Link to="/solution" className="text-muted-foreground hover:text-primary">Threat Intelligence Platform</Link></li>
+                <li><Link to="/compare/darkthreat-vs-darkowl" className="text-muted-foreground hover:text-primary">DarkThreat vs DarkOwl</Link></li>
               </ul>
             </div>
             <div>

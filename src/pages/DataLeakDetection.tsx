@@ -4,6 +4,7 @@ import { Shield, AlertTriangle, Search, BarChart3, Trash2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import AppHeader from '@/components/AppHeader';
+import FinalCTA from '@/components/FinalCTA';
 
 const FAQ_JSON_LD = {
   '@context': 'https://schema.org',
@@ -55,17 +56,17 @@ const FAQ_JSON_LD = {
 const SERVICE_JSON_LD = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  serviceType: 'Data Leak Detection',
-  name: 'DarkThreat Data Leak Detection',
-  provider: {
+  'serviceType': 'Data Leak Detection',
+  'name': 'DarkThreat Data Leak Detection Service',
+  'provider': {
     '@type': 'Organization',
-    name: 'DarkThreat',
-    url: 'https://darkthreat.ai',
+    'name': 'DarkThreat',
+    'url': 'https://darkthreat.ai',
+    'logo': 'https://darkthreat.ai/logo.png'
   },
-  areaServed: 'Global',
-  description:
-    "DarkThreat's data leak detection monitors paste sites, dark web forums, and breach databases to alert you the moment your company data surfaces online.",
-  url: 'https://darkthreat.ai/data-leak-detection',
+  'areaServed': 'Global',
+  'description': "DarkThreat's data leak detection monitors paste sites, dark web forums, and breach databases to alert you the moment your company data surfaces online.",
+  'url': 'https://darkthreat.ai/data-leak-detection',
 };
 
 const DataLeakDetection = () => {
@@ -135,14 +136,33 @@ const DataLeakDetection = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Data Leak Detection Service | DarkThreat.ai</title>
+        <title>External Data Leak Detection &amp; PII Exposure Monitoring | DarkThreat</title>
         <meta
           name="description"
-          content="DarkThreat's data leak detection monitors paste sites, dark web forums, and breach databases to alert you the moment your company data surfaces online. Start free."
+          content="Detect exposed customer PII, internal intellectual property, and leaked source code across the dark web. DarkThreat protects brand integrity with 24/7 monitoring."
         />
+        <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://darkthreat.ai/data-leak-detection" />
-        <script type="application/ld+json">{JSON.stringify(FAQ_JSON_LD)}</script>
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="External Data Leak Detection &amp; PII Exposure Monitoring | DarkThreat" />
+        <meta property="og:description" content="Detect leaked files, customer PII, exposed proprietary code, and secret keys across deep web paste sites and hacker repositories before they cause regulatory compliance fines." />
+        <meta property="og:url" content="https://darkthreat.ai/data-leak-detection" />
+        <meta property="og:image" content="https://darkthreat.ai/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="DarkThreat" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@DarkThreatAI" />
+        <meta name="twitter:title" content="External Data Leak Detection &amp; PII Exposure Monitoring" />
+        <meta name="twitter:description" content="Detect leaked files, customer PII, exposed proprietary code, and secret keys across deep web paste sites and hacker repositories before they cause regulatory compliance fines." />
+        <meta name="twitter:image" content="https://darkthreat.ai/og-image.png" />
+
         <script type="application/ld+json">{JSON.stringify(SERVICE_JSON_LD)}</script>
+        <script type="application/ld+json">{JSON.stringify(FAQ_JSON_LD)}</script>
       </Helmet>
       <AppHeader />
 
@@ -311,69 +331,19 @@ const DataLeakDetection = () => {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 px-6 bg-gradient-to-b from-background to-threat-dark">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-montserrat font-bold text-foreground mb-6">
-            Ready to Protect Your Data?
-          </h2>
-          <p className="text-lg text-muted-foreground mb-8">
-            Start your free trial today and see how DarkThreat can safeguard your organization
-          </p>
-          <Button className="hero-button text-lg px-8 py-4">
-            Start Free Trial
-          </Button>
-        </div>
-      </section>
+      <FinalCTA />
 
-      {/* Footer */}
-      <footer className="bg-card border-t border-border py-12">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
-            <div className="col-span-1 md:col-span-2">
-              <div className="flex items-center space-x-2 mb-4">
-                <Shield className="w-8 h-8 text-primary" />
-                <span className="text-xl font-montserrat font-bold text-foreground">DarkThreat</span>
-              </div>
-              <p className="text-muted-foreground mb-4">
-                Advanced dark web monitoring and threat intelligence platform protecting your organization 24/7.
-              </p>
-              <div className="flex space-x-4">
-                <a href="#" className="text-muted-foreground hover:text-primary">Twitter</a>
-                <a href="#" className="text-muted-foreground hover:text-primary">LinkedIn</a>
-                <a href="#" className="text-muted-foreground hover:text-primary">GitHub</a>
-              </div>
-            </div>
-            <div>
-              <h3 className="font-montserrat font-semibold text-foreground mb-4">Solutions</h3>
-              <ul className="space-y-2">
-                <li><Link to="/dark-web-monitoring" className="text-muted-foreground hover:text-primary">Dark Web Monitoring</Link></li>
-                <li><Link to="/credential-leak-detection" className="text-muted-foreground hover:text-primary">Credential Leak Detection</Link></li>
-                <li><Link to="/data-leak-detection" className="text-muted-foreground hover:text-primary">Data Leak Detection</Link></li>
-                <li><Link to="/compare/darkthreat-vs-darkowl" className="text-muted-foreground hover:text-primary">vs DarkOwl</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-montserrat font-semibold text-foreground mb-4">Platform</h3>
-              <ul className="space-y-2">
-                <li><Link to="/data-leak-detection" className="text-muted-foreground hover:text-primary">Data Leak Detection</Link></li>
-                <li><Link to="/pricing" className="text-muted-foreground hover:text-primary">Pricing</Link></li>
-                <li><Link to="/signin" className="text-muted-foreground hover:text-primary">Sign In</Link></li>
-                <li><Link to="/dashboard" className="text-muted-foreground hover:text-primary">Dashboard</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-montserrat font-semibold text-foreground mb-4">Legal</h3>
-              <ul className="space-y-2">
-                <li><Link to="/privacy-policy" className="text-muted-foreground hover:text-primary">Privacy Policy</Link></li>
-                <li><Link to="/platform-terms" className="text-muted-foreground hover:text-primary">Platform Terms of Use</Link></li>
-                <li><Link to="/website-terms" className="text-muted-foreground hover:text-primary">Website Terms of Use</Link></li>
-                <li><a href="#" className="text-muted-foreground hover:text-primary">Support</a></li>
-              </ul>
-            </div>
+      <footer className="bg-card border-t border-border py-10">
+        <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-2">
+            <Shield className="w-6 h-6 text-primary" />
+            <span className="font-montserrat font-bold text-foreground">DarkThreat</span>
           </div>
-          <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground">
-            <p>&copy; 2025 DarkThreat. All rights reserved.</p>
+          <p className="text-sm text-muted-foreground">&copy; 2026 DarkThreat. All rights reserved.</p>
+          <div className="flex gap-6 text-sm text-muted-foreground">
+            <Link to="/solution" className="hover:text-primary">Platform</Link>
+            <Link to="/pricing" className="hover:text-primary">Pricing</Link>
+            <Link to="/contact" className="hover:text-primary">Contact</Link>
           </div>
         </div>
       </footer>

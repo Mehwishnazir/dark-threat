@@ -111,15 +111,6 @@ const About = () => {
     ]
   };
 
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://darkthreat.ai" },
-      { "@type": "ListItem", "position": 2, "name": "About DarkThreat", "item": "https://darkthreat.ai/about" }
-    ]
-  };
-
   return (
     <div className="min-h-screen bg-background relative">
       <Helmet>
@@ -148,7 +139,6 @@ const About = () => {
         {/* Schema */}
         <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
 
       {/* Header */}

@@ -1,8 +1,9 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Search, AlertTriangle, Eye, CheckCircle, XCircle, ArrowRight } from 'lucide-react';
+import { Search, AlertTriangle, Eye, CheckCircle, XCircle, ArrowRight, Shield } from 'lucide-react';
 import AppHeader from '@/components/AppHeader';
+import FinalCTA from '@/components/FinalCTA';
 import {
   Accordion,
   AccordionContent,
@@ -34,6 +35,22 @@ const faqs = [
 ];
 
 const DarkWebMonitoring = () => {
+  const serviceJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    'serviceType': 'Dark Web Monitoring',
+    'name': 'DarkThreat Dark Web Monitoring Service',
+    'provider': {
+      '@type': 'Organization',
+      'name': 'DarkThreat',
+      'url': 'https://darkthreat.ai',
+      'logo': 'https://darkthreat.ai/logo.png'
+    },
+    'areaServed': 'Global',
+    'description': "DarkThreat's AI-powered dark web monitoring service scans millions of hidden sources to detect credential leaks and exposed corporate assets before attackers exploit them.",
+    'url': 'https://darkthreat.ai/dark-web-monitoring'
+  };
+
   const faqJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -47,12 +64,32 @@ const DarkWebMonitoring = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Dark Web Monitoring Service | DarkThreat.ai</title>
+        <title>Dark Web Monitoring Service &amp; Cyber Threat Intelligence | DarkThreat</title>
         <meta
           name="description"
-          content="DarkThreat's AI-powered dark web monitoring service scans millions of hidden sources to detect credential leaks and exposed corporate assets before attackers exploit them."
+          content="DarkThreat's AI-powered dark web monitoring service scans Tor networks, hacker forums, and stealer logs to detect credential leaks and corporate risk before exploit."
         />
+        <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://darkthreat.ai/dark-web-monitoring" />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Dark Web Monitoring Service &amp; Cyber Threat Intelligence | DarkThreat" />
+        <meta property="og:description" content="Scans millions of dark web pages, paste sites, and encrypted chat channels in real-time to alert you on leaked credentials and exfiltrated enterprise data." />
+        <meta property="og:url" content="https://darkthreat.ai/dark-web-monitoring" />
+        <meta property="og:image" content="https://darkthreat.ai/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="DarkThreat" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@DarkThreatAI" />
+        <meta name="twitter:title" content="Dark Web Monitoring Service &amp; Cyber Threat Intelligence" />
+        <meta name="twitter:description" content="Scans millions of dark web pages, paste sites, and encrypted chat channels in real-time to alert you on leaked credentials and exfiltrated enterprise data." />
+        <meta name="twitter:image" content="https://darkthreat.ai/og-image.png" />
+
+        <script type="application/ld+json">{JSON.stringify(serviceJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
       </Helmet>
 
@@ -316,9 +353,20 @@ const DarkWebMonitoring = () => {
         </div>
       </section>
 
-      <footer className="bg-card border-t border-border py-12">
-        <div className="max-w-6xl mx-auto px-6 text-center text-muted-foreground">
-          <p>&copy; 2025 DarkThreat. All rights reserved.</p>
+      <FinalCTA />
+
+      <footer className="bg-card border-t border-border py-10">
+        <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-2">
+            <Shield className="w-6 h-6 text-primary" />
+            <span className="font-montserrat font-bold text-foreground">DarkThreat</span>
+          </div>
+          <p className="text-sm text-muted-foreground">&copy; 2026 DarkThreat. All rights reserved.</p>
+          <div className="flex gap-6 text-sm text-muted-foreground">
+            <Link to="/solution" className="hover:text-primary">Platform</Link>
+            <Link to="/pricing" className="hover:text-primary">Pricing</Link>
+            <Link to="/contact" className="hover:text-primary">Contact</Link>
+          </div>
         </div>
       </footer>
     </div>
