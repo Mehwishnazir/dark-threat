@@ -358,7 +358,7 @@ const Index = () => {
               },
             ].map((service) => (
               <Link
-                key={service.to}
+                key={service.title}
                 to={service.to}
                 className="group block rounded-[2rem] border border-border bg-card p-8 transition hover:border-primary hover:bg-primary/5"
               >

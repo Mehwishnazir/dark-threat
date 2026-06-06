@@ -74,39 +74,51 @@ const FAQ = () => {
           </p>
         </div>
 
-        <div className="space-y-4">
-          {faqData.map((faq, index) => (
-            <div
-              key={index}
-              className="border border-border rounded-lg bg-card/50 backdrop-blur-md hover:border-primary transition-all duration-300"
-            >
-              <button
-                onClick={() => toggleFAQ(index)}
-                className="w-full px-6 py-5 flex items-center justify-between text-left"
-              >
-                <h3 className="font-montserrat font-semibold text-white text-lg pr-4">
-                  {faq.question}
-                </h3>
-                <div className="flex-shrink-0">
-                  {openIndex === index ? (
-                    <ChevronUp className="w-5 h-5 text-primary" />
-                  ) : (
-                    <ChevronDown className="w-5 h-5 text-muted-foreground" />
-                  )}
-                </div>
-              </button>
-              
+        <div className="space-y-3">
+          {faqData.map((faq, index) => {
+            const isOpen = openIndex === index;
+            const panelId = `faq-panel-${index}`;
+            const triggerId = `faq-trigger-${index}`;
+            return (
               <div
-                className={`overflow-hidden transition-all duration-300 ${
-                  openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-                }`}
+                key={index}
+                className="border border-border rounded-xl bg-card/50 backdrop-blur-md hover:border-primary/50 transition-all duration-300"
               >
-                <div className="px-6 pb-5 text-muted-foreground leading-relaxed">
-                  {faq.answer}
+                <h3>
+                  <button
+                    id={triggerId}
+                    onClick={() => toggleFAQ(index)}
+                    aria-expanded={isOpen}
+                    aria-controls={panelId}
+                    className="w-full px-6 py-5 flex items-center justify-between text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:rounded-xl"
+                  >
+                    <span className="font-montserrat font-semibold text-foreground text-base md:text-lg pr-4">
+                      {faq.question}
+                    </span>
+                    <span className="flex-shrink-0">
+                      {isOpen ? (
+                        <ChevronUp className="w-5 h-5 text-primary" />
+                      ) : (
+                        <ChevronDown className="w-5 h-5 text-muted-foreground" />
+                      )}
+                    </span>
+                  </button>
+                </h3>
+                <div
+                  id={panelId}
+                  role="region"
+                  aria-labelledby={triggerId}
+                  className={`overflow-hidden transition-all duration-300 ${
+                    isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                  }`}
+                >
+                  <p className="px-6 pb-5 text-muted-foreground leading-relaxed">
+                    {faq.answer}
+                  </p>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

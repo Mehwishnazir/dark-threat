@@ -30,7 +30,7 @@ const schema = serviceSchema('Dark Web Monitoring for Financial Services & Banks
 const breadcrumb = breadcrumbSchema([
   { name: 'Home', url: 'https://darkthreat.ai/' },
   { name: 'Industries', url: 'https://darkthreat.ai/industries' },
-  { name: 'Financial Services' },
+  { name: 'Financial Services' }
 ]);
 const capabilities = [
   { label: 'BIN / IIN Portfolio Monitoring', desc: 'Real-time alerts when card data matching your BIN ranges surfaces on dark web card markets.' },

@@ -32,14 +32,29 @@ import CredentialLeakDetection from "./pages/CredentialLeakDetection";
 import DarkWebDataRemoval from "./pages/DarkWebDataRemoval";
 import ComparisonDarkOwl from "./pages/ComparisonDarkOwl";
 import Author from "./pages/Author";
-import IndustriesPage from "./pages/IndustriesPage";
-import FinancialServicesIndustry from "./pages/FinancialServicesIndustry";
-import HealthcareIndustry from "./pages/HealthcareIndustry";
-import LegalIndustry from "./pages/LegalIndustry";
-import GovernmentIndustry from "./pages/GovernmentIndustry";
-import EcommerceIndustry from "./pages/EcommerceIndustry";
-import SaasTechnologyIndustry from "./pages/SaasTechnologyIndustry";
+import {
+  IndustriesPage,
+  FinancialServicesIndustry,
+  HealthcareIndustry,
+  LegalIndustry,
+  GovernmentIndustry,
+  EcommerceIndustry,
+  SaasTechnologyIndustry,
+} from "./pages/industries";
 
+// Location Pages
+import {
+  DarkWebMonitoringNewYorkCity,
+  ThreatIntelligenceWashingtonDC,
+  DataBreachMonitoringCalifornia,
+  CredentialMonitoringSanFrancisco,
+  AttackSurfaceMonitoringTexas,
+  DigitalRiskProtectionNewYork,
+  BrandMonitoringLosAngeles,
+  DarkWebMonitoringChicago,
+  ExecutiveMonitoringBoston,
+  DomainMonitoringAustin,
+} from "./pages/locations";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -84,6 +99,19 @@ const App = () => (
             <Route path="/industries/ecommerce" element={<EcommerceIndustry />} />
             <Route path="/industries/saas-technology" element={<SaasTechnologyIndustry />} />
             <Route path="/industries/*" element={<TrialComingSoon />} />
+            
+            {/* Location Pages */}
+            <Route path="/dark-web-monitoring/new-york-city" element={<DarkWebMonitoringNewYorkCity />} />
+            <Route path="/threat-intelligence/washington-dc" element={<ThreatIntelligenceWashingtonDC />} />
+            <Route path="/data-breach-monitoring/california" element={<DataBreachMonitoringCalifornia />} />
+            <Route path="/credential-monitoring/san-francisco" element={<CredentialMonitoringSanFrancisco />} />
+            <Route path="/attack-surface-monitoring/texas" element={<AttackSurfaceMonitoringTexas />} />
+            <Route path="/digital-risk-protection/new-york" element={<DigitalRiskProtectionNewYork />} />
+            <Route path="/brand-monitoring/los-angeles" element={<BrandMonitoringLosAngeles />} />
+            <Route path="/dark-web-monitoring/chicago" element={<DarkWebMonitoringChicago />} />
+            <Route path="/executive-monitoring/boston" element={<ExecutiveMonitoringBoston />} />
+            <Route path="/domain-monitoring/austin" element={<DomainMonitoringAustin />} />
+
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

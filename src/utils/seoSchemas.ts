@@ -20,13 +20,13 @@ export const serviceSchema = (title: string, description: string, url: string) =
   url,
 });
 
-export const breadcrumbSchema = (paths: { name: string; url: string }[]) => ({
+export const breadcrumbSchema = (paths: { name: string; url?: string }[]) => ({
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: paths.map((p, i) => ({
     '@type': 'ListItem',
     position: i + 1,
     name: p.name,
-    item: p.url,
+    ...(p.url ? { item: p.url } : {}),
   })),
 });

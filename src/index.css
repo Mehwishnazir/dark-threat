@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Kumbh+Sans:wght@300;400;500;600;700&display=optional');
+/* Fonts loaded via <link> in index.html — no @import needed here */
 
 
 @tailwind base;
@@ -219,12 +219,41 @@
 }
 
 
-@media (max-width: 768px) {
-  .cyber-grid { background-image: none; }
-}
 
 @media (max-width: 768px) {
   .cyber-grid { background-image: none !important; }
   .circuit-pattern { display: none !important; }
   .animate-float { animation: none !important; }
 }
+
+/* ── Keyframes ── */
+@keyframes circuit-pulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 10px hsl(0 78% 55%), 0 0 20px hsl(0 78% 55% / 0.5); }
+  50% { box-shadow: 0 0 18px hsl(0 78% 65%), 0 0 36px hsl(0 78% 55% / 0.7); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+.delay-1000 { animation-delay: 1s; }
+.delay-2000 { animation-delay: 2s; }
