@@ -1,4 +1,4 @@
-import { createClient } from "npm:@supabase/supabase-js@2";
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -22,7 +22,7 @@ const isValidEmail = (email: string): boolean => {
 // Input sanitization - remove potentially dangerous characters for HTML
 const sanitizeInput = (input: string, maxLength: number = 100): string => {
   if (!input || typeof input !== 'string') return '';
-  return input.slice(0, maxLength).replace(/[<>\"'&]/g, '');
+  return input.slice(0, maxLength).replace(/[<>"'&]/g, '');
 };
 
 // URL validation - only allow safe redirect URLs

@@ -10,6 +10,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/components/ui/use-toast';
+import { submitLeadForm } from '@/utils/formSubmit';
 import AppHeader from '@/components/AppHeader';
 import AnimatedBackground from '@/components/AnimatedBackground';
 import ThreatSphere from '@/components/ThreatSphere';
@@ -44,11 +45,31 @@ const steps = [
 export default function HealthcareIndustry() {
   const [form, setForm] = useState({ name: '', email: '', facility: '', beds: '', message: '' });
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({ title: 'Assessment Request Received', description: 'A healthcare security specialist will contact you within 24 hours.' });
-    setForm({ name: '', email: '', facility: '', beds: '', message: '' });
+    setIsSubmitting(true);
+    try {
+      await submitLeadForm({
+        formType: 'Industry Inquiry (Healthcare)',
+        name: form.name,
+        email: form.email,
+        company: form.facility,
+        interest: form.beds,
+        message: form.message,
+      });
+      toast({ title: 'Assessment Request Received', description: 'A healthcare security specialist will contact you within 24 hours.' });
+      setForm({ name: '', email: '', facility: '', beds: '', message: '' });
+    } catch (err) {
+      toast({
+        title: 'Submission Failed',
+        description: 'There was an error sending your request. Please try again.',
+        variant: 'destructive',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const schema = {
@@ -200,7 +221,9 @@ export default function HealthcareIndustry() {
                 <Label htmlFor="hc-message">Primary Security Concern</Label>
                 <Textarea id="hc-message" value={form.message} onChange={e => setForm(p => ({ ...p, message: e.target.value }))} rows={4} placeholder="E.g. patient data on dark web, ransomware pre-attack monitoring, HIPAA breach response..." className="mt-1 bg-background/50" />
               </div>
-              <Button type="submit" className="hero-button w-full">Request Free Exposure Assessment</Button>
+              <Button type="submit" disabled={isSubmitting} className="hero-button w-full">
+                {isSubmitting ? 'Requesting Assessment...' : 'Request Free Exposure Assessment'}
+              </Button>
             </form>
           </div>
         </div>

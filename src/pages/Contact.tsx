@@ -29,9 +29,11 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AnimatedBackground from '@/components/AnimatedBackground';
 import ThreatSphere from '@/components/ThreatSphere';
 import FinalCTA from '@/components/FinalCTA';
+import { submitLeadForm } from '@/utils/formSubmit';
 
 const Contact = () => {
   const [isTrialModalOpen, setIsTrialModalOpen] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -43,13 +45,32 @@ const Contact = () => {
 
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Message Sent Successfully",
-      description: "Thank you for contacting DarkThreat's Threat Operations Center. We will respond within 24 hours.",
-    });
-    setFormData({ name: '', email: '', company: '', interest: 'Dark Web Monitoring', message: '' });
+    setIsSubmitting(true);
+    try {
+      await submitLeadForm({
+        formType: 'Contact Us Form',
+        name: formData.name,
+        email: formData.email,
+        company: formData.company,
+        interest: formData.interest,
+        message: formData.message,
+      });
+      toast({
+        title: "Message Sent Successfully",
+        description: "Thank you for contacting DarkThreat's Threat Operations Center. We will respond within 24 hours.",
+      });
+      setFormData({ name: '', email: '', company: '', interest: 'Dark Web Monitoring', message: '' });
+    } catch (err) {
+      toast({
+        title: "Submission Failed",
+        description: "There was an error sending your message. Please try again or contact us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
@@ -318,8 +339,8 @@ const Contact = () => {
                   />
                 </div>
                 
-                <Button type="submit" className="hero-button w-full">
-                  Send Secure Message
+                <Button type="submit" className="hero-button w-full" disabled={isSubmitting}>
+                  {isSubmitting ? 'Sending Secure Message...' : 'Send Secure Message'}
                 </Button>
               </form>
             </div>

@@ -3,15 +3,40 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Shield, Clock, CheckCircle, Users, Linkedin, Twitter, Github } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { submitLeadForm } from '@/utils/formSubmit';
+import { useToast } from '@/components/ui/use-toast';
 
 const TrialComingSoon = () => {
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
-
-  const handleNotifyMe = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
+  const handleNotifyMe = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Notify email:', email);
-    setIsSubscribed(true);
+    setIsSubmitting(true);
+    try {
+      await submitLeadForm({
+        formType: 'Trial Coming Soon Notification',
+        email,
+        name: '',
+        company: '',
+        interest: '',
+        message: '',
+      });
+      toast({
+        title: 'Subscribed Successfully',
+        description: 'You will be notified when the trial is ready.',
+      });
+      setIsSubscribed(true);
+    } catch (err) {
+      toast({
+        title: 'Subscription Failed',
+        description: 'Please try again later.',
+        variant: 'destructive',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -99,8 +124,8 @@ const TrialComingSoon = () => {
                   required
                   className="flex-1"
                 />
-                <Button type="submit" className="hero-button">
-                  Notify Me
+                <Button type="submit" className="hero-button w-full" disabled={isSubmitting}>
+                  {isSubmitting ? 'Submitting...' : isSubscribed ? 'Subscribed' : 'Notify Me'}
                 </Button>
               </div>
               <p className="text-sm text-muted-foreground mt-4">

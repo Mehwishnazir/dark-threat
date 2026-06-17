@@ -11,6 +11,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/components/ui/use-toast';
+import { submitLeadForm } from '@/utils/formSubmit';
 import AppHeader from '@/components/AppHeader';
 import AnimatedBackground from '@/components/AnimatedBackground';
 import ThreatSphere from '@/components/ThreatSphere';
@@ -103,14 +104,33 @@ const steps = [
 export default function SaasTechnologyIndustry() {
   const [form, setForm] = useState({ name: '', email: '', company: '', message: '' });
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: 'Request Received',
-      description: 'A SaaS security specialist will contact you within 24 hours.',
-    });
-    setForm({ name: '', email: '', company: '', message: '' });
+    setIsSubmitting(true);
+    try {
+      await submitLeadForm({
+        formType: 'Industry Inquiry (SaaS & Tech)',
+        name: form.name,
+        email: form.email,
+        company: form.company,
+        message: form.message,
+      });
+      toast({
+        title: 'Request Received',
+        description: 'A SaaS security specialist will contact you within 24 hours.',
+      });
+      setForm({ name: '', email: '', company: '', message: '' });
+    } catch (err) {
+      toast({
+        title: 'Submission Failed',
+        description: 'There was an error sending your request. Please try again.',
+        variant: 'destructive',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const schema = {
@@ -296,8 +316,8 @@ export default function SaasTechnologyIndustry() {
                   className="mt-1 bg-background/50"
                 />
               </div>
-              <Button type="submit" className="hero-button w-full">
-                Request Free Exposure Scan
+              <Button type="submit" disabled={isSubmitting} className="hero-button w-full">
+                {isSubmitting ? 'Requesting Scan...' : 'Request Free Exposure Scan'}
               </Button>
             </form>
           </div>

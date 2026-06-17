@@ -10,6 +10,9 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
+import { useState } from 'react';
+import { useToast } from '@/components/ui/use-toast';
+import { submitLeadForm } from '@/utils/formSubmit';
 
 const faqs = [
   {
@@ -35,6 +38,67 @@ const faqs = [
 ];
 
 const DarkWebMonitoring = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    interest: '',
+    message: '',
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
+
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!formData.name || !formData.email || !formData.interest || !formData.message) {
+      toast({
+        title: "Validation Error",
+        description: "Please fill in all required fields marked with *.",
+        variant: "destructive",
+      });
+      return;
+    }
+    setIsSubmitting(true);
+    try {
+      await submitLeadForm({
+        formType: 'Free Assessment (Dark Web Monitoring)',
+        name: formData.name,
+        email: formData.email,
+        company: formData.company,
+        phone: formData.phone,
+        interest: formData.interest,
+        message: formData.message,
+      });
+      toast({
+        title: "Request Received",
+        description: "Your security assessment request has been submitted successfully.",
+      });
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        interest: '',
+        message: '',
+      });
+    } catch (err) {
+      toast({
+        title: "Submission Failed",
+        description: "There was an error sending your request. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   const serviceJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Service',
@@ -126,12 +190,16 @@ const DarkWebMonitoring = () => {
                 <span className="text-xs font-semibold uppercase tracking-[0.25em] text-primary">Free Consultation</span>
               </div>
               <h2 className="text-2xl font-montserrat font-bold text-foreground mb-6">Get Your Free Cybersecurity Assessment</h2>
-              <form className="space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-1 gap-4">
                   <div>
                     <label className="block text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground mb-2">Full Name *</label>
                     <input
                       type="text"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      required
                       placeholder="Enter your full name"
                       className="w-full rounded-xl border border-border/60 bg-background/60 backdrop-blur-sm px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 outline-none transition-all duration-200 focus:border-primary focus:bg-background focus:ring-2 focus:ring-primary/30 hover:border-border"
                     />
@@ -140,6 +208,10 @@ const DarkWebMonitoring = () => {
                     <label className="block text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground mb-2">Work Email *</label>
                     <input
                       type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      required
                       placeholder="you@company.com"
                       className="w-full rounded-xl border border-border/60 bg-background/60 backdrop-blur-sm px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 outline-none transition-all duration-200 focus:border-primary focus:bg-background focus:ring-2 focus:ring-primary/30 hover:border-border"
                     />
@@ -148,6 +220,9 @@ const DarkWebMonitoring = () => {
                     <label className="block text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground mb-2">Company Name</label>
                     <input
                       type="text"
+                      name="company"
+                      value={formData.company}
+                      onChange={handleInputChange}
                       placeholder="Your organization"
                       className="w-full rounded-xl border border-border/60 bg-background/60 backdrop-blur-sm px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 outline-none transition-all duration-200 focus:border-primary focus:bg-background focus:ring-2 focus:ring-primary/30 hover:border-border"
                     />
@@ -156,23 +231,36 @@ const DarkWebMonitoring = () => {
                     <label className="block text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground mb-2">Phone Number</label>
                     <input
                       type="tel"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleInputChange}
                       placeholder="+1 (555) 000-0000"
                       className="w-full rounded-xl border border-border/60 bg-background/60 backdrop-blur-sm px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 outline-none transition-all duration-200 focus:border-primary focus:bg-background focus:ring-2 focus:ring-primary/30 hover:border-border"
                     />
                   </div>
                   <div>
                     <label className="block text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground mb-2">Reason for Contact *</label>
-                    <select className="w-full rounded-xl border border-border/60 bg-background/60 backdrop-blur-sm px-4 py-3 text-sm text-foreground outline-none transition-all duration-200 focus:border-primary focus:bg-background focus:ring-2 focus:ring-primary/30 hover:border-border">
+                    <select
+                      name="interest"
+                      value={formData.interest}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full rounded-xl border border-border/60 bg-background/60 backdrop-blur-sm px-4 py-3 text-sm text-foreground outline-none transition-all duration-200 focus:border-primary focus:bg-background focus:ring-2 focus:ring-primary/30 hover:border-border"
+                    >
                       <option value="">Select a reason</option>
-                      <option>General Inquiry</option>
-                      <option>Sales Question</option>
-                      <option>Demo Request</option>
-                      <option>Technical Support</option>
+                      <option value="General Inquiry">General Inquiry</option>
+                      <option value="Sales Question">Sales Question</option>
+                      <option value="Demo Request">Demo Request</option>
+                      <option value="Technical Support">Technical Support</option>
                     </select>
                   </div>
                   <div>
                     <label className="block text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground mb-2">How Can We Help? *</label>
                     <textarea
+                      name="message"
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      required
                       rows={3}
                       placeholder="Describe your security needs or challenges..."
                       className="w-full rounded-xl border border-border/60 bg-background/60 backdrop-blur-sm px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 outline-none transition-all duration-200 focus:border-primary focus:bg-background focus:ring-2 focus:ring-primary/30 hover:border-border resize-none"
@@ -181,9 +269,10 @@ const DarkWebMonitoring = () => {
                 </div>
                 <button
                   type="submit"
-                  className="w-full rounded-xl bg-gradient-to-r from-primary to-primary/80 px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition-all duration-200 hover:shadow-primary/40 hover:scale-[1.02] active:scale-[0.98]"
+                  disabled={isSubmitting}
+                  className="w-full rounded-xl bg-gradient-to-r from-primary to-primary/80 px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition-all duration-200 hover:shadow-primary/40 hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50"
                 >
-                  Request Free Assessment →
+                  {isSubmitting ? 'Requesting Assessment...' : 'Request Free Assessment →'}
                 </button>
                 <p className="text-center text-xs text-muted-foreground/70">By submitting, you agree to our <span className="underline underline-offset-2 hover:text-primary cursor-pointer transition-colors">Privacy Policy</span>.</p>
               </form>

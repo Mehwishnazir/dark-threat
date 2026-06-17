@@ -10,6 +10,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/components/ui/use-toast';
+import { submitLeadForm } from '@/utils/formSubmit';
 import AppHeader from '@/components/AppHeader';
 import AnimatedBackground from '@/components/AnimatedBackground';
 import ThreatSphere from '@/components/ThreatSphere';
@@ -44,11 +45,31 @@ const steps = [
 export default function LegalIndustry() {
   const [form, setForm] = useState({ name: '', email: '', firm: '', size: '', message: '' });
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({ title: 'Assessment Request Received', description: 'A legal cybersecurity specialist will contact you within 24 hours.' });
-    setForm({ name: '', email: '', firm: '', size: '', message: '' });
+    setIsSubmitting(true);
+    try {
+      await submitLeadForm({
+        formType: 'Industry Inquiry (Legal)',
+        name: form.name,
+        email: form.email,
+        company: form.firm,
+        interest: form.size,
+        message: form.message,
+      });
+      toast({ title: 'Assessment Request Received', description: 'A legal cybersecurity specialist will contact you within 24 hours.' });
+      setForm({ name: '', email: '', firm: '', size: '', message: '' });
+    } catch (err) {
+      toast({
+        title: 'Submission Failed',
+        description: 'There was an error sending your request. Please try again.',
+        variant: 'destructive',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const schema = {
@@ -168,7 +189,9 @@ export default function LegalIndustry() {
                 <Label htmlFor="legal-message">Primary Cybersecurity Concern</Label>
                 <Textarea id="legal-message" value={form.message} onChange={e => setForm(p => ({ ...p, message: e.target.value }))} rows={4} placeholder="E.g., safeguarding client records, partner credential monitoring, third-party vendor risks..." className="mt-1 bg-background/50" />
               </div>
-              <Button type="submit" className="hero-button w-full">Request Free Firm Scan</Button>
+              <Button type="submit" disabled={isSubmitting} className="hero-button w-full">
+                {isSubmitting ? 'Requesting Scan...' : 'Request Free Firm Scan'}
+              </Button>
             </form>
           </div>
         </div>
