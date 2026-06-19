@@ -2,6 +2,7 @@
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useState } from 'react';
+import { submitLeadForm } from '@/utils/formSubmit';
 
 export default function TrialRegistrationForm() {
   const [formData, setFormData] = useState({
@@ -13,6 +14,7 @@ export default function TrialRegistrationForm() {
     companyDomain: '',
     country: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -22,10 +24,26 @@ export default function TrialRegistrationForm() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Redirect to auth page to start the trial signup process
-    window.location.href = '/auth';
+    setIsSubmitting(true);
+    try {
+      await submitLeadForm({
+        formType: 'Trial Registration',
+        email: formData.email,
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        jobTitle: formData.jobTitle,
+        companyName: formData.companyName,
+        companyDomain: formData.companyDomain,
+        country: formData.country,
+      });
+    } catch (err) {
+      console.error('Trial lead capture failed', err);
+      // continue to auth even if notification fails
+    } finally {
+      window.location.href = '/auth';
+    }
   };
 
   return (
