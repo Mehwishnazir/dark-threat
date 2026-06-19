@@ -132,8 +132,19 @@ const ContactUs = () => {
                     className="mt-2"
                   />
                 </div>
-                <Button type="submit" className="hero-button w-full">
-                  Send Message
+                {/* Honeypot: hidden from real users, bots will fill it */}
+                <input
+                  type="text"
+                  name="website"
+                  value={formData.website}
+                  onChange={handleChange}
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                  style={{ position: 'absolute', left: '-10000px', width: 1, height: 1, opacity: 0 }}
+                />
+                <Button type="submit" className="hero-button w-full" disabled={isSubmitting}>
+                  {isSubmitting ? 'Sending…' : 'Send Message'}
                 </Button>
               </form>
             </div>
