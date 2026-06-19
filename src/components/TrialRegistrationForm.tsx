@@ -169,8 +169,8 @@ export default function TrialRegistrationForm() {
           By submitting this form, you agree to receive emails from us and to share your information so we can provide the requested service. You may unsubscribe at any time. For more, see our Privacy Policy.
         </div>
 
-        <Button type="submit" className="w-full hero-button text-lg py-4">
-          Start Free Trial
+        <Button type="submit" className="w-full hero-button text-lg py-4" disabled={isSubmitting}>
+          {isSubmitting ? 'Starting…' : 'Start Free Trial'}
         </Button>
       </form>
     </div>
