@@ -8,24 +8,49 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import TrialModal from '@/components/TrialModal';
 import { useToast } from '@/components/ui/use-toast';
+import { submitLeadForm } from '@/utils/formSubmit';
 
 const ContactUs = () => {
   const [isTrialModalOpen, setIsTrialModalOpen] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
-    message: ''
+    message: '',
+    website: '', // honeypot
   });
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Message Sent",
-      description: "Thank you for your message. We'll get back to you within 24 hours.",
-    });
-    setFormData({ name: '', email: '', company: '', message: '' });
+    if (isSubmitting) return;
+    setIsSubmitting(true);
+    try {
+      await submitLeadForm({
+        formType: 'Contact Us',
+        name: formData.name,
+        email: formData.email,
+        company: formData.company,
+        message: formData.message,
+        website: formData.website,
+      });
+      toast({
+        title: 'Message Sent',
+        description: "Thank you for your message. We'll get back to you within 24 hours.",
+      });
+      setFormData({ name: '', email: '', company: '', message: '', website: '' });
+    } catch (err) {
+      const description =
+        err instanceof Error ? err.message : 'Please try again in a moment.';
+      toast({
+        title: 'Could not send message',
+        description,
+        variant: 'destructive',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -107,8 +132,19 @@ const ContactUs = () => {
                     className="mt-2"
                   />
                 </div>
-                <Button type="submit" className="hero-button w-full">
-                  Send Message
+                {/* Honeypot: hidden from real users, bots will fill it */}
+                <input
+                  type="text"
+                  name="website"
+                  value={formData.website}
+                  onChange={handleChange}
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                  style={{ position: 'absolute', left: '-10000px', width: 1, height: 1, opacity: 0 }}
+                />
+                <Button type="submit" className="hero-button w-full" disabled={isSubmitting}>
+                  {isSubmitting ? 'Sending…' : 'Send Message'}
                 </Button>
               </form>
             </div>
