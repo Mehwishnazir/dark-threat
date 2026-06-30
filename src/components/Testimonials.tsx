@@ -67,6 +67,8 @@ const Testimonials = () => {
                       <img
                         src={testimonial.image}
                         alt={`${testimonial.name}, ${testimonial.role}`}
+                        width="56"
+                        height="56"
                         className="w-full h-full object-cover"
                         loading="lazy"
                         decoding="async"

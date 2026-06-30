@@ -74,7 +74,7 @@ export default function AppHeader() {
 
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2.5 shrink-0" aria-label="DarkThreat Home">
-          <img src="/logo.png" alt="DarkThreat logo" className="w-8 h-8 object-contain" />
+          <img src="/logo.png" alt="DarkThreat logo" width="32" height="32" className="w-8 h-8 object-contain" />
           <span className="text-xl font-montserrat font-bold text-foreground tracking-tight">
             DARK<span className="text-primary">THREAT</span>
           </span>

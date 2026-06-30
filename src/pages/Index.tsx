@@ -102,8 +102,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background relative">
       <Helmet>
-        <title>Dark Web Monitoring Service &amp; Threat Intelligence Platform | DarkThreat</title>
-        <meta name="description" content="DarkThreat is an AI-powered dark web monitoring service and threat intelligence platform. Protect your enterprise from data breaches, credential leaks, and ransomware attacks 24/7." />
+        <title>Dark Web Monitoring &amp; Credential Leak Detection Platform | DarkThreat</title>
+        <meta name="description" content="DarkThreat is an AI-powered dark web monitoring and credential leak detection platform. Detect leaked passwords, hacker chatter, and data breaches before they impact your business. 7-day free trial." />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://darkthreat.ai" />
 
@@ -126,6 +126,7 @@ const Index = () => {
 
         <script type="application/ld+json">{JSON.stringify(ORG_JSON_LD)}</script>
         <script type="application/ld+json">{JSON.stringify(WEBSITE_JSON_LD)}</script>
+        <script type="application/ld+json">{JSON.stringify(SOFTWARE_APP_JSON_LD)}</script>
       </Helmet>
 
       <AppHeader />

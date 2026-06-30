@@ -257,3 +257,22 @@
 }
 .delay-1000 { animation-delay: 1s; }
 .delay-2000 { animation-delay: 2s; }
+
+/* ---- SEO audit fixes: overflow, tap targets, image sizing ---- */
+html, body { overflow-x: hidden; max-width: 100%; }
+img, svg, video, canvas { max-width: 100%; height: auto; }
+
+/* WCAG 2.5.5 — minimum 44x44 tap target on mobile for interactive elements */
+@media (max-width: 768px) {
+  header nav a,
+  header nav button,
+  footer a[href],
+  button[aria-label],
+  a[aria-label] {
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

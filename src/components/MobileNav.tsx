@@ -150,7 +150,7 @@ export default function MobileNav() {
         {/* Header */}
         <div className="flex items-center justify-between px-5 py-4 border-b border-border shrink-0">
           <Link to="/" onClick={close} aria-label="DarkThreat Home" className="flex items-center gap-2">
-            <img src="/logo.png" alt="DarkThreat" className="w-7 h-7 object-contain" />
+            <img src="/logo.png" alt="DarkThreat" width="28" height="28" className="w-7 h-7 object-contain" />
             <span className="font-montserrat font-bold text-foreground text-base tracking-tight">
               DARK<span className="text-primary">THREAT</span>
             </span>

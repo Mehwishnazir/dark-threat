@@ -229,6 +229,9 @@ const Blog = () => {
                   <img
                     src={heroPost.featuredImage}
                     alt={heroPost.title}
+                    width="1200"
+                    height="675"
+                    decoding="async"
                     className="blog-hero-card__image"
                   />
                 </div>

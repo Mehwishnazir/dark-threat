@@ -96,8 +96,11 @@ const BlogSidebar = ({
                 <img
                   src={post.featuredImage}
                   alt={post.title}
+                  width="64"
+                  height="64"
                   className="w-16 h-16 object-cover rounded flex-shrink-0"
                   loading="lazy"
+                  decoding="async"
                 />
                 <div className="flex-1 min-w-0">
                   <h4 className="text-sm font-medium text-foreground line-clamp-2 group-hover:text-primary transition-colors">

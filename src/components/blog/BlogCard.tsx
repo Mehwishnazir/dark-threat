@@ -25,7 +25,10 @@ const BlogCard = ({ post }: BlogCardProps) => {
         <img
           src={post.featuredImage}
           alt={post.title}
+          width="800"
+          height="450"
           loading="lazy"
+          decoding="async"
           className="blog-card__image"
         />
         {/* Category Badge */}
