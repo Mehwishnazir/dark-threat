@@ -31,6 +31,12 @@ import DarkWebMonitoring from "./pages/DarkWebMonitoring";
 import CredentialLeakDetection from "./pages/CredentialLeakDetection";
 import DarkWebDataRemoval from "./pages/DarkWebDataRemoval";
 import ComparisonDarkOwl from "./pages/ComparisonDarkOwl";
+import ComparisonRecordedFuture from "./pages/ComparisonRecordedFuture";
+import ComparisonZeroFox from "./pages/ComparisonZeroFox";
+import ComparisonFlare from "./pages/ComparisonFlare";
+import ComparisonSocRadar from "./pages/ComparisonSocRadar";
+import RouteHead from "./components/RouteHead";
+import CookieConsent from "./components/CookieConsent";
 import Author from "./pages/Author";
 import {
   IndustriesPage,
@@ -64,6 +70,8 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <RouteHead />
+          <CookieConsent />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/solution" element={<Solution />} />
@@ -90,6 +98,10 @@ const App = () => (
             <Route path="/credential-leak-detection" element={<CredentialLeakDetection />} />
             <Route path="/dark-web-data-removal" element={<DarkWebDataRemoval />} />
             <Route path="/compare/darkthreat-vs-darkowl" element={<ComparisonDarkOwl />} />
+            <Route path="/compare/darkthreat-vs-recorded-future" element={<ComparisonRecordedFuture />} />
+            <Route path="/compare/darkthreat-vs-zerofox" element={<ComparisonZeroFox />} />
+            <Route path="/compare/darkthreat-vs-flare" element={<ComparisonFlare />} />
+            <Route path="/compare/darkthreat-vs-socradar" element={<ComparisonSocRadar />} />
             <Route path="/author/:slug" element={<Author />} />
             <Route path="/industries" element={<IndustriesPage />} />
             <Route path="/industries/financial-services" element={<FinancialServicesIndustry />} />
