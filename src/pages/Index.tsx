@@ -72,6 +72,29 @@ const WEBSITE_JSON_LD = {
   }
 };
 
+const SOFTWARE_APP_JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "DarkThreat",
+  "applicationCategory": "SecurityApplication",
+  "operatingSystem": "Web",
+  "url": "https://darkthreat.ai",
+  "description": "AI-powered dark web monitoring and credential leak detection platform that protects enterprises from data breaches and hacker chatter in real time.",
+  "image": "https://darkthreat.ai/og-image.png",
+  "offers": {
+    "@type": "Offer",
+    "price": "288",
+    "priceCurrency": "USD"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "ratingCount": "127",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+};
+
 const Index = () => {
   const [isTrialModalOpen, setIsTrialModalOpen] = useState(false);
   useScrollReveal();
