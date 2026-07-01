@@ -159,11 +159,12 @@ const Blog = () => {
               value={searchQuery}
               onChange={(e) => {
                 setSearchQuery(e.target.value);
-                setPage(1);
+                setPage(1, false);
               }}
               className="blog-listing-filters__search-input"
               aria-label="Search blog articles"
             />
+
           </div>
 
           <div className="blog-listing-filters__dropdown">
