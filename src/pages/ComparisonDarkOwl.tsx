@@ -41,20 +41,10 @@ const ComparisonDarkOwl = () => {
         })}</script>
       </Helmet>
 
-      <header className="fixed top-0 left-0 right-0 py-4 md:py-6 px-6 border-b border-border bg-background/95 backdrop-blur-sm z-50">
-        <div className="max-w-6xl mx-auto flex items-center justify-between">
-          <Link to="/" className="text-2xl font-montserrat font-bold text-foreground">DARK<span className="text-primary">THREAT</span></Link>
-          <nav className="hidden md:flex items-center space-x-6">
-            <Link to="/" className="text-muted-foreground hover:text-primary">Home</Link>
-            <Link to="/solution" className="text-muted-foreground hover:text-primary">Solution</Link>
-            <Link to="/pricing" className="text-muted-foreground hover:text-primary">Pricing</Link>
-            <Button onClick={() => (window.location.href = '/auth')} className="hero-button">Start Free Trial</Button>
-          </nav>
-          <MobileNav />
-        </div>
-      </header>
+      <AppHeader />
 
       <section className="relative pt-32 pb-16 px-6 hero-bg-layered overflow-hidden">
+
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-montserrat font-bold text-foreground mb-6">
             DarkOwl Alternative — Why Security Teams <span className="glow-text">Choose DarkThreat</span>
