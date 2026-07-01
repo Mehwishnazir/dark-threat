@@ -232,9 +232,16 @@ const Blog = () => {
                     alt={heroPost.title}
                     width="1200"
                     height="675"
+                    loading="eager"
+                    fetchPriority="high"
                     decoding="async"
+                    onError={(e) => {
+                      const img = e.currentTarget;
+                      if (img.src.indexOf(FALLBACK_IMAGE) === -1) img.src = FALLBACK_IMAGE;
+                    }}
                     className="blog-hero-card__image"
                   />
+
                 </div>
                 <div className="blog-hero-card__body">
                   <span className="blog-hero-card__category">{heroPost.category}</span>
