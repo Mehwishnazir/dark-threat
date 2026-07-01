@@ -672,6 +672,27 @@ import { whatToDoInTheFirst48HoursOfADataBreach } from "./what-to-do-in-the-firs
 import { whoShouldOwnDarkWebMonitoringInYourOrganization } from "./who-should-own-dark-web-monitoring-in-your-organization";
 import { whyFreeDarkWebMonitoringToolsMiss90OfThreats } from "./why-free-dark-web-monitoring-tools-miss-90-of-threats";
 import { whyHealthcareIsTheMostTargetedIndustryOnTheDarkWeb } from "./why-healthcare-is-the-most-targeted-industry-on-the-dark-web";
+import { dataLeakDetectionCoverageMapWhatPlatformsMonitorInTwentyTwentySix } from "./data-leak-detection-coverage-map-what-platforms-monitor-in-2026";
+import { dataLeakDetectionPlatformComparisonTwentyTwentySixFeaturesAndPricing } from "./data-leak-detection-platform-comparison-2026-features-and-pricing";
+import { employeeCredentialLeaksHowToDetectAndRespondInTwentyTwentySix } from "./employee-credential-leaks-how-to-detect-and-respond-in-2026";
+import { credentialExposureRateByIndustryTwentyTwentySixBenchmarkReport } from "./credential-exposure-rate-by-industry-2026-benchmark-report";
+import { leakedCredentialsFromMajorTwentyTwentyFourTwentyTwentySixBreachesStillInCirculation } from "./leaked-credentials-from-major-2024-2026-breaches-still-in-circulation";
+import { darkWebCredentialMarketsPricingVolumeAndQualityInTwentyTwentySix } from "./dark-web-credential-markets-pricing-volume-and-quality-in-2026";
+import { bestCredentialMonitoringToolsForEnterprisesInTwentyTwentySix } from "./best-credential-monitoring-tools-for-enterprises-in-2026";
+import { whatIsDarkWebMonitoringAndHowDoesItActuallyWorkInTwentyTwentySix } from "./what-is-dark-web-monitoring-and-how-does-it-actually-work-in-2026";
+import { howAiIsTransformingDarkWebMonitoringInTwentyTwentySix } from "./how-ai-is-transforming-dark-web-monitoring-in-2026";
+import { howMuchDoesADarkWebCredentialBreachActuallyCostInTwentyTwentySix } from "./how-much-does-a-dark-web-credential-breach-actually-cost-in-2026";
+import { trueCostOfNotHavingDarkWebMonitoringTwentyTwentySixData } from "./true-cost-of-not-having-dark-web-monitoring-2026-data";
+import { enterpriseVsSmbDarkWebMonitoringFeatureComparisonTwentyTwentySix } from "./enterprise-vs-smb-dark-web-monitoring-feature-comparison-2026";
+import { bestDarkWebMonitoringServicesForEnterprisesInTwentyTwentySix } from "./best-dark-web-monitoring-services-for-enterprises-in-2026";
+import { bestDarkWebMonitoringToolsForSmallBusinessesInTwentyTwentySix } from "./best-dark-web-monitoring-tools-for-small-businesses-in-2026";
+import { darkthreatVsDarkowlHeadToHeadComparisonTwentyTwentySix } from "./darkthreat-vs-darkowl-head-to-head-comparison-2026";
+import { darkWebActivityReportTopThreatsTargetingBusinessesInTwentyTwentySix } from "./dark-web-activity-report-top-threats-targeting-businesses-in-2026";
+import { mostActiveDarkWebMarketsInTwentyTwentySixWhatSecurityTeamsMonitor } from "./most-active-dark-web-markets-in-2026-what-security-teams-monitor";
+import { riseOfInitialAccessBrokersTwentyTwentySixDarkWebMonitoringIntelligence } from "./rise-of-initial-access-brokers-2026-dark-web-monitoring-intelligence";
+import { howRussianCybercrimeForumsHaveChangedInTwentyTwentySix } from "./how-russian-cybercrime-forums-have-changed-in-2026";
+import { twentyTwentySixStateOfDarkWebThreatsAnnualIntelligenceReport } from "./2026-state-of-dark-web-threats-annual-intelligence-report";
+import { australianBusinessDarkWebThreatLandscapeTwentyTwentySix } from "./australian-business-dark-web-threat-landscape-2026";
 
 export const allBlogs = [
   tenBestPracticesForEffectiveDarkWebMonitoring,
@@ -1348,4 +1369,25 @@ export const allBlogs = [
   whoShouldOwnDarkWebMonitoringInYourOrganization,
   whyFreeDarkWebMonitoringToolsMiss90OfThreats,
   whyHealthcareIsTheMostTargetedIndustryOnTheDarkWeb,
+  dataLeakDetectionCoverageMapWhatPlatformsMonitorInTwentyTwentySix,
+  dataLeakDetectionPlatformComparisonTwentyTwentySixFeaturesAndPricing,
+  employeeCredentialLeaksHowToDetectAndRespondInTwentyTwentySix,
+  credentialExposureRateByIndustryTwentyTwentySixBenchmarkReport,
+  leakedCredentialsFromMajorTwentyTwentyFourTwentyTwentySixBreachesStillInCirculation,
+  darkWebCredentialMarketsPricingVolumeAndQualityInTwentyTwentySix,
+  bestCredentialMonitoringToolsForEnterprisesInTwentyTwentySix,
+  whatIsDarkWebMonitoringAndHowDoesItActuallyWorkInTwentyTwentySix,
+  howAiIsTransformingDarkWebMonitoringInTwentyTwentySix,
+  howMuchDoesADarkWebCredentialBreachActuallyCostInTwentyTwentySix,
+  trueCostOfNotHavingDarkWebMonitoringTwentyTwentySixData,
+  enterpriseVsSmbDarkWebMonitoringFeatureComparisonTwentyTwentySix,
+  bestDarkWebMonitoringServicesForEnterprisesInTwentyTwentySix,
+  bestDarkWebMonitoringToolsForSmallBusinessesInTwentyTwentySix,
+  darkthreatVsDarkowlHeadToHeadComparisonTwentyTwentySix,
+  darkWebActivityReportTopThreatsTargetingBusinessesInTwentyTwentySix,
+  mostActiveDarkWebMarketsInTwentyTwentySixWhatSecurityTeamsMonitor,
+  riseOfInitialAccessBrokersTwentyTwentySixDarkWebMonitoringIntelligence,
+  howRussianCybercrimeForumsHaveChangedInTwentyTwentySix,
+  twentyTwentySixStateOfDarkWebThreatsAnnualIntelligenceReport,
+  australianBusinessDarkWebThreatLandscapeTwentyTwentySix,
 ];
