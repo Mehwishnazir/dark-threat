@@ -2,8 +2,9 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { CheckCircle, XCircle, ArrowRight, Quote } from 'lucide-react';
-import MobileNav from '@/components/MobileNav';
+import AppHeader from '@/components/AppHeader';
 import FinalCTA from '@/components/FinalCTA';
+
 
 const features: Array<[string, boolean, boolean]> = [
   ['Transparent public pricing', true, false],
