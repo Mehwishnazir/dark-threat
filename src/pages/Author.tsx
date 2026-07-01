@@ -3,7 +3,9 @@ import { Helmet } from 'react-helmet-async';
 import { Twitter, Linkedin, Shield } from 'lucide-react';
 import BlogCard from '@/components/blog/BlogCard';
 import Breadcrumb from '@/components/Breadcrumb';
+import AppHeader from '@/components/AppHeader';
 import { allBlogs } from '@/blogs';
+
 
 interface Author {
   slug: string;
