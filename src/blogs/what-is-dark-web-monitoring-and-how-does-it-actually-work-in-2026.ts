@@ -1,6 +1,6 @@
 import type { BlogPost as BlogPostType } from "@/components/blog/BlogCard";
 
-export const whatIsDarkWebMonitoringAndHowDoesItActuallyWorkIn2026: BlogPostType & {
+export const whatIsDarkWebMonitoringAndHowDoesItActuallyWorkInTwentyTwentySix: BlogPostType & {
   content: string;
   tableOfContents: { id: string; title: string }[];
   metaTitle: string;
