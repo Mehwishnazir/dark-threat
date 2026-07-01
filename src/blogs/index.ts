@@ -284,16 +284,11 @@ import { whyYourCompanysOldPasswordsAreStillADarkWebThreat } from "./why-your-co
 import { whyYourDigitalIdentityNeedsMonitoring } from "./why-your-digital-identity-needs-monitoring";
 import { zeroDayVulnerabilityTradingOnTheDarkWebWhatSecurityTeamsMustKnow } from "./zero-day-vulnerability-trading-on-the-dark-web-what-security-teams-must-know";
 import { tenBestDarkWebMonitoringApisForDevelopers } from "./10-best-dark-web-monitoring-apis-for-developers";
-import { twoThousandTwentyFiveStateOfDarkWebThreatsAnnualIntelligenceReport } from "./2025-state-of-dark-web-threats-annual-intelligence-report";
 import { fiveCaseStudiesWhereDarkWebMonitoringPreventedMajorBreaches } from "./5-case-studies-where-dark-web-monitoring-prevented-major-breaches";
 import { activeVsPassiveDarkWebMonitoringWhichDoesYourBusinessNeed } from "./active-vs-passive-dark-web-monitoring-which-does-your-business-need";
 import { aiGeneratedMalwareOnTheDarkWebNewMonitoringChallenges } from "./ai-generated-malware-on-the-dark-web-new-monitoring-challenges";
 import { alphvBlackcatRansomwareDarkWebActivityAndBusinessRisks } from "./alphv-blackcat-ransomware-dark-web-activity-and-business-risks";
-import { australianBusinessDarkWebThreatLandscape2025 } from "./australian-business-dark-web-threat-landscape-2025";
 import { automatedCredentialMonitoringVsManualAuditingCostComparison } from "./automated-credential-monitoring-vs-manual-auditing-cost-comparison";
-import { bestCredentialMonitoringToolsForEnterprisesIn2025 } from "./best-credential-monitoring-tools-for-enterprises-in-2025";
-import { bestDarkWebMonitoringServicesForEnterprisesIn2025 } from "./best-dark-web-monitoring-services-for-enterprises-in-2025";
-import { bestDarkWebMonitoringToolsForSmallBusinessesIn2025 } from "./best-dark-web-monitoring-tools-for-small-businesses-in-2025";
 import { brandImpersonationOnTheDarkWebHowToDetectAndRespond } from "./brand-impersonation-on-the-dark-web-how-to-detect-and-respond";
 import { breachVsLeakUnderstandingTheCriticalDifferenceForSecurityTeams } from "./breach-vs-leak-understanding-the-critical-difference-for-security-teams";
 import { buildingACredentialMonitoringProgramFromScratch } from "./building-a-credential-monitoring-program-from-scratch";
@@ -312,7 +307,6 @@ import { comboListsExplainedWhatTheyAreAndHowToMonitorForThem } from "./combo-li
 import { continuousAuthenticationAndCredentialMonitoringSynergy } from "./continuous-authentication-and-credential-monitoring-synergy";
 import { continuousCredentialMonitoringVsAnnualAuditEffectivenessGap } from "./continuous-credential-monitoring-vs-annual-audit-effectiveness-gap";
 import { credentialExposureInMergersAndAcquisitionsDueDiligence } from "./credential-exposure-in-mergers-and-acquisitions-due-diligence";
-import { credentialExposureRateByIndustry2025BenchmarkReport } from "./credential-exposure-rate-by-industry-2025-benchmark-report";
 import { credentialLeakDetectionAfterAThirdPartyBreach } from "./credential-leak-detection-after-a-third-party-breach";
 import { credentialLeakDetectionForBoardLevelCyberRiskReporting } from "./credential-leak-detection-for-board-level-cyber-risk-reporting";
 import { credentialLeakDetectionForCloudInfrastructureAwsAzureGcp } from "./credential-leak-detection-for-cloud-infrastructure-aws-azure-gcp";
@@ -346,10 +340,8 @@ import { credentialStuffingAttackPreventionDetectionFirstStrategy } from "./cred
 import { crowdstrikeFalconIntelligenceVsDarkthreatPositioningPricing } from "./crowdstrike-falcon-intelligence-vs-darkthreat-positioning-pricing";
 import { cryptocurrencyExchangeDarkWebThreatsMonitoringWalletAddressLeaks } from "./cryptocurrency-exchange-dark-web-threats-monitoring-wallet-address-leaks";
 import { cyberResilienceActDarkWebIntelligenceRequirementsForEuBusinesses } from "./cyber-resilience-act-dark-web-intelligence-requirements-for-eu-businesses";
-import { darkWebActivityReportTopThreatsTargetingBusinessesIn2025 } from "./dark-web-activity-report-top-threats-targeting-businesses-in-2025";
 import { darkWebCredentialAuctionsWhatGetsSoldAndForHowMuch } from "./dark-web-credential-auctions-what-gets-sold-and-for-how-much";
 import { darkWebCredentialLeaksAtBanks20242025CaseStudies } from "./dark-web-credential-leaks-at-banks-2024-2025-case-studies";
-import { darkWebCredentialMarketsPricingVolumeAndQualityIn2025 } from "./dark-web-credential-markets-pricing-volume-and-quality-in-2025";
 import { darkWebCredentialMarketsVolumePricingAndThreatTrends } from "./dark-web-credential-markets-volume-pricing-and-threat-trends";
 import { darkWebDataFreshnessWhyRealTimeMattersMoreThanArchiveSize } from "./dark-web-data-freshness-why-real-time-matters-more-than-archive-size";
 import { darkWebDrugMarketShutdownImpactOnCybercriminalBehavior } from "./dark-web-drug-market-shutdown-impact-on-cybercriminal-behavior";
@@ -406,7 +398,6 @@ import { darkWebThreatsFacingTheBankingSectorIn2025 } from "./dark-web-threats-f
 import { darkWebThreatsForAccountingAndCpaFirmsFullRiskAssessment } from "./dark-web-threats-for-accounting-and-cpa-firms-full-risk-assessment";
 import { darkWebThreatsTargetingLondonFinancialInstitutions } from "./dark-web-threats-targeting-london-financial-institutions";
 import { darkWebVsCreditMonitoringWhatMostPeopleGetWrong } from "./dark-web-vs-credit-monitoring-what-most-people-get-wrong";
-import { darkthreatVsDarkowlHeadToHeadComparison2025 } from "./darkthreat-vs-darkowl-head-to-head-comparison-2025";
 import { darkthreatVsFlareDarkWebMonitoringShowdown } from "./darkthreat-vs-flare-dark-web-monitoring-showdown";
 import { darkthreatVsRecordedFutureEnterpriseIntelligenceCompared } from "./darkthreat-vs-recorded-future-enterprise-intelligence-compared";
 import { darkthreatVsResecurityIntelligencePlatformComparison } from "./darkthreat-vs-resecurity-intelligence-platform-comparison";
@@ -416,7 +407,6 @@ import { dataBreachStatistics2025TheNumbersEveryCisoMustKnow } from "./data-brea
 import { dataLeakDetectionAfterAThirdPartyVendorBreach } from "./data-leak-detection-after-a-third-party-vendor-breach";
 import { dataLeakDetectionAndCyberInsuranceWhatPoliciesRequire } from "./data-leak-detection-and-cyber-insurance-what-policies-require";
 import { dataLeakDetectionAutomationBuildingSelfHealingWorkflows } from "./data-leak-detection-automation-building-self-healing-workflows";
-import { dataLeakDetectionCoverageMapWhatPlatformsMonitorIn2025 } from "./data-leak-detection-coverage-map-what-platforms-monitor-in-2025";
 import { dataLeakDetectionForApiResponsesAndGraphqlEndpoints } from "./data-leak-detection-for-api-responses-and-graphql-endpoints";
 import { dataLeakDetectionForAutomotiveAndConnectedVehicleData } from "./data-leak-detection-for-automotive-and-connected-vehicle-data";
 import { dataLeakDetectionForCallCenterRecordingsAndTranscripts } from "./data-leak-detection-for-call-center-recordings-and-transcripts";
@@ -445,7 +435,6 @@ import { dataLeakDetectionForTheHospitalityAndTravelIndustry } from "./data-leak
 import { dataLeakDetectionIntegrationWithDataGovernancePrograms } from "./data-leak-detection-integration-with-data-governance-programs";
 import { dataLeakDetectionMetricsMttDetectMttRespondCoverage } from "./data-leak-detection-metrics-mtt-detect-mtt-respond-coverage";
 import { dataLeakDetectionOnTelegramNewIntelligenceSources } from "./data-leak-detection-on-telegram-new-intelligence-sources";
-import { dataLeakDetectionPlatformComparison2025FeaturesAndPricing } from "./data-leak-detection-platform-comparison-2025-features-and-pricing";
 import { dataLeakDetectionPlaybookForSecurityOperationsCenters } from "./data-leak-detection-playbook-for-security-operations-centers";
 import { dataLeakDetectionQuestionsToAskEveryVendor } from "./data-leak-detection-questions-to-ask-every-vendor";
 import { dataLeakDetectionRoiQuantifyingPreventionVsBreachCost } from "./data-leak-detection-roi-quantifying-prevention-vs-breach-cost";
@@ -474,9 +463,7 @@ import { doesDarkWebMonitoringPreventAttacksOrJustDetectThem } from "./does-dark
 import { domainWideCredentialLeakDetectionEnterpriseImplementation } from "./domain-wide-credential-leak-detection-enterprise-implementation";
 import { doubleExtortionRansomwareMonitoringLeakSitesForYourData } from "./double-extortion-ransomware-monitoring-leak-sites-for-your-data";
 import { emailDataLeaksMonitoringForExposedCorporateCommunications } from "./email-data-leaks-monitoring-for-exposed-corporate-communications";
-import { employeeCredentialLeaksHowToDetectAndRespondIn2025 } from "./employee-credential-leaks-how-to-detect-and-respond-in-2025";
 import { enterpriseCredentialHygieneMonitoringEnforcementStrategies } from "./enterprise-credential-hygiene-monitoring-enforcement-strategies";
-import { enterpriseVsSmbDarkWebMonitoringFeatureComparison2025 } from "./enterprise-vs-smb-dark-web-monitoring-feature-comparison-2025";
 import { executiveCredentialExposureOnDarkWebCSuiteRiskGuide } from "./executive-credential-exposure-on-dark-web-c-suite-risk-guide";
 import { exposedServiceAccountCredentialsDetectionAndRemediation } from "./exposed-service-account-credentials-detection-and-remediation";
 import { fakeEmployeeLinkedinProfilesHowTheDarkWebFuelsSocialEngineering } from "./fake-employee-linkedin-profiles-how-the-dark-web-fuels-social-engineering";
@@ -498,7 +485,6 @@ import { hipaaSecurityRuleAndDarkWebMonitoringWhatHealthcareMustDo } from "./hip
 import { hospitalAndClinicDataOnTheDarkWebWhatGetsExposed } from "./hospital-and-clinic-data-on-the-dark-web-what-gets-exposed";
 import { hotelAndHospitalityIndustryDarkWebExposureAndGuestDataRisks } from "./hotel-and-hospitality-industry-dark-web-exposure-and-guest-data-risks";
 import { howAccurateIsDarkWebMonitoringFalsePositiveAnalysis } from "./how-accurate-is-dark-web-monitoring-false-positive-analysis";
-import { howAiIsTransformingDarkWebMonitoringIn2025 } from "./how-ai-is-transforming-dark-web-monitoring-in-2025";
 import { howChildrensSocialSecurityNumbersEndUpOnTheDarkWeb } from "./how-childrens-social-security-numbers-end-up-on-the-dark-web";
 import { howCredentialLeakDetectionSatisfiesInsuranceRequirements } from "./how-credential-leak-detection-satisfies-insurance-requirements";
 import { howCredentialLeaksAreMonetizedOnDarkWebMarketplaces } from "./how-credential-leaks-are-monetized-on-dark-web-marketplaces";
@@ -537,14 +523,12 @@ import { howLawFirmsBecomeDarkWebTargetsAndHowToRespond } from "./how-law-firms-
 import { howLongDoHackersSitInsideYourNetworkBeforeBeingDetected } from "./how-long-do-hackers-sit-inside-your-network-before-being-detected";
 import { howManyEmployeeCredentialsAreOnTheDarkWebRightNow } from "./how-many-employee-credentials-are-on-the-dark-web-right-now";
 import { howMfaBypassTechniquesExploitLeakedCredentials } from "./how-mfa-bypass-techniques-exploit-leaked-credentials";
-import { howMuchDoesADarkWebCredentialBreachActuallyCostIn2025 } from "./how-much-does-a-dark-web-credential-breach-actually-cost-in-2025";
 import { howNationStateActorsUseLeakedCredentialsInAptCampaigns } from "./how-nation-state-actors-use-leaked-credentials-in-apt-campaigns";
 import { howNationStateHackersLeakDataStrategically } from "./how-nation-state-hackers-leak-data-strategically";
 import { howOftenShouldYouReviewDarkWebMonitoringAlerts } from "./how-often-should-you-review-dark-web-monitoring-alerts";
 import { howPaymentProcessorsMonitorDarkWebForStolenCardData } from "./how-payment-processors-monitor-dark-web-for-stolen-card-data";
 import { howRansomwareGroupsRecruitOnDarkWebForums } from "./how-ransomware-groups-recruit-on-dark-web-forums";
 import { howRansomwareGroupsUseLeakSitesToPressureVictims } from "./how-ransomware-groups-use-leak-sites-to-pressure-victims";
-import { howRussianCybercrimeForumsHaveChangedIn2025 } from "./how-russian-cybercrime-forums-have-changed-in-2025";
 import { howScammersUseDarkWebDataToRunTargetedPhoneFraud } from "./how-scammers-use-dark-web-data-to-run-targeted-phone-fraud";
 import { howStolenDataDepreciatesInValueOnDarkWebMarkets } from "./how-stolen-data-depreciates-in-value-on-dark-web-markets";
 import { howTelegramBecameTheDarkWebMonitoringStrategyShift } from "./how-telegram-became-the-dark-web-monitoring-strategy-shift";
@@ -608,7 +592,6 @@ import { leakedCredentialsAndAccountTakeoverPreventionPlaybook } from "./leaked-
 import { leakedCredentialsAndGdprBreachNotificationRequirements } from "./leaked-credentials-and-gdpr-breach-notification-requirements";
 import { leakedCredentialsAndLateralMovementDetectionInActiveDirectory } from "./leaked-credentials-and-lateral-movement-detection-in-active-directory";
 import { leakedCredentialsAsInitialAccessMitreAttckCoverage } from "./leaked-credentials-as-initial-access-mitre-attck-coverage";
-import { leakedCredentialsFromMajor20242025BreachesStillInCirculation } from "./leaked-credentials-from-major-2024-2025-breaches-still-in-circulation";
 import { leakedCredentialsInRansomwareNegotiationsWhatMonitorsFind } from "./leaked-credentials-in-ransomware-negotiations-what-monitors-find";
 import { leakedCrmCredentialsSalesforceAndHubspotExposureCases } from "./leaked-crm-credentials-salesforce-and-hubspot-exposure-cases";
 import { leakedCrmDataSalesforceRecordsFoundOnDarkWeb } from "./leaked-crm-data-salesforce-records-found-on-dark-web";
@@ -632,7 +615,6 @@ import { monitoringForLeakedCredentialsOnPasteSites } from "./monitoring-for-lea
 import { monitoringPasteSitesAlongsideTheDarkWebExtendedCoverage } from "./monitoring-paste-sites-alongside-the-dark-web-extended-coverage";
 import { monitoringRansomwareLeakSitesASecurityTeamsGuide } from "./monitoring-ransomware-leak-sites-a-security-teams-guide";
 import { mortgageLenderDataBreachesDarkWebDetectionAndResponse } from "./mortgage-lender-data-breaches-dark-web-detection-and-response";
-import { mostActiveDarkWebMarketsIn2025WhatSecurityTeamsMonitor } from "./most-active-dark-web-markets-in-2025-what-security-teams-monitor";
 import { mySocialSecurityNumberIsOnTheDarkWebWhatDoIDoNow } from "./my-social-security-number-is-on-the-dark-web-what-do-i-do-now";
 import { naturalLanguageProcessingInDarkWebMonitoringTechnicalDeepDive } from "./natural-language-processing-in-dark-web-monitoring-technical-deep-dive";
 import { nftAndWeb3DarkWebThreatsWhatTheCryptoCommunityIgnores } from "./nft-and-web3-dark-web-threats-what-the-crypto-community-ignores";
@@ -658,7 +640,6 @@ import { realTimeVsBatchCredentialMonitoringWhichIsSafer } from "./real-time-vs-
 import { remoteAccessToolAbuseHowInsidersUseDarkWebTools } from "./remote-access-tool-abuse-how-insiders-use-dark-web-tools";
 import { retailCredentialTheftHowECommerceBusinessesGetCompromised } from "./retail-credential-theft-how-e-commerce-businesses-get-compromised";
 import { retailDataLeaksCreditCardDataDetectionOnDarkWebMarkets } from "./retail-data-leaks-credit-card-data-detection-on-dark-web-markets";
-import { riseOfInitialAccessBrokers2025DarkWebMonitoringIntelligence } from "./rise-of-initial-access-brokers-2025-dark-web-monitoring-intelligence";
 import { saasCompanyDataOnTheDarkWebWhatsAtRiskAndHowToMonitor } from "./saas-company-data-on-the-dark-web-whats-at-risk-and-how-to-monitor";
 import { secCybersecurityDisclosureRulesAndDarkWebIntelligence } from "./sec-cybersecurity-disclosure-rules-and-dark-web-intelligence";
 import { sensitiveDataCategoriesMostCommonlyLeakedOnDarkWeb } from "./sensitive-data-categories-most-commonly-leaked-on-dark-web";
@@ -674,7 +655,6 @@ import { theMostCommonCausesOfDataBreachesIn2025 } from "./the-most-common-cause
 import { theRansomwareEconomyIn2025HowCybercriminalsMakeBillions } from "./the-ransomware-economy-in-2025-how-cybercriminals-make-billions";
 import { theRoiOfDarkWebMonitoringWhatCisosNeedToTellTheBoard } from "./the-roi-of-dark-web-monitoring-what-cisos-need-to-tell-the-board";
 import { thirdPartyCredentialLeaksHowToMonitorVendorRisk } from "./third-party-credential-leaks-how-to-monitor-vendor-risk";
-import { trueCostOfNotHavingDarkWebMonitoring2025Data } from "./true-cost-of-not-having-dark-web-monitoring-2025-data";
 import { typosquattingDetectionFindingFakeVersionsOfYourDomain } from "./typosquatting-detection-finding-fake-versions-of-your-domain";
 import { uaeCybersecurityDarkWebMonitoringForGulfRegionBusinesses } from "./uae-cybersecurity-dark-web-monitoring-for-gulf-region-businesses";
 import { wealthManagementDarkWebRisksProtectingHighNetWorthClientData } from "./wealth-management-dark-web-risks-protecting-high-net-worth-client-data";
@@ -682,7 +662,6 @@ import { whatDataShouldYouMonitorOnTheDarkWeb } from "./what-data-should-you-mon
 import { whatHappensToStolenCredentialsAfterTheyreSoldOnTheDarkWeb } from "./what-happens-to-stolen-credentials-after-theyre-sold-on-the-dark-web";
 import { whatHappensWhenDarkWebMonitoringFindsYourData } from "./what-happens-when-dark-web-monitoring-finds-your-data";
 import { whatIsCredentialLeakDetectionAndWhyEveryBusinessNeedsIt } from "./what-is-credential-leak-detection-and-why-every-business-needs-it";
-import { whatIsDarkWebMonitoringAndHowDoesItActuallyWorkIn2025 } from "./what-is-dark-web-monitoring-and-how-does-it-actually-work-in-2025";
 import { whatIsDataLeakDetectionAndHowIsItDifferentFromDlp } from "./what-is-data-leak-detection-and-how-is-it-different-from-dlp";
 import { whatIsDoubleExtortionRansomwareAndHowDoesDarkWebMonitoringHelp } from "./what-is-double-extortion-ransomware-and-how-does-dark-web-monitoring-help";
 import { whatIsIdentityMonitoringAndHowDoesItWorkIn2025 } from "./what-is-identity-monitoring-and-how-does-it-work-in-2025";
@@ -981,16 +960,11 @@ export const allBlogs = [
   whyYourDigitalIdentityNeedsMonitoring,
   zeroDayVulnerabilityTradingOnTheDarkWebWhatSecurityTeamsMustKnow,
   tenBestDarkWebMonitoringApisForDevelopers,
-  twoThousandTwentyFiveStateOfDarkWebThreatsAnnualIntelligenceReport,
   fiveCaseStudiesWhereDarkWebMonitoringPreventedMajorBreaches,
   activeVsPassiveDarkWebMonitoringWhichDoesYourBusinessNeed,
   aiGeneratedMalwareOnTheDarkWebNewMonitoringChallenges,
   alphvBlackcatRansomwareDarkWebActivityAndBusinessRisks,
-  australianBusinessDarkWebThreatLandscape2025,
   automatedCredentialMonitoringVsManualAuditingCostComparison,
-  bestCredentialMonitoringToolsForEnterprisesIn2025,
-  bestDarkWebMonitoringServicesForEnterprisesIn2025,
-  bestDarkWebMonitoringToolsForSmallBusinessesIn2025,
   brandImpersonationOnTheDarkWebHowToDetectAndRespond,
   breachVsLeakUnderstandingTheCriticalDifferenceForSecurityTeams,
   buildingACredentialMonitoringProgramFromScratch,
@@ -1009,7 +983,6 @@ export const allBlogs = [
   continuousAuthenticationAndCredentialMonitoringSynergy,
   continuousCredentialMonitoringVsAnnualAuditEffectivenessGap,
   credentialExposureInMergersAndAcquisitionsDueDiligence,
-  credentialExposureRateByIndustry2025BenchmarkReport,
   credentialLeakDetectionAfterAThirdPartyBreach,
   credentialLeakDetectionForBoardLevelCyberRiskReporting,
   credentialLeakDetectionForCloudInfrastructureAwsAzureGcp,
@@ -1043,10 +1016,8 @@ export const allBlogs = [
   crowdstrikeFalconIntelligenceVsDarkthreatPositioningPricing,
   cryptocurrencyExchangeDarkWebThreatsMonitoringWalletAddressLeaks,
   cyberResilienceActDarkWebIntelligenceRequirementsForEuBusinesses,
-  darkWebActivityReportTopThreatsTargetingBusinessesIn2025,
   darkWebCredentialAuctionsWhatGetsSoldAndForHowMuch,
   darkWebCredentialLeaksAtBanks20242025CaseStudies,
-  darkWebCredentialMarketsPricingVolumeAndQualityIn2025,
   darkWebCredentialMarketsVolumePricingAndThreatTrends,
   darkWebDataFreshnessWhyRealTimeMattersMoreThanArchiveSize,
   darkWebDrugMarketShutdownImpactOnCybercriminalBehavior,
@@ -1103,7 +1074,6 @@ export const allBlogs = [
   darkWebThreatsForAccountingAndCpaFirmsFullRiskAssessment,
   darkWebThreatsTargetingLondonFinancialInstitutions,
   darkWebVsCreditMonitoringWhatMostPeopleGetWrong,
-  darkthreatVsDarkowlHeadToHeadComparison2025,
   darkthreatVsFlareDarkWebMonitoringShowdown,
   darkthreatVsRecordedFutureEnterpriseIntelligenceCompared,
   darkthreatVsResecurityIntelligencePlatformComparison,
@@ -1113,7 +1083,6 @@ export const allBlogs = [
   dataLeakDetectionAfterAThirdPartyVendorBreach,
   dataLeakDetectionAndCyberInsuranceWhatPoliciesRequire,
   dataLeakDetectionAutomationBuildingSelfHealingWorkflows,
-  dataLeakDetectionCoverageMapWhatPlatformsMonitorIn2025,
   dataLeakDetectionForApiResponsesAndGraphqlEndpoints,
   dataLeakDetectionForAutomotiveAndConnectedVehicleData,
   dataLeakDetectionForCallCenterRecordingsAndTranscripts,
@@ -1142,7 +1111,6 @@ export const allBlogs = [
   dataLeakDetectionIntegrationWithDataGovernancePrograms,
   dataLeakDetectionMetricsMttDetectMttRespondCoverage,
   dataLeakDetectionOnTelegramNewIntelligenceSources,
-  dataLeakDetectionPlatformComparison2025FeaturesAndPricing,
   dataLeakDetectionPlaybookForSecurityOperationsCenters,
   dataLeakDetectionQuestionsToAskEveryVendor,
   dataLeakDetectionRoiQuantifyingPreventionVsBreachCost,
@@ -1171,9 +1139,7 @@ export const allBlogs = [
   domainWideCredentialLeakDetectionEnterpriseImplementation,
   doubleExtortionRansomwareMonitoringLeakSitesForYourData,
   emailDataLeaksMonitoringForExposedCorporateCommunications,
-  employeeCredentialLeaksHowToDetectAndRespondIn2025,
   enterpriseCredentialHygieneMonitoringEnforcementStrategies,
-  enterpriseVsSmbDarkWebMonitoringFeatureComparison2025,
   executiveCredentialExposureOnDarkWebCSuiteRiskGuide,
   exposedServiceAccountCredentialsDetectionAndRemediation,
   fakeEmployeeLinkedinProfilesHowTheDarkWebFuelsSocialEngineering,
@@ -1195,7 +1161,6 @@ export const allBlogs = [
   hospitalAndClinicDataOnTheDarkWebWhatGetsExposed,
   hotelAndHospitalityIndustryDarkWebExposureAndGuestDataRisks,
   howAccurateIsDarkWebMonitoringFalsePositiveAnalysis,
-  howAiIsTransformingDarkWebMonitoringIn2025,
   howChildrensSocialSecurityNumbersEndUpOnTheDarkWeb,
   howCredentialLeakDetectionSatisfiesInsuranceRequirements,
   howCredentialLeaksAreMonetizedOnDarkWebMarketplaces,
@@ -1234,14 +1199,12 @@ export const allBlogs = [
   howLongDoHackersSitInsideYourNetworkBeforeBeingDetected,
   howManyEmployeeCredentialsAreOnTheDarkWebRightNow,
   howMfaBypassTechniquesExploitLeakedCredentials,
-  howMuchDoesADarkWebCredentialBreachActuallyCostIn2025,
   howNationStateActorsUseLeakedCredentialsInAptCampaigns,
   howNationStateHackersLeakDataStrategically,
   howOftenShouldYouReviewDarkWebMonitoringAlerts,
   howPaymentProcessorsMonitorDarkWebForStolenCardData,
   howRansomwareGroupsRecruitOnDarkWebForums,
   howRansomwareGroupsUseLeakSitesToPressureVictims,
-  howRussianCybercrimeForumsHaveChangedIn2025,
   howScammersUseDarkWebDataToRunTargetedPhoneFraud,
   howStolenDataDepreciatesInValueOnDarkWebMarkets,
   howTelegramBecameTheDarkWebMonitoringStrategyShift,
@@ -1305,7 +1268,6 @@ export const allBlogs = [
   leakedCredentialsAndGdprBreachNotificationRequirements,
   leakedCredentialsAndLateralMovementDetectionInActiveDirectory,
   leakedCredentialsAsInitialAccessMitreAttckCoverage,
-  leakedCredentialsFromMajor20242025BreachesStillInCirculation,
   leakedCredentialsInRansomwareNegotiationsWhatMonitorsFind,
   leakedCrmCredentialsSalesforceAndHubspotExposureCases,
   leakedCrmDataSalesforceRecordsFoundOnDarkWeb,
@@ -1329,7 +1291,6 @@ export const allBlogs = [
   monitoringPasteSitesAlongsideTheDarkWebExtendedCoverage,
   monitoringRansomwareLeakSitesASecurityTeamsGuide,
   mortgageLenderDataBreachesDarkWebDetectionAndResponse,
-  mostActiveDarkWebMarketsIn2025WhatSecurityTeamsMonitor,
   mySocialSecurityNumberIsOnTheDarkWebWhatDoIDoNow,
   naturalLanguageProcessingInDarkWebMonitoringTechnicalDeepDive,
   nftAndWeb3DarkWebThreatsWhatTheCryptoCommunityIgnores,
@@ -1355,7 +1316,6 @@ export const allBlogs = [
   remoteAccessToolAbuseHowInsidersUseDarkWebTools,
   retailCredentialTheftHowECommerceBusinessesGetCompromised,
   retailDataLeaksCreditCardDataDetectionOnDarkWebMarkets,
-  riseOfInitialAccessBrokers2025DarkWebMonitoringIntelligence,
   saasCompanyDataOnTheDarkWebWhatsAtRiskAndHowToMonitor,
   secCybersecurityDisclosureRulesAndDarkWebIntelligence,
   sensitiveDataCategoriesMostCommonlyLeakedOnDarkWeb,
@@ -1371,7 +1331,6 @@ export const allBlogs = [
   theRansomwareEconomyIn2025HowCybercriminalsMakeBillions,
   theRoiOfDarkWebMonitoringWhatCisosNeedToTellTheBoard,
   thirdPartyCredentialLeaksHowToMonitorVendorRisk,
-  trueCostOfNotHavingDarkWebMonitoring2025Data,
   typosquattingDetectionFindingFakeVersionsOfYourDomain,
   uaeCybersecurityDarkWebMonitoringForGulfRegionBusinesses,
   wealthManagementDarkWebRisksProtectingHighNetWorthClientData,
@@ -1379,7 +1338,6 @@ export const allBlogs = [
   whatHappensToStolenCredentialsAfterTheyreSoldOnTheDarkWeb,
   whatHappensWhenDarkWebMonitoringFindsYourData,
   whatIsCredentialLeakDetectionAndWhyEveryBusinessNeedsIt,
-  whatIsDarkWebMonitoringAndHowDoesItActuallyWorkIn2025,
   whatIsDataLeakDetectionAndHowIsItDifferentFromDlp,
   whatIsDoubleExtortionRansomwareAndHowDoesDarkWebMonitoringHelp,
   whatIsIdentityMonitoringAndHowDoesItWorkIn2025,
