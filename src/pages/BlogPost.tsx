@@ -16,8 +16,10 @@ import {
 } from "lucide-react";
 import BlogCard from "@/components/blog/BlogCard";
 import Breadcrumb from "@/components/Breadcrumb";
+import AppHeader from "@/components/AppHeader";
 import { allBlogs } from "@/blogs";
 import "./blog.css";
+
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
