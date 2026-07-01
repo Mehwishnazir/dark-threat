@@ -111,16 +111,11 @@ const Blog = () => {
       </Helmet>
 
       {/* HEADER */}
-      <header className="blog-listing-header">
-        <div className="blog-listing-header__inner">
-          <Link to="/" className="blog-listing-header__logo">
-            DARK<span>THREAT</span>
-          </Link>
-        </div>
-      </header>
+      <AppHeader />
 
       {/* HERO SECTION */}
-      <section className="blog-listing-hero">
+      <section className="blog-listing-hero pt-24">
+
         <AnimatedBackground />
         <div className="blog-listing-hero__sphere">
           <Suspense fallback={<div className="blog-listing-hero__sphere-fallback" />}>
