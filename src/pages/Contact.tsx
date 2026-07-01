@@ -106,7 +106,7 @@ const Contact = () => {
       'contactPoint': [
         {
           '@type': 'ContactPoint',
-          'telephone': '+1-888-555-3275',
+          'telephone': '+1 (416) 576-8744',
           'contactType': 'customer support',
           'email': 'info@darkthreat.ai',
           'availableLanguage': 'English'
@@ -357,7 +357,7 @@ const Contact = () => {
                     <div>
                       <h3 className="font-montserrat font-bold text-foreground mb-1">Enterprise Threat Advisory</h3>
                       <p className="text-muted-foreground text-sm">Call us directly to set up custom domains or MSSP licensing</p>
-                      <p className="text-primary font-semibold mt-2 text-sm">+1 (888) 555-DARK</p>
+                      <p className="text-primary font-semibold mt-2 text-sm">+1 (416) 576-8744-DARK</p>
                     </div>
                   </div>
                 </CardContent>
@@ -404,10 +404,10 @@ const Contact = () => {
               </p>
               <div className="flex flex-wrap gap-4 items-center">
                 <a
-                  href="tel:+18885553275"
+                  href="tel:+1(416)5768744"
                   className="inline-flex items-center justify-center rounded-xl bg-amber-500 hover:bg-amber-600 px-6 py-3 text-sm font-bold text-black transition-colors"
                 >
-                  Call Incident Dispatch: +1 (888) 555-DARK
+                  Call Incident Dispatch:+1 (416) 576-8744-DARK
                 </a>
                 <span className="text-sm text-muted-foreground">or email secure hotline: <a href="mailto:info@darkthreat.ai" className="text-primary hover:underline font-semibold">info@darkthreat.ai</a></span>
               </div>
