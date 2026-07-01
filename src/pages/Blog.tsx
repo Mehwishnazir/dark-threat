@@ -6,6 +6,7 @@ import BlogCard, { type BlogPost } from '@/components/blog/BlogCard';
 import Breadcrumb from '@/components/Breadcrumb';
 import AnimatedBackground from '@/components/AnimatedBackground';
 import ThreatSphere from '@/components/ThreatSphere';
+import AppHeader from '@/components/AppHeader';
 import {
   Select,
   SelectContent,
@@ -15,6 +16,9 @@ import {
 } from '@/components/ui/select';
 import { allBlogs } from '@/blogs';
 import './blog.css';
+
+const FALLBACK_IMAGE = '/dark-threat-1.webp';
+
 
 const categories = [
   'All Blogs',
