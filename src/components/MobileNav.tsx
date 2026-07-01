@@ -181,7 +181,7 @@ export default function MobileNav() {
           <div className="px-3">
             <NavSection label="Solutions" links={solutionLinks} onClose={close} />
             <NavSection label="Industries" links={industryLinks} onClose={close} />
-            <NavSection label="Locations" links={locationLinks} onClose={close} />
+
           </div>
 
           <div className="h-6" />
