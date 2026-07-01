@@ -108,21 +108,7 @@ const Contact = () => {
           '@type': 'ContactPoint',
           'telephone': '+1-888-555-3275',
           'contactType': 'customer support',
-          'email': 'support@darkthreat.ai',
-          'availableLanguage': 'English'
-        },
-        {
-          '@type': 'ContactPoint',
-          'telephone': '+1-888-555-3275',
-          'contactType': 'sales',
-          'email': 'sales@darkthreat.ai',
-          'availableLanguage': 'English'
-        },
-        {
-          '@type': 'ContactPoint',
-          'telephone': '+1-888-555-3275',
-          'contactType': 'emergency',
-          'email': 'soc@darkthreat.ai',
+          'email': 'info@darkthreat.ai',
           'availableLanguage': 'English'
         }
       ]
@@ -356,7 +342,7 @@ const Contact = () => {
                     <div>
                       <h3 className="font-montserrat font-bold text-foreground mb-1">General Operations</h3>
                       <p className="text-muted-foreground text-sm">For partnerships, career inquiries, or general support</p>
-                      <p className="text-primary font-semibold mt-2 text-sm">contact@darkthreat.io</p>
+                      <p className="text-primary font-semibold mt-2 text-sm">info@darkthreat.ai</p>
                     </div>
                   </div>
                 </CardContent>
@@ -398,117 +384,6 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* SECTION 3: Global Presence */}
-      <section className="py-24 px-6 relative overflow-hidden bg-background">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <span className="inline-flex rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-primary mb-4">
-              Regional Hubs
-            </span>
-            <h2 className="text-3xl md:text-4xl font-montserrat font-bold text-foreground mb-4">
-              Our Global Security Offices
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Decentralized analyst presence across key cybersecurity centers worldwide.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="rounded-2xl border border-border bg-card p-6 flex flex-col justify-between hover:border-primary/50 transition-colors">
-              <div>
-                <Building className="w-8 h-8 text-primary mb-4" />
-                <h3 className="text-lg font-montserrat font-bold text-foreground mb-2">Singapore (APAC)</h3>
-                <p className="text-xs text-muted-foreground leading-relaxed">
-                  DarkThreat Research Pte Ltd.<br />
-                  Marina Bay Financial Centre<br />
-                  Singapore 018981
-                </p>
-              </div>
-              <span className="text-[10px] uppercase font-bold tracking-widest text-primary mt-4">Security Operations Center (SOC)</span>
-            </div>
-
-            <div className="rounded-2xl border border-border bg-card p-6 flex flex-col justify-between hover:border-primary/50 transition-colors">
-              <div>
-                <Building className="w-8 h-8 text-primary mb-4" />
-                <h3 className="text-lg font-montserrat font-bold text-foreground mb-2">London (EMEA)</h3>
-                <p className="text-xs text-muted-foreground leading-relaxed">
-                  DarkThreat UK Ltd.<br />
-                  30 St Mary Axe (The Gherkin)<br />
-                  London EC3A 8BF
-                </p>
-              </div>
-              <span className="text-[10px] uppercase font-bold tracking-widest text-primary mt-4">Corporate Office &amp; Compliance</span>
-            </div>
-
-            <div className="rounded-2xl border border-border bg-card p-6 flex flex-col justify-between hover:border-primary/50 transition-colors">
-              <div>
-                <Building className="w-8 h-8 text-primary mb-4" />
-                <h3 className="text-lg font-montserrat font-bold text-foreground mb-2">Bengaluru (India)</h3>
-                <p className="text-xs text-muted-foreground leading-relaxed">
-                  DarkThreat Security Pvt Ltd.<br />
-                  Outer Ring Rd, Bellandur<br />
-                  Bengaluru, KA 560103
-                </p>
-              </div>
-              <span className="text-[10px] uppercase font-bold tracking-widest text-primary mt-4">AI Engineering &amp; Dev Hub</span>
-            </div>
-
-            <div className="rounded-2xl border border-border bg-card p-6 flex flex-col justify-between hover:border-primary/50 transition-colors">
-              <div>
-                <Building className="w-8 h-8 text-primary mb-4" />
-                <h3 className="text-lg font-montserrat font-bold text-foreground mb-2">Delaware (Americas)</h3>
-                <p className="text-xs text-muted-foreground leading-relaxed">
-                  DarkThreat Inc.<br />
-                  1209 North Orange St.<br />
-                  Wilmington, DE 19801
-                </p>
-              </div>
-              <span className="text-[10px] uppercase font-bold tracking-widest text-primary mt-4">US Headquarters</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 4: Department Direct Lines */}
-      <section className="py-24 px-6 bg-gradient-to-b from-background to-threat-dark">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <span className="inline-flex rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-primary mb-4">
-              Inquiry Routing
-            </span>
-            <h2 className="text-3xl md:text-4xl font-montserrat font-bold text-foreground mb-4">
-              Direct Threat Channels
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Get in touch with the specific team handling your cybersecurity needs.
-            </p>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            <div className="rounded-2xl border border-border bg-background p-6 hover:border-primary/30 transition-colors">
-              <h3 className="font-montserrat font-bold text-foreground mb-2">Enterprise Sales</h3>
-              <p className="text-xs text-muted-foreground mb-4">Request custom dark web monitoring pricing, MSSP integrations, or proof-of-concept setup.</p>
-              <a href="mailto:sales@darkthreat.ai" className="text-sm font-semibold text-primary hover:underline">sales@darkthreat.ai</a>
-            </div>
-            <div className="rounded-2xl border border-border bg-background p-6 hover:border-primary/30 transition-colors">
-              <h3 className="font-montserrat font-bold text-foreground mb-2">Media &amp; Threat Reports</h3>
-              <p className="text-xs text-muted-foreground mb-4">Connect with our external attack surface monitoring researchers for press quotes or data insights.</p>
-              <a href="mailto:press@darkthreat.ai" className="text-sm font-semibold text-primary hover:underline">press@darkthreat.ai</a>
-            </div>
-            <div className="rounded-2xl border border-border bg-background p-6 hover:border-primary/30 transition-colors">
-              <h3 className="font-montserrat font-bold text-foreground mb-2">Careers &amp; Threat Hunting</h3>
-              <p className="text-xs text-muted-foreground mb-4">Interested in threat actor profiling, NLP engineering, or 24/7 security analyst roles?</p>
-              <a href="mailto:careers@darkthreat.ai" className="text-sm font-semibold text-primary hover:underline">careers@darkthreat.ai</a>
-            </div>
-            <div className="rounded-2xl border border-border bg-background p-6 hover:border-primary/30 transition-colors">
-              <h3 className="font-montserrat font-bold text-foreground mb-2">Vulnerability Program</h3>
-              <p className="text-xs text-muted-foreground mb-4">Report potential security issues discovered in our crawlers or threat intelligence platform.</p>
-              <a href="mailto:security@darkthreat.ai" className="text-sm font-semibold text-primary hover:underline">security@darkthreat.ai</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* SECTION 5: SOC Emergency Dispatch */}
       <section className="py-12 px-6">
         <div className="max-w-6xl mx-auto">
@@ -534,7 +409,7 @@ const Contact = () => {
                 >
                   Call Incident Dispatch: +1 (888) 555-DARK
                 </a>
-                <span className="text-sm text-muted-foreground">or email secure hotline: <a href="mailto:soc@darkthreat.ai" className="text-primary hover:underline font-semibold">soc@darkthreat.ai</a></span>
+                <span className="text-sm text-muted-foreground">or email secure hotline: <a href="mailto:info@darkthreat.ai" className="text-primary hover:underline font-semibold">info@darkthreat.ai</a></span>
               </div>
             </div>
           </div>
