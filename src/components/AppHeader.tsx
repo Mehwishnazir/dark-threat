@@ -86,8 +86,6 @@ export default function AppHeader() {
                   <DropdownMenu links={industryLinks} />
                 </NavigationMenuItem>
 
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger className={triggerClass}>Locations</NavigationMenuTrigger>
                   <DropdownMenu links={locationLinks} />
                 </NavigationMenuItem>
 
