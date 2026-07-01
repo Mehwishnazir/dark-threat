@@ -10,7 +10,7 @@ export const dataLeakDetectionAfterAThirdPartyVendorBreach: BlogPostType & {
   slug: "data-leak-detection-after-a-third-party-vendor-breach",
   title: "Data Leak Detection After a Third-Party Vendor Breach",
   excerpt: "Learn how data leak detection for third-party vendor breaches identifies exposed organizational data on ransomware leak sites dark web marketplaces and Telegram channels",
-  featuredImage: "/images/blog/data-leak-detection-after-a-third-party-vendor-breach.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "14 min read",

@@ -10,7 +10,7 @@ export const dataLeakDetectionForGovernmentGrantAndContractData: BlogPostType & 
   slug: "data-leak-detection-for-government-grant-and-contract-data",
   title: "Data Leak Detection for Government Grant and Contract Data",
   excerpt: "Learn how data leak detection protects government grant and contract data from ransomware leak sites dark web forums and misconfigured cloud storage exposures with CISO-level guidance",
-  featuredImage: "/images/blog/data-leak-detection-for-government-grant-and-contract-data.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "14 min read",

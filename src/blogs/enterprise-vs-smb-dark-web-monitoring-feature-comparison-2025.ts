@@ -10,7 +10,7 @@ export const enterpriseVsSmbDarkWebMonitoringFeatureComparison2025: BlogPostType
   slug: "enterprise-vs-smb-dark-web-monitoring-feature-comparison-2025",
   title: "Enterprise vs SMB Dark Web Monitoring: Feature Comparison 2025",
   excerpt: "Compare enterprise vs SMB dark web monitoring solutions in 2025 covering coverage depth detection speed integrations and operational capacity for CISOs and IT teams",
-  featuredImage: "/images/blog/enterprise-vs-smb-dark-web-monitoring-feature-comparison-2025.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "14 min read",

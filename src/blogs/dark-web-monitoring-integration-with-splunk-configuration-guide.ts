@@ -10,7 +10,7 @@ export const darkWebMonitoringIntegrationWithSplunkConfigurationGuide: BlogPostT
   slug: "dark-web-monitoring-integration-with-splunk-configuration-guide",
   title: "Dark Web Monitoring Integration with Splunk: Configuration Guide",
   excerpt: "Configure dark web monitoring integration with Splunk using this step-by-step guide covering API syslog and webhook ingestion methods for automated threat detection",
-  featuredImage: "/images/blog/dark-web-monitoring-integration-with-splunk-configuration-guide.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "14 min read",

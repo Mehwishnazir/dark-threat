@@ -10,7 +10,7 @@ export const dataLeakDetectionForEducationalResearchInstitutions: BlogPostType &
   slug: "data-leak-detection-for-educational-research-institutions",
   title: "Data Leak Detection for Educational Research Institutions",
   excerpt: "Educational research institutions need dedicated data leak detection to monitor dark web marketplaces ransomware leak sites and paste sites for exposed PII PHI and research data before regulatory penalties",
-  featuredImage: "/images/blog/data-leak-detection-for-educational-research-institutions.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "14 min read",

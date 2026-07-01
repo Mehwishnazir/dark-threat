@@ -10,7 +10,7 @@ export const leakedCrmCredentialsSalesforceAndHubspotExposureCases: BlogPostType
   slug: "leaked-crm-credentials-salesforce-and-hubspot-exposure-cases",
   title: "Leaked CRM Credentials: Salesforce and HubSpot Exposure Cases",
   excerpt: "Discover how leaked Salesforce and HubSpot credentials are stolen by infostealer malware sold on dark web markets and weaponized in account takeover attacks with real cases and credential leak detection strategies",
-  featuredImage: "/images/blog/leaked-crm-credentials-salesforce-and-hubspot-exposure-cases.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "15 min read",

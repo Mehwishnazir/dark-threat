@@ -10,7 +10,7 @@ export const buildingEmployeeAwarenessProgramsAroundCredentialSecurity: BlogPost
   slug: "building-employee-awareness-programs-around-credential-security",
   title: "Building Employee Awareness Programs Around Credential Security",
   excerpt: "Learn how to build effective employee awareness programs around credential security using dark web intelligence real-world examples and practical steps to reduce credential exposure risk",
-  featuredImage: "/images/blog/building-employee-awareness-programs-around-credential-security.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "15 min read",

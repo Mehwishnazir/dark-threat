@@ -10,7 +10,7 @@ export const mostActiveDarkWebMarketsIn2025WhatSecurityTeamsMonitor: BlogPostTyp
   slug: "most-active-dark-web-markets-in-2025-what-security-teams-monitor",
   title: "Most Active Dark Web Markets in 2025: What Security Teams Monitor",
   excerpt: "Discover the most active dark web markets in 2025 including Russian Market, XSS.is, ransomware leak sites, and Telegram channels and learn how security teams monitor these sources for credential exposure and initial access broker activity",
-  featuredImage: "/images/blog/most-active-dark-web-markets-in-2025-what-security-teams-monitor.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "14 min read",

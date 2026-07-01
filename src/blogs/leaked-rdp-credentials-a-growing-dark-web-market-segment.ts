@@ -10,7 +10,7 @@ export const leakedRdpCredentialsAGrowingDarkWebMarketSegment: BlogPostType & {
   slug: "leaked-rdp-credentials-a-growing-dark-web-market-segment",
   title: "Leaked RDP Credentials: A Growing Dark Web Market Segment",
   excerpt: "Leaked RDP credentials are a growing dark web market segment. Learn how credential leak detection spots RDP access listings, stealer logs, and combo lists before attackers use them.",
-  featuredImage: "/images/blog/leaked-rdp-credentials-a-growing-dark-web-market-segment.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "12 min read",

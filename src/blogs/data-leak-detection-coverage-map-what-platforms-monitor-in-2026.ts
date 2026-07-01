@@ -10,7 +10,7 @@ export const dataLeakDetectionCoverageMapWhatPlatformsMonitorInTwentyTwentySix: 
   slug: "data-leak-detection-coverage-map-what-platforms-monitor-in-2026",
   title: "Data Leak Detection Coverage Map: What Platforms Monitor in 2026",
   excerpt: "Explore the 2026 data leak detection coverage map covering dark web forums ransomware leak sites Telegram paste sites and cloud storage vectors to close exposure gaps and reduce breach costs",
-  featuredImage: "/images/blog/data-leak-detection-coverage-map-what-platforms-monitor-in-2026.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "July 1, 2026",
   readingTime: "13 min read",

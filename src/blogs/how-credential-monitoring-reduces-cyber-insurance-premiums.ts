@@ -10,7 +10,7 @@ export const howCredentialMonitoringReducesCyberInsurancePremiums: BlogPostType 
   slug: "how-credential-monitoring-reduces-cyber-insurance-premiums",
   title: "How Credential Monitoring Reduces Cyber Insurance Premiums",
   excerpt: "Learn how continuous credential monitoring reduces cyber insurance premiums by 15-30 percent. Discover underwriter requirements, ROI calculations, and how to build the business case for premium savings.",
-  featuredImage: "/images/blog/how-credential-monitoring-reduces-cyber-insurance-premiums.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "12 min read",

@@ -10,7 +10,7 @@ export const darkWebForumsThatSellCorporateCredentialsMonitoringGuide: BlogPostT
   slug: "dark-web-forums-that-sell-corporate-credentials-monitoring-guide",
   title: "Dark Web Forums That Sell Corporate Credentials: Monitoring Guide",
   excerpt: "Guide to dark web forums selling corporate credentials including Exploit in XSS is RAMP Russian Market 2easy and Telegram channels Learn credential leak detection signals and monitoring strategies for 2025",
-  featuredImage: "/images/blog/dark-web-forums-that-sell-corporate-credentials-monitoring-guide.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "12 min read",

@@ -10,7 +10,7 @@ export const howDarkWebMonitoringDetectsThreatsBeforeHackersStrike: BlogPostType
   slug: "how-dark-web-monitoring-detects-threats-before-hackers-strike",
   title: "How Dark Web Monitoring Detects Threats Before Hackers Strike",
   excerpt: "Learn how dark web monitoring detects threats before hackers strike by tracking stealer logs IAB listings and ransomware leak sites in real time for pre breach detection",
-  featuredImage: "/images/blog/how-dark-web-monitoring-detects-threats-before-hackers-strike.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "15 min read",

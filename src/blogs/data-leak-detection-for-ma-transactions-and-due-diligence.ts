@@ -10,7 +10,7 @@ export const dataLeakDetectionForMaTransactionsAndDueDiligence: BlogPostType & {
   slug: "data-leak-detection-for-ma-transactions-and-due-diligence",
   title: "Data Leak Detection for M&A Transactions and Due Diligence",
   excerpt: "Learn how data leak detection during M&A due diligence uncovers ransomware leak site posts credential dumps and dark web exposure before signing to mitigate regulatory and financial risk",
-  featuredImage: "/images/blog/data-leak-detection-for-ma-transactions-and-due-diligence.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "14 min read",

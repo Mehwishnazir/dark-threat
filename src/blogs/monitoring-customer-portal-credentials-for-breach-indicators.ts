@@ -10,7 +10,7 @@ export const monitoringCustomerPortalCredentialsForBreachIndicators: BlogPostTyp
   slug: "monitoring-customer-portal-credentials-for-breach-indicators",
   title: "Monitoring Customer Portal Credentials for Breach Indicators",
   excerpt: "Learn how to implement monitoring customer portal credentials for breach indicators with this step-by-step guide to detect leaked credentials, automate response, and prevent customer data breaches.",
-  featuredImage: "/images/blog/monitoring-customer-portal-credentials-for-breach-indicators.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "16 min read",

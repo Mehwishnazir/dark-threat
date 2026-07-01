@@ -10,7 +10,7 @@ export const monitoringRansomwareLeakSitesASecurityTeamsGuide: BlogPostType & {
   slug: "monitoring-ransomware-leak-sites-a-security-teams-guide",
   title: "Monitoring Ransomware Leak Sites: A Security Team's Guide",
   excerpt: "Learn how to monitor ransomware leak sites effectively. This security team guide covers leak site tactics, monitoring workflow, and how data leak detection catches exposures before full publication.",
-  featuredImage: "/images/blog/monitoring-ransomware-leak-sites-a-security-teams-guide.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "13 min read",

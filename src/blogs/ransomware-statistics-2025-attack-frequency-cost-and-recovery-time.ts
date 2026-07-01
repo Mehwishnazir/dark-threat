@@ -10,7 +10,7 @@ export const ransomwareStatistics2025AttackFrequencyCostAndRecoveryTime: BlogPos
   slug: "ransomware-statistics-2025-attack-frequency-cost-and-recovery-time",
   title: "Ransomware Statistics 2025 — Attack Frequency, Cost, and Recovery Time",
   excerpt: "Comprehensive ransomware statistics for 2025 covering attack frequency data breach costs recovery time initial access vectors and industry-specific impact from IBM Verizon DBIR Chainalysis and MITRE ATT&CK sources",
-  featuredImage: "/images/blog/ransomware-statistics-2025-attack-frequency-cost-and-recovery-time.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 3, 2026",
   readingTime: "17 min read",

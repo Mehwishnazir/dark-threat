@@ -10,7 +10,7 @@ export const ccpaAndDarkWebMonitoringCaliforniaBusinessesMustKnowThis: BlogPostT
   slug: "ccpa-and-dark-web-monitoring-california-businesses-must-know-this",
   title: "CCPA and Dark Web Monitoring — California Businesses Must Know This",
   excerpt: "Learn how CCPA dark web monitoring California businesses must implement to meet breach notification obligations under the California Consumer Privacy Act and reduce regulatory risk.",
-  featuredImage: "/images/blog/ccpa-and-dark-web-monitoring-california-businesses-must-know-this.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 4, 2026",
   readingTime: "16 min read",

@@ -10,7 +10,7 @@ export const theDifferenceBetweenDarkWebMonitoringAndDarkWebScanning: BlogPostTy
   slug: "the-difference-between-dark-web-monitoring-and-dark-web-scanning",
   title: "The Difference Between Dark Web Monitoring and Dark Web Scanning",
   excerpt: "Understand the critical difference between dark web monitoring and dark web scanning coverage depth data freshness alert quality and compliance impact for your security team",
-  featuredImage: "/images/blog/the-difference-between-dark-web-monitoring-and-dark-web-scanning.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "10 min read",

@@ -10,7 +10,7 @@ export const howToRunADataLeakRiskAssessmentForYourOrganization: BlogPostType & 
   slug: "how-to-run-a-data-leak-risk-assessment-for-your-organization",
   title: "How to Run a Data Leak Risk Assessment for Your Organization",
   excerpt: "Step-by-step guide to running a data leak risk assessment for your organization: map exfiltration paths, test detective controls, and integrate dark web threat intelligence.",
-  featuredImage: "/images/blog/how-to-run-a-data-leak-risk-assessment-for-your-organization.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "13 min read",

@@ -10,7 +10,7 @@ export const darkWebMonitoringForGovernmentContractorsInWashingtonDc: BlogPostTy
   slug: "dark-web-monitoring-for-government-contractors-in-washington-dc",
   title: "Dark Web Monitoring for Government Contractors in Washington DC",
   excerpt: "Dark web monitoring for government contractors in Washington DC a guide to stealer logs ransomware leak sites and IAB threats mapped to CMMC and DFARS compliance",
-  featuredImage: "/images/blog/dark-web-monitoring-for-government-contractors-in-washington-dc.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 20, 2026",
   readingTime: "13 min read",

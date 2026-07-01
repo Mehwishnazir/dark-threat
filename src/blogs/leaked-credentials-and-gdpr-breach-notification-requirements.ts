@@ -10,7 +10,7 @@ export const leakedCredentialsAndGdprBreachNotificationRequirements: BlogPostTyp
   slug: "leaked-credentials-and-gdpr-breach-notification-requirements",
   title: "Leaked Credentials and GDPR Breach Notification Requirements",
   excerpt: "Learn how credential leak detection is essential for meeting GDPR 72-hour breach notification requirements when leaked credentials appear on the dark web including risk assessment and compliance steps",
-  featuredImage: "/images/blog/leaked-credentials-and-gdpr-breach-notification-requirements.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "15 min read",

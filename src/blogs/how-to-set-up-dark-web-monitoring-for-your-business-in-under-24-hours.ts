@@ -10,7 +10,7 @@ export const howToSetUpDarkWebMonitoringForYourBusinessInUnder24Hours: BlogPostT
   slug: "how-to-set-up-dark-web-monitoring-for-your-business-in-under-24-hours",
   title: "How to Set Up Dark Web Monitoring for Your Business in Under 24 Hours",
   excerpt: "Learn how to set up dark web monitoring for your business in under 24 hours with a step-by-step guide covering platform selection configuration alert response playbooks and threat detection best practices",
-  featuredImage: "/images/blog/how-to-set-up-dark-web-monitoring-for-your-business-in-under-24-hours.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "13 min read",

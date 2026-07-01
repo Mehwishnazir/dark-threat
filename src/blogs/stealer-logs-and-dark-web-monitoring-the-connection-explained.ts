@@ -10,7 +10,7 @@ export const stealerLogsAndDarkWebMonitoringTheConnectionExplained: BlogPostType
   slug: "stealer-logs-and-dark-web-monitoring-the-connection-explained",
   title: "Stealer Logs and Dark Web Monitoring: The Connection Explained",
   excerpt: "Learn how stealer logs are harvested by infostealers traded on dark web markets and how dark web monitoring detects credential exposure before attackers weaponise stolen logins to breach corporate networks",
-  featuredImage: "/images/blog/stealer-logs-and-dark-web-monitoring-the-connection-explained.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "14 min read",

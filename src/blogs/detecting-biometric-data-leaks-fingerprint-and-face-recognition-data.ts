@@ -10,7 +10,7 @@ export const detectingBiometricDataLeaksFingerprintAndFaceRecognitionData: BlogP
   slug: "detecting-biometric-data-leaks-fingerprint-and-face-recognition-data",
   title: "Detecting Biometric Data Leaks: Fingerprint and Face Recognition Data",
   excerpt: "Detecting biometric data leaks fingerprint and face recognition data on deep and dark web Understand exposure vectors threat actor demand and data leak detection strategies",
-  featuredImage: "/images/blog/detecting-biometric-data-leaks-fingerprint-and-face-recognition-data.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "11 min read",

@@ -10,7 +10,7 @@ export const bestDarkWebMonitoringToolsForSmallBusinessesIn2025: BlogPostType & 
   slug: "best-dark-web-monitoring-tools-for-small-businesses-in-2025",
   title: "Best Dark Web Monitoring Tools for Small Businesses in 2025",
   excerpt: "Best dark web monitoring tools for small businesses in 2025 compare DarkThreat.AI SpyCloud Zscaler Recorded Future Digital Shadows across coverage pricing and compliance support to prevent credential exposure and ransomware",
-  featuredImage: "/images/blog/best-dark-web-monitoring-tools-for-small-businesses-in-2025.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "13 min read",

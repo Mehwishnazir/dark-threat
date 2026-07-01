@@ -10,7 +10,7 @@ export const leakedInternalPoliciesAndProceduresCorporateEspionageRisk: BlogPost
   slug: "leaked-internal-policies-and-procedures-corporate-espionage-risk",
   title: "Leaked Internal Policies and Procedures: Corporate Espionage Risk",
   excerpt: "Learn how leaked internal policies and procedures create corporate espionage risk and discover data leak detection strategies to identify exposure before competitors exploit it",
-  featuredImage: "/images/blog/leaked-internal-policies-and-procedures-corporate-espionage-risk.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "13 min read",

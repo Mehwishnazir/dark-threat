@@ -10,7 +10,7 @@ export const howToPresentDarkWebMonitoringFindingsToNonTechnicalExecutives: Blog
   slug: "how-to-present-dark-web-monitoring-findings-to-non-technical-executives",
   title: "How to Present Dark Web Monitoring Findings to Non-Technical Executives",
   excerpt: "Learn how to present dark web monitoring findings to non-technical executives using a 5-step framework that translates intelligence into business risk language for CISO board briefings",
-  featuredImage: "/images/blog/how-to-present-dark-web-monitoring-findings-to-non-technical-executives.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "13 min read",

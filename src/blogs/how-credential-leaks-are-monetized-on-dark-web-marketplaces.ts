@@ -10,7 +10,7 @@ export const howCredentialLeaksAreMonetizedOnDarkWebMarketplaces: BlogPostType &
   slug: "how-credential-leaks-are-monetized-on-dark-web-marketplaces",
   title: "How Credential Leaks Are Monetized on Dark Web Marketplaces",
   excerpt: "Learn how stolen credentials are monetized on dark web marketplaces through infostealer logs initial access brokers and forums with credential leak detection strategies to disrupt the supply chain",
-  featuredImage: "/images/blog/how-credential-leaks-are-monetized-on-dark-web-marketplaces.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "12 min read",

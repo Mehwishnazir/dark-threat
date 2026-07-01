@@ -10,7 +10,7 @@ export const darkWebCredentialLeaksAtBanks20242025CaseStudies: BlogPostType & {
   slug: "dark-web-credential-leaks-at-banks-2024-2025-case-studies",
   title: "Dark Web Credential Leaks at Banks: 2024-2025 Case Studies",
   excerpt: "Explore dark web credential leak case studies from 2024 and 2025 targeting banks including NSDL cooperative bank Monzo Starling USDoD and MOVEit incidents Learn how banking credentials are sold and how dark web monitoring can prevent regulatory fines and operational disruption",
-  featuredImage: "/images/blog/dark-web-credential-leaks-at-banks-2024-2025-case-studies.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "12 min read",

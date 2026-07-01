@@ -10,7 +10,7 @@ export const australianBusinessDarkWebThreatLandscape2025: BlogPostType & {
   slug: "australian-business-dark-web-threat-landscape-2025",
   title: "Australian Business Dark Web Threat Landscape 2025",
   excerpt: "Australian business dark web threat landscape 2025: stealer logs, initial access brokers, ransomware gangs targeting Aussie firms. Why dark web monitoring is essential for compliance and defence.",
-  featuredImage: "/images/blog/australian-business-dark-web-threat-landscape-2025.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 20, 2026",
   readingTime: "14 min read",

@@ -10,7 +10,7 @@ export const howStolenDataDepreciatesInValueOnDarkWebMarkets: BlogPostType & {
   slug: "how-stolen-data-depreciates-in-value-on-dark-web-markets",
   title: "How Stolen Data Depreciates in Value on Dark Web Markets",
   excerpt: "Learn how stolen data depreciates on dark web markets and why data leak detection timing is critical for breach response and cost reduction",
-  featuredImage: "/images/blog/how-stolen-data-depreciates-in-value-on-dark-web-markets.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "14 min read",

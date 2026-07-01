@@ -10,7 +10,7 @@ export const howToBuildABusinessCaseForDarkWebMonitoringToYourCfo: BlogPostType 
   slug: "how-to-build-a-business-case-for-dark-web-monitoring-to-your-cfo",
   title: "How to Build a Business Case for Dark Web Monitoring to Your CFO",
   excerpt: "Build a CFO-ready business case for dark web monitoring with ROI models, breach cost data from IBM and Verizon, and a one-page presentation framework.",
-  featuredImage: "/images/blog/how-to-build-a-business-case-for-dark-web-monitoring-to-your-cfo.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "16 min read",

@@ -10,7 +10,7 @@ export const leakedFinancialAuditReportsDetectionAndContainment: BlogPostType & 
   slug: "leaked-financial-audit-reports-detection-and-containment",
   title: "Leaked Financial Audit Reports: Detection and Containment",
   excerpt: "Detect and contain leaked financial audit reports with detection strategies for ransomware leak sites forums and Telegram channels targeting professional services firms",
-  featuredImage: "/images/blog/leaked-financial-audit-reports-detection-and-containment.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "14 min read",

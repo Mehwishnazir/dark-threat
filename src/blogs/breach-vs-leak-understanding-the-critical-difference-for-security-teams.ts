@@ -10,7 +10,7 @@ export const breachVsLeakUnderstandingTheCriticalDifferenceForSecurityTeams: Blo
   slug: "breach-vs-leak-understanding-the-critical-difference-for-security-teams",
   title: "Breach vs Leak: Understanding the Critical Difference for Security Teams",
   excerpt: "Breach vs leak explained for security teams: distinguish adversarial data breaches from unintentional data leaks with detection strategies regulatory implications and compliance guidance for CISOs and SOC managers",
-  featuredImage: "/images/blog/breach-vs-leak-understanding-the-critical-difference-for-security-teams.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "16 min read",

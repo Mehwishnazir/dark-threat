@@ -10,7 +10,7 @@ export const telegramChannelsSellingLeakedCredentialsWhatToMonitor: BlogPostType
   slug: "telegram-channels-selling-leaked-credentials-what-to-monitor",
   title: "Telegram Channels Selling Leaked Credentials: What to Monitor",
   excerpt: "Learn how to monitor Telegram channels for leaked credentials and build an effective credential leak detection strategy to stop account takeover and ransomware.",
-  featuredImage: "/images/blog/telegram-channels-selling-leaked-credentials-what-to-monitor.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "18 min read",

@@ -10,7 +10,7 @@ export const credentialLeakTimelineFromBreachToDarkWebSale: BlogPostType & {
   slug: "credential-leak-timeline-from-breach-to-dark-web-sale",
   title: "Credential Leak Timeline: From Breach to Dark Web Sale",
   excerpt: "Map the six-phase credential leak timeline from infostealer infection to dark web sale including pricing data threat actor behavior and credential leak detection strategies for each phase with detection windows and incident response guidance",
-  featuredImage: "/images/blog/credential-leak-timeline-from-breach-to-dark-web-sale.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "16 min read",

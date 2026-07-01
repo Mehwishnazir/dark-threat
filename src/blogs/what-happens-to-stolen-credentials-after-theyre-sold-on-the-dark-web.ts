@@ -10,7 +10,7 @@ export const whatHappensToStolenCredentialsAfterTheyreSoldOnTheDarkWeb: BlogPost
   slug: "what-happens-to-stolen-credentials-after-theyre-sold-on-the-dark-web",
   title: "What Happens to Stolen Credentials After They're Sold on the Dark Web",
   excerpt: "Trace the post-sale lifecycle of stolen credentials on the dark web from markets and validation to ransomware paths and learn how credential leak detection interrupts attacks before damage occurs",
-  featuredImage: "/images/blog/what-happens-to-stolen-credentials-after-theyre-sold-on-the-dark-web.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "13 min read",

@@ -10,7 +10,7 @@ export const detectingSupplyChainAttacksEarlyWithDarkWebMonitoring: BlogPostType
   slug: "detecting-supply-chain-attacks-early-with-dark-web-monitoring",
   title: "Detecting Supply Chain Attacks Early with Dark Web Monitoring",
   excerpt: "Learn how detecting supply chain attacks early with dark web monitoring can reduce dwell time identify IAB activity and protect your vendor ecosystem from breach",
-  featuredImage: "/images/blog/detecting-supply-chain-attacks-early-with-dark-web-monitoring.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "13 min read",

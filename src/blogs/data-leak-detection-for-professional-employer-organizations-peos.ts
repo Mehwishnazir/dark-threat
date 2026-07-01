@@ -10,7 +10,7 @@ export const dataLeakDetectionForProfessionalEmployerOrganizationsPeos: BlogPost
   slug: "data-leak-detection-for-professional-employer-organizations-peos",
   title: "Data Leak Detection for Professional Employer Organizations (PEOs)",
   excerpt: "Data leak detection for professional employer organizations PEOs monitor ransomware leak sites paste sites dark web forums and exposed cloud infrastructure for payroll PII and banking data before breach notification timelines expire",
-  featuredImage: "/images/blog/data-leak-detection-for-professional-employer-organizations-peos.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "16 min read",

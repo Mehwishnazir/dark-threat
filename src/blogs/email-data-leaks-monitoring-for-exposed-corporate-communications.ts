@@ -10,7 +10,7 @@ export const emailDataLeaksMonitoringForExposedCorporateCommunications: BlogPost
   slug: "email-data-leaks-monitoring-for-exposed-corporate-communications",
   title: "Email Data Leaks: Monitoring for Exposed Corporate Communications",
   excerpt: "Learn how email data leaks expose corporate communications on ransomware leak sites and dark web marketplaces and how data leak detection catches them through metadata analysis and content scanning",
-  featuredImage: "/images/blog/email-data-leaks-monitoring-for-exposed-corporate-communications.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "17 min read",

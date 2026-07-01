@@ -10,7 +10,7 @@ export const howEmployeeOffboardingCreatesDarkWebRisk: BlogPostType & {
   slug: "how-employee-offboarding-creates-dark-web-risk",
   title: "How Employee Offboarding Creates Dark Web Risk",
   excerpt: "Learn how employee offboarding failures create dark web risk through stale credentials and orphaned accounts, with case studies and strategies for continuous exposure monitoring and threat detection.",
-  featuredImage: "/images/blog/how-employee-offboarding-creates-dark-web-risk.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 3, 2026",
   readingTime: "19 min read",

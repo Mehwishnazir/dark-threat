@@ -10,7 +10,7 @@ export const credentialLeakDetectionForFinancialServicesRegulatoryView: BlogPost
   slug: "credential-leak-detection-for-financial-services-regulatory-view",
   title: "Credential Leak Detection for Financial Services: Regulatory View",
   excerpt: "Credential leak detection for financial services: regulatory requirements under NYDFS, SEC, GLBA, PCI DSS and SOC 2 including evidence artifacts examiners require for compliance audits",
-  featuredImage: "/images/blog/credential-leak-detection-for-financial-services-regulatory-view.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "16 min read",

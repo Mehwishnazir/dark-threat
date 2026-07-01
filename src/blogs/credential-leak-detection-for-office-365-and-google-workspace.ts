@@ -10,7 +10,7 @@ export const credentialLeakDetectionForOffice365AndGoogleWorkspace: BlogPostType
   slug: "credential-leak-detection-for-office-365-and-google-workspace",
   title: "Credential Leak Detection for Office 365 and Google Workspace",
   excerpt: "Learn how credential leak detection for Office 365 and Google Workspace stops account takeover before it starts with a dark web monitoring workflow validation and automated response guide for security teams",
-  featuredImage: "/images/blog/credential-leak-detection-for-office-365-and-google-workspace.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "16 min read",

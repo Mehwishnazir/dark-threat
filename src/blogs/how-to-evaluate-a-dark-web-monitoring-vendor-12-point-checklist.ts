@@ -10,7 +10,7 @@ export const howToEvaluateADarkWebMonitoringVendor12PointChecklist: BlogPostType
   slug: "how-to-evaluate-a-dark-web-monitoring-vendor-12-point-checklist",
   title: "How to Evaluate a Dark Web Monitoring Vendor: 12-Point Checklist",
   excerpt: "How to evaluate a dark web monitoring vendor with a 12-point checklist covering source coverage, stealer log detection, IAB monitoring, alert fidelity, SIEM integration, compliance mapping, and pricing transparency for CISOs and SOC teams.",
-  featuredImage: "/images/blog/how-to-evaluate-a-dark-web-monitoring-vendor-12-point-checklist.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "15 min read",

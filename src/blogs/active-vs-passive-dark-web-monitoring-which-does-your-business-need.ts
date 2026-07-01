@@ -10,7 +10,7 @@ export const activeVsPassiveDarkWebMonitoringWhichDoesYourBusinessNeed: BlogPost
   slug: "active-vs-passive-dark-web-monitoring-which-does-your-business-need",
   title: "Active vs Passive Dark Web Monitoring: Which Does Your Business Need",
   excerpt: "Active vs passive dark web monitoring comparison covering real-time detection, batch-based methods, costs, compliance with HIPAA and SEC, and ROI for CISOs evaluating threat intelligence solutions.",
-  featuredImage: "/images/blog/active-vs-passive-dark-web-monitoring-which-does-your-business-need.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "14 min read",

@@ -10,7 +10,7 @@ export const whatDataShouldYouMonitorOnTheDarkWeb: BlogPostType & {
   slug: "what-data-should-you-monitor-on-the-dark-web",
   title: "What Data Should You Monitor on the Dark Web",
   excerpt: "Learn what data to monitor on the dark web for effective threat intelligence from a guide covering credentials stealer logs IAB listings and ransomware leak sites",
-  featuredImage: "/images/blog/what-data-should-you-monitor-on-the-dark-web.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "12 min read",

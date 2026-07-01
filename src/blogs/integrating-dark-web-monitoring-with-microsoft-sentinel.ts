@@ -10,7 +10,7 @@ export const integratingDarkWebMonitoringWithMicrosoftSentinel: BlogPostType & {
   slug: "integrating-dark-web-monitoring-with-microsoft-sentinel",
   title: "Integrating Dark Web Monitoring with Microsoft Sentinel",
   excerpt: "Learn how to integrate dark web monitoring with Microsoft Sentinel to detect credential exposures, stealer logs, and ransomware threats before they reach your network.",
-  featuredImage: "/images/blog/integrating-dark-web-monitoring-with-microsoft-sentinel.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "15 min read",

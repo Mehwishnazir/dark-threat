@@ -10,7 +10,7 @@ export const howToUseDarkWebMonitoringForThirdPartyRiskAssessment: BlogPostType 
   slug: "how-to-use-dark-web-monitoring-for-third-party-risk-assessment",
   title: "How to Use Dark Web Monitoring for Third-Party Risk Assessment",
   excerpt: "Learn how to use dark web monitoring for third-party risk assessment with a step-by-step framework covering IABs, stealer logs, ransomware leak sites, and continuous vendor scoring.",
-  featuredImage: "/images/blog/how-to-use-dark-web-monitoring-for-third-party-risk-assessment.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "12 min read",

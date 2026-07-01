@@ -10,7 +10,7 @@ export const howToExplainDataLeakDetectionToYourBoardOfDirectors: BlogPostType &
   slug: "how-to-explain-data-leak-detection-to-your-board-of-directors",
   title: "How to Explain Data Leak Detection to Your Board of Directors",
   excerpt: "Learn how to explain data leak detection to your board of directors with a proven narrative framework board-ready metrics and the three questions every director will ask",
-  featuredImage: "/images/blog/how-to-explain-data-leak-detection-to-your-board-of-directors.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "14 min read",

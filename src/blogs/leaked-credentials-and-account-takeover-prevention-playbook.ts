@@ -10,7 +10,7 @@ export const leakedCredentialsAndAccountTakeoverPreventionPlaybook: BlogPostType
   slug: "leaked-credentials-and-account-takeover-prevention-playbook",
   title: "Leaked Credentials and Account Takeover: Prevention Playbook",
   excerpt: "Learn how to detect leaked credentials and prevent account takeover with this actionable playbook covering infostealer logs dark web monitoring and automated response",
-  featuredImage: "/images/blog/leaked-credentials-and-account-takeover-prevention-playbook.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "14 min read",

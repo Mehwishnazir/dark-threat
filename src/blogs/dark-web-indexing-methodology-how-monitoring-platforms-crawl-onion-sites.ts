@@ -10,7 +10,7 @@ export const darkWebIndexingMethodologyHowMonitoringPlatformsCrawlOnionSites: Bl
   slug: "dark-web-indexing-methodology-how-monitoring-platforms-crawl-onion-sites",
   title: "Dark Web Indexing Methodology: How Monitoring Platforms Crawl Onion Sites",
   excerpt: "Technical dark web indexing methodology explained how monitoring platforms crawl onion sites discover seeds extract intelligence from authenticated forums track ransomware leak sites and deliver actionable threat intelligence for CISOs and SOC teams",
-  featuredImage: "/images/blog/dark-web-indexing-methodology-how-monitoring-platforms-crawl-onion-sites.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "15 min read",

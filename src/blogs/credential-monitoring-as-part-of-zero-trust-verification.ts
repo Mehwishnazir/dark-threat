@@ -10,7 +10,7 @@ export const credentialMonitoringAsPartOfZeroTrustVerification: BlogPostType & {
   slug: "credential-monitoring-as-part-of-zero-trust-verification",
   title: "Credential Monitoring as Part of Zero Trust Verification",
   excerpt: "Credential monitoring as part of zero trust verification closes the gap between assuming breach and validating identity integrity Learn how continuous dark web credential monitoring strengthens the fourth verification pillar",
-  featuredImage: "/images/blog/credential-monitoring-as-part-of-zero-trust-verification.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "17 min read",

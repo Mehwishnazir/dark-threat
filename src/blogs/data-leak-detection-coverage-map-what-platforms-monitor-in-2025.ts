@@ -10,7 +10,7 @@ export const dataLeakDetectionCoverageMapWhatPlatformsMonitorIn2025: BlogPostTyp
   slug: "data-leak-detection-coverage-map-what-platforms-monitor-in-2025",
   title: "Data Leak Detection Coverage Map: What Platforms Monitor in 2025",
   excerpt: "Discover what a data leak detection coverage map covers in 2025: ransomware leak sites, dark web forums, Telegram, paste sites, cloud misconfigs, and data marketplaces. Learn evaluation criteria and detection latency requirements.",
-  featuredImage: "/images/blog/data-leak-detection-coverage-map-what-platforms-monitor-in-2025.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "17 min read",

@@ -10,7 +10,7 @@ export const enterpriseVsSmbDarkWebMonitoringFeatureComparisonTwentyTwentySix: B
   slug: "enterprise-vs-smb-dark-web-monitoring-feature-comparison-2026",
   title: "Enterprise vs SMB Dark Web Monitoring: Feature Comparison 2026",
   excerpt: "Enterprise vs SMB dark web monitoring comparison 2026 feature coverage stealer log detection depth alert triage integration requirements and pricing choose the right credential leak monitoring platform for your organization scale and risk tolerance",
-  featuredImage: "/images/blog/enterprise-vs-smb-dark-web-monitoring-feature-comparison-2026.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "July 1, 2026",
   readingTime: "13 min read",

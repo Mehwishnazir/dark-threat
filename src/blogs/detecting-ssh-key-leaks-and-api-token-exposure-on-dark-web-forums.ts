@@ -10,7 +10,7 @@ export const detectingSshKeyLeaksAndApiTokenExposureOnDarkWebForums: BlogPostTyp
   slug: "detecting-ssh-key-leaks-and-api-token-exposure-on-dark-web-forums",
   title: "Detecting SSH Key Leaks and API Token Exposure on Dark Web Forums",
   excerpt: "Learn how to detect SSH key and API token leaks on dark web forums DarkThreat AI explains the specific risks of machine identity exposure and how to respond to compromised credentials",
-  featuredImage: "/images/blog/detecting-ssh-key-leaks-and-api-token-exposure-on-dark-web-forums.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "17 min read",

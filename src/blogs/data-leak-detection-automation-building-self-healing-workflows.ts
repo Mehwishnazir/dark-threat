@@ -10,7 +10,7 @@ export const dataLeakDetectionAutomationBuildingSelfHealingWorkflows: BlogPostTy
   slug: "data-leak-detection-automation-building-self-healing-workflows",
   title: "Data Leak Detection Automation: Building Self-Healing Workflows",
   excerpt: "Learn how to build self-healing data leak detection workflows that automatically detect leaked data on dark web forums ransomware leak sites and paste sites and trigger remediation actions",
-  featuredImage: "/images/blog/data-leak-detection-automation-building-self-healing-workflows.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "15 min read",

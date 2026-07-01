@@ -10,7 +10,7 @@ export const dataLeakDetectionForPharmaceuticalClinicalTrialData: BlogPostType &
   slug: "data-leak-detection-for-pharmaceutical-clinical-trial-data",
   title: "Data Leak Detection for Pharmaceutical Clinical Trial Data",
   excerpt: "Learn how data leak detection for pharmaceutical clinical trial data protects PHI, proprietary research, and regulatory compliance from ransomware leak sites and dark web marketplaces.",
-  featuredImage: "/images/blog/data-leak-detection-for-pharmaceutical-clinical-trial-data.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "14 min read",

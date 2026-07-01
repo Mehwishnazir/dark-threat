@@ -10,7 +10,7 @@ export const whatIsDarkWebMonitoringAndHowDoesItActuallyWorkIn2025: BlogPostType
   slug: "what-is-dark-web-monitoring-and-how-does-it-actually-work-in-2025",
   title: "What Is Dark Web Monitoring and How Does It Actually Work in 2025",
   excerpt: "Dark web monitoring in 2025 explained: how it detects credential leaks, stealer logs, and initial access brokers with real-time intelligence for security teams and SOC analysts.",
-  featuredImage: "/images/blog/what-is-dark-web-monitoring-and-how-does-it-actually-work-in-2025.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "15 min read",

@@ -10,7 +10,7 @@ export const trueCostOfNotHavingDarkWebMonitoring2025Data: BlogPostType & {
   slug: "true-cost-of-not-having-dark-web-monitoring-2025-data",
   title: "True Cost of Not Having Dark Web Monitoring: 2025 Data",
   excerpt: "Calculate the true cost of not having dark web monitoring in 2025 with a data-backed framework for CISOs and CFOs covering breach costs credential exposure and ransomware prevention",
-  featuredImage: "/images/blog/true-cost-of-not-having-dark-web-monitoring-2025-data.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "13 min read",

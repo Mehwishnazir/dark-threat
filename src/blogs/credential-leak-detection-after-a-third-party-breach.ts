@@ -10,7 +10,7 @@ export const credentialLeakDetectionAfterAThirdPartyBreach: BlogPostType & {
   slug: "credential-leak-detection-after-a-third-party-breach",
   title: "Credential Leak Detection After a Third-Party Breach",
   excerpt: "Learn how credential leak detection after a third-party breach fills the visibility gap vendors leave open. Covers signals, playbook steps, and DarkThreat.AI integration for SOC teams.",
-  featuredImage: "/images/blog/credential-leak-detection-after-a-third-party-breach.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "13 min read",

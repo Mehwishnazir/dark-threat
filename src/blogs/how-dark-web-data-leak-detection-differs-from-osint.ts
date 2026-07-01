@@ -10,7 +10,7 @@ export const howDarkWebDataLeakDetectionDiffersFromOsint: BlogPostType & {
   slug: "how-dark-web-data-leak-detection-differs-from-osint",
   title: "How Dark Web Data Leak Detection Differs from OSINT",
   excerpt: "Dark web data leak detection differs from OSINT in coverage depth freshness and classification accuracy Learn why general OSINT tools miss ransomware leak sites and Telegram data dumps for SOC analysts and CISOs",
-  featuredImage: "/images/blog/how-dark-web-data-leak-detection-differs-from-osint.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "11 min read",

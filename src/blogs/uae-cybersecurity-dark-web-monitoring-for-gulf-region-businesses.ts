@@ -10,7 +10,7 @@ export const uaeCybersecurityDarkWebMonitoringForGulfRegionBusinesses: BlogPostT
   slug: "uae-cybersecurity-dark-web-monitoring-for-gulf-region-businesses",
   title: "UAE Cybersecurity: Dark Web Monitoring for Gulf Region Businesses",
   excerpt: "UAE cybersecurity demands proactive dark web monitoring for Gulf region businesses Learn how to detect stealer logs initial access brokers and ransomware threats targeting UAE organisations",
-  featuredImage: "/images/blog/uae-cybersecurity-dark-web-monitoring-for-gulf-region-businesses.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 20, 2026",
   readingTime: "14 min read",

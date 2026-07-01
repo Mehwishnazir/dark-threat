@@ -10,7 +10,7 @@ export const domainWideCredentialLeakDetectionEnterpriseImplementation: BlogPost
   slug: "domain-wide-credential-leak-detection-enterprise-implementation",
   title: "Domain-Wide Credential Leak Detection: Enterprise Implementation",
   excerpt: "Enterprise domain-wide credential leak detection implementation guide covering identity inventory dark web collection normalization risk scoring SIEM integration and automated remediation for security teams",
-  featuredImage: "/images/blog/domain-wide-credential-leak-detection-enterprise-implementation.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "15 min read",

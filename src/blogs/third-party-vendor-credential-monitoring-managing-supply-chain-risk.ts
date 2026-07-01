@@ -10,7 +10,7 @@ export const thirdPartyVendorCredentialMonitoringManagingSupplyChainRisk: BlogPo
   slug: "third-party-vendor-credential-monitoring-managing-supply-chain-risk",
   title: "Third-Party Vendor Credential Monitoring — Managing Supply Chain Risk",
   excerpt: "Learn how third-party vendor credential monitoring reduces supply chain risk by detecting stolen credentials on the dark web before a breach occurs. Essential strategies for 2025.",
-  featuredImage: "/images/blog/third-party-vendor-credential-monitoring-managing-supply-chain-risk.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 3, 2026",
   readingTime: "17 min read",

@@ -10,7 +10,7 @@ export const credentialLeakDetectionForGovernmentAgenciesAndContractors: BlogPos
   slug: "credential-leak-detection-for-government-agencies-and-contractors",
   title: "Credential Leak Detection for Government Agencies and Contractors",
   excerpt: "Comprehensive guide to credential leak detection for government agencies and contractors covering CMMC 2.0 NIST SP 800-171 infostealer threats and dark web monitoring implementation for protecting CUI and supply chain integrity",
-  featuredImage: "/images/blog/credential-leak-detection-for-government-agencies-and-contractors.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "14 min read",

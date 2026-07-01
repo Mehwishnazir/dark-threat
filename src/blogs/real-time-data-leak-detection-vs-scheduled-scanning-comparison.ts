@@ -10,7 +10,7 @@ export const realTimeDataLeakDetectionVsScheduledScanningComparison: BlogPostTyp
   slug: "real-time-data-leak-detection-vs-scheduled-scanning-comparison",
   title: "Real-Time Data Leak Detection vs Scheduled Scanning: Comparison",
   excerpt: "Compare real-time data leak detection vs scheduled scanning for ransomware and breach exposure. Understand detection latency, coverage, cost, and compliance fit for CISOs and SOC teams.",
-  featuredImage: "/images/blog/real-time-data-leak-detection-vs-scheduled-scanning-comparison.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "11 min read",

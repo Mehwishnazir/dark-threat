@@ -10,7 +10,7 @@ export const ransomwareAsAServiceAffiliateProgramsHowTheBusinessModelWorks: Blog
   slug: "ransomware-as-a-service-affiliate-programs-how-the-business-model-works",
   title: "Ransomware-as-a-Service Affiliate Programs — How the Business Model Works",
   excerpt: "Ransomware as a Service affiliate programs on the dark web explained including how RaaS profit splits vetting attack chains and defenses against ransomware affiliate networks",
-  featuredImage: "/images/blog/ransomware-as-a-service-affiliate-programs-how-the-business-model-works.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 3, 2026",
   readingTime: "16 min read",

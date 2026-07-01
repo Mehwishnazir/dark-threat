@@ -10,7 +10,7 @@ export const doesDarkWebMonitoringPreventAttacksOrJustDetectThem: BlogPostType &
   slug: "does-dark-web-monitoring-prevent-attacks-or-just-detect-them",
   title: "Does Dark Web Monitoring Prevent Attacks or Just Detect Them",
   excerpt: "This article explains whether dark web monitoring prevents attacks or detects them, how intelligence drives preventive action, and how to integrate monitoring into a defense-in-depth strategy for security teams.",
-  featuredImage: "/images/blog/does-dark-web-monitoring-prevent-attacks-or-just-detect-them.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 20, 2026",
   readingTime: "14 min read",

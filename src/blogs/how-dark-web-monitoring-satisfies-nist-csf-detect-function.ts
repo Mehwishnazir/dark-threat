@@ -10,7 +10,7 @@ export const howDarkWebMonitoringSatisfiesNistCsfDetectFunction: BlogPostType & 
   slug: "how-dark-web-monitoring-satisfies-nist-csf-detect-function",
   title: "How Dark Web Monitoring Satisfies NIST CSF Detect Function",
   excerpt: "Learn how dark web monitoring satisfies NIST CSF 2.0 Detect function categories DE.AE DE.CM and DE.DP with specific signal mappings and audit-ready evidence for CISOs and compliance officers",
-  featuredImage: "/images/blog/how-dark-web-monitoring-satisfies-nist-csf-detect-function.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "14 min read",

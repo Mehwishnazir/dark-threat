@@ -10,7 +10,7 @@ export const phishingLeakedCredentialsCombinedAttackDetection: BlogPostType & {
   slug: "phishing-leaked-credentials-combined-attack-detection",
   title: "Phishing + Leaked Credentials: Combined Attack Detection",
   excerpt: "Learn how phishing attacks weaponise leaked credentials and how credential leak detection provides the intelligence layer to detect blended attacks before account takeover.",
-  featuredImage: "/images/blog/phishing-leaked-credentials-combined-attack-detection.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "14 min read",

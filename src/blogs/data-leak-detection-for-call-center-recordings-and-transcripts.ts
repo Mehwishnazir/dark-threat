@@ -10,7 +10,7 @@ export const dataLeakDetectionForCallCenterRecordingsAndTranscripts: BlogPostTyp
   slug: "data-leak-detection-for-call-center-recordings-and-transcripts",
   title: "Data Leak Detection for Call Center Recordings and Transcripts",
   excerpt: "Data leak detection for call center recordings and transcripts explained including how threat actors monetize call audio and text what PII and PHI patterns to monitor and which dark web channels require coverage for compliance",
-  featuredImage: "/images/blog/data-leak-detection-for-call-center-recordings-and-transcripts.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "15 min read",

@@ -10,7 +10,7 @@ export const howDataLeakDetectionSupportsForensicInvestigations: BlogPostType & 
   slug: "how-data-leak-detection-supports-forensic-investigations",
   title: "How Data Leak Detection Supports Forensic Investigations",
   excerpt: "Learn how data leak detection supports forensic investigations across identification scope analysis attribution and remediation planning for SOC and DFIR teams to enhance incident response",
-  featuredImage: "/images/blog/how-data-leak-detection-supports-forensic-investigations.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "14 min read",

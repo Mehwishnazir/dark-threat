@@ -10,7 +10,7 @@ export const infostealerLogsWhatTheyContainAndWhyYouNeedToMonitorThem: BlogPostT
   slug: "infostealer-logs-what-they-contain-and-why-you-need-to-monitor-them",
   title: "Infostealer Logs: What They Contain and Why You Need to Monitor Them",
   excerpt: "Infostealer logs contain stolen browser credentials session tokens crypto wallets and VPN data sold on dark web markets Learn what they hold and why monitoring matters for credential leak detection",
-  featuredImage: "/images/blog/infostealer-logs-what-they-contain-and-why-you-need-to-monitor-them.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "13 min read",

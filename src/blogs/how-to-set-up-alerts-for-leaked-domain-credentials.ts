@@ -10,7 +10,7 @@ export const howToSetUpAlertsForLeakedDomainCredentials: BlogPostType & {
   slug: "how-to-set-up-alerts-for-leaked-domain-credentials",
   title: "How to Set Up Alerts for Leaked Domain Credentials",
   excerpt: "Learn how to set up automated alerts for leaked domain credentials covering stealer log monitoring SIEM integration severity based response workflows and identity protection",
-  featuredImage: "/images/blog/how-to-set-up-alerts-for-leaked-domain-credentials.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "16 min read",

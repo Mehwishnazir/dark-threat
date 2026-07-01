@@ -10,7 +10,7 @@ export const naturalLanguageProcessingInDarkWebMonitoringTechnicalDeepDive: Blog
   slug: "natural-language-processing-in-dark-web-monitoring-technical-deep-dive",
   title: "Natural Language Processing in Dark Web Monitoring: Technical Deep Dive",
   excerpt: "Technical deep dive into NLP for dark web monitoring covering tokenisation NER classification models adversarial language and real-time streaming threat intelligence with DarkThreat AI",
-  featuredImage: "/images/blog/natural-language-processing-in-dark-web-monitoring-technical-deep-dive.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "12 min read",

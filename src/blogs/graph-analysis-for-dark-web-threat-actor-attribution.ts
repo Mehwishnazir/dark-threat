@@ -10,7 +10,7 @@ export const graphAnalysisForDarkWebThreatActorAttribution: BlogPostType & {
   slug: "graph-analysis-for-dark-web-threat-actor-attribution",
   title: "Graph Analysis for Dark Web Threat Actor Attribution",
   excerpt: "Graph analysis for dark web threat actor attribution maps relationships across forums, stealer logs, and crypto wallets to identify threat operators. Learn the technique, tools, and best practices.",
-  featuredImage: "/images/blog/graph-analysis-for-dark-web-threat-actor-attribution.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "13 min read",

@@ -10,7 +10,7 @@ export const darkWebMonitoringExplainedAPlainEnglishGuideForBusinessLeaders: Blo
   slug: "dark-web-monitoring-explained-a-plain-english-guide-for-business-leaders",
   title: "Dark Web Monitoring Explained: A Plain-English Guide for Business Leaders",
   excerpt: "Dark web monitoring explained in plain English for business leaders Learn how it detects credential leaks prevents ransomware and supports compliance Read the complete guide",
-  featuredImage: "/images/blog/dark-web-monitoring-explained-a-plain-english-guide-for-business-leaders.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "18 min read",

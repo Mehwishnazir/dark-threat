@@ -10,7 +10,7 @@ export const dataLeakDetectionVsDataLossPreventionWhichDoesWhat: BlogPostType & 
   slug: "data-leak-detection-vs-data-loss-prevention-which-does-what",
   title: "Data Leak Detection vs Data Loss Prevention: Which Does What",
   excerpt: "Data leak detection vs data loss prevention: Learn key differences between DLP and data leak detection technologies, where each excels, and why combining both is essential for modern data protection and ransomware defense strategies.",
-  featuredImage: "/images/blog/data-leak-detection-vs-data-loss-prevention-which-does-what.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "14 min read",

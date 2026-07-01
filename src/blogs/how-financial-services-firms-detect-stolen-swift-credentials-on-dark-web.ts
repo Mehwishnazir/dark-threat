@@ -10,7 +10,7 @@ export const howFinancialServicesFirmsDetectStolenSwiftCredentialsOnDarkWeb: Blo
   slug: "how-financial-services-firms-detect-stolen-swift-credentials-on-dark-web",
   title: "How Financial Services Firms Detect Stolen SWIFT Credentials on Dark Web",
   excerpt: "A technical industry-specific guide to detecting stolen SWIFT credentials on the dark web for financial services firms with threat actor analysis regulatory alignment and detection program frameworks",
-  featuredImage: "/images/blog/how-financial-services-firms-detect-stolen-swift-credentials-on-dark-web.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "12 min read",

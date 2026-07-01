@@ -10,7 +10,7 @@ export const howToIncludeDarkWebMonitoringInYourVendorRiskQuestionnaire: BlogPos
   slug: "how-to-include-dark-web-monitoring-in-your-vendor-risk-questionnaire",
   title: "How to Include Dark Web Monitoring in Your Vendor Risk Questionnaire",
   excerpt: "Learn how to integrate dark web monitoring into vendor risk questionnaires with specific questions, evaluation rubrics, and lifecycle management strategies for third-party risk reduction.",
-  featuredImage: "/images/blog/how-to-include-dark-web-monitoring-in-your-vendor-risk-questionnaire.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 4, 2026",
   readingTime: "18 min read",

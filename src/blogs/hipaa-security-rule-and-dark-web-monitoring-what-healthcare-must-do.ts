@@ -10,7 +10,7 @@ export const hipaaSecurityRuleAndDarkWebMonitoringWhatHealthcareMustDo: BlogPost
   slug: "hipaa-security-rule-and-dark-web-monitoring-what-healthcare-must-do",
   title: "HIPAA Security Rule and Dark Web Monitoring — What Healthcare Must Do",
   excerpt: "Explore how dark web monitoring aligns with HIPAA Security Rule 164.306 as a reasonable safeguard for healthcare data protection and compliance.",
-  featuredImage: "/images/blog/hipaa-security-rule-and-dark-web-monitoring-what-healthcare-must-do.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 4, 2026",
   readingTime: "22 min read",

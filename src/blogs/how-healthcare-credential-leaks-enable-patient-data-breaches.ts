@@ -10,7 +10,7 @@ export const howHealthcareCredentialLeaksEnablePatientDataBreaches: BlogPostType
   slug: "how-healthcare-credential-leaks-enable-patient-data-breaches",
   title: "How Healthcare Credential Leaks Enable Patient Data Breaches",
   excerpt: "How healthcare credential leaks enable patient data breaches. Learn how credential leak detection stops infostealer logs, combo lists and MFA bypass from becoming PHI data breaches.",
-  featuredImage: "/images/blog/how-healthcare-credential-leaks-enable-patient-data-breaches.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "17 min read",

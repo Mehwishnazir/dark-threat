@@ -10,7 +10,7 @@ export const darkWebForumsWhereStolenDataGetsSoldWhatMonitorsTrack: BlogPostType
   slug: "dark-web-forums-where-stolen-data-gets-sold-what-monitors-track",
   title: "Dark Web Forums Where Stolen Data Gets Sold: What Monitors Track",
   excerpt: "Learn about the dark web forums where stolen data gets sold and how dark web monitoring platforms track signals from Exploit.in, XSS.is, and Russian Market in real time.",
-  featuredImage: "/images/blog/dark-web-forums-where-stolen-data-gets-sold-what-monitors-track.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "15 min read",

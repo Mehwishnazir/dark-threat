@@ -10,7 +10,7 @@ export const detectingGovernmentDataLeaksClassificationAndMonitoring: BlogPostTy
   slug: "detecting-government-data-leaks-classification-and-monitoring",
   title: "Detecting Government Data Leaks: Classification and Monitoring",
   excerpt: "Learn to detect government data leaks through risk-based classification and dark web monitoring. This guide covers ransomware leak sites, cloud exposures, and compliance mandates for government agencies.",
-  featuredImage: "/images/blog/detecting-government-data-leaks-classification-and-monitoring.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "17 min read",

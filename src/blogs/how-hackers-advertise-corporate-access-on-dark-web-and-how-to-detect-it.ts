@@ -10,7 +10,7 @@ export const howHackersAdvertiseCorporateAccessOnDarkWebAndHowToDetectIt: BlogPo
   slug: "how-hackers-advertise-corporate-access-on-dark-web-and-how-to-detect-it",
   title: "How Hackers Advertise Corporate Access on Dark Web — and How to Detect It",
   excerpt: "Learn how initial access brokers advertise corporate access on the dark web, the forums they use, and how real-time dark web monitoring detects IAB listings before ransomware triggers.",
-  featuredImage: "/images/blog/how-hackers-advertise-corporate-access-on-dark-web-and-how-to-detect-it.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "16 min read",

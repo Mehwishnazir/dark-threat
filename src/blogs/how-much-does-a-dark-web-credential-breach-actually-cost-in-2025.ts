@@ -10,7 +10,7 @@ export const howMuchDoesADarkWebCredentialBreachActuallyCostIn2025: BlogPostType
   slug: "how-much-does-a-dark-web-credential-breach-actually-cost-in-2025",
   title: "How Much Does a Dark Web Credential Breach Actually Cost in 2025",
   excerpt: "Quantify the real cost of a dark web credential breach in 2025 from stealer logs to ransomware and how monitoring reduces financial impact",
-  featuredImage: "/images/blog/how-much-does-a-dark-web-credential-breach-actually-cost-in-2025.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "13 min read",

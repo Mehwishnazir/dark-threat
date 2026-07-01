@@ -10,7 +10,7 @@ export const howToIncludeDarkWebMonitoringInYourVendorRiskProgram: BlogPostType 
   slug: "how-to-include-dark-web-monitoring-in-your-vendor-risk-program",
   title: "How to Include Dark Web Monitoring in Your Vendor Risk Program",
   excerpt: "Learn how to integrate dark web monitoring into your vendor risk program with tiered signals playbooks and compliance evidence A practical step by step guide for vendor risk managers",
-  featuredImage: "/images/blog/how-to-include-dark-web-monitoring-in-your-vendor-risk-program.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "15 min read",

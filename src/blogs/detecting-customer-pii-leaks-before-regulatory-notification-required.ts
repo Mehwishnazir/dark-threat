@@ -10,7 +10,7 @@ export const detectingCustomerPiiLeaksBeforeRegulatoryNotificationRequired: Blog
   slug: "detecting-customer-pii-leaks-before-regulatory-notification-required",
   title: "Detecting Customer PII Leaks Before Regulatory Notification Required",
   excerpt: "Learn how automated data leak detection catches customer PII leaks on ransomware sites, forums, and Telegram before regulatory notification windows close. Start your 72-hour clock in minutes, not days.",
-  featuredImage: "/images/blog/detecting-customer-pii-leaks-before-regulatory-notification-required.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "15 min read",

@@ -10,7 +10,7 @@ export const darkWebMonitoringForEuropeanBusinessesUnderNis2: BlogPostType & {
   slug: "dark-web-monitoring-for-european-businesses-under-nis2",
   title: "Dark Web Monitoring for European Businesses Under NIS2",
   excerpt: "NIS2 compliance requires dark web monitoring for European businesses. Learn how continuous dark web intelligence maps to NIS2 risk-management controls, supply chain security obligations, and incident detection requirements.",
-  featuredImage: "/images/blog/dark-web-monitoring-for-european-businesses-under-nis2.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 20, 2026",
   readingTime: "17 min read",

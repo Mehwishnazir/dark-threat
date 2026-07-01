@@ -10,7 +10,7 @@ export const dataLeakDetectionForTheHospitalityAndTravelIndustry: BlogPostType &
   slug: "data-leak-detection-for-the-hospitality-and-travel-industry",
   title: "Data Leak Detection for the Hospitality and Travel Industry",
   excerpt: "Data leak detection for hospitality and travel industry covering ransomware leak sites dark web marketplaces regulatory breach notification obligations and threat intelligence lifecycle for customer PII protection",
-  featuredImage: "/images/blog/data-leak-detection-for-the-hospitality-and-travel-industry.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "15 min read",

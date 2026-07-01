@@ -10,7 +10,7 @@ export const buildingDataLeakDetectionIntoYourDevsecopsPipeline: BlogPostType & 
   slug: "building-data-leak-detection-into-your-devsecops-pipeline",
   title: "Building Data Leak Detection Into Your DevSecOps Pipeline",
   excerpt: "How to build data leak detection into your DevSecOps pipeline with pre-commit secrets scanning, IaC policy checks, and dark web integration to catch exposed credentials and misconfigurations before exploitation.",
-  featuredImage: "/images/blog/building-data-leak-detection-into-your-devsecops-pipeline.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "11 min read",

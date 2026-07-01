@@ -10,7 +10,7 @@ export const initialAccessBrokersHowDarkWebMonitoringExposesThem: BlogPostType &
   slug: "initial-access-brokers-how-dark-web-monitoring-exposes-them",
   title: "Initial Access Brokers: How Dark Web Monitoring Exposes Them",
   excerpt: "Learn how initial access brokers sell corporate network access on dark web forums and how dark web monitoring exposes their listings before ransomware deployment",
-  featuredImage: "/images/blog/initial-access-brokers-how-dark-web-monitoring-exposes-them.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "14 min read",

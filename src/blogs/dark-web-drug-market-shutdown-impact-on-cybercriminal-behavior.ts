@@ -10,7 +10,7 @@ export const darkWebDrugMarketShutdownImpactOnCybercriminalBehavior: BlogPostTyp
   slug: "dark-web-drug-market-shutdown-impact-on-cybercriminal-behavior",
   title: "Dark Web Drug Market Shutdown Impact on Cybercriminal Behavior",
   excerpt: "A dark web drug market shutdown triggers vendor migration to credential forums and IAB platforms increasing credential exposure risk learn how dark web monitoring detects these behavioral shifts",
-  featuredImage: "/images/blog/dark-web-drug-market-shutdown-impact-on-cybercriminal-behavior.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "13 min read",

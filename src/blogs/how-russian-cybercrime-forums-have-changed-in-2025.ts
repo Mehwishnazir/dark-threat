@@ -10,7 +10,7 @@ export const howRussianCybercrimeForumsHaveChangedIn2025: BlogPostType & {
   slug: "how-russian-cybercrime-forums-have-changed-in-2025",
   title: "How Russian Cybercrime Forums Have Changed in 2025",
   excerpt: "How Russian cybercrime forums evolved in 2025 fragmented Telegram driven and more dangerous Learn how dark web monitoring must adapt to this new threat landscape",
-  featuredImage: "/images/blog/how-russian-cybercrime-forums-have-changed-in-2025.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "15 min read",

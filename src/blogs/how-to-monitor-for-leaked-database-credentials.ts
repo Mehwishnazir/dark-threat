@@ -10,7 +10,7 @@ export const howToMonitorForLeakedDatabaseCredentials: BlogPostType & {
   slug: "how-to-monitor-for-leaked-database-credentials",
   title: "How to Monitor for Leaked Database Credentials",
   excerpt: "Learn how to monitor for leaked database credentials with this step-by-step guide covering infostealer logs, combo lists, and dark web exposure of database admin accounts in real time for security teams.",
-  featuredImage: "/images/blog/how-to-monitor-for-leaked-database-credentials.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "10 min read",

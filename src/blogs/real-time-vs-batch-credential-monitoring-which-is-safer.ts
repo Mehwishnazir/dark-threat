@@ -10,7 +10,7 @@ export const realTimeVsBatchCredentialMonitoringWhichIsSafer: BlogPostType & {
   slug: "real-time-vs-batch-credential-monitoring-which-is-safer",
   title: "Real-Time vs Batch Credential Monitoring: Which Is Safer",
   excerpt: "Compare real-time vs batch credential monitoring: detection latency, operational burden, and security outcomes. Learn which model is safer for your organization's risk profile and team capacity.",
-  featuredImage: "/images/blog/real-time-vs-batch-credential-monitoring-which-is-safer.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "14 min read",

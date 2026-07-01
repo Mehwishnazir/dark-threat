@@ -10,7 +10,7 @@ export const credentialLeakDetectionForCloudInfrastructureAwsAzureGcp: BlogPostT
   slug: "credential-leak-detection-for-cloud-infrastructure-aws-azure-gcp",
   title: "Credential Leak Detection for Cloud Infrastructure (AWS, Azure, GCP)",
   excerpt: "Learn how credential leak detection protects AWS Azure and GCP cloud infrastructure by identifying leaked IAM keys service principal secrets and service account exposures through dark web monitoring stealer log analysis and automated response",
-  featuredImage: "/images/blog/credential-leak-detection-for-cloud-infrastructure-aws-azure-gcp.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "17 min read",

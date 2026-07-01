@@ -10,7 +10,7 @@ export const shadowItAndTheDarkWebWhatUnauthorisedAppsCreate: BlogPostType & {
   slug: "shadow-it-and-the-dark-web-what-unauthorised-apps-create",
   title: "Shadow IT and the Dark Web — What Unauthorised Apps Create",
   excerpt: "Explore how shadow IT creates dark web exposure risks including credential theft and data breaches with strategies for continuous monitoring and risk mitigation",
-  featuredImage: "/images/blog/shadow-it-and-the-dark-web-what-unauthorised-apps-create.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 3, 2026",
   readingTime: "22 min read",

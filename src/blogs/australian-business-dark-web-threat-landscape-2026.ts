@@ -10,7 +10,7 @@ export const australianBusinessDarkWebThreatLandscapeTwentyTwentySix: BlogPostTy
   slug: "australian-business-dark-web-threat-landscape-2026",
   title: "Australian Business Dark Web Threat Landscape 2026",
   excerpt: "Analyse the 2026 Australian business dark web threat landscape covering infostealer malware credential markets and IABs and learn how credential leak detection protects Australian organisations from credential-driven attacks",
-  featuredImage: "/images/blog/australian-business-dark-web-threat-landscape-2026.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "July 1, 2026",
   readingTime: "16 min read",

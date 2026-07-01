@@ -10,7 +10,7 @@ export const credentialLeakDetectionIntegrationWithActiveDirectory: BlogPostType
   slug: "credential-leak-detection-integration-with-active-directory",
   title: "Credential Leak Detection Integration with Active Directory",
   excerpt: "Learn how to integrate credential leak detection with Active Directory to monitor infostealer logs, combo lists, and IAB threats targeting domain accounts for proactive defense.",
-  featuredImage: "/images/blog/credential-leak-detection-integration-with-active-directory.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "14 min read",

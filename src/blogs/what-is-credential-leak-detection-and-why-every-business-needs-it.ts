@@ -10,7 +10,7 @@ export const whatIsCredentialLeakDetectionAndWhyEveryBusinessNeedsIt: BlogPostTy
   slug: "what-is-credential-leak-detection-and-why-every-business-needs-it",
   title: "What Is Credential Leak Detection and Why Every Business Needs It",
   excerpt: "Credential leak detection explained: what it is, how it works, and why every business needs it to prevent credential-based attacks, ransomware, and account takeover in 2025.",
-  featuredImage: "/images/blog/what-is-credential-leak-detection-and-why-every-business-needs-it.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "15 min read",

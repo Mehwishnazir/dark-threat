@@ -10,7 +10,7 @@ export const howToRemoveYourPersonalInformationFromTheDarkWeb: BlogPostType & {
   slug: "how-to-remove-your-personal-information-from-the-dark-web",
   title: "How to Remove Your Personal Information from the Dark Web",
   excerpt: "Learn how to remove personal information from the dark web is extremely difficult. This guide covers data exposure, monitoring, and mitigation strategies with DarkThreat.AI.",
-  featuredImage: "/images/blog/how-to-remove-your-personal-information-from-the-dark-web.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 4, 2026",
   readingTime: "16 min read",

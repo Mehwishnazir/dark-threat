@@ -10,7 +10,7 @@ export const howRussianCybercrimeForumsHaveChangedInTwentyTwentySix: BlogPostTyp
   slug: "how-russian-cybercrime-forums-have-changed-in-2026",
   title: "How Russian Cybercrime Forums Have Changed in 2026",
   excerpt: "Russian cybercrime forums in 2026 shifted to subscription models and Telegram channels. Learn how credential leak detection must adapt to paid access and ephemeral data distribution.",
-  featuredImage: "/images/blog/how-russian-cybercrime-forums-have-changed-in-2026.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "July 1, 2026",
   readingTime: "14 min read",

@@ -10,7 +10,7 @@ export const gdprBreachNotificationAndDarkWebMonitoringAComplianceGuide: BlogPos
   slug: "gdpr-breach-notification-and-dark-web-monitoring-a-compliance-guide",
   title: "GDPR Breach Notification and Dark Web Monitoring — A Compliance Guide",
   excerpt: "Learn how dark web monitoring helps organisations meet the GDPR 72-hour breach notification deadline under Articles 33 and 34 with proactive detection and compliance strategies.",
-  featuredImage: "/images/blog/gdpr-breach-notification-and-dark-web-monitoring-a-compliance-guide.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 4, 2026",
   readingTime: "19 min read",

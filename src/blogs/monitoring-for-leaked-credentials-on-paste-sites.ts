@@ -10,7 +10,7 @@ export const monitoringForLeakedCredentialsOnPasteSites: BlogPostType & {
   slug: "monitoring-for-leaked-credentials-on-paste-sites",
   title: "Monitoring for Leaked Credentials on Paste Sites",
   excerpt: "Learn how to automate monitoring for leaked credentials on paste sites using domain scoping credential extraction and SIEM integration Essential guide for SOC teams",
-  featuredImage: "/images/blog/monitoring-for-leaked-credentials-on-paste-sites.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "12 min read",

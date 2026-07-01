@@ -10,7 +10,7 @@ export const credentialExposureRateByIndustry2025BenchmarkReport: BlogPostType &
   slug: "credential-exposure-rate-by-industry-2025-benchmark-report",
   title: "Credential Exposure Rate by Industry: 2025 Benchmark Report",
   excerpt: "2025 credential exposure rate by industry benchmarks reveal financial services at 37%, technology at 30%, and healthcare at 27%. Learn how credential leak detection protects your sector from stolen credentials and reduces breach risk.",
-  featuredImage: "/images/blog/credential-exposure-rate-by-industry-2025-benchmark-report.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "15 min read",

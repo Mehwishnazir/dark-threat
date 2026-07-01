@@ -10,7 +10,7 @@ export const dataLeakDetectionForApiResponsesAndGraphqlEndpoints: BlogPostType &
   slug: "data-leak-detection-for-api-responses-and-graphql-endpoints",
   title: "Data Leak Detection for API Responses and GraphQL Endpoints",
   excerpt: "Learn how to detect data leaks in API responses and GraphQL endpoints including schema exploitation dark web monitoring and runtime controls for security teams",
-  featuredImage: "/images/blog/data-leak-detection-for-api-responses-and-graphql-endpoints.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "13 min read",

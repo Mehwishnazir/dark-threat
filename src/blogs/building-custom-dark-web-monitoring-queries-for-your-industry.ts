@@ -10,7 +10,7 @@ export const buildingCustomDarkWebMonitoringQueriesForYourIndustry: BlogPostType
   slug: "building-custom-dark-web-monitoring-queries-for-your-industry",
   title: "Building Custom Dark Web Monitoring Queries for Your Industry",
   excerpt: "Learn how to build custom dark web monitoring queries tailored to your industry. Step-by-step guide for healthcare, finance, and critical infrastructure teams.",
-  featuredImage: "/images/blog/building-custom-dark-web-monitoring-queries-for-your-industry.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "18 min read",

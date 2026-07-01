@@ -10,7 +10,7 @@ export const pciDss40AndDarkWebMonitoringNewRequirementsExplained: BlogPostType 
   slug: "pci-dss-40-and-dark-web-monitoring-new-requirements-explained",
   title: "PCI-DSS 4.0 and Dark Web Monitoring: New Requirements Explained",
   excerpt: "PCI-DSS 4.0 introduces explicit dark web monitoring requirements for compliance. Learn what Requirement 12.3.1 mandates, how to meet the 30-day cycle, and what evidence your QSA needs.",
-  featuredImage: "/images/blog/pci-dss-40-and-dark-web-monitoring-new-requirements-explained.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "12 min read",

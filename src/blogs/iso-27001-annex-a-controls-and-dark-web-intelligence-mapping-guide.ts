@@ -10,7 +10,7 @@ export const iso27001AnnexAControlsAndDarkWebIntelligenceMappingGuide: BlogPostT
   slug: "iso-27001-annex-a-controls-and-dark-web-intelligence-mapping-guide",
   title: "ISO 27001 Annex A Controls and Dark Web Intelligence — Mapping Guide",
   excerpt: "This article maps ISO 27001 Annex A controls to dark web intelligence use cases for ISMS practitioners, internal auditors, and security architects seeking to operationalise threat intelligence within compliance programmes.",
-  featuredImage: "/images/blog/iso-27001-annex-a-controls-and-dark-web-intelligence-mapping-guide.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 4, 2026",
   readingTime: "20 min read",

@@ -10,7 +10,7 @@ export const whatToDoAfterIdentityTheftDarkWebMonitoringAsRecoveryTool: BlogPost
   slug: "what-to-do-after-identity-theft-dark-web-monitoring-as-recovery-tool",
   title: "What to Do After Identity Theft — Dark Web Monitoring as Recovery Tool",
   excerpt: "Learn what to do after identity theft with this guide on dark web monitoring for recovery includes immediate steps long-term prevention and continuous threat intelligence for cybersecurity professionals",
-  featuredImage: "/images/blog/what-to-do-after-identity-theft-dark-web-monitoring-as-recovery-tool.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 4, 2026",
   readingTime: "15 min read",

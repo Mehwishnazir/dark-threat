@@ -10,7 +10,7 @@ export const darkWebMonitoringSlaBenchmarksWhatToDemandFromVendors: BlogPostType
   slug: "dark-web-monitoring-sla-benchmarks-what-to-demand-from-vendors",
   title: "Dark Web Monitoring SLA Benchmarks: What to Demand from Vendors",
   excerpt: "Dark web monitoring SLA benchmarks guide covering detection latency, alert classification accuracy, coverage depth, integration SLAs, and incident response handoff metrics to demand from vendors for effective security intelligence.",
-  featuredImage: "/images/blog/dark-web-monitoring-sla-benchmarks-what-to-demand-from-vendors.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "14 min read",

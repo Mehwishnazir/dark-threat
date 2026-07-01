@@ -10,7 +10,7 @@ export const darkWebCredentialAuctionsWhatGetsSoldAndForHowMuch: BlogPostType & 
   slug: "dark-web-credential-auctions-what-gets-sold-and-for-how-much",
   title: "Dark Web Credential Auctions: What Gets Sold and For How Much",
   excerpt: "Dark web credential auctions pricing types buyers Learn what stolen credentials cost on Exploit.in and XSS.is and how credential leak detection stops sales before attacks",
-  featuredImage: "/images/blog/dark-web-credential-auctions-what-gets-sold-and-for-how-much.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "12 min read",

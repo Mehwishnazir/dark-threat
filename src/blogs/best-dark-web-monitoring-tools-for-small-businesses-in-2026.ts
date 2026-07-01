@@ -10,7 +10,7 @@ export const bestDarkWebMonitoringToolsForSmallBusinessesInTwentyTwentySix: Blog
   slug: "best-dark-web-monitoring-tools-for-small-businesses-in-2026",
   title: "Best Dark Web Monitoring Tools for Small Businesses in 2026",
   excerpt: "Compare the best dark web monitoring tools for small businesses in 2026 with real-time credential leak detection infostealer coverage pricing and integration guidance for SMB IT managers",
-  featuredImage: "/images/blog/best-dark-web-monitoring-tools-for-small-businesses-in-2026.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "July 1, 2026",
   readingTime: "14 min read",

@@ -10,7 +10,7 @@ export const howCriminalForumsCategorizeAndSellLeakedDatabases: BlogPostType & {
   slug: "how-criminal-forums-categorize-and-sell-leaked-databases",
   title: "How Criminal Forums Categorize and Sell Leaked Databases",
   excerpt: "Criminal forums sell leaked databases using industry tags pricing tiers seller reputation and sample verification Learn how data leak detection monitors these marketplaces to catch exfiltrated data before public disclosure",
-  featuredImage: "/images/blog/how-criminal-forums-categorize-and-sell-leaked-databases.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "12 min read",

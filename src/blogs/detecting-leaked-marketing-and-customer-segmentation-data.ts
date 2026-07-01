@@ -10,7 +10,7 @@ export const detectingLeakedMarketingAndCustomerSegmentationData: BlogPostType &
   slug: "detecting-leaked-marketing-and-customer-segmentation-data",
   title: "Detecting Leaked Marketing and Customer Segmentation Data",
   excerpt: "Detect leaked marketing and customer segmentation data on dark web forums ransomware leak sites and marketplaces with targeted data leak detection strategies for CISOs and privacy teams protecting high-value business intelligence",
-  featuredImage: "/images/blog/detecting-leaked-marketing-and-customer-segmentation-data.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "12 min read",

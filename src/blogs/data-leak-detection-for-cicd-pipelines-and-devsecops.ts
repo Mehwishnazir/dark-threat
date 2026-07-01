@@ -10,7 +10,7 @@ export const dataLeakDetectionForCicdPipelinesAndDevsecops: BlogPostType & {
   slug: "data-leak-detection-for-cicd-pipelines-and-devsecops",
   title: "Data Leak Detection for CI/CD Pipelines and DevSecOps",
   excerpt: "Learn how data leak detection for CI/CD pipelines and DevSecOps environments works, including dark web monitoring for exposed credentials, secrets, and supply-chain threats.",
-  featuredImage: "/images/blog/data-leak-detection-for-cicd-pipelines-and-devsecops.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "12 min read",

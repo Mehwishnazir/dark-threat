@@ -10,7 +10,7 @@ export const pciDss40ComplianceAndDarkWebMonitoringWhatFinanceTeamsNeed: BlogPos
   slug: "pci-dss-40-compliance-and-dark-web-monitoring-what-finance-teams-need",
   title: "PCI-DSS 4.0 Compliance and Dark Web Monitoring: What Finance Teams Need",
   excerpt: "Learn how dark web monitoring supports PCI-DSS 4.0 compliance for finance teams covering credential leak detection data leak site monitoring and continuous compliance requirements for cardholder data environments",
-  featuredImage: "/images/blog/pci-dss-40-compliance-and-dark-web-monitoring-what-finance-teams-need.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "16 min read",

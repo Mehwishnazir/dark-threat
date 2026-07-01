@@ -10,7 +10,7 @@ export const dataLeakDetectionForNonprofitsAndCharitableOrganizations: BlogPostT
   slug: "data-leak-detection-for-nonprofits-and-charitable-organizations",
   title: "Data Leak Detection for Nonprofits and Charitable Organizations",
   excerpt: "Learn why nonprofits and charitable organizations are prime targets for data leak detection failures and how dark web monitoring protects donor data and beneficiary PII from ransomware leak sites",
-  featuredImage: "/images/blog/data-leak-detection-for-nonprofits-and-charitable-organizations.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "13 min read",

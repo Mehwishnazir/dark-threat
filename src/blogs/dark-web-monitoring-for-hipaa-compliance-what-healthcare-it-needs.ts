@@ -10,7 +10,7 @@ export const darkWebMonitoringForHipaaComplianceWhatHealthcareItNeeds: BlogPostT
   slug: "dark-web-monitoring-for-hipaa-compliance-what-healthcare-it-needs",
   title: "Dark Web Monitoring for HIPAA Compliance: What Healthcare IT Needs",
   excerpt: "Learn how dark web monitoring for HIPAA compliance maps to Security Rule controls speeds breach notification and satisfies OCR audit requirements with real-time threat intelligence for healthcare IT teams",
-  featuredImage: "/images/blog/dark-web-monitoring-for-hipaa-compliance-what-healthcare-it-needs.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "18 min read",

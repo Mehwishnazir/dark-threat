@@ -10,7 +10,7 @@ export const credentialLeakDetectionRoiCalculatingTheBusinessValue: BlogPostType
   slug: "credential-leak-detection-roi-calculating-the-business-value",
   title: "Credential Leak Detection ROI: Calculating the Business Value",
   excerpt: "Learn how to calculate credential leak detection ROI with real metrics including cost avoidance operational savings risk reduction cyber insurance savings and compliance benefits. A framework for CISOs and security leaders.",
-  featuredImage: "/images/blog/credential-leak-detection-roi-calculating-the-business-value.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "15 min read",

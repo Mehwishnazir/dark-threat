@@ -10,7 +10,7 @@ export const leakedCredentialsFromMajorTwentyTwentyFourTwentyTwentySixBreachesSt
   slug: "leaked-credentials-from-major-2024-2026-breaches-still-in-circulation",
   title: "Leaked Credentials from Major 2024-2026 Breaches Still in Circulation",
   excerpt: "Leaked credentials from major 2024-2026 breaches like Snowflake and Ticketmaster still circulate on dark web forums and Telegram channels. Learn how credential leak detection intercepts them before account takeover.",
-  featuredImage: "/images/blog/leaked-credentials-from-major-2024-2026-breaches-still-in-circulation.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "July 1, 2026",
   readingTime: "18 min read",

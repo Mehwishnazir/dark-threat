@@ -10,7 +10,7 @@ export const leakedStudentCredentialsHowUniversitiesGetCompromised: BlogPostType
   slug: "leaked-student-credentials-how-universities-get-compromised",
   title: "Leaked Student Credentials: How Universities Get Compromised",
   excerpt: "Leaked student credentials are a primary vector for university ransomware attacks. Learn how credential leak detection closes the gaps in .edu domain monitoring.",
-  featuredImage: "/images/blog/leaked-student-credentials-how-universities-get-compromised.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "17 min read",

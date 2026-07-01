@@ -10,7 +10,7 @@ export const howCredentialLeaksLeadToRansomwareTheAttackChainExplained: BlogPost
   slug: "how-credential-leaks-lead-to-ransomware-the-attack-chain-explained",
   title: "How Credential Leaks Lead to Ransomware: The Attack Chain Explained",
   excerpt: "Learn how credential leaks lead directly to ransomware attacks through the five-phase attack chain, and why credential leak detection is the most effective prevention control for SOC teams.",
-  featuredImage: "/images/blog/how-credential-leaks-lead-to-ransomware-the-attack-chain-explained.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "12 min read",

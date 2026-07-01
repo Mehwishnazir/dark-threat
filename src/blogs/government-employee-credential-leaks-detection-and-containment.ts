@@ -10,7 +10,7 @@ export const governmentEmployeeCredentialLeaksDetectionAndContainment: BlogPostT
   slug: "government-employee-credential-leaks-detection-and-containment",
   title: "Government Employee Credential Leaks: Detection and Containment",
   excerpt: "Learn how to detect and contain government employee credential leaks with a framework covering infostealer detection dark web monitoring and containment workflows for gov and mil agencies",
-  featuredImage: "/images/blog/government-employee-credential-leaks-detection-and-containment.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "17 min read",

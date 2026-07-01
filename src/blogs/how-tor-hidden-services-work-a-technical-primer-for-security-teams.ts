@@ -10,7 +10,7 @@ export const howTorHiddenServicesWorkATechnicalPrimerForSecurityTeams: BlogPostT
   slug: "how-tor-hidden-services-work-a-technical-primer-for-security-teams",
   title: "How Tor Hidden Services Work: A Technical Primer for Security Teams",
   excerpt: "This technical primer explains how Tor hidden services work including onion routing protocol and hidden service handshake for security teams monitoring ransomware leak sites and IABs on .onion addresses on the dark web.",
-  featuredImage: "/images/blog/how-tor-hidden-services-work-a-technical-primer-for-security-teams.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "15 min read",

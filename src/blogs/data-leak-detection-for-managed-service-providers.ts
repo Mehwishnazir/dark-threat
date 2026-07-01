@@ -10,7 +10,7 @@ export const dataLeakDetectionForManagedServiceProviders: BlogPostType & {
   slug: "data-leak-detection-for-managed-service-providers",
   title: "Data Leak Detection for Managed Service Providers",
   excerpt: "Data leak detection for managed service providers: a practical guide covering ransomware leak sites, credential exposure monitoring, and commercialization as a client billable service.",
-  featuredImage: "/images/blog/data-leak-detection-for-managed-service-providers.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "14 min read",

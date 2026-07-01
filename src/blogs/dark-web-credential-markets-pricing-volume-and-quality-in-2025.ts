@@ -10,7 +10,7 @@ export const darkWebCredentialMarketsPricingVolumeAndQualityIn2025: BlogPostType
   slug: "dark-web-credential-markets-pricing-volume-and-quality-in-2025",
   title: "Dark Web Credential Markets: Pricing, Volume, and Quality in 2025",
   excerpt: "Dark web credential markets in 2025 pricing volume and quality tiers explained Learn how credential leak detection on forums Telegram channels and marketplaces protects your organisation from account takeover attacks",
-  featuredImage: "/images/blog/dark-web-credential-markets-pricing-volume-and-quality-in-2025.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "14 min read",

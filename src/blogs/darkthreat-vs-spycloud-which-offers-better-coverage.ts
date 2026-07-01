@@ -10,7 +10,7 @@ export const darkthreatVsSpycloudWhichOffersBetterCoverage: BlogPostType & {
   slug: "darkthreat-vs-spycloud-which-offers-better-coverage",
   title: "DarkThreat vs SpyCloud: Which Offers Better Coverage",
   excerpt: "DarkThreat vs SpyCloud comparison for 2025 dark web monitoring coverage covering data sources IAB tracking ransomware leak sites integration quality and compliance for SOC teams.",
-  featuredImage: "/images/blog/darkthreat-vs-spycloud-which-offers-better-coverage.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "12 min read",

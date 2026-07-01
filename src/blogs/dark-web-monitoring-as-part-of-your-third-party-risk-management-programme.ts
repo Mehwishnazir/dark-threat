@@ -10,7 +10,7 @@ export const darkWebMonitoringAsPartOfYourThirdPartyRiskManagementProgramme: Blo
   slug: "dark-web-monitoring-as-part-of-your-third-party-risk-management-programme",
   title: "Dark Web Monitoring as Part of Your Third-Party Risk Management Programme",
   excerpt: "Learn how integrating dark web monitoring into third party risk management dark web programs enhances supply chain security, detects credential leaks, and meets regulatory compliance.",
-  featuredImage: "/images/blog/dark-web-monitoring-as-part-of-your-third-party-risk-management-programme.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 4, 2026",
   readingTime: "15 min read",

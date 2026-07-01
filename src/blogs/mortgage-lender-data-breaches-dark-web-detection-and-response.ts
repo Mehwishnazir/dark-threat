@@ -10,7 +10,7 @@ export const mortgageLenderDataBreachesDarkWebDetectionAndResponse: BlogPostType
   slug: "mortgage-lender-data-breaches-dark-web-detection-and-response",
   title: "Mortgage Lender Data Breaches: Dark Web Detection and Response",
   excerpt: "Learn how mortgage lenders can detect and respond to dark web threats including credential leaks ransomware synthetic identity fraud and IAB listings with a dedicated monitoring strategy",
-  featuredImage: "/images/blog/mortgage-lender-data-breaches-dark-web-detection-and-response.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "15 min read",

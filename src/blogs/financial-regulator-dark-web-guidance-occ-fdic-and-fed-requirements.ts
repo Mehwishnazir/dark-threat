@@ -10,7 +10,7 @@ export const financialRegulatorDarkWebGuidanceOccFdicAndFedRequirements: BlogPos
   slug: "financial-regulator-dark-web-guidance-occ-fdic-and-fed-requirements",
   title: "Financial Regulator Dark Web Guidance: OCC, FDIC, and Fed Requirements",
   excerpt: "Explore the OCC FDIC and Federal Reserve requirements for dark web monitoring in financial institutions Learn what federal examiners expect for compliance with GLBA BSA AML and SEC cybersecurity rules",
-  featuredImage: "/images/blog/financial-regulator-dark-web-guidance-occ-fdic-and-fed-requirements.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "14 min read",

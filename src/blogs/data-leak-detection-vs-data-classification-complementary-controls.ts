@@ -10,7 +10,7 @@ export const dataLeakDetectionVsDataClassificationComplementaryControls: BlogPos
   slug: "data-leak-detection-vs-data-classification-complementary-controls",
   title: "Data Leak Detection vs Data Classification: Complementary Controls",
   excerpt: "Learn how data leak detection and data classification work as complementary security controls. Compare detection scopes, integration methods, and build a unified data security program.",
-  featuredImage: "/images/blog/data-leak-detection-vs-data-classification-complementary-controls.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "11 min read",

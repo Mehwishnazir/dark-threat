@@ -10,7 +10,7 @@ export const credentialLeakDetectionIntegratingWithYourSiemPlatform: BlogPostTyp
   slug: "credential-leak-detection-integrating-with-your-siem-platform",
   title: "Credential Leak Detection: Integrating with Your SIEM Platform",
   excerpt: "Learn how to integrate credential leak detection with your SIEM platform for actionable correlation rules, reduced alert fatigue, and preemptive account remediation against exposed credentials.",
-  featuredImage: "/images/blog/credential-leak-detection-integrating-with-your-siem-platform.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "15 min read",

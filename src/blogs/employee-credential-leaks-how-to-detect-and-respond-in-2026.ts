@@ -10,7 +10,7 @@ export const employeeCredentialLeaksHowToDetectAndRespondInTwentyTwentySix: Blog
   slug: "employee-credential-leaks-how-to-detect-and-respond-in-2026",
   title: "Employee Credential Leaks: How to Detect and Respond in 2026",
   excerpt: "Learn how to detect and respond to employee credential leaks in 2026, including infostealer monitoring, dark web credential tracking, and automated response workflows.",
-  featuredImage: "/images/blog/employee-credential-leaks-how-to-detect-and-respond-in-2026.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "July 1, 2026",
   readingTime: "14 min read",

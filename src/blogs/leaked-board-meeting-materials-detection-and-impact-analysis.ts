@@ -10,7 +10,7 @@ export const leakedBoardMeetingMaterialsDetectionAndImpactAnalysis: BlogPostType
   slug: "leaked-board-meeting-materials-detection-and-impact-analysis",
   title: "Leaked Board Meeting Materials: Detection and Impact Analysis",
   excerpt: "Leaked board meeting materials require specialised data leak detection Learn how board portal compromises expose MA strategy financial projections and legal communications on ransomware leak sites and dark web marketplaces",
-  featuredImage: "/images/blog/leaked-board-meeting-materials-detection-and-impact-analysis.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "15 min read",

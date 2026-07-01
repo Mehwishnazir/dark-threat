@@ -10,7 +10,7 @@ export const darkWebMonitoringForCreditCardFraudPrevention: BlogPostType & {
   slug: "dark-web-monitoring-for-credit-card-fraud-prevention",
   title: "Dark Web Monitoring for Credit Card Fraud Prevention",
   excerpt: "Learn how dark web monitoring detects stolen credit card data on carding shops and forums to prevent fraud before authorization, with insights on BIN-based alerting and PCI-DSS compliance.",
-  featuredImage: "/images/blog/dark-web-monitoring-for-credit-card-fraud-prevention.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "18 min read",

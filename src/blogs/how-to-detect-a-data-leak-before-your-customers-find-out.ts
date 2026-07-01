@@ -10,7 +10,7 @@ export const howToDetectADataLeakBeforeYourCustomersFindOut: BlogPostType & {
   slug: "how-to-detect-a-data-leak-before-your-customers-find-out",
   title: "How to Detect a Data Leak Before Your Customers Find Out",
   excerpt: "Learn how to detect a data leak before customers discover it with a six-step framework for data leak detection covering ransomware leak sites dark web forums and paste sites",
-  featuredImage: "/images/blog/how-to-detect-a-data-leak-before-your-customers-find-out.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "17 min read",

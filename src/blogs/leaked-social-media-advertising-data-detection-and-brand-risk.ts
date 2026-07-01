@@ -10,7 +10,7 @@ export const leakedSocialMediaAdvertisingDataDetectionAndBrandRisk: BlogPostType
   slug: "leaked-social-media-advertising-data-detection-and-brand-risk",
   title: "Leaked Social Media Advertising Data: Detection and Brand Risk",
   excerpt: "Detect leaked social media advertising data before it damages your brand. Learn how data leak detection covers pixel data, API credentials, and audience lists on dark web and ransomware leak sites.",
-  featuredImage: "/images/blog/leaked-social-media-advertising-data-detection-and-brand-risk.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "16 min read",

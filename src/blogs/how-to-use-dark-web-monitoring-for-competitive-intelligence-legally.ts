@@ -10,7 +10,7 @@ export const howToUseDarkWebMonitoringForCompetitiveIntelligenceLegally: BlogPos
   slug: "how-to-use-dark-web-monitoring-for-competitive-intelligence-legally",
   title: "How to Use Dark Web Monitoring for Competitive Intelligence (Legally)",
   excerpt: "Learn how to legally use dark web monitoring for competitive intelligence with this step-by-step guide on permissible sources threat actor signals and compliance boundaries for CISOs and security teams",
-  featuredImage: "/images/blog/how-to-use-dark-web-monitoring-for-competitive-intelligence-legally.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "13 min read",

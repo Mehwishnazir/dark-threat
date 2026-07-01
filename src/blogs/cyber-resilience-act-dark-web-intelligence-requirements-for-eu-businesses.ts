@@ -10,7 +10,7 @@ export const cyberResilienceActDarkWebIntelligenceRequirementsForEuBusinesses: B
   slug: "cyber-resilience-act-dark-web-intelligence-requirements-for-eu-businesses",
   title: "Cyber Resilience Act — Dark Web Intelligence Requirements for EU Businesses",
   excerpt: "Learn how the EU Cyber Resilience Act requires dark web intelligence for vulnerability management compliance and how to build a CRA-compliant monitoring program to detect threats before they become breaches.",
-  featuredImage: "/images/blog/cyber-resilience-act-dark-web-intelligence-requirements-for-eu-businesses.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 4, 2026",
   readingTime: "17 min read",

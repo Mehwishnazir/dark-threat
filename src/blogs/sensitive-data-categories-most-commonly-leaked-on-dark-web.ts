@@ -10,7 +10,7 @@ export const sensitiveDataCategoriesMostCommonlyLeakedOnDarkWeb: BlogPostType & 
   slug: "sensitive-data-categories-most-commonly-leaked-on-dark-web",
   title: "Sensitive Data Categories Most Commonly Leaked on Dark Web",
   excerpt: "Discover the sensitive data categories most commonly leaked on dark web PII PHI source code credentials and financial data Learn how to detect each category systematically",
-  featuredImage: "/images/blog/sensitive-data-categories-most-commonly-leaked-on-dark-web.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "14 min read",

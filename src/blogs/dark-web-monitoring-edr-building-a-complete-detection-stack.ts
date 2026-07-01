@@ -10,7 +10,7 @@ export const darkWebMonitoringEdrBuildingACompleteDetectionStack: BlogPostType &
   slug: "dark-web-monitoring-edr-building-a-complete-detection-stack",
   title: "Dark Web Monitoring + EDR: Building a Complete Detection Stack",
   excerpt: "Learn how dark web monitoring and EDR integrate to build a complete detection stack that detects credential exposure before ransomware deploys and reduces dwell time",
-  featuredImage: "/images/blog/dark-web-monitoring-edr-building-a-complete-detection-stack.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "14 min read",

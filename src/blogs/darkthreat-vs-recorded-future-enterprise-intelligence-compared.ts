@@ -10,7 +10,7 @@ export const darkthreatVsRecordedFutureEnterpriseIntelligenceCompared: BlogPostT
   slug: "darkthreat-vs-recorded-future-enterprise-intelligence-compared",
   title: "DarkThreat vs Recorded Future: Enterprise Intelligence Compared",
   excerpt: "DarkThreat.AI vs Recorded Future comparison for enterprise dark web monitoring covering coverage data freshness alert fidelity stealer logs ransomware detection pricing and compliance for CISOs and SOC directors",
-  featuredImage: "/images/blog/darkthreat-vs-recorded-future-enterprise-intelligence-compared.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "15 min read",

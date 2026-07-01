@@ -10,7 +10,7 @@ export const howDarkWebMonitoringHelpsInsuranceCompaniesDetectFraud: BlogPostTyp
   slug: "how-dark-web-monitoring-helps-insurance-companies-detect-fraud",
   title: "How Dark Web Monitoring Helps Insurance Companies Detect Fraud",
   excerpt: "Dark web monitoring for insurance fraud detection Learn how continuous dark web intelligence helps insurers detect credential leaks data dumps and fraud schemes before claims are paid reducing losses and ensuring regulatory compliance",
-  featuredImage: "/images/blog/how-dark-web-monitoring-helps-insurance-companies-detect-fraud.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "12 min read",

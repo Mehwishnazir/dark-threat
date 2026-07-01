@@ -10,7 +10,7 @@ export const howToMonitorTheDarkWebForStolenEmployeeCredentials: BlogPostType & 
   slug: "how-to-monitor-the-dark-web-for-stolen-employee-credentials",
   title: "How to Monitor the Dark Web for Stolen Employee Credentials",
   excerpt: "Learn how to monitor the dark web for stolen employee credentials with a step-by-step guide covering stealer logs IAB forums validation and automated incident response for SOC teams.",
-  featuredImage: "/images/blog/how-to-monitor-the-dark-web-for-stolen-employee-credentials.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "12 min read",

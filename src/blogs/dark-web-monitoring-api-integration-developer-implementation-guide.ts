@@ -10,7 +10,7 @@ export const darkWebMonitoringApiIntegrationDeveloperImplementationGuide: BlogPo
   slug: "dark-web-monitoring-api-integration-developer-implementation-guide",
   title: "Dark Web Monitoring API Integration: Developer Implementation Guide",
   excerpt: "Learn how to integrate a dark web monitoring API step-by-step This developer guide covers authentication schema mapping webhooks filtering and SIEM integration for automated threat intelligence ingestion",
-  featuredImage: "/images/blog/dark-web-monitoring-api-integration-developer-implementation-guide.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "15 min read",

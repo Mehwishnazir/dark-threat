@@ -10,7 +10,7 @@ export const credentialLeakDetectionVsPasswordManagementCriticalDifferences: Blo
   slug: "credential-leak-detection-vs-password-management-critical-differences",
   title: "Credential Leak Detection vs Password Management: Critical Differences",
   excerpt: "Credential leak detection vs password management: Learn the critical differences, why password managers miss infostealer logs, and how dedicated credential monitoring closes the exposure gap for organizations.",
-  featuredImage: "/images/blog/credential-leak-detection-vs-password-management-critical-differences.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "16 min read",

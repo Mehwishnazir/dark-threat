@@ -10,7 +10,7 @@ export const howToRespondToADataLeakFoundByExternalResearchers: BlogPostType & {
   slug: "how-to-respond-to-a-data-leak-found-by-external-researchers",
   title: "How to Respond to a Data Leak Found by External Researchers",
   excerpt: "Step-by-step incident response guide for data leaks found by external researchers covering containment forensic validation legal assessment and coordinated disclosure to prevent escalation to a breach with regulatory fines",
-  featuredImage: "/images/blog/how-to-respond-to-a-data-leak-found-by-external-researchers.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "18 min read",

@@ -10,7 +10,7 @@ export const credentialMonitoringForZeroTrustArchitectureImplementation: BlogPos
   slug: "credential-monitoring-for-zero-trust-architecture-implementation",
   title: "Credential Monitoring for Zero Trust Architecture Implementation",
   excerpt: "Learn how credential monitoring for zero trust architecture implementation closes the gap between ZTA policy and real-world credential exposure on dark web markets and in infostealer logs.",
-  featuredImage: "/images/blog/credential-monitoring-for-zero-trust-architecture-implementation.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "16 min read",

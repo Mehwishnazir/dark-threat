@@ -10,7 +10,7 @@ export const whatIsDarkWebMonitoringAndHowDoesItActuallyWorkInTwentyTwentySix: B
   slug: "what-is-dark-web-monitoring-and-how-does-it-actually-work-in-2026",
   title: "What Is Dark Web Monitoring and How Does It Actually Work in 2026",
   excerpt: "Understand how dark web monitoring works in 2026 for credential leak detection covering infostealer logs combo lists IAB markets and Telegram channels with provider evaluation criteria",
-  featuredImage: "/images/blog/what-is-dark-web-monitoring-and-how-does-it-actually-work-in-2026.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "July 1, 2026",
   readingTime: "16 min read",

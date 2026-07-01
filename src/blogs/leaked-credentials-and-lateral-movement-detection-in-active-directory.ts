@@ -10,7 +10,7 @@ export const leakedCredentialsAndLateralMovementDetectionInActiveDirectory: Blog
   slug: "leaked-credentials-and-lateral-movement-detection-in-active-directory",
   title: "Leaked Credentials and Lateral Movement: Detection in Active Directory",
   excerpt: "Learn how leaked credentials enable lateral movement in Active Directory and detect them using Windows event logs UEBA and dark web credential feeds from DarkThreat AI",
-  featuredImage: "/images/blog/leaked-credentials-and-lateral-movement-detection-in-active-directory.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "17 min read",

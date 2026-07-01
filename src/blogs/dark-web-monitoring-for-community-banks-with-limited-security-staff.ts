@@ -10,7 +10,7 @@ export const darkWebMonitoringForCommunityBanksWithLimitedSecurityStaff: BlogPos
   slug: "dark-web-monitoring-for-community-banks-with-limited-security-staff",
   title: "Dark Web Monitoring for Community Banks with Limited Security Staff",
   excerpt: "Learn how community banks can implement dark web monitoring to detect credential leaks, initial access broker activity, and supply chain threats while meeting OCC and FDIC compliance requirements with a lean security team.",
-  featuredImage: "/images/blog/dark-web-monitoring-for-community-banks-with-limited-security-staff.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "13 min read",

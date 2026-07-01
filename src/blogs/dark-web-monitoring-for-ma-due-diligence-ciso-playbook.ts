@@ -10,7 +10,7 @@ export const darkWebMonitoringForMaDueDiligenceCisoPlaybook: BlogPostType & {
   slug: "dark-web-monitoring-for-ma-due-diligence-ciso-playbook",
   title: "Dark Web Monitoring for M&A Due Diligence: CISO Playbook",
   excerpt: "Dark web monitoring for M&A due diligence: A CISO playbook covering pre-signing scans, IAB detection, stealer log risks, and post-close integration monitoring for secure transactions.",
-  featuredImage: "/images/blog/dark-web-monitoring-for-ma-due-diligence-ciso-playbook.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "12 min read",

@@ -10,7 +10,7 @@ export const legalDataLeaksHowLawFirmsDetectPrivilegedInformationExposure: BlogP
   slug: "legal-data-leaks-how-law-firms-detect-privileged-information-exposure",
   title: "Legal Data Leaks: How Law Firms Detect Privileged Information Exposure",
   excerpt: "Learn how law firms detect privileged information exposure with data leak detection covering ransomware leak sites dark web forums and compliance obligations for legal sector data protection",
-  featuredImage: "/images/blog/legal-data-leaks-how-law-firms-detect-privileged-information-exposure.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "13 min read",

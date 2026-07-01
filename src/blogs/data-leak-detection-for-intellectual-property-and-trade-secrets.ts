@@ -10,7 +10,7 @@ export const dataLeakDetectionForIntellectualPropertyAndTradeSecrets: BlogPostTy
   slug: "data-leak-detection-for-intellectual-property-and-trade-secrets",
   title: "Data Leak Detection for Intellectual Property and Trade Secrets",
   excerpt: "Data leak detection for intellectual property and trade secrets requires specialized scanning of ransomware leak sites, dark web forums, and source code repositories. Learn how DarkThreat.AI catches proprietary data exposures before they harm your competitive advantage.",
-  featuredImage: "/images/blog/data-leak-detection-for-intellectual-property-and-trade-secrets.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "12 min read",

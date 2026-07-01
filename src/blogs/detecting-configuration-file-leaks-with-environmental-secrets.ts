@@ -10,7 +10,7 @@ export const detectingConfigurationFileLeaksWithEnvironmentalSecrets: BlogPostTy
   slug: "detecting-configuration-file-leaks-with-environmental-secrets",
   title: "Detecting Configuration File Leaks with Environmental Secrets",
   excerpt: "Learn how configuration file leaks expose environmental secrets on dark web and ransomware leak sites and how data leak detection can identify exposures before attackers exploit them",
-  featuredImage: "/images/blog/detecting-configuration-file-leaks-with-environmental-secrets.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "13 min read",

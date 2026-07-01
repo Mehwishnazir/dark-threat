@@ -10,7 +10,7 @@ export const dataLeakDetectionForSaasPlatformsAndSharedEnvironments: BlogPostTyp
   slug: "data-leak-detection-for-saas-platforms-and-shared-environments",
   title: "Data Leak Detection for SaaS Platforms and Shared Environments",
   excerpt: "Learn how data leak detection for SaaS platforms and shared environments works across ransomware leak sites infostealer logs and cloud misconfigurations to close detection gaps",
-  featuredImage: "/images/blog/data-leak-detection-for-saas-platforms-and-shared-environments.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "16 min read",

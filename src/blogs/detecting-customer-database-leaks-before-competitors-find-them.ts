@@ -10,7 +10,7 @@ export const detectingCustomerDatabaseLeaksBeforeCompetitorsFindThem: BlogPostTy
   slug: "detecting-customer-database-leaks-before-competitors-find-them",
   title: "Detecting Customer Database Leaks Before Competitors Find Them",
   excerpt: "Detect customer database leaks before competitors find them with dark web monitoring. Learn to identify leak signals, build detection workflows, and accelerate response timelines.",
-  featuredImage: "/images/blog/detecting-customer-database-leaks-before-competitors-find-them.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "13 min read",

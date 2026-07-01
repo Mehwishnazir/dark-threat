@@ -10,7 +10,7 @@ export const dataLeakDetectionAndCyberInsuranceWhatPoliciesRequire: BlogPostType
   slug: "data-leak-detection-and-cyber-insurance-what-policies-require",
   title: "Data Leak Detection and Cyber Insurance: What Policies Require",
   excerpt: "Learn how cyber insurance carriers now require documented data leak detection across ransomware leak sites, dark web forums, and paste sites. Get actionable steps to build an insurer-ready data leak detection program and meet underwriting requirements.",
-  featuredImage: "/images/blog/data-leak-detection-and-cyber-insurance-what-policies-require.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "15 min read",

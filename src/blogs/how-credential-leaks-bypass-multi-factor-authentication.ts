@@ -10,7 +10,7 @@ export const howCredentialLeaksBypassMultiFactorAuthentication: BlogPostType & {
   slug: "how-credential-leaks-bypass-multi-factor-authentication",
   title: "How Credential Leaks Bypass Multi-Factor Authentication",
   excerpt: "How leaked credentials bypass multi-factor authentication through session cookies infostealer logs and token theft Learn why credential leak detection is essential for MFA bypass prevention",
-  featuredImage: "/images/blog/how-credential-leaks-bypass-multi-factor-authentication.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "12 min read",

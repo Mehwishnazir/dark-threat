@@ -10,7 +10,7 @@ export const credentialLeakDetectionForEducationalInstitutions: BlogPostType & {
   slug: "credential-leak-detection-for-educational-institutions",
   title: "Credential Leak Detection for Educational Institutions",
   excerpt: "Learn how credential leak detection protects educational institutions from infostealer logs combo lists and phishing attacks targeting student and faculty accounts with a step-by-step implementation guide",
-  featuredImage: "/images/blog/credential-leak-detection-for-educational-institutions.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "13 min read",

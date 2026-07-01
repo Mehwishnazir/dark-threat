@@ -10,7 +10,7 @@ export const dataLeakDetectionForRealEstateAndPropertyManagement: BlogPostType &
   slug: "data-leak-detection-for-real-estate-and-property-management",
   title: "Data Leak Detection for Real Estate and Property Management",
   excerpt: "Learn how data leak detection protects real estate and property management firms from tenant PII exposure on ransomware leak sites and dark web forums.",
-  featuredImage: "/images/blog/data-leak-detection-for-real-estate-and-property-management.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "14 min read",

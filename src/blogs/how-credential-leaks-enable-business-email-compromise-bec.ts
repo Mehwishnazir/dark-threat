@@ -10,7 +10,7 @@ export const howCredentialLeaksEnableBusinessEmailCompromiseBec: BlogPostType & 
   slug: "how-credential-leaks-enable-business-email-compromise-bec",
   title: "How Credential Leaks Enable Business Email Compromise (BEC)",
   excerpt: "Learn how credential leaks enable Business Email Compromise BEC attacks and why credential leak detection is critical for preventing wire fraud and protecting organizations from financial losses",
-  featuredImage: "/images/blog/how-credential-leaks-enable-business-email-compromise-bec.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "14 min read",

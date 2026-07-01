@@ -10,7 +10,7 @@ export const remoteAccessToolAbuseHowInsidersUseDarkWebTools: BlogPostType & {
   slug: "remote-access-tool-abuse-how-insiders-use-dark-web-tools",
   title: "Remote Access Tool Abuse — How Insiders Use Dark Web Tools",
   excerpt: "Remote access tool abuse by insiders is a critical cybersecurity blind spot. This article examines RAT insider threats, dark web markets supplying malicious tools, and detection strategies.",
-  featuredImage: "/images/blog/remote-access-tool-abuse-how-insiders-use-dark-web-tools.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 4, 2026",
   readingTime: "22 min read",

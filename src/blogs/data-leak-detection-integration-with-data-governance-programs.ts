@@ -10,7 +10,7 @@ export const dataLeakDetectionIntegrationWithDataGovernancePrograms: BlogPostTyp
   slug: "data-leak-detection-integration-with-data-governance-programs",
   title: "Data Leak Detection Integration with Data Governance Programs",
   excerpt: "Learn how to integrate data leak detection with data governance programs using dark web monitoring and GDPR ISO 27701 and NIST framework controls for proactive compliance and risk reduction",
-  featuredImage: "/images/blog/data-leak-detection-integration-with-data-governance-programs.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "14 min read",

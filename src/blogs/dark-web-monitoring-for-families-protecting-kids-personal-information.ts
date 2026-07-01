@@ -10,7 +10,7 @@ export const darkWebMonitoringForFamiliesProtectingKidsPersonalInformation: Blog
   slug: "dark-web-monitoring-for-families-protecting-kids-personal-information",
   title: "Dark Web Monitoring for Families — Protecting Kids' Personal Information",
   excerpt: "Learn how dark web monitoring protects children from identity theft including SSN leaks credential exposure and medical fraud with proactive family cybersecurity strategies",
-  featuredImage: "/images/blog/dark-web-monitoring-for-families-protecting-kids-personal-information.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 4, 2026",
   readingTime: "18 min read",

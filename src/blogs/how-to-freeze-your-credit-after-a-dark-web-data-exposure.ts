@@ -10,7 +10,7 @@ export const howToFreezeYourCreditAfterADarkWebDataExposure: BlogPostType & {
   slug: "how-to-freeze-your-credit-after-a-dark-web-data-exposure",
   title: "How to Freeze Your Credit After a Dark Web Data Exposure",
   excerpt: "Learn how to freeze your credit at Equifax, Experian, and TransUnion after a dark web data exposure with this expert step-by-step guide covering verification, protection, and long-term security strategies.",
-  featuredImage: "/images/blog/how-to-freeze-your-credit-after-a-dark-web-data-exposure.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 4, 2026",
   readingTime: "22 min read",

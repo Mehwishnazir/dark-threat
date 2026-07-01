@@ -10,7 +10,7 @@ export const howDataLeakDetectionSatisfiesCcpaAndStatePrivacyLaws: BlogPostType 
   slug: "how-data-leak-detection-satisfies-ccpa-and-state-privacy-laws",
   title: "How Data Leak Detection Satisfies CCPA and State Privacy Laws",
   excerpt: "How data leak detection satisfies CCPA and state privacy law requirements for reasonable security, timely breach notification, and risk assessment obligations across 15+ state frameworks.",
-  featuredImage: "/images/blog/how-data-leak-detection-satisfies-ccpa-and-state-privacy-laws.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "17 min read",

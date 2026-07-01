@@ -10,7 +10,7 @@ export const howToInvestigateASuspectedDataLeakStepByStepGuide: BlogPostType & {
   slug: "how-to-investigate-a-suspected-data-leak-step-by-step-guide",
   title: "How to Investigate a Suspected Data Leak: Step-by-Step Guide",
   excerpt: "Learn how to investigate a suspected data leak with a step-by-step guide covering containment, evidence preservation, dark web reconnaissance, root cause analysis, and notification strategy for incident response teams.",
-  featuredImage: "/images/blog/how-to-investigate-a-suspected-data-leak-step-by-step-guide.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "11 min read",

@@ -10,7 +10,7 @@ export const darkWebMonitoringForMsspsPlatformComparisonGuide: BlogPostType & {
   slug: "dark-web-monitoring-for-mssps-platform-comparison-guide",
   title: "Dark Web Monitoring for MSSPs: Platform Comparison Guide",
   excerpt: "MSSP dark web monitoring platform comparison guide: evaluate coverage, data freshness, API integration, alert fidelity, and multi-tenant pricing for your SOC.",
-  featuredImage: "/images/blog/dark-web-monitoring-for-mssps-platform-comparison-guide.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "11 min read",

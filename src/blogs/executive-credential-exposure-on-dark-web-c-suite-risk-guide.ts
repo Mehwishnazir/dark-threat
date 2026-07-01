@@ -10,7 +10,7 @@ export const executiveCredentialExposureOnDarkWebCSuiteRiskGuide: BlogPostType &
   slug: "executive-credential-exposure-on-dark-web-c-suite-risk-guide",
   title: "Executive Credential Exposure on Dark Web: C-Suite Risk Guide",
   excerpt: "Learn how executive credentials are stolen by infostealer malware traded on dark web markets and weaponized in attacks A risk guide for C-suites on credential leak detection",
-  featuredImage: "/images/blog/executive-credential-exposure-on-dark-web-c-suite-risk-guide.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "14 min read",

@@ -10,7 +10,7 @@ export const howToBuildAnInsiderThreatDetectionProgramIn6Steps: BlogPostType & {
   slug: "how-to-build-an-insider-threat-detection-program-in-6-steps",
   title: "How to Build an Insider Threat Detection Program in 6 Steps",
   excerpt: "Learn how to build a six-step insider threat detection program covering governance UEBA dark web monitoring and response procedures for enterprise cybersecurity",
-  featuredImage: "/images/blog/how-to-build-an-insider-threat-detection-program-in-6-steps.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 3, 2026",
   readingTime: "14 min read",

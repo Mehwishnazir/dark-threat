@@ -10,7 +10,7 @@ export const darkWebMonitoringForSingaporesFinancialSector: BlogPostType & {
   slug: "dark-web-monitoring-for-singapores-financial-sector",
   title: "Dark Web Monitoring for Singapore's Financial Sector",
   excerpt: "Dark web monitoring for Singapore financial sector MAS TRM compliance threat actor detection initial access broker monitoring and implementation guide for CISOs",
-  featuredImage: "/images/blog/dark-web-monitoring-for-singapores-financial-sector.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 20, 2026",
   readingTime: "14 min read",

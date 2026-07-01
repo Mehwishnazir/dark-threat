@@ -10,7 +10,7 @@ export const twentyTwentySixStateOfDarkWebThreatsAnnualIntelligenceReport: BlogP
   slug: "2026-state-of-dark-web-threats-annual-intelligence-report",
   title: "2026 State of Dark Web Threats: Annual Intelligence Report",
   excerpt: "2026 State of Dark Web Threats report on credential leak detection covering infostealer malware families Telegram markets initial access brokers combo lists and detection gaps every CISO must know",
-  featuredImage: "/images/blog/2026-state-of-dark-web-threats-annual-intelligence-report.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "July 1, 2026",
   readingTime: "18 min read",

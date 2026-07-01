@@ -10,7 +10,7 @@ export const howToMonitorPasteSitesForCorporateDataLeaks: BlogPostType & {
   slug: "how-to-monitor-paste-sites-for-corporate-data-leaks",
   title: "How to Monitor Paste Sites for Corporate Data Leaks",
   excerpt: "Learn how to monitor paste sites for corporate data leaks with a step-by-step workflow covering tools, queries, verification, and automated alerting to detect exposed data before it becomes a crisis.",
-  featuredImage: "/images/blog/how-to-monitor-paste-sites-for-corporate-data-leaks.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "12 min read",

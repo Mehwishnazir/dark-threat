@@ -10,7 +10,7 @@ export const howToConfigureDarkWebMonitoringKeywordsForMaximumCoverage: BlogPost
   slug: "how-to-configure-dark-web-monitoring-keywords-for-maximum-coverage",
   title: "How to Configure Dark Web Monitoring Keywords for Maximum Coverage",
   excerpt: "Learn how to configure dark web monitoring keywords for maximum coverage. Step-by-step guide for SOC teams to capture stealer logs, IAB ads, and credential leaks before intrusions occur.",
-  featuredImage: "/images/blog/how-to-configure-dark-web-monitoring-keywords-for-maximum-coverage.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "13 min read",

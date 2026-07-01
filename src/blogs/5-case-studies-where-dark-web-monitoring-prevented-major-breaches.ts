@@ -10,7 +10,7 @@ export const fiveCaseStudiesWhereDarkWebMonitoringPreventedMajorBreaches: BlogPo
   slug: "5-case-studies-where-dark-web-monitoring-prevented-major-breaches",
   title: "5 Case Studies Where Dark Web Monitoring Prevented Major Breaches",
   excerpt: "Five real-world case studies showing how dark web monitoring prevented major breaches including credential dumps initial access broker sales and stealer logs stopping ransomware supply chain attacks and IP theft",
-  featuredImage: "/images/blog/5-case-studies-where-dark-web-monitoring-prevented-major-breaches.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "15 min read",

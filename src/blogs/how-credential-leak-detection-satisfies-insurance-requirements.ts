@@ -10,7 +10,7 @@ export const howCredentialLeakDetectionSatisfiesInsuranceRequirements: BlogPostT
   slug: "how-credential-leak-detection-satisfies-insurance-requirements",
   title: "How Credential Leak Detection Satisfies Insurance Requirements",
   excerpt: "Learn how credential leak detection satisfies cyber insurance requirements, reduces premiums, and prevents coverage denial by mapping specific controls to underwriter expectations and policy language.",
-  featuredImage: "/images/blog/how-credential-leak-detection-satisfies-insurance-requirements.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "11 min read",

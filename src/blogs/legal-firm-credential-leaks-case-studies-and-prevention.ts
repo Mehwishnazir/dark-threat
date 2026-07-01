@@ -10,7 +10,7 @@ export const legalFirmCredentialLeaksCaseStudiesAndPrevention: BlogPostType & {
   slug: "legal-firm-credential-leaks-case-studies-and-prevention",
   title: "Legal Firm Credential Leaks: Case Studies and Prevention",
   excerpt: "Explore three case studies of credential leaks at law firms including infostealer and vendor attacks and learn a prevention framework for legal credential leak detection",
-  featuredImage: "/images/blog/legal-firm-credential-leaks-case-studies-and-prevention.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "12 min read",

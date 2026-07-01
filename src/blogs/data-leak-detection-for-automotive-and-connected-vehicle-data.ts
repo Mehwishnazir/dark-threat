@@ -10,7 +10,7 @@ export const dataLeakDetectionForAutomotiveAndConnectedVehicleData: BlogPostType
   slug: "data-leak-detection-for-automotive-and-connected-vehicle-data",
   title: "Data Leak Detection for Automotive and Connected Vehicle Data",
   excerpt: "Learn how data leak detection for automotive and connected vehicle data monitors ransomware leak sites, dark web marketplaces, and Telegram channels for exposed PII, VINs, and telemetry.",
-  featuredImage: "/images/blog/data-leak-detection-for-automotive-and-connected-vehicle-data.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "16 min read",

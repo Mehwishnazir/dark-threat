@@ -10,7 +10,7 @@ export const bestDarkWebMonitoringServicesForEnterprisesInTwentyTwentySix: BlogP
   slug: "best-dark-web-monitoring-services-for-enterprises-in-2026",
   title: "Best Dark Web Monitoring Services for Enterprises in 2026",
   excerpt: "Discover the best dark web monitoring services for enterprises in 2026 compare credential leak detection stealer log monitoring and IAB market coverage for effective security",
-  featuredImage: "/images/blog/best-dark-web-monitoring-services-for-enterprises-in-2026.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "July 1, 2026",
   readingTime: "12 min read",

@@ -10,7 +10,7 @@ export const dataLeakDetectionOnTelegramNewIntelligenceSources: BlogPostType & {
   slug: "data-leak-detection-on-telegram-new-intelligence-sources",
   title: "Data Leak Detection on Telegram: New Intelligence Sources",
   excerpt: "Learn how Telegram has become a primary data leak channel for cybercriminals and how security teams can detect and monitor Telegram-based data leaks effectively with advanced intelligence sources.",
-  featuredImage: "/images/blog/data-leak-detection-on-telegram-new-intelligence-sources.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "15 min read",

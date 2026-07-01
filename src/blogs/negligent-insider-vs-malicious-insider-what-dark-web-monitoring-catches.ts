@@ -10,7 +10,7 @@ export const negligentInsiderVsMaliciousInsiderWhatDarkWebMonitoringCatches: Blo
   slug: "negligent-insider-vs-malicious-insider-what-dark-web-monitoring-catches",
   title: "Negligent Insider vs Malicious Insider — What Dark Web Monitoring Catches",
   excerpt: "Learn the key differences between negligent and malicious insider threats, how dark web monitoring detects both, and build an effective insider threat programme with dark web intelligence.",
-  featuredImage: "/images/blog/negligent-insider-vs-malicious-insider-what-dark-web-monitoring-catches.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 3, 2026",
   readingTime: "19 min read",

@@ -10,7 +10,7 @@ export const mostActiveDarkWebMarketsInTwentyTwentySixWhatSecurityTeamsMonitor: 
   slug: "most-active-dark-web-markets-in-2026-what-security-teams-monitor",
   title: "Most Active Dark Web Markets in 2026: What Security Teams Monitor",
   excerpt: "Explore the most active dark web markets in 2026 for credential leak detection including Russian Market XSS is and Exploit in Learn how security teams monitor these sources in real time to detect leaked credentials infostealer logs and initial access broker listings before attackers exploit them",
-  featuredImage: "/images/blog/most-active-dark-web-markets-in-2026-what-security-teams-monitor.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "July 1, 2026",
   readingTime: "13 min read",

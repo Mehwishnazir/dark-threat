@@ -10,7 +10,7 @@ export const howDataLeakDetectionReducesCyberInsuranceClaims: BlogPostType & {
   slug: "how-data-leak-detection-reduces-cyber-insurance-claims",
   title: "How Data Leak Detection Reduces Cyber Insurance Claims",
   excerpt: "Learn how data leak detection reduces cyber insurance claims by identifying leaked credentials and data on the dark web before attackers exploit them lowering claim costs and improving premium outcomes",
-  featuredImage: "/images/blog/how-data-leak-detection-reduces-cyber-insurance-claims.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "12 min read",

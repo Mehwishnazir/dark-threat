@@ -10,7 +10,7 @@ export const darkWebThreatsTargetingLondonFinancialInstitutions: BlogPostType & 
   slug: "dark-web-threats-targeting-london-financial-institutions",
   title: "Dark Web Threats Targeting London Financial Institutions",
   excerpt: "Dark web threats targeting London financial institutions are escalating with stealer logs initial access brokers and ransomware leak sites. Learn how continuous dark web monitoring protects banks and fintech firms from credential exposure and regulatory risk.",
-  featuredImage: "/images/blog/dark-web-threats-targeting-london-financial-institutions.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 20, 2026",
   readingTime: "18 min read",

@@ -10,7 +10,7 @@ export const tenBestDarkWebMonitoringApisForDevelopers: BlogPostType & {
   slug: "10-best-dark-web-monitoring-apis-for-developers",
   title: "10 Best Dark Web Monitoring APIs for Developers",
   excerpt: "Evaluate the 10 best dark web monitoring APIs for developers in 2025. Compare data freshness, source coverage, integration patterns, and pricing for SOC automation.",
-  featuredImage: "/images/blog/10-best-dark-web-monitoring-apis-for-developers.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "18 min read",

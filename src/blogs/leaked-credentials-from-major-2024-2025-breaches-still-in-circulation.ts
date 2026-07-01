@@ -10,7 +10,7 @@ export const leakedCredentialsFromMajor20242025BreachesStillInCirculation: BlogP
   slug: "leaked-credentials-from-major-2024-2025-breaches-still-in-circulation",
   title: "Leaked Credentials from Major 2024-2025 Breaches Still in Circulation",
   excerpt: "Explore why leaked credentials from major 2024-2025 breaches like Change Healthcare and National Public Data still circulate on dark web markets and how credential leak detection must evolve to catch persistent exposures for SOC teams and CISOs.",
-  featuredImage: "/images/blog/leaked-credentials-from-major-2024-2025-breaches-still-in-circulation.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "13 min read",

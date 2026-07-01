@@ -10,7 +10,7 @@ export const dataLeakDetectionMetricsMttDetectMttRespondCoverage: BlogPostType &
   slug: "data-leak-detection-metrics-mtt-detect-mtt-respond-coverage",
   title: "Data Leak Detection Metrics: MTT Detect, MTT Respond, Coverage",
   excerpt: "Learn how MTT Detect MTTR and Coverage define data leak detection effectiveness with ransomware leak site and dark web monitoring metrics benchmark your program",
-  featuredImage: "/images/blog/data-leak-detection-metrics-mtt-detect-mtt-respond-coverage.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "12 min read",

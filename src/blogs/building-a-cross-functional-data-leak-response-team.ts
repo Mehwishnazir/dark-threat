@@ -10,7 +10,7 @@ export const buildingACrossFunctionalDataLeakResponseTeam: BlogPostType & {
   slug: "building-a-cross-functional-data-leak-response-team",
   title: "Building a Cross-Functional Data Leak Response Team",
   excerpt: "Learn how to build a cross-functional data leak response team with defined roles across security, legal, comms, and HR. Includes decision framework and leak detection intelligence integration.",
-  featuredImage: "/images/blog/building-a-cross-functional-data-leak-response-team.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "12 min read",

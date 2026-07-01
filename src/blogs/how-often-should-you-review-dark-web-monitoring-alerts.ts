@@ -10,7 +10,7 @@ export const howOftenShouldYouReviewDarkWebMonitoringAlerts: BlogPostType & {
   slug: "how-often-should-you-review-dark-web-monitoring-alerts",
   title: "How Often Should You Review Dark Web Monitoring Alerts",
   excerpt: "Learn how often to review dark web monitoring alerts based on organisation size, risk profile, and team capacity in this guide covering cadence models, severity tiers, and automation for SOC analysts and CISOs.",
-  featuredImage: "/images/blog/how-often-should-you-review-dark-web-monitoring-alerts.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "15 min read",
