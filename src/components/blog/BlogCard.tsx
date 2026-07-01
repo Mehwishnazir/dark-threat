@@ -17,6 +17,8 @@ interface BlogCardProps {
   post: BlogPost;
 }
 
+const FALLBACK_IMAGE = '/dark-threat-1.webp';
+
 const BlogCard = ({ post }: BlogCardProps) => {
   return (
     <article className="blog-card">
@@ -29,8 +31,13 @@ const BlogCard = ({ post }: BlogCardProps) => {
           height="450"
           loading="lazy"
           decoding="async"
+          onError={(e) => {
+            const img = e.currentTarget;
+            if (img.src.indexOf(FALLBACK_IMAGE) === -1) img.src = FALLBACK_IMAGE;
+          }}
           className="blog-card__image"
         />
+
         {/* Category Badge */}
         <span className="blog-card__category">{post.category}</span>
         {/* Hover overlay */}
