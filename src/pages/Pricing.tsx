@@ -45,39 +45,9 @@ const Pricing = () => {
         })}</script>
       </Helmet>
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 py-6 px-6 border-b border-border bg-background/95 backdrop-blur-sm z-50">
-        <div className="max-w-6xl mx-auto flex items-center justify-between">
-          <Link to="/" className="text-2xl font-montserrat font-bold text-foreground">
-            DARK<span className="text-primary">THREAT</span>
-          </Link>
-          <nav className="flex items-center space-x-6">
-            <Link to="/" className="text-muted-foreground hover:text-primary transition-colors">
-              Home
-            </Link>
-            <Link to="/solution" className="text-muted-foreground hover:text-primary transition-colors">
-              Solution
-            </Link>
-            <Link to="/pricing" className="text-primary">
-              Pricing
-            </Link>
-            <Link to="/blog" className="text-muted-foreground hover:text-primary transition-colors">
-              Blog
-            </Link>
-            <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">
-              About
-            </Link>
-            <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">
-              Contact
-            </Link>
-            <Button
-              onClick={() => setIsTrialModalOpen(true)}
-              className="hero-button"
-            >
-              Start Free Trial
-            </Button>
-          </nav>
-        </div>
-      </header>
+      {/* Header */}
+      <AppHeader />
+
 
       {/* Pricing Section */}
       <section className="pt-24 py-20 px-6">
