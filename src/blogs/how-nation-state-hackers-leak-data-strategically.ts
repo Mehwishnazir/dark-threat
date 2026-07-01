@@ -10,7 +10,7 @@ export const howNationStateHackersLeakDataStrategically: BlogPostType & {
   slug: "how-nation-state-hackers-leak-data-strategically",
   title: "How Nation-State Hackers Leak Data Strategically",
   excerpt: "Learn how nation-state hackers leak data strategically for influence, access signaling, and hybrid warfare, and how data leak detection catches these curated operations before they achieve impact.",
-  featuredImage: "/images/blog/how-nation-state-hackers-leak-data-strategically.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "11 min read",

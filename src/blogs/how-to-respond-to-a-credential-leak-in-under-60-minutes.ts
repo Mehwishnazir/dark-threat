@@ -10,7 +10,7 @@ export const howToRespondToACredentialLeakInUnder60Minutes: BlogPostType & {
   slug: "how-to-respond-to-a-credential-leak-in-under-60-minutes",
   title: "How to Respond to a Credential Leak in Under 60 Minutes",
   excerpt: "Learn how to detect and contain a credential leak in under 60 minutes with this step-by-step incident response plan for SOC teams and identity security professionals covering detection containment and remediation",
-  featuredImage: "/images/blog/how-to-respond-to-a-credential-leak-in-under-60-minutes.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "11 min read",

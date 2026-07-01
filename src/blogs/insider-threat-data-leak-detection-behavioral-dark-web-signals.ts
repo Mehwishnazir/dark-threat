@@ -10,7 +10,7 @@ export const insiderThreatDataLeakDetectionBehavioralDarkWebSignals: BlogPostTyp
   slug: "insider-threat-data-leak-detection-behavioral-dark-web-signals",
   title: "Insider Threat Data Leak Detection: Behavioral + Dark Web Signals",
   excerpt: "Learn how insider threat data leak detection combines behavioral UEBA and DLP signals with dark web monitoring of ransomware leak sites and Telegram channels to reduce detection time and improve response.",
-  featuredImage: "/images/blog/insider-threat-data-leak-detection-behavioral-dark-web-signals.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "13 min read",

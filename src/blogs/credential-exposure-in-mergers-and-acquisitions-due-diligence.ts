@@ -10,7 +10,7 @@ export const credentialExposureInMergersAndAcquisitionsDueDiligence: BlogPostTyp
   slug: "credential-exposure-in-mergers-and-acquisitions-due-diligence",
   title: "Credential Exposure in Mergers and Acquisitions: Due Diligence",
   excerpt: "Learn how to detect credential exposure during M&A due diligence using dark web monitoring stealer log scanning and IAB listings A five-step framework for acquiring organizations to protect deal value",
-  featuredImage: "/images/blog/credential-exposure-in-mergers-and-acquisitions-due-diligence.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "16 min read",

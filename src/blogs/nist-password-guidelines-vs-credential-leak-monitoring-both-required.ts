@@ -10,7 +10,7 @@ export const nistPasswordGuidelinesVsCredentialLeakMonitoringBothRequired: BlogP
   slug: "nist-password-guidelines-vs-credential-leak-monitoring-both-required",
   title: "NIST Password Guidelines vs Credential Leak Monitoring: Both Required",
   excerpt: "Learn why NIST password guidelines without continuous credential leak monitoring create a critical blind spot and how integrating both controls closes the detection gap in the credential attack lifecycle for enterprises.",
-  featuredImage: "/images/blog/nist-password-guidelines-vs-credential-leak-monitoring-both-required.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "15 min read",

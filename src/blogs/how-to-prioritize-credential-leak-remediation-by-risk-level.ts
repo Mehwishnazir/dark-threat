@@ -10,7 +10,7 @@ export const howToPrioritizeCredentialLeakRemediationByRiskLevel: BlogPostType &
   slug: "how-to-prioritize-credential-leak-remediation-by-risk-level",
   title: "How to Prioritize Credential Leak Remediation by Risk Level",
   excerpt: "Learn how to prioritize credential leak remediation by risk level with a scoring model based on privilege tier, leak freshness, password recency, and MFA status. Actionable framework for SOC and IAM teams.",
-  featuredImage: "/images/blog/how-to-prioritize-credential-leak-remediation-by-risk-level.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "12 min read",

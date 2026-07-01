@@ -10,7 +10,7 @@ export const continuousCredentialMonitoringVsAnnualAuditEffectivenessGap: BlogPo
   slug: "continuous-credential-monitoring-vs-annual-audit-effectiveness-gap",
   title: "Continuous Credential Monitoring vs Annual Audit: Effectiveness Gap",
   excerpt: "Compare continuous credential monitoring vs annual audit effectiveness gap. Learn how real-time dark web monitoring for leaked credentials prevents breaches that periodic password reviews miss.",
-  featuredImage: "/images/blog/continuous-credential-monitoring-vs-annual-audit-effectiveness-gap.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "13 min read",

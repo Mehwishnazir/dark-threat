@@ -10,7 +10,7 @@ export const dataLeakDetectionPlaybookForSecurityOperationsCenters: BlogPostType
   slug: "data-leak-detection-playbook-for-security-operations-centers",
   title: "Data Leak Detection Playbook for Security Operations Centers",
   excerpt: "Build a data leak detection playbook for Security Operations Centers with steps for ransomware leak-site monitoring alert triage SOC response workflows and dark web intelligence integration",
-  featuredImage: "/images/blog/data-leak-detection-playbook-for-security-operations-centers.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "12 min read",

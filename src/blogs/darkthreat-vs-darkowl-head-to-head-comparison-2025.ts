@@ -10,7 +10,7 @@ export const darkthreatVsDarkowlHeadToHeadComparison2025: BlogPostType & {
   slug: "darkthreat-vs-darkowl-head-to-head-comparison-2025",
   title: "DarkThreat vs DarkOwl: Head-to-Head Comparison 2025",
   excerpt: "DarkThreat vs DarkOwl comparison for 2025 covering dark web monitoring coverage data freshness alert quality integrations and pricing to help SOC managers and CISOs choose the right tool",
-  featuredImage: "/images/blog/darkthreat-vs-darkowl-head-to-head-comparison-2025.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "15 min read",

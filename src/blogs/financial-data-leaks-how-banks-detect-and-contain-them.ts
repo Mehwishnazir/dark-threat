@@ -10,7 +10,7 @@ export const financialDataLeaksHowBanksDetectAndContainThem: BlogPostType & {
   slug: "financial-data-leaks-how-banks-detect-and-contain-them",
   title: "Financial Data Leaks: How Banks Detect and Contain Them",
   excerpt: "Learn how banks detect contain and respond to financial data leaks A guide to financial data leak detection for CISOs and compliance teams in the banking sector",
-  featuredImage: "/images/blog/financial-data-leaks-how-banks-detect-and-contain-them.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "15 min read",

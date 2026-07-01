@@ -10,7 +10,7 @@ export const credentialLeakDetectionMetricsForSecurityOperationsCenters: BlogPos
   slug: "credential-leak-detection-metrics-for-security-operations-centers",
   title: "Credential Leak Detection Metrics for Security Operations Centers",
   excerpt: "Learn the essential credential leak detection metrics Security Operations Centers need to measure detection latency, credential coverage, and response effectiveness against dark web credential markets.",
-  featuredImage: "/images/blog/credential-leak-detection-metrics-for-security-operations-centers.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "13 min read",

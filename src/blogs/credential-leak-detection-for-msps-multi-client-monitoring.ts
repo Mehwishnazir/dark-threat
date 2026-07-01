@@ -10,7 +10,7 @@ export const credentialLeakDetectionForMspsMultiClientMonitoring: BlogPostType &
   slug: "credential-leak-detection-for-msps-multi-client-monitoring",
   title: "Credential Leak Detection for MSPs: Multi-Client Monitoring",
   excerpt: "Learn how MSPs can implement credential leak detection for multi-client environments with a five-step framework covering tenant mapping, infostealer detection, and compliance.",
-  featuredImage: "/images/blog/credential-leak-detection-for-msps-multi-client-monitoring.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "15 min read",

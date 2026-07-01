@@ -10,7 +10,7 @@ export const darkWebIntelligenceForBankingAmlAndFraudTeams: BlogPostType & {
   slug: "dark-web-intelligence-for-banking-aml-and-fraud-teams",
   title: "Dark Web Intelligence for Banking AML and Fraud Teams",
   excerpt: "Explore how dark web intelligence transforms AML and fraud detection in banking, covering credential leaks, threat actors, regulatory compliance, and real-time monitoring strategies.",
-  featuredImage: "/images/blog/dark-web-intelligence-for-banking-aml-and-fraud-teams.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "13 min read",

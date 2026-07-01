@@ -10,7 +10,7 @@ export const whatPercentageOfBreachesShowUpOnDarkWebMonitoring: BlogPostType & {
   slug: "what-percentage-of-breaches-show-up-on-dark-web-monitoring",
   title: "What Percentage of Breaches Show Up on Dark Web Monitoring",
   excerpt: "Discover what percentage of breaches appear on dark web monitoring programs. Learn detection rates, time factors, and how to improve your security posture with real-time intelligence.",
-  featuredImage: "/images/blog/what-percentage-of-breaches-show-up-on-dark-web-monitoring.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "11 min read",

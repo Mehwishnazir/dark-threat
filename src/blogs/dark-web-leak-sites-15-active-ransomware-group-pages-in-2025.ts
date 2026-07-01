@@ -10,7 +10,7 @@ export const darkWebLeakSites15ActiveRansomwareGroupPagesIn2025: BlogPostType & 
   slug: "dark-web-leak-sites-15-active-ransomware-group-pages-in-2025",
   title: "Dark Web Leak Sites — 15 Active Ransomware Group Pages in 2025",
   excerpt: "Comprehensive analysis of 15 active ransomware leak sites in 2025 including LockBit BlackCat Clop Play and more with operational patterns targeting trends and threat intelligence methodology for cybersecurity teams",
-  featuredImage: "/images/blog/dark-web-leak-sites-15-active-ransomware-group-pages-in-2025.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 3, 2026",
   readingTime: "18 min read",

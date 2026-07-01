@@ -10,7 +10,7 @@ export const darkWebThreatIntelligenceForFinancialServicesCisoTeams: BlogPostTyp
   slug: "dark-web-threat-intelligence-for-financial-services-ciso-teams",
   title: "Dark Web Threat Intelligence for Financial Services CISO Teams",
   excerpt: "Learn how financial services CISOs can leverage dark web monitoring to detect credential leaks, meet compliance requirements like PCI-DSS and FFIEC, and build a proactive threat intelligence program.",
-  featuredImage: "/images/blog/dark-web-threat-intelligence-for-financial-services-ciso-teams.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "12 min read",

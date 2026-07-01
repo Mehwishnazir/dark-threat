@@ -10,7 +10,7 @@ export const howRansomwareGroupsUseLeakSitesToPressureVictims: BlogPostType & {
   slug: "how-ransomware-groups-use-leak-sites-to-pressure-victims",
   title: "How Ransomware Groups Use Leak Sites to Pressure Victims",
   excerpt: "Learn how ransomware groups use leak sites for double extortion pressure tactics and how data leak detection can intercept threats before public exposure to protect sensitive data.",
-  featuredImage: "/images/blog/how-ransomware-groups-use-leak-sites-to-pressure-victims.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "13 min read",

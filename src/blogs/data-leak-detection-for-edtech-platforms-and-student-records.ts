@@ -10,7 +10,7 @@ export const dataLeakDetectionForEdtechPlatformsAndStudentRecords: BlogPostType 
   slug: "data-leak-detection-for-edtech-platforms-and-student-records",
   title: "Data Leak Detection for EdTech Platforms and Student Records",
   excerpt: "Learn how data leak detection for EdTech platforms and student records stops ransomware leak sites and data marketplaces from exploiting student PII with this compliance guide for CISOs and IT directors.",
-  featuredImage: "/images/blog/data-leak-detection-for-edtech-platforms-and-student-records.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "17 min read",

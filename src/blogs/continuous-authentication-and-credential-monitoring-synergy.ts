@@ -10,7 +10,7 @@ export const continuousAuthenticationAndCredentialMonitoringSynergy: BlogPostTyp
   slug: "continuous-authentication-and-credential-monitoring-synergy",
   title: "Continuous Authentication and Credential Monitoring: Synergy",
   excerpt: "Explore the synergy between continuous authentication and credential monitoring to strengthen identity security. Learn how dark web credential leak detection improves adaptive auth against account takeover and infostealer malware threats.",
-  featuredImage: "/images/blog/continuous-authentication-and-credential-monitoring-synergy.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "13 min read",

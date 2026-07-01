@@ -10,7 +10,7 @@ export const credentialLeakDetectionSlaWhat999CoverageActuallyMeans: BlogPostTyp
   slug: "credential-leak-detection-sla-what-999-coverage-actually-means",
   title: "Credential Leak Detection SLA: What 99.9% Coverage Actually Means",
   excerpt: "Learn what a 99.9% credential leak detection SLA actually means in practice, where coverage gaps hide, and how to evaluate vendor claims honestly for real-world security.",
-  featuredImage: "/images/blog/credential-leak-detection-sla-what-999-coverage-actually-means.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "13 min read",

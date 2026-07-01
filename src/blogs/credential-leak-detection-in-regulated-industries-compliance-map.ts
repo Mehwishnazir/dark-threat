@@ -10,7 +10,7 @@ export const credentialLeakDetectionInRegulatedIndustriesComplianceMap: BlogPost
   slug: "credential-leak-detection-in-regulated-industries-compliance-map",
   title: "Credential Leak Detection in Regulated Industries: Compliance Map",
   excerpt: "Map credential leak detection across SOC 2 HIPAA PCI DSS NIST and SEC regulations to satisfy compliance controls with continuous dark web monitoring and audit-ready evidence for regulated industries",
-  featuredImage: "/images/blog/credential-leak-detection-in-regulated-industries-compliance-map.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "14 min read",

@@ -10,7 +10,7 @@ export const detectingDataLeaksInHybridAndMultiCloudEnvironments: BlogPostType &
   slug: "detecting-data-leaks-in-hybrid-and-multi-cloud-environments",
   title: "Detecting Data Leaks in Hybrid and Multi-Cloud Environments",
   excerpt: "Learn how data leak detection in hybrid and multi-cloud environments works covering cloud misconfigurations exfiltration paths ransomware leak sites and compliance requirements for AWS Azure and GCP",
-  featuredImage: "/images/blog/detecting-data-leaks-in-hybrid-and-multi-cloud-environments.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "11 min read",

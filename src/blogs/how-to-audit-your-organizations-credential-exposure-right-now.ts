@@ -10,7 +10,7 @@ export const howToAuditYourOrganizationsCredentialExposureRightNow: BlogPostType
   slug: "how-to-audit-your-organizations-credential-exposure-right-now",
   title: "How to Audit Your Organization's Credential Exposure Right Now",
   excerpt: "Learn how to audit your organization's credential exposure with a step-by-step methodology covering stealer logs, dark web markets, combo lists, and breach databases for credential leak detection",
-  featuredImage: "/images/blog/how-to-audit-your-organizations-credential-exposure-right-now.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "13 min read",

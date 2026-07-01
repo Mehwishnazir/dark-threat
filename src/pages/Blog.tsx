@@ -6,6 +6,7 @@ import BlogCard, { type BlogPost } from '@/components/blog/BlogCard';
 import Breadcrumb from '@/components/Breadcrumb';
 import AnimatedBackground from '@/components/AnimatedBackground';
 import ThreatSphere from '@/components/ThreatSphere';
+import AppHeader from '@/components/AppHeader';
 import {
   Select,
   SelectContent,
@@ -15,6 +16,9 @@ import {
 } from '@/components/ui/select';
 import { allBlogs } from '@/blogs';
 import './blog.css';
+
+const FALLBACK_IMAGE = '/dark-threat-1.webp';
+
 
 const categories = [
   'All Blogs',
@@ -107,16 +111,11 @@ const Blog = () => {
       </Helmet>
 
       {/* HEADER */}
-      <header className="blog-listing-header">
-        <div className="blog-listing-header__inner">
-          <Link to="/" className="blog-listing-header__logo">
-            DARK<span>THREAT</span>
-          </Link>
-        </div>
-      </header>
+      <AppHeader />
 
       {/* HERO SECTION */}
-      <section className="blog-listing-hero">
+      <section className="blog-listing-hero pt-24">
+
         <AnimatedBackground />
         <div className="blog-listing-hero__sphere">
           <Suspense fallback={<div className="blog-listing-hero__sphere-fallback" />}>
@@ -160,11 +159,12 @@ const Blog = () => {
               value={searchQuery}
               onChange={(e) => {
                 setSearchQuery(e.target.value);
-                setPage(1);
+                setPage(1, false);
               }}
               className="blog-listing-filters__search-input"
               aria-label="Search blog articles"
             />
+
           </div>
 
           <div className="blog-listing-filters__dropdown">
@@ -173,8 +173,9 @@ const Blog = () => {
             </label>
             <Select value={selectedCategory} onValueChange={(value) => {
               setSelectedCategory(value);
-              setPage(1);
+              setPage(1, false);
             }}>
+
               <SelectTrigger id="category-select" className="blog-listing-filters__select-trigger">
                 <SelectValue placeholder="Select a category" />
               </SelectTrigger>
@@ -231,9 +232,16 @@ const Blog = () => {
                     alt={heroPost.title}
                     width="1200"
                     height="675"
+                    loading="eager"
+                    fetchPriority="high"
                     decoding="async"
+                    onError={(e) => {
+                      const img = e.currentTarget;
+                      if (img.src.indexOf(FALLBACK_IMAGE) === -1) img.src = FALLBACK_IMAGE;
+                    }}
                     className="blog-hero-card__image"
                   />
+
                 </div>
                 <div className="blog-hero-card__body">
                   <span className="blog-hero-card__category">{heroPost.category}</span>

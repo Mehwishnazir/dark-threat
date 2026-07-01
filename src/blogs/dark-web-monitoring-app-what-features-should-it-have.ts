@@ -10,7 +10,7 @@ export const darkWebMonitoringAppWhatFeaturesShouldItHave: BlogPostType & {
   slug: "dark-web-monitoring-app-what-features-should-it-have",
   title: "Dark Web Monitoring App — What Features Should It Have?",
   excerpt: "This buyers guide evaluates essential dark web monitoring app features including real-time credential scanning PII detection cross-surface coverage and actionable remediation for security teams.",
-  featuredImage: "/images/blog/dark-web-monitoring-app-what-features-should-it-have.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 4, 2026",
   readingTime: "17 min read",

@@ -10,7 +10,7 @@ export const credentialLeakDetectionForProfessionalServicesFirms: BlogPostType &
   slug: "credential-leak-detection-for-professional-services-firms",
   title: "Credential Leak Detection for Professional Services Firms",
   excerpt: "Learn how credential leak detection protects professional services firms from infostealer malware, combo lists, and partner credential exposure on dark web markets",
-  featuredImage: "/images/blog/credential-leak-detection-for-professional-services-firms.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "13 min read",

@@ -10,7 +10,7 @@ export const leakedCredentialsAsInitialAccessMitreAttckCoverage: BlogPostType & 
   slug: "leaked-credentials-as-initial-access-mitre-attck-coverage",
   title: "Leaked Credentials as Initial Access: MITRE ATT&CK Coverage",
   excerpt: "Learn how leaked credentials enable MITRE ATTACK T1078 initial access and how credential leak detection maps to ATTACK techniques from T1589 through privilege escalation for SOC teams",
-  featuredImage: "/images/blog/leaked-credentials-as-initial-access-mitre-attck-coverage.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "13 min read",

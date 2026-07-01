@@ -10,7 +10,7 @@ export const howToCheckIfYourPasswordIsOnTheDarkWebForFree: BlogPostType & {
   slug: "how-to-check-if-your-password-is-on-the-dark-web-for-free",
   title: "How to Check If Your Password Is on the Dark Web for Free",
   excerpt: "Learn how to check password dark web free using tools like HaveIBeenPwned and understand their limitations for credential exposure and infostealer threats.",
-  featuredImage: "/images/blog/how-to-check-if-your-password-is-on-the-dark-web-for-free.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 4, 2026",
   readingTime: "16 min read",

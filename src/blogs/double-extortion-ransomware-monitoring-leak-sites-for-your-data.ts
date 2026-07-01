@@ -10,7 +10,7 @@ export const doubleExtortionRansomwareMonitoringLeakSitesForYourData: BlogPostTy
   slug: "double-extortion-ransomware-monitoring-leak-sites-for-your-data",
   title: "Double Extortion Ransomware: Monitoring Leak Sites for Your Data",
   excerpt: "Monitor ransomware leak sites for your exfiltrated data in double extortion attacks. Learn detection methods, response strategy, and how DarkThreat.AI provides early warning.",
-  featuredImage: "/images/blog/double-extortion-ransomware-monitoring-leak-sites-for-your-data.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "12 min read",

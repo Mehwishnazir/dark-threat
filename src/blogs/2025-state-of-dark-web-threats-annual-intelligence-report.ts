@@ -10,7 +10,7 @@ export const twoThousandTwentyFiveStateOfDarkWebThreatsAnnualIntelligenceReport:
   slug: "2025-state-of-dark-web-threats-annual-intelligence-report",
   title: "2025 State of Dark Web Threats: Annual Intelligence Report",
   excerpt: "2025 State of Dark Web Threats: Annual intelligence report on stealer logs, initial access brokers, ransomware leak sites, and Telegram channels. Essential reading for CISOs and SOC teams.",
-  featuredImage: "/images/blog/2025-state-of-dark-web-threats-annual-intelligence-report.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "14 min read",

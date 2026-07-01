@@ -10,7 +10,7 @@ export const howChildrensSocialSecurityNumbersEndUpOnTheDarkWeb: BlogPostType & 
   slug: "how-childrens-social-security-numbers-end-up-on-the-dark-web",
   title: "How Children's Social Security Numbers End Up on the Dark Web",
   excerpt: "Childrens SSNs sold on the dark web fuel synthetic identity fraud. Learn how they are exposed, the mechanics of the fraud, and how to detect and prevent child identity theft.",
-  featuredImage: "/images/blog/how-childrens-social-security-numbers-end-up-on-the-dark-web.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 4, 2026",
   readingTime: "19 min read",

@@ -10,7 +10,7 @@ export const howToProtectYourBackupsFromRansomwareAndWhyDarkWebMonitoringHelps: 
   slug: "how-to-protect-your-backups-from-ransomware-and-why-dark-web-monitoring-helps",
   title: "How to Protect Your Backups from Ransomware — And Why Dark Web Monitoring Helps",
   excerpt: "Learn how ransomware attacks target backup systems and discover modern protection strategies including immutable storage air-gapped backups and dark web monitoring for early threat detection",
-  featuredImage: "/images/blog/how-to-protect-your-backups-from-ransomware-and-why-dark-web-monitoring-helps.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 3, 2026",
   readingTime: "18 min read",

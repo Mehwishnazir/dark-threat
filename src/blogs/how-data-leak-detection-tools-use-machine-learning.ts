@@ -10,7 +10,7 @@ export const howDataLeakDetectionToolsUseMachineLearning: BlogPostType & {
   slug: "how-data-leak-detection-tools-use-machine-learning",
   title: "How Data Leak Detection Tools Use Machine Learning",
   excerpt: "Learn how machine learning powers data leak detection tools to identify credential leaks ransomware extortion and cloud misconfigurations across the dark web paste sites and forums",
-  featuredImage: "/images/blog/how-data-leak-detection-tools-use-machine-learning.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "15 min read",

@@ -10,7 +10,7 @@ export const darkWebMonitoringForIso27001AnnexAControls: BlogPostType & {
   slug: "dark-web-monitoring-for-iso-27001-annex-a-controls",
   title: "Dark Web Monitoring for ISO 27001 Annex A Controls",
   excerpt: "Learn how dark web monitoring for ISO 27001 Annex A controls maps to A.5.7, A.8.8, and A.8.16 with audit-ready evidence packages for ISMS compliance",
-  featuredImage: "/images/blog/dark-web-monitoring-for-iso-27001-annex-a-controls.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "13 min read",

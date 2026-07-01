@@ -10,7 +10,7 @@ export const dataLeakDetectionForTelecommunicationsCompanies: BlogPostType & {
   slug: "data-leak-detection-for-telecommunications-companies",
   title: "Data Leak Detection for Telecommunications Companies",
   excerpt: "Protect your telecom organization from reputation damage and regulatory fines Data leak detection for telecommunications companies covers customer PII CDRs and credentials traded on dark web marketplaces and ransomware leak sites",
-  featuredImage: "/images/blog/data-leak-detection-for-telecommunications-companies.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "16 min read",

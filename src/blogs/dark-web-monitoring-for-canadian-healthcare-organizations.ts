@@ -10,7 +10,7 @@ export const darkWebMonitoringForCanadianHealthcareOrganizations: BlogPostType &
   slug: "dark-web-monitoring-for-canadian-healthcare-organizations",
   title: "Dark Web Monitoring for Canadian Healthcare Organizations",
   excerpt: "Dark web monitoring for Canadian healthcare organizations: detect PIPEDA, PHIPA, and Law 25 compliance risks from stolen health card numbers, stealer logs, and ransomware leak sites to reduce breach impact.",
-  featuredImage: "/images/blog/dark-web-monitoring-for-canadian-healthcare-organizations.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 20, 2026",
   readingTime: "13 min read",

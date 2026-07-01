@@ -10,7 +10,7 @@ export const stolenSessionTokensVsPasswordsNewFrontierOfCredentialTheft: BlogPos
   slug: "stolen-session-tokens-vs-passwords-new-frontier-of-credential-theft",
   title: "Stolen Session Tokens vs Passwords: New Frontier of Credential Theft",
   excerpt: "Stolen session tokens now outpace passwords as the primary credential theft vector bypassing MFA. Learn how credential leak detection must expand to cover infostealer logs and token marketplaces for effective defense.",
-  featuredImage: "/images/blog/stolen-session-tokens-vs-passwords-new-frontier-of-credential-theft.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "15 min read",

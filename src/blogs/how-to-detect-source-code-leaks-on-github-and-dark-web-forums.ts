@@ -10,7 +10,7 @@ export const howToDetectSourceCodeLeaksOnGithubAndDarkWebForums: BlogPostType & 
   slug: "how-to-detect-source-code-leaks-on-github-and-dark-web-forums",
   title: "How to Detect Source Code Leaks on GitHub and Dark Web Forums",
   excerpt: "Learn how to detect source code leaks on GitHub and dark web forums with this step-by-step guide covering monitoring forks forum posts and Telegram channels for proprietary code exposure",
-  featuredImage: "/images/blog/how-to-detect-source-code-leaks-on-github-and-dark-web-forums.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "16 min read",

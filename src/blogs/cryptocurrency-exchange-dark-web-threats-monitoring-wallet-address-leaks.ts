@@ -10,7 +10,7 @@ export const cryptocurrencyExchangeDarkWebThreatsMonitoringWalletAddressLeaks: B
   slug: "cryptocurrency-exchange-dark-web-threats-monitoring-wallet-address-leaks",
   title: "Cryptocurrency Exchange Dark Web Threats: Monitoring Wallet Address Leaks",
   excerpt: "Cryptocurrency exchanges face dark web threats like wallet address leaks and credential exposure. Learn monitoring strategies to prevent account takeovers and comply with FinCEN and GDPR.",
-  featuredImage: "/images/blog/cryptocurrency-exchange-dark-web-threats-monitoring-wallet-address-leaks.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "15 min read",

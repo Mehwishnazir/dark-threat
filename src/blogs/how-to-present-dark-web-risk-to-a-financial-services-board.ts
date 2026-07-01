@@ -10,7 +10,7 @@ export const howToPresentDarkWebRiskToAFinancialServicesBoard: BlogPostType & {
   slug: "how-to-present-dark-web-risk-to-a-financial-services-board",
   title: "How to Present Dark Web Risk to a Financial Services Board",
   excerpt: "Learn how to present dark web risk to financial services boards with regulatory alignment, financial impact metrics, and actionable intelligence for informed risk decisions.",
-  featuredImage: "/images/blog/how-to-present-dark-web-risk-to-a-financial-services-board.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "16 min read",

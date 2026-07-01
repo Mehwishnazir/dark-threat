@@ -10,7 +10,7 @@ export const dataLeakDetectionPlatformComparisonTwentyTwentySixFeaturesAndPricin
   slug: "data-leak-detection-platform-comparison-2026-features-and-pricing",
   title: "Data Leak Detection Platform Comparison 2026: Features and Pricing",
   excerpt: "Compare top data leak detection platform features and pricing for 2026 including coverage depth ransomware leak site monitoring and real world cost breakdowns for CISOs evaluating solutions",
-  featuredImage: "/images/blog/data-leak-detection-platform-comparison-2026-features-and-pricing.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "July 1, 2026",
   readingTime: "13 min read",

@@ -10,7 +10,7 @@ export const credentialLeakDetectionForSaasApplicationsCompleteGuide: BlogPostTy
   slug: "credential-leak-detection-for-saas-applications-complete-guide",
   title: "Credential Leak Detection for SaaS Applications: Complete Guide",
   excerpt: "Complete guide to credential leak detection for SaaS applications covering how infostealer malware targets browser-stored credentials detection signals severity triage and automated response for security teams",
-  featuredImage: "/images/blog/credential-leak-detection-for-saas-applications-complete-guide.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "13 min read",

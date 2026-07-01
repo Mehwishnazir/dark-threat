@@ -10,7 +10,7 @@ export const detectingLeakedCredentialsFromShadowItApplications: BlogPostType & 
   slug: "detecting-leaked-credentials-from-shadow-it-applications",
   title: "Detecting Leaked Credentials from Shadow IT Applications",
   excerpt: "Learn how to detect leaked credentials from shadow IT applications through real-time dark web monitoring and protect your organisation from credential exposure risks.",
-  featuredImage: "/images/blog/detecting-leaked-credentials-from-shadow-it-applications.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "13 min read",

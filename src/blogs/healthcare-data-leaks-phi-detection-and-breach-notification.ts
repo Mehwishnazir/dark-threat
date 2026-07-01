@@ -10,7 +10,7 @@ export const healthcareDataLeaksPhiDetectionAndBreachNotification: BlogPostType 
   slug: "healthcare-data-leaks-phi-detection-and-breach-notification",
   title: "Healthcare Data Leaks: PHI Detection and Breach Notification",
   excerpt: "Healthcare data leaks demand rapid PHI detection and breach notification. Learn how dark web monitoring for patient data compresses the HIPAA notification timeline from weeks to hours.",
-  featuredImage: "/images/blog/healthcare-data-leaks-phi-detection-and-breach-notification.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "15 min read",

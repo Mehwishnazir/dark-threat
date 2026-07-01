@@ -10,7 +10,7 @@ export const dataLeakDetectionForSupplyChainPartners: BlogPostType & {
   slug: "data-leak-detection-for-supply-chain-partners",
   title: "Data Leak Detection for Supply Chain Partners",
   excerpt: "Learn how data leak detection for supply chain partners identifies exposed partner data on ransomware leak sites, dark web forums, and paste sites before regulatory penalties hit.",
-  featuredImage: "/images/blog/data-leak-detection-for-supply-chain-partners.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "11 min read",

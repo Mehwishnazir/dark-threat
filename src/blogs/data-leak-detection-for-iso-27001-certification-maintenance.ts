@@ -10,7 +10,7 @@ export const dataLeakDetectionForIso27001CertificationMaintenance: BlogPostType 
   slug: "data-leak-detection-for-iso-27001-certification-maintenance",
   title: "Data Leak Detection for ISO 27001 Certification Maintenance",
   excerpt: "ISO 27001 data leak detection for certification maintenance: map Annex A 8.12 to ransomware leak sites, paste sites, and dark web monitoring for audit evidence with specific controls",
-  featuredImage: "/images/blog/data-leak-detection-for-iso-27001-certification-maintenance.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "15 min read",

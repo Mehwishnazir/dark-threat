@@ -10,7 +10,7 @@ export const ftcSafeguardsRuleDarkWebMonitoringAsASafeguardControl: BlogPostType
   slug: "ftc-safeguards-rule-dark-web-monitoring-as-a-safeguard-control",
   title: "FTC Safeguards Rule: Dark Web Monitoring as a Safeguard Control",
   excerpt: "Learn how dark web monitoring maps to specific FTC Safeguards Rule provisions for credential exposure risk assessment and audit ready evidence at financial institutions",
-  featuredImage: "/images/blog/ftc-safeguards-rule-dark-web-monitoring-as-a-safeguard-control.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "12 min read",

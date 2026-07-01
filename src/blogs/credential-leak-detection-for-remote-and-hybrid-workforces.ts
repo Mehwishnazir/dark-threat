@@ -10,7 +10,7 @@ export const credentialLeakDetectionForRemoteAndHybridWorkforces: BlogPostType &
   slug: "credential-leak-detection-for-remote-and-hybrid-workforces",
   title: "Credential Leak Detection for Remote and Hybrid Workforces",
   excerpt: "Learn how credential leak detection for remote and hybrid workforces protects against infostealer malware, session token theft, and MFA bypass across distributed identity surfaces.",
-  featuredImage: "/images/blog/credential-leak-detection-for-remote-and-hybrid-workforces.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "14 min read",

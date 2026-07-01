@@ -10,7 +10,7 @@ export const howToRunACredentialExposureAssessmentForYourBusiness: BlogPostType 
   slug: "how-to-run-a-credential-exposure-assessment-for-your-business",
   title: "How to Run a Credential Exposure Assessment for Your Business",
   excerpt: "Learn how to run a credential exposure assessment for your business with this step-by-step guide covering scoping dark web intelligence remediation and continuous monitoring for credential leak detection.",
-  featuredImage: "/images/blog/how-to-run-a-credential-exposure-assessment-for-your-business.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "14 min read",

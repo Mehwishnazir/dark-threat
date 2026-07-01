@@ -10,7 +10,7 @@ export const dataLeakDetectionForSubscriptionBusinessesAndPaymentPlatforms: Blog
   slug: "data-leak-detection-for-subscription-businesses-and-payment-platforms",
   title: "Data Leak Detection for Subscription Businesses and Payment Platforms",
   excerpt: "Learn essential data leak detection strategies for subscription businesses and payment platforms covering ransomware leak sites paste site monitoring and regulatory compliance obligations",
-  featuredImage: "/images/blog/data-leak-detection-for-subscription-businesses-and-payment-platforms.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "16 min read",

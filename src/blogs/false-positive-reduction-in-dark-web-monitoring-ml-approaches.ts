@@ -10,7 +10,7 @@ export const falsePositiveReductionInDarkWebMonitoringMlApproaches: BlogPostType
   slug: "false-positive-reduction-in-dark-web-monitoring-ml-approaches",
   title: "False Positive Reduction in Dark Web Monitoring: ML Approaches",
   excerpt: "Learn how machine learning approaches reduce false positive reduction in dark web monitoring with NLP temporal models and behavioural profiling explained for SOC teams",
-  featuredImage: "/images/blog/false-positive-reduction-in-dark-web-monitoring-ml-approaches.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "10 min read",

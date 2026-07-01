@@ -10,7 +10,7 @@ export const mySocialSecurityNumberIsOnTheDarkWebWhatDoIDoNow: BlogPostType & {
   slug: "my-social-security-number-is-on-the-dark-web-what-do-i-do-now",
   title: "My Social Security Number Is on the Dark Web — What Do I Do Now?",
   excerpt: "Learn what to do if your Social Security number is found on the dark web with a step-by-step incident response plan covering verification, credit freeze, fraud alerts, monitoring, and prevention strategies.",
-  featuredImage: "/images/blog/my-social-security-number-is-on-the-dark-web-what-do-i-do-now.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 4, 2026",
   readingTime: "20 min read",

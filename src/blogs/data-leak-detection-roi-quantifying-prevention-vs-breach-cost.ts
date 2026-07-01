@@ -10,7 +10,7 @@ export const dataLeakDetectionRoiQuantifyingPreventionVsBreachCost: BlogPostType
   slug: "data-leak-detection-roi-quantifying-prevention-vs-breach-cost",
   title: "Data Leak Detection ROI: Quantifying Prevention vs Breach Cost",
   excerpt: "Quantify the ROI of data leak detection: prevention costs 4-6x less than a single breach. Compare annual investment vs \$4.88M average breach cost with real examples from ransomware leak sites and dark web monitoring.",
-  featuredImage: "/images/blog/data-leak-detection-roi-quantifying-prevention-vs-breach-cost.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "13 min read",

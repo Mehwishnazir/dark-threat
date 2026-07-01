@@ -10,7 +10,7 @@ export const howScammersUseDarkWebDataToRunTargetedPhoneFraud: BlogPostType & {
   slug: "how-scammers-use-dark-web-data-to-run-targeted-phone-fraud",
   title: "How Scammers Use Dark Web Data to Run Targeted Phone Fraud",
   excerpt: "Learn how scammers weaponize phone fraud dark web data for vishing, SIM swapping, and caller ID spoofing. Includes prevention tips and real-world case studies.",
-  featuredImage: "/images/blog/how-scammers-use-dark-web-data-to-run-targeted-phone-fraud.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 4, 2026",
   readingTime: "19 min read",

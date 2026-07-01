@@ -10,7 +10,7 @@ export const retailDataLeaksCreditCardDataDetectionOnDarkWebMarkets: BlogPostTyp
   slug: "retail-data-leaks-credit-card-data-detection-on-dark-web-markets",
   title: "Retail Data Leaks: Credit Card Data Detection on Dark Web Markets",
   excerpt: "Learn how to detect credit card data leaks on dark web markets with strategies for retail organizations covering carding shops forums ransomware leak sites and Telegram channels",
-  featuredImage: "/images/blog/retail-data-leaks-credit-card-data-detection-on-dark-web-markets.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "12 min read",

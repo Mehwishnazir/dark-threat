@@ -10,7 +10,7 @@ export const credentialLeakDetectionForPrivilegedAccessManagementPam: BlogPostTy
   slug: "credential-leak-detection-for-privileged-access-management-pam",
   title: "Credential Leak Detection for Privileged Access Management (PAM)",
   excerpt: "Learn how credential leak detection complements Privileged Access Management PAM to close security gaps from infostealer logs stolen session tokens and dark web credential markets for privileged accounts",
-  featuredImage: "/images/blog/credential-leak-detection-for-privileged-access-management-pam.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "14 min read",

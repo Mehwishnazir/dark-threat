@@ -10,7 +10,7 @@ export const howPaymentProcessorsMonitorDarkWebForStolenCardData: BlogPostType &
   slug: "how-payment-processors-monitor-dark-web-for-stolen-card-data",
   title: "How Payment Processors Monitor Dark Web for Stolen Card Data",
   excerpt: "Explore how payment processors can protect cardholder data with dark web monitoring. Learn about PCI-DSS compliance, threat intelligence, and real-world breach lessons.",
-  featuredImage: "/images/blog/how-payment-processors-monitor-dark-web-for-stolen-card-data.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "17 min read",

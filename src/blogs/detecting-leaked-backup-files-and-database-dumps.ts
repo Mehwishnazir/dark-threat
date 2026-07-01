@@ -10,7 +10,7 @@ export const detectingLeakedBackupFilesAndDatabaseDumps: BlogPostType & {
   slug: "detecting-leaked-backup-files-and-database-dumps",
   title: "Detecting Leaked Backup Files and Database Dumps",
   excerpt: "Learn how to detect leaked backup files and database dumps on the dark web This guide covers common exposure vectors dark web signals a step by step detection framework and MITRE ATT&CK mapping for cybersecurity practitioners",
-  featuredImage: "/images/blog/detecting-leaked-backup-files-and-database-dumps.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "15 min read",

@@ -10,7 +10,7 @@ export const darkWebMonitoringForPayfacAndPaymentFacilitators: BlogPostType & {
   slug: "dark-web-monitoring-for-payfac-and-payment-facilitators",
   title: "Dark Web Monitoring for PayFac and Payment Facilitators",
   excerpt: "Explore dark web threats facing Payment Facilitators including credential markets API key leaks and ransomware Dark web monitoring strategies for PCI DSS v4 compliance and PayFac security",
-  featuredImage: "/images/blog/dark-web-monitoring-for-payfac-and-payment-facilitators.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "12 min read",

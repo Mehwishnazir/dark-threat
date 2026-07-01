@@ -10,7 +10,7 @@ export const isYourHomeAddressOnTheDarkWebHowToFindOut: BlogPostType & {
   slug: "is-your-home-address-on-the-dark-web-how-to-find-out",
   title: "Is Your Home Address on the Dark Web? How to Find Out",
   excerpt: "Learn how to check if your home address is on the dark web and take action with a step-by-step guide on PII exposure detection, remediation, and long-term protection strategies.",
-  featuredImage: "/images/blog/is-your-home-address-on-the-dark-web-how-to-find-out.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 4, 2026",
   readingTime: "13 min read",

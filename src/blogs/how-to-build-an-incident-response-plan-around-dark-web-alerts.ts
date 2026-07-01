@@ -10,7 +10,7 @@ export const howToBuildAnIncidentResponsePlanAroundDarkWebAlerts: BlogPostType &
   slug: "how-to-build-an-incident-response-plan-around-dark-web-alerts",
   title: "How to Build an Incident Response Plan Around Dark Web Alerts",
   excerpt: "Learn how to build an incident response plan around dark web alerts. Step-by-step guide for CISOs and SOC teams to automate credential leak response and reduce breach impact.",
-  featuredImage: "/images/blog/how-to-build-an-incident-response-plan-around-dark-web-alerts.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "12 min read",

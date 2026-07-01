@@ -10,7 +10,7 @@ export const bestDarkWebMonitoringServicesForEnterprisesIn2025: BlogPostType & {
   slug: "best-dark-web-monitoring-services-for-enterprises-in-2025",
   title: "Best Dark Web Monitoring Services for Enterprises in 2025",
   excerpt: "Compare the best dark web monitoring services for enterprises in 2025. Evaluation criteria vendor comparison stealer log detection IAB monitoring compliance evidence and TCO analysis for CISOs",
-  featuredImage: "/images/blog/best-dark-web-monitoring-services-for-enterprises-in-2025.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "18 min read",

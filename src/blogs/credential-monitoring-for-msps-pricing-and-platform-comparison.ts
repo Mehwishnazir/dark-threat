@@ -10,7 +10,7 @@ export const credentialMonitoringForMspsPricingAndPlatformComparison: BlogPostTy
   slug: "credential-monitoring-for-msps-pricing-and-platform-comparison",
   title: "Credential Monitoring for MSPs: Pricing and Platform Comparison",
   excerpt: "Compare MSP credential monitoring platform pricing and design. Evaluate DarkThreatAI cost vs coverage for multi-tenant credential leak detection to reduce breach risk and scale profitably.",
-  featuredImage: "/images/blog/credential-monitoring-for-msps-pricing-and-platform-comparison.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "13 min read",

@@ -10,7 +10,7 @@ export const darkWebMonitoringForRemoteWorkforceNewAttackSurfaces: BlogPostType 
   slug: "dark-web-monitoring-for-remote-workforce-new-attack-surfaces",
   title: "Dark Web Monitoring for Remote Workforce: New Attack Surfaces",
   excerpt: "Protect your remote workforce with dark web monitoring. Detect stealer logs IAB listings and exposed credentials before attackers exploit them to reduce breach risk and dwell time.",
-  featuredImage: "/images/blog/dark-web-monitoring-for-remote-workforce-new-attack-surfaces.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "13 min read",

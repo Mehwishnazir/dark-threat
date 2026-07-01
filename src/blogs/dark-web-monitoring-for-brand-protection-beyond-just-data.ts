@@ -10,7 +10,7 @@ export const darkWebMonitoringForBrandProtectionBeyondJustData: BlogPostType & {
   slug: "dark-web-monitoring-for-brand-protection-beyond-just-data",
   title: "Dark Web Monitoring for Brand Protection: Beyond Just Data",
   excerpt: "Learn how dark web monitoring for brand protection detects phishing kits brand impersonation and reputation threats from dark web forums ransomware leak sites and credential dumps to protect customers and revenue",
-  featuredImage: "/images/blog/dark-web-monitoring-for-brand-protection-beyond-just-data.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "13 min read",

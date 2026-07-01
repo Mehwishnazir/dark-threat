@@ -10,7 +10,7 @@ export const thePsychologyOfInsiderThreatsWarningSignsToWatchFor: BlogPostType &
   slug: "the-psychology-of-insider-threats-warning-signs-to-watch-for",
   title: "The Psychology of Insider Threats — Warning Signs to Watch For",
   excerpt: "Learn the psychology insider threat warning signs including behavioral indicators cognitive distortions and financial stress precursors to detect data theft and sabotage before incidents occur",
-  featuredImage: "/images/blog/the-psychology-of-insider-threats-warning-signs-to-watch-for.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 3, 2026",
   readingTime: "18 min read",

@@ -10,7 +10,7 @@ export const whatToDoInTheFirst24HoursAfterADarkWebMonitoringAlert: BlogPostType
   slug: "what-to-do-in-the-first-24-hours-after-a-dark-web-monitoring-alert",
   title: "What to Do in the First 24 Hours After a Dark Web Monitoring Alert",
   excerpt: "Learn the critical 24-hour incident response playbook for acting on a dark web monitoring alert, covering triage, credential validation, containment, notification, and intelligence enrichment for CISOs and SOC teams.",
-  featuredImage: "/images/blog/what-to-do-in-the-first-24-hours-after-a-dark-web-monitoring-alert.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "16 min read",

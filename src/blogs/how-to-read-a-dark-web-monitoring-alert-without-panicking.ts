@@ -10,7 +10,7 @@ export const howToReadADarkWebMonitoringAlertWithoutPanicking: BlogPostType & {
   slug: "how-to-read-a-dark-web-monitoring-alert-without-panicking",
   title: "How to Read a Dark Web Monitoring Alert Without Panicking",
   excerpt: "Learn how to read dark web monitoring alerts without panicking with a six-step triage framework for SOC analysts and IT managers to assess credential exposures calmly and accurately.",
-  featuredImage: "/images/blog/how-to-read-a-dark-web-monitoring-alert-without-panicking.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "15 min read",

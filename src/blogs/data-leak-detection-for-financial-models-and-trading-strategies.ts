@@ -10,7 +10,7 @@ export const dataLeakDetectionForFinancialModelsAndTradingStrategies: BlogPostTy
   slug: "data-leak-detection-for-financial-models-and-trading-strategies",
   title: "Data Leak Detection for Financial Models and Trading Strategies",
   excerpt: "Learn how data leak detection for financial models and trading strategies protects proprietary algorithms from dark web exposure GitHub leaks and ransomware extortion",
-  featuredImage: "/images/blog/data-leak-detection-for-financial-models-and-trading-strategies.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "14 min read",

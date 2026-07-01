@@ -10,7 +10,7 @@ export const dataLeakDetectionForCloudStorageS3AndAzureBlobExposure: BlogPostTyp
   slug: "data-leak-detection-for-cloud-storage-s3-and-azure-blob-exposure",
   title: "Data Leak Detection for Cloud Storage: S3 and Azure Blob Exposure",
   excerpt: "Learn how data leak detection for cloud storage protects AWS S3 and Azure Blob from misconfiguration exposure, dark web data dumps, and ransomware extortion strategies",
-  featuredImage: "/images/blog/data-leak-detection-for-cloud-storage-s3-and-azure-blob-exposure.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "12 min read",

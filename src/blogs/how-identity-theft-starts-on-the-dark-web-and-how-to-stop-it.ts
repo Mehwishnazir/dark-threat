@@ -10,7 +10,7 @@ export const howIdentityTheftStartsOnTheDarkWebAndHowToStopIt: BlogPostType & {
   slug: "how-identity-theft-starts-on-the-dark-web-and-how-to-stop-it",
   title: "How Identity Theft Starts on the Dark Web — And How to Stop It",
   excerpt: "Explore how identity theft starts on the dark web from breach to listing and fraud. Learn about the underground economy of stolen identities and how to detect and disrupt the pipeline.",
-  featuredImage: "/images/blog/how-identity-theft-starts-on-the-dark-web-and-how-to-stop-it.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 4, 2026",
   readingTime: "18 min read",

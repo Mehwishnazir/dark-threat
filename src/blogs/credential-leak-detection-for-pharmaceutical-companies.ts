@@ -10,7 +10,7 @@ export const credentialLeakDetectionForPharmaceuticalCompanies: BlogPostType & {
   slug: "credential-leak-detection-for-pharmaceutical-companies",
   title: "Credential Leak Detection for Pharmaceutical Companies",
   excerpt: "Discover how credential leak detection protects pharmaceutical companies from infostealer malware, dark web credential markets, and regulatory exposure under HIPAA, 21 CFR Part 11, and GDPR.",
-  featuredImage: "/images/blog/credential-leak-detection-for-pharmaceutical-companies.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "15 min read",

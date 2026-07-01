@@ -10,7 +10,7 @@ export const howToContainADataLeakWithinTheFirst4Hours: BlogPostType & {
   slug: "how-to-contain-a-data-leak-within-the-first-4-hours",
   title: "How to Contain a Data Leak Within the First 4 Hours",
   excerpt: "Learn how to contain a data leak within the first 4 hours with a step-by-step incident response playbook for CISOs and SOC teams covering triage isolation dark web intelligence collection and stakeholder escalation",
-  featuredImage: "/images/blog/how-to-contain-a-data-leak-within-the-first-4-hours.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "15 min read",

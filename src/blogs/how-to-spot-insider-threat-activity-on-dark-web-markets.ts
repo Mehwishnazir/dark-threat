@@ -10,7 +10,7 @@ export const howToSpotInsiderThreatActivityOnDarkWebMarkets: BlogPostType & {
   slug: "how-to-spot-insider-threat-activity-on-dark-web-markets",
   title: "How to Spot Insider Threat Activity on Dark Web Markets",
   excerpt: "Learn how to detect insider threats using dark web monitoring. A step-by-step guide for security teams to correlate dark web signals with employee behavior and prevent data exfiltration.",
-  featuredImage: "/images/blog/how-to-spot-insider-threat-activity-on-dark-web-markets.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "15 min read",

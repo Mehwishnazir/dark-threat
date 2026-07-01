@@ -10,7 +10,7 @@ export const howManyEmployeeCredentialsAreOnTheDarkWebRightNow: BlogPostType & {
   slug: "how-many-employee-credentials-are-on-the-dark-web-right-now",
   title: "How Many Employee Credentials Are on the Dark Web Right Now",
   excerpt: "How many employee credentials are on the dark web right now Learn the real scale of credential exposure and how credential leak detection helps security teams identify and remediate leaked employee logins",
-  featuredImage: "/images/blog/how-many-employee-credentials-are-on-the-dark-web-right-now.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "13 min read",

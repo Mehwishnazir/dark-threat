@@ -10,7 +10,7 @@ export const howHackersTestStolenDataBeforeSellingAndHowToDetectIt: BlogPostType
   slug: "how-hackers-test-stolen-data-before-selling-and-how-to-detect-it",
   title: "How Hackers Test Stolen Data Before Selling — And How to Detect It",
   excerpt: "Learn how hackers test stolen data before selling it, the tools they use, and how data leak detection catches leaks during the critical validation window before damage is done.",
-  featuredImage: "/images/blog/how-hackers-test-stolen-data-before-selling-and-how-to-detect-it.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "10 min read",

@@ -10,7 +10,7 @@ export const darkWebDataFreshnessWhyRealTimeMattersMoreThanArchiveSize: BlogPost
   slug: "dark-web-data-freshness-why-real-time-matters-more-than-archive-size",
   title: "Dark Web Data Freshness: Why Real-Time Matters More Than Archive Size",
   excerpt: "Dark web data freshness determines whether alerts prevent breaches or document them. Learn why real-time ingestion beats archive size for threat detection.",
-  featuredImage: "/images/blog/dark-web-data-freshness-why-real-time-matters-more-than-archive-size.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "15 min read",

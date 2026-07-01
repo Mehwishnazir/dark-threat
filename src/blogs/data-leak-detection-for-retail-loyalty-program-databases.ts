@@ -10,7 +10,7 @@ export const dataLeakDetectionForRetailLoyaltyProgramDatabases: BlogPostType & {
   slug: "data-leak-detection-for-retail-loyalty-program-databases",
   title: "Data Leak Detection for Retail Loyalty Program Databases",
   excerpt: "Learn how to detect data leak detection signals for retail loyalty program databases through dark web paste site and ransomware leak site monitoring before regulators do",
-  featuredImage: "/images/blog/data-leak-detection-for-retail-loyalty-program-databases.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "13 min read",

@@ -10,7 +10,7 @@ export const credentialLeakDetectionForCryptoAndDefiPlatforms: BlogPostType & {
   slug: "credential-leak-detection-for-crypto-and-defi-platforms",
   title: "Credential Leak Detection for Crypto and DeFi Platforms",
   excerpt: "Learn how credential leak detection protects crypto and DeFi platforms from infostealer logs API key exposures and credential market threats Real world attack scenarios and detection framework included",
-  featuredImage: "/images/blog/credential-leak-detection-for-crypto-and-defi-platforms.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "15 min read",

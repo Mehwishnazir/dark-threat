@@ -10,7 +10,7 @@ export const howToIntegrateDarkWebMonitoringIntoYourSocWorkflow: BlogPostType & 
   slug: "how-to-integrate-dark-web-monitoring-into-your-soc-workflow",
   title: "How to Integrate Dark Web Monitoring Into Your SOC Workflow",
   excerpt: "Learn how to integrate dark web monitoring into your SOC workflow with this step-by-step guide covering SIEM ingestion, SOAR playbooks, and threat hunting automation for credential and IAB signals.",
-  featuredImage: "/images/blog/how-to-integrate-dark-web-monitoring-into-your-soc-workflow.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "13 min read",

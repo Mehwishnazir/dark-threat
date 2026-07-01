@@ -10,7 +10,7 @@ export const enterpriseCredentialHygieneMonitoringEnforcementStrategies: BlogPos
   slug: "enterprise-credential-hygiene-monitoring-enforcement-strategies",
   title: "Enterprise Credential Hygiene: Monitoring + Enforcement Strategies",
   excerpt: "Learn how to combine credential leak detection with enforcement strategies like conditional access and automated password resets to close the window on enterprise credential exposure and account takeover.",
-  featuredImage: "/images/blog/enterprise-credential-hygiene-monitoring-enforcement-strategies.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "17 min read",

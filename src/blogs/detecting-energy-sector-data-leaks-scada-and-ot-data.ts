@@ -10,7 +10,7 @@ export const detectingEnergySectorDataLeaksScadaAndOtData: BlogPostType & {
   slug: "detecting-energy-sector-data-leaks-scada-and-ot-data",
   title: "Detecting Energy Sector Data Leaks: SCADA and OT Data",
   excerpt: "Learn how to detect energy sector data leaks involving SCADA and OT data on the dark web Ransomware groups leak sites and compliance risks explained for CISOs",
-  featuredImage: "/images/blog/detecting-energy-sector-data-leaks-scada-and-ot-data.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "13 min read",

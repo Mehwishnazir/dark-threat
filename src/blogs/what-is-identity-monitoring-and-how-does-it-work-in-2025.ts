@@ -10,7 +10,7 @@ export const whatIsIdentityMonitoringAndHowDoesItWorkIn2025: BlogPostType & {
   slug: "what-is-identity-monitoring-and-how-does-it-work-in-2025",
   title: "What Is Identity Monitoring and How Does It Work in 2025?",
   excerpt: "Identity monitoring in 2025 is a critical cybersecurity discipline combining dark web surveillance with credential security to detect compromised assets and reduce breach dwell time through proactive intelligence.",
-  featuredImage: "/images/blog/what-is-identity-monitoring-and-how-does-it-work-in-2025.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 4, 2026",
   readingTime: "16 min read",

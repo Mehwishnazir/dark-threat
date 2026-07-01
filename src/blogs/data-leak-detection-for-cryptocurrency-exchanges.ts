@@ -10,7 +10,7 @@ export const dataLeakDetectionForCryptocurrencyExchanges: BlogPostType & {
   slug: "data-leak-detection-for-cryptocurrency-exchanges",
   title: "Data Leak Detection for Cryptocurrency Exchanges",
   excerpt: "Data leak detection for cryptocurrency exchanges covering KYC data private keys and API secrets exposed on ransomware leak sites and dark web marketplaces with a detection framework for CEXs and DeFi protocols",
-  featuredImage: "/images/blog/data-leak-detection-for-cryptocurrency-exchanges.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "13 min read",

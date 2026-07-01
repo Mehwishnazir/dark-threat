@@ -10,7 +10,7 @@ export const darkWebMonitoringAsASoc2CompensatingControl: BlogPostType & {
   slug: "dark-web-monitoring-as-a-soc-2-compensating-control",
   title: "Dark Web Monitoring as a SOC 2 Compensating Control",
   excerpt: "Learn how to use dark web monitoring as a SOC 2 compensating control Map trust services criteria build evidence artifacts and satisfy auditors with continuous credential exposure detection from DarkThreat AI",
-  featuredImage: "/images/blog/dark-web-monitoring-as-a-soc-2-compensating-control.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "11 min read",

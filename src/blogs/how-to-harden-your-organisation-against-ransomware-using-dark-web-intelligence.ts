@@ -10,7 +10,7 @@ export const howToHardenYourOrganisationAgainstRansomwareUsingDarkWebIntelligenc
   slug: "how-to-harden-your-organisation-against-ransomware-using-dark-web-intelligence",
   title: "How to Harden Your Organisation Against Ransomware Using Dark Web Intelligence",
   excerpt: "Learn how to harden your organization against ransomware using dark web intelligence for proactive defense, credential monitoring, and threat-informed security strategies.",
-  featuredImage: "/images/blog/how-to-harden-your-organisation-against-ransomware-using-dark-web-intelligence.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 3, 2026",
   readingTime: "21 min read",

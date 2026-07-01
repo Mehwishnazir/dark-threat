@@ -10,7 +10,7 @@ export const detectingLeakedMilitaryAndDefenseContractorData: BlogPostType & {
   slug: "detecting-leaked-military-and-defense-contractor-data",
   title: "Detecting Leaked Military and Defense Contractor Data",
   excerpt: "Learn how to detect leaked military and defense contractor data on ransomware leak sites, dark web forums, and Telegram channels for DFARS and ITAR compliance.",
-  featuredImage: "/images/blog/detecting-leaked-military-and-defense-contractor-data.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "9 min read",

@@ -10,7 +10,7 @@ export const credentialExposureRateByIndustryTwentyTwentySixBenchmarkReport: Blo
   slug: "credential-exposure-rate-by-industry-2026-benchmark-report",
   title: "Credential Exposure Rate by Industry: 2026 Benchmark Report",
   excerpt: "2026 credential exposure rate benchmarks by industry including technology retail healthcare and finance Data-driven analysis of primary leak vectors business costs and detection strategies for CISOs and identity teams",
-  featuredImage: "/images/blog/credential-exposure-rate-by-industry-2026-benchmark-report.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "July 1, 2026",
   readingTime: "13 min read",

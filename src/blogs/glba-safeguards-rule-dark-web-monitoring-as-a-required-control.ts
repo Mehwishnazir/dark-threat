@@ -10,7 +10,7 @@ export const glbaSafeguardsRuleDarkWebMonitoringAsARequiredControl: BlogPostType
   slug: "glba-safeguards-rule-dark-web-monitoring-as-a-required-control",
   title: "GLBA Safeguards Rule: Dark Web Monitoring as a Required Control",
   excerpt: "Learn how dark web monitoring fulfills GLBA Safeguards Rule requirements for financial institutions including risk assessment access controls and vendor oversight to protect customer data and maintain regulatory compliance.",
-  featuredImage: "/images/blog/glba-safeguards-rule-dark-web-monitoring-as-a-required-control.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "13 min read",

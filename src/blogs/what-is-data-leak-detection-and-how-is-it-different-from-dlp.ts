@@ -10,7 +10,7 @@ export const whatIsDataLeakDetectionAndHowIsItDifferentFromDlp: BlogPostType & {
   slug: "what-is-data-leak-detection-and-how-is-it-different-from-dlp",
   title: "What Is Data Leak Detection and How Is It Different from DLP",
   excerpt: "Learn the key differences between data leak detection and DLP systems, why both are essential for double extortion defense, and how DarkThreat.AI fills the external monitoring gap for security teams.",
-  featuredImage: "/images/blog/what-is-data-leak-detection-and-how-is-it-different-from-dlp.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "13 min read",

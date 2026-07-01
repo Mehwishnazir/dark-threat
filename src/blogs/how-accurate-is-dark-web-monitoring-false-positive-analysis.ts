@@ -10,7 +10,7 @@ export const howAccurateIsDarkWebMonitoringFalsePositiveAnalysis: BlogPostType &
   slug: "how-accurate-is-dark-web-monitoring-false-positive-analysis",
   title: "How Accurate Is Dark Web Monitoring? False Positive Analysis",
   excerpt: "A rigorous analysis of false positive and false negative rates in dark web monitoring. Learn how to evaluate and compare platform accuracy for your security team.",
-  featuredImage: "/images/blog/how-accurate-is-dark-web-monitoring-false-positive-analysis.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "14 min read",

@@ -10,7 +10,7 @@ export const howMaliciousInsidersUseTheDarkWebToSellCompanyData: BlogPostType & 
   slug: "how-malicious-insiders-use-the-dark-web-to-sell-company-data",
   title: "How Malicious Insiders Use the Dark Web to Sell Company Data",
   excerpt: "Explore how malicious insiders exploit dark web marketplaces to sell corporate data this comprehensive guide covers the insider threat pipeline exfiltration techniques detection strategies and legal frameworks to protect your organization",
-  featuredImage: "/images/blog/how-malicious-insiders-use-the-dark-web-to-sell-company-data.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 3, 2026",
   readingTime: "17 min read",

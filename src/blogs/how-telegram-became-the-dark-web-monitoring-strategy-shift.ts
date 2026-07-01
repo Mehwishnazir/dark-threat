@@ -10,7 +10,7 @@ export const howTelegramBecameTheDarkWebMonitoringStrategyShift: BlogPostType & 
   slug: "how-telegram-became-the-dark-web-monitoring-strategy-shift",
   title: "How Telegram Became the Dark Web: Monitoring Strategy Shift",
   excerpt: "Telegram has become the dark web for cybercrime replacing Tor forums with real-time stolen credential markets IAB listings and ransomware channels Learn how to shift your dark web monitoring strategy for Telegram-native threat intelligence detection and response",
-  featuredImage: "/images/blog/how-telegram-became-the-dark-web-monitoring-strategy-shift.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "12 min read",

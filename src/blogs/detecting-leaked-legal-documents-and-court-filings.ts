@@ -10,7 +10,7 @@ export const detectingLeakedLegalDocumentsAndCourtFilings: BlogPostType & {
   slug: "detecting-leaked-legal-documents-and-court-filings",
   title: "Detecting Leaked Legal Documents and Court Filings",
   excerpt: "Learn how to detect leaked legal documents and court filings on dark web forums, ransomware leak sites, and paste sites. A step-by-step framework for law firms and legal departments.",
-  featuredImage: "/images/blog/detecting-leaked-legal-documents-and-court-filings.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "15 min read",

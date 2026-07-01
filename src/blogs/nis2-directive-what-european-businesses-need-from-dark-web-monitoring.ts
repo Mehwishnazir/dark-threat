@@ -10,7 +10,7 @@ export const nis2DirectiveWhatEuropeanBusinessesNeedFromDarkWebMonitoring: BlogP
   slug: "nis2-directive-what-european-businesses-need-from-dark-web-monitoring",
   title: "NIS2 Directive — What European Businesses Need from Dark Web Monitoring",
   excerpt: "NIS2 dark web monitoring requirements explained: how proactive threat intelligence helps European businesses meet incident detection reporting and compliance obligations under the new directive",
-  featuredImage: "/images/blog/nis2-directive-what-european-businesses-need-from-dark-web-monitoring.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 4, 2026",
   readingTime: "17 min read",

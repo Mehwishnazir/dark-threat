@@ -10,7 +10,7 @@ export const pciDss40AndDarkWebMonitoringWhatPaymentProcessorsNeedToKnow: BlogPo
   slug: "pci-dss-40-and-dark-web-monitoring-what-payment-processors-need-to-know",
   title: "PCI DSS 4.0 and Dark Web Monitoring — What Payment Processors Need to Know",
   excerpt: "Learn how PCI DSS 4.0 requires dark web monitoring for payment processors, with actionable guidance on compliance, threat intelligence, and security controls before March 2025 enforcement.",
-  featuredImage: "/images/blog/pci-dss-40-and-dark-web-monitoring-what-payment-processors-need-to-know.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 4, 2026",
   readingTime: "18 min read",

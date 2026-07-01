@@ -10,7 +10,7 @@ export const howToTrackBrandMentionsOnDarkWebForums: BlogPostType & {
   slug: "how-to-track-brand-mentions-on-dark-web-forums",
   title: "How to Track Brand Mentions on Dark Web Forums",
   excerpt: "Learn how to track brand mentions on dark web forums with a step-by-step guide for security teams covering keyword monitoring stealer log correlation and response workflows",
-  featuredImage: "/images/blog/how-to-track-brand-mentions-on-dark-web-forums.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "15 min read",

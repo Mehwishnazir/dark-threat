@@ -10,7 +10,7 @@ export const monitoringPasteSitesAlongsideTheDarkWebExtendedCoverage: BlogPostTy
   slug: "monitoring-paste-sites-alongside-the-dark-web-extended-coverage",
   title: "Monitoring Paste Sites Alongside the Dark Web: Extended Coverage",
   excerpt: "Learn how monitoring paste sites alongside the dark web provides extended threat coverage Dark web monitoring that integrates clear web paste sites Telegram and Tor for real-time intelligence",
-  featuredImage: "/images/blog/monitoring-paste-sites-alongside-the-dark-web-extended-coverage.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "13 min read",

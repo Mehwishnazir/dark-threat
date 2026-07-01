@@ -10,7 +10,7 @@ export const darkWebActivityReportTopThreatsTargetingBusinessesIn2025: BlogPostT
   slug: "dark-web-activity-report-top-threats-targeting-businesses-in-2025",
   title: "Dark Web Activity Report: Top Threats Targeting Businesses in 2025",
   excerpt: "A comprehensive 2025 dark web activity report analyzing stealer logs, initial access brokers, ransomware leak sites, and forum threats targeting businesses. Learn how to detect threats with real-time monitoring.",
-  featuredImage: "/images/blog/dark-web-activity-report-top-threats-targeting-businesses-in-2025.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "15 min read",

@@ -10,7 +10,7 @@ export const howCybercriminalsPriceAndSellCorporateDataOnDarkWeb: BlogPostType &
   slug: "how-cybercriminals-price-and-sell-corporate-data-on-dark-web",
   title: "How Cybercriminals Price and Sell Corporate Data on Dark Web",
   excerpt: "Learn how cybercriminals price and sell corporate data on the dark web including valuation factors marketplace dynamics ransomware leak sites and data leak detection strategies every CISO needs",
-  featuredImage: "/images/blog/how-cybercriminals-price-and-sell-corporate-data-on-dark-web.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "15 min read",

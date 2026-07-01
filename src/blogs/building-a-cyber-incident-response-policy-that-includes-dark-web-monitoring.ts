@@ -10,7 +10,7 @@ export const buildingACyberIncidentResponsePolicyThatIncludesDarkWebMonitoring: 
   slug: "building-a-cyber-incident-response-policy-that-includes-dark-web-monitoring",
   title: "Building a Cyber Incident Response Policy That Includes Dark Web Monitoring",
   excerpt: "Learn how to build an incident response policy that integrates dark web monitoring to detect credential leaks and threats before they escalate in this comprehensive guide.",
-  featuredImage: "/images/blog/building-a-cyber-incident-response-policy-that-includes-dark-web-monitoring.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 4, 2026",
   readingTime: "15 min read",

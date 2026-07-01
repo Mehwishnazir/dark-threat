@@ -10,7 +10,7 @@ export const secCybersecurityDisclosureRulesAndDarkWebIntelligence: BlogPostType
   slug: "sec-cybersecurity-disclosure-rules-and-dark-web-intelligence",
   title: "SEC Cybersecurity Disclosure Rules and Dark Web Intelligence",
   excerpt: "SEC cybersecurity disclosure rules demand timely verifiable intelligence Learn how dark web monitoring and dark web intelligence support four day incident filings and materiality determinations",
-  featuredImage: "/images/blog/sec-cybersecurity-disclosure-rules-and-dark-web-intelligence.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "11 min read",

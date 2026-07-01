@@ -10,7 +10,7 @@ export const detectingLeakedCustomerCredentialsVsEmployeeCredentials: BlogPostTy
   slug: "detecting-leaked-customer-credentials-vs-employee-credentials",
   title: "Detecting Leaked Customer Credentials vs Employee Credentials",
   excerpt: "Compare detection strategies, dark web sources, and response workflows for leaked customer versus employee credentials in this analysis for CISOs and IAM leaders covering credential leak detection tools and gaps.",
-  featuredImage: "/images/blog/detecting-leaked-customer-credentials-vs-employee-credentials.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "15 min read",

@@ -10,7 +10,7 @@ export const darkWebEvidenceInCybersecurityLitigationWhatLawyersNeedToKnow: Blog
   slug: "dark-web-evidence-in-cybersecurity-litigation-what-lawyers-need-to-know",
   title: "Dark Web Evidence in Cybersecurity Litigation — What Lawyers Need to Know",
   excerpt: "Learn how dark web evidence in cybersecurity litigation is authenticated, preserved, and used to establish notice, prove data exfiltration, and meet FRE 901 standards.",
-  featuredImage: "/images/blog/dark-web-evidence-in-cybersecurity-litigation-what-lawyers-need-to-know.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 4, 2026",
   readingTime: "15 min read",

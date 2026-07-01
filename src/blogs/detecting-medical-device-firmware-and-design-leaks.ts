@@ -10,7 +10,7 @@ export const detectingMedicalDeviceFirmwareAndDesignLeaks: BlogPostType & {
   slug: "detecting-medical-device-firmware-and-design-leaks",
   title: "Detecting Medical Device Firmware and Design Leaks",
   excerpt: "Detect medical device firmware and design leaks before they reach competitors or ransomware leak sites DarkThreat AI monitors dark web forums paste sites and code repos for proprietary IP exposure",
-  featuredImage: "/images/blog/detecting-medical-device-firmware-and-design-leaks.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "18 min read",

@@ -10,7 +10,7 @@ export const riseOfInitialAccessBrokersTwentyTwentySixDarkWebMonitoringIntellige
   slug: "rise-of-initial-access-brokers-2026-dark-web-monitoring-intelligence",
   title: "Rise of Initial Access Brokers: 2026 Dark Web Monitoring Intelligence",
   excerpt: "Initial access broker dark web monitoring intelligence for 2026 how IABs buy and sell leaked credentials infostealer logs and session tokens on dark web markets Learn how credential leak detection platforms intercept these threats before they become breaches",
-  featuredImage: "/images/blog/rise-of-initial-access-brokers-2026-dark-web-monitoring-intelligence.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "July 1, 2026",
   readingTime: "15 min read",

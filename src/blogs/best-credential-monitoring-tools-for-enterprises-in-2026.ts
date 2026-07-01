@@ -10,7 +10,7 @@ export const bestCredentialMonitoringToolsForEnterprisesInTwentyTwentySix: BlogP
   slug: "best-credential-monitoring-tools-for-enterprises-in-2026",
   title: "Best Credential Monitoring Tools for Enterprises in 2026",
   excerpt: "Enterprise credential monitoring tools compared for 2026: evaluation criteria, feature analysis, and selection framework for CISOs and IAM teams evaluating credential leak detection platforms.",
-  featuredImage: "/images/blog/best-credential-monitoring-tools-for-enterprises-in-2026.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "July 1, 2026",
   readingTime: "14 min read",

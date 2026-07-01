@@ -10,7 +10,7 @@ export const darkWebMonitoringAsACompensatingControlInSecurityAudits: BlogPostTy
   slug: "dark-web-monitoring-as-a-compensating-control-in-security-audits",
   title: "Dark Web Monitoring as a Compensating Control in Security Audits",
   excerpt: "Learn how to document dark web monitoring as a compensating control in audit responses, including frameworks like NIST SP 800-53 and PCI DSS, with real-world scenarios and best practices for auditor acceptance.",
-  featuredImage: "/images/blog/dark-web-monitoring-as-a-compensating-control-in-security-audits.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 4, 2026",
   readingTime: "22 min read",

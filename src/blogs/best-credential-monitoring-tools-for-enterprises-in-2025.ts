@@ -10,7 +10,7 @@ export const bestCredentialMonitoringToolsForEnterprisesIn2025: BlogPostType & {
   slug: "best-credential-monitoring-tools-for-enterprises-in-2025",
   title: "Best Credential Monitoring Tools for Enterprises in 2025",
   excerpt: "Enterprise credential monitoring tools comparison for 2025 covering DarkThreat AI SpyCloud Flare Constella CybelAngel with evaluation of real-time leak detection coverage data freshness and SIEM integration",
-  featuredImage: "/images/blog/best-credential-monitoring-tools-for-enterprises-in-2025.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "15 min read",

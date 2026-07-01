@@ -10,7 +10,7 @@ export const howInternalDataLeaksGetToTheDarkWebAttackPathAnalysis: BlogPostType
   slug: "how-internal-data-leaks-get-to-the-dark-web-attack-path-analysis",
   title: "How Internal Data Leaks Get to the Dark Web: Attack Path Analysis",
   excerpt: "Learn how internal data leaks reach the dark web through stealer malware, credential trading, and ransomware leak sites and how data leak detection intercepts each attack path stage.",
-  featuredImage: "/images/blog/how-internal-data-leaks-get-to-the-dark-web-attack-path-analysis.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "17 min read",

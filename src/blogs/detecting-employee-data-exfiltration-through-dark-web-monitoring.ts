@@ -10,7 +10,7 @@ export const detectingEmployeeDataExfiltrationThroughDarkWebMonitoring: BlogPost
   slug: "detecting-employee-data-exfiltration-through-dark-web-monitoring",
   title: "Detecting Employee Data Exfiltration Through Dark Web Monitoring",
   excerpt: "Learn how dark web monitoring detects employee data exfiltration by scanning ransomware leak sites, paste sites, and Telegram channels for organizational data patterns and insider threat signals to protect sensitive data.",
-  featuredImage: "/images/blog/detecting-employee-data-exfiltration-through-dark-web-monitoring.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "14 min read",

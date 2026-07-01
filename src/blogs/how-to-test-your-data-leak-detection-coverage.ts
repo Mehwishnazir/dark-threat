@@ -10,7 +10,7 @@ export const howToTestYourDataLeakDetectionCoverage: BlogPostType & {
   slug: "how-to-test-your-data-leak-detection-coverage",
   title: "How to Test Your Data Leak Detection Coverage",
   excerpt: "Learn how to test your data leak detection coverage with a structured methodology covering paste sites ransomware leak portals source code repos and dark web marketplaces",
-  featuredImage: "/images/blog/how-to-test-your-data-leak-detection-coverage.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "14 min read",

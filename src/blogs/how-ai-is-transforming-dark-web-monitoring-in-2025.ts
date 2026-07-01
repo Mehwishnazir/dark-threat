@@ -10,7 +10,7 @@ export const howAiIsTransformingDarkWebMonitoringIn2025: BlogPostType & {
   slug: "how-ai-is-transforming-dark-web-monitoring-in-2025",
   title: "How AI Is Transforming Dark Web Monitoring in 2025",
   excerpt: "Explore how AI transforms dark web monitoring in 2025: NLP, graph analysis, and real-time detection reduce breach dwell time and stop credential theft before attacks land.",
-  featuredImage: "/images/blog/how-ai-is-transforming-dark-web-monitoring-in-2025.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "13 min read",

@@ -10,7 +10,7 @@ export const darkWebMonitoringCoverageGapsWhatNoPlatformWillTellYou: BlogPostTyp
   slug: "dark-web-monitoring-coverage-gaps-what-no-platform-will-tell-you",
   title: "Dark Web Monitoring Coverage Gaps: What No Platform Will Tell You",
   excerpt: "Learn the seven dark web monitoring coverage gaps most platforms hide including stealer log blind spots forum access limits and delayed leak site detection plus how to evaluate your vendor for real protection",
-  featuredImage: "/images/blog/dark-web-monitoring-coverage-gaps-what-no-platform-will-tell-you.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "13 min read",

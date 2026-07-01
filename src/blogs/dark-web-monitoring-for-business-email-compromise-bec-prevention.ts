@@ -10,7 +10,7 @@ export const darkWebMonitoringForBusinessEmailCompromiseBecPrevention: BlogPostT
   slug: "dark-web-monitoring-for-business-email-compromise-bec-prevention",
   title: "Dark Web Monitoring for Business Email Compromise (BEC) Prevention",
   excerpt: "Defend your organization from Business Email Compromise with dark web monitoring for BEC prevention. Learn how to detect credential leaks, session hijacks, and IAB access before attackers strike.",
-  featuredImage: "/images/blog/dark-web-monitoring-for-business-email-compromise-bec-prevention.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "13 min read",

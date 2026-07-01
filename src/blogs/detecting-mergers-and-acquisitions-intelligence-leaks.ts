@@ -10,7 +10,7 @@ export const detectingMergersAndAcquisitionsIntelligenceLeaks: BlogPostType & {
   slug: "detecting-mergers-and-acquisitions-intelligence-leaks",
   title: "Detecting Mergers and Acquisitions Intelligence Leaks",
   excerpt: "Detect M and A intelligence leaks before they sink your deal Learn how ransomware leak sites forums and insider threats expose merger data and how dedicated monitoring protects transactions",
-  featuredImage: "/images/blog/detecting-mergers-and-acquisitions-intelligence-leaks.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "14 min read",

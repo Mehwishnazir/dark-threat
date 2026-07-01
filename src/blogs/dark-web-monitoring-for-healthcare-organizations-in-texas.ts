@@ -10,7 +10,7 @@ export const darkWebMonitoringForHealthcareOrganizationsInTexas: BlogPostType & 
   slug: "dark-web-monitoring-for-healthcare-organizations-in-texas",
   title: "Dark Web Monitoring for Healthcare Organizations in Texas",
   excerpt: "Dark web monitoring for healthcare organizations in Texas: detect stealer logs IAB listings and PHI exposures before HIPAA or TMRPA notification deadlines expire",
-  featuredImage: "/images/blog/dark-web-monitoring-for-healthcare-organizations-in-texas.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 20, 2026",
   readingTime: "12 min read",

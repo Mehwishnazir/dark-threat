@@ -10,7 +10,7 @@ export const howCredentialStuffingAttacksUseDarkWebStolenPasswords: BlogPostType
   slug: "how-credential-stuffing-attacks-use-dark-web-stolen-passwords",
   title: "How Credential Stuffing Attacks Use Dark Web Stolen Passwords",
   excerpt: "Learn how credential stuffing attacks use dark web stolen passwords from infostealers like RedLine Stealer and Vidar and how credential leak detection can break the attack chain to prevent account takeover",
-  featuredImage: "/images/blog/how-credential-stuffing-attacks-use-dark-web-stolen-passwords.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "15 min read",

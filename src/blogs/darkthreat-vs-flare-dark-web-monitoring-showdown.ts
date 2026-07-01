@@ -10,7 +10,7 @@ export const darkthreatVsFlareDarkWebMonitoringShowdown: BlogPostType & {
   slug: "darkthreat-vs-flare-dark-web-monitoring-showdown",
   title: "DarkThreat vs Flare: Dark Web Monitoring Showdown",
   excerpt: "Neutral dark web monitoring comparison of DarkThreat vs Flare covering coverage depth, data freshness, alert quality, SOC integration, compliance support, and pricing for security practitioners.",
-  featuredImage: "/images/blog/darkthreat-vs-flare-dark-web-monitoring-showdown.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "11 min read",

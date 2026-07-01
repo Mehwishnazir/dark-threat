@@ -10,7 +10,7 @@ export const exposedServiceAccountCredentialsDetectionAndRemediation: BlogPostTy
   slug: "exposed-service-account-credentials-detection-and-remediation",
   title: "Exposed Service Account Credentials: Detection and Remediation",
   excerpt: "Learn how to detect and remediate exposed service account credentials targeted by infostealer malware on dark web markets with this step-by-step guide for security teams",
-  featuredImage: "/images/blog/exposed-service-account-credentials-detection-and-remediation.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "15 min read",

@@ -10,7 +10,7 @@ export const whatHappensWhenDarkWebMonitoringFindsYourData: BlogPostType & {
   slug: "what-happens-when-dark-web-monitoring-finds-your-data",
   title: "What Happens When Dark Web Monitoring Finds Your Data",
   excerpt: "When dark web monitoring finds your data, the real work begins. This article explains the detection-to-remediation lifecycle for security teams.",
-  featuredImage: "/images/blog/what-happens-when-dark-web-monitoring-finds-your-data.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "12 min read",

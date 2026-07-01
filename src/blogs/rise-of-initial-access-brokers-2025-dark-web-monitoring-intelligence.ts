@@ -10,7 +10,7 @@ export const riseOfInitialAccessBrokers2025DarkWebMonitoringIntelligence: BlogPo
   slug: "rise-of-initial-access-brokers-2025-dark-web-monitoring-intelligence",
   title: "Rise of Initial Access Brokers: 2025 Dark Web Monitoring Intelligence",
   excerpt: "Initial access brokers in 2025 are driving ransomware attacks through dark web marketplaces. Learn how IABs operate and how dark web monitoring detects access sales targeting your organization.",
-  featuredImage: "/images/blog/rise-of-initial-access-brokers-2025-dark-web-monitoring-intelligence.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "12 min read",

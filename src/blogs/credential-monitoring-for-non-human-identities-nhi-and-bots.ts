@@ -10,7 +10,7 @@ export const credentialMonitoringForNonHumanIdentitiesNhiAndBots: BlogPostType &
   slug: "credential-monitoring-for-non-human-identities-nhi-and-bots",
   title: "Credential Monitoring for Non-Human Identities (NHI) and Bots",
   excerpt: "Credential monitoring for non-human identities and bots is essential in 2025. Learn how credential leak detection must evolve to cover API keys, service account tokens, and automation secrets for comprehensive security.",
-  featuredImage: "/images/blog/credential-monitoring-for-non-human-identities-nhi-and-bots.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "15 min read",

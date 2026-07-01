@@ -10,7 +10,7 @@ export const piiDataLeakDetectionWhatGdprRequiresYouToMonitor: BlogPostType & {
   slug: "pii-data-leak-detection-what-gdpr-requires-you-to-monitor",
   title: "PII Data Leak Detection: What GDPR Requires You to Monitor",
   excerpt: "Discover what GDPR requires for PII data leak detection under Articles 32 and 33, including monitoring obligations for dark web forums, ransomware leak sites, and paste sites to meet the 72-hour breach notification deadline.",
-  featuredImage: "/images/blog/pii-data-leak-detection-what-gdpr-requires-you-to-monitor.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "12 min read",

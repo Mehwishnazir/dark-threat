@@ -10,7 +10,7 @@ export const leakedCredentialsInRansomwareNegotiationsWhatMonitorsFind: BlogPost
   slug: "leaked-credentials-in-ransomware-negotiations-what-monitors-find",
   title: "Leaked Credentials in Ransomware Negotiations: What Monitors Find",
   excerpt: "Learn how leaked credentials found in infostealer logs and combo lists become leverage in ransomware negotiations and why credential leak detection changes the outcome for incident responders and CISOs.",
-  featuredImage: "/images/blog/leaked-credentials-in-ransomware-negotiations-what-monitors-find.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "11 min read",

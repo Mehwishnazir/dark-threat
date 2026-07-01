@@ -10,7 +10,7 @@ export const canYouRemoveDataFromTheDarkWebAfterMonitoringFindsIt: BlogPostType 
   slug: "can-you-remove-data-from-the-dark-web-after-monitoring-finds-it",
   title: "Can You Remove Data from the Dark Web After Monitoring Finds It",
   excerpt: "Can you remove data from the dark web after monitoring finds it This guide explains removal feasibility by exposure type when to pursue takedowns and why credential devaluation matters more",
-  featuredImage: "/images/blog/can-you-remove-data-from-the-dark-web-after-monitoring-finds-it.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 20, 2026",
   readingTime: "13 min read",

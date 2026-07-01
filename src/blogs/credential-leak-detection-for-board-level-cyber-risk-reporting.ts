@@ -10,7 +10,7 @@ export const credentialLeakDetectionForBoardLevelCyberRiskReporting: BlogPostTyp
   slug: "credential-leak-detection-for-board-level-cyber-risk-reporting",
   title: "Credential Leak Detection for Board-Level Cyber Risk Reporting",
   excerpt: "Learn how to transform credential leak detection into actionable board-level cyber risk reporting with quantified metrics governance frameworks and risk-scoring methodologies for CISOs and board members",
-  featuredImage: "/images/blog/credential-leak-detection-for-board-level-cyber-risk-reporting.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "12 min read",

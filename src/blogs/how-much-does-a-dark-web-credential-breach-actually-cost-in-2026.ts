@@ -10,7 +10,7 @@ export const howMuchDoesADarkWebCredentialBreachActuallyCostInTwentyTwentySix: B
   slug: "how-much-does-a-dark-web-credential-breach-actually-cost-in-2026",
   title: "How Much Does a Dark Web Credential Breach Actually Cost in 2026",
   excerpt: "Discover the true cost of a dark web credential breach in 2026 with data from IBM SpyCloud and Verizon Learn how credential leak detection can prevent millions in ransomware fines and insurance spikes",
-  featuredImage: "/images/blog/how-much-does-a-dark-web-credential-breach-actually-cost-in-2026.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "July 1, 2026",
   readingTime: "17 min read",

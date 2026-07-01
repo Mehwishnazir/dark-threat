@@ -10,7 +10,7 @@ export const howToNotifyEmployeesOfACredentialLeakWithoutCausingPanic: BlogPostT
   slug: "how-to-notify-employees-of-a-credential-leak-without-causing-panic",
   title: "How to Notify Employees of a Credential Leak Without Causing Panic",
   excerpt: "Learn how to notify employees of a credential leak without causing panic. A step-by-step guide for security leaders to triage, communicate, and remediate leaked credentials with calm and actionable processes.",
-  featuredImage: "/images/blog/how-to-notify-employees-of-a-credential-leak-without-causing-panic.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "16 min read",

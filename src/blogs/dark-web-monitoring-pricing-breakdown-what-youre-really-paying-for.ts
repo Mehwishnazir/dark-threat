@@ -10,7 +10,7 @@ export const darkWebMonitoringPricingBreakdownWhatYoureReallyPayingFor: BlogPost
   slug: "dark-web-monitoring-pricing-breakdown-what-youre-really-paying-for",
   title: "Dark Web Monitoring Pricing Breakdown: What You're Really Paying For",
   excerpt: "A complete dark web monitoring pricing breakdown covering cost drivers hidden fees and feature tiers Learn what you are really paying for and how to evaluate vendor proposals",
-  featuredImage: "/images/blog/dark-web-monitoring-pricing-breakdown-what-youre-really-paying-for.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "14 min read",

@@ -10,7 +10,7 @@ export const automatedCredentialMonitoringVsManualAuditingCostComparison: BlogPo
   slug: "automated-credential-monitoring-vs-manual-auditing-cost-comparison",
   title: "Automated Credential Monitoring vs Manual Auditing: Cost Comparison",
   excerpt: "Compare automated credential monitoring vs manual auditing costs for CISOs and IT leaders. See which approach reduces breach risk and saves money at scale.",
-  featuredImage: "/images/blog/automated-credential-monitoring-vs-manual-auditing-cost-comparison.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "15 min read",

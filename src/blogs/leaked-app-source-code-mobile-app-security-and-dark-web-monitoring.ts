@@ -10,7 +10,7 @@ export const leakedAppSourceCodeMobileAppSecurityAndDarkWebMonitoring: BlogPostT
   slug: "leaked-app-source-code-mobile-app-security-and-dark-web-monitoring",
   title: "Leaked App Source Code: Mobile App Security and Dark Web Monitoring",
   excerpt: "Leaked app source code is a growing threat from ransomware leak sites and dark web data marketplaces Learn how data leak detection and dark web monitoring catch mobile source code exposures",
-  featuredImage: "/images/blog/leaked-app-source-code-mobile-app-security-and-dark-web-monitoring.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "14 min read",

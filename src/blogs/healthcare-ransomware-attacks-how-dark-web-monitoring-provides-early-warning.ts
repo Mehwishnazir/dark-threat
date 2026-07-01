@@ -10,7 +10,7 @@ export const healthcareRansomwareAttacksHowDarkWebMonitoringProvidesEarlyWarning
   slug: "healthcare-ransomware-attacks-how-dark-web-monitoring-provides-early-warning",
   title: "Healthcare Ransomware Attacks — How Dark Web Monitoring Provides Early Warning",
   excerpt: "Healthcare ransomware attacks are analyzed through the dark web ecosystem enabling them, from initial access brokering to data leak extortion, with continuous dark web monitoring providing early warning weeks before a breach.",
-  featuredImage: "/images/blog/healthcare-ransomware-attacks-how-dark-web-monitoring-provides-early-warning.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 3, 2026",
   readingTime: "19 min read",

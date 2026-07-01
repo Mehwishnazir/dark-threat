@@ -29,18 +29,6 @@ const industryLinks = [
   { to: '/industries/saas-technology', label: 'SaaS & Technology' },
 ];
 
-const locationLinks = [
-  { to: '/dark-web-monitoring/new-york-city', label: 'New York City' },
-  { to: '/threat-intelligence/washington-dc', label: 'Washington DC' },
-  { to: '/data-breach-monitoring/california', label: 'California' },
-  { to: '/credential-monitoring/san-francisco', label: 'San Francisco' },
-  { to: '/attack-surface-monitoring/texas', label: 'Texas' },
-  { to: '/digital-risk-protection/new-york', label: 'New York State' },
-  { to: '/brand-monitoring/los-angeles', label: 'Los Angeles' },
-  { to: '/dark-web-monitoring/chicago', label: 'Chicago' },
-  { to: '/executive-monitoring/boston', label: 'Boston' },
-  { to: '/domain-monitoring/austin', label: 'Austin' },
-];
 
 /* ─── NavSection: uses `links` prop, NOT `children` ─── */
 
@@ -193,7 +181,7 @@ export default function MobileNav() {
           <div className="px-3">
             <NavSection label="Solutions" links={solutionLinks} onClose={close} />
             <NavSection label="Industries" links={industryLinks} onClose={close} />
-            <NavSection label="Locations" links={locationLinks} onClose={close} />
+
           </div>
 
           <div className="h-6" />

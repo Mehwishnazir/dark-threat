@@ -10,7 +10,7 @@ export const howAiIsTransformingDarkWebMonitoringInTwentyTwentySix: BlogPostType
   slug: "how-ai-is-transforming-dark-web-monitoring-in-2026",
   title: "How AI Is Transforming Dark Web Monitoring in 2026",
   excerpt: "Learn how AI-driven dark web monitoring detects leaked credentials faster than legacy methods. Explore NLP and ML techniques transforming credential leak detection in 2026.",
-  featuredImage: "/images/blog/how-ai-is-transforming-dark-web-monitoring-in-2026.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "July 1, 2026",
   readingTime: "13 min read",

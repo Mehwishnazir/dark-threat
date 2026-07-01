@@ -10,7 +10,7 @@ export const darkWebMonitoringAfterASecurityAuditNextSteps: BlogPostType & {
   slug: "dark-web-monitoring-after-a-security-audit-next-steps",
   title: "Dark Web Monitoring After a Security Audit: Next Steps",
   excerpt: "Learn how to close a post-audit finding with dark web monitoring. Step-by-step guide mapping SOC 2, HIPAA, NIST, and PCI DSS controls to credential leak and threat actor detection.",
-  featuredImage: "/images/blog/dark-web-monitoring-after-a-security-audit-next-steps.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "14 min read",

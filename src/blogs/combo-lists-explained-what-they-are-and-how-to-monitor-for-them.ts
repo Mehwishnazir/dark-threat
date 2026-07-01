@@ -10,7 +10,7 @@ export const comboListsExplainedWhatTheyAreAndHowToMonitorForThem: BlogPostType 
   slug: "combo-lists-explained-what-they-are-and-how-to-monitor-for-them",
   title: "Combo Lists Explained: What They Are and How to Monitor for Them",
   excerpt: "Learn what combo lists are, how they are created and distributed on the dark web, and how to monitor for them to prevent credential stuffing and account takeover attacks.",
-  featuredImage: "/images/blog/combo-lists-explained-what-they-are-and-how-to-monitor-for-them.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "13 min read",

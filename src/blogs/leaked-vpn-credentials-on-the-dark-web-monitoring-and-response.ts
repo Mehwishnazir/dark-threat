@@ -10,7 +10,7 @@ export const leakedVpnCredentialsOnTheDarkWebMonitoringAndResponse: BlogPostType
   slug: "leaked-vpn-credentials-on-the-dark-web-monitoring-and-response",
   title: "Leaked VPN Credentials on the Dark Web: Monitoring and Response",
   excerpt: "Learn how leaked VPN credentials on the dark web fuel ransomware attacks and initial access breaches. This guide covers credential leak detection, infostealer logs, and a step-by-step incident response workflow.",
-  featuredImage: "/images/blog/leaked-vpn-credentials-on-the-dark-web-monitoring-and-response.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "14 min read",

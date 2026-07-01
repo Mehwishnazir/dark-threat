@@ -10,7 +10,7 @@ export const investmentBankDataLeaksDetectionResponseAndSecDisclosure: BlogPostT
   slug: "investment-bank-data-leaks-detection-response-and-sec-disclosure",
   title: "Investment Bank Data Leaks: Detection, Response, and SEC Disclosure",
   excerpt: "Learn how investment banks can detect and respond to dark web data leaks while navigating SEC disclosure requirements, credential markets, and ransomware threats.",
-  featuredImage: "/images/blog/investment-bank-data-leaks-detection-response-and-sec-disclosure.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "15 min read",

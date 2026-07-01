@@ -10,7 +10,7 @@ export const howToDetectARogueEmployeeSellingDataBeforeTheyLeave: BlogPostType &
   slug: "how-to-detect-a-rogue-employee-selling-data-before-they-leave",
   title: "How to Detect a Rogue Employee Selling Data Before They Leave",
   excerpt: "Learn how to detect a rogue employee selling company data on the dark web before departure. This guide covers dark web signals, behavioral indicators, and proactive detection strategies for insider data theft using threat intelligence platforms.",
-  featuredImage: "/images/blog/how-to-detect-a-rogue-employee-selling-data-before-they-leave.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 3, 2026",
   readingTime: "23 min read",

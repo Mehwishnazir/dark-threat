@@ -10,7 +10,7 @@ export const wealthManagementDarkWebRisksProtectingHighNetWorthClientData: BlogP
   slug: "wealth-management-dark-web-risks-protecting-high-net-worth-client-data",
   title: "Wealth Management Dark Web Risks: Protecting High-Net-Worth Client Data",
   excerpt: "Dark web threats facing wealth management firms including credential leaks ransomware data leak sites initial access brokers and supply chain vulnerabilities Learn how dark web monitoring protects HNW client data and ensures regulatory compliance",
-  featuredImage: "/images/blog/wealth-management-dark-web-risks-protecting-high-net-worth-client-data.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "15 min read",

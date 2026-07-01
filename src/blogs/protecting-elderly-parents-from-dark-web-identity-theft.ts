@@ -10,7 +10,7 @@ export const protectingElderlyParentsFromDarkWebIdentityTheft: BlogPostType & {
   slug: "protecting-elderly-parents-from-dark-web-identity-theft",
   title: "Protecting Elderly Parents from Dark Web Identity Theft",
   excerpt: "Learn how dark web identity theft targets elderly adults and discover actionable frameworks for protecting parents from credential exposure and fraud using threat intelligence and security controls.",
-  featuredImage: "/images/blog/protecting-elderly-parents-from-dark-web-identity-theft.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 4, 2026",
   readingTime: "16 min read",

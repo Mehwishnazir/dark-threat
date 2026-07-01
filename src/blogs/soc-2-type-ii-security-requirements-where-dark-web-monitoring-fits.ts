@@ -10,7 +10,7 @@ export const soc2TypeIiSecurityRequirementsWhereDarkWebMonitoringFits: BlogPostT
   slug: "soc-2-type-ii-security-requirements-where-dark-web-monitoring-fits",
   title: "SOC 2 Type II Security Requirements — Where Dark Web Monitoring Fits",
   excerpt: "Learn how SOC 2 dark web monitoring maps to Type II trust criteria CC6 and CC7, with implementation guidance and audit evidence strategies for credential exposure detection.",
-  featuredImage: "/images/blog/soc-2-type-ii-security-requirements-where-dark-web-monitoring-fits.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 4, 2026",
   readingTime: "15 min read",

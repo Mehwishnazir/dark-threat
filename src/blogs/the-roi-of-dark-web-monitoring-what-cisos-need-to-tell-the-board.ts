@@ -10,7 +10,7 @@ export const theRoiOfDarkWebMonitoringWhatCisosNeedToTellTheBoard: BlogPostType 
   slug: "the-roi-of-dark-web-monitoring-what-cisos-need-to-tell-the-board",
   title: "The ROI of Dark Web Monitoring: What CISOs Need to Tell the Board",
   excerpt: "The ROI of dark web monitoring for CISOs explained with quantified metrics on credential exposure dwell time reduction insurance savings and compliance risk mitigation to build a board presentation",
-  featuredImage: "/images/blog/the-roi-of-dark-web-monitoring-what-cisos-need-to-tell-the-board.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "13 min read",

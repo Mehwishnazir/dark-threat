@@ -10,7 +10,7 @@ export const credentialLeakDetectionPolicyTemplateForEnterpriseSecurity: BlogPos
   slug: "credential-leak-detection-policy-template-for-enterprise-security",
   title: "Credential Leak Detection Policy Template for Enterprise Security",
   excerpt: "Learn how to build an enterprise credential leak detection policy template with severity tiers remediation workflows compliance mappings and real time monitoring integration for SOC and identity teams",
-  featuredImage: "/images/blog/credential-leak-detection-policy-template-for-enterprise-security.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "16 min read",

@@ -16,8 +16,10 @@ import {
 } from "lucide-react";
 import BlogCard from "@/components/blog/BlogCard";
 import Breadcrumb from "@/components/Breadcrumb";
+import AppHeader from "@/components/AppHeader";
 import { allBlogs } from "@/blogs";
 import "./blog.css";
+
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -114,44 +116,15 @@ const BlogPost = () => {
       </Helmet>
 
       {/* HEADER */}
-      <header className="py-6 px-6 border-b border-border">
-        <div className="max-w-6xl mx-auto flex items-center justify-between">
-          <Link to="/" className="text-2xl font-montserrat font-bold text-foreground">
-            DARK<span className="text-primary">THREAT</span>
-          </Link>
-
-          <nav className="flex items-center space-x-6">
-            <Link to="/" className="text-muted-foreground hover:text-primary">
-              Home
-            </Link>
-            <Link to="/solution" className="text-muted-foreground hover:text-primary">
-              Solution
-            </Link>
-            <Link to="/pricing" className="text-muted-foreground hover:text-primary">
-              Pricing
-            </Link>
-            <Link to="/blog" className="text-muted-foreground hover:text-primary">
-              Blog
-            </Link>
-            <Link to="/about" className="text-primary">
-              About
-            </Link>
-            <Link to="/contact" className="text-muted-foreground hover:text-primary">
-              Contact
-            </Link>
-
-            <Button onClick={() => setIsTrialModalOpen(true)} className="hero-button">
-              Start Free Trial
-            </Button>
-          </nav>
-        </div>
-      </header>
+      {/* HEADER */}
+      <AppHeader />
 
       {/* HERO */}
       <section
-        className="blog-post-hero"
+        className="blog-post-hero pt-24"
         style={{ backgroundImage: `url(${post.featuredImage})` }}
       >
+
         <div className="blog-post-hero-overlay" />
 
         <Link to="/blog" className="blog-post-hero-back">

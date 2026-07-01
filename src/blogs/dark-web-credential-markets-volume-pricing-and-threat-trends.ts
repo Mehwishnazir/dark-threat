@@ -10,7 +10,7 @@ export const darkWebCredentialMarketsVolumePricingAndThreatTrends: BlogPostType 
   slug: "dark-web-credential-markets-volume-pricing-and-threat-trends",
   title: "Dark Web Credential Markets: Volume, Pricing, and Threat Trends",
   excerpt: "Dark web credential markets analysis: volume of stolen credentials, pricing tiers, and threat trends shaping the cybercrime economy. Learn how dark web monitoring detects credential exposure before it is exploited.",
-  featuredImage: "/images/blog/dark-web-credential-markets-volume-pricing-and-threat-trends.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "10 min read",

@@ -10,7 +10,7 @@ export const buildingADataLeakDetectionProgramForUnder50kyear: BlogPostType & {
   slug: "building-a-data-leak-detection-program-for-under-50kyear",
   title: "Building a Data Leak Detection Program for Under \$50K/Year",
   excerpt: "Build a data leak detection program for under \$50K per year covering ransomware leak sites dark web forums paste sites and cloud storage scanning with step by step guide tooling recommendations and ROI analysis",
-  featuredImage: "/images/blog/building-a-data-leak-detection-program-for-under-50kyear.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "16 min read",

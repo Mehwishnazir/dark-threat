@@ -10,7 +10,7 @@ export const howToChooseBetween5LeadingDarkWebMonitoringVendors: BlogPostType & 
   slug: "how-to-choose-between-5-leading-dark-web-monitoring-vendors",
   title: "How to Choose Between 5 Leading Dark Web Monitoring Vendors",
   excerpt: "Learn how to evaluate and choose between 5 leading dark web monitoring vendors using five critical criteria including coverage depth data freshness alert fidelity integration capabilities and compliance alignment",
-  featuredImage: "/images/blog/how-to-choose-between-5-leading-dark-web-monitoring-vendors.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "14 min read",

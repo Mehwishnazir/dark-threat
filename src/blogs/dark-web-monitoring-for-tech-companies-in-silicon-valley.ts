@@ -10,7 +10,7 @@ export const darkWebMonitoringForTechCompaniesInSiliconValley: BlogPostType & {
   slug: "dark-web-monitoring-for-tech-companies-in-silicon-valley",
   title: "Dark Web Monitoring for Tech Companies in Silicon Valley",
   excerpt: "Learn how dark web monitoring for tech companies in Silicon Valley protects against stealer logs IAB threats and ransomware A CISOs guide to implementation and ROI",
-  featuredImage: "/images/blog/dark-web-monitoring-for-tech-companies-in-silicon-valley.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "15 min read",

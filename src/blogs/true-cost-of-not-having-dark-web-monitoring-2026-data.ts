@@ -10,7 +10,7 @@ export const trueCostOfNotHavingDarkWebMonitoringTwentyTwentySixData: BlogPostTy
   slug: "true-cost-of-not-having-dark-web-monitoring-2026-data",
   title: "True Cost of Not Having Dark Web Monitoring: 2026 Data",
   excerpt: "The true cost of not having dark web monitoring in 2026 analyze quantified financial regulatory and operational risks from credential leaks and infostealer exposure with ROI data from IBM SpyCloud and Mandiant reports",
-  featuredImage: "/images/blog/true-cost-of-not-having-dark-web-monitoring-2026-data.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "July 1, 2026",
   readingTime: "15 min read",

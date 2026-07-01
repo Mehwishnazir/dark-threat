@@ -10,7 +10,7 @@ export const passwordReuseAndCredentialStuffingWhyDetectionIsCritical: BlogPostT
   slug: "password-reuse-and-credential-stuffing-why-detection-is-critical",
   title: "Password Reuse and Credential Stuffing: Why Detection Is Critical",
   excerpt: "Password reuse fuels credential stuffing attacks on enterprises. This guide explains why credential leak detection is critical for stopping account takeover and ransomware at the source",
-  featuredImage: "/images/blog/password-reuse-and-credential-stuffing-why-detection-is-critical.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "11 min read",

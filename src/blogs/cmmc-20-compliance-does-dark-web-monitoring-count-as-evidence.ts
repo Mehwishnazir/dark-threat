@@ -10,7 +10,7 @@ export const cmmc20ComplianceDoesDarkWebMonitoringCountAsEvidence: BlogPostType 
   slug: "cmmc-20-compliance-does-dark-web-monitoring-count-as-evidence",
   title: "CMMC 2.0 Compliance: Does Dark Web Monitoring Count as Evidence",
   excerpt: "CMMC 2.0 compliance and dark web monitoring: learn which controls map to specific practices and what evidence artifacts C3PAO auditors accept for certification.",
-  featuredImage: "/images/blog/cmmc-20-compliance-does-dark-web-monitoring-count-as-evidence.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "14 min read",

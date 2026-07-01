@@ -10,7 +10,7 @@ export const darkWebMonitoringVsCyberInsuranceWhatsMoreCostEffective: BlogPostTy
   slug: "dark-web-monitoring-vs-cyber-insurance-whats-more-cost-effective",
   title: "Dark Web Monitoring vs Cyber Insurance: What's More Cost-Effective",
   excerpt: "Dark web monitoring vs cyber insurance Compare costs coverage and ROI for CISOs and CFOs Find out which investment delivers better risk reduction for your security budget",
-  featuredImage: "/images/blog/dark-web-monitoring-vs-cyber-insurance-whats-more-cost-effective.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "13 min read",

@@ -10,7 +10,7 @@ export const darkWebCredentialMarketsPricingVolumeAndQualityInTwentyTwentySix: B
   slug: "dark-web-credential-markets-pricing-volume-and-quality-in-2026",
   title: "Dark Web Credential Markets: Pricing, Volume, and Quality in 2026",
   excerpt: "2026 dark web credential markets pricing volume and quality analysis for credential leak detection understand how stolen passwords are priced traded and traded on XSS.is Telegram and RAMP",
-  featuredImage: "/images/blog/dark-web-credential-markets-pricing-volume-and-quality-in-2026.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "July 1, 2026",
   readingTime: "12 min read",

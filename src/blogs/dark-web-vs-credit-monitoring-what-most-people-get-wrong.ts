@@ -10,7 +10,7 @@ export const darkWebVsCreditMonitoringWhatMostPeopleGetWrong: BlogPostType & {
   slug: "dark-web-vs-credit-monitoring-what-most-people-get-wrong",
   title: "Dark Web vs Credit Monitoring — What Most People Get Wrong",
   excerpt: "Understand the critical differences between dark web monitoring vs credit monitoring and why relying solely on credit monitoring leaves organizations vulnerable to credential theft and account takeover.",
-  featuredImage: "/images/blog/dark-web-vs-credit-monitoring-what-most-people-get-wrong.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 4, 2026",
   readingTime: "20 min read",

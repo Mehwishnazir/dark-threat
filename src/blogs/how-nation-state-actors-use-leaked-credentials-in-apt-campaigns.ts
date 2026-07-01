@@ -10,7 +10,7 @@ export const howNationStateActorsUseLeakedCredentialsInAptCampaigns: BlogPostTyp
   slug: "how-nation-state-actors-use-leaked-credentials-in-apt-campaigns",
   title: "How Nation-State Actors Use Leaked Credentials in APT Campaigns",
   excerpt: "Learn how nation-state actors weaponize leaked credentials in APT campaigns from infostealer logs to IAB markets with a guide to credential leak detection for defenders",
-  featuredImage: "/images/blog/how-nation-state-actors-use-leaked-credentials-in-apt-campaigns.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "15 min read",

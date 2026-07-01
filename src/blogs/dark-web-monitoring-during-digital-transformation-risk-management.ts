@@ -10,7 +10,7 @@ export const darkWebMonitoringDuringDigitalTransformationRiskManagement: BlogPos
   slug: "dark-web-monitoring-during-digital-transformation-risk-management",
   title: "Dark Web Monitoring During Digital Transformation: Risk Management",
   excerpt: "Learn how dark web monitoring during digital transformation is essential for risk management Detect credential exposure and threat actor signals before breaches occur",
-  featuredImage: "/images/blog/dark-web-monitoring-during-digital-transformation-risk-management.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "16 min read",

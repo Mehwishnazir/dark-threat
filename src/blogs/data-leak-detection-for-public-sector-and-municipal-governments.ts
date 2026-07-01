@@ -10,7 +10,7 @@ export const dataLeakDetectionForPublicSectorAndMunicipalGovernments: BlogPostTy
   slug: "data-leak-detection-for-public-sector-and-municipal-governments",
   title: "Data Leak Detection for Public Sector and Municipal Governments",
   excerpt: "Data leak detection for public sector and municipal governments: how to monitor ransomware leak sites, paste sites, and dark web forums for citizen PII and employee data exposures.",
-  featuredImage: "/images/blog/data-leak-detection-for-public-sector-and-municipal-governments.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "13 min read",

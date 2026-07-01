@@ -10,7 +10,7 @@ export const darkWebMonitoringForPhishingKitDetectionAPracticalGuide: BlogPostTy
   slug: "dark-web-monitoring-for-phishing-kit-detection-a-practical-guide",
   title: "Dark Web Monitoring for Phishing Kit Detection: A Practical Guide",
   excerpt: "A practical guide to dark web monitoring for phishing kit detection explaining how SOC teams detect triage and block phishing kits before credential theft occurs using dark web intelligence and automation",
-  featuredImage: "/images/blog/dark-web-monitoring-for-phishing-kit-detection-a-practical-guide.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "13 min read",

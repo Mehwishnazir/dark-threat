@@ -10,7 +10,7 @@ export const oauthTokenLeaksOnGithubAndDarkWebDetectionGuide: BlogPostType & {
   slug: "oauth-token-leaks-on-github-and-dark-web-detection-guide",
   title: "OAuth Token Leaks on GitHub and Dark Web: Detection Guide",
   excerpt: "Learn how OAuth token leaks on GitHub and the dark web lead to account takeover and follow a detection guide for credential leak detection to protect your infrastructure.",
-  featuredImage: "/images/blog/oauth-token-leaks-on-github-and-dark-web-detection-guide.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "13 min read",

@@ -10,7 +10,7 @@ export const leakedInternalToolCredentialsJiraConfluenceGithub: BlogPostType & {
   slug: "leaked-internal-tool-credentials-jira-confluence-github",
   title: "Leaked Internal Tool Credentials: Jira, Confluence, GitHub",
   excerpt: "Learn how to detect leaked Jira, Confluence, and GitHub credentials before attackers exploit them. This guide covers patterns, sources, and detection methods for internal tool credential leak detection.",
-  featuredImage: "/images/blog/leaked-internal-tool-credentials-jira-confluence-github.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "18 min read",

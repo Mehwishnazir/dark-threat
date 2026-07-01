@@ -10,7 +10,7 @@ export const leakedCrmDataSalesforceRecordsFoundOnDarkWeb: BlogPostType & {
   slug: "leaked-crm-data-salesforce-records-found-on-dark-web",
   title: "Leaked CRM Data: Salesforce Records Found on Dark Web",
   excerpt: "Detect leaked CRM data on dark web forums paste sites and ransomware leak portals Learn how Salesforce records are exfiltrated valued and identified through specialized data leak detection",
-  featuredImage: "/images/blog/leaked-crm-data-salesforce-records-found-on-dark-web.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "13 min read",

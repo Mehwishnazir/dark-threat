@@ -10,7 +10,7 @@ export const darkWebMonitoringForApiKeyLeaksDeveloperSecurityGuide: BlogPostType
   slug: "dark-web-monitoring-for-api-key-leaks-developer-security-guide",
   title: "Dark Web Monitoring for API Key Leaks: Developer Security Guide",
   excerpt: "Guide to dark web monitoring for API key leaks covering exposure vectors detection methods response steps and integration with developer security tools for DevSecOps teams",
-  featuredImage: "/images/blog/dark-web-monitoring-for-api-key-leaks-developer-security-guide.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "14 min read",

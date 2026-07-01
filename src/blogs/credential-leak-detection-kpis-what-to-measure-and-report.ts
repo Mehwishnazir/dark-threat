@@ -10,7 +10,7 @@ export const credentialLeakDetectionKpisWhatToMeasureAndReport: BlogPostType & {
   slug: "credential-leak-detection-kpis-what-to-measure-and-report",
   title: "Credential Leak Detection KPIs: What to Measure and Report",
   excerpt: "Learn the essential credential leak detection KPIs to measure exposure volume, detection velocity, and remediation effectiveness, with a framework for board-ready reporting.",
-  featuredImage: "/images/blog/credential-leak-detection-kpis-what-to-measure-and-report.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "13 min read",

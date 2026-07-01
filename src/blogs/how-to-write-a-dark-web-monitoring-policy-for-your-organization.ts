@@ -10,7 +10,7 @@ export const howToWriteADarkWebMonitoringPolicyForYourOrganization: BlogPostType
   slug: "how-to-write-a-dark-web-monitoring-policy-for-your-organization",
   title: "How to Write a Dark Web Monitoring Policy for Your Organization",
   excerpt: "Learn how to write a dark web monitoring policy for your organization with scope alert triage compliance mapping and step-by-step implementation guidance",
-  featuredImage: "/images/blog/how-to-write-a-dark-web-monitoring-policy-for-your-organization.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "12 min read",

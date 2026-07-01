@@ -10,7 +10,7 @@ export const darkWebMonitoringForFintechStartupsLightweightComplianceApproach: B
   slug: "dark-web-monitoring-for-fintech-startups-lightweight-compliance-approach",
   title: "Dark Web Monitoring for Fintech Startups: Lightweight Compliance Approach",
   excerpt: "Learn why fintech startups are prime dark web targets and get a lightweight compliance-aligned framework for monitoring credential markets API threats and data leaks to protect sensitive financial data.",
-  featuredImage: "/images/blog/dark-web-monitoring-for-fintech-startups-lightweight-compliance-approach.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "10 min read",

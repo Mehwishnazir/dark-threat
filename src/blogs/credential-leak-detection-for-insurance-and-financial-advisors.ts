@@ -10,7 +10,7 @@ export const credentialLeakDetectionForInsuranceAndFinancialAdvisors: BlogPostTy
   slug: "credential-leak-detection-for-insurance-and-financial-advisors",
   title: "Credential Leak Detection for Insurance and Financial Advisors",
   excerpt: "Learn how credential leak detection protects insurance and financial advisory firms from regulatory fines, client data loss, and credential stuffing attacks targeting high-value financial credentials",
-  featuredImage: "/images/blog/credential-leak-detection-for-insurance-and-financial-advisors.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "14 min read",

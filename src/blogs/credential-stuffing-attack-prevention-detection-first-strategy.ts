@@ -10,7 +10,7 @@ export const credentialStuffingAttackPreventionDetectionFirstStrategy: BlogPostT
   slug: "credential-stuffing-attack-prevention-detection-first-strategy",
   title: "Credential Stuffing Attack Prevention: Detection-First Strategy",
   excerpt: "Learn how a detection-first strategy stops credential stuffing attacks by monitoring leaked credentials on dark web markets infostealer logs and combo lists before attackers weaponize them",
-  featuredImage: "/images/blog/credential-stuffing-attack-prevention-detection-first-strategy.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "12 min read",

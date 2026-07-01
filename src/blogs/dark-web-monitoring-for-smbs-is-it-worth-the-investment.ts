@@ -10,7 +10,7 @@ export const darkWebMonitoringForSmbsIsItWorthTheInvestment: BlogPostType & {
   slug: "dark-web-monitoring-for-smbs-is-it-worth-the-investment",
   title: "Dark Web Monitoring for SMBs: Is It Worth the Investment",
   excerpt: "Is dark web monitoring worth the investment for SMBs? This article breaks down the costs of credential-based breaches, the ROI framework, and the specific threats that small businesses face to help decide if dark web monitoring is worth the investment.",
-  featuredImage: "/images/blog/dark-web-monitoring-for-smbs-is-it-worth-the-investment.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "17 min read",

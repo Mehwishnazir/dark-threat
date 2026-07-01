@@ -10,7 +10,7 @@ export const retailCredentialTheftHowECommerceBusinessesGetCompromised: BlogPost
   slug: "retail-credential-theft-how-e-commerce-businesses-get-compromised",
   title: "Retail Credential Theft: How E-Commerce Businesses Get Compromised",
   excerpt: "Learn how retail credential theft leads to e-commerce breaches This guide maps the infostealer to attack chain and explains how credential leak detection stops account takeover",
-  featuredImage: "/images/blog/retail-credential-theft-how-e-commerce-businesses-get-compromised.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "13 min read",

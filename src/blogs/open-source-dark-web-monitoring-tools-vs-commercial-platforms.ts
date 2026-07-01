@@ -10,7 +10,7 @@ export const openSourceDarkWebMonitoringToolsVsCommercialPlatforms: BlogPostType
   slug: "open-source-dark-web-monitoring-tools-vs-commercial-platforms",
   title: "Open Source Dark Web Monitoring Tools vs Commercial Platforms",
   excerpt: "Compare open source dark web monitoring tools vs commercial platforms for credential exposure detection forum access stealer logs and compliance coverage to decide which solution fits your security team and budget",
-  featuredImage: "/images/blog/open-source-dark-web-monitoring-tools-vs-commercial-platforms.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "14 min read",

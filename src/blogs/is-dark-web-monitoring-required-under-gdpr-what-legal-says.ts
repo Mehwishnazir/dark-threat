@@ -10,7 +10,7 @@ export const isDarkWebMonitoringRequiredUnderGdprWhatLegalSays: BlogPostType & {
   slug: "is-dark-web-monitoring-required-under-gdpr-what-legal-says",
   title: "Is Dark Web Monitoring Required Under GDPR? What Legal Says",
   excerpt: "Does GDPR require dark web monitoring This guide breaks down Articles 32 and 33 regulatory precedent and how dark web intelligence maps to compliance obligations for DPOs and CISOs",
-  featuredImage: "/images/blog/is-dark-web-monitoring-required-under-gdpr-what-legal-says.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "11 min read",

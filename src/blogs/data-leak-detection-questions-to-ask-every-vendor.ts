@@ -10,7 +10,7 @@ export const dataLeakDetectionQuestionsToAskEveryVendor: BlogPostType & {
   slug: "data-leak-detection-questions-to-ask-every-vendor",
   title: "Data Leak Detection: Questions to Ask Every Vendor",
   excerpt: "Data leak detection vendor evaluation framework covering coverage breadth detection methodology alert quality compliance mapping and pricing models for CISO and SOC procurement teams",
-  featuredImage: "/images/blog/data-leak-detection-questions-to-ask-every-vendor.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "11 min read",

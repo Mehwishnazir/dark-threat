@@ -10,7 +10,7 @@ export const darkWebActivityReportTopThreatsTargetingBusinessesInTwentyTwentySix
   slug: "dark-web-activity-report-top-threats-targeting-businesses-in-2026",
   title: "Dark Web Activity Report: Top Threats Targeting Businesses in 2026",
   excerpt: "Dark web activity report analyzing top credential threats targeting businesses in 2026 including infostealer malware, IAB markets, and Telegram channels to help organizations improve credential leak detection and security posture.",
-  featuredImage: "/images/blog/dark-web-activity-report-top-threats-targeting-businesses-in-2026.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "July 1, 2026",
   readingTime: "13 min read",

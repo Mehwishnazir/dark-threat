@@ -10,7 +10,7 @@ export const howDarkWebMonitoringCatchesRansomwareBeforeDeployment: BlogPostType
   slug: "how-dark-web-monitoring-catches-ransomware-before-deployment",
   title: "How Dark Web Monitoring Catches Ransomware Before Deployment",
   excerpt: "Learn how dark web monitoring detects ransomware before deployment by intercepting IAB listings stealer logs and credential exposures on dark web forums for proactive threat intelligence",
-  featuredImage: "/images/blog/how-dark-web-monitoring-catches-ransomware-before-deployment.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "13 min read",

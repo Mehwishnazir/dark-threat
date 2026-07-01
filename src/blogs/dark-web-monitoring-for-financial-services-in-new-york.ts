@@ -10,7 +10,7 @@ export const darkWebMonitoringForFinancialServicesInNewYork: BlogPostType & {
   slug: "dark-web-monitoring-for-financial-services-in-new-york",
   title: "Dark Web Monitoring for Financial Services in New York",
   excerpt: "Dark web monitoring for financial services in New York maps to NYDFS Part 500, detects stealer logs and IABs, and reduces breach dwell time for compliance.",
-  featuredImage: "/images/blog/dark-web-monitoring-for-financial-services-in-new-york.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "18 min read",

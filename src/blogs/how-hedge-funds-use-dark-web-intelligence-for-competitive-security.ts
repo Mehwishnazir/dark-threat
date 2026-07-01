@@ -10,7 +10,7 @@ export const howHedgeFundsUseDarkWebIntelligenceForCompetitiveSecurity: BlogPost
   slug: "how-hedge-funds-use-dark-web-intelligence-for-competitive-security",
   title: "How Hedge Funds Use Dark Web Intelligence for Competitive Security",
   excerpt: "Hedge funds face dark web threats including credential leaks and model exposure. Learn how dark web intelligence protects proprietary data and supports competitive security for asset managers.",
-  featuredImage: "/images/blog/how-hedge-funds-use-dark-web-intelligence-for-competitive-security.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "13 min read",

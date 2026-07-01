@@ -10,7 +10,7 @@ export const buildingACredentialMonitoringProgramFromScratch: BlogPostType & {
   slug: "building-a-credential-monitoring-program-from-scratch",
   title: "Building a Credential Monitoring Program from Scratch",
   excerpt: "Learn how to build a credential monitoring program from scratch including data sources detection rules and automated remediation to stop credential theft before attackers use leaked credentials",
-  featuredImage: "/images/blog/building-a-credential-monitoring-program-from-scratch.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "17 min read",

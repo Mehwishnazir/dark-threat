@@ -10,7 +10,7 @@ export const ransomwareLeakSitesHowDarkWebMonitoringTracks150Groups: BlogPostTyp
   slug: "ransomware-leak-sites-how-dark-web-monitoring-tracks-150-groups",
   title: "Ransomware Leak Sites: How Dark Web Monitoring Tracks 150+ Groups",
   excerpt: "Learn how dark web monitoring tracks over 150 ransomware leak sites from LockBit to Scattered Spider to detect stolen data before the public does. Actionable guide for CISOs and SOC teams.",
-  featuredImage: "/images/blog/ransomware-leak-sites-how-dark-web-monitoring-tracks-150-groups.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "13 min read",

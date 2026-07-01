@@ -10,7 +10,7 @@ export const insiderThreatStatistics2025TheNumbersBehindTheRisk: BlogPostType & 
   slug: "insider-threat-statistics-2025-the-numbers-behind-the-risk",
   title: "Insider Threat Statistics 2025 — The Numbers Behind the Risk",
   excerpt: "Insider threat statistics 2025 reveal 34 percent of breaches involve insiders with average costs exceeding 4.99 million. Learn key data from Verizon DBIR IBM and SpyCloud plus dark web monitoring strategies.",
-  featuredImage: "/images/blog/insider-threat-statistics-2025-the-numbers-behind-the-risk.jpg",
+  featuredImage: "/dark-threat-1.webp",
   category: "Threat Intelligence",
   publishDate: "June 3, 2026",
   readingTime: "16 min read",

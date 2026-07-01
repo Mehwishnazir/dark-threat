@@ -10,7 +10,7 @@ export const leakedHrDataEmployeeRecordsFoundOnDarkWebCaseStudies: BlogPostType 
   slug: "leaked-hr-data-employee-records-found-on-dark-web-case-studies",
   title: "Leaked HR Data: Employee Records Found on Dark Web — Case Studies",
   excerpt: "Learn from real-world HR data leak case studies on dark web forums ransomware leak sites and Telegram How data leak detection prevents regulatory fines lawsuits and employee trust erosion",
-  featuredImage: "/images/blog/leaked-hr-data-employee-records-found-on-dark-web-case-studies.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "16 min read",

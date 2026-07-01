@@ -10,7 +10,7 @@ export const howHackersUseLeakedCredentials7AttackPathsToBlock: BlogPostType & {
   slug: "how-hackers-use-leaked-credentials-7-attack-paths-to-block",
   title: "How Hackers Use Leaked Credentials: 7 Attack Paths to Block",
   excerpt: "How hackers use leaked credentials to breach organizations through credential stuffing initial access broker markets infostealer logs and cloud pivoting plus 7 attack paths to block",
-  featuredImage: "/images/blog/how-hackers-use-leaked-credentials-7-attack-paths-to-block.jpg",
+  featuredImage: "/dark-threat-2.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "11 min read",

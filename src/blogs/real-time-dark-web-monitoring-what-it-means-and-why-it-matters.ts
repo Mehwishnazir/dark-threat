@@ -10,7 +10,7 @@ export const realTimeDarkWebMonitoringWhatItMeansAndWhyItMatters: BlogPostType &
   slug: "real-time-dark-web-monitoring-what-it-means-and-why-it-matters",
   title: "Real-Time Dark Web Monitoring: What It Means and Why It Matters",
   excerpt: "Real-time dark web monitoring detects credential exposures, stealer logs, and IAB listings within minutes. Learn how it works, why it differs from periodic scanning, and its role in preventing ransomware.",
-  featuredImage: "/images/blog/real-time-dark-web-monitoring-what-it-means-and-why-it-matters.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 19, 2026",
   readingTime: "15 min read",

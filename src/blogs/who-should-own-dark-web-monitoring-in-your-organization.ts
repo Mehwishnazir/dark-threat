@@ -10,7 +10,7 @@ export const whoShouldOwnDarkWebMonitoringInYourOrganization: BlogPostType & {
   slug: "who-should-own-dark-web-monitoring-in-your-organization",
   title: "Who Should Own Dark Web Monitoring in Your Organization",
   excerpt: "Learn who should own dark web monitoring in your organization SOC IT security compliance or MDR with a clear framework for ownership assignment and operational success",
-  featuredImage: "/images/blog/who-should-own-dark-web-monitoring-in-your-organization.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "13 min read",

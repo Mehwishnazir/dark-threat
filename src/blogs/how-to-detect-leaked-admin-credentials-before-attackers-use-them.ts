@@ -10,7 +10,7 @@ export const howToDetectLeakedAdminCredentialsBeforeAttackersUseThem: BlogPostTy
   slug: "how-to-detect-leaked-admin-credentials-before-attackers-use-them",
   title: "How to Detect Leaked Admin Credentials Before Attackers Use Them",
   excerpt: "How to detect leaked admin credentials before attackers use them. Step-by-step process covering infostealer logs, IAB marketplaces, IdP correlation, and automatic rotation with DarkThreat.AI credential leak detection.",
-  featuredImage: "/images/blog/how-to-detect-leaked-admin-credentials-before-attackers-use-them.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "16 min read",

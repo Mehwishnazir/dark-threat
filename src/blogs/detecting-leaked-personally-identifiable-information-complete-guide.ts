@@ -10,7 +10,7 @@ export const detectingLeakedPersonallyIdentifiableInformationCompleteGuide: Blog
   slug: "detecting-leaked-personally-identifiable-information-complete-guide",
   title: "Detecting Leaked Personally Identifiable Information: Complete Guide",
   excerpt: "Complete guide to detecting leaked personally identifiable information on dark web leak sites paste sites and Telegram channels covering detection techniques regulatory obligations and operational response for PII data leak detection",
-  featuredImage: "/images/blog/detecting-leaked-personally-identifiable-information-complete-guide.jpg",
+  featuredImage: "/dark-threat-3.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "18 min read",

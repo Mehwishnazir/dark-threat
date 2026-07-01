@@ -10,7 +10,7 @@ export const supplyChainCredentialLeaksMonitoringVendorExposure: BlogPostType & 
   slug: "supply-chain-credential-leaks-monitoring-vendor-exposure",
   title: "Supply Chain Credential Leaks: Monitoring Vendor Exposure",
   excerpt: "Learn how supply chain credential leaks threaten your organization and why credential leak detection for vendor domains is critical for preventing third-party breaches.",
-  featuredImage: "/images/blog/supply-chain-credential-leaks-monitoring-vendor-exposure.jpg",
+  featuredImage: "/dark-threat-4.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "15 min read",

@@ -10,7 +10,7 @@ export const thirdPartyCredentialLeaksHowToMonitorVendorRisk: BlogPostType & {
   slug: "third-party-credential-leaks-how-to-monitor-vendor-risk",
   title: "Third-Party Credential Leaks: How to Monitor Vendor Risk",
   excerpt: "How to monitor vendor risk for third-party credential leaks with a step-by-step program for detecting exposed vendor credentials on the dark web before attackers exploit them for supply chain attacks.",
-  featuredImage: "/images/blog/third-party-credential-leaks-how-to-monitor-vendor-risk.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "14 min read",

@@ -10,7 +10,7 @@ export const howToSetUpAutomatedDataLeakAlertsForYourDomain: BlogPostType & {
   slug: "how-to-set-up-automated-data-leak-alerts-for-your-domain",
   title: "How to Set Up Automated Data Leak Alerts for Your Domain",
   excerpt: "Learn how to set up automated data leak alerts for your domain with a step-by-step guide on monitoring sources, alert configuration, and incident response integration.",
-  featuredImage: "/images/blog/how-to-set-up-automated-data-leak-alerts-for-your-domain.jpg",
+  featuredImage: "/dark-threat-6.webp",
   category: "Threat Intelligence",
   publishDate: "June 30, 2026",
   readingTime: "15 min read",

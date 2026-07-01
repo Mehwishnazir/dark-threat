@@ -1,7 +1,7 @@
 import { Link, NavLink } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import MobileNav from '@/components/MobileNav';
-import { Shield, Globe, Lock, Database, Eye, MapPin, Building2, CalendarDays } from 'lucide-react';
+import { Shield, Globe, Lock, Database, Eye, Building2, CalendarDays } from 'lucide-react';
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -27,19 +27,6 @@ const industryLinks = [
   { to: '/industries/government', label: 'Government', icon: Building2 },
   { to: '/industries/ecommerce', label: 'E-Commerce & Retail', icon: Building2 },
   { to: '/industries/saas-technology', label: 'SaaS & Technology', icon: Building2 },
-];
-
-const locationLinks = [
-  { to: '/dark-web-monitoring/new-york-city', label: 'New York City', icon: MapPin },
-  { to: '/threat-intelligence/washington-dc', label: 'Washington DC', icon: MapPin },
-  { to: '/data-breach-monitoring/california', label: 'California', icon: MapPin },
-  { to: '/credential-monitoring/san-francisco', label: 'San Francisco', icon: MapPin },
-  { to: '/attack-surface-monitoring/texas', label: 'Texas', icon: MapPin },
-  { to: '/digital-risk-protection/new-york', label: 'New York', icon: MapPin },
-  { to: '/brand-monitoring/los-angeles', label: 'Los Angeles', icon: MapPin },
-  { to: '/dark-web-monitoring/chicago', label: 'Chicago', icon: MapPin },
-  { to: '/executive-monitoring/boston', label: 'Boston', icon: MapPin },
-  { to: '/domain-monitoring/austin', label: 'Austin', icon: MapPin },
 ];
 
 const navLinkClass = ({ isActive }) =>
@@ -99,10 +86,6 @@ export default function AppHeader() {
                   <DropdownMenu links={industryLinks} />
                 </NavigationMenuItem>
 
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger className={triggerClass}>Locations</NavigationMenuTrigger>
-                  <DropdownMenu links={locationLinks} />
-                </NavigationMenuItem>
 
               </NavigationMenuList>
             </NavigationMenu>

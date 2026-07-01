@@ -10,7 +10,7 @@ export const ftcSafeguardsRuleAndDarkWebMonitoringForFinancialInstitutions: Blog
   slug: "ftc-safeguards-rule-and-dark-web-monitoring-for-financial-institutions",
   title: "FTC Safeguards Rule and Dark Web Monitoring for Financial Institutions",
   excerpt: "Learn about the FTC Safeguards Rule dark web monitoring requirements for financial institutions and auto dealers, including compliance steps, enforcement, and best practices.",
-  featuredImage: "/images/blog/ftc-safeguards-rule-and-dark-web-monitoring-for-financial-institutions.jpg",
+  featuredImage: "/dark-threat-5.webp",
   category: "Threat Intelligence",
   publishDate: "June 4, 2026",
   readingTime: "19 min read",
