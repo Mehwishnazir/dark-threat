@@ -173,8 +173,9 @@ const Blog = () => {
             </label>
             <Select value={selectedCategory} onValueChange={(value) => {
               setSelectedCategory(value);
-              setPage(1);
+              setPage(1, false);
             }}>
+
               <SelectTrigger id="category-select" className="blog-listing-filters__select-trigger">
                 <SelectValue placeholder="Select a category" />
               </SelectTrigger>
