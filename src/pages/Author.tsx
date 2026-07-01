@@ -70,19 +70,10 @@ const AuthorPage = () => {
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 
-      <header className="py-6 px-6 border-b border-border">
-        <div className="max-w-6xl mx-auto flex items-center justify-between">
-          <Link to="/" className="text-2xl font-montserrat font-bold text-foreground">
-            DARK<span className="text-primary">THREAT</span>
-          </Link>
-          <nav className="flex items-center gap-6">
-            <Link to="/blog" className="text-muted-foreground hover:text-primary">Blog</Link>
-            <Link to="/about" className="text-muted-foreground hover:text-primary">About</Link>
-          </nav>
-        </div>
-      </header>
+      <AppHeader />
 
-      <main className="max-w-6xl mx-auto px-6 py-12">
+      <main className="max-w-6xl mx-auto px-6 py-12 pt-32">
+
         <Breadcrumb
           items={[
             { label: 'Home', href: '/' },
