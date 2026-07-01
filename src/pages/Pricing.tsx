@@ -7,6 +7,8 @@ import ComparisonTable from '@/components/ComparisonTable';
 import { Shield, Linkedin, Twitter, Github } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Breadcrumb from '@/components/Breadcrumb';
+import AppHeader from '@/components/AppHeader';
+
 
 const Pricing = () => {
   const [isTrialModalOpen, setIsTrialModalOpen] = useState(false);
