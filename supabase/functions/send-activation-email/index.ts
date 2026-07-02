@@ -119,18 +119,13 @@ const handler = async (req: Request): Promise<Response> => {
 
     console.log('Admin sending activation email to user');
 
+    const { sendSmtp } = await import("../_shared/smtp.ts");
+
     // Send activation email using SMTP
-    const emailResponse = await fetch('https://api.resend.com/emails', {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${Deno.env.get('RESEND_API_KEY')}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        from: "DarkThreat <noreply@resend.dev>",
-        to: [userEmail],
-        subject: '🎉 Your DarkThreat Account is Activated!',
-        html: `
+    const emailResult = await sendSmtp({
+      to: userEmail,
+      subject: '🎉 Your DarkThreat Account is Activated!',
+      html: `
           <!DOCTYPE html>
           <html>
           <head>
@@ -140,77 +135,74 @@ const handler = async (req: Request): Promise<Response> => {
           </head>
           <body style="margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #0f1419 0%, #1a1f2e 100%); color: #ffffff;">
             <div style="max-width: 600px; margin: 0 auto; padding: 40px 20px;">
-              <!-- Header -->
               <div style="text-align: center; margin-bottom: 40px;">
                 <div style="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;">
                   <span style="font-size: 32px; font-weight: bold;">DT</span>
                 </div>
-                <h1 style="margin: 0; font-size: 32px; font-weight: 700; background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
-                  DarkThreat
-                </h1>
+                <h1 style="margin: 0; font-size: 32px; font-weight: 700; color: #60a5fa;">DarkThreat</h1>
                 <p style="margin: 8px 0 0; color: #9ca3af; font-size: 16px;">Cybersecurity Intelligence Platform</p>
               </div>
-
-              <!-- Main Content -->
-              <div style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border-radius: 16px; padding: 40px; border: 1px solid rgba(255, 255, 255, 0.1);">
+              <div style="background: rgba(255, 255, 255, 0.05); border-radius: 16px; padding: 40px; border: 1px solid rgba(255, 255, 255, 0.1);">
                 <div style="text-align: center; margin-bottom: 30px;">
-                  <div style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); width: 60px; height: 60px; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;">
-                    <span style="font-size: 24px;">✓</span>
-                  </div>
-                  <h2 style="margin: 0 0 16px; font-size: 28px; font-weight: 600; color: #ffffff;">
-                    Account Activated Successfully!
-                  </h2>
-                  <p style="margin: 0; color: #d1d5db; font-size: 18px; line-height: 1.6;">
-                    Welcome to DarkThreat, ${sanitizedFirstName}!
-                  </p>
+                  <div style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); width: 60px; height: 60px; border-radius: 50%; margin: 0 auto 20px;"></div>
+                  <h2 style="margin: 0 0 16px; font-size: 28px; font-weight: 600; color: #ffffff;">Account Activated Successfully!</h2>
+                  <p style="margin: 0; color: #d1d5db; font-size: 18px; line-height: 1.6;">Welcome to DarkThreat, ${sanitizedFirstName}!</p>
                 </div>
-
                 <div style="background: rgba(59, 130, 246, 0.1); border-radius: 12px; padding: 24px; margin: 30px 0; border-left: 4px solid #3b82f6;">
-                  <h3 style="margin: 0 0 16px; color: #60a5fa; font-size: 18px; font-weight: 600;">
-                    Your Account Details:
-                  </h3>
+                  <h3 style="margin: 0 0 16px; color: #60a5fa; font-size: 18px; font-weight: 600;">Your Account Details:</h3>
                   <div style="color: #e5e7eb; line-height: 1.6;">
                     <p style="margin: 8px 0;"><strong>Name:</strong> ${sanitizedFirstName} ${sanitizedLastName}</p>
                     <p style="margin: 8px 0;"><strong>Company:</strong> ${sanitizedCompanyName}</p>
                     <p style="margin: 8px 0;"><strong>Trial Period:</strong> 7 days (full access)</p>
                   </div>
                 </div>
-
                 <div style="text-align: center; margin: 30px 0;">
-                  <a href="https://darkthreat-ai-main-website.lovable.app/dashboard" 
-                     style="display: inline-block; background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); color: white; text-decoration: none; padding: 16px 32px; border-radius: 8px; font-weight: 600; font-size: 16px; box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3); transition: all 0.3s ease;">
-                    Access Your Dashboard
-                  </a>
-                </div>
-
-                <div style="background: rgba(245, 158, 11, 0.1); border-radius: 12px; padding: 20px; margin: 30px 0; border-left: 4px solid #f59e0b;">
-                  <h4 style="margin: 0 0 12px; color: #fbbf24; font-size: 16px; font-weight: 600;">
-                    🚀 What's Next?
-                  </h4>
-                  <ul style="margin: 0; padding-left: 20px; color: #e5e7eb; line-height: 1.6;">
-                    <li style="margin: 8px 0;">Explore our threat intelligence dashboard</li>
-                    <li style="margin: 8px 0;">Set up your first security monitoring alerts</li>
-                    <li style="margin: 8px 0;">Review your cybersecurity risk assessment</li>
-                    <li style="margin: 8px 0;">Connect with our security experts</li>
-                  </ul>
+                  <a href="https://darkthreat.ai/dashboard" style="display: inline-block; background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); color: white; text-decoration: none; padding: 16px 32px; border-radius: 8px; font-weight: 600; font-size: 16px;">Access Your Dashboard</a>
                 </div>
               </div>
-
-              <!-- Footer -->
               <div style="text-align: center; margin-top: 40px; padding-top: 30px; border-top: 1px solid rgba(255, 255, 255, 0.1);">
-                <p style="margin: 0 0 16px; color: #9ca3af; font-size: 14px;">
-                  Need help? Contact our support team at 
-                  <a href="mailto:support@darkthreat.com" style="color: #60a5fa; text-decoration: none;">support@darkthreat.com</a>
-                </p>
-                <p style="margin: 0; color: #6b7280; font-size: 12px;">
-                  © 2025 DarkThreat. Advanced Cybersecurity Intelligence Platform.
-                </p>
+                <p style="margin: 0 0 16px; color: #9ca3af; font-size: 14px;">Need help? <a href="mailto:support@darkthreat.ai" style="color: #60a5fa;">support@darkthreat.ai</a></p>
+                <p style="margin: 0; color: #6b7280; font-size: 12px;">© 2026 DarkThreat.</p>
               </div>
             </div>
           </body>
           </html>
         `,
-      }),
+    });
+
+    console.log('Activation email sent successfully');
+
+    // Update user account as activated
+    const { error: updateError } = await supabaseAdmin
+      .from('users')
+      .update({ account_activated: true })
+      .eq('business_email', userEmail);
+
+    if (updateError) {
+      console.error('Error updating user activation status:', updateError);
+    }
+
+    // Send notification email to admin
+    const adminEmailResult = await sendSmtp({
+      to: Deno.env.get('ADMIN_NOTIFICATION_EMAIL') ?? 'admin@darkthreat.com',
+      fromName: "DarkThreat System",
+      subject: '🎯 New User Account Activated',
+      html: `
+          <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+            <h2 style="color: #1d4ed8;">New User Account Activated</h2>
+            <div style="background: #f8fafc; padding: 20px; border-radius: 8px; border-left: 4px solid #3b82f6;">
+              <p><strong>User Details:</strong></p>
+              <ul>
+                <li><strong>Name:</strong> ${sanitizedFirstName} ${sanitizedLastName}</li>
+                <li><strong>Company:</strong> ${sanitizedCompanyName}</li>
+                <li><strong>Activated:</strong> ${new Date().toLocaleString()}</li>
+              </ul>
+            </div>
+            <p style="margin-top: 20px;">
+              <a href="https://darkthreat.ai/admin" style="background: #3b82f6; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; display: inline-block;">View in Admin Dashboard</a>
+            </p>
+          </div>
+        `,
     });
 
     const emailResult = await emailResponse.json();
