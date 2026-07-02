@@ -205,7 +205,6 @@ const handler = async (req: Request): Promise<Response> => {
         `,
     });
 
-    const emailResult = await emailResponse.json();
     console.log('Activation email sent successfully');
 
     // Update user account as activated
@@ -218,45 +217,12 @@ const handler = async (req: Request): Promise<Response> => {
       console.error('Error updating user activation status:', updateError);
     }
 
-    // Send notification email to admin
-    const adminEmailResponse = await fetch('https://api.resend.com/emails', {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${Deno.env.get('RESEND_API_KEY')}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        from: "DarkThreat System <noreply@resend.dev>",
-        to: [Deno.env.get('ADMIN_NOTIFICATION_EMAIL') ?? 'admin@darkthreat.com'],
-        subject: '🎯 New User Account Activated',
-        html: `
-          <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-            <h2 style="color: #1d4ed8;">New User Account Activated</h2>
-            <div style="background: #f8fafc; padding: 20px; border-radius: 8px; border-left: 4px solid #3b82f6;">
-              <p><strong>User Details:</strong></p>
-              <ul>
-                <li><strong>Name:</strong> ${sanitizedFirstName} ${sanitizedLastName}</li>
-                <li><strong>Company:</strong> ${sanitizedCompanyName}</li>
-                <li><strong>Activated:</strong> ${new Date().toLocaleString()}</li>
-              </ul>
-            </div>
-            <p style="margin-top: 20px;">
-              <a href="https://darkthreat-ai-main-website.lovable.app/admin" style="background: #3b82f6; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; display: inline-block;">
-                View in Admin Dashboard
-              </a>
-            </p>
-          </div>
-        `,
-      }),
-    });
-
-    const adminResult = await adminEmailResponse.json();
     console.log('Admin notification sent successfully');
 
-    return new Response(JSON.stringify({ 
+    return new Response(JSON.stringify({
       success: true,
       emailId: emailResult.id,
-      adminEmailId: adminResult.id 
+      adminEmailId: adminEmailResult.id
     }), {
       status: 200,
       headers: { ...corsHeaders, "Content-Type": "application/json" },
