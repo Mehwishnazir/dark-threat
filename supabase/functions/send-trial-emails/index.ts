@@ -111,67 +111,39 @@ const handler = async (req: Request): Promise<Response> => {
 
     console.log('Sending trial emails for authenticated user');
 
-    // Initialize Resend API
-    const resendApiKey = Deno.env.get("RESEND_API_KEY");
-    if (!resendApiKey) {
-      throw new Error('RESEND_API_KEY not configured');
-    }
+    const { sendSmtp } = await import("../_shared/smtp.ts");
 
     // Send processing email to the trial user
-    const welcomeEmailResponse = await fetch('https://api.resend.com/emails', {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${resendApiKey}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        from: "DarkThreat <noreply@resend.dev>",
-        to: [userEmail],
-        subject: "🚀 Your Trial Account is Being Processed",
-        html: `
+    const welcomeEmail = await sendSmtp({
+      to: userEmail,
+      subject: "🚀 Your Trial Account is Being Processed",
+      html: `
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; color: #333;">
             <p>Hi ${sanitizedFirstName},</p>
-            
             <p>Thanks for signing up for a trial account with us! 🎉</p>
             <p>We're setting things up on our side, and your trial account is currently in processing.</p>
-            
             <p><strong>Here's what you'll get once it's ready:</strong></p>
-            
             <div style="margin: 20px 0;">
               <p style="margin: 8px 0;">✅ Access to trial features</p>
               <p style="margin: 8px 0;">✅ No setup or approval needed</p>
               <p style="margin: 8px 0;">✅ Quick start with zero hassle</p>
             </div>
-            
             <p>You'll receive another email as soon as your trial is activated and ready to use.</p>
-            
             <p>If you enjoy your experience, you can upgrade anytime to unlock the full set of features.</p>
-            
             <p>Cheers,<br>DarkThreat Team</p>
           </div>
         `,
-      }),
     });
 
-    const welcomeEmail = await welcomeEmailResponse.json();
-
     // Send notification email to super admin
-    const adminEmailResponse = await fetch('https://api.resend.com/emails', {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${resendApiKey}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        from: "DarkThreat <noreply@resend.dev>",
-        to: [Deno.env.get('ADMIN_NOTIFICATION_EMAIL') ?? 'admin@darkthreat.com'],
-        subject: "New Trial Registration - Action Required",
-        html: `
+    const adminEmail = await sendSmtp({
+      to: Deno.env.get('ADMIN_NOTIFICATION_EMAIL') ?? 'admin@darkthreat.com',
+      fromName: "DarkThreat System",
+      subject: "New Trial Registration - Action Required",
+      html: `
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
             <h1 style="color: #dc2626; margin-bottom: 24px;">New Trial User Registration</h1>
-            
             <p>A new user has registered for a DarkThreat trial and requires processing.</p>
-            
             <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin: 20px 0;">
               <h3 style="color: #1e293b; margin-top: 0;">User Details:</h3>
               <ul style="list-style: none; padding: 0;">
@@ -181,16 +153,11 @@ const handler = async (req: Request): Promise<Response> => {
                 <li><strong>Trial Expires:</strong> ${new Date(trialEndDate).toLocaleDateString()}</li>
               </ul>
             </div>
-            
             <p>Please review this trial request and take appropriate action in the admin dashboard.</p>
-            
             <p>Dashboard: <a href="https://darkthreat-ai-main-website.lovable.app/admin">Admin Dashboard</a></p>
           </div>
         `,
-      }),
     });
-
-    const adminEmail = await adminEmailResponse.json();
 
     console.log('Welcome email sent successfully');
     console.log('Admin notification sent successfully');
