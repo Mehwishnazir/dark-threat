@@ -1,99 +1,87 @@
+/* eslint-disable */
 const fs = require('fs');
 const path = require('path');
 
+const BASE_URL = 'https://darkthreat.ai';
 const BLOGS_DIR = path.join(__dirname, '..', 'src', 'blogs');
-const SITEMAP_PATH = path.join(__dirname, '..', 'public', 'sitemap.xml');
+const APP_TSX = path.join(__dirname, '..', 'src', 'App.tsx');
+const OUT = path.join(__dirname, '..', 'public', 'sitemap.xml');
+const TODAY = new Date().toISOString().slice(0, 10);
 
-// Static and dynamic main routes
-const staticRoutes = [
-  { loc: 'https://darkthreat.ai/', priority: '1.0', lastmod: '2026-06-02' },
-  { loc: 'https://darkthreat.ai/solution', priority: '0.8', lastmod: '2026-06-02' },
-  { loc: 'https://darkthreat.ai/pricing', priority: '0.8', lastmod: '2026-06-02' },
-  { loc: 'https://darkthreat.ai/about', priority: '0.7', lastmod: '2026-06-02' },
-  { loc: 'https://darkthreat.ai/contact', priority: '0.7', lastmod: '2026-06-02' },
-  { loc: 'https://darkthreat.ai/blog', priority: '0.8', lastmod: '2026-06-02' },
-  { loc: 'https://darkthreat.ai/dark-web-monitoring', priority: '0.8', lastmod: '2026-06-02' },
-  { loc: 'https://darkthreat.ai/credential-leak-detection', priority: '0.8', lastmod: '2026-06-02' },
-  { loc: 'https://darkthreat.ai/compare/darkthreat-vs-darkowl', priority: '0.8', lastmod: '2026-06-02' },
-  { loc: 'https://darkthreat.ai/data-leak-detection', priority: '0.8', lastmod: '2026-06-02' },
-  { loc: 'https://darkthreat.ai/author/dr-ayaan-rahman', priority: '0.6', lastmod: '2026-06-02' },
-  { loc: 'https://darkthreat.ai/industries', priority: '0.8', lastmod: '2026-06-02' },
-  { loc: 'https://darkthreat.ai/industries/financial-services', priority: '0.8', lastmod: '2026-06-02' },
-  { loc: 'https://darkthreat.ai/industries/healthcare', priority: '0.8', lastmod: '2026-06-02' },
-  { loc: 'https://darkthreat.ai/industries/legal', priority: '0.8', lastmod: '2026-06-02' },
-  { loc: 'https://darkthreat.ai/industries/government', priority: '0.8', lastmod: '2026-06-02' },
-  { loc: 'https://darkthreat.ai/industries/ecommerce', priority: '0.8', lastmod: '2026-06-02' }
-];
+// Routes to NEVER include (auth / app / private)
+const EXCLUDE = new Set([
+  '/signin', '/auth', '/forgot-password', '/dashboard', '/admin',
+  '/alerts', '/reports', '/threat-intelligence', '/trial-coming-soon',
+]);
 
-const { industryRoutes } = require('../src/pages/industryRoutes');
-
-function formatDate(dateStr) {
-  try {
-    if (!dateStr) return '2026-06-02';
-    const cleanStr = dateStr.replace(/^[A-Za-z]+,\s*/, ''); // Remove day name
-    const date = new Date(cleanStr);
-    if (!isNaN(date.getTime())) {
-      const yyyy = date.getFullYear();
-      const mm = String(date.getMonth() + 1).padStart(2, '0');
-      const dd = String(date.getDate()).padStart(2, '0');
-      return `${yyyy}-${mm}-${dd}`;
-    }
-  } catch (e) {
-    // Ignore and fallback
+// Extract static routes from App.tsx <Route path="..."> declarations.
+function extractStaticRoutes() {
+  const src = fs.readFileSync(APP_TSX, 'utf8');
+  const routes = new Set();
+  const re = /<Route\s+path=["']([^"']+)["']/g;
+  let m;
+  while ((m = re.exec(src)) !== null) {
+    const p = m[1];
+    if (p.includes(':') || p.includes('*')) continue; // skip dynamic + catch-all
+    if (EXCLUDE.has(p)) continue;
+    routes.add(p);
   }
-  return '2026-06-02';
+  return [...routes];
 }
 
-function generateSitemap() {
-  console.log('Generating sitemap...');
-  const files = fs.readdirSync(BLOGS_DIR);
-  const blogRoutes = [];
+function priorityFor(route) {
+  if (route === '/') return '1.0';
+  if (['/solution', '/pricing', '/blog', '/dark-web-monitoring',
+       '/credential-leak-detection', '/data-leak-detection'].includes(route)) return '0.9';
+  if (route.startsWith('/compare/') || route.startsWith('/industries')) return '0.8';
+  if (route.startsWith('/author/')) return '0.6';
+  if (['/privacy-policy', '/platform-terms', '/website-terms'].includes(route)) return '0.4';
+  return '0.7';
+}
 
+function formatDate(raw) {
+  if (!raw) return TODAY;
+  try {
+    const s = raw.replace(/^[A-Za-z]+,\s*/, '');
+    const d = new Date(s);
+    if (!isNaN(d.getTime())) return d.toISOString().slice(0, 10);
+  } catch (_) {}
+  return TODAY;
+}
+
+function collectBlogs() {
+  const entries = [];
+  const files = fs.readdirSync(BLOGS_DIR).filter(f => f.endsWith('.ts') && f !== 'index.ts');
   for (const file of files) {
-    if (file === 'index.ts' || !file.endsWith('.ts')) {
-      continue;
-    }
-
-    const filePath = path.join(BLOGS_DIR, file);
-    const content = fs.readFileSync(filePath, 'utf8');
-
-    // Extract slug
-    let slug = file.replace('.ts', '');
+    const content = fs.readFileSync(path.join(BLOGS_DIR, file), 'utf8');
     const slugMatch = content.match(/slug:\s*["']([^"']+)["']/);
-    if (slugMatch) {
-      slug = slugMatch[1];
-    }
-
-    // Extract publish date
-    let lastmod = '2026-06-02';
     const dateMatch = content.match(/publishDate:\s*["']([^"']+)["']/);
-    if (dateMatch) {
-      lastmod = formatDate(dateMatch[1]);
-    }
-
-    blogRoutes.push({
-      loc: `https://darkthreat.ai/blog/${slug}`,
-      lastmod,
-      priority: '0.7'
+    const slug = slugMatch ? slugMatch[1] : file.replace(/\.ts$/, '');
+    entries.push({
+      loc: `${BASE_URL}/blog/${slug}`,
+      lastmod: formatDate(dateMatch && dateMatch[1]),
+      priority: '0.7',
     });
   }
+  entries.sort((a, b) => a.loc.localeCompare(b.loc));
+  return entries;
+}
 
-  // Sort blog routes alphabetically by location
-  blogRoutes.sort((a, b) => a.loc.localeCompare(b.loc));
-
-  const allRoutes = [...staticRoutes, ...industryRoutes, ...blogRoutes];
+function build() {
+  const staticRoutes = extractStaticRoutes()
+    .sort()
+    .map(r => ({ loc: `${BASE_URL}${r}`, lastmod: TODAY, priority: priorityFor(r) }));
+  const blogs = collectBlogs();
+  const all = [...staticRoutes, ...blogs];
 
   let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
   xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
-
-  for (const route of allRoutes) {
-    xml += `  <url><loc>${route.loc}</loc><lastmod>${route.lastmod}</lastmod><priority>${route.priority}</priority></url>\n`;
+  for (const u of all) {
+    xml += `  <url><loc>${u.loc}</loc><lastmod>${u.lastmod}</lastmod><priority>${u.priority}</priority></url>\n`;
   }
-
   xml += '</urlset>\n';
-
-  fs.writeFileSync(SITEMAP_PATH, xml, 'utf8');
-  console.log(`Successfully generated sitemap with ${allRoutes.length} URLs at ${SITEMAP_PATH}`);
+  fs.writeFileSync(OUT, xml, 'utf8');
+  console.log(`sitemap.xml: ${all.length} URLs (${staticRoutes.length} routes + ${blogs.length} blog posts)`);
 }
 
-generateSitemap();
+build();
