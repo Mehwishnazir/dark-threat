@@ -57,6 +57,9 @@ const NotFound = () => {
           <p className="text-muted-foreground text-lg mt-6 max-w-lg mx-auto">
             The page you're looking for may have been moved, deleted, or never existed.
           </p>
+          <p className="text-primary/80 text-sm mt-4" aria-live="polite">
+            Redirecting to home in {countdown}s…
+          </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
             <Button asChild className="cta-cyan">
               <Link to="/">Return to Home</Link>
