@@ -1,5 +1,5 @@
 // Unified public contact / lead form handler.
-// Sends a notification email to info@cybersilo.tech via Resend.
+// Sends a notification email to info@cybersilo.tech via SMTP (mail.cybersilo.tech).
 //
 // Accepts any of: Contact Us, Notify-Me (Trial Coming Soon), Trial Registration.
 
@@ -168,53 +168,27 @@ Deno.serve(async (req: Request) => {
     .map(([k, v]) => `${k}: ${v}`)
     .join("\n");
 
-  const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
-  if (!RESEND_API_KEY) {
-    console.error("[contact-form] RESEND_API_KEY not configured");
-    return new Response(JSON.stringify({ error: "Email service not configured" }), {
-      status: 500,
-      headers: { ...corsHeaders, "Content-Type": "application/json" },
-    });
-  }
-
   const recipient = Deno.env.get("NOTIFICATION_RECIPIENT_EMAIL") || "info@cybersilo.tech";
-  const sender = Deno.env.get("SENDER_EMAIL") || "DarkThreat <noreply@cybersilo.tech>";
 
   try {
-    const res = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${RESEND_API_KEY}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        from: sender,
-        to: [recipient],
-        reply_to: email,
-        subject: `[DarkThreat] ${formType} — ${name || email}`,
-        html,
-        text,
-      }),
+    const { sendSmtp } = await import("../_shared/smtp.ts");
+    const result = await sendSmtp({
+      to: recipient,
+      replyTo: email,
+      subject: `[DarkThreat] ${formType} — ${name || email}`,
+      html,
+      text,
     });
 
-    const result = await res.json().catch(() => ({}));
-    if (!res.ok) {
-      console.error("[contact-form] Resend error", res.status, result);
-      return new Response(
-        JSON.stringify({ error: "Failed to send email", detail: result }),
-        { status: 502, headers: { ...corsHeaders, "Content-Type": "application/json" } },
-      );
-    }
-
-    console.log(`[contact-form] Sent ${formType} from ${email} -> ${recipient}`, result?.id);
-    return new Response(JSON.stringify({ success: true, id: result?.id }), {
+    console.log(`[contact-form] Sent ${formType} from ${email} -> ${recipient}`, result.id);
+    return new Response(JSON.stringify({ success: true, id: result.id }), {
       status: 200,
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
   } catch (e) {
-    console.error("[contact-form] Send failed", e);
-    return new Response(JSON.stringify({ error: "Internal error" }), {
-      status: 500,
+    console.error("[contact-form] SMTP send failed", e instanceof Error ? e.message : e);
+    return new Response(JSON.stringify({ error: "Failed to send email" }), {
+      status: 502,
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
   }

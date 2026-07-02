@@ -1,18 +1,25 @@
-import { Link, useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Shield, Linkedin, Twitter, Github } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
+const REDIRECT_SECONDS = 3;
+
 const NotFound = () => {
   const location = useLocation();
+  const navigate = useNavigate();
+  const [countdown, setCountdown] = useState(REDIRECT_SECONDS);
 
   useEffect(() => {
-    console.error(
-      '404 Error: User attempted to access non-existent route:',
-      location.pathname,
-    );
-  }, [location.pathname]);
+    console.error('404 Error: User attempted to access non-existent route:', location.pathname);
+    const tick = setInterval(() => setCountdown((c) => (c > 0 ? c - 1 : 0)), 1000);
+    const redirect = setTimeout(() => navigate('/', { replace: true }), REDIRECT_SECONDS * 1000);
+    return () => {
+      clearInterval(tick);
+      clearTimeout(redirect);
+    };
+  }, [location.pathname, navigate]);
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
@@ -49,6 +56,9 @@ const NotFound = () => {
           </h2>
           <p className="text-muted-foreground text-lg mt-6 max-w-lg mx-auto">
             The page you're looking for may have been moved, deleted, or never existed.
+          </p>
+          <p className="text-primary/80 text-sm mt-4" aria-live="polite">
+            Redirecting to home in {countdown}s…
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
             <Button asChild className="cta-cyan">
