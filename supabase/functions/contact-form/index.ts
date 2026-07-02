@@ -1,5 +1,5 @@
 // Unified public contact / lead form handler.
-// Sends a notification email to info@cybersilo.tech via Resend.
+// Sends a notification email to info@cybersilo.tech via SMTP (mail.cybersilo.tech).
 //
 // Accepts any of: Contact Us, Notify-Me (Trial Coming Soon), Trial Registration.
 
