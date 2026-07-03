@@ -355,7 +355,7 @@ const DarkWebDataRemoval = () => {
 
       <footer className="bg-card border-t border-border py-12">
         <div className="max-w-6xl mx-auto px-6 text-center text-muted-foreground">
-          <p>&copy; 2025 DarkThreat. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} DarkThreat. All rights reserved.</p>
         </div>
       </footer>
     </div>

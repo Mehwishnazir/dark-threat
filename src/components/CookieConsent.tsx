@@ -48,18 +48,16 @@ export default function CookieConsent() {
       role="dialog"
       aria-live="polite"
       aria-label="Cookie consent"
-      className="fixed inset-x-0 bottom-0 z-[100] px-4 pb-4 sm:px-6 sm:pb-6"
+      className="fixed inset-x-0 bottom-0 z-[100] px-2 pb-2 sm:px-6 sm:pb-6"
     >
-      <div className="mx-auto max-w-3xl rounded-2xl border border-border bg-card/95 backdrop-blur shadow-2xl p-5 sm:p-6">
-        <div className="flex items-start justify-between gap-4">
-          <div className="flex-1">
-            <h2 className="font-montserrat font-bold text-foreground text-base sm:text-lg mb-2">
+      <div className="mx-auto max-w-3xl rounded-xl sm:rounded-2xl border border-border bg-card/95 backdrop-blur shadow-2xl p-3 sm:p-6">
+        <div className="flex items-start justify-between gap-2 sm:gap-4">
+          <div className="flex-1 min-w-0">
+            <h2 className="font-montserrat font-bold text-foreground text-sm sm:text-lg mb-1 sm:mb-2">
               We value your privacy
             </h2>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              We use cookies to analyze site traffic and improve your
-              experience. Analytics (Google Analytics, Apollo, LinkedIn
-              Insight Tag) only load if you accept. See our{" "}
+            <p className="text-xs sm:text-sm text-muted-foreground leading-snug sm:leading-relaxed">
+              We use cookies to analyze site traffic. Analytics only load if you accept.{" "}
               <a
                 href="/privacy-policy"
                 className="text-primary underline hover:no-underline"
@@ -79,17 +77,17 @@ export default function CookieConsent() {
           </button>
         </div>
 
-        <div className="mt-4 flex flex-col sm:flex-row gap-3 sm:justify-end">
+        <div className="mt-2 sm:mt-4 flex flex-row gap-2 sm:gap-3 sm:justify-end">
           <Button
             variant="outline"
             onClick={handleReject}
-            className="min-h-[44px] sm:min-w-[140px]"
+            className="flex-1 sm:flex-none min-h-[40px] sm:min-h-[44px] sm:min-w-[140px] text-sm"
           >
             Reject all
           </Button>
           <Button
             onClick={handleAccept}
-            className="min-h-[44px] sm:min-w-[140px] bg-primary text-primary-foreground hover:bg-primary/90"
+            className="flex-1 sm:flex-none min-h-[40px] sm:min-h-[44px] sm:min-w-[140px] text-sm bg-primary text-primary-foreground hover:bg-primary/90"
           >
             Accept all
           </Button>

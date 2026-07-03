@@ -37,7 +37,7 @@ export default function FinalCTA() {
             <Link to="/contact" className="w-full sm:w-auto">
               <Button
                 variant="outline"
-                className="border-primary/30 hover:border-primary text-foreground hover:text-primary inline-flex items-center gap-2 text-base px-8 py-4 w-full"
+                className="border-2 border-primary bg-card hover:bg-primary/10 text-foreground hover:text-primary inline-flex items-center gap-2 text-base px-8 py-4 w-full"
               >
                 <CalendarDays className="w-4 h-4" />
                 Schedule a Demo
