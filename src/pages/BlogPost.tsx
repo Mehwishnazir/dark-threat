@@ -239,7 +239,7 @@ const BlogPost = () => {
           </div>
 
           <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground">
-            © 2025 DarkThreat. All rights reserved.
+            © {new Date().getFullYear()} DarkThreat. All rights reserved.
           </div>
         </div>
       </footer>

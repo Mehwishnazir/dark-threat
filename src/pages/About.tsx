@@ -509,7 +509,7 @@ const About = () => {
             <Button onClick={() => setIsTrialModalOpen(true)} className="hero-button text-base px-8 py-6">
               Start Free Trial — No Credit Card Required <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
-            <Button variant="outline" className="text-base px-8 py-6 bg-card/50 backdrop-blur border-primary/20 hover:bg-primary/10">
+            <Button variant="outline" className="text-base px-8 py-6 bg-card border-2 border-primary hover:bg-primary/10 hover:border-primary text-foreground">
               Request a Live Demo
             </Button>
           </div>

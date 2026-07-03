@@ -186,8 +186,14 @@ Deno.serve(async (req: Request) => {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
   } catch (e) {
-    console.error("[contact-form] SMTP send failed", e instanceof Error ? e.message : e);
-    return new Response(JSON.stringify({ error: "Failed to send email" }), {
+    console.error("[contact-form] Email send failed — full error:", e);
+    if (e instanceof Error) {
+      console.error("[contact-form] Error name:", e.name);
+      console.error("[contact-form] Error message:", e.message);
+      console.error("[contact-form] Error stack:", e.stack);
+    }
+    const detail = e instanceof Error ? `${e.name}: ${e.message}` : String(e);
+    return new Response(JSON.stringify({ error: "Failed to send email", detail }), {
       status: 502,
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
