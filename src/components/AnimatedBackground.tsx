@@ -67,8 +67,8 @@ const AnimatedBackground = () => {
     }
 
     const animate = () => {
-      ctx.fillStyle = 'rgba(10, 10, 10, 0.05)';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
 
       // Update and draw nodes
       nodes.forEach((node, i) => {
