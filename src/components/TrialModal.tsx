@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
+import { submitLeadForm } from '@/utils/formSubmit';
+import { useToast } from '@/hooks/use-toast';
 
 interface TrialModalProps {
   isOpen: boolean;
@@ -9,6 +11,8 @@ interface TrialModalProps {
 }
 
 export default function TrialModal({ isOpen, onClose }: TrialModalProps) {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     email: '',
     firstName: '',
@@ -16,72 +20,102 @@ export default function TrialModal({ isOpen, onClose }: TrialModalProps) {
     jobTitle: '',
     companyName: '',
     companyDomain: '',
-    country: ''
+    country: '',
   });
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Trial registration:', formData);
-    // Navigate to coming soon page instead
-    window.open('/trial-coming-soon', '_blank');
-    onClose();
+    setIsSubmitting(true);
+    try {
+      await submitLeadForm({
+        formType: 'Trial Registration',
+        email: formData.email,
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        jobTitle: formData.jobTitle,
+        companyName: formData.companyName,
+        companyDomain: formData.companyDomain,
+        country: formData.country,
+      });
+      toast({
+        title: 'Trial request received',
+        description: "Thanks! We'll be in touch shortly to activate your trial.",
+      });
+      onClose();
+    } catch (err) {
+      console.error('Trial lead capture failed', err);
+      toast({
+        title: 'Something went wrong',
+        description: 'Please try again in a moment.',
+        variant: 'destructive',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-md bg-card/95 backdrop-blur-xl border-border">
+      <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto bg-card/95 backdrop-blur-xl border-border">
         <DialogHeader>
-          <DialogTitle className="text-center">
-            <h2 className="text-3xl font-montserrat font-bold text-foreground mb-4">
-              Coming Soon
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              This feature is under development
-            </p>
+          <DialogTitle className="text-3xl font-montserrat font-bold text-foreground text-center">
+            Start Your Free Trial
           </DialogTitle>
+          <DialogDescription className="text-center text-muted-foreground">
+            7-day free trial • No credit card required
+          </DialogDescription>
         </DialogHeader>
 
-        <div className="py-8 text-center space-y-6">
-          {/* Animated icon */}
-          <div className="relative mx-auto w-16 h-16">
-            <div className="absolute inset-0 animate-pulse">
-              <div className="w-16 h-16 border-4 border-primary rounded-full animate-spin border-t-transparent"></div>
+        <form onSubmit={handleSubmit} className="space-y-4 pt-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="md:col-span-2">
+              <label className="block text-sm font-medium text-foreground mb-2">Business Email*</label>
+              <Input type="email" name="email" value={formData.email} onChange={handleInputChange} required placeholder="you@company.com" />
             </div>
-            <div className="absolute inset-2 bg-primary/20 rounded-full flex items-center justify-center animate-glow-pulse">
-              <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+            <div>
+              <label className="block text-sm font-medium text-foreground mb-2">First Name*</label>
+              <Input type="text" name="firstName" value={formData.firstName} onChange={handleInputChange} required placeholder="John" />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-foreground mb-2">Last Name*</label>
+              <Input type="text" name="lastName" value={formData.lastName} onChange={handleInputChange} required placeholder="Doe" />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-foreground mb-2">Job Title*</label>
+              <Input type="text" name="jobTitle" value={formData.jobTitle} onChange={handleInputChange} required placeholder="Security Manager" />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-foreground mb-2">Company Name*</label>
+              <Input type="text" name="companyName" value={formData.companyName} onChange={handleInputChange} required placeholder="Your Company" />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-foreground mb-2">Company Domain*</label>
+              <Input type="text" name="companyDomain" value={formData.companyDomain} onChange={handleInputChange} required placeholder="company.com" />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-foreground mb-2">Country*</label>
+              <Input type="text" name="country" value={formData.country} onChange={handleInputChange} required placeholder="United States" />
             </div>
           </div>
 
-          {/* Message */}
-          <div className="space-y-3">
-            <h3 className="text-xl font-montserrat font-semibold text-foreground">
-              Free Trial Registration
-            </h3>
-            <p className="text-muted-foreground">
-              We're putting the finishing touches on our trial registration system. 
-              Check back soon for full access to DarkThreat monitoring capabilities.
-            </p>
-          </div>
+          <p className="text-xs text-muted-foreground">
+            By submitting this form, you agree to receive emails from us and to share your information so we can provide the requested service. You may unsubscribe at any time. See our Privacy Policy for details.
+          </p>
 
-          {/* Animated progress indicators */}
-          <div className="flex justify-center space-x-2">
-            <div className="w-2 h-2 bg-primary rounded-full animate-pulse delay-0"></div>
-            <div className="w-2 h-2 bg-primary rounded-full animate-pulse delay-150"></div>
-            <div className="w-2 h-2 bg-primary rounded-full animate-pulse delay-300"></div>
+          <div className="flex flex-col sm:flex-row gap-3 pt-2">
+            <Button type="button" variant="outline" onClick={onClose} className="sm:w-1/3">
+              Cancel
+            </Button>
+            <Button type="submit" className="hero-button flex-1 text-base py-4" disabled={isSubmitting}>
+              {isSubmitting ? 'Submitting…' : 'Start Free Trial'}
+            </Button>
           </div>
-
-          <Button onClick={onClose} variant="outline" className="w-full">
-            Back to Dashboard
-          </Button>
-        </div>
+        </form>
       </DialogContent>
     </Dialog>
   );
