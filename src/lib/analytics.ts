@@ -1,35 +1,72 @@
 /**
- * Consent-gated analytics loader.
+ * Consent-gated analytics loader with category granularity.
  *
- * GA4, Apollo, and LinkedIn Insight Tag are only injected into the DOM
- * after the user accepts cookies. Google Consent Mode v2 is initialized
- * in index.html with every storage type set to "denied" by default; on
- * acceptance we call `gtag('consent', 'update', { granted })` and then
- * load the GA script. On rejection nothing loads.
+ * Google Consent Mode v2 is initialized in index.html with every storage
+ * type set to "denied" by default. This module gates GA4 / Apollo /
+ * LinkedIn injection on the user's per-category consent choices, and
+ * re-asks after 12 months.
  */
 
 const GA_ID = "G-DLELJ5K954";
-const CONSENT_KEY = "dt-cookie-consent";
+export const CONSENT_KEY = "cookie_consent";
+const CONSENT_MAX_AGE_MS = 365 * 24 * 60 * 60 * 1000; // 12 months
 
-type ConsentValue = "accepted" | "rejected";
+export type ConsentCategories = {
+  necessary: true; // always true
+  analytics: boolean;
+  marketing: boolean;
+  functional: boolean;
+};
+
+export type ConsentRecord = {
+  version: 1;
+  timestamp: number;
+  categories: ConsentCategories;
+};
 
 declare global {
   interface Window {
     dataLayer: unknown[];
     gtag: (...args: unknown[]) => void;
     __dtAnalyticsLoaded?: boolean;
+    openCookieSettings?: () => void;
   }
 }
 
-export function getStoredConsent(): ConsentValue | null {
+export function getStoredConsent(): ConsentRecord | null {
   if (typeof window === "undefined") return null;
-  const v = localStorage.getItem(CONSENT_KEY);
-  return v === "accepted" || v === "rejected" ? v : null;
+  try {
+    const raw = localStorage.getItem(CONSENT_KEY);
+    if (!raw) return null;
+    const parsed = JSON.parse(raw) as ConsentRecord;
+    if (!parsed || parsed.version !== 1 || !parsed.categories) return null;
+    if (Date.now() - parsed.timestamp > CONSENT_MAX_AGE_MS) return null;
+    return parsed;
+  } catch {
+    return null;
+  }
 }
 
-export function storeConsent(value: ConsentValue) {
+export function storeConsent(categories: Omit<ConsentCategories, "necessary"> & { necessary?: true }) {
+  const record: ConsentRecord = {
+    version: 1,
+    timestamp: Date.now(),
+    categories: {
+      necessary: true,
+      analytics: !!categories.analytics,
+      marketing: !!categories.marketing,
+      functional: !!categories.functional,
+    },
+  };
   try {
-    localStorage.setItem(CONSENT_KEY, value);
+    localStorage.setItem(CONSENT_KEY, JSON.stringify(record));
+  } catch {}
+  return record;
+}
+
+export function clearConsent() {
+  try {
+    localStorage.removeItem(CONSENT_KEY);
   } catch {}
 }
 
@@ -42,65 +79,38 @@ function injectScript(src: string, attrs: Record<string, string> = {}) {
   return s;
 }
 
-export function loadAnalytics() {
-  if (typeof window === "undefined") return;
-  if (window.__dtAnalyticsLoaded) return;
-  window.__dtAnalyticsLoaded = true;
-
-  // Ensure dataLayer/gtag exist (they're initialized in index.html with
-  // default-denied consent — we update to granted before loading GA).
+function ensureGtag() {
   window.dataLayer = window.dataLayer || [];
   window.gtag =
     window.gtag ||
     function gtag(...args: unknown[]) {
       window.dataLayer.push(args);
     };
-
-  window.gtag("consent", "update", {
-    ad_storage: "granted",
-    ad_user_data: "granted",
-    ad_personalization: "granted",
-    analytics_storage: "granted",
-    functionality_storage: "granted",
-    personalization_storage: "granted",
-    security_storage: "granted",
-  });
-
-  // GA4
-  injectScript(`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`);
-  window.gtag("js", new Date());
-  window.gtag("config", GA_ID, { anonymize_ip: true });
-
-  // Apollo tracker (no-op if APOLLO_ID isn't set — placeholder kept so
-  // the user can drop in their account ID without code changes).
-  // injectScript("https://assets.apollo.io/micro/website-tracker/tracker.iife.js", { "data-apollo-id": "<APOLLO_ID>" });
-
-  // LinkedIn Insight Tag
-  // Replace 0000000 with the real partner ID when available.
-  // (window as any)._linkedin_partner_id = "0000000";
-  // (window as any)._linkedin_data_partner_ids =
-  //   (window as any)._linkedin_data_partner_ids || [];
-  // (window as any)._linkedin_data_partner_ids.push(
-  //   (window as any)._linkedin_partner_id
-  // );
-  // injectScript("https://snap.licdn.com/li.lms-analytics/insight.min.js");
 }
 
-export function rejectAnalytics() {
+export function applyConsent(record: ConsentRecord) {
   if (typeof window === "undefined") return;
-  window.dataLayer = window.dataLayer || [];
-  window.gtag =
-    window.gtag ||
-    function gtag(...args: unknown[]) {
-      window.dataLayer.push(args);
-    };
+  ensureGtag();
+  const { analytics, marketing, functional } = record.categories;
+
   window.gtag("consent", "update", {
-    ad_storage: "denied",
-    ad_user_data: "denied",
-    ad_personalization: "denied",
-    analytics_storage: "denied",
-    functionality_storage: "denied",
-    personalization_storage: "denied",
+    analytics_storage: analytics ? "granted" : "denied",
+    ad_storage: marketing ? "granted" : "denied",
+    ad_user_data: marketing ? "granted" : "denied",
+    ad_personalization: marketing ? "granted" : "denied",
+    functionality_storage: functional ? "granted" : "denied",
+    personalization_storage: functional ? "granted" : "denied",
     security_storage: "granted",
   });
+
+  if (analytics && !window.__dtAnalyticsLoaded) {
+    window.__dtAnalyticsLoaded = true;
+    injectScript(`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`);
+    window.gtag("js", new Date());
+    window.gtag("config", GA_ID, { anonymize_ip: true });
+  }
+
+  // Marketing scripts (Meta Pixel, LinkedIn Insight, Apollo) would be
+  // injected here when `marketing` is true. Add real IDs when available.
+  // if (marketing) { injectScript("https://snap.licdn.com/li.lms-analytics/insight.min.js"); }
 }
