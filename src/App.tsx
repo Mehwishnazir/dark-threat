@@ -37,6 +37,8 @@ import ComparisonFlare from "./pages/ComparisonFlare";
 import ComparisonSocRadar from "./pages/ComparisonSocRadar";
 import RouteHead from "./components/RouteHead";
 import CookieConsent from "./components/CookieConsent";
+import CookieSettingsLink from "./components/CookieSettingsLink";
+import ChatWidget from "./components/ChatWidget";
 import Author from "./pages/Author";
 import {
   IndustriesPage,
@@ -72,6 +74,8 @@ const App = () => (
         <BrowserRouter>
           <RouteHead />
           <CookieConsent />
+          <CookieSettingsLink />
+          <ChatWidget />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/solution" element={<Solution />} />
