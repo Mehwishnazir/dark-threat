@@ -5,8 +5,8 @@ export default function ComparisonZeroFox() {
     <ComparisonPage
       competitorName="ZeroFox"
       slug="darkthreat-vs-zerofox"
-      title="DarkThreat vs ZeroFox — Comparison | DarkThreat.ai"
-      description="See how DarkThreat compares to ZeroFox on dark web coverage, credential leak detection, pricing, and ease of deployment. Transparent pricing and 7-day free trial."
+      title="DarkThreat vs ZeroFox — Dark Web Monitoring Comparison (2026)"
+      description="Compare DarkThreat and ZeroFox on dark web coverage, credential leak detection, pricing transparency, and ease of deployment. Public pricing and a 7-day free trial, no credit card."
       h1="DarkThreat vs ZeroFox"
       intro="ZeroFox bundles digital risk protection across brand, social, and dark web surfaces in a wide enterprise suite. DarkThreat goes deep on the dark web and credential leak signals that actually trigger incidents — without the platform sprawl or sales-led pricing."
       rows={[

@@ -5,8 +5,8 @@ export default function ComparisonFlare() {
     <ComparisonPage
       competitorName="Flare"
       slug="darkthreat-vs-flare"
-      title="DarkThreat vs Flare — Comparison | DarkThreat.ai"
-      description="DarkThreat vs Flare: side-by-side comparison of dark web monitoring features, credential leak detection coverage, pricing, and integrations. Start a free 7-day trial."
+      title="DarkThreat vs Flare — Dark Web Monitoring Comparison (2026)"
+      description="DarkThreat vs Flare: side-by-side comparison of dark web monitoring features, credential leak detection coverage, pricing, and integrations. Start a 7-day free trial in under a minute."
       h1="DarkThreat vs Flare"
       intro="Flare is a strong dark web and external risk monitoring platform popular with mid-market security teams. DarkThreat offers a similar focus with broader infostealer log coverage, simpler pricing, and a self-serve trial that requires no sales conversation."
       rows={[

@@ -49,7 +49,7 @@ export default function ComparisonPage({
   differentiators,
 }: ComparisonPageProps) {
   const [isTrialModalOpen, setIsTrialModalOpen] = useState(false);
-  const canonical = `https://darkthreat.ai/compare/${slug}`;
+  const canonical = `https://www.darkthreat.ai/compare/${slug}`;
 
   return (
     <div className="min-h-screen bg-background">
