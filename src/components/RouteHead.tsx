@@ -2,24 +2,37 @@ import { useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 
 /**
- * Sitewide head injector. Mounted once inside <BrowserRouter>.
- *
- * For every route it emits:
- *  - <link rel="canonical"> matching the current route on https://darkthreat.ai
- *  - <meta name="robots" content="index, follow"> (overridable per-page)
- *  - <meta property="og:url"> matching the current route
- *  - <script type="application/ld+json"> with a BreadcrumbList for sub-pages
- *
- * Per-page <Helmet> blocks may still override title, description, and add
- * additional JSON-LD. react-helmet-async de-dupes <meta name|property> but
- * not <link rel="canonical">, so any per-page canonical we still ship will
- * stack with this one — we therefore deliberately leave per-page canonicals
- * in place where they exist and rely on the latest one winning at render.
+ * Sitewide head injector. Mounted once inside <BrowserRouter>. Emits:
+ *  - self-referencing canonical + og:url on the canonical (www) host
+ *  - default robots (index, follow) — per-page <SEO noindex> overrides
+ *  - Organization + SoftwareApplication JSON-LD (sitewide)
+ *  - BreadcrumbList JSON-LD for any non-root route
  */
 
-const SITE = "https://darkthreat.ai";
+const SITE = "https://www.darkthreat.ai";
+const SITE_DESCRIPTION =
+  "AI-powered dark web monitoring and credential leak detection. Detect leaks, hacker chatter and breaches before they impact your business.";
 
-// Human labels for the first path segment when building breadcrumbs.
+const ORGANIZATION_JSONLD = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "DarkThreat",
+  url: SITE,
+  logo: `${SITE}/logo.png`,
+  description: SITE_DESCRIPTION,
+  sameAs: [] as string[],
+};
+
+const SOFTWARE_JSONLD = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "DarkThreat",
+  applicationCategory: "SecurityApplication",
+  operatingSystem: "Web",
+  url: SITE,
+  description: SITE_DESCRIPTION,
+};
+
 const SEGMENT_LABELS: Record<string, string> = {
   solution: "Solution",
   pricing: "Pricing",
@@ -53,14 +66,8 @@ function buildBreadcrumbs(pathname: string) {
   if (parts.length === 0) return null;
 
   const items = [
-    {
-      "@type": "ListItem",
-      position: 1,
-      name: "Home",
-      item: `${SITE}/`,
-    },
+    { "@type": "ListItem", position: 1, name: "Home", item: `${SITE}/` },
   ];
-
   let acc = "";
   parts.forEach((seg, idx) => {
     acc += `/${seg}`;
@@ -71,7 +78,6 @@ function buildBreadcrumbs(pathname: string) {
       item: `${SITE}${acc}`,
     });
   });
-
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -81,7 +87,6 @@ function buildBreadcrumbs(pathname: string) {
 
 export default function RouteHead() {
   const { pathname } = useLocation();
-  // Normalize trailing slash (except root)
   const normalized =
     pathname.length > 1 && pathname.endsWith("/")
       ? pathname.slice(0, -1)
@@ -94,6 +99,12 @@ export default function RouteHead() {
       <link rel="canonical" href={url} />
       <meta name="robots" content="index, follow" />
       <meta property="og:url" content={url} />
+      <script type="application/ld+json">
+        {JSON.stringify(ORGANIZATION_JSONLD)}
+      </script>
+      <script type="application/ld+json">
+        {JSON.stringify(SOFTWARE_JSONLD)}
+      </script>
       {breadcrumbs && (
         <script type="application/ld+json">
           {JSON.stringify(breadcrumbs)}
