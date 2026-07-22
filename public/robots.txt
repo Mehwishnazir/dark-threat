@@ -31,5 +31,5 @@ Disallow: /alerts
 Disallow: /reports
 Disallow: /threat-intelligence
 
-Sitemap: https://darkthreat.ai/sitemap.xml
-Sitemap: https://darkthreat.ai/sitemap-blog.xml
+Sitemap: https://www.darkthreat.ai/sitemap.xml
+Sitemap: https://www.darkthreat.ai/sitemap-blog.xml
