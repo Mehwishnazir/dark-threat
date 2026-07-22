@@ -35,6 +35,7 @@ import ComparisonRecordedFuture from "./pages/ComparisonRecordedFuture";
 import ComparisonZeroFox from "./pages/ComparisonZeroFox";
 import ComparisonFlare from "./pages/ComparisonFlare";
 import ComparisonSocRadar from "./pages/ComparisonSocRadar";
+import ComparisonCybersixgill from "./pages/ComparisonCybersixgill";
 import RouteHead from "./components/RouteHead";
 import CookieConsent from "./components/CookieConsent";
 import CookieSettingsLink from "./components/CookieSettingsLink";
@@ -106,6 +107,7 @@ const App = () => (
             <Route path="/compare/darkthreat-vs-zerofox" element={<ComparisonZeroFox />} />
             <Route path="/compare/darkthreat-vs-flare" element={<ComparisonFlare />} />
             <Route path="/compare/darkthreat-vs-socradar" element={<ComparisonSocRadar />} />
+            <Route path="/compare/darkthreat-vs-cybersixgill" element={<ComparisonCybersixgill />} />
             <Route path="/author/:slug" element={<Author />} />
             <Route path="/industries" element={<IndustriesPage />} />
             <Route path="/industries/financial-services" element={<FinancialServicesIndustry />} />
