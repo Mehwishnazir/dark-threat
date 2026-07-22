@@ -5,8 +5,8 @@ export default function ComparisonSocRadar() {
     <ComparisonPage
       competitorName="SOCRadar"
       slug="darkthreat-vs-socradar"
-      title="DarkThreat vs SOCRadar — Comparison | DarkThreat.ai"
-      description="Compare DarkThreat and SOCRadar on dark web monitoring, credential leak detection, attack surface management, pricing, and time-to-value. Free 7-day trial."
+      title="DarkThreat vs SOCRadar — Dark Web Monitoring Comparison (2026)"
+      description="Compare DarkThreat and SOCRadar on dark web monitoring, credential leak detection, attack surface coverage, pricing transparency, and time-to-value. 7-day free trial, no credit card."
       h1="DarkThreat vs SOCRadar"
       intro="SOCRadar offers a broad extended threat intelligence (XTI) suite covering attack surface, brand, and dark web. DarkThreat is a focused dark web monitoring and credential leak detection product — lighter to deploy, simpler to budget, and integrated with the SIEM and SOAR you already use."
       rows={[

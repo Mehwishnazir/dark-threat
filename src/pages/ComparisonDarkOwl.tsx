@@ -21,9 +21,9 @@ const ComparisonDarkOwl = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>DarkOwl Alternative | DarkThreat vs DarkOwl</title>
-        <meta name="description" content="Looking for a DarkOwl alternative? Compare DarkThreat vs DarkOwl on pricing, coverage, ease-of-use, and self-serve onboarding. Start a free 7-day trial today." />
-        <link rel="canonical" href="https://darkthreat.ai/compare/darkthreat-vs-darkowl" />
+        <title>DarkThreat vs DarkOwl — Dark Web Monitoring Comparison (2026)</title>
+        <meta name="description" content="Looking for a DarkOwl alternative? Compare DarkThreat and DarkOwl on pricing transparency, coverage, ease-of-use, and self-serve onboarding. Start a 7-day free trial today." />
+        <link rel="canonical" href="https://www.darkthreat.ai/compare/darkthreat-vs-darkowl" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebPage",

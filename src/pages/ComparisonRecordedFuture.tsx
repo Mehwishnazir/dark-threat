@@ -5,8 +5,8 @@ export default function ComparisonRecordedFuture() {
     <ComparisonPage
       competitorName="Recorded Future"
       slug="darkthreat-vs-recorded-future"
-      title="DarkThreat vs Recorded Future — Comparison | DarkThreat.ai"
-      description="Compare DarkThreat against Recorded Future on dark web coverage, credential leak detection, pricing transparency, and time-to-value. Self-serve trial, no sales call."
+      title="DarkThreat vs Recorded Future — Dark Web Monitoring Comparison (2026)"
+      description="Compare DarkThreat and Recorded Future on dark web coverage, credential leak detection, pricing transparency, and time-to-value. Self-serve 7-day free trial — no sales call required."
       h1="DarkThreat vs Recorded Future"
       intro="Recorded Future is an enterprise threat intelligence platform built for large SOC teams with six-figure budgets and dedicated analysts. DarkThreat delivers focused dark web monitoring and credential leak detection that mid-market security teams can self-serve in minutes — at a fraction of the cost."
       rows={[
