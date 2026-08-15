@@ -1,0 +1,34 @@
+User-agent: Googlebot
+Allow: /
+Disallow: /dashboard
+Disallow: /admin
+Disallow: /auth
+Disallow: /signin
+Disallow: /forgot-password
+Disallow: /alerts
+Disallow: /reports
+Disallow: /threat-intelligence
+
+User-agent: Bingbot
+Allow: /
+Disallow: /dashboard
+Disallow: /admin
+Disallow: /auth
+Disallow: /signin
+Disallow: /forgot-password
+Disallow: /alerts
+Disallow: /reports
+Disallow: /threat-intelligence
+
+User-agent: *
+Allow: /
+Disallow: /dashboard
+Disallow: /admin
+Disallow: /auth
+Disallow: /signin
+Disallow: /forgot-password
+Disallow: /alerts
+Disallow: /reports
+Disallow: /threat-intelligence
+
+Sitemap: https://darkthreat.ai/sitemap.xml
