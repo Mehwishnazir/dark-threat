@@ -2,7 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const BASE_URL = 'https://www.darkthreat.ai';
+const BASE_URL = 'https://darkthreat.ai';
 const BLOGS_DIR = path.join(__dirname, '..', 'src', 'blogs');
 const BLOGS_INDEX = path.join(BLOGS_DIR, 'index.ts');
 const APP_TSX = path.join(__dirname, '..', 'src', 'App.tsx');
