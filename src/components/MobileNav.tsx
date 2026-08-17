@@ -22,8 +22,11 @@ const solutionLinks = [
 const industryLinks = [
   { to: '/industries', label: 'All Industries' },
   { to: '/industries/financial-services', label: 'Financial Services' },
+  { to: '/industries/crypto-fintech', label: 'Crypto & Fintech' },
+  { to: '/industries/education', label: 'Education' },
   { to: '/industries/healthcare', label: 'Healthcare' },
-  { to: '/industries/legal', label: 'Legal & Professional' },
+  { to: '/industries/legal', label: 'Legal' },
+  { to: '/industries/professional-services', label: 'Professional Services' },
   { to: '/industries/government', label: 'Government' },
   { to: '/industries/ecommerce', label: 'E-Commerce & Retail' },
   { to: '/industries/saas-technology', label: 'SaaS & Technology' },
@@ -130,7 +133,7 @@ export default function MobileNav() {
         role="dialog"
         aria-modal="true"
         aria-label="Mobile navigation"
-        className={`fixed top-0 right-0 h-full w-[88%] max-w-sm z-[70] flex flex-col
+        className={`fixed top-0 right-0 h-dvh w-[88%] max-w-sm z-[70] flex flex-col overflow-hidden
           bg-background border-l border-border
           transition-transform duration-300 ease-out
           ${open ? 'translate-x-0' : 'translate-x-full'}`}
@@ -153,7 +156,7 @@ export default function MobileNav() {
         </div>
 
         {/* Scrollable body */}
-        <div className="flex-1 overflow-y-auto overscroll-contain">
+        <div className="flex-1 min-h-0 overflow-y-auto overscroll-contain">
 
           {/* Flat top links */}
           <div className="px-3 pt-3 pb-1">
@@ -189,12 +192,6 @@ export default function MobileNav() {
 
         {/* Sticky footer */}
         <div className="shrink-0 px-4 py-4 border-t border-border space-y-2.5">
-          <Button
-            onClick={() => { close(); window.location.href = '/auth'; }}
-            className="cta-cyan w-full text-sm"
-          >
-            Start Free Trial — 7 Days Free
-          </Button>
           <NavLink to="/contact" onClick={close} className="block">
             <Button
               variant="outline"

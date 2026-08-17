@@ -1,8 +1,9 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Shield, Trash2, Globe, AlertTriangle, CheckCircle, ArrowRight } from 'lucide-react';
-import AppHeader from '@/components/AppHeader';
 import { Button } from '@/components/ui/button';
+import { Globe, Cloud, ShieldCheck, CheckCircle, XCircle, ArrowRight, Shield } from 'lucide-react';
+import AppHeader from '@/components/AppHeader';
+import FinalCTA from '@/components/FinalCTA';
 import {
   Accordion,
   AccordionContent,
@@ -15,28 +16,24 @@ import { submitLeadForm } from '@/utils/formSubmit';
 
 const faqs = [
   {
-    q: 'What kinds of dark web content can DarkThreat remove?',
-    a: 'DarkThreat targets exposed credentials, leaked documents, private keys, compromised account data, and market listings on underground forums, marketplaces, paste sites, and malware dump feeds.',
+    q: 'What does External Attack Surface Monitoring track?',
+    a: 'Internet-facing digital footprint, shadow IT assets, open ports, cloud exposures, and third-party supply chain vulnerabilities.',
   },
   {
-    q: 'How does the removal process work for underground listings?',
-    a: 'We verify the exposure, prioritize the riskiest listings, submit takedown requests or operator contacts, and then continue monitoring for reposts or related exposures.',
+    q: 'How does this connect to dark web monitoring?',
+    a: 'The asset map is Layer 1 of the intelligence engine — it provides organizational context so dark web and credential alerts correlate to assets that actually belong to you.',
   },
   {
-    q: 'Can you remove data that has already been copied or resold?',
-    a: 'We focus on eliminating active listings and reducing reuse. While copies may still exist, our ongoing coverage greatly limits the window in which attackers can find and use exposed assets.',
+    q: 'Do we need to install agents?',
+    a: 'No. DarkThreat is agentless: register domains, IP ranges, and brand keywords; the platform maps your external attack surface with zero infrastructure footprint.',
   },
   {
-    q: 'How quickly can my leaked data be taken down?',
-    a: 'Response time depends on source and operator cooperation, but priority removals are typically completed within hours to a few days, with continuous review afterward.',
-  },
-  {
-    q: 'Does the service include monitoring after removal?',
-    a: 'Yes. DarkThreat keeps tracking the dark web for reappearances and follows up on removed listings so your exposure stays contained over time.',
+    q: 'Is the Texas page the same product?',
+    a: '/attack-surface-monitoring/texas is a regional landing page. This page is the national product overview for External Attack Surface Monitoring.',
   },
 ];
 
-const DarkWebDataRemoval = () => {
+const ExternalAttackSurfaceMonitoring = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -68,7 +65,7 @@ const DarkWebDataRemoval = () => {
     setIsSubmitting(true);
     try {
       await submitLeadForm({
-        formType: 'Free Assessment (Dark Web Data Removal)',
+        formType: 'Free Assessment (External Attack Surface Monitoring)',
         name: formData.name,
         email: formData.email,
         company: formData.company,
@@ -98,24 +95,61 @@ const DarkWebDataRemoval = () => {
       setIsSubmitting(false);
     }
   };
+
+  const serviceJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    'serviceType': 'External Attack Surface Monitoring',
+    'name': 'DarkThreat External Attack Surface Monitoring',
+    'provider': {
+      '@type': 'Organization',
+      'name': 'DarkThreat',
+      'url': 'https://darkthreat.ai',
+      'logo': 'https://darkthreat.ai/logo.png'
+    },
+    'areaServed': 'Global',
+    'description': 'Track internet-facing digital footprint, shadow IT assets, open ports, cloud exposures, and third-party supply chain vulnerabilities.',
+    'url': 'https://darkthreat.ai/external-attack-surface-monitoring'
+  };
+
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Dark Web Data Removal | DarkThreat.ai</title>
+        <title>External Attack Surface Monitoring | DarkThreat</title>
         <meta
           name="description"
-          content="DarkThreat's Dark Web Data Removal service finds and removes leaked company data from underground marketplaces, hacker forums, and paste sites before it is weaponized."
+          content="Track internet-facing digital footprint, shadow IT assets, open ports, cloud exposures, and third-party supply chain vulnerabilities."
         />
-        <link rel="canonical" href="https://darkthreat.ai/dark-web-data-removal" />
-        <script type="application/ld+json">{JSON.stringify({
-          '@context': 'https://schema.org',
-          '@type': 'FAQPage',
-          mainEntity: faqs.map((f) => ({
-            '@type': 'Question',
-            name: f.q,
-            acceptedAnswer: { '@type': 'Answer', text: f.a },
-          })),
-        })}</script>
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://darkthreat.ai/external-attack-surface-monitoring" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="External Attack Surface Monitoring | DarkThreat" />
+        <meta property="og:description" content="Track internet-facing digital footprint, shadow IT assets, open ports, cloud exposures, and third-party supply chain vulnerabilities." />
+        <meta property="og:url" content="https://darkthreat.ai/external-attack-surface-monitoring" />
+        <meta property="og:image" content="https://darkthreat.ai/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="DarkThreat" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@DarkThreatAI" />
+        <meta name="twitter:title" content="External Attack Surface Monitoring | DarkThreat" />
+        <meta name="twitter:description" content="Track internet-facing digital footprint, shadow IT assets, open ports, cloud exposures, and third-party supply chain vulnerabilities." />
+        <meta name="twitter:image" content="https://darkthreat.ai/og-image.png" />
+
+        <script type="application/ld+json">{JSON.stringify(serviceJsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
       </Helmet>
 
       <AppHeader />
@@ -125,13 +159,13 @@ const DarkWebDataRemoval = () => {
         <div className="relative z-10 max-w-6xl mx-auto grid gap-10 lg:grid-cols-[1.6fr_0.9fr] items-start">
           <div>
             <span className="hero-badge mb-6 inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold text-primary">
-              Dark Web Data Removal
+              Agentless external visibility
             </span>
             <h1 className="text-4xl md:text-6xl font-montserrat font-bold text-foreground mb-6">
-              Dark Web Data Removal — <span className="glow-text">Erase exposed assets</span> from underground markets
+              External Attack Surface Monitoring — <span className="glow-text">See what the internet (and attackers) can see</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl">
-              DarkThreat locates leaked credentials, documents, and sensitive records across hidden channels, then works to take them down before attackers reuse or resell them.
+              Track your internet-facing digital footprint, shadow IT assets, open ports, cloud exposures, and third-party supply chain vulnerabilities — then correlate that map with dark web intelligence so alerts stay relevant to your real environment.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild className="cta-cyan inline-flex items-center gap-2">
@@ -245,10 +279,10 @@ const DarkWebDataRemoval = () => {
       <section className="py-10 px-6">
         <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
-            { label: 'Global coverage', detail: 'Tor, forums, markets, paste sites' },
-            { label: 'Priority takedowns', detail: 'High-risk exposure first' },
-            { label: 'Repeat monitoring', detail: 'Watch for reappearances' },
-            { label: 'Brand protection', detail: 'Limit data resale and abuse' },
+            { label: 'Digital footprint map', detail: 'Domains, IPs, cloud, shadow IT' },
+            { label: 'Shadow IT discovery', detail: 'Assets internal teams may miss' },
+            { label: 'Cloud & port exposure', detail: 'Misconfigs and open services' },
+            { label: 'Supply chain visibility', detail: 'Third-party / partner exposure' },
           ].map((item) => (
             <div key={item.label} className="rounded-3xl border border-border bg-card p-6 text-center">
               <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary mb-3">{item.label}</p>
@@ -261,20 +295,20 @@ const DarkWebDataRemoval = () => {
       <section className="py-20 px-6 bg-card/10">
         <div className="max-w-6xl mx-auto grid gap-10 lg:grid-cols-[1.6fr_1fr] items-start">
           <div>
-            <h2 className="text-4xl font-montserrat font-bold text-foreground mb-6">What is dark web data removal?</h2>
+            <h2 className="text-4xl font-montserrat font-bold text-foreground mb-6">What is External Attack Surface Monitoring?</h2>
             <p className="text-lg text-muted-foreground mb-5">
-              Dark web data removal is a service that locates exposed credentials, documents, and sensitive assets on underground channels and then works to remove them to reduce attacker access.
+              Before dark web signals can be tied to your organization, DarkThreat builds a comprehensive, continuously updated map of your digital footprint — registered domains, IP ranges, employee email patterns, cloud storage buckets, third-party integrations, and software exposed to the public internet. That asset map feeds every downstream alert with organizational context.
             </p>
             <p className="text-lg text-muted-foreground">
-              DarkThreat combines investigation, removal requests, and ongoing monitoring so removed data is less likely to be reused or resold across hidden marketplaces.
+              The result is outside-in visibility: you see what attackers can already see, including shadow IT and supply chain paths that internal inventories often miss.
             </p>
           </div>
 
           <div className="grid gap-4">
             {[
-              { title: 'Leaked credentials', detail: 'Remove login data before it spreads.' },
-              { title: 'Hidden documents', detail: 'Take down exposed files shared in private channels.' },
-              { title: 'Market listings', detail: 'Target listings on dark web shops and forums.' },
+              { title: 'Footprint mapping', detail: 'Domains, IP ranges, brand keywords, and cloud assets.' },
+              { title: 'Shadow IT & exposure', detail: 'Unknown assets, open ports, misconfigured storage.' },
+              { title: 'Supply chain surface', detail: 'Third-party integrations and partner risk paths.' },
             ].map((item) => (
               <div key={item.title} className="rounded-3xl border border-border bg-background p-6">
                 <p className="text-sm uppercase tracking-[0.3em] text-primary mb-3">{item.title}</p>
@@ -288,63 +322,113 @@ const DarkWebDataRemoval = () => {
       <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-montserrat font-bold text-foreground mb-4">Removal process designed for the underground</h2>
-            <p className="text-lg text-muted-foreground">We find exposed assets quickly, verify risk, remove listings, and continue monitoring to prevent recurrence.</p>
+            <h2 className="text-4xl font-montserrat font-bold text-foreground mb-4">Core capabilities of External Attack Surface Monitoring</h2>
+            <p className="text-lg text-muted-foreground">Layer 1 of the DarkThreat engine — the asset map that makes every alert organization-specific.</p>
           </div>
           <div className="grid gap-8 lg:grid-cols-3">
             <div className="rounded-3xl border border-border bg-card p-8">
               <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary mb-6">
-                <Shield className="w-6 h-6" />
-              </div>
-              <h3 className="text-2xl font-montserrat font-bold mb-4">Discovery</h3>
-              <p className="text-muted-foreground">Identify leaked credentials, documents, private keys, and other exposed assets in hidden channels.</p>
-            </div>
-            <div className="rounded-3xl border border-border bg-card p-8">
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary mb-6">
-                <Trash2 className="w-6 h-6" />
-              </div>
-              <h3 className="text-2xl font-montserrat font-bold mb-4">Verification</h3>
-              <p className="text-muted-foreground">Validate each exposure and prioritize takedowns based on risk to the business.</p>
-            </div>
-            <div className="rounded-3xl border border-border bg-card p-8">
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary mb-6">
                 <Globe className="w-6 h-6" />
               </div>
-              <h3 className="text-2xl font-montserrat font-bold mb-4">Removal</h3>
-              <p className="text-muted-foreground">Work with operators and hidden marketplaces to take down leaked data listings and reduce the window of exposure.</p>
+              <h3 className="text-2xl font-montserrat font-bold mb-4">Continuously updated asset map</h3>
+              <p className="text-muted-foreground mb-4">Asset Exposure Engine maps digital footprint: domains, IP ranges, cloud buckets, shadow IT, third-party integrations.</p>
+              <ul className="space-y-3 text-muted-foreground">
+                <li>Always-on external mapping</li>
+                <li>Context for every alert</li>
+                <li>Feeds enrichment downstream</li>
+              </ul>
             </div>
+            <div className="rounded-3xl border border-border bg-card p-8">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary mb-6">
+                <Cloud className="w-6 h-6" />
+              </div>
+              <h3 className="text-2xl font-montserrat font-bold mb-4">Exposure discovery that matters</h3>
+              <p className="text-muted-foreground mb-4">Identifies shadow IT, misconfigured cloud storage, open ports/services, and supply chain exposures.</p>
+              <ul className="space-y-3 text-muted-foreground">
+                <li>Shadow IT visibility</li>
+                <li>Cloud misconfiguration signals</li>
+                <li>Open service / vulnerability windows</li>
+              </ul>
+            </div>
+            <div className="rounded-3xl border border-border bg-card p-8">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary mb-6">
+                <ShieldCheck className="w-6 h-6" />
+              </div>
+              <h3 className="text-2xl font-montserrat font-bold mb-4">Agentless by design</h3>
+              <p className="text-muted-foreground mb-4">Register domain, IP ranges, and brand keywords — zero infrastructure footprint inside your network.</p>
+              <ul className="space-y-3 text-muted-foreground">
+                <li>No agents or sensors</li>
+                <li>No IT provisioning delay</li>
+                <li>Protection starts when assets are registered</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-6 bg-card/30">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-montserrat font-bold text-foreground mb-4">Why teams choose DarkThreat</h2>
+            <p className="text-lg text-muted-foreground">Outside-in mapping that turns external attack surface monitoring into an always-on intelligence layer.</p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {[
+              { title: 'Outside-in visibility', desc: 'Watches what perimeter tools miss on the public internet and underground.' },
+              { title: 'Unified attack-surface view', desc: 'Domains, IP ranges, brand keywords, and supply chain partners.' },
+              { title: 'Context for dark web alerts', desc: 'Asset map ensures relevance to your environment.' },
+              { title: 'Always-on, not manual', desc: 'Continuous mapping instead of labor-intensive research.' },
+            ].map((item) => (
+              <div key={item.title} className="rounded-3xl border border-border bg-background p-8">
+                <h3 className="text-xl font-montserrat font-semibold mb-3">{item.title}</h3>
+                <p className="text-muted-foreground">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-6">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-montserrat font-bold text-foreground mb-4">How DarkThreat compares to manual attack-surface inventories</h2>
+            <p className="text-lg text-muted-foreground">Periodic spreadsheets go stale. DarkThreat keeps a continuously updated external footprint map.</p>
+          </div>
+          <div className="overflow-x-auto">
+            <table className="w-full border-collapse rounded-3xl border border-border bg-card">
+              <thead>
+                <tr className="border-b border-border">
+                  <th className="p-4 text-left text-sm uppercase tracking-[0.2em] text-muted-foreground">Capability</th>
+                  <th className="p-4 text-left text-sm uppercase tracking-[0.2em] text-primary">DarkThreat</th>
+                  <th className="p-4 text-left text-sm uppercase tracking-[0.2em] text-muted-foreground">Manual / periodic inventories</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ['Continuously updated digital footprint map', true, false],
+                  ['Shadow IT and unknown asset discovery', true, false],
+                  ['Cloud, open port, and exposure tracking', true, false],
+                  ['Third-party / supply chain surface visibility', true, false],
+                  ['Agentless mapping (no internal footprint)', true, false],
+                ].map(([cap, dt, mn]) => (
+                  <tr key={cap as string} className="border-b border-border/50">
+                    <td className="p-4 text-sm text-foreground">{cap}</td>
+                    <td className="p-4 text-center">{dt ? <CheckCircle className="w-5 h-5 text-primary mx-auto" /> : <XCircle className="w-5 h-5 text-muted-foreground mx-auto" />}</td>
+                    <td className="p-4 text-center">{mn ? <CheckCircle className="w-5 h-5 text-muted-foreground mx-auto" /> : <XCircle className="w-5 h-5 text-muted-foreground mx-auto" />}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
 
       <section className="py-8 px-6 bg-card/30">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid gap-8 lg:grid-cols-3">
-            <div className="rounded-3xl border border-border bg-background p-8 text-center">
-              <div className="text-primary mb-4"><Trash2 className="w-10 h-10" /></div>
-              <h3 className="text-2xl font-montserrat font-bold text-foreground mb-3">60% faster incident response</h3>
-              <p className="text-muted-foreground">Remove dark web exposures quickly so your team can focus on remediation instead of endless investigation.</p>
-            </div>
-            <div className="rounded-3xl border border-border bg-background p-8 text-center">
-              <div className="text-primary mb-4"><Globe className="w-10 h-10" /></div>
-              <h3 className="text-2xl font-montserrat font-bold text-foreground mb-3">Global underground coverage</h3>
-              <p className="text-muted-foreground">We work across Tor, chat groups, forums, and black market shops to eliminate your data from hidden sources.</p>
-            </div>
-            <div className="rounded-3xl border border-border bg-background p-8 text-center">
-              <div className="text-primary mb-4"><AlertTriangle className="w-10 h-10" /></div>
-              <h3 className="text-2xl font-montserrat font-bold text-foreground mb-3">Ongoing exposure visibility</h3>
-              <p className="text-muted-foreground">Even after removal, we keep tracking reappearances so leaked assets stay contained.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-8 px-6">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-4xl font-montserrat font-bold text-foreground text-center mb-10">Frequently Asked Questions</h2>
+          <h2 className="text-4xl font-montserrat font-bold text-foreground text-center mb-10">Frequently asked questions</h2>
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((f, i) => (
-              <AccordionItem key={i} value={`faq-${i}`}>
+              <AccordionItem key={i} value={`item-${i}`}>
                 <AccordionTrigger className="text-left font-montserrat">{f.q}</AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">{f.a}</AccordionContent>
               </AccordionItem>
@@ -353,13 +437,24 @@ const DarkWebDataRemoval = () => {
         </div>
       </section>
 
-      <footer className="bg-card border-t border-border py-12">
-        <div className="max-w-6xl mx-auto px-6 text-center text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} DarkThreat. All rights reserved.</p>
+      <FinalCTA />
+
+      <footer className="bg-card border-t border-border py-10">
+        <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-2">
+            <Shield className="w-6 h-6 text-primary" />
+            <span className="font-montserrat font-bold text-foreground">DarkThreat</span>
+          </div>
+          <p className="text-sm text-muted-foreground">&copy; 2026 DarkThreat. All rights reserved.</p>
+          <div className="flex gap-6 text-sm text-muted-foreground">
+            <Link to="/solution" className="hover:text-primary">Platform</Link>
+            <Link to="/pricing" className="hover:text-primary">Pricing</Link>
+            <Link to="/contact" className="hover:text-primary">Contact</Link>
+          </div>
         </div>
       </footer>
     </div>
   );
 };
 
-export default DarkWebDataRemoval;
+export default ExternalAttackSurfaceMonitoring;

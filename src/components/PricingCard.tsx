@@ -1,4 +1,5 @@
 
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 
 interface PricingCardProps {
@@ -10,7 +11,6 @@ interface PricingCardProps {
   popular?: boolean;
   isCustom?: boolean;
   isAnnual?: boolean;
-  onTrialClick?: () => void;
 }
 
 export default function PricingCard({ 
@@ -22,8 +22,8 @@ export default function PricingCard({
   popular,
   isCustom,
   isAnnual = true,
-  onTrialClick
 }: PricingCardProps) {
+  const buttonClassName = `w-full ${popular ? 'hero-button' : 'border border-border hover:border-primary hover:bg-primary hover:text-black'}`;
 
   return (
     <div className={`threat-card relative ${popular ? 'border-primary pricing-scale-featured' : 'pricing-scale'}`}>
@@ -76,11 +76,8 @@ export default function PricingCard({
           ))}
         </ul>
 
-        <Button 
-          onClick={isCustom ? undefined : onTrialClick}
-          className={`w-full ${popular ? 'hero-button' : 'border border-border hover:border-primary hover:bg-primary hover:text-black'}`}
-        >
-          {isCustom ? 'Contact Sales' : 'Start FREE Trial'}
+        <Button asChild className={buttonClassName}>
+          <Link to="/contact">{isCustom ? 'Contact Sales' : 'Book Demo'}</Link>
         </Button>
       </div>
     </div>

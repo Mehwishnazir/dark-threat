@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, CalendarDays } from 'lucide-react';
+import { CalendarDays } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function FinalCTA() {
@@ -17,27 +17,16 @@ export default function FinalCTA() {
           className="absolute inset-0 circuit-pattern opacity-40 pointer-events-none"
         />
         <div className="relative z-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-semibold uppercase tracking-widest mb-6">
-            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            No Credit Card Required
-          </div>
           <h2 className="text-3xl md:text-5xl font-montserrat font-bold text-foreground mb-4">
             Stop threats <span className="glow-text">before</span> they start.
           </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Join 500+ security teams monitoring 2M+ dark web sources daily. Start your free 7-day trial — full access, no commitment.
+            Join 500+ security teams monitoring 2M+ dark web sources daily. Schedule a demo to see the platform in action.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button
-              onClick={() => (window.location.href = '/auth')}
-              className="cta-cyan inline-flex items-center gap-2 text-base px-8 py-4 w-full sm:w-auto"
-            >
-              Start Free Trial <ArrowRight className="w-4 h-4" />
-            </Button>
             <Link to="/contact" className="w-full sm:w-auto">
               <Button
-                variant="outline"
-                className="border-2 border-primary bg-card hover:bg-primary/10 text-foreground hover:text-primary inline-flex items-center gap-2 text-base px-8 py-4 w-full"
+                className="cta-cyan inline-flex items-center gap-2 text-base px-8 py-4 w-full"
               >
                 <CalendarDays className="w-4 h-4" />
                 Schedule a Demo

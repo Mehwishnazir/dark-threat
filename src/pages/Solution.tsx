@@ -1,17 +1,14 @@
 import { Button } from '@/components/ui/button';
 import { Shield, Search, AlertTriangle, Users, Database, Zap, Eye, Globe, Lock, CheckCircle, BarChart3, Trash2, Twitter, Linkedin, Github } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { useState, Suspense } from 'react';
+import { Suspense } from 'react';
 import { Helmet } from 'react-helmet-async';
-import TrialModal from '@/components/TrialModal';
 import AnimatedBackground from '@/components/AnimatedBackground';
 import ThreatSphere from '@/components/ThreatSphere';
 import Breadcrumb from '@/components/Breadcrumb';
 import AppHeader from '@/components/AppHeader';
 
 const Solution = () => {
-  const [isTrialModalOpen, setIsTrialModalOpen] = useState(false);
-
   const dataLeakCapabilities = [
     {
       icon: <Search className="w-12 h-12 text-primary" />,
@@ -114,10 +111,10 @@ const Solution = () => {
             Proactive threat intelligence that identifies your organization's exposure on the dark web before cybercriminals can exploit it.
           </p>
           <Button
-            onClick={() => setIsTrialModalOpen(true)}
+            asChild
             className="hero-button text-lg px-8 py-4"
           >
-            Start Free Trial
+            <Link to="/contact">Request a Demo</Link>
           </Button>
         </div>
 
@@ -372,11 +369,6 @@ const Solution = () => {
         </div>
       </section>
 
-      <TrialModal
-        isOpen={isTrialModalOpen}
-        onClose={() => setIsTrialModalOpen(false)}
-      />
-
       <div className="text-center mt-12 mb-10">
         <h2 className="text-4xl font-montserrat font-bold text-foreground mb-4">
           Let's <span className="glow-text">Connect</span> With Us
@@ -405,24 +397,25 @@ const Solution = () => {
                 Advanced dark web monitoring and threat intelligence platform protecting your organization 24/7.
               </p>
               <div className="flex space-x-4">
-                <a href="https://twitter.com/DarkThreatAI" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                  <Twitter className="w-5 h-5" />
+                <a href="https://twitter.com/DarkThreatAI" target="_blank" rel="noopener noreferrer" aria-label="Twitter" title="Twitter" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Twitter className="w-5 h-5" aria-hidden="true" />
                 </a>
-                <a href="https://linkedin.com/company/darkthreat" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                  <Linkedin className="w-5 h-5" />
+                <a href="https://linkedin.com/company/darkthreat" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Linkedin className="w-5 h-5" aria-hidden="true" />
                 </a>
-                <a href="https://github.com/darkthreat" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                  <Github className="w-5 h-5" />
+                <a href="https://github.com/darkthreat" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Github className="w-5 h-5" aria-hidden="true" />
                 </a>
               </div>
             </div>
             <div>
               <h3 className="font-montserrat font-semibold text-foreground mb-4">Solutions</h3>
               <ul className="space-y-2">
-                <li><Link to="/dark-web-monitoring" className="text-muted-foreground hover:text-primary">Dark Web Monitoring</Link></li>
+                <li><Link to="/dark-web-monitoring" className="text-muted-foreground hover:text-primary">Dark Web Monitoring Service</Link></li>
                 <li><Link to="/credential-leak-detection" className="text-muted-foreground hover:text-primary">Credential Leak Detection</Link></li>
                 <li><Link to="/data-leak-detection" className="text-muted-foreground hover:text-primary">Data Leak Detection</Link></li>
-                <li><Link to="/compare/darkthreat-vs-darkowl" className="text-muted-foreground hover:text-primary">vs DarkOwl</Link></li>
+                <li><Link to="/threat-intelligence-platform" className="text-muted-foreground hover:text-primary">Threat Intelligence Platform</Link></li>
+                <li><Link to="/compare/darkthreat-vs-darkowl" className="text-muted-foreground hover:text-primary">DarkThreat vs DarkOwl</Link></li>
               </ul>
             </div>
             <div>
@@ -431,6 +424,7 @@ const Solution = () => {
                 <li><Link to="/" className="text-muted-foreground hover:text-primary">Home</Link></li>
                 <li><Link to="/solution" className="text-muted-foreground hover:text-primary">Solution</Link></li>
                 <li><Link to="/pricing" className="text-muted-foreground hover:text-primary">Pricing</Link></li>
+                <li><Link to="/blog" className="text-muted-foreground hover:text-primary">Blog</Link></li>
                 <li><Link to="/about" className="text-muted-foreground hover:text-primary">About</Link></li>
                 <li><Link to="/contact" className="text-muted-foreground hover:text-primary">Contact</Link></li>
               </ul>
@@ -439,9 +433,9 @@ const Solution = () => {
               <h3 className="font-montserrat font-semibold text-foreground mb-4">Legal</h3>
               <ul className="space-y-2">
                 <li><Link to="/privacy-policy" className="text-muted-foreground hover:text-primary">Privacy Policy</Link></li>
-                <li><Link to="/platform-terms" className="text-muted-foreground hover:text-primary">Platform Terms of Use</Link></li>
-                <li><Link to="/website-terms" className="text-muted-foreground hover:text-primary">Website Terms of Use</Link></li>
-                <li><a href="#" className="text-muted-foreground hover:text-primary">Support</a></li>
+                <li><Link to="/platform-terms" className="text-muted-foreground hover:text-primary">Platform Terms</Link></li>
+                <li><Link to="/website-terms" className="text-muted-foreground hover:text-primary">Website Terms</Link></li>
+                <li><Link to="/contact" className="text-muted-foreground hover:text-primary">Support</Link></li>
               </ul>
             </div>
           </div>

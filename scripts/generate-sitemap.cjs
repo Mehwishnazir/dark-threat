@@ -2,17 +2,28 @@
 const fs = require('fs');
 const path = require('path');
 
-const BASE_URL = 'https://www.darkthreat.ai';
+const BASE_URL = 'https://darkthreat.ai';
 const BLOGS_DIR = path.join(__dirname, '..', 'src', 'blogs');
+const BLOGS_INDEX = path.join(BLOGS_DIR, 'index.ts');
 const APP_TSX = path.join(__dirname, '..', 'src', 'App.tsx');
 const OUT = path.join(__dirname, '..', 'public', 'sitemap.xml');
 const TODAY = new Date().toISOString().slice(0, 10);
 
-// Routes to NEVER include (auth / app / private)
+// Routes to NEVER include (auth / app / private / redirect-only aliases)
 const EXCLUDE = new Set([
   '/signin', '/auth', '/forgot-password', '/dashboard', '/admin',
   '/alerts', '/reports', '/threat-intelligence', '/trial-coming-soon',
+  // Navigate aliases — do not list redirect sources in the sitemap
+  '/platform-terms-of-use',
+  '/website-terms-of-use',
+  '/digital-risk-protection',
+  '/industries/technology',
 ]);
+
+// Dynamic routes (e.g. /author/:slug) are skipped by extractStaticRoutes — list real URLs here.
+const EXTRA_STATIC = [
+  '/author/dr-ayaan-rahman',
+];
 
 // Extract static routes from App.tsx <Route path="..."> declarations.
 function extractStaticRoutes() {
@@ -49,14 +60,45 @@ function formatDate(raw) {
   return TODAY;
 }
 
+/** Slugs exported via allBlogs in blogs/index.ts (what the SPA can actually render). */
+function getRegisteredBlogSlugs() {
+  const indexSrc = fs.readFileSync(BLOGS_INDEX, 'utf8');
+  const importMap = new Map();
+  for (const m of indexSrc.matchAll(
+    /import\s+\{\s*([^}]+)\s*\}\s+from\s+["']\.\/([^"']+)["']/g
+  )) {
+    const names = m[1].split(',').map((s) => s.trim()).filter(Boolean);
+    const file = m[2].replace(/\.ts$/, '') + '.ts';
+    for (const n of names) importMap.set(n, file);
+  }
+  const arrayMatch = indexSrc.match(/export const allBlogs\s*=\s*\[([\s\S]*?)\];/);
+  if (!arrayMatch) throw new Error('allBlogs array not found in blogs/index.ts');
+  const names = [...arrayMatch[1].matchAll(/\b([A-Za-z_][A-Za-z0-9_]*)\b/g)].map((m) => m[1]);
+  const slugs = new Set();
+  for (const name of names) {
+    const file = importMap.get(name);
+    if (!file) continue;
+    const content = fs.readFileSync(path.join(BLOGS_DIR, file), 'utf8');
+    const slug = (content.match(/slug:\s*["']([^"']+)["']/) || [])[1];
+    if (slug) slugs.add(slug);
+  }
+  return slugs;
+}
+
 function collectBlogs() {
+  const registered = getRegisteredBlogSlugs();
   const entries = [];
+  let skipped = 0;
   const files = fs.readdirSync(BLOGS_DIR).filter(f => f.endsWith('.ts') && f !== 'index.ts');
   for (const file of files) {
     const content = fs.readFileSync(path.join(BLOGS_DIR, file), 'utf8');
     const slugMatch = content.match(/slug:\s*["']([^"']+)["']/);
     const dateMatch = content.match(/publishDate:\s*["']([^"']+)["']/);
     const slug = slugMatch ? slugMatch[1] : file.replace(/\.ts$/, '');
+    if (!registered.has(slug)) {
+      skipped += 1;
+      continue;
+    }
     entries.push({
       loc: `${BASE_URL}/blog/${slug}`,
       lastmod: formatDate(dateMatch && dateMatch[1]),
@@ -64,14 +106,14 @@ function collectBlogs() {
     });
   }
   entries.sort((a, b) => a.loc.localeCompare(b.loc));
-  return entries;
+  return { entries, skipped };
 }
 
 function build() {
-  const staticRoutes = extractStaticRoutes()
+  const staticRoutes = [...new Set([...extractStaticRoutes(), ...EXTRA_STATIC])]
     .sort()
     .map(r => ({ loc: `${BASE_URL}${r}`, lastmod: TODAY, priority: priorityFor(r) }));
-  const blogs = collectBlogs();
+  const { entries: blogs, skipped } = collectBlogs();
   const all = [...staticRoutes, ...blogs];
 
   let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
@@ -81,7 +123,9 @@ function build() {
   }
   xml += '</urlset>\n';
   fs.writeFileSync(OUT, xml, 'utf8');
-  console.log(`sitemap.xml: ${all.length} URLs (${staticRoutes.length} routes + ${blogs.length} blog posts)`);
+  console.log(
+    `sitemap.xml: ${all.length} URLs (${staticRoutes.length} routes + ${blogs.length} blog posts; skipped ${skipped} unregistered ghosts)`
+  );
 }
 
 build();

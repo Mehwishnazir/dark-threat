@@ -50,7 +50,7 @@ const faqSchema = {
       name: 'Why is Digital Risk Protection critical for businesses in New York?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Businesses in New York are increasingly targeted by cybercriminals due to the region\'s economic concentration. Digital Risk Protection provides early warning capabilities to detect threats before they escalate into major breaches.'
+        text: 'Under the amended NYDFS rules, covered financial institutions must implement Multi-Factor Authentication and a documented Asset Inventory Program. NYDFS has issued civil penalties as high as $2 million for non-compliance, and covered entities must report breaches within 72 hours. Digital Risk Protection helps New York organizations gain earlier visibility into external exposures that can escalate into reportable incidents.'
       }
     },
     {
@@ -122,7 +122,7 @@ export default function DigitalRiskProtectionNewYork() {
             Enterprise Digital Risk Protection for <span className="glow-text">New York</span>
           </h1>
           <p className="mx-auto max-w-3xl text-lg text-muted-foreground leading-relaxed">
-            Gain continuous visibility into external threats targeting your organization. From dark web data leaks to exposed employee credentials, DarkThreat provides actionable intelligence for businesses operating in New York.
+            New York’s NYDFS Cybersecurity Regulation (23 NYCRR Part 500)—one of the most aggressively enforced state cybersecurity mandates in the U.S.—had final amendments take effect November 1, 2025. DarkThreat helps New York organizations monitor digital risk, dark web exposures, and leaked credentials in an environment where regulatory and breach pressure is high.
           </p>
           <div className="mt-8 flex flex-wrap gap-4 justify-center">
             <Button className="hero-button" onClick={() => document.getElementById('regional-inquiry')?.scrollIntoView({ behavior: 'smooth' })}>
@@ -210,7 +210,7 @@ export default function DigitalRiskProtectionNewYork() {
           <div className="space-y-6">
             <div className="rounded-2xl border border-border bg-card/50 p-6">
               <h3 className="font-montserrat font-bold text-foreground mb-2">Why is Digital Risk Protection critical for businesses in New York?</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">Businesses in New York are increasingly targeted by cybercriminals due to the region's economic concentration. Digital Risk Protection provides early warning capabilities to detect threats before they escalate into major breaches.</p>
+              <p className="text-muted-foreground text-sm leading-relaxed">Under the amended NYDFS rules, covered financial institutions must implement Multi-Factor Authentication and a documented Asset Inventory Program. NYDFS has issued civil penalties as high as $2 million for non-compliance, and covered entities must report breaches within 72 hours. Digital Risk Protection helps New York organizations gain earlier visibility into external exposures that can escalate into reportable incidents.</p>
             </div>
             <div className="rounded-2xl border border-border bg-card/50 p-6">
               <h3 className="font-montserrat font-bold text-foreground mb-2">How quickly can DarkThreat detect a breach involving our New York operations?</h3>

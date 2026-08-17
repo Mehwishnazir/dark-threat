@@ -1,9 +1,7 @@
-import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Check, X, ArrowRight } from "lucide-react";
 import AppHeader from "@/components/AppHeader";
-import TrialModal from "@/components/TrialModal";
 import { Button } from "@/components/ui/button";
 
 export type ComparisonRow = {
@@ -48,7 +46,6 @@ export default function ComparisonPage({
   pricingNote,
   differentiators,
 }: ComparisonPageProps) {
-  const [isTrialModalOpen, setIsTrialModalOpen] = useState(false);
   const canonical = `https://www.darkthreat.ai/compare/${slug}`;
 
   return (
@@ -78,16 +75,9 @@ export default function ComparisonPage({
             {intro}
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Button
-              onClick={() => setIsTrialModalOpen(true)}
-              className="hero-button text-base px-8 py-6 inline-flex items-center gap-2 min-h-[44px]"
-            >
-              Start Free Trial <ArrowRight className="w-4 h-4" />
-            </Button>
             <Link to="/pricing">
               <Button
-                variant="outline"
-                className="text-base px-8 py-6 min-h-[44px]"
+                className="hero-button text-base px-8 py-6 min-h-[44px]"
               >
                 See Pricing
               </Button>
@@ -168,22 +158,18 @@ export default function ComparisonPage({
               See DarkThreat for yourself
             </h2>
             <p className="text-muted-foreground mb-8">
-              Start a 7-day free trial. No credit card required.
+              Schedule a demo to walk through the platform with our team.
             </p>
-            <Button
-              onClick={() => setIsTrialModalOpen(true)}
-              className="hero-button text-base px-8 py-6 inline-flex items-center gap-2 min-h-[44px]"
-            >
-              Start Free Trial <ArrowRight className="w-4 h-4" />
-            </Button>
+            <Link to="/contact">
+              <Button
+                className="hero-button text-base px-8 py-6 inline-flex items-center gap-2 min-h-[44px]"
+              >
+                Schedule a Demo <ArrowRight className="w-4 h-4" />
+              </Button>
+            </Link>
           </div>
         </section>
       </main>
-
-      <TrialModal
-        isOpen={isTrialModalOpen}
-        onClose={() => setIsTrialModalOpen(false)}
-      />
     </div>
   );
 }

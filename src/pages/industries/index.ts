@@ -5,3 +5,6 @@ export { default as LegalIndustry } from './LegalIndustry';
 export { default as GovernmentIndustry } from './GovernmentIndustry';
 export { default as EcommerceIndustry } from './EcommerceIndustry';
 export { default as SaasTechnologyIndustry } from './SaasTechnologyIndustry';
+export { default as CryptoFintechIndustry } from './CryptoFintechIndustry';
+export { default as EducationIndustry } from './EducationIndustry';
+export { default as ProfessionalServicesIndustry } from './ProfessionalServicesIndustry';

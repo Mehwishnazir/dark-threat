@@ -20,7 +20,9 @@
    ============================================================================= */
 
 /* ── BASE ───────────────────────────────────────────────────────────────────── */
-html { scroll-behavior: smooth; }
+/* Scoped to blog routes only (class toggled by Blog / BlogPost). Never set on bare
+   `html` — that leaked into SPA navigations and slowed scroll-to-top sitewide. */
+html.blog-smooth-scroll { scroll-behavior: smooth; }
 .blog-post-container { background: hsl(var(--background)); min-height: 100vh; }
 
 /* ── READING PROGRESS BAR ───────────────────────────────────────────────────── */

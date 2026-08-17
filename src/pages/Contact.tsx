@@ -3,6 +3,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent } from '@/components/ui/card';
+import { Alert, AlertDescription } from '@/components/ui/alert';
 import {
   Mail,
   Phone,
@@ -23,7 +24,6 @@ import { Link } from 'react-router-dom';
 import { useState, Suspense } from 'react';
 import { Helmet } from 'react-helmet-async';
 import AppHeader from '@/components/AppHeader';
-import TrialModal from '@/components/TrialModal';
 import { useToast } from '@/components/ui/use-toast';
 import Breadcrumb from '@/components/Breadcrumb';
 import AnimatedBackground from '@/components/AnimatedBackground';
@@ -32,8 +32,8 @@ import FinalCTA from '@/components/FinalCTA';
 import { submitLeadForm } from '@/utils/formSubmit';
 
 const Contact = () => {
-  const [isTrialModalOpen, setIsTrialModalOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formError, setFormError] = useState('');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -47,25 +47,44 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setFormError('');
+
+    const name = formData.name.trim();
+    const email = formData.email.trim();
+    const message = formData.message.trim();
+
+    if (!name || !email || !message) {
+      setFormError('Please fill in all required fields.');
+      return;
+    }
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setFormError('Please enter a valid email address.');
+      return;
+    }
+
     setIsSubmitting(true);
     try {
       await submitLeadForm({
         formType: 'Contact Us Form',
-        name: formData.name,
-        email: formData.email,
+        name,
+        email,
         company: formData.company,
         interest: formData.interest,
-        message: formData.message,
+        message,
       });
       toast({
         title: "Message Sent Successfully",
         description: "Thank you for contacting DarkThreat's Threat Operations Center. We will respond within 24 hours.",
       });
       setFormData({ name: '', email: '', company: '', interest: 'Dark Web Monitoring', message: '' });
+      setFormError('');
     } catch (err) {
+      const failureMessage = "There was an error sending your message. Please try again or contact us directly.";
+      setFormError(failureMessage);
       toast({
         title: "Submission Failed",
-        description: "There was an error sending your message. Please try again or contact us directly.",
+        description: failureMessage,
         variant: "destructive",
       });
     } finally {
@@ -252,7 +271,7 @@ const Contact = () => {
               <h2 className="text-2xl md:text-3xl font-montserrat font-bold text-foreground mb-6 flex items-center gap-2">
                 <Send className="w-6 h-6 text-primary" /> Send a Message
               </h2>
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} noValidate className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <Label htmlFor="name" className="text-sm font-semibold text-foreground">Name *</Label>
@@ -262,6 +281,7 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
+                      aria-invalid={!!formError}
                       placeholder="Jane Doe"
                       className="mt-2 bg-background/50 border-border focus:ring-primary/50 focus:border-primary"
                     />
@@ -275,6 +295,7 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
+                      aria-invalid={!!formError}
                       placeholder="jane@company.com"
                       className="mt-2 bg-background/50 border-border focus:ring-primary/50 focus:border-primary"
                     />
@@ -319,11 +340,19 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     required
+                    aria-invalid={!!formError}
                     rows={5}
                     placeholder="How can our threat intelligence team help you?"
                     className="mt-2 bg-background/50 border-border focus:ring-primary/50 focus:border-primary"
                   />
                 </div>
+
+                {formError && (
+                  <Alert variant="destructive">
+                    <AlertCircle className="h-4 w-4" />
+                    <AlertDescription>{formError}</AlertDescription>
+                  </Alert>
+                )}
                 
                 <Button type="submit" className="hero-button w-full" disabled={isSubmitting}>
                   {isSubmitting ? 'Sending Secure Message...' : 'Send Secure Message'}
@@ -357,7 +386,9 @@ const Contact = () => {
                     <div>
                       <h3 className="font-montserrat font-bold text-foreground mb-1">Enterprise Threat Advisory</h3>
                       <p className="text-muted-foreground text-sm">Call us directly to set up custom domains or MSSP licensing</p>
-                      <p className="text-primary font-semibold mt-2 text-sm">+1 (416) 576-8744-DARK</p>
+                      <a href="tel:+1(416)5768744" className="text-primary font-semibold mt-2 text-sm hover:underline">
+                        +1 (416) 576-8744
+                      </a>
                     </div>
                   </div>
                 </CardContent>
@@ -407,7 +438,7 @@ const Contact = () => {
                   href="tel:+1(416)5768744"
                   className="inline-flex items-center justify-center rounded-xl bg-amber-500 hover:bg-amber-600 px-6 py-3 text-sm font-bold text-black transition-colors"
                 >
-                  Call Incident Dispatch:+1 (416) 576-8744-DARK
+                  Call Incident Dispatch: +1 (416) 576-8744
                 </a>
                 <span className="text-sm text-muted-foreground">or email secure hotline: <a href="mailto:info@darkthreat.ai" className="text-primary hover:underline font-semibold">info@darkthreat.ai</a></span>
               </div>
@@ -468,11 +499,6 @@ const Contact = () => {
       {/* SECTION 7: Final CTA */}
       <FinalCTA />
 
-      <TrialModal
-        isOpen={isTrialModalOpen}
-        onClose={() => setIsTrialModalOpen(false)}
-      />
-
       {/* Footer */}
       <footer className="relative bg-card border-t border-border py-12 z-10">
         <div className="max-w-6xl mx-auto px-6">
@@ -486,14 +512,14 @@ const Contact = () => {
                 DarkThreat is an AI-powered <span className="font-semibold text-foreground">dark web monitoring service</span> and <span className="font-semibold text-foreground">threat intelligence platform</span> protecting enterprises from credential leaks, ransomware targeting, data breaches, and external cyber threats. Our 24/7 monitoring engine indexes 2M+ underground sources to deliver real-time alerts before attacks occur.
               </p>
               <div className="flex space-x-4">
-                <a href="https://twitter.com/DarkThreatAI" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                  <Twitter className="w-5 h-5" />
+                <a href="https://twitter.com/DarkThreatAI" target="_blank" rel="noopener noreferrer" aria-label="Twitter" title="Twitter" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Twitter className="w-5 h-5" aria-hidden="true" />
                 </a>
-                <a href="https://linkedin.com/company/darkthreat" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                  <Linkedin className="w-5 h-5" />
+                <a href="https://linkedin.com/company/darkthreat" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Linkedin className="w-5 h-5" aria-hidden="true" />
                 </a>
-                <a href="https://github.com/darkthreat" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                  <Github className="w-5 h-5" />
+                <a href="https://github.com/darkthreat" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Github className="w-5 h-5" aria-hidden="true" />
                 </a>
               </div>
             </div>
@@ -503,7 +529,7 @@ const Contact = () => {
                 <li><Link to="/dark-web-monitoring" className="text-muted-foreground hover:text-primary">Dark Web Monitoring Service</Link></li>
                 <li><Link to="/credential-leak-detection" className="text-muted-foreground hover:text-primary">Credential Leak Detection</Link></li>
                 <li><Link to="/data-leak-detection" className="text-muted-foreground hover:text-primary">Data Leak Detection</Link></li>
-                <li><Link to="/solution" className="text-muted-foreground hover:text-primary">Threat Intelligence Platform</Link></li>
+                <li><Link to="/threat-intelligence-platform" className="text-muted-foreground hover:text-primary">Threat Intelligence Platform</Link></li>
                 <li><Link to="/compare/darkthreat-vs-darkowl" className="text-muted-foreground hover:text-primary">DarkThreat vs DarkOwl</Link></li>
               </ul>
             </div>
@@ -513,6 +539,7 @@ const Contact = () => {
                 <li><Link to="/" className="text-muted-foreground hover:text-primary">Home</Link></li>
                 <li><Link to="/solution" className="text-muted-foreground hover:text-primary">Solution</Link></li>
                 <li><Link to="/pricing" className="text-muted-foreground hover:text-primary">Pricing</Link></li>
+                <li><Link to="/blog" className="text-muted-foreground hover:text-primary">Blog</Link></li>
                 <li><Link to="/about" className="text-muted-foreground hover:text-primary">About</Link></li>
                 <li><Link to="/contact" className="text-muted-foreground hover:text-primary">Contact</Link></li>
               </ul>
@@ -521,8 +548,9 @@ const Contact = () => {
               <h3 className="font-montserrat font-semibold text-foreground mb-4">Legal</h3>
               <ul className="space-y-2">
                 <li><Link to="/privacy-policy" className="text-muted-foreground hover:text-primary">Privacy Policy</Link></li>
-                <li><Link to="/platform-terms" className="text-muted-foreground hover:text-primary">Platform Terms of Use</Link></li>
-                <li><Link to="/website-terms" className="text-muted-foreground hover:text-primary">Website Terms of Use</Link></li>
+                <li><Link to="/platform-terms" className="text-muted-foreground hover:text-primary">Platform Terms</Link></li>
+                <li><Link to="/website-terms" className="text-muted-foreground hover:text-primary">Website Terms</Link></li>
+                <li><Link to="/contact" className="text-muted-foreground hover:text-primary">Support</Link></li>
               </ul>
             </div>
           </div>

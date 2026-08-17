@@ -36,7 +36,15 @@ export default function CookieConsent() {
   const openPrefs = useCallback((existing?: Prefs) => {
     setPrefs(existing ?? DEFAULT_PREFS);
     setPrefsOpen(true);
+    setBannerVisible(false);
   }, []);
+
+  const handlePrefsOpenChange = (open: boolean) => {
+    setPrefsOpen(open);
+    if (!open && !getStoredConsent()) {
+      setBannerVisible(true);
+    }
+  };
 
   useEffect(() => {
     const stored = getStoredConsent();
@@ -157,7 +165,7 @@ export default function CookieConsent() {
         </div>
       )}
 
-      <Dialog open={prefsOpen} onOpenChange={setPrefsOpen}>
+      <Dialog open={prefsOpen} onOpenChange={handlePrefsOpenChange}>
         <DialogContent className="max-w-lg">
           <DialogHeader>
             <DialogTitle className="flex items-center gap-2">

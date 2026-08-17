@@ -63,12 +63,6 @@ const TrialComingSoon = () => {
             <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">
               Contact
             </Link>
-            <Button 
-              onClick={() => window.open('/trial-coming-soon', '_blank')}
-              className="hero-button"
-            >
-              Start Free Trial
-            </Button>
           </nav>
         </div>
       </header>
@@ -174,41 +168,45 @@ const TrialComingSoon = () => {
                 Advanced dark web monitoring and threat intelligence platform protecting your organization 24/7.
               </p>
               <div className="flex space-x-4">
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                  <Linkedin className="w-5 h-5" />
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Linkedin className="w-5 h-5" aria-hidden="true" />
                 </a>
-                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                  <Twitter className="w-5 h-5" />
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter" title="Twitter" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Twitter className="w-5 h-5" aria-hidden="true" />
                 </a>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                  <Github className="w-5 h-5" />
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Github className="w-5 h-5" aria-hidden="true" />
                 </a>
               </div>
             </div>
             <div>
               <h3 className="font-montserrat font-semibold text-foreground mb-4">Solutions</h3>
               <ul className="space-y-2">
-                <li><Link to="/dark-web-monitoring" className="text-muted-foreground hover:text-primary">Dark Web Monitoring</Link></li>
+                <li><Link to="/dark-web-monitoring" className="text-muted-foreground hover:text-primary">Dark Web Monitoring Service</Link></li>
                 <li><Link to="/credential-leak-detection" className="text-muted-foreground hover:text-primary">Credential Leak Detection</Link></li>
                 <li><Link to="/data-leak-detection" className="text-muted-foreground hover:text-primary">Data Leak Detection</Link></li>
-                <li><Link to="/compare/darkthreat-vs-darkowl" className="text-muted-foreground hover:text-primary">vs DarkOwl</Link></li>
+                <li><Link to="/threat-intelligence-platform" className="text-muted-foreground hover:text-primary">Threat Intelligence Platform</Link></li>
+                <li><Link to="/compare/darkthreat-vs-darkowl" className="text-muted-foreground hover:text-primary">DarkThreat vs DarkOwl</Link></li>
               </ul>
             </div>
             <div>
               <h3 className="font-montserrat font-semibold text-foreground mb-4">Platform</h3>
               <ul className="space-y-2">
-                <li><Link to="/data-leak-detection" className="text-muted-foreground hover:text-primary">Data Leak Detection</Link></li>
+                <li><Link to="/" className="text-muted-foreground hover:text-primary">Home</Link></li>
+                <li><Link to="/solution" className="text-muted-foreground hover:text-primary">Solution</Link></li>
                 <li><Link to="/pricing" className="text-muted-foreground hover:text-primary">Pricing</Link></li>
-                <li><Link to="/signin" className="text-muted-foreground hover:text-primary">Sign In</Link></li>
+                <li><Link to="/blog" className="text-muted-foreground hover:text-primary">Blog</Link></li>
+                <li><Link to="/about" className="text-muted-foreground hover:text-primary">About</Link></li>
+                <li><Link to="/contact" className="text-muted-foreground hover:text-primary">Contact</Link></li>
               </ul>
             </div>
             <div>
               <h3 className="font-montserrat font-semibold text-foreground mb-4">Legal</h3>
               <ul className="space-y-2">
                 <li><Link to="/privacy-policy" className="text-muted-foreground hover:text-primary">Privacy Policy</Link></li>
-                <li><Link to="/platform-terms" className="text-muted-foreground hover:text-primary">Platform Terms of Use</Link></li>
-                <li><Link to="/website-terms" className="text-muted-foreground hover:text-primary">Website Terms of Use</Link></li>
-                <li><a href="#" className="text-muted-foreground hover:text-primary">Support</a></li>
+                <li><Link to="/platform-terms" className="text-muted-foreground hover:text-primary">Platform Terms</Link></li>
+                <li><Link to="/website-terms" className="text-muted-foreground hover:text-primary">Website Terms</Link></li>
+                <li><Link to="/contact" className="text-muted-foreground hover:text-primary">Support</Link></li>
               </ul>
             </div>
           </div>

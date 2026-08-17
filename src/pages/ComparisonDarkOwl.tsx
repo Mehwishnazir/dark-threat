@@ -52,8 +52,8 @@ const ComparisonDarkOwl = () => {
           <p className="text-lg md:text-xl text-muted-foreground mb-8">
             Transparent pricing, instant onboarding, and AI-curated alerts — without the enterprise sales cycle.
           </p>
-          <Button onClick={() => (window.location.href = '/auth')} className="cta-cyan inline-flex items-center gap-2">
-            Start Free Trial <ArrowRight className="w-4 h-4" />
+          <Button asChild className="cta-cyan inline-flex items-center gap-2">
+            <Link to="/contact">Book Demo <ArrowRight className="w-4 h-4" /></Link>
           </Button>
         </div>
       </section>

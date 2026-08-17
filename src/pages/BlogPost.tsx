@@ -26,7 +26,6 @@ const BlogPost = () => {
 
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [copied, setCopied] = useState(false);
-  const [isTrialModalOpen, setIsTrialModalOpen] = useState(false);
 
   const post = allBlogs.find((p) => p.slug === slug);
   const sameCategory = post
@@ -40,6 +39,11 @@ const BlogPost = () => {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" });
   }, [slug]);
+
+  useEffect(() => {
+    document.documentElement.classList.add("blog-smooth-scroll");
+    return () => document.documentElement.classList.remove("blog-smooth-scroll");
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => setShowScrollTop(window.scrollY > 500);
@@ -196,14 +200,14 @@ const BlogPost = () => {
                 protecting your organization 24/7.
               </p>
               <div className="flex space-x-4">
-                <a href="https://twitter.com/DarkThreatAI" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                  <Twitter className="w-5 h-5" />
+                <a href="https://twitter.com/DarkThreatAI" target="_blank" rel="noopener noreferrer" aria-label="Twitter" title="Twitter" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Twitter className="w-5 h-5" aria-hidden="true" />
                 </a>
-                <a href="https://linkedin.com/company/darkthreat" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                  <Linkedin className="w-5 h-5" />
+                <a href="https://linkedin.com/company/darkthreat" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Linkedin className="w-5 h-5" aria-hidden="true" />
                 </a>
-                <a href="https://github.com/darkthreat" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                  <Github className="w-5 h-5" />
+                <a href="https://github.com/darkthreat" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Github className="w-5 h-5" aria-hidden="true" />
                 </a>
               </div>
             </div>
@@ -211,10 +215,11 @@ const BlogPost = () => {
             <div>
               <h3 className="font-montserrat font-semibold mb-4">Solutions</h3>
               <ul className="space-y-2">
-                <li><Link to="/dark-web-monitoring" className="text-muted-foreground hover:text-primary">Dark Web Monitoring</Link></li>
+                <li><Link to="/dark-web-monitoring" className="text-muted-foreground hover:text-primary">Dark Web Monitoring Service</Link></li>
                 <li><Link to="/credential-leak-detection" className="text-muted-foreground hover:text-primary">Credential Leak Detection</Link></li>
                 <li><Link to="/data-leak-detection" className="text-muted-foreground hover:text-primary">Data Leak Detection</Link></li>
-                <li><Link to="/compare/darkthreat-vs-darkowl" className="text-muted-foreground hover:text-primary">vs DarkOwl</Link></li>
+                <li><Link to="/threat-intelligence-platform" className="text-muted-foreground hover:text-primary">Threat Intelligence Platform</Link></li>
+                <li><Link to="/compare/darkthreat-vs-darkowl" className="text-muted-foreground hover:text-primary">DarkThreat vs DarkOwl</Link></li>
               </ul>
             </div>
             <div>
@@ -223,6 +228,7 @@ const BlogPost = () => {
                 <li><Link to="/" className="text-muted-foreground hover:text-primary">Home</Link></li>
                 <li><Link to="/solution" className="text-muted-foreground hover:text-primary">Solution</Link></li>
                 <li><Link to="/pricing" className="text-muted-foreground hover:text-primary">Pricing</Link></li>
+                <li><Link to="/blog" className="text-muted-foreground hover:text-primary">Blog</Link></li>
                 <li><Link to="/about" className="text-muted-foreground hover:text-primary">About</Link></li>
                 <li><Link to="/contact" className="text-muted-foreground hover:text-primary">Contact</Link></li>
               </ul>
@@ -234,6 +240,7 @@ const BlogPost = () => {
                 <li><Link to="/privacy-policy" className="text-muted-foreground hover:text-primary">Privacy Policy</Link></li>
                 <li><Link to="/platform-terms" className="text-muted-foreground hover:text-primary">Platform Terms</Link></li>
                 <li><Link to="/website-terms" className="text-muted-foreground hover:text-primary">Website Terms</Link></li>
+                <li><Link to="/contact" className="text-muted-foreground hover:text-primary">Support</Link></li>
               </ul>
             </div>
           </div>

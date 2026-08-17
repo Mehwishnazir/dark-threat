@@ -50,7 +50,7 @@ const faqSchema = {
       name: 'Why is Credential Monitoring critical for businesses in San Francisco?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Businesses in San Francisco are increasingly targeted by cybercriminals due to the region\'s economic concentration. Credential Monitoring provides early warning capabilities to detect threats before they escalate into major breaches.'
+        text: 'The Prosper breach was caused by compromised administrative credentials and cloud misconfiguration. The incident is under regulatory review by the CFPB and multi-state Attorneys General, with multiple class-action lawsuits filed. Credential Monitoring helps San Francisco organizations surface leaked logins and related underground activity early—before exposure becomes a large-scale notification and compliance event.'
       }
     },
     {
@@ -122,7 +122,7 @@ export default function CredentialMonitoringSanFrancisco() {
             Enterprise Credential Monitoring for <span className="glow-text">San Francisco</span>
           </h1>
           <p className="mx-auto max-w-3xl text-lg text-muted-foreground leading-relaxed">
-            Gain continuous visibility into external threats targeting your organization. From dark web data leaks to exposed employee credentials, DarkThreat provides actionable intelligence for businesses operating in San Francisco.
+            In September 2025, San Francisco–based Prosper Marketplace suffered a breach that exposed 17.6 million sensitive PII records—the largest single data breach of 2025 by record count. DarkThreat helps San Francisco organizations monitor dark web data leaks and exposed credentials so they can detect and respond before an incident scales.
           </p>
           <div className="mt-8 flex flex-wrap gap-4 justify-center">
             <Button className="hero-button" onClick={() => document.getElementById('regional-inquiry')?.scrollIntoView({ behavior: 'smooth' })}>
@@ -210,7 +210,7 @@ export default function CredentialMonitoringSanFrancisco() {
           <div className="space-y-6">
             <div className="rounded-2xl border border-border bg-card/50 p-6">
               <h3 className="font-montserrat font-bold text-foreground mb-2">Why is Credential Monitoring critical for businesses in San Francisco?</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">Businesses in San Francisco are increasingly targeted by cybercriminals due to the region's economic concentration. Credential Monitoring provides early warning capabilities to detect threats before they escalate into major breaches.</p>
+              <p className="text-muted-foreground text-sm leading-relaxed">The Prosper breach was caused by compromised administrative credentials and cloud misconfiguration. The incident is under regulatory review by the CFPB and multi-state Attorneys General, with multiple class-action lawsuits filed. Credential Monitoring helps San Francisco organizations surface leaked logins and related underground activity early—before exposure becomes a large-scale notification and compliance event.</p>
             </div>
             <div className="rounded-2xl border border-border bg-card/50 p-6">
               <h3 className="font-montserrat font-bold text-foreground mb-2">How quickly can DarkThreat detect a breach involving our San Francisco operations?</h3>

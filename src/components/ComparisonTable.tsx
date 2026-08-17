@@ -16,17 +16,17 @@ export default function ComparisonTable() {
     },
     {
       feature: 'Human Analyst Enrichment',
-      darkThreat: '6-person analyst team validates & enriches critical alerts',
+      darkThreat: '6-person analyst team validates & enriches critical alerts (MSSP / custom)',
       traditional: 'Optional add-on, often delayed'
     },
     {
       feature: 'Search Credits & API',
-      darkThreat: 'Granular "search credit" model + full JSON/CSV API access',
+      darkThreat: 'Granular "search credit" model + full JSON/CSV API access (MSSP)',
       traditional: 'Pay-per-report or flat API plans'
     },
     {
       feature: 'Customization & White-Label',
-      darkThreat: 'Full CSS/theme overrides, custom domains, white-label portal',
+      darkThreat: 'Full CSS/theme overrides, custom domains, white-label portal (MSSP)',
       traditional: 'Rare; typically fixed-brand dashboards'
     },
     {
@@ -36,7 +36,7 @@ export default function ComparisonTable() {
     },
     {
       feature: 'Dark Web Risk Scoring',
-      darkThreat: 'Organizational risk dashboard + IASM/ORS heatmaps',
+      darkThreat: 'Organizational risk dashboard + IASM/ORS heatmaps (not on Standard — contact sales)',
       traditional: 'No unified risk scoring; separate tools required'
     }
   ];

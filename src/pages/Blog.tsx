@@ -1,4 +1,4 @@
-import { useState, useMemo, Suspense } from 'react';
+import { useState, useMemo, Suspense, useEffect } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Shield, Linkedin, Twitter, Github, Search, Calendar, Clock, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
@@ -23,9 +23,6 @@ const FALLBACK_IMAGE = '/dark-threat-1.webp';
 const categories = [
   'All Blogs',
   'Threat Intelligence',
-  'Security',
-  'Research',
-  'Best Practices',
   'Cybersecurity',
 ];
 
@@ -36,6 +33,11 @@ const Blog = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All Blogs');
   const page = Math.max(1, parseInt(searchParams.get('page') || '1', 10) || 1);
+
+  useEffect(() => {
+    document.documentElement.classList.add('blog-smooth-scroll');
+    return () => document.documentElement.classList.remove('blog-smooth-scroll');
+  }, []);
 
   const blogCollectionSchema = {
     '@context': 'https://schema.org',
@@ -301,14 +303,14 @@ const Blog = () => {
           </div>
 
           <div className="blog-listing-footer__socials">
-            <a href="https://linkedin.com/company/darkthreat" target="_blank" rel="noopener noreferrer">
-              <Linkedin className="blog-listing-footer__social-icon" />
+            <a href="https://linkedin.com/company/darkthreat" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
+              <Linkedin className="blog-listing-footer__social-icon" aria-hidden="true" />
             </a>
-            <a href="https://twitter.com/DarkThreatAI" target="_blank" rel="noopener noreferrer">
-              <Twitter className="blog-listing-footer__social-icon" />
+            <a href="https://twitter.com/DarkThreatAI" target="_blank" rel="noopener noreferrer" aria-label="Twitter" title="Twitter">
+              <Twitter className="blog-listing-footer__social-icon" aria-hidden="true" />
             </a>
-            <a href="https://github.com/darkthreat" target="_blank" rel="noopener noreferrer">
-              <Github className="blog-listing-footer__social-icon" />
+            <a href="https://github.com/darkthreat" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
+              <Github className="blog-listing-footer__social-icon" aria-hidden="true" />
             </a>
           </div>
 

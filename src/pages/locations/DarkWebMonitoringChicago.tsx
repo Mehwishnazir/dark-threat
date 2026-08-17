@@ -50,7 +50,7 @@ const faqSchema = {
       name: 'Why is Dark Web Monitoring critical for businesses in Chicago?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Businesses in Chicago are increasingly targeted by cybercriminals due to the region\'s economic concentration. Dark Web Monitoring provides early warning capabilities to detect threats before they escalate into major breaches.'
+        text: 'Illinois recorded 32,977 cybercrime complaints in 2025, with losses rising from $479 million the prior year to $535 million. An FBI Chicago field-office supervisory special agent noted that the state\'s high population and uneven cybersecurity practices contribute to that ranking. Dark Web Monitoring gives Chicago organizations earlier visibility into leaked credentials and underground activity tied to their operations.'
       }
     },
     {
@@ -122,7 +122,7 @@ export default function DarkWebMonitoringChicago() {
             Enterprise Dark Web Monitoring for <span className="glow-text">Chicago</span>
           </h1>
           <p className="mx-auto max-w-3xl text-lg text-muted-foreground leading-relaxed">
-            Gain continuous visibility into external threats targeting your organization. From dark web data leaks to exposed employee credentials, DarkThreat provides actionable intelligence for businesses operating in Chicago.
+            Illinois cybercrime losses reached $535 million in 2025, and the state ranked 5th nationally for complaints in the FBI’s 2025 Internet Crime Report. DarkThreat helps Chicago organizations monitor dark web data leaks and exposed employee credentials so they can detect and respond before losses escalate.
           </p>
           <div className="mt-8 flex flex-wrap gap-4 justify-center">
             <Button className="hero-button" onClick={() => document.getElementById('regional-inquiry')?.scrollIntoView({ behavior: 'smooth' })}>
@@ -210,7 +210,7 @@ export default function DarkWebMonitoringChicago() {
           <div className="space-y-6">
             <div className="rounded-2xl border border-border bg-card/50 p-6">
               <h3 className="font-montserrat font-bold text-foreground mb-2">Why is Dark Web Monitoring critical for businesses in Chicago?</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">Businesses in Chicago are increasingly targeted by cybercriminals due to the region's economic concentration. Dark Web Monitoring provides early warning capabilities to detect threats before they escalate into major breaches.</p>
+              <p className="text-muted-foreground text-sm leading-relaxed">Illinois recorded 32,977 cybercrime complaints in 2025, with losses rising from $479 million the prior year to $535 million. An FBI Chicago field-office supervisory special agent noted that the state's high population and uneven cybersecurity practices contribute to that ranking. Dark Web Monitoring gives Chicago organizations earlier visibility into leaked credentials and underground activity tied to their operations.</p>
             </div>
             <div className="rounded-2xl border border-border bg-card/50 p-6">
               <h3 className="font-montserrat font-bold text-foreground mb-2">How quickly can DarkThreat detect a breach involving our Chicago operations?</h3>

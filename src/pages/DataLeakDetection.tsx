@@ -178,8 +178,11 @@ const DataLeakDetection = () => {
           <p className="text-lg text-muted-foreground mb-8">
             Be Proactive against threats.
           </p>
-          <Button className="hero-button text-lg px-8 py-4">
-            Start Free Trial
+          <Button
+            asChild
+            className="hero-button text-lg px-8 py-4"
+          >
+            <Link to="/contact">Book Demo</Link>
           </Button>
         </div>
       </section>

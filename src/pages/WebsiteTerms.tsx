@@ -10,6 +10,11 @@ export default function WebsiteTerms() {
           <span>Back to Home</span>
         </Link>
 
+        <nav className="flex flex-wrap gap-x-4 gap-y-2 text-sm text-muted-foreground mb-8" aria-label="Related legal documents">
+          <Link to="/privacy-policy" className="hover:text-primary">Privacy Policy</Link>
+          <Link to="/platform-terms" className="hover:text-primary">Platform Terms of Use</Link>
+        </nav>
+
         <div className="space-y-8">
           <div>
             <h1 className="text-4xl font-montserrat font-bold text-foreground mb-4">Website Terms of Use</h1>
@@ -70,6 +75,21 @@ export default function WebsiteTerms() {
                 an updated "last modified" date. Your continued use of the website constitutes acceptance of the 
                 revised terms.
               </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-montserrat font-semibold text-foreground mb-4">Contact Information</h2>
+              <div className="space-y-4 text-foreground/90 leading-relaxed">
+                <p>
+                  For any questions, concerns, or clarifications about these Website Terms of Use, you can contact DarkThreat.ai support. The support team is available to provide clear guidance and answer inquiries about these terms.
+                </p>
+                <p>
+                  You can reach out via email at:{' '}
+                  <a href="mailto:support@darkthreat.ai" className="text-primary hover:text-primary/80">
+                    support@darkthreat.ai
+                  </a>
+                </p>
+              </div>
             </section>
           </div>
         </div>

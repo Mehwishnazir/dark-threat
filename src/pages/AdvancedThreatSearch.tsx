@@ -1,8 +1,9 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Shield, Trash2, Globe, AlertTriangle, CheckCircle, ArrowRight } from 'lucide-react';
-import AppHeader from '@/components/AppHeader';
 import { Button } from '@/components/ui/button';
+import { Search, Database, Eye, CheckCircle, XCircle, ArrowRight, Shield } from 'lucide-react';
+import AppHeader from '@/components/AppHeader';
+import FinalCTA from '@/components/FinalCTA';
 import {
   Accordion,
   AccordionContent,
@@ -15,28 +16,24 @@ import { submitLeadForm } from '@/utils/formSubmit';
 
 const faqs = [
   {
-    q: 'What kinds of dark web content can DarkThreat remove?',
-    a: 'DarkThreat targets exposed credentials, leaked documents, private keys, compromised account data, and market listings on underground forums, marketplaces, paste sites, and malware dump feeds.',
+    q: 'What can I search with Advanced Threat Search?',
+    a: "Security teams can query threat actor personas, leaks, and historical breach data across DarkThreat's indexed corpus of 2M+ live sources.",
   },
   {
-    q: 'How does the removal process work for underground listings?',
-    a: 'We verify the exposure, prioritize the riskiest listings, submit takedown requests or operator contacts, and then continue monitoring for reposts or related exposures.',
+    q: 'What sources are indexed?',
+    a: 'Coverage includes onion sites, dark web forums, ransomware leak sites, Telegram and Discord channels, paste sites, and infostealer distribution channels.',
   },
   {
-    q: 'Can you remove data that has already been copied or resold?',
-    a: 'We focus on eliminating active listings and reducing reuse. While copies may still exist, our ongoing coverage greatly limits the window in which attackers can find and use exposed assets.',
+    q: 'Is this only real-time alerts, or can I look back?',
+    a: 'Signals are archived, enriched, and searchable — providing a historical threat intelligence record for forensic investigation and reporting.',
   },
   {
-    q: 'How quickly can my leaked data be taken down?',
-    a: 'Response time depends on source and operator cooperation, but priority removals are typically completed within hours to a few days, with continuous review afterward.',
-  },
-  {
-    q: 'Does the service include monitoring after removal?',
-    a: 'Yes. DarkThreat keeps tracking the dark web for reappearances and follows up on removed listings so your exposure stays contained over time.',
+    q: 'How does this relate to monitoring and threat intelligence?',
+    a: 'Monitoring and enrichment feed the index; Advanced Threat Search is how teams query that corpus for personas, leaks, and historical breach data on demand.',
   },
 ];
 
-const DarkWebDataRemoval = () => {
+const AdvancedThreatSearch = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -68,7 +65,7 @@ const DarkWebDataRemoval = () => {
     setIsSubmitting(true);
     try {
       await submitLeadForm({
-        formType: 'Free Assessment (Dark Web Data Removal)',
+        formType: 'Free Assessment (Advanced Threat Search)',
         name: formData.name,
         email: formData.email,
         company: formData.company,
@@ -98,24 +95,61 @@ const DarkWebDataRemoval = () => {
       setIsSubmitting(false);
     }
   };
+
+  const serviceJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    'serviceType': 'Advanced Threat Search',
+    'name': 'DarkThreat Advanced Threat Search',
+    'provider': {
+      '@type': 'Organization',
+      'name': 'DarkThreat',
+      'url': 'https://darkthreat.ai',
+      'logo': 'https://darkthreat.ai/logo.png'
+    },
+    'areaServed': 'Global',
+    'description': 'Search indexing over 2 million live sources, allowing security teams to query threat actor personas, leaks, and historical breach data.',
+    'url': 'https://darkthreat.ai/advanced-threat-search'
+  };
+
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Dark Web Data Removal | DarkThreat.ai</title>
+        <title>Advanced Threat Search | DarkThreat</title>
         <meta
           name="description"
-          content="DarkThreat's Dark Web Data Removal service finds and removes leaked company data from underground marketplaces, hacker forums, and paste sites before it is weaponized."
+          content="Search indexing over 2 million live sources, allowing security teams to query threat actor personas, leaks, and historical breach data."
         />
-        <link rel="canonical" href="https://darkthreat.ai/dark-web-data-removal" />
-        <script type="application/ld+json">{JSON.stringify({
-          '@context': 'https://schema.org',
-          '@type': 'FAQPage',
-          mainEntity: faqs.map((f) => ({
-            '@type': 'Question',
-            name: f.q,
-            acceptedAnswer: { '@type': 'Answer', text: f.a },
-          })),
-        })}</script>
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://darkthreat.ai/advanced-threat-search" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Advanced Threat Search | DarkThreat" />
+        <meta property="og:description" content="Search indexing over 2 million live sources, allowing security teams to query threat actor personas, leaks, and historical breach data." />
+        <meta property="og:url" content="https://darkthreat.ai/advanced-threat-search" />
+        <meta property="og:image" content="https://darkthreat.ai/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="DarkThreat" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@DarkThreatAI" />
+        <meta name="twitter:title" content="Advanced Threat Search | DarkThreat" />
+        <meta name="twitter:description" content="Search indexing over 2 million live sources, allowing security teams to query threat actor personas, leaks, and historical breach data." />
+        <meta name="twitter:image" content="https://darkthreat.ai/og-image.png" />
+
+        <script type="application/ld+json">{JSON.stringify(serviceJsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
       </Helmet>
 
       <AppHeader />
@@ -125,13 +159,13 @@ const DarkWebDataRemoval = () => {
         <div className="relative z-10 max-w-6xl mx-auto grid gap-10 lg:grid-cols-[1.6fr_0.9fr] items-start">
           <div>
             <span className="hero-badge mb-6 inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold text-primary">
-              Dark Web Data Removal
+              Search across 2M+ indexed sources
             </span>
             <h1 className="text-4xl md:text-6xl font-montserrat font-bold text-foreground mb-6">
-              Dark Web Data Removal — <span className="glow-text">Erase exposed assets</span> from underground markets
+              Advanced Threat Search — <span className="glow-text">Query personas, leaks, and historical breach data</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl">
-              DarkThreat locates leaked credentials, documents, and sensitive records across hidden channels, then works to take them down before attackers reuse or resell them.
+              Search indexing over 2 million live sources, allowing security teams to query threat actor personas, leaks, and historical breach data — so investigations start from a searchable intelligence record, not a blank page.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild className="cta-cyan inline-flex items-center gap-2">
@@ -245,10 +279,10 @@ const DarkWebDataRemoval = () => {
       <section className="py-10 px-6">
         <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
-            { label: 'Global coverage', detail: 'Tor, forums, markets, paste sites' },
-            { label: 'Priority takedowns', detail: 'High-risk exposure first' },
-            { label: 'Repeat monitoring', detail: 'Watch for reappearances' },
-            { label: 'Brand protection', detail: 'Limit data resale and abuse' },
+            { label: '2M+ sources', detail: 'Live indexed coverage' },
+            { label: 'Threat actor personas', detail: 'Queryable across channels' },
+            { label: 'Leaks & breaches', detail: 'Searchable exposure data' },
+            { label: 'Historical record', detail: 'Archived & searchable signals' },
           ].map((item) => (
             <div key={item.label} className="rounded-3xl border border-border bg-card p-6 text-center">
               <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary mb-3">{item.label}</p>
@@ -261,20 +295,20 @@ const DarkWebDataRemoval = () => {
       <section className="py-20 px-6 bg-card/10">
         <div className="max-w-6xl mx-auto grid gap-10 lg:grid-cols-[1.6fr_1fr] items-start">
           <div>
-            <h2 className="text-4xl font-montserrat font-bold text-foreground mb-6">What is dark web data removal?</h2>
+            <h2 className="text-4xl font-montserrat font-bold text-foreground mb-6">What is Advanced Threat Search?</h2>
             <p className="text-lg text-muted-foreground mb-5">
-              Dark web data removal is a service that locates exposed credentials, documents, and sensitive assets on underground channels and then works to remove them to reduce attacker access.
+              Advanced Threat Search lets security teams query DarkThreat’s indexed underground corpus — spanning 2M+ live sources — for threat actor personas, leaked data, and historical breach signals. Findings are not only detected in real time; they are archived, enriched, and searchable to support forensic investigation and ongoing risk analysis.
             </p>
             <p className="text-lg text-muted-foreground">
-              DarkThreat combines investigation, removal requests, and ongoing monitoring so removed data is less likely to be reused or resold across hidden marketplaces.
+              Instead of starting investigations from scratch, your team searches a living intelligence index built from continuous dark web ingestion and enrichment.
             </p>
           </div>
 
           <div className="grid gap-4">
             {[
-              { title: 'Leaked credentials', detail: 'Remove login data before it spreads.' },
-              { title: 'Hidden documents', detail: 'Take down exposed files shared in private channels.' },
-              { title: 'Market listings', detail: 'Target listings on dark web shops and forums.' },
+              { title: 'Persona search', detail: 'Query threat actor personas across forums and channels.' },
+              { title: 'Leak search', detail: 'Find credential and data exposures in indexed sources.' },
+              { title: 'Historical breach data', detail: 'Search an archived intelligence record over time.' },
             ].map((item) => (
               <div key={item.title} className="rounded-3xl border border-border bg-background p-6">
                 <p className="text-sm uppercase tracking-[0.3em] text-primary mb-3">{item.title}</p>
@@ -288,63 +322,113 @@ const DarkWebDataRemoval = () => {
       <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-montserrat font-bold text-foreground mb-4">Removal process designed for the underground</h2>
-            <p className="text-lg text-muted-foreground">We find exposed assets quickly, verify risk, remove listings, and continue monitoring to prevent recurrence.</p>
+            <h2 className="text-4xl font-montserrat font-bold text-foreground mb-4">Core capabilities of Advanced Threat Search</h2>
+            <p className="text-lg text-muted-foreground">On-demand search over the same indexed corpus that powers monitoring and enrichment.</p>
           </div>
           <div className="grid gap-8 lg:grid-cols-3">
             <div className="rounded-3xl border border-border bg-card p-8">
               <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary mb-6">
-                <Shield className="w-6 h-6" />
+                <Database className="w-6 h-6" />
               </div>
-              <h3 className="text-2xl font-montserrat font-bold mb-4">Discovery</h3>
-              <p className="text-muted-foreground">Identify leaked credentials, documents, private keys, and other exposed assets in hidden channels.</p>
+              <h3 className="text-2xl font-montserrat font-bold mb-4">Search across 2M+ live sources</h3>
+              <p className="text-muted-foreground mb-4">Indexing over onion sites, dark web forums, Telegram/Discord, paste sites, ransomware leak portals, and infostealer channels.</p>
+              <ul className="space-y-3 text-muted-foreground">
+                <li>Continuously updated index</li>
+                <li>Near real-time ingestion backbone</li>
+                <li>Broad underground coverage</li>
+              </ul>
             </div>
             <div className="rounded-3xl border border-border bg-card p-8">
               <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary mb-6">
-                <Trash2 className="w-6 h-6" />
+                <Search className="w-6 h-6" />
               </div>
-              <h3 className="text-2xl font-montserrat font-bold mb-4">Verification</h3>
-              <p className="text-muted-foreground">Validate each exposure and prioritize takedowns based on risk to the business.</p>
+              <h3 className="text-2xl font-montserrat font-bold mb-4">Query what matters to investigators</h3>
+              <p className="text-muted-foreground mb-4">Search threat actor personas, leaks, and historical breach data.</p>
+              <ul className="space-y-3 text-muted-foreground">
+                <li>Persona and campaign context</li>
+                <li>Leak and exposure lookup</li>
+                <li>Investigation-ready queries</li>
+              </ul>
             </div>
             <div className="rounded-3xl border border-border bg-card p-8">
               <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary mb-6">
-                <Globe className="w-6 h-6" />
+                <Eye className="w-6 h-6" />
               </div>
-              <h3 className="text-2xl font-montserrat font-bold mb-4">Removal</h3>
-              <p className="text-muted-foreground">Work with operators and hidden marketplaces to take down leaked data listings and reduce the window of exposure.</p>
+              <h3 className="text-2xl font-montserrat font-bold mb-4">Searchable historical intelligence</h3>
+              <p className="text-muted-foreground mb-4">Signals are archived, enriched, and searchable for forensic investigation and compliance reporting.</p>
+              <ul className="space-y-3 text-muted-foreground">
+                <li>Historical threat intelligence record</li>
+                <li>Enriched context with results</li>
+                <li>Support for follow-up investigation</li>
+              </ul>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-6 bg-card/30">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-montserrat font-bold text-foreground mb-4">Why teams choose DarkThreat</h2>
+            <p className="text-lg text-muted-foreground">Built for investigators who need a searchable underground index — not ad-hoc forum hopping.</p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {[
+              { title: 'Built on a live index', desc: '2M+ sources continuously indexed, not a static dump.' },
+              { title: 'Personas, not just keywords', desc: 'Query threat actor personas alongside leaks and breach data.' },
+              { title: 'History you can search', desc: 'Catalogued signals stay archived and searchable.' },
+              { title: 'Investigation-ready', desc: 'Supports forensic follow-up from a structured intelligence record.' },
+            ].map((item) => (
+              <div key={item.title} className="rounded-3xl border border-border bg-background p-8">
+                <h3 className="text-xl font-montserrat font-semibold mb-3">{item.title}</h3>
+                <p className="text-muted-foreground">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-6">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-montserrat font-bold text-foreground mb-4">How DarkThreat compares to ad-hoc underground research</h2>
+            <p className="text-lg text-muted-foreground">Manual hunting cannot match continuous indexing, persona search, and a searchable historical record.</p>
+          </div>
+          <div className="overflow-x-auto">
+            <table className="w-full border-collapse rounded-3xl border border-border bg-card">
+              <thead>
+                <tr className="border-b border-border">
+                  <th className="p-4 text-left text-sm uppercase tracking-[0.2em] text-muted-foreground">Capability</th>
+                  <th className="p-4 text-left text-sm uppercase tracking-[0.2em] text-primary">DarkThreat</th>
+                  <th className="p-4 text-left text-sm uppercase tracking-[0.2em] text-muted-foreground">Manual / ad-hoc underground research</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ['Search across 2M+ indexed live sources', true, false],
+                  ['Query threat actor personas', true, false],
+                  ['Search leaks and historical breach data', true, false],
+                  ['Archived, searchable intelligence record', true, false],
+                  ['Continuous index updates', true, false],
+                ].map(([cap, dt, mn]) => (
+                  <tr key={cap as string} className="border-b border-border/50">
+                    <td className="p-4 text-sm text-foreground">{cap}</td>
+                    <td className="p-4 text-center">{dt ? <CheckCircle className="w-5 h-5 text-primary mx-auto" /> : <XCircle className="w-5 h-5 text-muted-foreground mx-auto" />}</td>
+                    <td className="p-4 text-center">{mn ? <CheckCircle className="w-5 h-5 text-muted-foreground mx-auto" /> : <XCircle className="w-5 h-5 text-muted-foreground mx-auto" />}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
 
       <section className="py-8 px-6 bg-card/30">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid gap-8 lg:grid-cols-3">
-            <div className="rounded-3xl border border-border bg-background p-8 text-center">
-              <div className="text-primary mb-4"><Trash2 className="w-10 h-10" /></div>
-              <h3 className="text-2xl font-montserrat font-bold text-foreground mb-3">60% faster incident response</h3>
-              <p className="text-muted-foreground">Remove dark web exposures quickly so your team can focus on remediation instead of endless investigation.</p>
-            </div>
-            <div className="rounded-3xl border border-border bg-background p-8 text-center">
-              <div className="text-primary mb-4"><Globe className="w-10 h-10" /></div>
-              <h3 className="text-2xl font-montserrat font-bold text-foreground mb-3">Global underground coverage</h3>
-              <p className="text-muted-foreground">We work across Tor, chat groups, forums, and black market shops to eliminate your data from hidden sources.</p>
-            </div>
-            <div className="rounded-3xl border border-border bg-background p-8 text-center">
-              <div className="text-primary mb-4"><AlertTriangle className="w-10 h-10" /></div>
-              <h3 className="text-2xl font-montserrat font-bold text-foreground mb-3">Ongoing exposure visibility</h3>
-              <p className="text-muted-foreground">Even after removal, we keep tracking reappearances so leaked assets stay contained.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-8 px-6">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-4xl font-montserrat font-bold text-foreground text-center mb-10">Frequently Asked Questions</h2>
+          <h2 className="text-4xl font-montserrat font-bold text-foreground text-center mb-10">Frequently asked questions</h2>
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((f, i) => (
-              <AccordionItem key={i} value={`faq-${i}`}>
+              <AccordionItem key={i} value={`item-${i}`}>
                 <AccordionTrigger className="text-left font-montserrat">{f.q}</AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">{f.a}</AccordionContent>
               </AccordionItem>
@@ -353,13 +437,24 @@ const DarkWebDataRemoval = () => {
         </div>
       </section>
 
-      <footer className="bg-card border-t border-border py-12">
-        <div className="max-w-6xl mx-auto px-6 text-center text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} DarkThreat. All rights reserved.</p>
+      <FinalCTA />
+
+      <footer className="bg-card border-t border-border py-10">
+        <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-2">
+            <Shield className="w-6 h-6 text-primary" />
+            <span className="font-montserrat font-bold text-foreground">DarkThreat</span>
+          </div>
+          <p className="text-sm text-muted-foreground">&copy; 2026 DarkThreat. All rights reserved.</p>
+          <div className="flex gap-6 text-sm text-muted-foreground">
+            <Link to="/solution" className="hover:text-primary">Platform</Link>
+            <Link to="/pricing" className="hover:text-primary">Pricing</Link>
+            <Link to="/contact" className="hover:text-primary">Contact</Link>
+          </div>
         </div>
       </footer>
     </div>
   );
 };
 
-export default DarkWebDataRemoval;
+export default AdvancedThreatSearch;

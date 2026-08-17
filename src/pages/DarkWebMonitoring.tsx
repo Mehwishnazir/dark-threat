@@ -173,8 +173,8 @@ const DarkWebMonitoring = () => {
               DarkThreat scans the hidden internet, dark marketplaces, hacker forums, paste sites, and stealer log feeds for leaked credentials, exposed files, and threat actor chatter tied to your organization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button onClick={() => (window.location.href = '/auth')} className="cta-cyan inline-flex items-center gap-2">
-                Start Free Trial <ArrowRight className="w-4 h-4" />
+              <Button asChild className="cta-cyan inline-flex items-center gap-2">
+                <Link to="/contact">Book Demo <ArrowRight className="w-4 h-4" /></Link>
               </Button>
               <Link to="/pricing" className="cta-outline inline-flex items-center gap-2 justify-center">
                 View Pricing

@@ -10,6 +10,11 @@ export default function PrivacyPolicy() {
           <span>Back to Home</span>
         </Link>
 
+        <nav className="flex flex-wrap gap-x-4 gap-y-2 text-sm text-muted-foreground mb-8" aria-label="Related legal documents">
+          <Link to="/platform-terms" className="hover:text-primary">Platform Terms of Use</Link>
+          <Link to="/website-terms" className="hover:text-primary">Website Terms of Use</Link>
+        </nav>
+
         <div className="space-y-8">
           <div>
             <h1 className="text-4xl font-montserrat font-bold text-primary mb-4">Privacy Policy</h1>

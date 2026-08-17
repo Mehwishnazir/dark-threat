@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import {
   Banknote, HeartPulse, Scale, ShoppingCart, Cloud, Landmark,
-  GraduationCap, Bitcoin, Shield, AlertTriangle, Lock, Database,
+  GraduationCap, Bitcoin, Briefcase, Shield, AlertTriangle, Lock, Database,
   Eye, Globe, ArrowRight, CheckCircle2,
 } from 'lucide-react';
 import AppHeader from '@/components/AppHeader';
@@ -38,6 +38,14 @@ const industries = [
     available: true,
   },
   {
+    icon: Briefcase,
+    name: 'Professional Services',
+    slug: '/industries/professional-services',
+    desc: 'Protect confidential client information, partner credentials, and firm intellectual property.',
+    tags: ['SOC 2', 'ISO 27001', 'GDPR'],
+    available: true,
+  },
+  {
     icon: Landmark,
     name: 'Government',
     slug: '/industries/government',
@@ -59,7 +67,7 @@ const industries = [
     slug: '/industries/saas-technology',
     desc: 'Surface leaked API keys, source code, developer credentials, and cloud bucket exposures.',
     tags: ['SOC 2', 'ISO 27001', 'CCPA'],
-    available: false,
+    available: true,
   },
   {
     icon: GraduationCap,
@@ -67,7 +75,7 @@ const industries = [
     slug: '/industries/education',
     desc: 'Protect student PII, research IP, and faculty credentials from growing academic cyber threats.',
     tags: ['FERPA', 'COPPA', 'NIST'],
-    available: false,
+    available: true,
   },
   {
     icon: Bitcoin,
@@ -75,7 +83,7 @@ const industries = [
     slug: '/industries/crypto-fintech',
     desc: 'Monitor wallet address leaks, exchange credential theft, and DeFi protocol attack signals.',
     tags: ['FinCEN', 'MiCA', 'ISO 27001'],
-    available: false,
+    available: true,
   },
 ];
 

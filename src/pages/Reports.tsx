@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -20,6 +20,8 @@ import {
 import CollapsibleSidebar from '@/components/CollapsibleSidebar';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
+import { useNavigate } from 'react-router-dom';
+import { supabase } from '@/integrations/supabase/client';
 
 // Mock data based on the comprehensive breach reports
 const breachData = {
@@ -168,6 +170,28 @@ const breachData = {
 export default function Reports() {
   const [companyDomain, setCompanyDomain] = useState('techcorp.com');
   const [isGenerating, setIsGenerating] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const checkUserAccess = async () => {
+      try {
+        const { data: { session } } = await supabase.auth.getSession();
+
+        if (!session) {
+          navigate('/auth');
+          return;
+        }
+
+        setLoading(false);
+      } catch (error) {
+        console.error('Error checking user access:', error);
+        navigate('/auth');
+      }
+    };
+
+    checkUserAccess();
+  }, [navigate]);
 
   const generatePDFReport = async () => {
     setIsGenerating(true);
@@ -361,6 +385,17 @@ export default function Reports() {
       default: return 'bg-gray-100 text-gray-800 border-gray-200';
     }
   };
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <div className="text-center space-y-4">
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto"></div>
+          <p className="text-muted-foreground">Loading...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-background flex w-full">

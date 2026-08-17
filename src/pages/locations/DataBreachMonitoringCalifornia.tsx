@@ -50,7 +50,7 @@ const faqSchema = {
       name: 'Why is Data Breach Monitoring critical for businesses in California?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Businesses in California are increasingly targeted by cybercriminals due to the region\'s economic concentration. Data Breach Monitoring provides early warning capabilities to detect threats before they escalate into major breaches.'
+        text: 'The same FBI report found California residents aged 60+ accounted for more than $800 million in losses, and the state\'s top reported cybercrimes were cryptocurrency fraud, extortion, and phishing/spoofing. Data Breach Monitoring gives California organizations earlier visibility into leaked credentials and underground activity tied to their operations.'
       }
     },
     {
@@ -122,7 +122,7 @@ export default function DataBreachMonitoringCalifornia() {
             Enterprise Data Breach Monitoring for <span className="glow-text">California</span>
           </h1>
           <p className="mx-auto max-w-3xl text-lg text-muted-foreground leading-relaxed">
-            Gain continuous visibility into external threats targeting your organization. From dark web data leaks to exposed employee credentials, DarkThreat provides actionable intelligence for businesses operating in California.
+            California ranked #1 nationally for cybercrime complaints in the FBI’s 2024 Internet Crime Report, with more than $2.5 billion in reported losses. DarkThreat helps California organizations monitor dark web data leaks and exposed credentials so they can detect and respond before an exposure becomes a costly incident.
           </p>
           <div className="mt-8 flex flex-wrap gap-4 justify-center">
             <Button className="hero-button" onClick={() => document.getElementById('regional-inquiry')?.scrollIntoView({ behavior: 'smooth' })}>
@@ -210,7 +210,7 @@ export default function DataBreachMonitoringCalifornia() {
           <div className="space-y-6">
             <div className="rounded-2xl border border-border bg-card/50 p-6">
               <h3 className="font-montserrat font-bold text-foreground mb-2">Why is Data Breach Monitoring critical for businesses in California?</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">Businesses in California are increasingly targeted by cybercriminals due to the region's economic concentration. Data Breach Monitoring provides early warning capabilities to detect threats before they escalate into major breaches.</p>
+              <p className="text-muted-foreground text-sm leading-relaxed">The same FBI report found California residents aged 60+ accounted for more than $800 million in losses, and the state's top reported cybercrimes were cryptocurrency fraud, extortion, and phishing/spoofing. Data Breach Monitoring gives California organizations earlier visibility into leaked credentials and underground activity tied to their operations.</p>
             </div>
             <div className="rounded-2xl border border-border bg-card/50 p-6">
               <h3 className="font-montserrat font-bold text-foreground mb-2">How quickly can DarkThreat detect a breach involving our California operations?</h3>

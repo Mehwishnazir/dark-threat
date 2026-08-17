@@ -50,7 +50,7 @@ const faqSchema = {
       name: 'Why is Dark Web Monitoring critical for businesses in New York City?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Businesses in New York City are increasingly targeted by cybercriminals due to the region\'s economic concentration. Dark Web Monitoring provides early warning capabilities to detect threats before they escalate into major breaches.'
+        text: 'Large NYC institutions are frequent targets, and compromise often arrives through the supply chain. The NYC Health + Hospitals breach occurred via a third-party vendor between November 2025 and February 2026, exposing health insurance details, medical records, Social Security numbers, and biometric data. Dark Web Monitoring helps surface leaked credentials and related underground activity early—before an exposure becomes a mass-notification event.'
       }
     },
     {
@@ -122,7 +122,7 @@ export default function DarkWebMonitoringNewYorkCity() {
             Enterprise Dark Web Monitoring for <span className="glow-text">New York City</span>
           </h1>
           <p className="mx-auto max-w-3xl text-lg text-muted-foreground leading-relaxed">
-            Gain continuous visibility into external threats targeting your organization. From dark web data leaks to exposed employee credentials, DarkThreat provides actionable intelligence for businesses operating in New York City.
+            In March 2026, NYC Health + Hospitals—the largest public health system in the United States—disclosed a data breach affecting 1.8 million people. DarkThreat helps New York City organizations monitor dark web data leaks and exposed employee credentials so they can detect and respond to threats before they scale.
           </p>
           <div className="mt-8 flex flex-wrap gap-4 justify-center">
             <Button className="hero-button" onClick={() => document.getElementById('regional-inquiry')?.scrollIntoView({ behavior: 'smooth' })}>
@@ -210,7 +210,7 @@ export default function DarkWebMonitoringNewYorkCity() {
           <div className="space-y-6">
             <div className="rounded-2xl border border-border bg-card/50 p-6">
               <h3 className="font-montserrat font-bold text-foreground mb-2">Why is Dark Web Monitoring critical for businesses in New York City?</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">Businesses in New York City are increasingly targeted by cybercriminals due to the region's economic concentration. Dark Web Monitoring provides early warning capabilities to detect threats before they escalate into major breaches.</p>
+              <p className="text-muted-foreground text-sm leading-relaxed">Large NYC institutions are frequent targets, and compromise often arrives through the supply chain. The NYC Health + Hospitals breach occurred via a third-party vendor between November 2025 and February 2026, exposing health insurance details, medical records, Social Security numbers, and biometric data. Dark Web Monitoring helps surface leaked credentials and related underground activity early—before an exposure becomes a mass-notification event.</p>
             </div>
             <div className="rounded-2xl border border-border bg-card/50 p-6">
               <h3 className="font-montserrat font-bold text-foreground mb-2">How quickly can DarkThreat detect a breach involving our New York City operations?</h3>

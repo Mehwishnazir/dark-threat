@@ -50,7 +50,7 @@ const faqSchema = {
       name: 'Why is Attack Surface Monitoring critical for businesses in Texas?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Businesses in Texas are increasingly targeted by cybercriminals due to the region\'s economic concentration. Attack Surface Monitoring provides early warning capabilities to detect threats before they escalate into major breaches.'
+        text: 'Texas organizations face elevated cybercrime pressure, and incidents can scale quickly. In September 2024, a breach at Texas Tech University Health Sciences Center exposed data belonging to 1.4 million people. Attack Surface Monitoring helps surface external exposures and early warning signals so teams can respond before a leak becomes a large-scale incident.'
       }
     },
     {
@@ -126,7 +126,7 @@ export default function AttackSurfaceMonitoringTexas() {
             Enterprise Attack Surface Monitoring for <span className="glow-text">Texas</span>
           </h1>
           <p className="mx-auto max-w-3xl text-lg text-muted-foreground leading-relaxed">
-            Gain continuous visibility into external threats targeting your organization. From dark web data leaks to exposed employee credentials, DarkThreat provides actionable intelligence for businesses operating in Texas.
+            Texas ranks #2 nationally for reported cybercrime losses, with more than $763 million and 38,661 complaints recorded in a recent FBI IC3 year. DarkThreat gives Texas organizations continuous attack-surface visibility—from dark web data leaks to exposed employee credentials—so you can act on threats before they become breaches.
           </p>
           <div className="mt-8 flex flex-wrap gap-4 justify-center">
             <Button className="hero-button" onClick={() => document.getElementById('regional-inquiry')?.scrollIntoView({ behavior: 'smooth' })}>
@@ -145,7 +145,7 @@ export default function AttackSurfaceMonitoringTexas() {
           <div className="text-center mb-16">
             <span className="inline-flex rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-primary mb-4">Regional Threat Landscape</span>
             <h2 className="text-3xl md:text-4xl font-montserrat font-bold text-foreground mb-4">Protecting Texas from Cyber Risk</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">Threat actors continuously target the region's top enterprises. We detect exposures before they become breaches.</p>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">Energy, healthcare, finance, and tech across the state sit in a high-loss threat environment. We monitor external exposures and dark-web signals tied to Texas enterprises so you can detect risk early—before it escalates.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {threats.map((t) => (
@@ -216,7 +216,7 @@ export default function AttackSurfaceMonitoringTexas() {
           <div className="space-y-6">
             <div className="rounded-2xl border border-border bg-card/50 p-6">
               <h3 className="font-montserrat font-bold text-foreground mb-2">Why is Attack Surface Monitoring critical for businesses in Texas?</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">Businesses in Texas are increasingly targeted by cybercriminals due to the region's economic concentration. Attack Surface Monitoring provides early warning capabilities to detect threats before they escalate into major breaches.</p>
+              <p className="text-muted-foreground text-sm leading-relaxed">Texas organizations face elevated cybercrime pressure, and incidents can scale quickly. In September 2024, a breach at Texas Tech University Health Sciences Center exposed data belonging to 1.4 million people. Attack Surface Monitoring helps surface external exposures and early warning signals so teams can respond before a leak becomes a large-scale incident.</p>
             </div>
             <div className="rounded-2xl border border-border bg-card/50 p-6">
               <h3 className="font-montserrat font-bold text-foreground mb-2">How quickly can DarkThreat detect a breach involving our Texas operations?</h3>

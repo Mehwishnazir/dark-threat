@@ -50,7 +50,7 @@ const faqSchema = {
       name: 'Why is Threat Intelligence critical for businesses in Washington DC?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Businesses in Washington DC are increasingly targeted by cybercriminals due to the region\'s economic concentration. Threat Intelligence provides early warning capabilities to detect threats before they escalate into major breaches.'
+        text: 'Organizations in the capital region face elevated nation-state and supply-chain risk. In the Treasury incident, attackers used a BeyondTrust vulnerability to gain unauthorized access to sensitive government systems. Threat Intelligence helps D.C.-area teams surface exposure signals early—including third-party and dark-web activity tied to their environment.'
       }
     },
     {
@@ -116,7 +116,7 @@ export default function ThreatIntelligenceWashingtonDC() {
             Enterprise Threat Intelligence for <span className="glow-text">Washington DC</span>
           </h1>
           <p className="mx-auto max-w-3xl text-lg text-muted-foreground leading-relaxed">
-            Gain continuous visibility into external threats targeting your organization. From dark web data leaks to exposed employee credentials, DarkThreat provides actionable intelligence for businesses operating in Washington DC.
+            In December 2024, the U.S. Treasury Department’s network was breached by Chinese state-sponsored hackers who exploited a vulnerability in a third-party security vendor. DarkThreat helps Washington, D.C. organizations monitor dark web data leaks and exposed credentials so they can detect and respond to threats before they escalate.
           </p>
           <div className="mt-8 flex flex-wrap gap-4 justify-center">
             <Button className="hero-button" onClick={() => document.getElementById('regional-inquiry')?.scrollIntoView({ behavior: 'smooth' })}>
@@ -204,7 +204,7 @@ export default function ThreatIntelligenceWashingtonDC() {
           <div className="space-y-6">
             <div className="rounded-2xl border border-border bg-card/50 p-6">
               <h3 className="font-montserrat font-bold text-foreground mb-2">Why is Threat Intelligence critical for businesses in Washington DC?</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">Businesses in Washington DC are increasingly targeted by cybercriminals due to the region's economic concentration. Threat Intelligence provides early warning capabilities to detect threats before they escalate into major breaches.</p>
+              <p className="text-muted-foreground text-sm leading-relaxed">Organizations in the capital region face elevated nation-state and supply-chain risk. In the Treasury incident, attackers used a BeyondTrust vulnerability to gain unauthorized access to sensitive government systems. Threat Intelligence helps D.C.-area teams surface exposure signals early—including third-party and dark-web activity tied to their environment.</p>
             </div>
             <div className="rounded-2xl border border-border bg-card/50 p-6">
               <h3 className="font-montserrat font-bold text-foreground mb-2">How quickly can DarkThreat detect a breach involving our Washington DC operations?</h3>

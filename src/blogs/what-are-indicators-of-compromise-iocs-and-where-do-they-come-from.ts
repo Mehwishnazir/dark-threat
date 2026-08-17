@@ -198,7 +198,7 @@ export const whatAreIndicatorsOfCompromiseIocsAndWhereDoTheyComeFrom: BlogPostTy
           <li><strong>Threat Hunting:</strong> Proactive searching for IOC-related activity within network and endpoints.</li>
           <li><strong>Incident Response:</strong> Use IOC details to guide containment and remediation efforts.</li>
         </ul>
-        <p>Organizations interested in optimizing their IOC usage should explore threat intelligence platforms such as <a href="/threat-intelligence-platform">DarkThreat.AI’s TI platform</a>, which expertly integrates dark web monitoring and IOC management.</p>
+        <p>Organizations interested in optimizing their IOC usage should explore threat intelligence platforms such as <a href="/solution">DarkThreat.AI’s TI platform</a>, which expertly integrates dark web monitoring and IOC management.</p>
       </section>
 
       <section id="best-practices-for-ioc-management" name="main_sections" order="2">

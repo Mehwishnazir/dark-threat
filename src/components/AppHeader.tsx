@@ -22,8 +22,11 @@ const solutionLinks = [
 const industryLinks = [
   { to: '/industries', label: 'All Industries', icon: Building2 },
   { to: '/industries/financial-services', label: 'Financial Services', icon: Building2 },
+  { to: '/industries/crypto-fintech', label: 'Crypto & Fintech', icon: Building2 },
+  { to: '/industries/education', label: 'Education', icon: Building2 },
   { to: '/industries/healthcare', label: 'Healthcare', icon: Building2 },
   { to: '/industries/legal', label: 'Legal', icon: Building2 },
+  { to: '/industries/professional-services', label: 'Professional Services', icon: Building2 },
   { to: '/industries/government', label: 'Government', icon: Building2 },
   { to: '/industries/ecommerce', label: 'E-Commerce & Retail', icon: Building2 },
   { to: '/industries/saas-technology', label: 'SaaS & Technology', icon: Building2 },
@@ -105,13 +108,6 @@ export default function AppHeader() {
               Book Demo
             </Button>
           </NavLink>
-          <Button
-            onClick={() => (window.location.href = '/auth')}
-            className="cta-cyan text-sm px-5 py-2 whitespace-nowrap"
-            size="sm"
-          >
-            Start Free Trial
-          </Button>
         </div>
 
         <MobileNav />

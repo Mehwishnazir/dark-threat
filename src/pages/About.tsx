@@ -19,17 +19,14 @@ import {
   CheckCircle2,
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { useState, Suspense } from 'react';
+import { Suspense } from 'react';
 import { Helmet } from 'react-helmet-async';
 import AppHeader from '@/components/AppHeader';
-import TrialModal from '@/components/TrialModal';
 import AnimatedBackground from '@/components/AnimatedBackground';
 import ThreatSphere from '@/components/ThreatSphere';
 import Breadcrumb from '@/components/Breadcrumb';
 
 const About = () => {
-  const [isTrialModalOpen, setIsTrialModalOpen] = useState(false);
-
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -167,7 +164,7 @@ const About = () => {
           </h1>
           
           <p className="hero-subtitle mx-auto max-w-3xl text-lg md:text-xl text-muted-foreground leading-relaxed mb-6 font-semibold">
-            At DarkThreat, our mission is to build the world's fastest and most comprehensive <Link to="/threat-intelligence-platform" className="text-primary hover:underline">threat intelligence platform</Link> — transforming enterprise cybersecurity from reactive incident response into proactive <Link to="/digital-risk-protection" className="text-primary hover:underline">digital risk protection</Link>. We monitor the external threat landscape so your team doesn't have to.
+            At DarkThreat, our mission is to build the world's fastest and most comprehensive <Link to="/threat-intelligence-platform" className="text-primary hover:underline">threat intelligence platform</Link> — transforming enterprise cybersecurity from reactive incident response into proactive <Link to="/solution" className="text-primary hover:underline">digital risk protection</Link>. We monitor the external threat landscape so your team doesn't have to.
           </p>
           
           <p className="mx-auto max-w-3xl text-lg text-muted-foreground leading-relaxed">
@@ -177,8 +174,8 @@ const About = () => {
           </p>
           
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button onClick={() => setIsTrialModalOpen(true)} className="hero-button text-base px-8 py-6">
-              Start Your Free Trial <ArrowRight className="ml-2 w-5 h-5" />
+            <Button variant="outline" asChild className="hero-button text-base px-8 py-6">
+              <Link to="/contact">Request a Live Demo <ArrowRight className="ml-2 w-5 h-5" /></Link>
             </Button>
           </div>
         </div>
@@ -506,11 +503,8 @@ const About = () => {
             Our platform takes less than 24 hours to set up, requires no agent deployment, and begins surfacing intelligence about your organization's exposure immediately. Whether you are a lean security team at a growing company or a mature SOC at a regulated enterprise, DarkThreat's <span className="font-semibold text-foreground">AI cybersecurity solution</span> scales to your needs.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
-            <Button onClick={() => setIsTrialModalOpen(true)} className="hero-button text-base px-8 py-6">
-              Start Free Trial — No Credit Card Required <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
-            <Button variant="outline" className="text-base px-8 py-6 bg-card border-2 border-primary hover:bg-primary/10 hover:border-primary text-foreground">
-              Request a Live Demo
+            <Button variant="outline" asChild className="text-base px-8 py-6 bg-card border-2 border-primary hover:bg-primary/10 hover:border-primary text-foreground">
+              <Link to="/contact">Request a Live Demo</Link>
             </Button>
           </div>
           <p className="text-sm text-muted-foreground font-medium">
@@ -518,11 +512,6 @@ const About = () => {
           </p>
         </div>
       </section>
-
-      <TrialModal
-        isOpen={isTrialModalOpen}
-        onClose={() => setIsTrialModalOpen(false)}
-      />
 
       {/* Footer */}
       <footer className="relative bg-card border-t border-border py-12 z-10">
@@ -537,14 +526,14 @@ const About = () => {
                 DarkThreat is an AI-powered <span className="font-semibold text-foreground">dark web monitoring</span> and <span className="font-semibold text-foreground">threat intelligence platform</span> protecting enterprises from credential leaks, ransomware targeting, data breaches, and external cyber threats. Our 24/7 monitoring engine indexes 2M+ underground sources to deliver real-time alerts before attacks occur.
               </p>
               <div className="flex space-x-4">
-                <a href="https://twitter.com/DarkThreatAI" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                  <Twitter className="w-5 h-5" />
+                <a href="https://twitter.com/DarkThreatAI" target="_blank" rel="noopener noreferrer" aria-label="Twitter" title="Twitter" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Twitter className="w-5 h-5" aria-hidden="true" />
                 </a>
-                <a href="https://linkedin.com/company/darkthreat" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                  <Linkedin className="w-5 h-5" />
+                <a href="https://linkedin.com/company/darkthreat" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Linkedin className="w-5 h-5" aria-hidden="true" />
                 </a>
-                <a href="https://github.com/darkthreat" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                  <Github className="w-5 h-5" />
+                <a href="https://github.com/darkthreat" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Github className="w-5 h-5" aria-hidden="true" />
                 </a>
               </div>
             </div>
@@ -564,6 +553,7 @@ const About = () => {
                 <li><Link to="/" className="text-muted-foreground hover:text-primary">Home</Link></li>
                 <li><Link to="/solution" className="text-muted-foreground hover:text-primary">Solution</Link></li>
                 <li><Link to="/pricing" className="text-muted-foreground hover:text-primary">Pricing</Link></li>
+                <li><Link to="/blog" className="text-muted-foreground hover:text-primary">Blog</Link></li>
                 <li><Link to="/about" className="text-muted-foreground hover:text-primary">About</Link></li>
                 <li><Link to="/contact" className="text-muted-foreground hover:text-primary">Contact</Link></li>
               </ul>
@@ -572,8 +562,9 @@ const About = () => {
               <h3 className="font-montserrat font-semibold text-foreground mb-4">Legal</h3>
               <ul className="space-y-2">
                 <li><Link to="/privacy-policy" className="text-muted-foreground hover:text-primary">Privacy Policy</Link></li>
-                <li><Link to="/platform-terms" className="text-muted-foreground hover:text-primary">Platform Terms of Use</Link></li>
-                <li><Link to="/website-terms" className="text-muted-foreground hover:text-primary">Website Terms of Use</Link></li>
+                <li><Link to="/platform-terms" className="text-muted-foreground hover:text-primary">Platform Terms</Link></li>
+                <li><Link to="/website-terms" className="text-muted-foreground hover:text-primary">Website Terms</Link></li>
+                <li><Link to="/contact" className="text-muted-foreground hover:text-primary">Support</Link></li>
               </ul>
             </div>
           </div>

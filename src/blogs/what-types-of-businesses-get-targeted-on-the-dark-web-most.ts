@@ -148,8 +148,9 @@ export const whatTypesOfBusinessesGetTargetedOnTheDarkWebMost: BlogPostType & {
         <ul>
           <li><strong>Finance Sector:</strong> <a href="https://darkthreat.ai/industries/financial-services">DarkThreat Financial Services</a></li>
           <li><strong>Healthcare Industry:</strong> <a href="https://darkthreat.ai/industries/healthcare">DarkThreat Healthcare Solutions</a></li>
-          <li><strong>Legal and Professional Services:</strong> <a href="https://darkthreat.ai/industries/professional-services">DarkThreat Professional Services</a></li>
-          <li><strong>Technology Firms:</strong> <a href="https://darkthreat.ai/industries/technology">DarkThreat Technology Sector Intelligence</a></li>
+          <li><strong>Legal:</strong> <a href="https://darkthreat.ai/industries/legal">DarkThreat Legal</a></li>
+          <li><strong>Professional Services:</strong> <a href="https://darkthreat.ai/industries/professional-services">DarkThreat Professional Services</a></li>
+          <li><strong>Technology Firms:</strong> <a href="https://darkthreat.ai/industries/saas-technology">DarkThreat Technology Sector Intelligence</a></li>
           <li><strong>Emerging Sectors:</strong> Energy, education, and retail insights available on respective DarkThreat pages.</li>
         </ul>
         <p>Implementing continuous dark web monitoring integrated with threat intelligence frameworks such as those offered by DarkThreat.AI helps organizations maintain situational awareness and reduce exposure to dark web risks.</p>

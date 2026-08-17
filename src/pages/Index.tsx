@@ -1,11 +1,10 @@
-import { Suspense, useState, lazy } from 'react';
+import { Suspense, lazy } from 'react';
 import { Button } from '@/components/ui/button';
 const ThreatSphere = lazy(() => import('@/components/ThreatSphere'));
 import AppHeader from '@/components/AppHeader';
 import AnimatedBackground from '@/components/AnimatedBackground';
 import TrustBar from '@/components/TrustBar';
 import FinalCTA from '@/components/FinalCTA';
-import TrialModal from '@/components/TrialModal';
 import PricingCard from '@/components/PricingCard';
 import ComparisonTable from '@/components/ComparisonTable';
 import Testimonials from '@/components/Testimonials';
@@ -96,7 +95,6 @@ const SOFTWARE_APP_JSON_LD = {
 };
 
 const Index = () => {
-  const [isTrialModalOpen, setIsTrialModalOpen] = useState(false);
   useScrollReveal();
 
   return (
@@ -153,7 +151,7 @@ const Index = () => {
           </h1>
           
           <p className="hero-subtitle mx-auto max-w-3xl text-lg md:text-xl text-muted-foreground leading-relaxed mb-6 font-semibold">
-            At DarkThreat, we deliver the world's fastest and most comprehensive <Link to="/dark-web-monitoring" className="text-primary hover:underline">dark web monitoring service</Link> and <Link to="/solution" className="text-primary hover:underline">threat intelligence platform</Link> — giving enterprise defenders real-time <Link to="/solution" className="text-primary hover:underline">digital risk protection</Link> to stop attacks before they reach your network perimeter.
+            At DarkThreat, we deliver the world's fastest and most comprehensive <Link to="/dark-web-monitoring" className="text-primary hover:underline">dark web monitoring service</Link> and <Link to="/threat-intelligence-platform" className="text-primary hover:underline">threat intelligence platform</Link> — giving enterprise defenders real-time <Link to="/solution" className="text-primary hover:underline">digital risk protection</Link> to stop attacks before they reach your network perimeter.
           </p>
 
           <p className="mx-auto max-w-3xl text-base md:text-lg text-muted-foreground leading-relaxed mb-8">
@@ -162,17 +160,11 @@ const Index = () => {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button
-              onClick={() => setIsTrialModalOpen(true)}
-              className="hero-button text-base px-8 py-6 inline-flex items-center gap-2"
-            >
-              Start Your Free Trial <ArrowRight className="w-5 h-5" />
-            </Button>
-            <Button
               variant="outline"
-              onClick={() => setIsTrialModalOpen(true)}
+              asChild
               className="text-base px-8 py-6 bg-card/50 backdrop-blur border-primary/20 hover:bg-primary/10"
             >
-              Get a Live Demo
+              <Link to="/contact">Get a Live Demo</Link>
             </Button>
           </div>
         </div>
@@ -346,35 +338,35 @@ const Index = () => {
                 icon: <Shield className="w-10 h-10" />,
               },
               {
-                to: '/solution',
+                to: '/threat-intelligence-platform',
                 title: 'Threat Intelligence Platform',
                 description: 'Enrich exposure alerts with threat actor profiling, adversary infrastructure mapping, MITRE ATT&CK techniques, and active ransomware campaigns.',
                 tag: 'Intelligence',
                 icon: <Eye className="w-10 h-10" />,
               },
               {
-                to: '/pricing',
+                to: '/compliance-framework-alignment',
                 title: 'Compliance & Framework Alignment',
                 description: 'Continuous monitoring and compliance evidence collection aligned with ISO 27001, NIST Cybersecurity Framework, GDPR, HIPAA, and PCI-DSS.',
                 tag: 'Compliance',
                 icon: <Database className="w-10 h-10" />,
               },
               {
-                to: '/contact',
+                to: '/managed-soc-support',
                 title: '24/7 Managed SOC Support',
                 description: 'Expert-led Security Operations Center validation that reduces alert fatigue by cross-verifying threat relevance before alerting your team.',
                 tag: 'SOC',
                 icon: <Users className="w-10 h-10" />,
               },
               {
-                to: '/solution',
+                to: '/advanced-threat-search',
                 title: 'Advanced Threat Search',
                 description: 'Search indexing over 2 million live sources, allowing security teams to query threat actor personas, leaks, and historical breach data.',
                 tag: 'Search',
                 icon: <Search className="w-10 h-10" />,
               },
               {
-                to: '/pricing',
+                to: '/external-attack-surface-monitoring',
                 title: 'External Attack Surface Monitoring',
                 description: 'Track internet-facing digital footprint, shadow IT assets, open ports, cloud exposures, and third-party supply chain vulnerabilities.',
                 tag: 'Exposure',
@@ -586,10 +578,8 @@ const Index = () => {
 
           <div className="grid gap-6 lg:grid-cols-3">
             <PricingCard plan="Standard" monthlyPrice="$288" annualPrice="$2,000" discount="31%" isAnnual
-              onTrialClick={() => setIsTrialModalOpen(true)}
               features={['Basic breach & credential monitoring', '1 x Domain coverage', '1 User', 'Email notifications', 'Web UI access']} />
             <PricingCard plan="Enterprise" monthlyPrice="$490" annualPrice="$3,400" discount="42%" popular isAnnual
-              onTrialClick={() => setIsTrialModalOpen(true)}
               features={['Full domain & hacker chatter feeds', '2 x Domain/IP coverage', '2 Users', 'Priority support']} />
             <PricingCard plan="MSSP" monthlyPrice="Custom" annualPrice="Custom" discount="" isCustom isAnnual
               features={['White-label portal', 'Multi-tenant API', 'Bulk onboarding', 'Dedicated support', 'Priority threat intelligence']} />
@@ -624,8 +614,6 @@ const Index = () => {
         </div>
       </section>
 
-      <TrialModal isOpen={isTrialModalOpen} onClose={() => setIsTrialModalOpen(false)} />
-
       <FinalCTA />
 
       {/* FOOTER */}
@@ -641,9 +629,9 @@ const Index = () => {
                 DarkThreat is an AI-powered <span className="font-semibold text-foreground">dark web monitoring service</span> and <span className="font-semibold text-foreground">threat intelligence platform</span> protecting enterprises from credential leaks, ransomware targeting, data breaches, and external cyber threats. Our 24/7 monitoring engine indexes 2M+ underground sources to deliver real-time alerts before attacks occur.
               </p>
               <div className="flex space-x-4">
-                <a href="https://twitter.com/DarkThreatAI" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors"><Twitter className="w-5 h-5" /></a>
-                <a href="https://linkedin.com/company/darkthreat" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors"><Linkedin className="w-5 h-5" /></a>
-                <a href="https://github.com/darkthreat" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors"><Github className="w-5 h-5" /></a>
+                <a href="https://twitter.com/DarkThreatAI" target="_blank" rel="noopener noreferrer" aria-label="Twitter" title="Twitter" className="text-muted-foreground hover:text-primary transition-colors"><Twitter className="w-5 h-5" aria-hidden="true" /></a>
+                <a href="https://linkedin.com/company/darkthreat" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn" className="text-muted-foreground hover:text-primary transition-colors"><Linkedin className="w-5 h-5" aria-hidden="true" /></a>
+                <a href="https://github.com/darkthreat" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub" className="text-muted-foreground hover:text-primary transition-colors"><Github className="w-5 h-5" aria-hidden="true" /></a>
               </div>
             </div>
             <div>
@@ -652,7 +640,7 @@ const Index = () => {
                 <li><Link to="/dark-web-monitoring" className="hover:text-primary transition-colors">Dark Web Monitoring Service</Link></li>
                 <li><Link to="/credential-leak-detection" className="hover:text-primary transition-colors">Credential Leak Detection</Link></li>
                 <li><Link to="/data-leak-detection" className="hover:text-primary transition-colors">Data Leak Detection</Link></li>
-                <li><Link to="/solution" className="hover:text-primary transition-colors">Threat Intelligence Platform</Link></li>
+                <li><Link to="/threat-intelligence-platform" className="hover:text-primary transition-colors">Threat Intelligence Platform</Link></li>
                 <li><Link to="/compare/darkthreat-vs-darkowl" className="hover:text-primary transition-colors">DarkThreat vs DarkOwl</Link></li>
               </ul>
             </div>
@@ -673,6 +661,7 @@ const Index = () => {
                 <li><Link to="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</Link></li>
                 <li><Link to="/platform-terms" className="hover:text-primary transition-colors">Platform Terms</Link></li>
                 <li><Link to="/website-terms" className="hover:text-primary transition-colors">Website Terms</Link></li>
+                <li><Link to="/contact" className="hover:text-primary transition-colors">Support</Link></li>
               </ul>
             </div>
           </div>

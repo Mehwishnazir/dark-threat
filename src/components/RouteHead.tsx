@@ -3,13 +3,13 @@ import { Helmet } from "react-helmet-async";
 
 /**
  * Sitewide head injector. Mounted once inside <BrowserRouter>. Emits:
- *  - self-referencing canonical + og:url on the canonical (www) host
+ *  - self-referencing canonical + og:url on the canonical (apex) host
  *  - default robots (index, follow) — per-page <SEO noindex> overrides
  *  - Organization + SoftwareApplication JSON-LD (sitewide)
  *  - BreadcrumbList JSON-LD for any non-root route
  */
 
-const SITE = "https://www.darkthreat.ai";
+const SITE = "https://darkthreat.ai";
 const SITE_DESCRIPTION =
   "AI-powered dark web monitoring and credential leak detection. Detect leaks, hacker chatter and breaches before they impact your business.";
 

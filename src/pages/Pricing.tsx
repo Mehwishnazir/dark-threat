@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Button } from '@/components/ui/button';
 import PricingCard from '@/components/PricingCard';
-import TrialModal from '@/components/TrialModal';
 import ComparisonTable from '@/components/ComparisonTable';
 import { Shield, Linkedin, Twitter, Github } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -11,7 +10,6 @@ import AppHeader from '@/components/AppHeader';
 
 
 const Pricing = () => {
-  const [isTrialModalOpen, setIsTrialModalOpen] = useState(false);
   const [isAnnual, setIsAnnual] = useState(true);
 
   return (
@@ -89,7 +87,6 @@ const Pricing = () => {
               annualPrice="$2,000"
               discount="31%"
               isAnnual={isAnnual}
-              onTrialClick={() => setIsTrialModalOpen(true)}
               features={[
                 "Basic breach & credential monitoring",
                 "1 x Domain coverage",
@@ -105,7 +102,6 @@ const Pricing = () => {
               discount="42%"
               popular={true}
               isAnnual={isAnnual}
-              onTrialClick={() => setIsTrialModalOpen(true)}
               features={[
                 "Full domain & hacker chatter feeds",
                 "2 x Domain/IP Coverage",
@@ -137,14 +133,11 @@ const Pricing = () => {
           </div>
 
           <div className="text-center mt-12">
-            <p className="text-lg text-muted-foreground mb-6">
-              Start with a 7-day free trial • No credit card required
-            </p>
             <Button
-              onClick={() => setIsTrialModalOpen(true)}
+              asChild
               className="hero-button px-8 py-3"
             >
-              Start Free Trial
+              <Link to="/contact">Contact Sales</Link>
             </Button>
           </div>
         </div>
@@ -197,12 +190,6 @@ const Pricing = () => {
         </div>
       </section>
 
-      {/* Trial Modal */}
-      <TrialModal
-        isOpen={isTrialModalOpen}
-        onClose={() => setIsTrialModalOpen(false)}
-      />
-
       {/* Footer */}
       <footer className="bg-card border-t border-border py-12">
         <div className="max-w-6xl mx-auto px-6">
@@ -216,24 +203,25 @@ const Pricing = () => {
                 Advanced dark web monitoring and threat intelligence platform protecting your organization 24/7.
               </p>
               <div className="flex space-x-4">
-                <a href="https://twitter.com/DarkThreatAI" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                  <Twitter className="w-5 h-5" />
+                <a href="https://twitter.com/DarkThreatAI" target="_blank" rel="noopener noreferrer" aria-label="Twitter" title="Twitter" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Twitter className="w-5 h-5" aria-hidden="true" />
                 </a>
-                <a href="https://linkedin.com/company/darkthreat" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                  <Linkedin className="w-5 h-5" />
+                <a href="https://linkedin.com/company/darkthreat" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Linkedin className="w-5 h-5" aria-hidden="true" />
                 </a>
-                <a href="https://github.com/darkthreat" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                  <Github className="w-5 h-5" />
+                <a href="https://github.com/darkthreat" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Github className="w-5 h-5" aria-hidden="true" />
                 </a>
               </div>
             </div>
             <div>
               <h3 className="font-montserrat font-semibold text-foreground mb-4">Solutions</h3>
               <ul className="space-y-2">
-                <li><Link to="/dark-web-monitoring" className="text-muted-foreground hover:text-primary">Dark Web Monitoring</Link></li>
+                <li><Link to="/dark-web-monitoring" className="text-muted-foreground hover:text-primary">Dark Web Monitoring Service</Link></li>
                 <li><Link to="/credential-leak-detection" className="text-muted-foreground hover:text-primary">Credential Leak Detection</Link></li>
                 <li><Link to="/data-leak-detection" className="text-muted-foreground hover:text-primary">Data Leak Detection</Link></li>
-                <li><Link to="/compare/darkthreat-vs-darkowl" className="text-muted-foreground hover:text-primary">vs DarkOwl</Link></li>
+                <li><Link to="/threat-intelligence-platform" className="text-muted-foreground hover:text-primary">Threat Intelligence Platform</Link></li>
+                <li><Link to="/compare/darkthreat-vs-darkowl" className="text-muted-foreground hover:text-primary">DarkThreat vs DarkOwl</Link></li>
               </ul>
             </div>
             <div>
@@ -242,6 +230,7 @@ const Pricing = () => {
                 <li><Link to="/" className="text-muted-foreground hover:text-primary">Home</Link></li>
                 <li><Link to="/solution" className="text-muted-foreground hover:text-primary">Solution</Link></li>
                 <li><Link to="/pricing" className="text-muted-foreground hover:text-primary">Pricing</Link></li>
+                <li><Link to="/blog" className="text-muted-foreground hover:text-primary">Blog</Link></li>
                 <li><Link to="/about" className="text-muted-foreground hover:text-primary">About</Link></li>
                 <li><Link to="/contact" className="text-muted-foreground hover:text-primary">Contact</Link></li>
               </ul>
@@ -250,9 +239,9 @@ const Pricing = () => {
               <h3 className="font-montserrat font-semibold text-foreground mb-4">Legal</h3>
               <ul className="space-y-2">
                 <li><Link to="/privacy-policy" className="text-muted-foreground hover:text-primary">Privacy Policy</Link></li>
-                <li><Link to="/platform-terms" className="text-muted-foreground hover:text-primary">Platform Terms of Use</Link></li>
-                <li><Link to="/website-terms" className="text-muted-foreground hover:text-primary">Website Terms of Use</Link></li>
-                <li><a href="#" className="text-muted-foreground hover:text-primary">Support</a></li>
+                <li><Link to="/platform-terms" className="text-muted-foreground hover:text-primary">Platform Terms</Link></li>
+                <li><Link to="/website-terms" className="text-muted-foreground hover:text-primary">Website Terms</Link></li>
+                <li><Link to="/contact" className="text-muted-foreground hover:text-primary">Support</Link></li>
               </ul>
             </div>
           </div>

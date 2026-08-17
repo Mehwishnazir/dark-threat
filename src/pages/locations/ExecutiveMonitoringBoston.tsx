@@ -50,7 +50,7 @@ const faqSchema = {
       name: 'Why is Executive Monitoring critical for businesses in Boston?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Businesses in Boston are increasingly targeted by cybercriminals due to the region\'s economic concentration. Executive Monitoring provides early warning capabilities to detect threats before they escalate into major breaches.'
+        text: 'The BMC investigation confirmed unauthorized access that may have exposed sensitive personal information—showing how compromised accounts can put high-value identities at risk. Massachusetts also has its own data security law (201 CMR 17.00) with explicit security obligations for companies handling residents\' personal information. Executive Monitoring helps Boston organizations gain earlier visibility into leaked credentials and related underground activity tied to leadership and staff.'
       }
     },
     {
@@ -116,7 +116,7 @@ export default function ExecutiveMonitoringBoston() {
             Enterprise Executive Monitoring for <span className="glow-text">Boston</span>
           </h1>
           <p className="mx-auto max-w-3xl text-lg text-muted-foreground leading-relaxed">
-            Gain continuous visibility into external threats targeting your organization. From dark web data leaks to exposed employee credentials, DarkThreat provides actionable intelligence for businesses operating in Boston.
+            Boston Medical Center Health System identified a data breach on March 9, 2025, after unusual activity tied to user accounts pointed to unauthorized access with possible exposure of sensitive personal information. DarkThreat helps Boston organizations monitor executive and credential exposure on the dark web so teams can detect and respond before an incident escalates.
           </p>
           <div className="mt-8 flex flex-wrap gap-4 justify-center">
             <Button className="hero-button" onClick={() => document.getElementById('regional-inquiry')?.scrollIntoView({ behavior: 'smooth' })}>
@@ -204,7 +204,7 @@ export default function ExecutiveMonitoringBoston() {
           <div className="space-y-6">
             <div className="rounded-2xl border border-border bg-card/50 p-6">
               <h3 className="font-montserrat font-bold text-foreground mb-2">Why is Executive Monitoring critical for businesses in Boston?</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">Businesses in Boston are increasingly targeted by cybercriminals due to the region's economic concentration. Executive Monitoring provides early warning capabilities to detect threats before they escalate into major breaches.</p>
+              <p className="text-muted-foreground text-sm leading-relaxed">The BMC investigation confirmed unauthorized access that may have exposed sensitive personal information—showing how compromised accounts can put high-value identities at risk. Massachusetts also has its own data security law (201 CMR 17.00) with explicit security obligations for companies handling residents' personal information. Executive Monitoring helps Boston organizations gain earlier visibility into leaked credentials and related underground activity tied to leadership and staff.</p>
             </div>
             <div className="rounded-2xl border border-border bg-card/50 p-6">
               <h3 className="font-montserrat font-bold text-foreground mb-2">How quickly can DarkThreat detect a breach involving our Boston operations?</h3>

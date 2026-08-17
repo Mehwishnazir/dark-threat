@@ -79,14 +79,14 @@ const NotFound = () => {
             <span className="font-montserrat font-bold text-foreground">DARKTHREAT</span>
           </div>
           <div className="flex gap-4">
-            <a href="https://linkedin.com/company/darkthreat" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-              <Linkedin className="w-5 h-5" />
+            <a href="https://linkedin.com/company/darkthreat" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn" className="text-muted-foreground hover:text-primary transition-colors">
+              <Linkedin className="w-5 h-5" aria-hidden="true" />
             </a>
-            <a href="https://twitter.com/DarkThreatAI" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-              <Twitter className="w-5 h-5" />
+            <a href="https://twitter.com/DarkThreatAI" target="_blank" rel="noopener noreferrer" aria-label="Twitter" title="Twitter" className="text-muted-foreground hover:text-primary transition-colors">
+              <Twitter className="w-5 h-5" aria-hidden="true" />
             </a>
-            <a href="https://github.com/darkthreat" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-              <Github className="w-5 h-5" />
+            <a href="https://github.com/darkthreat" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub" className="text-muted-foreground hover:text-primary transition-colors">
+              <Github className="w-5 h-5" aria-hidden="true" />
             </a>
           </div>
           <p className="text-muted-foreground text-sm">

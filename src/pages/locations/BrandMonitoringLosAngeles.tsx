@@ -50,7 +50,7 @@ const faqSchema = {
       name: 'Why is Brand Monitoring critical for businesses in Los Angeles?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Businesses in Los Angeles are increasingly targeted by cybercriminals due to the region\'s economic concentration. Brand Monitoring provides early warning capabilities to detect threats before they escalate into major breaches.'
+        text: 'Disney is headquartered in Burbank, in the Los Angeles area—and the incident shows how quickly trusted brand channels can be weaponized for fraud. Brand Monitoring helps LA organizations surface impersonation and abuse early, before fake promotions or lookalike activity reach a large audience.'
       }
     },
     {
@@ -122,7 +122,7 @@ export default function BrandMonitoringLosAngeles() {
             Enterprise Brand Monitoring for <span className="glow-text">Los Angeles</span>
           </h1>
           <p className="mx-auto max-w-3xl text-lg text-muted-foreground leading-relaxed">
-            Gain continuous visibility into external threats targeting your organization. From dark web data leaks to exposed employee credentials, DarkThreat provides actionable intelligence for businesses operating in Los Angeles.
+            In October 2025, Disney’s official Instagram and Facebook accounts were hijacked and used to promote a fake cryptocurrency called “Disney Solana,” exposing millions of followers to the scam before the accounts were recovered. DarkThreat helps Los Angeles–area organizations monitor brand impersonation, dark web signals, and related digital risk before abuse spreads.
           </p>
           <div className="mt-8 flex flex-wrap gap-4 justify-center">
             <Button className="hero-button" onClick={() => document.getElementById('regional-inquiry')?.scrollIntoView({ behavior: 'smooth' })}>
@@ -210,7 +210,7 @@ export default function BrandMonitoringLosAngeles() {
           <div className="space-y-6">
             <div className="rounded-2xl border border-border bg-card/50 p-6">
               <h3 className="font-montserrat font-bold text-foreground mb-2">Why is Brand Monitoring critical for businesses in Los Angeles?</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">Businesses in Los Angeles are increasingly targeted by cybercriminals due to the region's economic concentration. Brand Monitoring provides early warning capabilities to detect threats before they escalate into major breaches.</p>
+              <p className="text-muted-foreground text-sm leading-relaxed">Disney is headquartered in Burbank, in the Los Angeles area—and the incident shows how quickly trusted brand channels can be weaponized for fraud. Brand Monitoring helps LA organizations surface impersonation and abuse early, before fake promotions or lookalike activity reach a large audience.</p>
             </div>
             <div className="rounded-2xl border border-border bg-card/50 p-6">
               <h3 className="font-montserrat font-bold text-foreground mb-2">How quickly can DarkThreat detect a breach involving our Los Angeles operations?</h3>

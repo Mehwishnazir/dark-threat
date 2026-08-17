@@ -6,12 +6,10 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Mail, Phone, MapPin, Clock, Shield, Twitter, Linkedin, Github } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import TrialModal from '@/components/TrialModal';
 import { useToast } from '@/components/ui/use-toast';
 import { submitLeadForm } from '@/utils/formSubmit';
 
 const ContactUs = () => {
-  const [isTrialModalOpen, setIsTrialModalOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: '',

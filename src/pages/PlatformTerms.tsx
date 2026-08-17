@@ -10,6 +10,11 @@ export default function PlatformTerms() {
           <span>Back to Home</span>
         </Link>
 
+        <nav className="flex flex-wrap gap-x-4 gap-y-2 text-sm text-muted-foreground mb-8" aria-label="Related legal documents">
+          <Link to="/privacy-policy" className="hover:text-primary">Privacy Policy</Link>
+          <Link to="/website-terms" className="hover:text-primary">Website Terms of Use</Link>
+        </nav>
+
         <div className="space-y-8">
           <div>
             <h1 className="text-4xl font-montserrat font-bold text-foreground text-primary mb-4">Platform Terms of Use</h1>
@@ -134,7 +139,7 @@ export default function PlatformTerms() {
                   DarkThreat.ai collects, processes, and stores user data to provide reliable monitoring and threat intelligence services. All user information, including login credentials, account details, and monitored results, is kept strictly confidential. The platform uses strong security measures to protect data from unauthorized access, theft, or misuse. Users are also responsible for keeping their account information secure and private.
                 </p>
                 <p>
-                  All intelligence collected from dark web sources is handled with strict confidentiality. This ensures ethical monitoring and prevents sensitive information from being misused. Users are encouraged to review the Privacy Policy, which explains in detail how data is collected, stored, processed, and protected.
+                  All intelligence collected from dark web sources is handled with strict confidentiality. This ensures ethical monitoring and prevents sensitive information from being misused. Users are encouraged to review the <Link to="/privacy-policy" className="text-primary hover:underline">Privacy Policy</Link>, which explains in detail how data is collected, stored, processed, and protected.
                 </p>
                 <p>
                   DarkThreat.ai is committed to maintaining privacy and security at all times. Users can trust that their personal information and the intelligence provided by the platform will be managed safely and professionally. Careful handling of data ensures compliance with legal standards, supports the integrity of the platform, and helps keep the services reliable and effective for all Users.

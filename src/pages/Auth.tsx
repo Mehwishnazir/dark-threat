@@ -2,11 +2,11 @@ import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { supabase } from '@/integrations/supabase/client';
-import { useNavigate } from 'react-router-dom';
-import { AlertCircle, Loader2 } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
+import { AlertCircle, Info, Loader2 } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import TrialProcessingDialog from '@/components/TrialProcessingDialog';
 
 export default function Auth() {
@@ -14,17 +14,6 @@ export default function Auth() {
   const [error, setError] = useState('');
   const [showProcessingDialog, setShowProcessingDialog] = useState(false);
   const navigate = useNavigate();
-  
-  const [signUpData, setSignUpData] = useState({
-    email: '',
-    password: '',
-    firstName: '',
-    lastName: '',
-    companyName: '',
-    companyDomain: '',
-    country: '',
-    jobTitle: '',
-  });
 
   const [signInData, setSignInData] = useState({
     email: '',
@@ -57,81 +46,29 @@ export default function Auth() {
     checkAuth();
   }, [navigate]);
 
-  const handleSignUp = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-    setError('');
-
-    try {
-      const { data: authData, error: authError } = await supabase.auth.signUp({
-        email: signUpData.email,
-        password: signUpData.password,
-          options: {
-            emailRedirectTo: `${window.location.origin}/dashboard`,
-            data: {
-              first_name: signUpData.firstName,
-              last_name: signUpData.lastName,
-              company_name: signUpData.companyName,
-              company_domain: signUpData.companyDomain,
-              country: signUpData.country,
-              job_title: signUpData.jobTitle,
-            }
-          }
-      });
-
-      if (authError) throw authError;
-
-      if (authData.user) {
-        console.log('User successfully registered:', signUpData.email);
-
-        // Send custom confirmation email
-        const { error: confirmEmailError } = await supabase.functions.invoke('send-confirmation-email', {
-          body: {
-            userEmail: signUpData.email,
-            firstName: signUpData.firstName,
-            token: authData.user.id, // Use user ID as token
-            tokenHash: authData.user.id, // This should be the actual token hash from Supabase
-            redirectTo: `${window.location.origin}/dashboard`
-          }
-        });
-
-        if (confirmEmailError) {
-          console.error('Confirmation email sending failed:', confirmEmailError);
-        }
-
-        // Also send activation email for admin notification
-        const { error: emailError } = await supabase.functions.invoke('send-activation-email', {
-          body: {
-            userEmail: signUpData.email,
-            firstName: signUpData.firstName,
-            lastName: signUpData.lastName,
-            companyName: signUpData.companyName,
-          }
-        });
-
-        if (emailError) {
-          console.error('Activation email sending failed:', emailError);
-        }
-
-        // Show processing dialog instead of navigating to dashboard
-        setShowProcessingDialog(true);
-      }
-    } catch (error: any) {
-      setError(error.message || 'An error occurred during signup');
-    } finally {
-      setLoading(false);
-    }
-  };
-
   const handleSignIn = async (e: React.FormEvent) => {
     e.preventDefault();
-    setLoading(true);
     setError('');
+
+    const email = signInData.email.trim();
+    const password = signInData.password;
+
+    if (!email || !password) {
+      setError('Please fill in all required fields.');
+      return;
+    }
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setError('Please enter a valid email address.');
+      return;
+    }
+
+    setLoading(true);
 
     try {
       const { data, error } = await supabase.auth.signInWithPassword({
-        email: signInData.email,
-        password: signInData.password,
+        email,
+        password,
       });
 
       if (error) throw error;
@@ -149,158 +86,80 @@ export default function Auth() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5 flex items-center justify-center p-4">
+      <Helmet>
+        <title>Sign In | DarkThreat.ai</title>
+      </Helmet>
       <Card className="w-full max-w-md">
         <CardHeader className="text-center">
           <CardTitle className="text-2xl font-montserrat">DarkThreat</CardTitle>
           <CardDescription>Access your cybersecurity intelligence platform</CardDescription>
         </CardHeader>
-        <CardContent>
-          <Tabs defaultValue="signup" className="w-full">
-            <TabsList className="grid w-full grid-cols-2">
-              <TabsTrigger value="signup">Start Free Trial</TabsTrigger>
-              <TabsTrigger value="signin">Sign In</TabsTrigger>
-            </TabsList>
-            
-            <TabsContent value="signup">
-              <form onSubmit={handleSignUp} className="space-y-4">
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium mb-1">First Name</label>
-                    <Input
-                      type="text"
-                      value={signUpData.firstName}
-                      onChange={(e) => setSignUpData({...signUpData, firstName: e.target.value})}
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium mb-1">Last Name</label>
-                    <Input
-                      type="text"
-                      value={signUpData.lastName}
-                      onChange={(e) => setSignUpData({...signUpData, lastName: e.target.value})}
-                      required
-                    />
-                  </div>
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium mb-1">Email</label>
-                  <Input
-                    type="email"
-                    value={signUpData.email}
-                    onChange={(e) => setSignUpData({...signUpData, email: e.target.value})}
-                    required
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium mb-1">Password</label>
-                  <Input
-                    type="password"
-                    value={signUpData.password}
-                    onChange={(e) => setSignUpData({...signUpData, password: e.target.value})}
-                    required
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium mb-1">Company Name</label>
-                  <Input
-                    type="text"
-                    value={signUpData.companyName}
-                    onChange={(e) => setSignUpData({...signUpData, companyName: e.target.value})}
-                    required
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium mb-1">Company Domain</label>
-                  <Input
-                    type="text"
-                    placeholder="example.com"
-                    value={signUpData.companyDomain}
-                    onChange={(e) => setSignUpData({...signUpData, companyDomain: e.target.value})}
-                    required
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium mb-1">Country</label>
-                  <Input
-                    type="text"
-                    value={signUpData.country}
-                    onChange={(e) => setSignUpData({...signUpData, country: e.target.value})}
-                    required
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium mb-1">Job Title</label>
-                  <Input
-                    type="text"
-                    value={signUpData.jobTitle}
-                    onChange={(e) => setSignUpData({...signUpData, jobTitle: e.target.value})}
-                    required
-                  />
-                </div>
+        <CardContent className="space-y-4">
+          <Alert>
+            <Info className="h-4 w-4" />
+            <AlertDescription>
+              Account signup and login are temporarily unavailable. To get started,{' '}
+              <Link to="/contact" className="font-medium text-primary underline underline-offset-2 hover:text-primary/80">
+                book a demo or contact sales
+              </Link>
+              .
+            </AlertDescription>
+          </Alert>
 
-                {error && (
-                  <Alert variant="destructive">
-                    <AlertCircle className="h-4 w-4" />
-                    <AlertDescription>{error}</AlertDescription>
-                  </Alert>
-                )}
+          <form onSubmit={handleSignIn} noValidate className="space-y-4">
+            <div>
+              <label htmlFor="signin-email" className="block text-sm font-medium mb-1">Email</label>
+              <Input
+                id="signin-email"
+                name="email"
+                type="email"
+                value={signInData.email}
+                onChange={(e) => setSignInData({ ...signInData, email: e.target.value })}
+                required
+                aria-invalid={!!error}
+              />
+            </div>
 
-                <Button type="submit" className="w-full" disabled={loading}>
-                  {loading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-                  Start 7-Day Free Trial
-                </Button>
-              </form>
-            </TabsContent>
-            
-            <TabsContent value="signin">
-              <form onSubmit={handleSignIn} className="space-y-4">
-                <div>
-                  <label className="block text-sm font-medium mb-1">Email</label>
-                  <Input
-                    type="email"
-                    value={signInData.email}
-                    onChange={(e) => setSignInData({...signInData, email: e.target.value})}
-                    required
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium mb-1">Password</label>
-                  <Input
-                    type="password"
-                    value={signInData.password}
-                    onChange={(e) => setSignInData({...signInData, password: e.target.value})}
-                    required
-                  />
-                </div>
+            <div>
+              <label htmlFor="signin-password" className="block text-sm font-medium mb-1">Password</label>
+              <Input
+                id="signin-password"
+                name="password"
+                type="password"
+                value={signInData.password}
+                onChange={(e) => setSignInData({ ...signInData, password: e.target.value })}
+                required
+                aria-invalid={!!error}
+              />
+            </div>
 
-                {error && (
-                  <Alert variant="destructive">
-                    <AlertCircle className="h-4 w-4" />
-                    <AlertDescription>{error}</AlertDescription>
-                  </Alert>
-                )}
+            <div className="text-right">
+              <Link
+                to="/forgot-password"
+                className="text-sm text-primary hover:text-primary/80 font-medium"
+              >
+                Forgot Password?
+              </Link>
+            </div>
 
-                <Button type="submit" className="w-full" disabled={loading}>
-                  {loading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-                  Sign In
-                </Button>
-              </form>
-            </TabsContent>
-          </Tabs>
+            {error && (
+              <Alert variant="destructive">
+                <AlertCircle className="h-4 w-4" />
+                <AlertDescription>{error}</AlertDescription>
+              </Alert>
+            )}
+
+            <Button type="submit" className="w-full" disabled={loading}>
+              {loading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+              Sign In
+            </Button>
+          </form>
         </CardContent>
       </Card>
-      
-      <TrialProcessingDialog 
-        open={showProcessingDialog} 
-        onClose={() => setShowProcessingDialog(false)} 
+
+      <TrialProcessingDialog
+        open={showProcessingDialog}
+        onClose={() => setShowProcessingDialog(false)}
       />
     </div>
   );
