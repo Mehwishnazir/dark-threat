@@ -7,7 +7,7 @@
  * re-asks after 12 months.
  */
 
-const GA_ID = "G-DLELJ5K954";
+const GA_ID = "G-94289DG66E";
 export const CONSENT_KEY = "cookie_consent";
 const CONSENT_MAX_AGE_MS = 365 * 24 * 60 * 60 * 1000; // 12 months
 
