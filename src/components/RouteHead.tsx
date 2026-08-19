@@ -97,6 +97,7 @@ export default function RouteHead() {
   return (
     <Helmet>
       <link rel="canonical" href={url} />
+      <meta name="description" content={SITE_DESCRIPTION} />
       <meta name="robots" content="index, follow" />
       <meta property="og:url" content={url} />
       <script type="application/ld+json">

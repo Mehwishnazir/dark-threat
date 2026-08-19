@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 
-export const SITE_URL = "https://www.darkthreat.ai";
+export const SITE_URL = "https://darkthreat.ai";
 
 export type SEOProps = {
   title: string;
@@ -12,7 +12,7 @@ export type SEOProps = {
 
 /**
  * Reusable per-route SEO head. Emits title, description, self-referencing
- * canonical (absolute, www host), and og/twitter mirrors. Global JSON-LD
+ * canonical (absolute, apex host), and og/twitter mirrors. Global JSON-LD
  * (Organization / SoftwareApplication / BreadcrumbList) lives in RouteHead.
  */
 export default function SEO({

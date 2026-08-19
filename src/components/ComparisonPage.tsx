@@ -46,7 +46,7 @@ export default function ComparisonPage({
   pricingNote,
   differentiators,
 }: ComparisonPageProps) {
-  const canonical = `https://www.darkthreat.ai/compare/${slug}`;
+  const canonical = `https://darkthreat.ai/compare/${slug}`;
 
   return (
     <div className="min-h-screen bg-background">
