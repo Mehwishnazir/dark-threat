@@ -1,4 +1,5 @@
 
+import { lazy, Suspense } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -25,8 +26,6 @@ import TrialComingSoon from "./pages/TrialComingSoon";
 import Auth from "./pages/Auth";
 import AdminDashboard from "./pages/AdminDashboard";
 
-import Blog from "./pages/Blog";
-import BlogSlugRedirect from "./components/BlogSlugRedirect";
 import DarkWebMonitoring from "./pages/DarkWebMonitoring";
 import CredentialLeakDetection from "./pages/CredentialLeakDetection";
 import DarkWebDataRemoval from "./pages/DarkWebDataRemoval";
@@ -46,7 +45,6 @@ import ScrollToTop from "./components/ScrollToTop";
 import CookieConsent from "./components/CookieConsent";
 import CookieSettingsLink from "./components/CookieSettingsLink";
 import ChatWidget from "./components/ChatWidget";
-import Author from "./pages/Author";
 import {
   IndustriesPage,
   FinancialServicesIndustry,
@@ -73,6 +71,12 @@ import {
   ExecutiveMonitoringBoston,
   DomainMonitoringAustin,
 } from "./pages/locations";
+
+// Blog routes pull in the full post corpus (~13 MB), so they load on demand.
+const Blog = lazy(() => import("./pages/Blog"));
+const BlogSlugRedirect = lazy(() => import("./components/BlogSlugRedirect"));
+const Author = lazy(() => import("./pages/Author"));
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -87,6 +91,7 @@ const App = () => (
           <CookieConsent />
           <CookieSettingsLink />
           <ChatWidget />
+          <Suspense fallback={<div className="min-h-screen bg-background" />}>
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/solution" element={<Solution />} />
@@ -155,6 +160,7 @@ const App = () => (
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
+          </Suspense>
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>
