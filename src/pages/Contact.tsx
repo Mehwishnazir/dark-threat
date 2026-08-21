@@ -29,7 +29,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AnimatedBackground from '@/components/AnimatedBackground';
 import ThreatSphere from '@/components/ThreatSphere';
 import FinalCTA from '@/components/FinalCTA';
-import { submitLeadForm } from '@/utils/formSubmit';
+import { submitContactForm } from '@/utils/contactSubmit';
 
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -40,6 +40,7 @@ const Contact = () => {
     company: '',
     interest: 'Dark Web Monitoring',
     message: '',
+    website: '',
   });
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
 
@@ -65,19 +66,26 @@ const Contact = () => {
 
     setIsSubmitting(true);
     try {
-      await submitLeadForm({
-        formType: 'Contact Us Form',
+      await submitContactForm({
         name,
         email,
         company: formData.company,
         interest: formData.interest,
         message,
+        website: formData.website,
       });
       toast({
         title: "Message Sent Successfully",
         description: "Thank you for contacting DarkThreat's Threat Operations Center. We will respond within 24 hours.",
       });
-      setFormData({ name: '', email: '', company: '', interest: 'Dark Web Monitoring', message: '' });
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        interest: 'Dark Web Monitoring',
+        message: '',
+        website: '',
+      });
       setFormError('');
     } catch (err) {
       const failureMessage = "There was an error sending your message. Please try again or contact us directly.";
@@ -272,6 +280,17 @@ const Contact = () => {
                 <Send className="w-6 h-6 text-primary" /> Send a Message
               </h2>
               <form onSubmit={handleSubmit} noValidate className="space-y-6">
+                <div className="absolute -left-[9999px]" aria-hidden="true">
+                  <Label htmlFor="website">Website</Label>
+                  <Input
+                    id="website"
+                    name="website"
+                    value={formData.website}
+                    onChange={handleChange}
+                    tabIndex={-1}
+                    autoComplete="off"
+                  />
+                </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <Label htmlFor="name" className="text-sm font-semibold text-foreground">Name *</Label>
