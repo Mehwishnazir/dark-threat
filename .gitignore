@@ -16,9 +16,12 @@
 # next.js
 /.next/
 /out/
+nextjs-app/.next/
+nextjs-app/node_modules/
 
 # production
 /build
+/dist
 
 # misc
 .DS_Store

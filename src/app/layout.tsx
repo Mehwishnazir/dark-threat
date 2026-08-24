@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { Kumbh_Sans, Montserrat } from "next/font/google";
 import AppHeader from "@/components/AppHeader";
+import ChatWidget from "@/components/ChatWidget";
 import CookieConsent from "@/components/CookieConsent";
 import CookieSettingsLink from "@/components/CookieSettingsLink";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
@@ -84,6 +85,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <AppHeader />
         <div className="flex-1 pt-20">{children}</div>
         <SiteFooter />
+        <ChatWidget />
         <CookieConsent />
         <CookieSettingsLink />
       </body>
