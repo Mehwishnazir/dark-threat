@@ -58,6 +58,12 @@ body {
   font-family: var(--font-family-kumbh), sans-serif;
 }
 
+/* Header is position:fixed (out of flow). Inner pages need clearance;
+   the homepage hero is full-viewport like Vite and uses its own pt-24. */
+.site-main:not(:has(.home-page)) {
+  padding-top: 5rem;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-family-montserrat), sans-serif;
   font-weight: 700;

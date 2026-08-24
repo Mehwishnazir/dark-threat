@@ -83,7 +83,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         />
         <GoogleAnalytics />
         <AppHeader />
-        <div className="flex-1 pt-20">{children}</div>
+        <div className="flex-1 site-main">{children}</div>
         <SiteFooter />
         <ChatWidget />
         <CookieConsent />

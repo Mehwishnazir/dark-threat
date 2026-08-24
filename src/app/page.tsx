@@ -25,10 +25,10 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-background relative">
+    <div className="home-page min-h-screen bg-background relative">
       <JsonLd data={[orgJsonLd, websiteJsonLd, softwareAppJsonLd]} />
-      {/* SECTION 1: Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden hero-bg-layered pt-24 -mt-20">
+      {/* SECTION 1: Hero Section — full-bleed under fixed header, same as Vite Index.tsx */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden hero-bg-layered pt-24">
         <div aria-hidden className="absolute inset-0 circuit-pattern pointer-events-none opacity-50" />
         <AnimatedBackground />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/60 to-background pointer-events-none" />
