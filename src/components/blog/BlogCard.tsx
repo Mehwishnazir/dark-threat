@@ -1,46 +1,45 @@
-import { Link } from 'react-router-dom';
-import { Calendar, Clock, ArrowRight } from 'lucide-react';
+"use client";
 
-export interface BlogPost {
-  id: string;
-  slug: string;
-  title: string;
-  excerpt: string;
-  featuredImage: string;
-  category: string;
-  publishDate: string;
-  readingTime: string;
-  author?: string;
-}
+import Link from "next/link";
+import { useState } from "react";
+import { Calendar, Clock, ArrowRight } from "lucide-react";
+import type { BlogPost } from "@/lib/blog/types";
+import {
+  BLOG_IMAGE_FALLBACKS,
+  pickBlogImageFallback,
+  resolveFeaturedImage,
+} from "@/lib/blog/resolveFeaturedImage";
 
-interface BlogCardProps {
-  post: BlogPost;
-}
+export type { BlogPost } from "@/lib/blog/types";
 
-const FALLBACK_IMAGE = '/dark-threat-1.webp';
+export default function BlogCard({ post }: { post: BlogPost }) {
+  const initial = resolveFeaturedImage(post.featuredImage, post.slug);
+  const [src, setSrc] = useState(initial);
 
-const BlogCard = ({ post }: BlogCardProps) => {
   return (
     <article className="blog-card">
-      {/* Featured Image */}
-      <Link to={`/blog/${post.slug}`} className="blog-card__image-wrap">
+      <Link href={`/blog/${post.slug}`} className="blog-card__image-wrap">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={post.featuredImage}
+          src={src}
           alt={post.title}
-          width="800"
-          height="450"
+          width={800}
+          height={450}
           loading="lazy"
           decoding="async"
-          onError={(e) => {
-            const img = e.currentTarget;
-            if (img.src.indexOf(FALLBACK_IMAGE) === -1) img.src = FALLBACK_IMAGE;
-          }}
           className="blog-card__image"
+          onError={() => {
+            const current = BLOG_IMAGE_FALLBACKS.indexOf(
+              src as (typeof BLOG_IMAGE_FALLBACKS)[number]
+            );
+            const next =
+              current >= 0
+                ? BLOG_IMAGE_FALLBACKS[(current + 1) % BLOG_IMAGE_FALLBACKS.length]
+                : pickBlogImageFallback(post.slug);
+            if (next !== src) setSrc(next);
+          }}
         />
-
-        {/* Category Badge */}
         <span className="blog-card__category">{post.category}</span>
-        {/* Hover overlay */}
         <div className="blog-card__overlay">
           <span className="blog-card__read-cta">
             Read Article <ArrowRight className="blog-card__arrow" />
@@ -48,15 +47,11 @@ const BlogCard = ({ post }: BlogCardProps) => {
         </div>
       </Link>
 
-      {/* Content */}
       <div className="blog-card__body">
-        <Link to={`/blog/${post.slug}`} className="blog-card__title-link">
+        <Link href={`/blog/${post.slug}`} className="blog-card__title-link">
           <h2 className="blog-card__title">{post.title}</h2>
         </Link>
-
         <p className="blog-card__excerpt">{post.excerpt}</p>
-
-        {/* Meta Row */}
         <div className="blog-card__meta">
           <span className="blog-card__meta-item">
             <Calendar className="blog-card__meta-icon" />
@@ -70,6 +65,4 @@ const BlogCard = ({ post }: BlogCardProps) => {
       </div>
     </article>
   );
-};
-
-export default BlogCard;
+}

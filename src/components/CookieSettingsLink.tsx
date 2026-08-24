@@ -1,10 +1,9 @@
+"use client";
+
 import { Cookie } from "lucide-react";
 
 /**
- * Persistent floating "Cookie Settings" trigger visible site-wide.
- * Because footers in this project are duplicated across pages, this
- * floating link guarantees the required "reopen preference center"
- * affordance on every route.
+ * Persistent floating "Cookie Settings" trigger — reopens the preference center.
  */
 export default function CookieSettingsLink() {
   return (

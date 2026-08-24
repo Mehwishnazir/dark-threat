@@ -1,21 +1,8 @@
-import { useCallback, useEffect, useRef, useState } from "react";
-import { X, Cookie, ShieldCheck } from "lucide-react";
+"use client";
+
+import { useCallback, useEffect, useState } from "react";
+import { Cookie, ShieldCheck, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Switch } from "@/components/ui/switch";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogDescription,
-  DialogFooter,
-} from "@/components/ui/dialog";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
 import {
   applyConsent,
   getStoredConsent,
@@ -31,20 +18,12 @@ export default function CookieConsent() {
   const [bannerVisible, setBannerVisible] = useState(false);
   const [prefsOpen, setPrefsOpen] = useState(false);
   const [prefs, setPrefs] = useState<Prefs>(DEFAULT_PREFS);
-  const bannerRef = useRef<HTMLDivElement>(null);
 
   const openPrefs = useCallback((existing?: Prefs) => {
     setPrefs(existing ?? DEFAULT_PREFS);
     setPrefsOpen(true);
     setBannerVisible(false);
   }, []);
-
-  const handlePrefsOpenChange = (open: boolean) => {
-    setPrefsOpen(open);
-    if (!open && !getStoredConsent()) {
-      setBannerVisible(true);
-    }
-  };
 
   useEffect(() => {
     const stored = getStoredConsent();
@@ -59,7 +38,6 @@ export default function CookieConsent() {
       setBannerVisible(true);
     }
 
-    // Expose global opener for footer/CookieSettingsLink
     window.openCookieSettings = () => {
       const s = getStoredConsent();
       openPrefs(
@@ -69,9 +47,10 @@ export default function CookieConsent() {
               marketing: s.categories.marketing,
               functional: s.categories.functional,
             }
-          : DEFAULT_PREFS,
+          : DEFAULT_PREFS
       );
     };
+
     return () => {
       if (window.openCookieSettings) delete window.openCookieSettings;
     };
@@ -98,11 +77,15 @@ export default function CookieConsent() {
     setPrefsOpen(false);
   };
 
+  const closePrefs = () => {
+    setPrefsOpen(false);
+    if (!getStoredConsent()) setBannerVisible(true);
+  };
+
   return (
-    <TooltipProvider>
+    <>
       {bannerVisible && (
         <div
-          ref={bannerRef}
           role="dialog"
           aria-live="polite"
           aria-label="Cookie consent"
@@ -118,12 +101,9 @@ export default function CookieConsent() {
                   </h2>
                 </div>
                 <p className="text-xs sm:text-sm text-muted-foreground leading-snug sm:leading-relaxed">
-                  We use cookies to keep the site running, understand usage, and improve your
-                  experience. You choose what to allow.{" "}
-                  <a
-                    href="/privacy-policy"
-                    className="text-primary underline hover:no-underline"
-                  >
+                  We use cookies to keep the site running, understand usage, and improve your experience.
+                  You choose what to allow.{" "}
+                  <a href="/privacy-policy" className="text-primary underline hover:no-underline">
                     Learn more
                   </a>
                   .
@@ -140,18 +120,10 @@ export default function CookieConsent() {
             </div>
 
             <div className="mt-3 sm:mt-4 flex flex-col sm:flex-row gap-2 sm:gap-3 sm:justify-end">
-              <Button
-                variant="outline"
-                onClick={() => openPrefs()}
-                className="min-h-[40px] text-sm"
-              >
+              <Button variant="outline" onClick={() => openPrefs()} className="min-h-[40px] text-sm">
                 Customize
               </Button>
-              <Button
-                variant="outline"
-                onClick={rejectAll}
-                className="min-h-[40px] text-sm"
-              >
+              <Button variant="outline" onClick={rejectAll} className="min-h-[40px] text-sm">
                 Reject Non-Essential
               </Button>
               <Button
@@ -165,60 +137,80 @@ export default function CookieConsent() {
         </div>
       )}
 
-      <Dialog open={prefsOpen} onOpenChange={handlePrefsOpenChange}>
-        <DialogContent className="max-w-lg">
-          <DialogHeader>
-            <DialogTitle className="flex items-center gap-2">
-              <ShieldCheck className="w-5 h-5 text-primary" aria-hidden />
-              Cookie Preferences
-            </DialogTitle>
-            <DialogDescription>
-              Choose which categories of cookies you allow. You can change this anytime
-              from the "Cookie Settings" link in the footer.
-            </DialogDescription>
-          </DialogHeader>
+      {prefsOpen && (
+        <div
+          className="fixed inset-0 z-[110] flex items-center justify-center p-4 bg-black/60"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Cookie Preferences"
+        >
+          <div className="w-full max-w-lg rounded-2xl border border-border bg-card p-6 shadow-2xl">
+            <div className="flex items-start justify-between gap-4 mb-4">
+              <div>
+                <h2 className="flex items-center gap-2 text-lg font-montserrat font-bold text-foreground">
+                  <ShieldCheck className="w-5 h-5 text-primary" aria-hidden />
+                  Cookie Preferences
+                </h2>
+                <p className="text-sm text-muted-foreground mt-1">
+                  Choose which categories of cookies you allow. You can change this anytime from Cookie
+                  Settings.
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={closePrefs}
+                aria-label="Close cookie preferences"
+                className="text-muted-foreground hover:text-foreground min-h-[44px] min-w-[44px] inline-flex items-center justify-center"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
 
-          <div className="space-y-4 py-2">
-            <CategoryRow
-              title="Strictly Necessary"
-              description="Required for the site to function (security, session, consent). Cannot be turned off."
-              checked
-              disabled
-              tooltip="These cookies are essential and don't track you across sites."
-            />
-            <CategoryRow
-              title="Analytics"
-              description="Anonymous usage statistics that help us improve the site (e.g. Google Analytics)."
-              checked={prefs.analytics}
-              onChange={(v) => setPrefs((p) => ({ ...p, analytics: v }))}
-            />
-            <CategoryRow
-              title="Marketing / Advertising"
-              description="Used to measure marketing campaigns and personalize ads."
-              checked={prefs.marketing}
-              onChange={(v) => setPrefs((p) => ({ ...p, marketing: v }))}
-            />
-            <CategoryRow
-              title="Functional / Preferences"
-              description="Remember choices like language and personalization."
-              checked={prefs.functional}
-              onChange={(v) => setPrefs((p) => ({ ...p, functional: v }))}
-            />
+            <div className="space-y-3 py-2">
+              <CategoryRow
+                title="Strictly Necessary"
+                description="Required for the site to function (security, session, consent). Cannot be turned off."
+                checked
+                disabled
+              />
+              <CategoryRow
+                title="Analytics"
+                description="Anonymous usage statistics that help us improve the site (e.g. Google Analytics)."
+                checked={prefs.analytics}
+                onChange={(v) => setPrefs((p) => ({ ...p, analytics: v }))}
+              />
+              <CategoryRow
+                title="Marketing / Advertising"
+                description="Used to measure marketing campaigns and personalize ads."
+                checked={prefs.marketing}
+                onChange={(v) => setPrefs((p) => ({ ...p, marketing: v }))}
+              />
+              <CategoryRow
+                title="Functional / Preferences"
+                description="Remember choices like language and personalization."
+                checked={prefs.functional}
+                onChange={(v) => setPrefs((p) => ({ ...p, functional: v }))}
+              />
+            </div>
+
+            <div className="mt-6 flex flex-col sm:flex-row gap-2 sm:justify-end">
+              <Button variant="outline" onClick={rejectAll}>
+                Reject Non-Essential
+              </Button>
+              <Button variant="outline" onClick={acceptAll}>
+                Accept All
+              </Button>
+              <Button
+                onClick={savePrefs}
+                className="bg-primary text-primary-foreground hover:bg-primary/90"
+              >
+                Save My Preferences
+              </Button>
+            </div>
           </div>
-
-          <DialogFooter className="flex-col sm:flex-row gap-2">
-            <Button variant="outline" onClick={rejectAll}>Reject Non-Essential</Button>
-            <Button variant="outline" onClick={acceptAll}>Accept All</Button>
-            <Button
-              onClick={savePrefs}
-              className="bg-primary text-primary-foreground hover:bg-primary/90"
-            >
-              Save My Preferences
-            </Button>
-          </DialogFooter>
-        </DialogContent>
-      </Dialog>
-    </TooltipProvider>
+        </div>
+      )}
+    </>
   );
 }
 
@@ -228,43 +220,27 @@ function CategoryRow({
   checked,
   onChange,
   disabled,
-  tooltip,
 }: {
   title: string;
   description: string;
   checked: boolean;
   onChange?: (v: boolean) => void;
   disabled?: boolean;
-  tooltip?: string;
 }) {
   return (
-    <div className="flex items-start justify-between gap-4 rounded-lg border border-border/60 bg-card/50 p-3">
+    <label className="flex items-start justify-between gap-4 rounded-lg border border-border/60 bg-card/50 p-3 cursor-pointer">
       <div className="flex-1 min-w-0">
-        <div className="flex items-center gap-2">
-          <p className="font-semibold text-sm text-foreground">{title}</p>
-          {tooltip && (
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <button
-                  type="button"
-                  aria-label={`About ${title} cookies`}
-                  className="text-xs text-muted-foreground underline decoration-dotted"
-                >
-                  why?
-                </button>
-              </TooltipTrigger>
-              <TooltipContent side="top">{tooltip}</TooltipContent>
-            </Tooltip>
-          )}
-        </div>
+        <p className="font-semibold text-sm text-foreground">{title}</p>
         <p className="text-xs text-muted-foreground mt-0.5">{description}</p>
       </div>
-      <Switch
+      <input
+        type="checkbox"
+        className="mt-1 h-4 w-4 accent-[hsl(var(--primary))]"
         checked={checked}
-        onCheckedChange={onChange}
         disabled={disabled}
+        onChange={(e) => onChange?.(e.target.checked)}
         aria-label={`${title} cookies`}
       />
-    </div>
+    </label>
   );
 }

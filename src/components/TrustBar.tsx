@@ -1,16 +1,16 @@
 const COMPANIES = [
-  'Fortune 500 Financial Group',
-  'Global Healthcare Network',
-  'Enterprise Tech Corp',
-  'National Law Partners',
-  'Apex Retail Group',
-  'Federal Systems LLC',
-  'SecureLogistics Inc.',
-  'MedData Alliance',
+  "Fortune 500 Financial Group",
+  "Global Healthcare Network",
+  "Enterprise Tech Corp",
+  "National Law Partners",
+  "Apex Retail Group",
+  "Federal Systems LLC",
+  "SecureLogistics Inc.",
+  "MedData Alliance",
 ];
 
 export default function TrustBar() {
-  const items = [...COMPANIES, ...COMPANIES]; // duplicate for seamless marquee
+  const items = [...COMPANIES, ...COMPANIES];
   return (
     <section className="py-10 px-6 border-y border-border bg-background/60">
       <div className="max-w-6xl mx-auto">
@@ -19,16 +19,14 @@ export default function TrustBar() {
         </p>
         <div
           className="relative overflow-hidden"
-          style={{ maskImage: 'linear-gradient(90deg, transparent, black 8%, black 92%, transparent)' }}
+          style={{ maskImage: "linear-gradient(90deg, transparent, black 8%, black 92%, transparent)" }}
           aria-hidden="true"
         >
           <div className="flex gap-8 marquee-track w-max">
             {items.map((name, i) => (
               <div
                 key={`${name}-${i}`}
-                className="px-5 py-2.5 border border-border rounded-lg text-muted-foreground
-                           font-montserrat font-semibold tracking-wide text-xs whitespace-nowrap
-                           hover:text-primary hover:border-primary/40 transition-colors"
+                className="px-5 py-2.5 border border-border rounded-lg text-muted-foreground font-montserrat font-semibold tracking-wide text-xs whitespace-nowrap hover:text-primary hover:border-primary/40 transition-colors"
               >
                 {name}
               </div>

@@ -1,18 +1,17 @@
 /**
- * Consent-gated analytics loader with category granularity.
- *
- * Google Consent Mode v2 is initialized in index.html with every storage
- * type set to "denied" by default. This module gates GA4 / Apollo /
- * LinkedIn injection on the user's per-category consent choices, and
- * re-asks after 12 months.
+ * Consent-gated analytics helpers (Google Consent Mode v2).
+ * Default-deny is set in root layout via next/script (beforeInteractive).
+ * GA4 (G-94289DG66E) loads only after analytics consent — same localStorage
+ * key and 12-month expiry as the Vite app so preferences carry over.
  */
 
-const GA_ID = "G-94289DG66E";
+export const GA_ID = "G-94289DG66E";
 export const CONSENT_KEY = "cookie_consent";
+export const CONSENT_EVENT = "dt-consent-updated";
 const CONSENT_MAX_AGE_MS = 365 * 24 * 60 * 60 * 1000; // 12 months
 
 export type ConsentCategories = {
-  necessary: true; // always true
+  necessary: true;
   analytics: boolean;
   marketing: boolean;
   functional: boolean;
@@ -47,7 +46,9 @@ export function getStoredConsent(): ConsentRecord | null {
   }
 }
 
-export function storeConsent(categories: Omit<ConsentCategories, "necessary"> & { necessary?: true }) {
+export function storeConsent(
+  categories: Omit<ConsentCategories, "necessary"> & { necessary?: true }
+) {
   const record: ConsentRecord = {
     version: 1,
     timestamp: Date.now(),
@@ -60,23 +61,18 @@ export function storeConsent(categories: Omit<ConsentCategories, "necessary"> & 
   };
   try {
     localStorage.setItem(CONSENT_KEY, JSON.stringify(record));
-  } catch {}
+  } catch {
+    /* ignore quota / private mode */
+  }
   return record;
 }
 
 export function clearConsent() {
   try {
     localStorage.removeItem(CONSENT_KEY);
-  } catch {}
-}
-
-function injectScript(src: string, attrs: Record<string, string> = {}) {
-  const s = document.createElement("script");
-  s.async = true;
-  s.src = src;
-  Object.entries(attrs).forEach(([k, v]) => s.setAttribute(k, v));
-  document.head.appendChild(s);
-  return s;
+  } catch {
+    /* ignore */
+  }
 }
 
 function ensureGtag() {
@@ -88,6 +84,7 @@ function ensureGtag() {
     };
 }
 
+/** Update Consent Mode flags and notify listeners (e.g. GA script loader). */
 export function applyConsent(record: ConsentRecord) {
   if (typeof window === "undefined") return;
   ensureGtag();
@@ -103,14 +100,13 @@ export function applyConsent(record: ConsentRecord) {
     security_storage: "granted",
   });
 
-  if (analytics && !window.__dtAnalyticsLoaded) {
-    window.__dtAnalyticsLoaded = true;
-    injectScript(`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`);
-    window.gtag("js", new Date());
-    window.gtag("config", GA_ID, { anonymize_ip: true });
-  }
+  window.dispatchEvent(new CustomEvent(CONSENT_EVENT, { detail: record }));
+}
 
-  // Marketing scripts (Meta Pixel, LinkedIn Insight, Apollo) would be
-  // injected here when `marketing` is true. Add real IDs when available.
-  // if (marketing) { injectScript("https://snap.licdn.com/li.lms-analytics/insight.min.js"); }
+export function configureGa() {
+  if (typeof window === "undefined" || !window.gtag) return;
+  if (window.__dtAnalyticsLoaded) return;
+  window.__dtAnalyticsLoaded = true;
+  window.gtag("js", new Date());
+  window.gtag("config", GA_ID, { anonymize_ip: true });
 }

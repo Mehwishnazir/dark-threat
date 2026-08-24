@@ -1,6 +1,8 @@
-import { useRef } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
-import { Mesh } from 'three';
+"use client";
+
+import { useRef } from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
+import type { Mesh } from "three";
 
 function RotatingThreatSphere() {
   const sphereRef = useRef<Mesh>(null);
@@ -8,7 +10,7 @@ function RotatingThreatSphere() {
 
   useFrame((state) => {
     const time = state.clock.getElapsedTime();
-    
+
     if (sphereRef.current) {
       sphereRef.current.rotation.y = time * 0.5;
       sphereRef.current.rotation.x = Math.sin(time) * 0.1;
@@ -26,7 +28,6 @@ function RotatingThreatSphere() {
 
   return (
     <>
-      {/* Main threat sphere */}
       <mesh ref={sphereRef} position={[0, 0, 0]}>
         <sphereGeometry args={[1.5, 32, 32]} />
         <meshStandardMaterial
@@ -38,16 +39,13 @@ function RotatingThreatSphere() {
         />
       </mesh>
 
-      {/* Orbiting threat indicators */}
       {Array.from({ length: 6 }, (_, i) => (
         <mesh
           key={i}
           ref={(ref) => {
-            if (boxRefs.current) {
-              boxRefs.current[i] = ref;
-            }
+            boxRefs.current[i] = ref;
           }}
-          position={[Math.sin(i * Math.PI / 3) * 3, 0, Math.cos(i * Math.PI / 3) * 3]}
+          position={[Math.sin((i * Math.PI) / 3) * 3, 0, Math.cos((i * Math.PI) / 3) * 3]}
         >
           <boxGeometry args={[0.2, 0.2, 0.2]} />
           <meshStandardMaterial
@@ -60,7 +58,6 @@ function RotatingThreatSphere() {
         </mesh>
       ))}
 
-      {/* Lighting */}
       <ambientLight intensity={0.1} />
       <pointLight position={[5, 5, 5]} intensity={1} color="#ff0000" />
       <pointLight position={[-5, -5, -5]} intensity={0.5} color="#ffffff" />
