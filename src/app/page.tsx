@@ -38,7 +38,7 @@ export default function HomePage() {
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
-          <div className="mb-6 inline-flex items-center justify-center rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-semibold text-primary shadow-sm">
+          <div className="mt-8 mb-6 inline-flex items-center justify-center rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-semibold text-primary shadow-sm">
             <span className="mr-2 h-2 w-2 rounded-full bg-primary animate-pulse" />
             LIVE • 2M+ Dark Web Sources Monitored
           </div>
