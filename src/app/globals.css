@@ -58,8 +58,8 @@ body {
   font-family: var(--font-family-kumbh), sans-serif;
 }
 
-/* Header is position:fixed (out of flow). Inner pages need clearance;
-   the homepage hero is full-viewport like Vite and uses its own pt-24. */
+/* Header is position:fixed (out of flow). Inner pages need clearance.
+   Homepage hero clears the bar itself (pt-16 / md:pt-[4.25rem]). */
 .site-main:not(:has(.home-page)) {
   padding-top: 5rem;
 }

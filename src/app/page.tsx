@@ -27,8 +27,9 @@ export default function HomePage() {
   return (
     <div className="home-page min-h-screen bg-background relative">
       <JsonLd data={[orgJsonLd, websiteJsonLd, softwareAppJsonLd]} />
-      {/* SECTION 1: Hero Section — full-bleed under fixed header, same as Vite Index.tsx */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden hero-bg-layered pt-24">
+      {/* SECTION 1: Hero — Vite Index.tsx used pt-24 + items-center (vertically centered in 100vh).
+          Navbar is fixed (py-3 md:py-4 + 32px logo ≈ 3.5–4.25rem). Pin content under it. */}
+      <section className="relative min-h-screen flex flex-col items-center justify-start overflow-hidden hero-bg-layered pt-16 md:pt-[4.25rem]">
         <div aria-hidden className="absolute inset-0 circuit-pattern pointer-events-none opacity-50" />
         <AnimatedBackground />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/60 to-background pointer-events-none" />
