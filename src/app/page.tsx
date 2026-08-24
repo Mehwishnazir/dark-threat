@@ -29,7 +29,7 @@ export default function HomePage() {
       <JsonLd data={[orgJsonLd, websiteJsonLd, softwareAppJsonLd]} />
       {/* SECTION 1: Hero — Vite Index.tsx used pt-24 + items-center (vertically centered in 100vh).
           Navbar is fixed (py-3 md:py-4 + 32px logo ≈ 3.5–4.25rem). Pin content under it. */}
-      <section className="relative min-h-screen flex flex-col items-center justify-start overflow-hidden hero-bg-layered pt-16 md:pt-[4.25rem]">
+      <section className="relative min-h-screen flex flex-col items-center justify-start overflow-hidden hero-bg-layered pt-[4.5rem]">
         <div aria-hidden className="absolute inset-0 circuit-pattern pointer-events-none opacity-50" />
         <AnimatedBackground />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/60 to-background pointer-events-none" />
@@ -43,7 +43,7 @@ export default function HomePage() {
             LIVE • 2M+ Dark Web Sources Monitored
           </div>
 
-          <h1 className="text-4xl md:text-6xl xl:text-7xl font-montserrat font-bold text-foreground leading-tight mb-6">
+          <h1 className="text-4xl md:text-6xl xl:text-7xl font-montserrat font-bold text-foreground leading-none mb-6">
             We Monitor the Dark Web and Neutralize Cyber Threats <span className="glow-text">Before They Strike</span>
           </h1>
           
