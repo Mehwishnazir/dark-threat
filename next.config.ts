@@ -10,9 +10,29 @@ const blogRedirects = Object.entries(BLOG_SLUG_REDIRECTS).map(([from, to]) => ({
 
 const nextConfig: NextConfig = {
   turbopack: {
-    // Parent repo root so the Vite `src/blogs` registry (junctioned into nextjs-app)
-    // resolves during Turbopack builds.
-    root: path.join(__dirname, ".."),
+    // App lives at the repo root after the directory restructure.
+    root: __dirname,
+  },
+  async headers() {
+    return [
+      {
+        source: "/(.*)",
+        headers: [
+          {
+            key: "Strict-Transport-Security",
+            value: "max-age=63072000; includeSubDomains; preload",
+          },
+          { key: "X-Frame-Options", value: "DENY" },
+          { key: "X-Content-Type-Options", value: "nosniff" },
+          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+          {
+            key: "Permissions-Policy",
+            value: "camera=(), microphone=(), geolocation=()",
+          },
+          { key: "X-XSS-Protection", value: "1; mode=block" },
+        ],
+      },
+    ];
   },
   async redirects() {
     return [
