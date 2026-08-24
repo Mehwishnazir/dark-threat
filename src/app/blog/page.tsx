@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import BlogListingClient from "@/components/blog/BlogListingClient";
 import JsonLd from "@/components/JsonLd";
-import ThreatSpherePlaceholder from "@/components/ThreatSpherePlaceholder";
+import ThreatSphere from "@/components/ThreatSphereDynamic";
 import { getBlogPostCount, getBlogPostMetaList } from "@/lib/blog/data";
 
 export const metadata: Metadata = {
@@ -35,7 +35,7 @@ export default function BlogIndexPage() {
 
       <section className="blog-listing-hero pt-8">
         <div className="blog-listing-hero__sphere">
-          <ThreatSpherePlaceholder />
+          <ThreatSphere />
         </div>
         <div className="blog-listing-hero__content">
           <div className="blog-listing-hero__eyebrow">DarkThreat Research</div>

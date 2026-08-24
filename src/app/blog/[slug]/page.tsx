@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const ogImage = resolveFeaturedImage(post.featuredImage, post.slug);
 
   return {
-    title: `${title} | DarkThreat Blog`,
+    title,
     description,
     alternates: { canonical: `/blog/${post.slug}` },
     openGraph: {

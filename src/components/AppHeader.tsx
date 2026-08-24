@@ -1,6 +1,7 @@
 "use client";
 
 import type { LucideIcon } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
@@ -87,8 +88,20 @@ export default function AppHeader() {
   return (
     <header className="fixed top-0 left-0 right-0 py-3 md:py-4 px-4 md:px-6 border-b border-border bg-background/95 backdrop-blur-sm z-50">
       <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
-        <Link href="/" className="flex items-center gap-2.5 shrink-0" aria-label="DarkThreat Home">
-          <img src="/logo.png" alt="DarkThreat logo" width="32" height="32" className="w-8 h-8 object-contain" />
+        <Link
+          href="/"
+          className="flex items-center gap-2.5 shrink-0"
+          aria-label="DarkThreat Home"
+          suppressHydrationWarning
+        >
+          <Image
+            src="/logo.png"
+            alt="DarkThreat logo"
+            width={32}
+            height={32}
+            className="w-8 h-8 object-contain"
+            suppressHydrationWarning
+          />
           <span className="text-xl font-montserrat font-bold text-foreground tracking-tight">
             DARK<span className="text-primary">THREAT</span>
           </span>
