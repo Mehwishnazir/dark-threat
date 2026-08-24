@@ -26,7 +26,7 @@ export default function WebsiteTerms() {
         <div className="space-y-8">
           <div>
             <h1 className="text-4xl font-montserrat font-bold text-foreground mb-4">Website Terms of Use</h1>
-            <p className="text-muted-foreground">Last updated: January 2025</p>
+            <p className="text-muted-foreground">Last updated: January 2026</p>
           </div>
 
           <div className="prose prose-invert max-w-none space-y-6">

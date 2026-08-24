@@ -12,7 +12,13 @@ import {
 
 export type { BlogPost } from "@/lib/blog/types";
 
-export default function BlogCard({ post }: { post: BlogPost }) {
+export default function BlogCard({
+  post,
+  titleAs: TitleTag = "h2",
+}: {
+  post: BlogPost;
+  titleAs?: "h2" | "h3";
+}) {
   const initial = resolveFeaturedImage(post.featuredImage, post.slug);
   const [src, setSrc] = useState(initial);
 
@@ -49,7 +55,7 @@ export default function BlogCard({ post }: { post: BlogPost }) {
 
       <div className="blog-card__body">
         <Link href={`/blog/${post.slug}`} className="blog-card__title-link">
-          <h2 className="blog-card__title">{post.title}</h2>
+          <TitleTag className="blog-card__title">{post.title}</TitleTag>
         </Link>
         <p className="blog-card__excerpt">{post.excerpt}</p>
         <div className="blog-card__meta">

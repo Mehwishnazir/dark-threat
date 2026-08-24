@@ -36,7 +36,7 @@ const schema = {
 
 const breadcrumb = breadcrumbSchema([
   { name: 'Home', url: 'https://darkthreat.ai/' },
-  { name: 'Locations', url: 'https://darkthreat.ai/locations' },
+  { name: 'Locations', url: 'https://darkthreat.ai/external-attack-surface-monitoring' },
   { name: 'Texas Attack Surface Monitoring', url: 'https://darkthreat.ai/attack-surface-monitoring/texas' }
 ]);
 
@@ -87,7 +87,7 @@ export default function Page() {
         </div>
         <div className="relative z-10 text-center max-w-5xl mx-auto px-6">
           <div className="mb-4 inline-flex justify-center">
-            <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Locations' }, { label: 'Texas' }]} />
+            <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Locations', href: '/external-attack-surface-monitoring' }, { label: 'Texas' }]} />
           </div>
           <div className="mb-6 inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-semibold text-primary">
             <MapPin className="w-4 h-4 mr-2" /> Serving Texas Enterprises

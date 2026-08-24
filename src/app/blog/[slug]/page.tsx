@@ -141,7 +141,7 @@ export default async function BlogPostPage({ params }: PageProps) {
         <h2 className="text-3xl font-bold mb-6">Related Articles</h2>
         <div className="grid md:grid-cols-3 gap-6">
           {related.map((r) => (
-            <BlogCard key={r.id} post={r} />
+            <BlogCard key={r.id} post={r} titleAs="h3" />
           ))}
         </div>
       </section>
