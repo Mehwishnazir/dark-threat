@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import NotFoundRedirect from "@/components/NotFoundRedirect";
+
+export const metadata: Metadata = {
+  title: {
+    absolute: "404 - Page Not Found | DarkThreat.ai",
+  },
+};
 
 export default function NotFound() {
   return (

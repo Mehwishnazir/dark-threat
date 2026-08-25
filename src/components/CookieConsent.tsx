@@ -56,6 +56,11 @@ export default function CookieConsent() {
     };
   }, [openPrefs]);
 
+  useEffect(() => {
+    document.body.classList.toggle("has-cookie-banner", bannerVisible);
+    return () => document.body.classList.remove("has-cookie-banner");
+  }, [bannerVisible]);
+
   const acceptAll = () => {
     const rec = storeConsent({ analytics: true, marketing: true, functional: true });
     applyConsent(rec);
@@ -89,9 +94,9 @@ export default function CookieConsent() {
           role="dialog"
           aria-live="polite"
           aria-label="Cookie consent"
-          className="fixed inset-x-0 bottom-0 z-[100] px-2 pb-2 sm:px-6 sm:pb-6"
+          className="pointer-events-none fixed inset-x-0 bottom-0 z-40 px-2 pb-2 sm:px-6 sm:pb-6"
         >
-          <div className="mx-auto max-w-3xl rounded-xl sm:rounded-2xl border border-border bg-card/95 backdrop-blur shadow-2xl p-3 sm:p-5">
+          <div className="pointer-events-auto mx-auto max-w-3xl rounded-xl sm:rounded-2xl border border-border bg-card/95 backdrop-blur shadow-2xl p-3 sm:p-5">
             <div className="flex items-start justify-between gap-2 sm:gap-4">
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-2 mb-1 sm:mb-2">
