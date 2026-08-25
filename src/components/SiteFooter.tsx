@@ -23,16 +23,6 @@ export default function SiteFooter() {
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://linkedin.com/company/darkthreat"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-                title="LinkedIn"
-                className="text-muted-foreground hover:text-primary transition-colors"
-              >
-                <Linkedin className="w-5 h-5" aria-hidden="true" />
-              </a>
-              <a
                 href="https://twitter.com/DarkThreatAI"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -41,6 +31,16 @@ export default function SiteFooter() {
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
                 <Twitter className="w-5 h-5" aria-hidden="true" />
+              </a>
+              <a
+                href="https://linkedin.com/company/darkthreat"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                title="LinkedIn"
+                className="text-muted-foreground hover:text-primary transition-colors"
+              >
+                <Linkedin className="w-5 h-5" aria-hidden="true" />
               </a>
               <a
                 href="https://github.com/darkthreat"

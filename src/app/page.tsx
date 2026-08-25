@@ -17,7 +17,9 @@ import JsonLd from "@/components/JsonLd";
 import { orgJsonLd, websiteJsonLd, softwareAppJsonLd } from "@/utils/seoSchemas";
 
 export const metadata: Metadata = {
-  title: "Dark Web Monitoring & Credential Leak Detection Platform",
+  title: {
+    absolute: "Dark Web Monitoring & Credential Leak Detection Platform | DarkThreat",
+  },
   description:
     "DarkThreat is an AI-powered dark web monitoring and credential leak detection platform. Detect leaked passwords, hacker chatter, and data breaches before they impact your business. 7-day free trial.",
   alternates: { canonical: "/" },
@@ -43,7 +45,10 @@ export default function HomePage() {
             LIVE • 2M+ Dark Web Sources Monitored
           </div>
 
-          <h1 className="text-4xl md:text-6xl xl:text-7xl font-montserrat font-bold text-foreground leading-tight mb-6">
+          <h1
+            className="text-4xl md:text-6xl xl:text-7xl font-montserrat font-bold text-foreground leading-none mb-6"
+            style={{ lineHeight: "72px" }}
+          >
             We Monitor the Dark Web and Neutralize Cyber Threats <span className="glow-text">Before They Strike</span>
           </h1>
           
