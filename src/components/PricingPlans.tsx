@@ -4,7 +4,7 @@ import { useState } from "react";
 import PricingCard from "@/components/PricingCard";
 
 export default function PricingPlans() {
-  const [isAnnual, setIsAnnual] = useState(false);
+  const [isAnnual, setIsAnnual] = useState(true);
 
   return (
     <>
