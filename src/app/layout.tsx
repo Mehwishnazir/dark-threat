@@ -27,8 +27,8 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://darkthreat.ai"),
   applicationName: "DarkThreat",
   title: {
-    default: "Dark Web Monitoring & Credential Leak Detection Platform | DarkThreat",
-    template: "%s | DarkThreat",
+    default: "Dark Web Monitoring & Credential Leak Detection Platform | DarkThreat.ai",
+    template: "%s | DarkThreat.ai",
   },
   description:
     "AI-powered dark web monitoring and threat intelligence platform protecting enterprises from credential leaks, ransomware, and cyber threats.",

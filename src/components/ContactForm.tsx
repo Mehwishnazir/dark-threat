@@ -136,13 +136,14 @@ export default function ContactForm() {
         </h2>
         <form onSubmit={handleSubmit} noValidate className="space-y-6">
           <div className="absolute -left-[9999px]" aria-hidden="true">
-            <label htmlFor="website">Website</label>
+            <label htmlFor="website" aria-hidden="true">Website</label>
             <input
               id="website"
               name="website"
               value={formData.website}
               onChange={handleChange}
               tabIndex={-1}
+              aria-hidden="true"
               autoComplete="off"
             />
           </div>
