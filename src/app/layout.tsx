@@ -32,6 +32,10 @@ export const metadata: Metadata = {
   },
   description:
     "AI-powered dark web monitoring and threat intelligence platform protecting enterprises from credential leaks, ransomware, and cyber threats.",
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png",
+  },
   openGraph: {
     type: "website",
     siteName: "DarkThreat",
