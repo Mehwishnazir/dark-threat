@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { Kumbh_Sans, Montserrat } from "next/font/google";
-import AppHeader from "@/components/AppHeader";
 import ChatWidget from "@/components/ChatWidget";
 import CookieConsent from "@/components/CookieConsent";
 import CookieSettingsLink from "@/components/CookieSettingsLink";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
-import SiteFooter from "@/components/SiteFooter";
+import SiteChrome from "@/components/SiteChrome";
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -86,9 +85,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           dangerouslySetInnerHTML={{ __html: CONSENT_DEFAULT_SCRIPT }}
         />
         <GoogleAnalytics />
-        <AppHeader />
-        <div className="flex-1 site-main">{children}</div>
-        <SiteFooter />
+        <SiteChrome>{children}</SiteChrome>
         <ChatWidget />
         <CookieConsent />
         <CookieSettingsLink />

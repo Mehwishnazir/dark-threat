@@ -132,7 +132,7 @@ export default function Page() {
             <span className="mr-2 h-2 w-2 rounded-full bg-primary animate-pulse" />
             Sector-Specific Threat Intelligence
           </div>
-          <h1 className="text-4xl md:text-6xl font-montserrat font-bold text-foreground leading-tight mb-6">
+          <h1 className="text-4xl md:text-6xl font-montserrat font-bold text-foreground leading-none mb-6">
             Dark Web Monitoring for <span className="glow-text">Every Industry</span>
           </h1>
           <p className="mx-auto max-w-3xl text-lg text-muted-foreground leading-relaxed">

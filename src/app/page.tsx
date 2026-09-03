@@ -45,10 +45,7 @@ export default function HomePage() {
             LIVE • 2M+ Dark Web Sources Monitored
           </div>
 
-          <h1
-            className="text-4xl md:text-6xl xl:text-7xl font-montserrat font-bold text-foreground leading-none mb-6"
-            style={{ lineHeight: "72px" }}
-          >
+          <h1 className="text-4xl md:text-6xl xl:text-7xl font-montserrat font-bold text-foreground leading-none mb-6">
             We Monitor the Dark Web and Neutralize Cyber Threats <span className="glow-text">Before They Strike</span>
           </h1>
           

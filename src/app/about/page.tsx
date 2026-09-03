@@ -71,7 +71,7 @@ export default function AboutPage() {
             <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'About Us' }]} />
           </div>
           
-          <h1 className="text-4xl md:text-6xl font-montserrat font-bold text-foreground leading-tight mb-6">
+          <h1 className="text-4xl md:text-6xl font-montserrat font-bold text-foreground leading-none mb-6">
             We Predict and Prevent Cyber Attacks <span className="glow-text">Before They Occur</span>
           </h1>
           

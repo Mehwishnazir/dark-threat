@@ -87,7 +87,7 @@ export default function ContactPage() {
             GLOBAL THREAT OPERATIONS
           </div>
 
-          <h1 className="text-4xl md:text-6xl font-montserrat font-bold text-foreground leading-tight mb-6">
+          <h1 className="text-4xl md:text-6xl font-montserrat font-bold text-foreground leading-none mb-6">
             We Are Online 24/7/365 to Protect Your <span className="glow-text">Digital Footprint</span>
           </h1>
 

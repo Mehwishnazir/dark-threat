@@ -92,7 +92,7 @@ export default function Page() {
           <div className="mb-6 inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-semibold text-primary">
             <MapPin className="w-4 h-4 mr-2" /> Serving Texas Enterprises
           </div>
-          <h1 className="text-4xl md:text-6xl font-montserrat font-bold text-foreground leading-tight mb-6">
+          <h1 className="text-4xl md:text-6xl font-montserrat font-bold text-foreground leading-none mb-6">
             Enterprise Attack Surface Monitoring for <span className="glow-text">Texas</span>
           </h1>
           <p className="mx-auto max-w-3xl text-lg text-muted-foreground leading-relaxed">
