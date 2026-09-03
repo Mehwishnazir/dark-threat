@@ -97,6 +97,12 @@ export default function ContactForm() {
           "Thank you for contacting DarkThreat's Threat Operations Center. We will respond within 24 hours.",
         variant: "success",
       });
+      if (typeof window !== "undefined" && typeof window.gtag === "function") {
+        window.gtag("event", "contact_submit", {
+          event_category: "Contact",
+          event_label: "Contact Form Submission",
+        });
+      }
       setFormData(initialForm);
       setFormError("");
     } catch {
