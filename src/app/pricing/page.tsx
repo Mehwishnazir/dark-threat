@@ -30,7 +30,6 @@ export default function PricingPage() {
               { "@type": "Offer", name: "Standard Plan", price: "288", priceCurrency: "USD", url: "https://darkthreat.ai/pricing" },
               { "@type": "Offer", name: "Enterprise Plan", price: "490", priceCurrency: "USD", url: "https://darkthreat.ai/pricing" },
             ],
-            aggregateRating: { "@type": "AggregateRating", ratingValue: "4.8", ratingCount: "127", bestRating: "5" },
           },
           {
             "@context": "https://schema.org",

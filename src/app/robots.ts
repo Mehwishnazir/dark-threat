@@ -14,7 +14,7 @@ export default function robots(): MetadataRoute.Robots {
           "/forgot-password",
           "/alerts",
           "/reports",
-          "/threat-intelligence",
+          "/threat-intelligence/dashboard",
         ],
       },
     ],

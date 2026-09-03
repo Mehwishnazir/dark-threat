@@ -59,11 +59,6 @@ export const websiteJsonLd = {
   "@type": "WebSite",
   name: "DarkThreat",
   url: "https://darkthreat.ai",
-  potentialAction: {
-    "@type": "SearchAction",
-    target: "https://darkthreat.ai/search?q={search_term_string}",
-    "query-input": "required name=search_term_string",
-  },
 };
 
 export const softwareAppJsonLd = {
@@ -80,13 +75,6 @@ export const softwareAppJsonLd = {
     "@type": "Offer",
     price: "288",
     priceCurrency: "USD",
-  },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.8",
-    ratingCount: "127",
-    bestRating: "5",
-    worstRating: "1",
   },
 };
 

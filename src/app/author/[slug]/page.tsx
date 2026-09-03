@@ -16,6 +16,13 @@ type PageProps = {
   params: Promise<{ slug: string }>;
 };
 
+function truncateMetaDescription(text: string, maxLength = 155): string {
+  if (text.length <= maxLength) return text;
+  const slice = text.slice(0, maxLength);
+  const lastSpace = slice.lastIndexOf(" ");
+  return `${lastSpace > 0 ? slice.slice(0, lastSpace) : slice}...`;
+}
+
 export function generateStaticParams() {
   return getAllAuthorSlugs().map((slug) => ({ slug }));
 }
@@ -29,7 +36,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   return {
     title: `${author.name} | DarkThreat Author`,
-    description: author.bio.slice(0, 155),
+    description: truncateMetaDescription(author.bio),
     alternates: { canonical: `/author/${author.slug}` },
   };
 }

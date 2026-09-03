@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: {
     absolute: "404 - Page Not Found | DarkThreat.ai",
   },
+  robots: { index: false, follow: true },
 };
 
 export default function NotFound() {
