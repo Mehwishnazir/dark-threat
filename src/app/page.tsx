@@ -378,21 +378,7 @@ export default function HomePage() {
       </section>
 
       {/* SECTION 7: Testimonials */}
-      <section className="py-24 px-6">
-        <div className="max-w-6xl mx-auto text-center">
-          <span className="inline-flex rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-primary mb-4">
-            Customer confidence
-          </span>
-          <h2 className="mt-4 text-4xl font-montserrat font-bold text-foreground">Security teams trust DarkThreat to cut through noise and stop breaches.</h2>
-          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Real customers rely on our coverage, speed, and analyst-driven intelligence to protect their most sensitive assets.
-          </p>
-        </div>
-
-        <div className="mt-12">
-          <Testimonials />
-        </div>
-      </section>
+      <Testimonials />
 
       {/* SECTION 8: Industry Pages (Exact matches to built files) */}
       <section className="py-24 px-6">
@@ -499,16 +485,8 @@ export default function HomePage() {
       </section>
 
       {/* SECTION 11: FAQ Component */}
-      <section className="py-24 px-6 bg-gradient-to-b from-background to-threat-dark">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <span className="inline-flex rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-primary mb-4">
-              Frequently asked questions
-            </span>
-            <h2 className="mt-4 text-4xl font-montserrat font-bold text-foreground">Everything security leaders ask before choosing DarkThreat.</h2>
-          </div>
-          <FAQ />
-        </div>
+      <section className="bg-gradient-to-b from-background to-threat-dark">
+        <FAQ />
       </section>
 
       <FinalCTA />
