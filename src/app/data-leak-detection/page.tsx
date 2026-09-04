@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSeo } from "@/lib/metadata";
 import Link from "next/link";
 import { Shield, AlertTriangle, Search, BarChart3, Trash2 } from "lucide-react";
 import FinalCTA from "@/components/FinalCTA";
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
   title: "External Data Leak Detection & PII Exposure Monitoring",
   description:
     "Detect exposed customer PII, internal intellectual property, and leaked source code across the dark web. DarkThreat protects brand integrity with 24/7 monitoring.",
-  alternates: { canonical: "/data-leak-detection" },
+  ...pageSeo("/data-leak-detection"),
 };
 
 const FAQ_JSON_LD = {

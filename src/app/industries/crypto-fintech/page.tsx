@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSeo } from "@/lib/metadata";
 import Link from "next/link";
 import { Bitcoin, Shield, Lock, AlertTriangle, Database, CheckCircle2, ArrowRight, Key, Eye, Wallet, } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
@@ -14,7 +15,7 @@ import { serviceSchema, breadcrumbSchema, organizationSchema } from "@/utils/seo
 export const metadata: Metadata = {
   title: "Dark Web Monitoring for Crypto & Fintech",
   description: "Monitor wallet address leaks, exchange credential theft, and DeFi protocol attack signals. FinCEN, MiCA, and ISO 27001 aligned dark web monitoring for crypto and fintech.",
-  alternates: { canonical: "/industries/crypto-fintech" },
+  ...pageSeo("/industries/crypto-fintech"),
 };
 
 const threats = [

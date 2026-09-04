@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSeo } from "@/lib/metadata";
 import ComparisonPage from "@/components/ComparisonPage";
 
 /**
@@ -8,7 +9,7 @@ import ComparisonPage from "@/components/ComparisonPage";
 export const metadata: Metadata = {
   title: "DarkThreat vs Cybersixgill — Dark Web Monitoring Comparison (2026)",
   description: "Compare DarkThreat and Cybersixgill on dark web monitoring, credential leak detection, coverage, pricing transparency, and time-to-value. Start a free 7-day trial — no credit card.",
-  alternates: { canonical: "/compare/darkthreat-vs-cybersixgill" },
+  ...pageSeo("/compare/darkthreat-vs-cybersixgill"),
 };
 
 export default function ComparisonCybersixgill() {

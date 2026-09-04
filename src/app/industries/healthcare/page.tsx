@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSeo } from "@/lib/metadata";
 import Link from "next/link";
 import { HeartPulse, Shield, Lock, AlertTriangle, Database, CheckCircle2, ArrowRight, FileWarning, Key, Eye, Activity, Wifi, } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
@@ -14,7 +15,7 @@ import JsonLd from "@/components/JsonLd";
 export const metadata: Metadata = {
   title: "Healthcare Dark Web Monitoring — Protecting PHI & HIPAA Data",
   description: "Protect your hospital, health system, or clinic from PHI data breaches, ransomware attacks, and EHR record theft with DarkThreat's HIPAA-aligned dark web monitoring.",
-  alternates: { canonical: "/industries/healthcare" },
+  ...pageSeo("/industries/healthcare"),
 };
 
 const threats = [

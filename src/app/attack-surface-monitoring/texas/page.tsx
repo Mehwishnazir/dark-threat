@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSeo } from "@/lib/metadata";
 import Link from "next/link";
 import { Banknote, Shield, Lock, AlertTriangle, Database, CheckCircle2, ArrowRight, CreditCard, Key, Eye, FileWarning, Twitter, Linkedin, Github, MapPin } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
@@ -14,7 +15,7 @@ import { serviceSchema, breadcrumbSchema, organizationSchema } from "@/utils/seo
 export const metadata: Metadata = {
   title: "Attack Surface Monitoring in Texas",
   description: "Protect your Texas organization with advanced Attack Surface Monitoring. Detect and remediate threats before they become data breaches. Book a demo today.",
-  alternates: { canonical: "/attack-surface-monitoring/texas" },
+  ...pageSeo("/attack-surface-monitoring/texas"),
 };
 
 const threats = [

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSeo } from "@/lib/metadata";
 import Link from "next/link";
 import { Shield, Trash2, Globe, AlertTriangle, CheckCircle, ArrowRight } from "lucide-react";
 
@@ -8,7 +9,7 @@ import { faqPageSchema } from "@/utils/seoSchemas";
 export const metadata: Metadata = {
   title: "Dark Web Data Removal",
   description: "DarkThreat's Dark Web Data Removal service finds and removes leaked company data from underground marketplaces, hacker forums, and paste sites before it is weaponized.",
-  alternates: { canonical: "/dark-web-data-removal" },
+  ...pageSeo("/dark-web-data-removal"),
 };
 
 const faqs = [

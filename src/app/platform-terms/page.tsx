@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSeo } from "@/lib/metadata";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
@@ -6,7 +7,7 @@ export const metadata: Metadata = {
   title: "Platform Terms of Use",
   description:
     "Terms of service for using the DarkThreat platform, including eligibility, account security, subscriptions, and acceptable use.",
-  alternates: { canonical: "/platform-terms" },
+  ...pageSeo("/platform-terms"),
 };
 
 export default function PlatformTerms() {

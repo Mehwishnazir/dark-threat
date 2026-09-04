@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSeo } from "@/lib/metadata";
 import Link from "next/link";
 import { Landmark, Shield, Lock, AlertTriangle, Database, CheckCircle2, ArrowRight, FileWarning, Key, Eye, Globe, Cpu } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
@@ -14,7 +15,7 @@ import JsonLd from "@/components/JsonLd";
 export const metadata: Metadata = {
   title: "Government Dark Web Monitoring — Protecting Public Infrastructure",
   description: "Secure government agencies, citizen data, and critical infrastructure from nation-state actors and ransomware. FISMA & NIST SP 800-53 aligned.",
-  alternates: { canonical: "/industries/government" },
+  ...pageSeo("/industries/government"),
 };
 
 const threats = [

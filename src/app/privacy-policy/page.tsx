@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSeo } from "@/lib/metadata";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
@@ -6,7 +7,7 @@ export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
     "How DarkThreat collects, uses, and protects information when you visit our website or use our dark web monitoring services.",
-  alternates: { canonical: "/privacy-policy" },
+  ...pageSeo("/privacy-policy"),
 };
 
 export default function PrivacyPolicy() {

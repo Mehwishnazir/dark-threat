@@ -35,12 +35,6 @@ export const metadata: Metadata = {
     icon: "/logo.png",
     apple: "/logo.png",
   },
-  alternates: {
-    languages: {
-      en: "https://darkthreat.ai",
-      "x-default": "https://darkthreat.ai",
-    },
-  },
   openGraph: {
     type: "website",
     siteName: "DarkThreat",

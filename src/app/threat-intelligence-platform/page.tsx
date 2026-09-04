@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSeo } from "@/lib/metadata";
 import Link from "next/link";
 import { Search, AlertTriangle, Eye, CheckCircle, XCircle, ArrowRight } from "lucide-react";
 import FinalCTA from "@/components/FinalCTA";
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
   title: "Threat Intelligence Platform",
   description:
     "Enrich dark web exposure alerts with threat actor profiling, adversary infrastructure mapping, MITRE ATT&CK techniques, and active ransomware campaigns.",
-  alternates: { canonical: "/threat-intelligence-platform" },
+  ...pageSeo("/threat-intelligence-platform"),
 };
 
 const faqs = [

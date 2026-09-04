@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSeo } from "@/lib/metadata";
 import Link from "next/link";
 import { Search, AlertTriangle, Eye, CheckCircle, XCircle, ArrowRight } from "lucide-react";
 import FinalCTA from "@/components/FinalCTA";
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
   title: "Dark Web Monitoring Service & Cyber Threat Intelligence",
   description:
     "DarkThreat's AI-powered dark web monitoring service scans Tor networks, hacker forums, and stealer logs to detect credential leaks and corporate risk before exploit.",
-  alternates: { canonical: "/dark-web-monitoring" },
+  ...pageSeo("/dark-web-monitoring"),
 };
 
 const faqs = [

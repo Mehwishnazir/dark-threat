@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSeo } from "@/lib/metadata";
 import Link from "next/link";
 import { Cpu, Shield, Lock, AlertTriangle, Database, CheckCircle2, ArrowRight, Code2, Key, Eye, FileWarning, CloudOff, GitBranch, Twitter, Linkedin, Github, } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
@@ -14,7 +15,7 @@ import JsonLd from "@/components/JsonLd";
 export const metadata: Metadata = {
   title: "Dark Web Monitoring for SaaS & Technology Companies",
   description: "DarkThreat protects SaaS companies and tech firms from source code leakage, API key theft, cloud credential exposure, and supply chain attacks. SOC 2 & ISO 27001 aligned.",
-  alternates: { canonical: "/industries/saas-technology" },
+  ...pageSeo("/industries/saas-technology"),
 };
 
 const threats = [

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSeo } from "@/lib/metadata";
 import Link from "next/link";
 import { Scale, Shield, Lock, AlertTriangle, Database, CheckCircle2, ArrowRight, FileWarning, Key, Eye, Briefcase, FileText } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
@@ -14,7 +15,7 @@ import JsonLd from "@/components/JsonLd";
 export const metadata: Metadata = {
   title: "Dark Web Monitoring for Law Firms & Legal Services",
   description: "Protect attorney-client privilege, client PII, and firm credentials from ransomware and dark web leaks. ABA Model Rules 1.1 and 1.6 compliant monitoring.",
-  alternates: { canonical: "/industries/legal" },
+  ...pageSeo("/industries/legal"),
 };
 
 const threats = [

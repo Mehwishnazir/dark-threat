@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSeo } from "@/lib/metadata";
 import Link from "next/link";
 import { Banknote, Shield, Lock, AlertTriangle, Database, CheckCircle2, ArrowRight, CreditCard, Key, Eye, FileWarning, Twitter, Linkedin, Github, } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
@@ -14,7 +15,7 @@ import { serviceSchema, breadcrumbSchema, organizationSchema } from "@/utils/seo
 export const metadata: Metadata = {
   title: "Dark Web Monitoring for Financial Services & Banks",
   description: "DarkThreat protects banks, credit unions, and fintechs from SWIFT credential theft, carding attacks, insider threats, and dark web data exposure. PCI-DSS & GLBA aligned.",
-  alternates: { canonical: "/industries/financial-services" },
+  ...pageSeo("/industries/financial-services"),
 };
 
 const threats = [

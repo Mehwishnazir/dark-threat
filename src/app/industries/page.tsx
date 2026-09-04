@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSeo } from "@/lib/metadata";
 import Link from "next/link";
 import { Banknote, HeartPulse, Scale, ShoppingCart, Cloud, Landmark, GraduationCap, Bitcoin, Briefcase, Shield, AlertTriangle, Lock, Database, Eye, Globe, ArrowRight, CheckCircle2, } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
@@ -10,7 +11,7 @@ import JsonLd from "@/components/JsonLd";
 export const metadata: Metadata = {
   title: "Industry Dark Web Monitoring",
   description: "DarkThreat delivers sector-specific dark web monitoring for financial services, healthcare, legal, government, e-commerce, SaaS, education, and crypto industries.",
-  alternates: { canonical: "/industries" },
+  ...pageSeo("/industries"),
 };
 
 const industries = [

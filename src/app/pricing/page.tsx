@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSeo } from "@/lib/metadata";
 import Link from "next/link";
 import { Shield } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
   title: "Pricing",
   description:
     "Transparent pricing for DarkThreat's dark web monitoring plans. Standard, Enterprise, and MSSP white-label tiers with a 7-day free trial. No credit card required.",
-  alternates: { canonical: "/pricing" },
+  ...pageSeo("/pricing"),
 };
 
 export default function PricingPage() {

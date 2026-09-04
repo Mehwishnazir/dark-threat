@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSeo } from "@/lib/metadata";
 import Link from "next/link";
 import { Users, ShieldCheck, Filter, CheckCircle, XCircle, ArrowRight, Shield } from "lucide-react";
 import FinalCTA from "@/components/FinalCTA";
@@ -8,7 +9,7 @@ import JsonLd from "@/components/JsonLd";
 export const metadata: Metadata = {
   title: "24/7 Managed SOC Support",
   description: "Expert-led Security Operations Center validation that reduces alert fatigue by cross-verifying threat relevance before alerting your team.",
-  alternates: { canonical: "/managed-soc-support" },
+  ...pageSeo("/managed-soc-support"),
 };
 
 const faqs = [

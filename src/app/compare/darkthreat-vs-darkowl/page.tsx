@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSeo } from "@/lib/metadata";
 import Link from "next/link";
 import { CheckCircle, XCircle, ArrowRight, Quote } from "lucide-react";
 import JsonLd from "@/components/JsonLd";
@@ -7,7 +8,7 @@ import FinalCTA from "@/components/FinalCTA";
 export const metadata: Metadata = {
   title: "DarkThreat vs DarkOwl — Dark Web Monitoring Comparison (2026)",
   description: "Looking for a DarkOwl alternative? Compare DarkThreat and DarkOwl on pricing transparency, coverage, ease-of-use, and self-serve onboarding. Start a 7-day free trial today.",
-  alternates: { canonical: "/compare/darkthreat-vs-darkowl" },
+  ...pageSeo("/compare/darkthreat-vs-darkowl"),
 };
 
 const features: Array<[string, boolean, boolean]> = [

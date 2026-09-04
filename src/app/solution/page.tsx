@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSeo } from "@/lib/metadata";
 import Link from "next/link";
 import { Shield, Search, AlertTriangle, Users, Database, Zap, Eye, Globe, Lock, CheckCircle, BarChart3, Trash2, Twitter, Linkedin, Github } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
@@ -10,7 +11,7 @@ import JsonLd from "@/components/JsonLd";
 export const metadata: Metadata = {
   title: "Dark Web Monitoring Solution",
   description: "Explore DarkThreat's complete dark web monitoring solution: credential leak detection, PII exposure alerts, hacker chatter intelligence and automated leak reports.",
-  alternates: { canonical: "/solution" },
+  ...pageSeo("/solution"),
 };
 
 

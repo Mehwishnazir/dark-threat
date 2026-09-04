@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSeo } from "@/lib/metadata";
 import Link from "next/link";
 import {
   Shield,
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
   title: "About DarkThreat | AI-Powered Dark Web Monitoring & Threat Intelligence Platform",
   description:
     "DarkThreat is an AI-powered dark web monitoring and threat intelligence platform. Learn how our cyber threat detection engine protects 500+ enterprises from data breaches, credential leaks, and ransomware attacks — 24/7.",
-  alternates: { canonical: "/about" },
+  ...pageSeo("/about"),
 };
 
 export default function AboutPage() {

@@ -11,6 +11,7 @@ import {
   getRelatedPosts,
 } from "@/lib/blog/data";
 import { resolveFeaturedImage } from "@/lib/blog/resolveFeaturedImage";
+import { pageAlternates, pageUrl } from "@/lib/metadata";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -31,15 +32,17 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const description = post.metaDescription || post.excerpt;
   const ogImage = resolveFeaturedImage(post.featuredImage, post.slug);
 
+  const path = `/blog/${post.slug}`;
+
   return {
     title,
     description,
-    alternates: { canonical: `/blog/${post.slug}` },
+    alternates: pageAlternates(path),
     openGraph: {
       title,
       description,
       type: "article",
-      url: `https://darkthreat.ai/blog/${post.slug}`,
+      url: pageUrl(path),
       images: [{ url: ogImage }],
     },
     twitter: {

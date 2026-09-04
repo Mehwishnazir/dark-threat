@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSeo } from "@/lib/metadata";
 import Link from "next/link";
 import { Search, Database, Eye, CheckCircle, XCircle, ArrowRight, Shield } from "lucide-react";
 import FinalCTA from "@/components/FinalCTA";
@@ -8,7 +9,7 @@ import JsonLd from "@/components/JsonLd";
 export const metadata: Metadata = {
   title: "Advanced Threat Search",
   description: "Search indexing over 2 million live sources, allowing security teams to query threat actor personas, leaks, and historical breach data.",
-  alternates: { canonical: "/advanced-threat-search" },
+  ...pageSeo("/advanced-threat-search"),
 };
 
 const faqs = [

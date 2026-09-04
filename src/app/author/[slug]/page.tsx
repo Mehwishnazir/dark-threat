@@ -10,6 +10,7 @@ import {
   getAuthorBySlug,
 } from "@/lib/blog/authors";
 import { getPostsByAuthorName } from "@/lib/blog/data";
+import { pageAlternates, pageOpenGraph } from "@/lib/metadata";
 import "@/app/blog/blog.css";
 
 type PageProps = {
@@ -37,7 +38,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: `${author.name} | DarkThreat Author`,
     description: truncateMetaDescription(author.bio),
-    alternates: { canonical: `/author/${author.slug}` },
+    alternates: pageAlternates(`/author/${author.slug}`),
+    openGraph: pageOpenGraph(`/author/${author.slug}`),
   };
 }
 

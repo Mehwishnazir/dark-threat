@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSeo } from "@/lib/metadata";
 import Link from "next/link";
 import {
   Shield, Search, AlertTriangle, Users, Database, Eye, Globe, Lock,
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
   },
   description:
     "DarkThreat is an AI-powered dark web monitoring and credential leak detection platform. Detect leaked passwords, hacker chatter, and data breaches before they impact your business. 7-day free trial.",
-  alternates: { canonical: "/" },
+  ...pageSeo("/"),
 };
 
 export default function HomePage() {

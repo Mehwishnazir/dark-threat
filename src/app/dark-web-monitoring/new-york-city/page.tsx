@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSeo } from "@/lib/metadata";
 import Link from "next/link";
 import { Banknote, Shield, Lock, AlertTriangle, Database, CheckCircle2, ArrowRight, CreditCard, Key, Eye, FileWarning, Twitter, Linkedin, Github, MapPin } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
@@ -14,7 +15,7 @@ import { serviceSchema, breadcrumbSchema, organizationSchema } from "@/utils/seo
 export const metadata: Metadata = {
   title: "Dark Web Monitoring in New York City",
   description: "Protect your New York City organization with advanced Dark Web Monitoring. Detect and remediate threats before they become data breaches. Book a demo today.",
-  alternates: { canonical: "/dark-web-monitoring/new-york-city" },
+  ...pageSeo("/dark-web-monitoring/new-york-city"),
 };
 
 const threats = [

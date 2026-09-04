@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSeo } from "@/lib/metadata";
 import BlogListingClient from "@/components/blog/BlogListingClient";
 import JsonLd from "@/components/JsonLd";
 import ThreatSphere from "@/components/ThreatSphereDynamic";
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
   title: "Threat Intelligence Blog",
   description:
     "Expert insights on dark web monitoring, credential leak detection, and threat intelligence strategies from the DarkThreat research team.",
-  alternates: { canonical: "/blog" },
+  ...pageSeo("/blog"),
 };
 
 export default function BlogIndexPage() {

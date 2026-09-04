@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSeo } from "@/lib/metadata";
 import Link from "next/link";
 import { GraduationCap, Shield, Lock, AlertTriangle, Database, CheckCircle2, ArrowRight, Key, Eye, } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
@@ -14,7 +15,7 @@ import { serviceSchema, breadcrumbSchema, organizationSchema } from "@/utils/seo
 export const metadata: Metadata = {
   title: "Dark Web Monitoring for Education",
   description: "Protect student PII, research IP, and faculty credentials with dark web monitoring. FERPA, COPPA, and NIST aligned monitoring for schools and universities.",
-  alternates: { canonical: "/industries/education" },
+  ...pageSeo("/industries/education"),
 };
 
 const threats = [

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSeo } from "@/lib/metadata";
 import Link from "next/link";
 import { Globe, Cloud, ShieldCheck, CheckCircle, XCircle, ArrowRight, Shield } from "lucide-react";
 import FinalCTA from "@/components/FinalCTA";
@@ -8,7 +9,7 @@ import JsonLd from "@/components/JsonLd";
 export const metadata: Metadata = {
   title: "External Attack Surface Monitoring",
   description: "Track internet-facing digital footprint, shadow IT assets, open ports, cloud exposures, and third-party supply chain vulnerabilities.",
-  alternates: { canonical: "/external-attack-surface-monitoring" },
+  ...pageSeo("/external-attack-surface-monitoring"),
 };
 
 const faqs = [

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSeo } from "@/lib/metadata";
 import Link from "next/link";
 import { Briefcase, Shield, Lock, AlertTriangle, Database, CheckCircle2, ArrowRight, Key, Eye, } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
@@ -14,7 +15,7 @@ import { serviceSchema, breadcrumbSchema, organizationSchema } from "@/utils/seo
 export const metadata: Metadata = {
   title: "Dark Web Monitoring for Professional Services",
   description: "Protect confidential client information, partner credentials, and firm intellectual property. SOC 2, ISO 27001, and GDPR aligned dark web monitoring for consulting, accounting, and advisory firms.",
-  alternates: { canonical: "/industries/professional-services" },
+  ...pageSeo("/industries/professional-services"),
 };
 
 const threats = [

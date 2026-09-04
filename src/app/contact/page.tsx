@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSeo } from "@/lib/metadata";
 import Link from "next/link";
 import {
   Mail,
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
   title: "Contact DarkThreat | Connect with Threat Intelligence & Monitoring Experts",
   description:
     "Contact the DarkThreat team to discuss dark web monitoring, credential leak detection, or to start your 7-day free trial. We respond within 24 hours.",
-  alternates: { canonical: "/contact" },
+  ...pageSeo("/contact"),
 };
 
 const faqs = [

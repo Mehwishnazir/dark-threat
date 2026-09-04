@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSeo } from "@/lib/metadata";
 import Link from "next/link";
 import { Database, FileCheck, ShieldCheck, CheckCircle, XCircle, ArrowRight, Shield } from "lucide-react";
 import FinalCTA from "@/components/FinalCTA";
@@ -8,7 +9,7 @@ import JsonLd from "@/components/JsonLd";
 export const metadata: Metadata = {
   title: "Compliance & Framework Alignment",
   description: "Continuous monitoring and compliance evidence collection aligned with ISO 27001, NIST Cybersecurity Framework, GDPR, HIPAA, and PCI-DSS.",
-  alternates: { canonical: "/compliance-framework-alignment" },
+  ...pageSeo("/compliance-framework-alignment"),
 };
 
 const faqs = [

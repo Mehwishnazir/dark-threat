@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSeo } from "@/lib/metadata";
 import Link from "next/link";
 import { ShoppingCart, Shield, Lock, AlertTriangle, Database, CheckCircle2, ArrowRight, FileWarning, Key, Eye, CreditCard, ShoppingBag } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
@@ -14,7 +15,7 @@ import JsonLd from "@/components/JsonLd";
 export const metadata: Metadata = {
   title: "E-Commerce & Retail Dark Web Monitoring — Protecting Shoppers",
   description: "Secure your e-commerce store, customer accounts, and transactions from carding fraud and credential stuffing. PCI-DSS v4.0 aligned.",
-  alternates: { canonical: "/industries/ecommerce" },
+  ...pageSeo("/industries/ecommerce"),
 };
 
 const threats = [
