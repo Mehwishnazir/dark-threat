@@ -2,12 +2,12 @@
 # https://darkthreat.ai/.well-known/security.txt
 # Format: RFC 9116
 
-Contact: mailto:info@darkthreat.ai
+Contact: mailto:security@darkthreat.ai
 Contact: tel:+1-416-576-8744
 Expires: 2027-08-19T00:00:00.000Z
 Preferred-Languages: en
 Canonical: https://darkthreat.ai/.well-known/security.txt
-Policy: https://darkthreat.ai/contact
+Policy: https://darkthreat.ai/security-policy
 
 # Reporting guidance
 # Please include: affected URL or endpoint, reproduction steps, impact
