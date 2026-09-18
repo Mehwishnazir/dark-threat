@@ -72,6 +72,10 @@ const nextConfig: NextConfig = {
           },
           { key: "X-XSS-Protection", value: "1; mode=block" },
           {
+            key: "Cross-Origin-Opener-Policy",
+            value: "same-origin",
+          },
+          {
             key: "Content-Security-Policy-Report-Only",
             value: cspDirectives,
           },
