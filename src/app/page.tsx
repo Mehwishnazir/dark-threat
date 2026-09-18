@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     absolute: "Dark Web Monitoring & Credential Leak Detection Platform | DarkThreat",
   },
   description:
-    "DarkThreat is an AI-powered dark web monitoring and credential leak detection platform. Detect leaked passwords, hacker chatter, and data breaches before they impact your business. 7-day free trial.",
+    "AI-powered dark web monitoring and credential leak detection. Spot leaked passwords, hacker chatter, and breaches early. Start a 7-day free trial.",
   ...pageSeo("/"),
 };
 

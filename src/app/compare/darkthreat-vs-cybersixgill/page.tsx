@@ -8,7 +8,7 @@ import ComparisonPage from "@/components/ComparisonPage";
  */
 export const metadata: Metadata = {
   title: "DarkThreat vs Cybersixgill — Dark Web Monitoring Comparison (2026)",
-  description: "Compare DarkThreat and Cybersixgill on dark web monitoring, credential leak detection, coverage, pricing transparency, and time-to-value. Start a free 7-day trial — no credit card.",
+  description: "Compare DarkThreat and Cybersixgill on dark web monitoring, credential leak detection, coverage, and pricing. Start a 7-day free trial, no credit card.",
   ...pageSeo("/compare/darkthreat-vs-cybersixgill"),
 };
 

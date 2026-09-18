@@ -14,7 +14,7 @@ import { serviceSchema, breadcrumbSchema, organizationSchema } from "@/utils/seo
 
 export const metadata: Metadata = {
   title: "Threat Intelligence in Washington DC",
-  description: "Protect your Washington DC organization with advanced Threat Intelligence. Detect and remediate threats before they become data breaches. Book a demo today.",
+  description: "Protect your Washington DC organization with Threat Intelligence. Detect and remediate threats before they become breaches. Book a demo today.",
   ...pageSeo("/threat-intelligence/washington-dc"),
 };
 
@@ -28,7 +28,7 @@ const threats = [
 ];
 
 const schema = {
-  ...serviceSchema('Threat Intelligence in Washington DC', 'Protect your Washington DC organization with advanced Threat Intelligence. Detect and remediate threats before they become data breaches.', 'https://darkthreat.ai/threat-intelligence/washington-dc'),
+  ...serviceSchema('Threat Intelligence in Washington DC', 'Protect your Washington DC organization with Threat Intelligence. Detect and remediate threats before they become breaches. Book a demo today.', 'https://darkthreat.ai/threat-intelligence/washington-dc'),
   areaServed: {
     '@type': 'Place',
     name: 'Washington DC'

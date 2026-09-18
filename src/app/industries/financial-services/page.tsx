@@ -14,7 +14,7 @@ import { serviceSchema, breadcrumbSchema, organizationSchema } from "@/utils/seo
 
 export const metadata: Metadata = {
   title: "Dark Web Monitoring for Financial Services & Banks",
-  description: "DarkThreat protects banks, credit unions, and fintechs from SWIFT credential theft, carding attacks, insider threats, and dark web data exposure. PCI-DSS & GLBA aligned.",
+  description: "DarkThreat protects banks, credit unions, and fintechs from SWIFT credential theft, carding, and insider threats. PCI-DSS & GLBA aligned.",
   ...pageSeo("/industries/financial-services"),
 };
 

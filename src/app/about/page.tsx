@@ -26,7 +26,7 @@ import { orgJsonLd, faqPageSchema } from "@/utils/seoSchemas";
 export const metadata: Metadata = {
   title: "About DarkThreat | AI-Powered Dark Web Monitoring & Threat Intelligence Platform",
   description:
-    "DarkThreat is an AI-powered dark web monitoring and threat intelligence platform. Learn how our cyber threat detection engine protects 500+ enterprises from data breaches, credential leaks, and ransomware attacks — 24/7.",
+    "AI-powered dark web monitoring and threat intelligence. See how DarkThreat protects 500+ enterprises from breaches, credential leaks, and ransomware.",
   ...pageSeo("/about"),
 };
 

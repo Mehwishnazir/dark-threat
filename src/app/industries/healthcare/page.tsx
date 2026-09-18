@@ -14,7 +14,7 @@ import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: "Healthcare Dark Web Monitoring — Protecting PHI & HIPAA Data",
-  description: "Protect your hospital, health system, or clinic from PHI data breaches, ransomware attacks, and EHR record theft with DarkThreat's HIPAA-aligned dark web monitoring.",
+  description: "Protect your hospital, health system, or clinic from PHI breaches, ransomware, and EHR record theft with HIPAA-aligned dark web monitoring.",
   ...pageSeo("/industries/healthcare"),
 };
 

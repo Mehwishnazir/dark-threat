@@ -4,7 +4,7 @@ import ComparisonPage from "@/components/ComparisonPage";
 
 export const metadata: Metadata = {
   title: "DarkThreat vs ZeroFox — Dark Web Monitoring Comparison (2026)",
-  description: "Compare DarkThreat and ZeroFox on dark web coverage, credential leak detection, pricing transparency, and ease of deployment. Public pricing and a 7-day free trial, no credit card.",
+  description: "Compare DarkThreat and ZeroFox on dark web coverage, credential leak detection, and pricing. Public pricing and a 7-day free trial, no credit card.",
   ...pageSeo("/compare/darkthreat-vs-zerofox"),
 };
 

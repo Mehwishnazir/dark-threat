@@ -11,7 +11,7 @@ import {
   getRelatedPosts,
 } from "@/lib/blog/data";
 import { resolveFeaturedImage } from "@/lib/blog/resolveFeaturedImage";
-import { pageAlternates, pageUrl } from "@/lib/metadata";
+import { pageAlternates, pageUrl, truncateMetaDescription } from "@/lib/metadata";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   const title = post.metaTitle || post.title;
-  const description = post.metaDescription || post.excerpt;
+  const description = truncateMetaDescription(post.metaDescription || post.excerpt);
   const ogImage = resolveFeaturedImage(post.featuredImage, post.slug);
 
   const path = `/blog/${post.slug}`;

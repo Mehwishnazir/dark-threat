@@ -14,7 +14,7 @@ import { serviceSchema, breadcrumbSchema, organizationSchema } from "@/utils/seo
 
 export const metadata: Metadata = {
   title: "Credential Monitoring in San Francisco",
-  description: "Protect your San Francisco organization with advanced Credential Monitoring. Detect and remediate threats before they become data breaches. Book a demo today.",
+  description: "Protect your San Francisco organization with Credential Monitoring. Detect and remediate threats before they become breaches. Book a demo today.",
   ...pageSeo("/credential-monitoring/san-francisco"),
 };
 
@@ -28,7 +28,7 @@ const threats = [
 ];
 
 const schema = {
-  ...serviceSchema('Credential Monitoring in San Francisco', 'Protect your San Francisco organization with advanced Credential Monitoring. Detect and remediate threats before they become data breaches.', 'https://darkthreat.ai/credential-monitoring/san-francisco'),
+  ...serviceSchema('Credential Monitoring in San Francisco', 'Protect your San Francisco organization with Credential Monitoring. Detect and remediate threats before they become breaches. Book a demo today.', 'https://darkthreat.ai/credential-monitoring/san-francisco'),
   areaServed: {
     '@type': 'Place',
     name: 'San Francisco'

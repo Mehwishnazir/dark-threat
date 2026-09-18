@@ -7,7 +7,7 @@ import FinalCTA from "@/components/FinalCTA";
 
 export const metadata: Metadata = {
   title: "DarkThreat vs DarkOwl — Dark Web Monitoring Comparison (2026)",
-  description: "Looking for a DarkOwl alternative? Compare DarkThreat and DarkOwl on pricing transparency, coverage, ease-of-use, and self-serve onboarding. Start a 7-day free trial today.",
+  description: "Looking for a DarkOwl alternative? Compare DarkThreat and DarkOwl on pricing, coverage, and onboarding. Start a 7-day free trial today.",
   ...pageSeo("/compare/darkthreat-vs-darkowl"),
 };
 

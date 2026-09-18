@@ -2,6 +2,14 @@ import type { Metadata } from "next";
 
 export const SITE_URL = "https://darkthreat.ai";
 
+/** Trim a description to Google's ~155 char display limit, breaking on a word. */
+export function truncateMetaDescription(text: string, maxLength = 155): string {
+  if (text.length <= maxLength) return text;
+  const slice = text.slice(0, maxLength - 3);
+  const lastSpace = slice.lastIndexOf(" ");
+  return `${lastSpace > 0 ? slice.slice(0, lastSpace) : slice}...`;
+}
+
 /** Absolute URL for a site path (e.g. `/pricing` → `https://darkthreat.ai/pricing`). */
 export function pageUrl(path: string): string {
   if (path === "/") return SITE_URL;

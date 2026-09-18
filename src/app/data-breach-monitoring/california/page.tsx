@@ -14,7 +14,7 @@ import { serviceSchema, breadcrumbSchema, organizationSchema } from "@/utils/seo
 
 export const metadata: Metadata = {
   title: "Data Breach Monitoring in California",
-  description: "Protect your California organization with advanced Data Breach Monitoring. Detect and remediate threats before they become data breaches. Book a demo today.",
+  description: "Protect your California organization with Data Breach Monitoring. Detect and remediate threats before they become breaches. Book a demo today.",
   ...pageSeo("/data-breach-monitoring/california"),
 };
 
@@ -28,7 +28,7 @@ const threats = [
 ];
 
 const schema = {
-  ...serviceSchema('Data Breach Monitoring in California', 'Protect your California organization with advanced Data Breach Monitoring. Detect and remediate threats before they become data breaches.', 'https://darkthreat.ai/data-breach-monitoring/california'),
+  ...serviceSchema('Data Breach Monitoring in California', 'Protect your California organization with Data Breach Monitoring. Detect and remediate threats before they become breaches. Book a demo today.', 'https://darkthreat.ai/data-breach-monitoring/california'),
   areaServed: {
     '@type': 'Place',
     name: 'California'

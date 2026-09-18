@@ -4,7 +4,7 @@ import ComparisonPage from "@/components/ComparisonPage";
 
 export const metadata: Metadata = {
   title: "DarkThreat vs Recorded Future — Dark Web Monitoring Comparison (2026)",
-  description: "Compare DarkThreat and Recorded Future on dark web coverage, credential leak detection, pricing transparency, and time-to-value. Self-serve 7-day free trial — no sales call required.",
+  description: "Compare DarkThreat and Recorded Future on dark web coverage, credential leak detection, and pricing. Self-serve 7-day free trial, no sales call.",
   ...pageSeo("/compare/darkthreat-vs-recorded-future"),
 };
 

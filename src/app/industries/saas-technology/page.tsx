@@ -14,7 +14,7 @@ import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: "Dark Web Monitoring for SaaS & Technology Companies",
-  description: "DarkThreat protects SaaS companies and tech firms from source code leakage, API key theft, cloud credential exposure, and supply chain attacks. SOC 2 & ISO 27001 aligned.",
+  description: "DarkThreat protects SaaS and tech firms from source code leaks, API key theft, and cloud credential exposure. SOC 2 & ISO 27001 aligned.",
   ...pageSeo("/industries/saas-technology"),
 };
 

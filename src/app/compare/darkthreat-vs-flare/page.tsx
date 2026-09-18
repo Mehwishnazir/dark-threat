@@ -4,7 +4,7 @@ import ComparisonPage from "@/components/ComparisonPage";
 
 export const metadata: Metadata = {
   title: "DarkThreat vs Flare — Dark Web Monitoring Comparison (2026)",
-  description: "DarkThreat vs Flare: side-by-side comparison of dark web monitoring features, credential leak detection coverage, pricing, and integrations. Start a 7-day free trial in under a minute.",
+  description: "DarkThreat vs Flare: compare dark web monitoring, credential leak coverage, pricing, and integrations. Start a 7-day free trial.",
   ...pageSeo("/compare/darkthreat-vs-flare"),
 };
 

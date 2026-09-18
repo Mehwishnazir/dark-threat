@@ -9,7 +9,7 @@ import JsonLd from "@/components/JsonLd";
 export const metadata: Metadata = {
   title: "External Data Leak Detection & PII Exposure Monitoring",
   description:
-    "Detect exposed customer PII, internal intellectual property, and leaked source code across the dark web. DarkThreat protects brand integrity with 24/7 monitoring.",
+    "Detect exposed customer PII, intellectual property, and leaked source code across the dark web. DarkThreat protects your brand with 24/7 monitoring.",
   ...pageSeo("/data-leak-detection"),
 };
 

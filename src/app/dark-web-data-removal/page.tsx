@@ -8,7 +8,7 @@ import { faqPageSchema } from "@/utils/seoSchemas";
 
 export const metadata: Metadata = {
   title: "Dark Web Data Removal",
-  description: "DarkThreat's Dark Web Data Removal service finds and removes leaked company data from underground marketplaces, hacker forums, and paste sites before it is weaponized.",
+  description: "DarkThreat finds and removes leaked company data from underground marketplaces, hacker forums, and paste sites before it is weaponized.",
   ...pageSeo("/dark-web-data-removal"),
 };
 

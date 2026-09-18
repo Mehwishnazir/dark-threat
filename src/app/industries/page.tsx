@@ -10,7 +10,7 @@ import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: "Industry Dark Web Monitoring",
-  description: "DarkThreat delivers sector-specific dark web monitoring for financial services, healthcare, legal, government, e-commerce, SaaS, education, and crypto industries.",
+  description: "Sector-specific dark web monitoring for financial services, healthcare, legal, government, e-commerce, SaaS, education, and crypto.",
   ...pageSeo("/industries"),
 };
 

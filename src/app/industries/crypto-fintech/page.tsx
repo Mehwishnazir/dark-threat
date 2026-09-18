@@ -14,7 +14,7 @@ import { serviceSchema, breadcrumbSchema, organizationSchema } from "@/utils/seo
 
 export const metadata: Metadata = {
   title: "Dark Web Monitoring for Crypto & Fintech",
-  description: "Monitor wallet address leaks, exchange credential theft, and DeFi protocol attack signals. FinCEN, MiCA, and ISO 27001 aligned dark web monitoring for crypto and fintech.",
+  description: "Monitor wallet address leaks, exchange credential theft, and DeFi attack signals. FinCEN, MiCA, and ISO 27001 aligned monitoring for crypto and fintech.",
   ...pageSeo("/industries/crypto-fintech"),
 };
 

@@ -10,19 +10,12 @@ import {
   getAuthorBySlug,
 } from "@/lib/blog/authors";
 import { getPostsByAuthorName } from "@/lib/blog/data";
-import { pageAlternates, pageOpenGraph } from "@/lib/metadata";
+import { pageAlternates, pageOpenGraph, truncateMetaDescription } from "@/lib/metadata";
 import "@/app/blog/blog.css";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
 };
-
-function truncateMetaDescription(text: string, maxLength = 155): string {
-  if (text.length <= maxLength) return text;
-  const slice = text.slice(0, maxLength);
-  const lastSpace = slice.lastIndexOf(" ");
-  return `${lastSpace > 0 ? slice.slice(0, lastSpace) : slice}...`;
-}
 
 export function generateStaticParams() {
   return getAllAuthorSlugs().map((slug) => ({ slug }));

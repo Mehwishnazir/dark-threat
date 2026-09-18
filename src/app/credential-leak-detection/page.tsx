@@ -8,7 +8,7 @@ import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: "Credential Leak Detection & Compromised Account Monitoring",
-  description: "Identify leaked employee, admin, and VIP credentials in real time. DarkThreat scans infostealer logs, Git repositories, and paste sites to prevent credential stuffing.",
+  description: "Identify leaked employee, admin, and VIP credentials in real time. DarkThreat scans infostealer logs, Git repos, and paste sites 24/7.",
   ...pageSeo("/credential-leak-detection"),
 };
 

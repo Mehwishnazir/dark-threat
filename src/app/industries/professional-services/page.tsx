@@ -14,7 +14,7 @@ import { serviceSchema, breadcrumbSchema, organizationSchema } from "@/utils/seo
 
 export const metadata: Metadata = {
   title: "Dark Web Monitoring for Professional Services",
-  description: "Protect confidential client information, partner credentials, and firm intellectual property. SOC 2, ISO 27001, and GDPR aligned dark web monitoring for consulting, accounting, and advisory firms.",
+  description: "Protect client data, partner credentials, and firm IP. SOC 2, ISO 27001, and GDPR aligned dark web monitoring for consulting and advisory firms.",
   ...pageSeo("/industries/professional-services"),
 };
 

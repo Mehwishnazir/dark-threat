@@ -11,7 +11,7 @@ import JsonLd from "@/components/JsonLd";
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "Transparent pricing for DarkThreat's dark web monitoring plans. Standard, Enterprise, and MSSP white-label tiers with a 7-day free trial. No credit card required.",
+    "Transparent pricing for DarkThreat's dark web monitoring. Standard, Enterprise, and MSSP tiers with a 7-day free trial. No credit card required.",
   ...pageSeo("/pricing"),
 };
 

@@ -10,7 +10,7 @@ import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: "Dark Web Monitoring Solution",
-  description: "Explore DarkThreat's complete dark web monitoring solution: credential leak detection, PII exposure alerts, hacker chatter intelligence and automated leak reports.",
+  description: "Explore DarkThreat's dark web monitoring solution: credential leak detection, PII exposure alerts, hacker chatter intelligence, and leak reports.",
   ...pageSeo("/solution"),
 };
 

@@ -11,7 +11,7 @@ import { faqPageSchema } from "@/utils/seoSchemas";
 export const metadata: Metadata = {
   title: "Dark Web Monitoring Service & Cyber Threat Intelligence",
   description:
-    "DarkThreat's AI-powered dark web monitoring service scans Tor networks, hacker forums, and stealer logs to detect credential leaks and corporate risk before exploit.",
+    "DarkThreat scans Tor networks, hacker forums, and stealer logs to detect credential leaks and corporate risk before attackers exploit them.",
   ...pageSeo("/dark-web-monitoring"),
 };
 
