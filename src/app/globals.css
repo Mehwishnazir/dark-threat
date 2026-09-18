@@ -7,7 +7,7 @@
   --card-foreground: 0 30% 95%;
   --popover: 5 30% 8%;
   --popover-foreground: 0 30% 95%;
-  --primary: 0 78% 45%;
+  --primary: 0 78% 58%;
   --primary-foreground: 0 0% 100%;
   --secondary: 5 30% 11%;
   --secondary-foreground: 0 30% 95%;
@@ -19,11 +19,11 @@
   --destructive-foreground: 0 0% 100%;
   --border: 0 78% 45% / 0.2;
   --input: 5 30% 10%;
-  --ring: 0 78% 45%;
+  --ring: 0 78% 58%;
   --threat-fire: 0 100% 67%;
   --threat-dark: 5 30% 8%;
   --navy-deep: 5 30% 6%;
-  --cyan: 0 78% 50%;
+  --cyan: 0 78% 58%;
   --cyan-deep: 0 85% 32%;
 }
 
