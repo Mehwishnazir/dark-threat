@@ -34,6 +34,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const path = `/blog/${post.slug}`;
 
+  const publishedTime = (() => {
+    const parsed = Date.parse(post.publishDate);
+    return Number.isNaN(parsed) ? undefined : new Date(parsed).toISOString();
+  })();
+
   return {
     title,
     description,
@@ -44,6 +49,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       type: "article",
       url: pageUrl(path),
       images: [{ url: ogImage }],
+      publishedTime,
+      authors: [post.author || "Dr. Ayaan Rahman"],
     },
     twitter: {
       card: "summary_large_image",
