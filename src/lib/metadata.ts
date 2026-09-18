@@ -20,9 +20,25 @@ export function pageAlternates(path: string): NonNullable<Metadata["alternates"]
   };
 }
 
-/** Per-page Open Graph URL (Next.js does not derive og:url from canonical alone). */
+const OG_IMAGE = {
+  url: `${SITE_URL}/og-image.png`,
+  width: 1200,
+  height: 630,
+  alt: "DarkThreat - Dark Web Monitoring & Threat Intelligence",
+};
+
+/**
+ * Per-page Open Graph. Next.js replaces rather than merges `openGraph`, so the
+ * layout-level fields must be restated here or pages lose them entirely.
+ */
 export function pageOpenGraph(path: string): NonNullable<Metadata["openGraph"]> {
-  return { url: pageUrl(path) };
+  return {
+    type: "website",
+    siteName: "DarkThreat",
+    locale: "en_US",
+    url: pageUrl(path),
+    images: [OG_IMAGE],
+  };
 }
 
 /** Canonical, hreflang, and og:url for a static page. */
