@@ -24,7 +24,7 @@ import JsonLd from "@/components/JsonLd";
 import { orgJsonLd, faqPageSchema } from "@/utils/seoSchemas";
 
 export const metadata: Metadata = {
-  title: "About DarkThreat | AI-Powered Dark Web Monitoring & Threat Intelligence Platform",
+  title: "About DarkThreat | Threat Intelligence",
   description:
     "AI-powered dark web monitoring and threat intelligence. See how DarkThreat protects 500+ enterprises from breaches, credential leaks, and ransomware.",
   ...pageSeo("/about"),

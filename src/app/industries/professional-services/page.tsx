@@ -13,7 +13,7 @@ import JsonLd from "@/components/JsonLd";
 import { serviceSchema, breadcrumbSchema, organizationSchema } from "@/utils/seoSchemas";
 
 export const metadata: Metadata = {
-  title: "Dark Web Monitoring for Professional Services",
+  title: "Professional Services Dark Web Monitoring",
   description: "Protect client data, partner credentials, and firm IP. SOC 2, ISO 27001, and GDPR aligned dark web monitoring for consulting and advisory firms.",
   ...pageSeo("/industries/professional-services"),
 };

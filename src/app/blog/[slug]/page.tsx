@@ -11,7 +11,7 @@ import {
   getRelatedPosts,
 } from "@/lib/blog/data";
 import { resolveFeaturedImage } from "@/lib/blog/resolveFeaturedImage";
-import { pageAlternates, pageUrl, truncateMetaDescription } from "@/lib/metadata";
+import { pageAlternates, pageUrl, truncateMetaDescription, truncateMetaTitle } from "@/lib/metadata";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return { title: "Post Not Found" };
   }
 
-  const title = post.metaTitle || post.title;
+  const title = truncateMetaTitle(post.metaTitle || post.title);
   const description = truncateMetaDescription(post.metaDescription || post.excerpt);
   const ogImage = resolveFeaturedImage(post.featuredImage, post.slug);
 

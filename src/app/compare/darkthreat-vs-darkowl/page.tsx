@@ -6,7 +6,7 @@ import JsonLd from "@/components/JsonLd";
 import FinalCTA from "@/components/FinalCTA";
 
 export const metadata: Metadata = {
-  title: "DarkThreat vs DarkOwl — Dark Web Monitoring Comparison (2026)",
+  title: "DarkThreat vs DarkOwl",
   description: "Looking for a DarkOwl alternative? Compare DarkThreat and DarkOwl on pricing, coverage, and onboarding. Start a 7-day free trial today.",
   ...pageSeo("/compare/darkthreat-vs-darkowl"),
 };

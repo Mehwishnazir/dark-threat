@@ -13,7 +13,7 @@ import { Label } from "@/components/ui/label";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Dark Web Monitoring for Law Firms & Legal Services",
+  title: "Law Firm Dark Web Monitoring",
   description: "Protect attorney-client privilege, client PII, and firm credentials from ransomware and dark web leaks. ABA Model Rules 1.1 and 1.6 compliant monitoring.",
   ...pageSeo("/industries/legal"),
 };

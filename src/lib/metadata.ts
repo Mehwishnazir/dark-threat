@@ -10,6 +10,17 @@ export function truncateMetaDescription(text: string, maxLength = 155): string {
   return `${lastSpace > 0 ? slice.slice(0, lastSpace) : slice}...`;
 }
 
+const TITLE_SUFFIX_LEN = " | DarkThreat.ai".length; // 17
+
+/** Trim a title so the rendered `<title>` (child + layout suffix) stays ~60 chars. */
+export function truncateMetaTitle(text: string, maxFinal = 60): string {
+  const budget = maxFinal - TITLE_SUFFIX_LEN;
+  if (text.length <= budget) return text;
+  const slice = text.slice(0, budget - 3);
+  const lastSpace = slice.lastIndexOf(" ");
+  return `${lastSpace > 0 ? slice.slice(0, lastSpace) : slice}...`;
+}
+
 /** Absolute URL for a site path (e.g. `/pricing` → `https://darkthreat.ai/pricing`). */
 export function pageUrl(path: string): string {
   if (path === "/") return SITE_URL;

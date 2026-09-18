@@ -13,7 +13,7 @@ import JsonLd from "@/components/JsonLd";
 import { serviceSchema, breadcrumbSchema, organizationSchema } from "@/utils/seoSchemas";
 
 export const metadata: Metadata = {
-  title: "Dark Web Monitoring for Financial Services & Banks",
+  title: "Financial Services Dark Web Monitoring",
   description: "DarkThreat protects banks, credit unions, and fintechs from SWIFT credential theft, carding, and insider threats. PCI-DSS & GLBA aligned.",
   ...pageSeo("/industries/financial-services"),
 };

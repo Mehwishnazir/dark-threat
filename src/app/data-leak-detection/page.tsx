@@ -7,7 +7,7 @@ import FinalCTA from "@/components/FinalCTA";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "External Data Leak Detection & PII Exposure Monitoring",
+  title: "Data Leak & PII Exposure Monitoring",
   description:
     "Detect exposed customer PII, intellectual property, and leaked source code across the dark web. DarkThreat protects your brand with 24/7 monitoring.",
   ...pageSeo("/data-leak-detection"),

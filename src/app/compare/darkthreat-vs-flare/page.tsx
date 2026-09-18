@@ -3,7 +3,7 @@ import { pageSeo } from "@/lib/metadata";
 import ComparisonPage from "@/components/ComparisonPage";
 
 export const metadata: Metadata = {
-  title: "DarkThreat vs Flare — Dark Web Monitoring Comparison (2026)",
+  title: "DarkThreat vs Flare",
   description: "DarkThreat vs Flare: compare dark web monitoring, credential leak coverage, pricing, and integrations. Start a 7-day free trial.",
   ...pageSeo("/compare/darkthreat-vs-flare"),
 };

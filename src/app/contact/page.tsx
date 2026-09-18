@@ -15,7 +15,7 @@ import JsonLd from "@/components/JsonLd";
 import { faqPageSchema } from "@/utils/seoSchemas";
 
 export const metadata: Metadata = {
-  title: "Contact DarkThreat | Connect with Threat Intelligence & Monitoring Experts",
+  title: "Contact DarkThreat | Monitoring Experts",
   description:
     "Contact the DarkThreat team to discuss dark web monitoring, credential leak detection, or to start your 7-day free trial. We respond within 24 hours.",
   ...pageSeo("/contact"),

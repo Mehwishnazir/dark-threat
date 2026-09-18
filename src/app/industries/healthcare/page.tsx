@@ -13,7 +13,7 @@ import { Label } from "@/components/ui/label";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Healthcare Dark Web Monitoring — Protecting PHI & HIPAA Data",
+  title: "Healthcare Dark Web Monitoring",
   description: "Protect your hospital, health system, or clinic from PHI breaches, ransomware, and EHR record theft with HIPAA-aligned dark web monitoring.",
   ...pageSeo("/industries/healthcare"),
 };

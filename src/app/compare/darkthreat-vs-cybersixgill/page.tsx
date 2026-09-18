@@ -7,7 +7,7 @@ import ComparisonPage from "@/components/ComparisonPage";
  * supplied by the site owner. Structure mirrors the other /compare pages.
  */
 export const metadata: Metadata = {
-  title: "DarkThreat vs Cybersixgill — Dark Web Monitoring Comparison (2026)",
+  title: "DarkThreat vs Cybersixgill",
   description: "Compare DarkThreat and Cybersixgill on dark web monitoring, credential leak detection, coverage, and pricing. Start a 7-day free trial, no credit card.",
   ...pageSeo("/compare/darkthreat-vs-cybersixgill"),
 };

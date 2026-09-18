@@ -3,7 +3,7 @@ import { pageSeo } from "@/lib/metadata";
 import ComparisonPage from "@/components/ComparisonPage";
 
 export const metadata: Metadata = {
-  title: "DarkThreat vs SOCRadar — Dark Web Monitoring Comparison (2026)",
+  title: "DarkThreat vs SOCRadar",
   description: "Compare DarkThreat and SOCRadar on dark web monitoring, credential leak detection, coverage, and pricing. 7-day free trial, no credit card.",
   ...pageSeo("/compare/darkthreat-vs-socradar"),
 };

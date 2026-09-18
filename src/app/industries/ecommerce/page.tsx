@@ -13,7 +13,7 @@ import { Label } from "@/components/ui/label";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "E-Commerce & Retail Dark Web Monitoring — Protecting Shoppers",
+  title: "E-Commerce Dark Web Monitoring",
   description: "Secure your e-commerce store, customer accounts, and transactions from carding fraud and credential stuffing. PCI-DSS v4.0 aligned.",
   ...pageSeo("/industries/ecommerce"),
 };

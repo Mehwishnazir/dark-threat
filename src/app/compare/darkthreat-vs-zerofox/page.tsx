@@ -3,7 +3,7 @@ import { pageSeo } from "@/lib/metadata";
 import ComparisonPage from "@/components/ComparisonPage";
 
 export const metadata: Metadata = {
-  title: "DarkThreat vs ZeroFox — Dark Web Monitoring Comparison (2026)",
+  title: "DarkThreat vs ZeroFox",
   description: "Compare DarkThreat and ZeroFox on dark web coverage, credential leak detection, and pricing. Public pricing and a 7-day free trial, no credit card.",
   ...pageSeo("/compare/darkthreat-vs-zerofox"),
 };

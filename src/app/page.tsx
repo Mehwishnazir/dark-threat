@@ -19,7 +19,7 @@ import { orgJsonLd, websiteJsonLd, softwareAppJsonLd } from "@/utils/seoSchemas"
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Dark Web Monitoring & Credential Leak Detection Platform | DarkThreat",
+    absolute: "Dark Web Monitoring & Credential Leaks | DarkThreat",
   },
   description:
     "AI-powered dark web monitoring and credential leak detection. Spot leaked passwords, hacker chatter, and breaches early. Start a 7-day free trial.",

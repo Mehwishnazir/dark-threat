@@ -9,7 +9,7 @@ import JsonLd from "@/components/JsonLd";
 import { faqPageSchema } from "@/utils/seoSchemas";
 
 export const metadata: Metadata = {
-  title: "Dark Web Monitoring Service & Cyber Threat Intelligence",
+  title: "Dark Web Monitoring",
   description:
     "DarkThreat scans Tor networks, hacker forums, and stealer logs to detect credential leaks and corporate risk before attackers exploit them.",
   ...pageSeo("/dark-web-monitoring"),
