@@ -11,6 +11,7 @@ import {
   getRelatedPosts,
 } from "@/lib/blog/data";
 import { resolveFeaturedImage } from "@/lib/blog/resolveFeaturedImage";
+import { wrapBlogTablesForScroll } from "@/lib/blog/wrapBlogTables";
 import { pageAlternates, pageUrl, truncateMetaDescription, truncateMetaTitle } from "@/lib/metadata";
 
 type PageProps = {
@@ -143,7 +144,7 @@ export default async function BlogPostPage({ params }: PageProps) {
         />
         <article
           className="blog-post-article"
-          dangerouslySetInnerHTML={{ __html: post.content }}
+          dangerouslySetInnerHTML={{ __html: wrapBlogTablesForScroll(post.content) }}
         />
       </main>
 

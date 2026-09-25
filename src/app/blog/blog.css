@@ -308,6 +308,146 @@ html.blog-smooth-scroll { scroll-behavior: smooth; }
   font-size: .7em; color: hsl(var(--primary)); font-weight: 700;
 }
 
+/*
+  Blog content tables (div.blog-table / .table-header / .table-row / .table-cell).
+  Posts ship those class names but had no matching CSS — cells stacked as plain
+  block divs (headers looked like "CapabilityDarkThreat.AITool B…"). Tailwind
+  preflight also strips native table chrome. Scoped to .blog-post-article;
+  theme tokens keep contrast in light/dark.
+*/
+.blog-post-article .blog-table-scroll {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1.75rem 0;
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.5rem;
+  background: hsl(var(--card));
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--border)) hsl(var(--muted));
+}
+
+.blog-post-article .blog-table-scroll::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+
+.blog-post-article .blog-table-scroll::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.blog-post-article .blog-table-scroll::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 9999px;
+  border: 2px solid hsl(var(--muted));
+}
+
+.blog-post-article .blog-table-scroll::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground) / 0.55);
+}
+
+.blog-post-article .blog-table-scroll::-webkit-scrollbar-corner {
+  background: hsl(var(--muted));
+}
+
+.blog-post-article .blog-table {
+  display: table;
+  width: 100%;
+  min-width: 40rem;
+  border-collapse: collapse;
+  table-layout: auto;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+.blog-post-article .blog-table > .table-header,
+.blog-post-article .blog-table > .table-row {
+  display: table-row;
+}
+
+.blog-post-article .blog-table > .table-header {
+  background: hsl(var(--muted));
+}
+
+.blog-post-article .blog-table > .table-row:nth-child(even) {
+  background: hsl(var(--muted) / 0.45);
+}
+
+.blog-post-article .blog-table .table-cell {
+  display: table-cell;
+  padding: 0.75rem 1rem;
+  border: 1px solid hsl(var(--border));
+  text-align: left;
+  vertical-align: top;
+  color: hsl(var(--muted-foreground));
+  word-break: normal;
+  overflow-wrap: normal;
+  hyphens: none;
+}
+
+.blog-post-article .blog-table .table-cell:first-child {
+  min-width: 9rem;
+}
+
+.blog-post-article .blog-table .table-cell a {
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+.blog-post-article .blog-table > .table-header .table-cell {
+  font-weight: 700;
+  color: hsl(var(--foreground));
+  background: hsl(var(--muted));
+  white-space: nowrap;
+  word-break: normal;
+  overflow-wrap: normal;
+}
+
+/* Native <table> in post HTML (rare) */
+.blog-post-article .blog-table-scroll > table,
+.blog-post-article table {
+  width: 100%;
+  min-width: 40rem;
+  border-collapse: collapse;
+  table-layout: auto;
+  background: hsl(var(--card));
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+.blog-post-article table th,
+.blog-post-article table td {
+  padding: 0.75rem 1rem;
+  border: 1px solid hsl(var(--border));
+  text-align: left;
+  vertical-align: top;
+  color: hsl(var(--muted-foreground));
+  word-break: normal;
+  overflow-wrap: normal;
+  hyphens: none;
+}
+.blog-post-article table th:first-child,
+.blog-post-article table td:first-child {
+  min-width: 9rem;
+}
+.blog-post-article table th {
+  font-weight: 700;
+  color: hsl(var(--foreground));
+  background: hsl(var(--muted));
+  white-space: nowrap;
+  word-break: normal;
+  overflow-wrap: normal;
+}
+.blog-post-article table td a {
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+.blog-post-article table tbody tr:nth-child(even) {
+  background: hsl(var(--muted) / 0.45);
+}
+
 /* ── CALLOUT BOX (CyberSilo: .callout-box) ─────────────────────────────────── */
 .dt-callout {
   border-radius: .5rem; padding: 1.25rem 1.5rem;
