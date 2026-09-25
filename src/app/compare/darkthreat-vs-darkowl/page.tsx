@@ -4,6 +4,7 @@ import Link from "next/link";
 import { CheckCircle, XCircle, ArrowRight, Quote } from "lucide-react";
 import JsonLd from "@/components/JsonLd";
 import FinalCTA from "@/components/FinalCTA";
+import OtherComparisons from "@/components/OtherComparisons";
 
 export const metadata: Metadata = {
   title: "DarkThreat vs DarkOwl",
@@ -158,6 +159,8 @@ export default function Page() {
           <p className="font-montserrat font-bold">— Director of Security, Fintech Scale-up</p>
         </div>
       </section>
+
+      <OtherComparisons currentSlug="darkthreat-vs-darkowl" />
 
       <FinalCTA />
 

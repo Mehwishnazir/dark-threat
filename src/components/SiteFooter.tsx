@@ -82,6 +82,16 @@ export default function SiteFooter() {
                   DarkThreat vs DarkOwl
                 </Link>
               </li>
+              <li>
+                <Link href="/compare" className="text-muted-foreground hover:text-primary">
+                  Compare
+                </Link>
+              </li>
+              <li>
+                <Link href="/locations" className="text-muted-foreground hover:text-primary">
+                  Locations
+                </Link>
+              </li>
             </ul>
           </div>
           <div>

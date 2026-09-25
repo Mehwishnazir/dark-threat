@@ -3,6 +3,7 @@ import { pageSeo } from "@/lib/metadata";
 import Link from "next/link";
 import { Lock, Key, AlertTriangle, Mail, Cookie, ArrowRight, CheckCircle, Shield } from "lucide-react";
 import FinalCTA from "@/components/FinalCTA";
+import AvailableInLocations from "@/components/AvailableInLocations";
 
 import JsonLd from "@/components/JsonLd";
 
@@ -274,6 +275,8 @@ export default function Page() {
           </div>
         </div>
       </section>
+
+      <AvailableInLocations parentHref="/credential-leak-detection" />
 
       <FinalCTA />
 
