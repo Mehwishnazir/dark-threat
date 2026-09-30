@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Banknote, Shield, Lock, AlertTriangle, Database, CheckCircle2, ArrowRight, CreditCard, Key, Eye, FileWarning, Twitter, Linkedin, Github, MapPin } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
 import FinalCTA from "@/components/FinalCTA";
+import OtherLocations from "@/components/OtherLocations";
 import ThreatSpherePlaceholder from "@/components/ThreatSpherePlaceholder";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -194,6 +195,8 @@ export default function Page() {
           </div>
         </div>
       </section>
+
+      <OtherLocations currentHref="/attack-surface-monitoring/texas" />
 
       <FinalCTA />
 

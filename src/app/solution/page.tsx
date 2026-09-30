@@ -3,6 +3,7 @@ import { pageSeo } from "@/lib/metadata";
 import Link from "next/link";
 import { Shield, Search, AlertTriangle, Users, Database, Zap, Eye, Globe, Lock, CheckCircle, BarChart3, Trash2, Twitter, Linkedin, Github } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
+import AvailableInLocations from "@/components/AvailableInLocations";
 import ThreatSpherePlaceholder from "@/components/ThreatSpherePlaceholder";
 import { Button } from "@/components/ui/button";
 
@@ -371,6 +372,8 @@ export default function Page() {
           </div>
         </div>
       </section>
+
+      <AvailableInLocations parentHref="/solution" />
 
       <div className="text-center mt-12 mb-10">
         <h2 className="text-4xl font-montserrat font-bold text-foreground mb-4">

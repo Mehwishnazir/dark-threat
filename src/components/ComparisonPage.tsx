@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Check, X, ArrowRight } from "lucide-react";
 import JsonLd from "@/components/JsonLd";
+import OtherComparisons from "@/components/OtherComparisons";
 
 export type ComparisonRow = {
   feature: string;
@@ -40,7 +41,9 @@ export default function ComparisonPage({
   differentiators,
 }: ComparisonPageProps) {
   const pageTitle = title ?? `DarkThreat vs ${competitorName}`;
-  const pageUrl = `https://darkthreat.ai/compare/${slug ?? `darkthreat-vs-${competitorName.toLowerCase().replace(/\s+/g, "-")}`}`;
+  const resolvedSlug =
+    slug ?? `darkthreat-vs-${competitorName.toLowerCase().replace(/\s+/g, "-")}`;
+  const pageUrl = `https://darkthreat.ai/compare/${resolvedSlug}`;
 
   return (
     <div className="min-h-screen bg-background">
@@ -127,6 +130,8 @@ export default function ComparisonPage({
             </div>
           </div>
         </section>
+
+        <OtherComparisons currentSlug={resolvedSlug} />
 
         <section className="px-6 py-20 text-center">
           <div className="max-w-3xl mx-auto">

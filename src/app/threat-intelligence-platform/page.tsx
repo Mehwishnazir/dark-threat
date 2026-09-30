@@ -3,6 +3,7 @@ import { pageSeo } from "@/lib/metadata";
 import Link from "next/link";
 import { Search, AlertTriangle, Eye, CheckCircle, XCircle, ArrowRight } from "lucide-react";
 import FinalCTA from "@/components/FinalCTA";
+import AvailableInLocations from "@/components/AvailableInLocations";
 import AssessmentFormShell from "@/components/AssessmentFormShell";
 
 import JsonLd from "@/components/JsonLd";
@@ -268,6 +269,8 @@ export default function ThreatIntelligencePlatformPage() {
           </div>
         </div>
       </section>
+
+      <AvailableInLocations parentHref="/threat-intelligence-platform" />
 
       <FinalCTA />
     </div>

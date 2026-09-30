@@ -3,6 +3,7 @@ import { pageSeo } from "@/lib/metadata";
 import Link from "next/link";
 import { Globe, Cloud, ShieldCheck, CheckCircle, XCircle, ArrowRight, Shield } from "lucide-react";
 import FinalCTA from "@/components/FinalCTA";
+import AvailableInLocations from "@/components/AvailableInLocations";
 
 import JsonLd from "@/components/JsonLd";
 
@@ -340,6 +341,8 @@ export default function Page() {
           </div>
         </div>
       </section>
+
+      <AvailableInLocations parentHref="/external-attack-surface-monitoring" />
 
       <FinalCTA />
 
