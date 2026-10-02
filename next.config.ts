@@ -90,6 +90,7 @@ const nextConfig: NextConfig = {
       { source: "/industries/technology", destination: "/industries/saas-technology", permanent: true },
       { source: "/platform-terms-of-use", destination: "/platform-terms", permanent: true },
       { source: "/website-terms-of-use", destination: "/website-terms", permanent: true },
+      { source: "/compliance", destination: "/compliance-framework-alignment", permanent: true },
       // Broken blog Related Resources / legacy slugs → canonical posts
       ...blogRedirects,
     ];
