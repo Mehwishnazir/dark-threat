@@ -14,11 +14,10 @@ export default function ComparisonFlare() {
       competitorName="Flare"
       slug="darkthreat-vs-flare"
       title="DarkThreat vs Flare — Dark Web Monitoring Comparison (2026)"
-      description="DarkThreat vs Flare: side-by-side comparison of dark web monitoring features, credential leak detection coverage, pricing, and integrations. Start a 7-day free trial in under a minute."
+      description="DarkThreat vs Flare: side-by-side comparison of dark web monitoring features, credential leak detection coverage, pricing, and integrations. 7-day free trial, no credit card required."
       h1="DarkThreat vs Flare"
-      intro="Flare is a strong dark web and external risk monitoring platform popular with mid-market security teams. DarkThreat offers a similar focus with broader infostealer log coverage, simpler pricing, and a self-serve trial that requires no sales conversation."
+      intro="Flare is a strong dark web and external risk monitoring platform popular with mid-market security teams. DarkThreat offers a similar focus with broader infostealer log coverage, simpler pricing, and a 7-day free trial with no credit card required."
       rows={[
-        { feature: "Self-serve onboarding", darkthreat: true, competitor: true },
         { feature: "Transparent public pricing", darkthreat: true, competitor: false },
         { feature: "Dark web forum coverage", darkthreat: true, competitor: true },
         { feature: "Telegram & Discord channels", darkthreat: true, competitor: true },
@@ -31,8 +30,8 @@ export default function ComparisonFlare() {
       pricingNote="Flare publishes plan tiers but not specific pricing; figures cited are from publicly available customer reviews."
       differentiators={[
         {
-          title: "Try it before you talk to sales",
-          body: "Flare requires a demo before access. DarkThreat lets you start a 7-day free trial in under a minute with full platform access.",
+          title: "7-day free trial, no credit card",
+          body: "Flare requires a demo before access. DarkThreat offers a 7-day free trial with no credit card required — request your trial through our team.",
         },
         {
           title: "Public pricing you can budget against",

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 const features: Array<[string, boolean, boolean]> = [
   ['Transparent public pricing', true, false],
-  ['Self-serve signup & 7-day trial', true, false],
+  ['7-day free trial (no credit card)', true, false],
   ['Real-time stealer log alerts', true, true],
   ['AI-based false-positive filtering', true, false],
   ['Telegram + Discord coverage', true, true],
@@ -35,7 +35,7 @@ export default function Page() {
           "@type": "WebPage",
           name: "DarkOwl Alternative | DarkThreat vs DarkOwl",
           description:
-            "Compare DarkThreat vs DarkOwl on pricing, coverage, ease-of-use, and onboarding. DarkThreat is a modern, transparent, self-serve DarkOwl alternative.",
+            "Compare DarkThreat vs DarkOwl on pricing, coverage, ease-of-use, and onboarding. DarkThreat is a modern, transparent DarkOwl alternative with a 7-day free trial, no credit card required.",
           url: "https://darkthreat.ai/compare/darkthreat-vs-darkowl",
           publisher: {
             "@type": "Organization",
@@ -55,7 +55,7 @@ export default function Page() {
             DarkOwl Alternative — Why Security Teams <span className="glow-text">Choose DarkThreat</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-8">
-            Transparent pricing, instant onboarding, and AI-curated alerts — without the enterprise sales cycle.
+            Transparent pricing, a 7-day free trial with no credit card required, and AI-curated alerts.
           </p>
           <Link href="/contact" className="cta-cyan inline-flex items-center gap-2">Book Demo <ArrowRight className="w-4 h-4" /></Link>
         </div>
@@ -99,7 +99,7 @@ export default function Page() {
               <p className="text-muted-foreground mb-4">Public pricing. Monthly or annual. No contract required.</p>
               <ul className="space-y-2 text-sm">
                 <li className="flex gap-2"><CheckCircle className="w-4 h-4 text-primary" /> 7-day free trial</li>
-                <li className="flex gap-2"><CheckCircle className="w-4 h-4 text-primary" /> Self-serve signup</li>
+                <li className="flex gap-2"><CheckCircle className="w-4 h-4 text-primary" /> Request your trial through our team</li>
                 <li className="flex gap-2"><CheckCircle className="w-4 h-4 text-primary" /> No credit card required</li>
               </ul>
             </div>
@@ -117,12 +117,12 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Self-serve vs enterprise */}
+      {/* Quick trial vs enterprise */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-montserrat font-bold text-center mb-8">Self-serve vs. enterprise sales</h2>
+          <h2 className="text-3xl font-montserrat font-bold text-center mb-8">Quick trial vs. enterprise sales</h2>
           <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto">
-            DarkOwl's go-to-market is designed for Fortune 500 procurement teams. DarkThreat is built for security engineers who want to evaluate a product the same week they need it — sign up, add your domain, and see real findings within minutes.
+            DarkOwl's go-to-market is designed for Fortune 500 procurement teams. DarkThreat is built for security engineers who want to evaluate a product the same week they need it — request your 7-day free trial through our team, add your domain, and see real findings within minutes.
           </p>
         </div>
       </section>
@@ -134,7 +134,7 @@ export default function Page() {
           <div className="grid md:grid-cols-2 gap-6">
             {[
               ['Transparent pricing', 'Know exactly what you pay before you book a demo.'],
-              ['Faster time-to-value', 'Live alerts in under 30 minutes from signup.'],
+              ['Faster time-to-value', 'Live alerts in under 30 minutes from trial setup.'],
               ['AI-curated alerts', 'Less noise — only verified, contextualized findings.'],
               ['Modern UX', 'Built for analysts in 2026, not 2014.'],
               ['Flexible plans', 'Monthly billing and MSSP white-label out of the box.'],

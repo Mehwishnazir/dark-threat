@@ -18,7 +18,6 @@ export default function ComparisonZeroFox() {
       h1="DarkThreat vs ZeroFox"
       intro="ZeroFox bundles digital risk protection across brand, social, and dark web surfaces in a wide enterprise suite. DarkThreat goes deep on the dark web and credential leak signals that actually trigger incidents — without the platform sprawl or sales-led pricing."
       rows={[
-        { feature: "Self-serve onboarding", darkthreat: true, competitor: false },
         { feature: "Transparent public pricing", darkthreat: true, competitor: false },
         { feature: "Dark web & deep web monitoring", darkthreat: true, competitor: true },
         { feature: "Credential leak detection", darkthreat: true, competitor: true },
@@ -44,7 +43,7 @@ export default function ComparisonZeroFox() {
         },
         {
           title: "Faster time-to-value",
-          body: "First alert in minutes, not weeks. We don't sell a 90-day implementation — we sell a working product you turn on yourself.",
+          body: "First alert in minutes, not weeks. We don't sell a 90-day implementation — we sell a working product your team can evaluate in a 7-day free trial.",
         },
       ]}
     />
