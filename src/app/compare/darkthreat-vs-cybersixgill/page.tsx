@@ -20,9 +20,8 @@ export default function ComparisonCybersixgill() {
       title="DarkThreat vs Cybersixgill — Dark Web Monitoring Comparison (2026)"
       description="Compare DarkThreat and Cybersixgill on dark web monitoring, credential leak detection, coverage, pricing transparency, and time-to-value. Start a free 7-day trial — no credit card."
       h1="DarkThreat vs Cybersixgill"
-      intro="Cybersixgill is a threat intelligence platform focused on deep and dark web collection for enterprise SOC teams. DarkThreat delivers focused dark web monitoring and credential leak detection that mid-market teams can self-serve in minutes. The head-to-head details below are placeholders — verify against current vendor documentation before publishing."
+      intro="Cybersixgill is a threat intelligence platform focused on deep and dark web collection for enterprise SOC teams. DarkThreat delivers focused dark web monitoring and credential leak detection that mid-market teams can get started quickly. The head-to-head details below are placeholders — verify against current vendor documentation before publishing."
       rows={[
-        { feature: "Self-serve onboarding", darkthreat: true, competitor: "Verify with vendor" },
         { feature: "Transparent public pricing", darkthreat: true, competitor: "Verify with vendor" },
         { feature: "Dark web forum coverage", darkthreat: true, competitor: "Verify with vendor" },
         { feature: "Telegram & Discord channels", darkthreat: true, competitor: "Verify with vendor" },
@@ -35,8 +34,8 @@ export default function ComparisonCybersixgill() {
       pricingNote="Cybersixgill pricing and feature-parity details above are placeholders pending owner review — do not treat as verified competitive claims."
       differentiators={[
         {
-          title: "Try it before you talk to sales",
-          body: "DarkThreat lets you start a 7-day free trial in under a minute with full platform access — no demo gating.",
+          title: "7-day free trial, no credit card",
+          body: "Request your 7-day free trial through our team and evaluate DarkThreat against your own domains — no credit card required.",
         },
         {
           title: "Public pricing you can budget against",

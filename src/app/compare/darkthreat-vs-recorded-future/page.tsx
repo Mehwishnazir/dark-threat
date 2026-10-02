@@ -4,7 +4,7 @@ import ComparisonPage from "@/components/ComparisonPage";
 
 export const metadata: Metadata = {
   title: "DarkThreat vs Recorded Future",
-  description: "Compare DarkThreat and Recorded Future on dark web coverage, credential leak detection, and pricing. Self-serve 7-day free trial, no sales call.",
+  description: "Compare DarkThreat and Recorded Future on dark web coverage, credential leak detection, and pricing. 7-day free trial, no credit card required.",
   ...pageSeo("/compare/darkthreat-vs-recorded-future"),
 };
 
@@ -14,11 +14,10 @@ export default function ComparisonRecordedFuture() {
       competitorName="Recorded Future"
       slug="darkthreat-vs-recorded-future"
       title="DarkThreat vs Recorded Future — Dark Web Monitoring Comparison (2026)"
-      description="Compare DarkThreat and Recorded Future on dark web coverage, credential leak detection, pricing transparency, and time-to-value. Self-serve 7-day free trial — no sales call required."
+      description="Compare DarkThreat and Recorded Future on dark web coverage, credential leak detection, pricing transparency, and time-to-value. 7-day free trial, no credit card required."
       h1="DarkThreat vs Recorded Future"
-      intro="Recorded Future is an enterprise threat intelligence platform built for large SOC teams with six-figure budgets and dedicated analysts. DarkThreat delivers focused dark web monitoring and credential leak detection that mid-market security teams can self-serve in minutes — at a fraction of the cost."
+      intro="Recorded Future is an enterprise threat intelligence platform built for large SOC teams with six-figure budgets and dedicated analysts. DarkThreat delivers focused dark web monitoring and credential leak detection that mid-market security teams can get started quickly — at a fraction of the cost."
       rows={[
-        { feature: "Self-serve onboarding (no sales call)", darkthreat: true, competitor: false },
         { feature: "Transparent public pricing", darkthreat: true, competitor: false },
         { feature: "Real-time credential leak detection", darkthreat: true, competitor: true },
         { feature: "Dark web forums & Telegram coverage", darkthreat: true, competitor: true },
@@ -36,7 +35,7 @@ export default function ComparisonRecordedFuture() {
         },
         {
           title: "No procurement cycle",
-          body: "Sign up, connect your domains, and get your first alert in under five minutes. No annual contract, no minimum spend, no sales conversation required.",
+          body: "Request your 7-day free trial through our team, connect your domains, and get your first alert in under five minutes. No annual contract, no minimum spend.",
         },
         {
           title: "Pricing you can put in a budget today",

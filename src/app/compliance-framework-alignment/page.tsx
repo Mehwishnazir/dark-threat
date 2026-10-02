@@ -88,8 +88,8 @@ export default function Page() {
               DarkThreat delivers continuous monitoring and compliance evidence collection aligned with ISO 27001, NIST Cybersecurity Framework, GDPR, HIPAA, PCI-DSS, and SOC 2 — so security and compliance teams can show external threat monitoring as part of their control posture.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/contact" className="cta-cyan inline-flex items-center gap-2">Book Demo <ArrowRight className="w-4 h-4" /></Link>
-              <Link href="/pricing" className="cta-outline inline-flex items-center gap-2 justify-center">
+              <Link href="/contact" className="cta-cyan inline-flex items-center justify-center gap-2 px-8 py-4 min-h-[44px]">Book Demo <ArrowRight className="w-4 h-4" /></Link>
+              <Link href="/pricing" className="cta-outline inline-flex items-center gap-2 justify-center px-8 py-4 min-h-[44px]">
                 View Pricing
               </Link>
             </div>
@@ -190,7 +190,14 @@ export default function Page() {
             { label: 'Evidence collection', detail: 'Audit-oriented outputs' },
           ].map((item) => (
             <div key={item.label} className="rounded-3xl border border-border bg-card p-6 text-center">
-              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary mb-3">{item.label}</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary mb-3">
+                {item.label.split(" · ").map((part, i) => (
+                  <span key={part}>
+                    {i > 0 && " · "}
+                    <span className="whitespace-nowrap">{part}</span>
+                  </span>
+                ))}
+              </p>
               <p className="text-foreground font-semibold text-lg">{item.detail}</p>
             </div>
           ))}

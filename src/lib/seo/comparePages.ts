@@ -12,7 +12,7 @@ export const COMPARE_PAGES: ComparePageMeta[] = [
     href: "/compare/darkthreat-vs-darkowl",
     name: "DarkThreat vs DarkOwl",
     competitor: "DarkOwl",
-    summary: "Transparent pricing and self-serve trial versus enterprise quote-based dark web intelligence.",
+    summary: "Transparent pricing and a 7-day free trial (no credit card) versus enterprise quote-based dark web intelligence.",
   },
   {
     slug: "darkthreat-vs-recorded-future",
@@ -33,7 +33,7 @@ export const COMPARE_PAGES: ComparePageMeta[] = [
     href: "/compare/darkthreat-vs-flare",
     name: "DarkThreat vs Flare",
     competitor: "Flare",
-    summary: "Self-serve trial and wider infostealer log coverage alongside similar dark web monitoring scope.",
+    summary: "A 7-day free trial (no credit card) and wider infostealer log coverage alongside similar dark web monitoring scope.",
   },
   {
     slug: "darkthreat-vs-socradar",
