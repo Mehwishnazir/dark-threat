@@ -3,6 +3,7 @@ import { pageSeo } from "@/lib/metadata";
 import Link from "next/link";
 import { HeartPulse, Shield, Lock, AlertTriangle, Database, CheckCircle2, ArrowRight, FileWarning, Key, Eye, Activity, Wifi, } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
+import ComplianceGuideLinks from "@/components/compliance/ComplianceGuideLinks";
 import FinalCTA from "@/components/FinalCTA";
 import ThreatSpherePlaceholder from "@/components/ThreatSpherePlaceholder";
 import { Button } from "@/components/ui/button";
@@ -240,6 +241,7 @@ export default function Page() {
               </div>
             ))}
           </div>
+          <ComplianceGuideLinks slugs={["hipaa"]} />
         </div>
       </section>
 

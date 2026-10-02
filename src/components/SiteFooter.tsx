@@ -7,7 +7,7 @@ export default function SiteFooter() {
   return (
     <footer className="relative bg-card border-t border-border py-12 z-10">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-6 gap-8">
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <Shield className="w-8 h-8 text-primary" />
@@ -125,6 +125,46 @@ export default function SiteFooter() {
               <li>
                 <Link href="/contact" className="text-muted-foreground hover:text-primary">
                   Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="font-montserrat font-semibold text-foreground mb-4">Compliance</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/compliance-framework-alignment" className="text-muted-foreground hover:text-primary">
+                  Framework Alignment
+                </Link>
+              </li>
+              <li>
+                <Link href="/compliance/gdpr" className="text-muted-foreground hover:text-primary">
+                  GDPR
+                </Link>
+              </li>
+              <li>
+                <Link href="/compliance/hipaa" className="text-muted-foreground hover:text-primary">
+                  HIPAA
+                </Link>
+              </li>
+              <li>
+                <Link href="/compliance/pci-dss" className="text-muted-foreground hover:text-primary">
+                  PCI DSS
+                </Link>
+              </li>
+              <li>
+                <Link href="/compliance/soc-2" className="text-muted-foreground hover:text-primary">
+                  SOC 2
+                </Link>
+              </li>
+              <li>
+                <Link href="/compliance/iso-27001" className="text-muted-foreground hover:text-primary">
+                  ISO 27001
+                </Link>
+              </li>
+              <li>
+                <Link href="/compliance/nist-csf" className="text-muted-foreground hover:text-primary">
+                  NIST CSF
                 </Link>
               </li>
             </ul>

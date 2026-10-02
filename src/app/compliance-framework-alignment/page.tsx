@@ -3,19 +3,20 @@ import { pageSeo } from "@/lib/metadata";
 import Link from "next/link";
 import { Database, FileCheck, ShieldCheck, CheckCircle, XCircle, ArrowRight, Shield } from "lucide-react";
 import FinalCTA from "@/components/FinalCTA";
+import { COMPLIANCE_PAGES } from "@/lib/seo/compliance";
 
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: "Compliance & Framework Alignment",
-  description: "Continuous monitoring and compliance evidence collection aligned with ISO 27001, NIST Cybersecurity Framework, GDPR, HIPAA, and PCI-DSS.",
+  description: "Continuous monitoring and compliance evidence collection aligned with ISO 27001, NIST Cybersecurity Framework, GDPR, HIPAA, PCI-DSS, and SOC 2.",
   ...pageSeo("/compliance-framework-alignment"),
 };
 
 const faqs = [
   {
     q: 'What compliance frameworks does DarkThreat support?',
-    a: "DarkThreat's operations are aligned with ISO 27001, the NIST Cybersecurity Framework, GDPR, HIPAA, and PCI-DSS — making it suitable for financial services, healthcare, legal, and other regulated industries.",
+    a: "DarkThreat's operations are aligned with ISO 27001, the NIST Cybersecurity Framework, GDPR, HIPAA, PCI-DSS, and SOC 2 — making it suitable for financial services, healthcare, legal, and other regulated industries.",
   },
   {
     q: 'Does DarkThreat replace my compliance program?',
@@ -50,7 +51,7 @@ export default function Page() {
       'logo': 'https://darkthreat.ai/logo.png'
     },
     'areaServed': 'Global',
-    'description': "DarkThreat delivers continuous monitoring and compliance evidence collection aligned with ISO 27001, NIST Cybersecurity Framework, GDPR, HIPAA, and PCI-DSS.",
+    'description': "DarkThreat delivers continuous monitoring and compliance evidence collection aligned with ISO 27001, NIST Cybersecurity Framework, GDPR, HIPAA, PCI-DSS, and SOC 2.",
     'url': 'https://darkthreat.ai/compliance-framework-alignment'
   };
 
@@ -84,7 +85,7 @@ export default function Page() {
               Compliance &amp; Framework Alignment — <span className="glow-text">Evidence that supports audits, not just alerts</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl">
-              DarkThreat delivers continuous monitoring and compliance evidence collection aligned with ISO 27001, NIST Cybersecurity Framework, GDPR, HIPAA, and PCI-DSS — so security and compliance teams can show external threat monitoring as part of their control posture.
+              DarkThreat delivers continuous monitoring and compliance evidence collection aligned with ISO 27001, NIST Cybersecurity Framework, GDPR, HIPAA, PCI-DSS, and SOC 2 — so security and compliance teams can show external threat monitoring as part of their control posture.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact" className="cta-cyan inline-flex items-center gap-2">Book Demo <ArrowRight className="w-4 h-4" /></Link>
@@ -185,7 +186,7 @@ export default function Page() {
           {[
             { label: 'ISO 27001', detail: 'Aligned monitoring controls' },
             { label: 'NIST CSF', detail: 'Identify → Respond coverage' },
-            { label: 'GDPR · HIPAA · PCI-DSS', detail: 'Framework-ready support' },
+            { label: 'GDPR · HIPAA · PCI-DSS · SOC 2', detail: 'Framework-ready support' },
             { label: 'Evidence collection', detail: 'Audit-oriented outputs' },
           ].map((item) => (
             <div key={item.label} className="rounded-3xl border border-border bg-card p-6 text-center">
@@ -193,6 +194,29 @@ export default function Page() {
               <p className="text-foreground font-semibold text-lg">{item.detail}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="py-16 px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-montserrat font-bold text-foreground mb-4">Framework-specific guides</h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">How DarkThreat monitoring supports each framework, with the specific requirements and controls it is aligned with.</p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {COMPLIANCE_PAGES.map((p) => (
+              <Link
+                key={p.slug}
+                href={p.path}
+                className="group rounded-3xl border border-border bg-card p-6 hover:border-primary/40 hover:shadow-[0_0_24px_rgba(34,211,238,0.08)] transition-all duration-300"
+              >
+                <h3 className="flex items-center gap-2 text-xl font-montserrat font-bold text-foreground group-hover:text-primary mb-3">
+                  {p.name} <ArrowRight className="w-4 h-4" aria-hidden />
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{p.summary}</p>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -211,7 +235,7 @@ export default function Page() {
           <div className="grid gap-4">
             {[
               { title: 'Continuous monitoring', detail: 'Ongoing external threat visibility for control evidence.' },
-              { title: 'Framework-aligned outputs', detail: 'Structured to support ISO, NIST, GDPR, HIPAA, and PCI-DSS needs.' },
+              { title: 'Framework-aligned outputs', detail: 'Structured to support ISO, NIST, GDPR, HIPAA, PCI-DSS, and SOC 2 needs.' },
               { title: 'Evidence for audits', detail: 'Reporting that helps keep compliance audits seamless.' },
             ].map((item) => (
               <div key={item.title} className="rounded-3xl border border-border bg-background p-6">
@@ -235,7 +259,7 @@ export default function Page() {
                 <ShieldCheck className="w-6 h-6" />
               </div>
               <h3 className="text-2xl font-montserrat font-bold mb-4">Multi-framework alignment</h3>
-              <p className="text-muted-foreground mb-4">Support across ISO 27001, NIST CSF, GDPR, HIPAA, and PCI-DSS.</p>
+              <p className="text-muted-foreground mb-4">Support across ISO 27001, NIST CSF, GDPR, HIPAA, PCI-DSS, and SOC 2.</p>
               <ul className="space-y-3 text-muted-foreground">
                 <li>Threat intelligence as an operational control (ISO)</li>
                 <li>Identify / Protect / Detect / Respond (NIST)</li>
@@ -280,7 +304,7 @@ export default function Page() {
             {[
               { title: 'Aligned by design', desc: 'Platform and procedures built to match frameworks that govern regulated industries.' },
               { title: 'Evidence, not just alerts', desc: 'Outputs support compliance evidence collection and posture reporting.' },
-              { title: 'Cross-framework coverage', desc: 'ISO 27001, NIST CSF, GDPR, HIPAA, and PCI-DSS in one monitoring layer.' },
+              { title: 'Cross-framework coverage', desc: 'ISO 27001, NIST CSF, GDPR, HIPAA, PCI-DSS, and SOC 2 in one monitoring layer.' },
               { title: 'Audit-friendly operations', desc: 'Early-warning intelligence that helps keep compliance audits seamless.' },
             ].map((item) => (
               <div key={item.title} className="rounded-3xl border border-border bg-background p-8">
@@ -311,7 +335,7 @@ export default function Page() {
                 {[
                   ['ISO 27001-aligned threat intelligence controls', true, false],
                   ['NIST CSF Identify / Detect / Respond support', true, false],
-                  ['GDPR / HIPAA / PCI-DSS alignment language & support', true, false],
+                  ['GDPR / HIPAA / PCI-DSS / SOC 2 alignment language & support', true, false],
                   ['Compliance evidence collection focus', true, false],
                   ['Sector-ready regulated industry coverage', true, false],
                 ].map(([cap, dt, mn]) => (
