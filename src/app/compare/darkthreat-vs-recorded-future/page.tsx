@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { pageSeo } from "@/lib/metadata";
 import ComparisonPage from "@/components/ComparisonPage";
+import { comparisonFaqs } from "@/lib/seo/compareContent";
 
 export const metadata: Metadata = {
   title: "DarkThreat vs Recorded Future",
@@ -46,6 +47,9 @@ export default function ComparisonRecordedFuture() {
           body: "We don't try to be a one-stop threat intel platform. We do dark web monitoring and credential leak detection exceptionally well, and we integrate cleanly with the SIEM and SOAR you already own.",
         },
       ]}
-    />
+      showBreadcrumb
+      showEvaluationChecklist
+      showSwitchingNotes
+      faqs={comparisonFaqs("Recorded Future")}    />
   );
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { pageSeo } from "@/lib/metadata";
 import ComparisonPage from "@/components/ComparisonPage";
+import { comparisonFaqs } from "@/lib/seo/compareContent";
 
 export const metadata: Metadata = {
   title: "DarkThreat vs SOCRadar",
@@ -46,6 +47,9 @@ export default function ComparisonSocRadar() {
           body: "Webhooks, Slack, Teams, SIEM, and SOAR integrations out of the box — augment what you already run instead of replacing it.",
         },
       ]}
-    />
+      showBreadcrumb
+      showEvaluationChecklist
+      showSwitchingNotes
+      faqs={comparisonFaqs("SOCRadar")}    />
   );
 }

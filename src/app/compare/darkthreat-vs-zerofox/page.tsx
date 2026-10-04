@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { pageSeo } from "@/lib/metadata";
 import ComparisonPage from "@/components/ComparisonPage";
+import { comparisonFaqs } from "@/lib/seo/compareContent";
 
 export const metadata: Metadata = {
   title: "DarkThreat vs ZeroFox",
@@ -46,6 +47,9 @@ export default function ComparisonZeroFox() {
           body: "First alert in minutes, not weeks. We don't sell a 90-day implementation — we sell a working product your team can evaluate in a 7-day free trial.",
         },
       ]}
-    />
+      showBreadcrumb
+      showEvaluationChecklist
+      showSwitchingNotes
+      faqs={comparisonFaqs("ZeroFox")}    />
   );
 }

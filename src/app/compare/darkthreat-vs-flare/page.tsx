@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { pageSeo } from "@/lib/metadata";
 import ComparisonPage from "@/components/ComparisonPage";
+import { comparisonFaqs } from "@/lib/seo/compareContent";
 
 export const metadata: Metadata = {
   title: "DarkThreat vs Flare",
@@ -46,6 +47,9 @@ export default function ComparisonFlare() {
           body: "Our enrichment pipeline filters duplicate and recycled leaks so your team sees signal, not the same 2019 dump rehashed every month.",
         },
       ]}
-    />
+      showBreadcrumb
+      showEvaluationChecklist
+      showSwitchingNotes
+      faqs={comparisonFaqs("Flare")}    />
   );
 }
