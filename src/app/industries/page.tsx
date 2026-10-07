@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { pageSeo } from "@/lib/metadata";
 import Link from "next/link";
-import { Banknote, HeartPulse, Scale, ShoppingCart, Cloud, Landmark, GraduationCap, Bitcoin, Briefcase, Shield, AlertTriangle, Lock, Database, Eye, Globe, ArrowRight, CheckCircle2, } from "lucide-react";
+import { Banknote, HeartPulse, Scale, ShoppingCart, Cloud, Landmark, GraduationCap, Bitcoin, Briefcase, Factory, Shield, AlertTriangle, Lock, Database, Eye, Globe, ArrowRight, CheckCircle2, } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
 import FinalCTA from "@/components/FinalCTA";
 import ThreatSpherePlaceholder from "@/components/ThreatSpherePlaceholder";
@@ -10,7 +10,7 @@ import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: "Industry Dark Web Monitoring",
-  description: "Sector-specific dark web monitoring for financial services, healthcare, legal, government, e-commerce, SaaS, education, and crypto.",
+  description: "Sector-specific dark web monitoring for manufacturing, financial services, healthcare, legal, government, e-commerce, SaaS, education, and crypto.",
   ...pageSeo("/industries"),
 };
 
@@ -45,6 +45,14 @@ const industries = [
     slug: '/industries/professional-services',
     desc: 'Protect confidential client information, partner credentials, and firm intellectual property.',
     tags: ['SOC 2', 'ISO 27001', 'GDPR'],
+    available: true,
+  },
+  {
+    icon: Factory,
+    name: 'Manufacturing',
+    slug: '/industries/manufacturing',
+    desc: 'Watch for stolen designs, production-impacting ransomware exposure, supplier credential leaks, and defense supply-chain exposure.',
+    tags: ['CMMC', 'NIST 800-171', 'IEC 62443'],
     available: true,
   },
   {
@@ -105,7 +113,7 @@ export default function Page() {
     '@type': 'WebPage',
     name: 'Industry-Specific Dark Web Monitoring — DarkThreat',
     url: 'https://darkthreat.ai/industries',
-    description: 'Dark web monitoring tailored to financial services, healthcare, legal, government, e-commerce, SaaS, education, and crypto industries.',
+    description: 'Dark web monitoring tailored to manufacturing, financial services, healthcare, legal, government, e-commerce, SaaS, education, and crypto industries.',
   };
 
   
@@ -148,7 +156,7 @@ export default function Page() {
           <div className="text-center mb-16">
             <span className="inline-flex rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-primary mb-4">Coverage</span>
             <h2 className="text-3xl md:text-4xl font-montserrat font-bold text-foreground mb-4">Industries We Protect</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">Eight high-risk sectors with tailored monitoring playbooks, compliance overlays, and active threat actor tracking.</p>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">Ten high-risk sectors with tailored monitoring playbooks, compliance overlays, and active threat actor tracking.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {industries.map((ind) => (

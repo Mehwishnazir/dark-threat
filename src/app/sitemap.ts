@@ -39,6 +39,7 @@ const STATIC_ROUTES = [
   "/industries/crypto-fintech",
   "/industries/education",
   "/industries/professional-services",
+  "/industries/manufacturing",
   "/compare",
   "/compare/darkthreat-vs-darkowl",
   "/compare/darkthreat-vs-recorded-future",
