@@ -40,6 +40,8 @@ const STATIC_ROUTES = [
   "/industries/education",
   "/industries/professional-services",
   "/industries/manufacturing",
+  "/industries/insurance",
+  "/industries/energy-utilities",
   "/compare",
   "/compare/darkthreat-vs-darkowl",
   "/compare/darkthreat-vs-recorded-future",

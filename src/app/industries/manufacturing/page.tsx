@@ -160,7 +160,7 @@ export default function Page() {
           <ThreatSpherePlaceholder />
         </div>
         <div className="relative z-10 text-center max-w-5xl mx-auto px-6">
-          <div className="mb-4 inline-flex justify-center">
+          <div className="mb-4 flex justify-center">
             <Breadcrumb
               items={[
                 { label: "Home", href: "/" },
@@ -178,7 +178,8 @@ export default function Page() {
           <p className="mx-auto max-w-3xl text-lg text-muted-foreground leading-relaxed">
             Manufacturers hold drawings, machine programs, supplier terms, and the remote-access
             accounts that keep a line running. DarkThreat watches external sources for stolen
-            credentials and leaked files so the security team can act while production is still up.
+            credentials and leaked files so the security team can act while production is still
+            up.
           </p>
           <div className="mt-8 flex flex-wrap gap-4 justify-center">
             <Link href="/contact" className="hero-button inline-flex items-center">
@@ -186,7 +187,7 @@ export default function Page() {
             </Link>
             <Link
               href="/pricing"
-              className="inline-flex items-center rounded-md border border-primary/30 px-8 py-4 text-sm font-semibold text-foreground hover:border-primary"
+              className="cta-outline inline-flex items-center justify-center px-8 py-4 min-h-[44px]"
             >
               View Pricing
             </Link>
@@ -204,9 +205,9 @@ export default function Page() {
               Why manufacturers are targeted
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              A plant is valuable for more than the customer list on the office network. The same
-              company holds design files, process knowledge, and a schedule that hurts when it
-              stops. Four exposure patterns show up in manufacturing again and again.
+              A plant is valuable for more than the customer list on the office network. The
+              same company holds design files, process knowledge, and a schedule that hurts when
+              it stops. Four exposure patterns show up in manufacturing again and again.
             </p>
           </div>
           <div className="space-y-10 text-muted-foreground leading-relaxed">
@@ -214,52 +215,62 @@ export default function Page() {
               <h3 className="font-montserrat font-bold text-foreground text-2xl mb-3">
                 Intellectual property
               </h3>
-              <p className="mb-4">
-                Tooling drawings, CAD assemblies, CNC programs, weld procedures, formulations, and
-                test methods are compact files with a long commercial life. A buyer, a competitor,
-                or a broker does not need the whole factory. They need a copy. Those files leave
-                through a compromised engineer laptop, a file share opened with a stolen password,
-                or a project folder synced to a personal cloud account. After the copy exists, it
-                can be offered in a forum post or attached to a ransomware leak-site entry under
-                the company name.
+              <p className="mb-6">
+                Tooling drawings, CAD assemblies, CNC programs, weld procedures, formulations,
+                and test methods are compact files with a long commercial life. A buyer, a
+                competitor, or a broker does not need the whole factory. They need a copy.
               </p>
-              <p className="mb-4">
-                What counts as intellectual property depends on the plant. A discrete manufacturer
-                may be protecting a product family, fixture designs, and the programs that run a
-                cell. A process manufacturer may be protecting recipes, batch parameters, and
-                quality limits. A job shop may be protecting customer-owned prints that were never
-                supposed to leave the building. In each case the harm is the same shape: the file
-                is useful to someone else, and the manufacturer may not learn about the copy until
-                a customer, a regulator, or a leak site forces the conversation.
+              <p className="mb-6">
+                Those files leave through a compromised engineer laptop, a file share opened
+                with a stolen password, or a project folder synced to a personal cloud account.
+                After the copy exists, it can be offered in a forum post or attached to a
+                ransomware leak-site entry under the company name.
+              </p>
+              <p className="mb-6">
+                What counts as intellectual property depends on the plant. A discrete
+                manufacturer may be protecting a product family, fixture designs, and the
+                programs that run a cell. A process manufacturer may be protecting recipes,
+                batch parameters, and quality limits.
+              </p>
+              <p className="mb-6">
+                A job shop may be protecting customer-owned prints that were never supposed to
+                leave the building. In each case the harm is the same shape: the file is useful
+                to someone else, and the manufacturer may not learn about the copy until a
+                customer, a regulator, or a leak site forces the conversation.
               </p>
               <p>
                 DarkThreat helps by watching for the company name, plant names, and product or
                 program names on leak sites, paste sites, and underground posts. The engineering
-                vault, the PDM system, and the permissions on those files stay under the
-                access controls the manufacturer already runs. An external finding is a reason to look there.
-                It is supporting information for the people who already own the vault.
+                vault, the PDM system, and the permissions on those files stay under the access
+                controls the manufacturer already runs. An external finding is a reason to look
+                there. It is supporting information for the people who already own the vault.
               </p>
             </div>
             <div>
               <h3 className="font-montserrat font-bold text-foreground text-2xl mb-3">
                 Ransomware aimed at production and OT
               </h3>
-              <p className="mb-4">
-                Stopping a line creates pressure to pay. Attackers know that. They also know that
-                many plants can be disrupted without rewriting a PLC. A typical path starts with a
-                stolen VPN password, an exposed remote desktop, or a vendor-support account. From
-                there the intruder looks for file servers, the historian, email, and the
+              <p className="mb-6">
+                Stopping a line creates pressure to pay. Attackers know that. They also know
+                that many plants can be disrupted without rewriting a PLC. A typical path starts
+                with a stolen VPN password, an exposed remote desktop, or a vendor-support
+                account.
+              </p>
+              <p className="mb-6">
+                From there the intruder looks for file servers, the historian, email, and the
                 engineering workstations used to reach the line. Encrypting those IT systems is
                 enough to idle shipping, quality release, and planning. Safety systems may keep
                 running while the business around them cannot ship.
               </p>
-              <p className="mb-4">
+              <p className="mb-6">
                 A second move is common in the same campaigns: copy files first, then post a
                 sample on a leak site. Drawings, payroll, and customer orders give the crew
                 leverage even if the plant network is later restored from backup. That is why
-                remote-access credentials and leak-site posts belong in the same watch. The
-                credential is the way in. The leak site is the public proof that files already
-                left.{" "}
+                remote-access credentials and leak-site posts belong in the same watch.
+              </p>
+              <p className="mb-6">
+                The credential is the way in. The leak site is the public proof that files
+                already left.{" "}
                 <Link
                   href="/blog/how-rdp-credentials-fuel-ransomware-the-dark-web-connection"
                   className="text-primary hover:underline"
@@ -272,48 +283,54 @@ export default function Page() {
                   className="text-primary hover:underline"
                 >
                   a credential leak is a documented step toward ransomware
-                </Link>
-                .
+                </Link>.
               </p>
-              <p>
+              <p className="mb-6">
                 DarkThreat helps by flagging company credentials in stealer logs and posts that
                 name the company on ransomware leak sites. It does not sit on the cell network.
                 Controller logic, safety instrumented functions, and the historian remain the
-                responsibility of the OT team. Use an external alert as a prompt to check remote-access logs
-                and to isolate the account, on systems the manufacturer already operates. For how
-                leak sites are used as pressure, see{" "}
+                responsibility of the OT team.
+              </p>
+              <p>
+                Use an external alert as a prompt to check remote-access logs and to isolate the
+                account, on systems the manufacturer already operates. For how leak sites are
+                used as pressure, see{" "}
                 <Link
                   href="/blog/monitoring-ransomware-leak-sites-a-security-teams-guide"
                   className="text-primary hover:underline"
                 >
                   monitoring ransomware leak sites
-                </Link>
-                .
+                </Link>.
               </p>
             </div>
             <div>
               <h3 className="font-montserrat font-bold text-foreground text-2xl mb-3">
                 Supplier and vendor credential leaks
               </h3>
-              <p className="mb-4">
+              <p className="mb-6">
                 Manufacturers depend on logins held by other companies. Steel and component
                 suppliers, tooling shops, logistics portals, outside quality labs, and the
                 maintenance vendors who dial into a line all hold credentials that touch the
-                operation. A password stolen from a laptop used by a buyer can be replayed against
-                email or a supplier portal. A password stolen from a vendor employee who also has
-                a remote-support login can be replayed against the plant. The leak often surfaces
-                under the vendor email domain, which means a watch limited to the primary
-                corporate website will miss it.
+                operation. A password stolen from a laptop used by a buyer can be replayed
+                against email or a supplier portal.
               </p>
-              <p className="mb-4">
+              <p className="mb-6">
+                A password stolen from a vendor employee who also has a remote-support login can
+                be replayed against the plant. The leak often surfaces under the vendor email
+                domain, which means a watch limited to the primary corporate website will miss
+                it.
+              </p>
+              <p className="mb-6">
                 The practical question for the security team is which identifiers they can
-                actually register. Portals the manufacturer operates, on domains it controls, can
-                go on the watch list directly. Access that lives entirely on a supplier system
-                cannot be monitored as if it were your own network. What you can do is ask
-                critical suppliers which email domains their staff use when they reach you, and
-                watch your side of that relationship: the accounts you issued, the jump hosts you
-                exposed, and any portal you host for them. DarkThreat helps with that external
-                watch. It does not audit the supplier internal network.
+                actually register. Portals the manufacturer operates, on domains it controls,
+                can go on the watch list directly. Access that lives entirely on a supplier
+                system cannot be monitored as if it were your own network.
+              </p>
+              <p className="mb-6">
+                What you can do is ask critical suppliers which email domains their staff use
+                when they reach you, and watch your side of that relationship: the accounts you
+                issued, the jump hosts you exposed, and any portal you host for them. DarkThreat
+                helps with that external watch. It does not audit the supplier internal network.
               </p>
               <p>
                 Two registered notes go further on this pattern:{" "}
@@ -329,8 +346,7 @@ export default function Page() {
                   className="text-primary hover:underline"
                 >
                   third-party vendor credential monitoring
-                </Link>
-                . Pair them with a watch for{" "}
+                </Link>. Pair them with a watch for{" "}
                 <Link
                   href="/blog/leaked-vpn-credentials-on-the-dark-web-monitoring-and-response"
                   className="text-primary hover:underline"
@@ -344,27 +360,27 @@ export default function Page() {
               <h3 className="font-montserrat font-bold text-foreground text-2xl mb-3">
                 Defense supply chain
               </h3>
-              <p className="mb-4">
+              <p className="mb-6">
                 Companies that machine parts, build electronics, or assemble subsystems for
-                defense programs sit on a supply chain that is mapped on purpose. Technical data,
-                program names, and the credentials of engineers and buyers are useful both for
-                theft and for a later intrusion into a prime or a peer supplier. The same
+                defense programs sit on a supply chain that is mapped on purpose. Technical
+                data, program names, and the credentials of engineers and buyers are useful both
+                for theft and for a later intrusion into a prime or a peer supplier. The same
                 companies are the ones CMMC and NIST SP 800-171 are written for when they handle
                 federal contract information or controlled unclassified information.
               </p>
-              <p className="mb-4">
+              <p className="mb-6">
                 A leaked mailbox, a posted drawing, or a stolen VPN login is an incident the
                 supplier has to investigate under its own contract. Where DFARS 252.204-7012
-                applies, that clause requires safeguarding of covered defense information and cyber
-                incident reporting. DarkThreat helps the supplier see external copies of
-                credentials and files so the investigation can start from a concrete finding. The
-                supplier still has to monitor its own systems, preserve evidence, and report
+                applies, that clause requires safeguarding of covered defense information and
+                cyber incident reporting. DarkThreat helps the supplier see external copies of
+                credentials and files so the investigation can start from a concrete finding.
+                The supplier still has to monitor its own systems, preserve evidence, and report
                 through the channel the clause requires.
               </p>
               <p>
-                DarkThreat supports that work with external exposure alerts. It does not perform a
-                CMMC assessment, it does not score NIST SP 800-171 requirements, and it does not
-                make a supplier compliant.
+                DarkThreat supports that work with external exposure alerts. It does not perform
+                a CMMC assessment, it does not score NIST SP 800-171 requirements, and it does
+                not make a supplier compliant.
               </p>
             </div>
           </div>
@@ -395,7 +411,9 @@ export default function Page() {
                   <t.icon className="w-5 h-5" />
                 </div>
                 <h3 className="font-montserrat font-bold text-foreground mb-2">{t.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{t.desc}</p>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {t.desc}
+                </p>
               </div>
             ))}
           </div>
@@ -412,7 +430,7 @@ export default function Page() {
               What dark web monitoring watches for in manufacturing
             </h2>
           </div>
-          <div className="space-y-4 text-muted-foreground leading-relaxed">
+          <div className="space-y-6 text-muted-foreground leading-relaxed">
             <p>
               This watch is external. DarkThreat looks for identifiers you provide in places
               stolen data is posted or sold: stealer-log collections, credential lists, forums,
@@ -423,28 +441,33 @@ export default function Page() {
               Did an employee, contractor, or engineer password for your domain show up in a
               stealer log? Is a VPN, remote-desktop, or vendor-support username for a plant
               gateway being passed around? Did a supplier-portal account you operate appear in a
-              credential list? Is the company, a plant name, or a product name on a ransomware
-              leak site, with drawings, bills of material, or customer files described? Is
-              someone offering access to the network, or offering files that match a program name,
-              in a forum post? Are lookalike domains imitating a vendor portal or a remote-access
-              page in order to collect more passwords?
+              credential list?
             </p>
             <p>
-              The same watch will not show traffic on the cell network, ladder logic, or the state
-              of a safety PLC. Those belong in the operational technology program, including the
-              asset-owner security program described in IEC 62443-2-1. An external finding is a
-              reason to check remote-access logs and account use on systems you run. It is a
-              complement to that program.
+              Is the company, a plant name, or a product name on a ransomware leak site, with
+              drawings, bills of material, or customer files described? Is someone offering
+              access to the network, or offering files that match a program name, in a forum
+              post? Are lookalike domains imitating a vendor portal or a remote-access page in
+              order to collect more passwords?
+            </p>
+            <p>
+              The same watch will not show traffic on the cell network, ladder logic, or the
+              state of a safety PLC. Those belong in the operational technology program,
+              including the asset-owner security program described in IEC 62443-2-1. An external
+              finding is a reason to check remote-access logs and account use on systems you
+              run. It is a complement to that program.
             </p>
             <p>
               Scope the identifiers with the people who know the plant. Corporate IT knows the
               email domains and the VPN. Engineering knows which workstations reach the line and
               which product names would be sensitive in a public post. Procurement knows which
-              portals the company hosts for suppliers. A defense program office knows which
-              program names and document markings should be treated as sensitive if they appear
-              outside the company. DarkThreat helps once those names are on the watch list. It
-              cannot guess a classified program title or a private supplier hostname that nobody
-              registered.
+              portals the company hosts for suppliers.
+            </p>
+            <p>
+              A defense program office knows which program names and document markings should be
+              treated as sensitive if they appear outside the company. DarkThreat helps once
+              those names are on the watch list. It cannot guess a classified program title or a
+              private supplier hostname that nobody registered.
             </p>
           </div>
         </div>
@@ -454,7 +477,9 @@ export default function Page() {
               <div key={c.label} className="rounded-2xl border border-border bg-background p-6">
                 <CheckCircle2 className="w-6 h-6 text-primary mb-4" />
                 <h3 className="font-montserrat font-semibold text-foreground mb-2">{c.label}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{c.desc}</p>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {c.desc}
+                </p>
               </div>
             ))}
           </div>
@@ -476,34 +501,40 @@ export default function Page() {
               company already runs, and someone keeps the record.
             </p>
           </div>
-          <div className="space-y-4 text-muted-foreground leading-relaxed">
+          <div className="space-y-6 text-muted-foreground leading-relaxed">
             <p>
-              Start with identifiers you can share without opening the production network to a new
-              tool. That list usually includes company domains, the email domains employees and
-              contractors use, remote-access hostnames you are willing to disclose, supplier
+              Start with identifiers you can share without opening the production network to a
+              new tool. That list usually includes company domains, the email domains employees
+              and contractors use, remote-access hostnames you are willing to disclose, supplier
               portals you operate, and product or program names that would be meaningful in a
               leak. A maintenance vendor hostname that you do not control is a conversation with
               that vendor, not a hostname to pretend you can see inside.
             </p>
             <p>
-              When a match appears, published plans include email notifications and web UI access,
-              so the security contact can read the finding directly. Triage by role. A password
-              for an engineer who reaches the line is a different hour of work from a password for
-              a marketing alias. The plant team resets the account, checks whether that identity
-              was used on remote access, and looks for a second account from the same person.
-              DarkThreat helps by putting the external finding in front of that team. The reset,
-              the log review, and any isolation of an engineering workstation happen inside the
-              manufacturer environment.
+              When a match appears, published plans include email notifications and web UI
+              access, so the security contact can read the finding directly. Triage by role. A
+              password for an engineer who reaches the line is a different hour of work from a
+              password for a marketing alias.
+            </p>
+            <p>
+              The plant team resets the account, checks whether that identity was used on remote
+              access, and looks for a second account from the same person. DarkThreat helps by
+              putting the external finding in front of that team. The reset, the log review, and
+              any isolation of an engineering workstation happen inside the manufacturer
+              environment.
             </p>
             <p>
               Keep the alert, the time, the account, and the action you took. Stolen logs are
-              copied, so leave the same identifiers on the watch list and look for a repost after
-              the reset. For a defense supplier, that record can support incident handling under
-              NIST SP 800-171 and the reporting duty in DFARS 252.204-7012 where the clause
-              applies. For an operator of industrial automation and control systems, it can
-              support the asset-owner security program in IEC 62443-2-1. The record helps the
-              people who own the assessment. DarkThreat does not make the organization compliant
-              with any of those requirements.
+              copied, so leave the same identifiers on the watch list and look for a repost
+              after the reset. For a defense supplier, that record can support incident handling
+              under NIST SP 800-171 and the reporting duty in DFARS 252.204-7012 where the
+              clause applies.
+            </p>
+            <p>
+              For an operator of industrial automation and control systems, it can support the
+              asset-owner security program in IEC 62443-2-1. The record helps the people who own
+              the assessment. DarkThreat does not make the organization compliant with any of
+              those requirements.
             </p>
           </div>
         </div>
@@ -515,7 +546,9 @@ export default function Page() {
                   {s.num}
                 </div>
                 <h3 className="font-montserrat font-bold text-foreground mb-2 text-sm">{s.title}</h3>
-                <p className="text-xs text-muted-foreground leading-relaxed">{s.desc}</p>
+                <p className="text-xs text-muted-foreground leading-relaxed">
+                  {s.desc}
+                </p>
               </div>
             ))}
           </div>
@@ -532,9 +565,9 @@ export default function Page() {
               CMMC, NIST SP 800-171, and IEC 62443
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              These are real requirements for defined kinds of manufacturers. DarkThreat supports
-              external exposure awareness inside a program the company already runs. Using
-              DarkThreat does not make a manufacturer compliant.
+              These are real requirements for defined kinds of manufacturers. DarkThreat
+              supports external exposure awareness inside a program the company already runs.
+              Using DarkThreat does not make a manufacturer compliant.
             </p>
           </div>
           <div className="space-y-8 text-muted-foreground leading-relaxed">
@@ -542,7 +575,7 @@ export default function Page() {
               <h3 className="font-montserrat font-bold text-foreground text-xl mb-3">
                 CMMC and NIST SP 800-171 for defense suppliers
               </h3>
-              <p className="mb-4">
+              <p className="mb-6">
                 The Cybersecurity Maturity Model Certification program is defined in{" "}
                 <a
                   href="https://www.ecfr.gov/current/title-32/subtitle-A/chapter-I/subchapter-G/part-170"
@@ -550,8 +583,7 @@ export default function Page() {
                   rel="noopener noreferrer"
                 >
                   32 CFR Part 170
-                </a>
-                . It is how the Department of Defense assesses whether defense contractors
+                </a>. It is how the Department of Defense assesses whether defense contractors
                 implement required cybersecurity practices for federal contract information and
                 controlled unclassified information. CMMC Level 2 is built on the 110 security
                 requirements in{" "}
@@ -561,8 +593,10 @@ export default function Page() {
                   rel="noopener noreferrer"
                 >
                   NIST SP 800-171 Revision 2
-                </a>
-                . Level 1 tracks the basic safeguarding requirements in FAR 52.204-21 for federal
+                </a>.
+              </p>
+              <p className="mb-6">
+                Level 1 tracks the basic safeguarding requirements in FAR 52.204-21 for federal
                 contract information.{" "}
                 <a
                   href="https://www.acquisition.gov/dfars/252.204-7012-safeguarding-covered-defense-information-and-cyber-incident-reporting."
@@ -574,10 +608,10 @@ export default function Page() {
                 still requires safeguarding of covered defense information and cyber incident
                 reporting where that clause is in the contract.
               </p>
-              <p className="mb-4">
-                A July 13, 2026 DoD CIO memorandum suspended the November 2026 transition to Phase 2
-                of CMMC implementation. During that suspension, solicitations may require only CMMC
-                Level 1 (Self) or Level 2 (Self) assessments.{" "}
+              <p className="mb-6">
+                A July 13, 2026 DoD CIO memorandum suspended the November 2026 transition to
+                Phase 2 of CMMC implementation. During that suspension, solicitations may
+                require only CMMC Level 1 (Self) or Level 2 (Self) assessments.{" "}
                 <a
                   href="https://www.acquisition.gov/dfars/252.204-7012-safeguarding-covered-defense-information-and-cyber-incident-reporting."
                   className="text-primary hover:underline"
@@ -585,18 +619,20 @@ export default function Page() {
                 >
                   DFARS 252.204-7012
                 </a>{" "}
-                remains in effect. The DoD CIO is conducting a 60-day review, and further guidance
-                is expected when that review concludes. The memorandum is{" "}
+                remains in effect.
+              </p>
+              <p className="mb-6">
+                The DoD CIO is conducting a 60-day review, and further guidance is expected when
+                that review concludes. The memorandum is{" "}
                 <a
                   href="https://dodcio.defense.gov/Portals/0/Documents/Library/ImplementingSuspensionCMMC-PhaseII.pdf"
                   className="text-primary hover:underline"
                   rel="noopener noreferrer"
                 >
                   Implementing the suspension of CMMC Phase II
-                </a>
-                .
+                </a>.
               </p>
-              <p className="mb-4">
+              <p className="mb-6">
                 CMMC requirements are changing; check the{" "}
                 <a
                   href="https://dodcio.defense.gov/cmmc/About/"
@@ -607,22 +643,25 @@ export default function Page() {
                 </a>{" "}
                 for the current status.
               </p>
-              <p>
+              <p className="mb-6">
                 Inside NIST SP 800-171 Rev 2, requirement 3.14.6 calls for monitoring
                 organizational systems to detect attacks, and 3.14.7 calls for identifying
                 unauthorized use. Family 3.6 covers incident handling, tracking, and reporting.
                 Dark web monitoring does not replace monitoring of traffic on the contractor
-                systems under 3.14.6. It helps when a stolen credential or a leaked file is the
-                indicator: the finding can feed unauthorized-use review under 3.14.7 and the
-                incident record under 3.6. That is support for the program the supplier runs. It is
-                not a completed control, and it is not a CMMC status.
+                systems under 3.14.6.
+              </p>
+              <p>
+                It helps when a stolen credential or a leaked file is the indicator: the finding
+                can feed unauthorized-use review under 3.14.7 and the incident record under 3.6.
+                That is support for the program the supplier runs. It is not a completed
+                control, and it is not a CMMC status.
               </p>
             </div>
             <div>
               <h3 className="font-montserrat font-bold text-foreground text-xl mb-3">
                 IEC 62443 for OT and ICS
               </h3>
-              <p className="mb-4">
+              <p className="mb-6">
                 <a
                   href="https://webstore.iec.ch/en/publication/62883"
                   className="text-primary hover:underline"
@@ -635,15 +674,17 @@ export default function Page() {
                 operator, remains accountable for that program: policy, risk treatment, supplier
                 expectations, and the procedures used to run the system safely. Other parts of
                 the IEC 62443 series cover technical requirements for systems and components.
+              </p>
+              <p className="mb-6">
                 The series is the relevant OT and ICS body of standards for a plant. It is not a
                 certificate that a dark web watch can issue.
               </p>
               <p>
-                DarkThreat helps an asset owner notice when remote-access credentials, engineering
-                logins, or company files show up outside the plant. That notice can support the
-                incident and monitoring procedures in the security program. Zones, conduits,
-                controller hardening, and safety remain inside the program the asset owner runs.
-                DarkThreat does not make an operation conformant with IEC 62443.
+                DarkThreat helps an asset owner notice when remote-access credentials,
+                engineering logins, or company files show up outside the plant. That notice can
+                support the incident and monitoring procedures in the security program. Zones,
+                conduits, controller hardening, and safety remain inside the program the asset
+                owner runs. DarkThreat does not make an operation conformant with IEC 62443.
               </p>
             </div>
             <div>
@@ -651,12 +692,12 @@ export default function Page() {
                 Related enterprise frameworks
               </h3>
               <p>
-                Many manufacturers also map enterprise IT to the NIST Cybersecurity Framework and
-                operate an ISO/IEC 27001 information security management system beside the plant
-                program. DarkThreat helps those efforts with external credential and file-exposure
-                evidence the security team can attach to its own risk record. The guides below
-                describe each framework. They are not a statement that DarkThreat creates a
-                certified management system.
+                Many manufacturers also map enterprise IT to the NIST Cybersecurity Framework
+                and operate an ISO/IEC 27001 information security management system beside the
+                plant program. DarkThreat helps those efforts with external credential and
+                file-exposure evidence the security team can attach to its own risk record. The
+                guides below describe each framework. They are not a statement that DarkThreat
+                creates a certified management system.
               </p>
               <ComplianceGuideLinks slugs={["nist-csf", "iso-27001"]} />
             </div>
@@ -700,7 +741,7 @@ export default function Page() {
               </Link>
               <Link
                 href="/pricing"
-                className="inline-flex items-center rounded-md border border-primary/30 px-8 py-4 text-sm font-semibold text-foreground hover:border-primary"
+                className="cta-outline inline-flex items-center justify-center px-8 py-4 min-h-[44px]"
               >
                 View Pricing
               </Link>
