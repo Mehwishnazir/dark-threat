@@ -17,30 +17,29 @@ export default function ComparisonSocRadar() {
       title="DarkThreat vs SOCRadar — Dark Web Monitoring Comparison (2026)"
       description="Compare DarkThreat and SOCRadar on dark web monitoring, credential leak detection, attack surface coverage, pricing transparency, and time-to-value. 7-day free trial, no credit card."
       h1="DarkThreat vs SOCRadar"
-      intro="SOCRadar offers a broad extended threat intelligence (XTI) suite covering attack surface, brand, and dark web. DarkThreat is a focused dark web monitoring and credential leak detection product — lighter to deploy, simpler to budget, and integrated with the SIEM and SOAR you already use."
+      intro="SOCRadar offers a broad extended threat intelligence (XTI) suite covering attack surface, brand, and dark web. DarkThreat focuses on dark web monitoring and credential leak detection and integrates with the SIEM and SOAR tools you already use."
       rows={[
-        { feature: "Transparent paid pricing", darkthreat: true, competitor: false },
+        { feature: "Transparent public pricing", darkthreat: true, competitor: true },
         { feature: "Dark web forum coverage", darkthreat: true, competitor: true },
         { feature: "Credential leak detection", darkthreat: true, competitor: true },
         { feature: "External attack surface management", darkthreat: "Via integrations", competitor: true },
         { feature: "Infostealer log coverage", darkthreat: "2M+ sources", competitor: true },
-        { feature: "Starting paid price", darkthreat: "$288/mo", competitor: "Custom (sales quote)" },
-        { feature: "7-day free trial (no credit card)", darkthreat: true, competitor: "Limited freemium" },
-        { feature: "Annual contract required for paid tiers", darkthreat: false, competitor: true },
+        { feature: "Starting price", darkthreat: "$288/mo", competitor: "Published for some plans (see vendor site)" },
+        { feature: "7-day free trial (no credit card)", darkthreat: true, competitor: "7-day trial on some plans + freemium tier" },
       ]}
-      pricingNote="SOCRadar offers a freemium tier; paid plans are sales-led with custom pricing. Figures reflect customer-reported ranges."
+      pricingNote="SOCRadar publishes prices for several plans on its pricing page, offers 7-day free trials on some plans, and a freemium tier (free forever, no credit card). Confirm current plans at https://socradar.io/plans-and-pricing/."
       differentiators={[
         {
-          title: "Less surface area, more focus",
-          body: "SOCRadar bundles XTI across many modules. DarkThreat concentrates engineering on dark web and credential signals — the events that actually become incidents.",
+          title: "Focused scope",
+          body: "SOCRadar offers XTI across multiple modules. DarkThreat concentrates on dark web monitoring and credential leak detection.",
         },
         {
           title: "A free trial on your real assets",
           body: "Request your 7-day free trial through our team — no credit card required. You evaluate against your real assets, not a demo dataset.",
         },
         {
-          title: "Predictable monthly pricing",
-          body: "Plans start at $288/month with no annual commit. Cancel anytime; no procurement gauntlet.",
+          title: "DarkThreat monthly plans",
+          body: "DarkThreat plans start at $288/month with no annual commitment. Cancel anytime.",
         },
         {
           title: "Fits into your existing stack",
