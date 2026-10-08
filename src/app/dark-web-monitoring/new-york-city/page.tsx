@@ -99,7 +99,7 @@ export default function Page() {
           <ThreatSpherePlaceholder />
         </div>
         <div className="relative z-10 text-center max-w-5xl mx-auto px-6">
-          <div className="mb-4 inline-flex justify-center">
+          <div className="mb-4 flex justify-center">
             <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Locations', href: '/locations' }, { label: 'New York City' }]} />
           </div>
           <div className="mb-6 inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-semibold text-primary">
@@ -115,7 +115,7 @@ export default function Page() {
             <Link href="/contact" className="hero-button inline-flex items-center">
               Request Free Scan <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
-            <Link href="/pricing" className="border-primary/30 hover:border-primary">Start 7-Day Free Trial</Link>
+            <Link href="/pricing" className="cta-outline inline-flex items-center justify-center px-8 py-4 min-h-[44px]">Start 7-Day Free Trial</Link>
           </div>
         </div>
       </section>

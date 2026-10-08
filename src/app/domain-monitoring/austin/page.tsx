@@ -88,7 +88,7 @@ export default function Page() {
           <ThreatSpherePlaceholder />
         </div>
         <div className="relative z-10 text-center max-w-5xl mx-auto px-6">
-          <div className="mb-4 inline-flex justify-center">
+          <div className="mb-4 flex justify-center">
             <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Locations', href: '/locations' }, { label: 'Austin' }]} />
           </div>
           <div className="mb-6 inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-semibold text-primary">
@@ -101,10 +101,10 @@ export default function Page() {
             A Texas Cybersecurity Breach Report published in October 2025 notes that Austin’s concentration of tech companies makes it “a prime target for sophisticated attacks,” distinct from other Texas metro areas. DarkThreat helps Austin organizations monitor domains, dark web exposures, and leaked credentials so teams can detect and respond before risk escalates.
           </p>
           <div className="mt-8 flex flex-wrap gap-4 justify-center">
-            <Button className="hero-button">
+            <Button className="hero-button h-auto">
               Request Free Scan <ArrowRight className="w-4 h-4 ml-2" />
             </Button>
-            <Link href="/contact" className="border-primary/30 hover:border-primary">Contact Local Expert</Link>
+            <Link href="/contact" className="cta-outline inline-flex items-center justify-center px-8 py-4 min-h-[44px]">Contact Local Expert</Link>
           </div>
         </div>
       </section>
