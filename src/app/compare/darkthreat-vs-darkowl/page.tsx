@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { pageSeo } from "@/lib/metadata";
 import Link from "next/link";
-import { CheckCircle, XCircle, ArrowRight, Quote } from "lucide-react";
+import { CheckCircle, XCircle, ArrowRight } from "lucide-react";
 import JsonLd from "@/components/JsonLd";
 import FinalCTA from "@/components/FinalCTA";
 import OtherComparisons from "@/components/OtherComparisons";
@@ -12,16 +12,24 @@ export const metadata: Metadata = {
   ...pageSeo("/compare/darkthreat-vs-darkowl"),
 };
 
-const features: Array<[string, boolean, boolean]> = [
-  ['Transparent public pricing', true, false],
-  ['7-day free trial (no credit card)', true, false],
+type FeatureValue = boolean | string;
+
+const features: Array<[string, boolean, FeatureValue]> = [
+  ['Transparent public pricing', true, 'Not publicly documented'],
+  ['7-day free trial (no credit card)', true, 'Free trial on request (contact vendor)'],
   ['Real-time stealer log alerts', true, true],
-  ['AI-based false-positive filtering', true, false],
+  ['AI-based false-positive filtering', true, 'Not publicly documented'],
   ['Telegram + Discord coverage', true, true],
-  ['No annual contract required', true, false],
+  ['No annual contract required', true, 'Not publicly documented'],
   ['White-label MSSP plan', true, true],
   ['Dedicated CSM (enterprise)', true, true],
 ];
+
+function FeatureCell({ value }: { value: FeatureValue }) {
+  if (value === true) return <CheckCircle className="w-5 h-5 text-muted-foreground inline" aria-label="Yes" />;
+  if (value === false) return <XCircle className="w-5 h-5 text-muted-foreground inline" aria-label="No" />;
+  return <span className="text-sm text-muted-foreground">{value}</span>;
+}
 
 export default function Page() {
 
@@ -79,7 +87,7 @@ export default function Page() {
                   <tr key={f} className="border-b border-border/50">
                     <td className="p-4">{f}</td>
                     <td className="p-4 text-center">{dt ? <CheckCircle className="w-5 h-5 text-primary inline" /> : <XCircle className="w-5 h-5 text-muted-foreground inline" />}</td>
-                    <td className="p-4 text-center">{dw ? <CheckCircle className="w-5 h-5 text-muted-foreground inline" /> : <XCircle className="w-5 h-5 text-muted-foreground inline" />}</td>
+                    <td className="p-4 text-center"><FeatureCell value={dw} /></td>
                   </tr>
                 ))}
               </tbody>
@@ -91,7 +99,7 @@ export default function Page() {
       {/* Pricing comparison */}
       <section className="py-20 px-6 bg-card/30">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-montserrat font-bold text-center mb-12">Pricing — transparent vs. hidden</h2>
+          <h2 className="text-3xl font-montserrat font-bold text-center mb-12">Pricing comparison</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="threat-card border-primary/50">
               <h3 className="text-2xl font-montserrat font-bold text-primary mb-3">DarkThreat</h3>
@@ -106,11 +114,21 @@ export default function Page() {
             <div className="threat-card">
               <h3 className="text-2xl font-montserrat font-bold mb-3">DarkOwl</h3>
               <p className="text-4xl font-bold mb-2 text-muted-foreground">Contact sales</p>
-              <p className="text-muted-foreground mb-4">Quote-based. Annual contracts. Sales cycle required.</p>
+              <p className="text-muted-foreground mb-4">Quote-based (contact vendor).</p>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li className="flex gap-2"><XCircle className="w-4 h-4" /> No public pricing</li>
-                <li className="flex gap-2"><XCircle className="w-4 h-4" /> No self-serve trial</li>
-                <li className="flex gap-2"><XCircle className="w-4 h-4" /> Long procurement</li>
+                <li>Pricing is not published on darkowl.com; confirm with DarkOwl sales.</li>
+                <li>
+                  Free trial or demo on request:{" "}
+                  <a
+                    href="https://www.darkowl.com/request-a-demo/"
+                    className="text-primary hover:underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    darkowl.com/request-a-demo
+                  </a>
+                  .
+                </li>
               </ul>
             </div>
           </div>
@@ -120,9 +138,9 @@ export default function Page() {
       {/* Quick trial vs enterprise */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-montserrat font-bold text-center mb-8">Quick trial vs. enterprise sales</h2>
+          <h2 className="text-3xl font-montserrat font-bold text-center mb-8">Quick trial vs. quote-based pricing</h2>
           <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto">
-            DarkOwl's go-to-market is designed for Fortune 500 procurement teams. DarkThreat is built for security engineers who want to evaluate a product the same week they need it — request your 7-day free trial through our team, add your domain, and see real findings within minutes.
+            DarkOwl uses quote-based pricing. DarkThreat is built for security engineers who want to evaluate a product the same week they need it — request your 7-day free trial through our team, add your domain, and see real findings within minutes.
           </p>
         </div>
       </section>
@@ -130,13 +148,13 @@ export default function Page() {
       {/* 5 reasons */}
       <section className="py-20 px-6 bg-card/30">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-montserrat font-bold text-center mb-12">5 reasons to switch</h2>
+          <h2 className="text-3xl font-montserrat font-bold text-center mb-12">5 reasons teams evaluate DarkThreat</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {[
               ['Transparent pricing', 'Know exactly what you pay before you book a demo.'],
               ['Faster time-to-value', 'Live alerts in under 30 minutes from trial setup.'],
               ['AI-curated alerts', 'Less noise — only verified, contextualized findings.'],
-              ['Modern UX', 'Built for analysts in 2026, not 2014.'],
+              ['Modern UX', 'A streamlined interface built for security analysts.'],
               ['Flexible plans', 'Monthly billing and MSSP white-label out of the box.'],
             ].map(([t, d], i) => (
               <div key={t} className="threat-card">
@@ -146,17 +164,6 @@ export default function Page() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Testimonial */}
-      <section className="py-20 px-6">
-        <div className="max-w-3xl mx-auto threat-card">
-          <Quote className="w-10 h-10 text-primary mb-4" />
-          <p className="text-lg text-foreground mb-4 italic">
-            "We evaluated DarkOwl and three other vendors. DarkThreat was the only one that let us start finding real exposures before our procurement team even finished the security review. We switched within a month."
-          </p>
-          <p className="font-montserrat font-bold">— Director of Security, Fintech Scale-up</p>
         </div>
       </section>
 

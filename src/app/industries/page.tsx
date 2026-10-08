@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { pageSeo } from "@/lib/metadata";
 import Link from "next/link";
-import { Banknote, HeartPulse, Scale, ShoppingCart, Cloud, Landmark, GraduationCap, Bitcoin, Briefcase, Shield, AlertTriangle, Lock, Database, Eye, Globe, ArrowRight, CheckCircle2, } from "lucide-react";
+import { Banknote, HeartPulse, Scale, ShoppingCart, Cloud, Landmark, GraduationCap, Bitcoin, Briefcase, Factory, Umbrella, Zap, Server, Radio, Hotel, Shield, AlertTriangle, Lock, Database, Eye, Globe, ArrowRight, CheckCircle2, } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
 import FinalCTA from "@/components/FinalCTA";
 import ThreatSpherePlaceholder from "@/components/ThreatSpherePlaceholder";
@@ -10,7 +10,7 @@ import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: "Industry Dark Web Monitoring",
-  description: "Sector-specific dark web monitoring for financial services, healthcare, legal, government, e-commerce, SaaS, education, and crypto.",
+  description: "Sector-specific dark web monitoring for MSPs, telecom, hospitality, insurance, energy, manufacturing, finance, and healthcare.",
   ...pageSeo("/industries"),
 };
 
@@ -45,6 +45,54 @@ const industries = [
     slug: '/industries/professional-services',
     desc: 'Protect confidential client information, partner credentials, and firm intellectual property.',
     tags: ['SOC 2', 'ISO 27001', 'GDPR'],
+    available: true,
+  },
+  {
+    icon: Factory,
+    name: 'Manufacturing',
+    slug: '/industries/manufacturing',
+    desc: 'Watch for stolen designs, production-impacting ransomware exposure, supplier credential leaks, and defense supply-chain exposure.',
+    tags: ['CMMC', 'NIST 800-171', 'IEC 62443'],
+    available: true,
+  },
+  {
+    icon: Umbrella,
+    name: 'Insurance',
+    slug: '/industries/insurance',
+    desc: 'Watch for policyholder and claims exposure, agent and broker logins, administrator leaks, and ransomware posts.',
+    tags: ['NYDFS 500', 'NAIC 668', 'GLBA'],
+    available: true,
+  },
+  {
+    icon: Zap,
+    name: 'Energy & Utilities',
+    slug: '/industries/energy-utilities',
+    desc: 'Watch for OT remote-access logins, contractor and vendor access, and ransomware that can affect operations.',
+    tags: ['NERC CIP', 'TSA SD', 'NIST CSF'],
+    available: true,
+  },
+  {
+    icon: Server,
+    name: 'MSP and MSSP',
+    slug: '/industries/msp-mssp',
+    desc: 'Watch for technician and RMM credentials, one account that can reach many clients, and client names on leak sites.',
+    tags: ['CISA MSP', 'NIST CSF', 'ISO 27001'],
+    available: true,
+  },
+  {
+    icon: Radio,
+    name: 'Telecommunications',
+    slug: '/industries/telecommunications',
+    desc: 'Watch for employee and contractor credential leaks, account takeover, customer data on leak sites, and partner access.',
+    tags: ['FCC CPNI', '47 CFR 64.2011', 'NIST CSF'],
+    available: true,
+  },
+  {
+    icon: Hotel,
+    name: 'Hospitality',
+    slug: '/industries/hospitality',
+    desc: 'Watch for guest and payment-card exposure, booking account takeover, property-system credentials, and loyalty fraud.',
+    tags: ['PCI DSS', 'GDPR', 'NIST CSF'],
     available: true,
   },
   {
@@ -105,7 +153,7 @@ export default function Page() {
     '@type': 'WebPage',
     name: 'Industry-Specific Dark Web Monitoring — DarkThreat',
     url: 'https://darkthreat.ai/industries',
-    description: 'Dark web monitoring tailored to financial services, healthcare, legal, government, e-commerce, SaaS, education, and crypto industries.',
+    description: 'Dark web monitoring tailored to managed service providers, telecommunications, hospitality, insurance, energy and utilities, manufacturing, financial services, healthcare, legal, government, e-commerce, SaaS, education, and crypto industries.',
   };
 
   
@@ -137,7 +185,7 @@ export default function Page() {
             Dark Web Monitoring for <span className="glow-text">Every Industry</span>
           </h1>
           <p className="mx-auto max-w-3xl text-lg text-muted-foreground leading-relaxed">
-            Threat actors don't treat all industries equally — and neither do we. DarkThreat delivers targeted intelligence tuned to the compliance requirements, attack patterns, and data types specific to your sector.
+            Threat actors don&apos;t treat all industries equally — and neither do we. DarkThreat delivers targeted intelligence tuned to the compliance requirements, attack patterns, and data types specific to your sector.
           </p>
         </div>
       </section>
@@ -148,7 +196,7 @@ export default function Page() {
           <div className="text-center mb-16">
             <span className="inline-flex rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-primary mb-4">Coverage</span>
             <h2 className="text-3xl md:text-4xl font-montserrat font-bold text-foreground mb-4">Industries We Protect</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">Eight high-risk sectors with tailored monitoring playbooks, compliance overlays, and active threat actor tracking.</p>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">Fifteen high-risk sectors with tailored monitoring playbooks, compliance overlays, and active threat actor tracking.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {industries.map((ind) => (
@@ -266,7 +314,7 @@ export default function Page() {
         <div className="max-w-5xl mx-auto text-center">
           <span className="inline-flex rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-primary mb-4">Regulatory Alignment</span>
           <h2 className="text-3xl font-montserrat font-bold text-foreground mb-6">Compliant Across Every Major Framework</h2>
-          <p className="text-muted-foreground mb-12 max-w-2xl mx-auto">DarkThreat's intelligence outputs are structured to satisfy the external threat monitoring requirements of leading frameworks.</p>
+          <p className="text-muted-foreground mb-12 max-w-2xl mx-auto">DarkThreat&apos;s intelligence outputs are structured to satisfy the external threat monitoring requirements of leading frameworks.</p>
           <div className="flex flex-wrap items-center justify-center gap-4 text-sm font-semibold">
             {['ISO 27001', 'NIST CSF', 'HIPAA Security Rule', 'PCI-DSS v4', 'SOC 2 Type II', 'GDPR', 'GLBA', 'FISMA', 'HITECH', 'SWIFT CSP', 'CCPA', 'FedRAMP'].map(f => (
               <span key={f} className="px-4 py-2 rounded-xl bg-card border border-border text-foreground hover:border-primary/40 transition-colors">{f}</span>
