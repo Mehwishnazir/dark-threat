@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { pageSeo } from "@/lib/metadata";
 import Link from "next/link";
-import { Banknote, HeartPulse, Scale, ShoppingCart, Cloud, Landmark, GraduationCap, Bitcoin, Briefcase, Factory, Umbrella, Zap, Shield, AlertTriangle, Lock, Database, Eye, Globe, ArrowRight, CheckCircle2, } from "lucide-react";
+import { Banknote, HeartPulse, Scale, ShoppingCart, Cloud, Landmark, GraduationCap, Bitcoin, Briefcase, Factory, Umbrella, Zap, Server, Radio, Hotel, Shield, AlertTriangle, Lock, Database, Eye, Globe, ArrowRight, CheckCircle2, } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
 import FinalCTA from "@/components/FinalCTA";
 import ThreatSpherePlaceholder from "@/components/ThreatSpherePlaceholder";
@@ -10,7 +10,7 @@ import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: "Industry Dark Web Monitoring",
-  description: "Sector-specific dark web monitoring for insurance, energy, manufacturing, finance, healthcare, legal, government, retail, and SaaS.",
+  description: "Sector-specific dark web monitoring for MSPs, telecom, hospitality, insurance, energy, manufacturing, finance, and healthcare.",
   ...pageSeo("/industries"),
 };
 
@@ -72,6 +72,30 @@ const industries = [
     available: true,
   },
   {
+    icon: Server,
+    name: 'MSP and MSSP',
+    slug: '/industries/msp-mssp',
+    desc: 'Watch for technician and RMM credentials, one account that can reach many clients, and client names on leak sites.',
+    tags: ['CISA MSP', 'NIST CSF', 'ISO 27001'],
+    available: true,
+  },
+  {
+    icon: Radio,
+    name: 'Telecommunications',
+    slug: '/industries/telecommunications',
+    desc: 'Watch for employee and contractor credential leaks, account takeover, customer data on leak sites, and partner access.',
+    tags: ['FCC CPNI', '47 CFR 64.2011', 'NIST CSF'],
+    available: true,
+  },
+  {
+    icon: Hotel,
+    name: 'Hospitality',
+    slug: '/industries/hospitality',
+    desc: 'Watch for guest and payment-card exposure, booking account takeover, property-system credentials, and loyalty fraud.',
+    tags: ['PCI DSS', 'GDPR', 'NIST CSF'],
+    available: true,
+  },
+  {
     icon: Landmark,
     name: 'Government',
     slug: '/industries/government',
@@ -129,7 +153,7 @@ export default function Page() {
     '@type': 'WebPage',
     name: 'Industry-Specific Dark Web Monitoring — DarkThreat',
     url: 'https://darkthreat.ai/industries',
-    description: 'Dark web monitoring tailored to insurance, energy and utilities, manufacturing, financial services, healthcare, legal, government, e-commerce, SaaS, education, and crypto industries.',
+    description: 'Dark web monitoring tailored to managed service providers, telecommunications, hospitality, insurance, energy and utilities, manufacturing, financial services, healthcare, legal, government, e-commerce, SaaS, education, and crypto industries.',
   };
 
   
@@ -172,7 +196,7 @@ export default function Page() {
           <div className="text-center mb-16">
             <span className="inline-flex rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-primary mb-4">Coverage</span>
             <h2 className="text-3xl md:text-4xl font-montserrat font-bold text-foreground mb-4">Industries We Protect</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">Twelve high-risk sectors with tailored monitoring playbooks, compliance overlays, and active threat actor tracking.</p>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">Fifteen high-risk sectors with tailored monitoring playbooks, compliance overlays, and active threat actor tracking.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {industries.map((ind) => (
