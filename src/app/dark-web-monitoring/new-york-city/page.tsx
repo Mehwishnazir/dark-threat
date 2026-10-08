@@ -68,7 +68,7 @@ const schema = {
 
 const breadcrumb = breadcrumbSchema([
   { name: 'Home', url: 'https://darkthreat.ai/' },
-  { name: 'Locations', url: 'https://darkthreat.ai/dark-web-monitoring' },
+  { name: 'Locations', url: 'https://darkthreat.ai/locations' },
   { name: 'New York City Dark Web Monitoring', url: 'https://darkthreat.ai/dark-web-monitoring/new-york-city' }
 ]);
 
@@ -100,7 +100,7 @@ export default function Page() {
         </div>
         <div className="relative z-10 text-center max-w-5xl mx-auto px-6">
           <div className="mb-4 inline-flex justify-center">
-            <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Locations', href: '/dark-web-monitoring' }, { label: 'New York City' }]} />
+            <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Locations', href: '/locations' }, { label: 'New York City' }]} />
           </div>
           <div className="mb-6 inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-semibold text-primary">
             <MapPin className="w-4 h-4 mr-2" /> For New York City Organizations
