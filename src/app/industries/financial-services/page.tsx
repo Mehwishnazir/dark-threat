@@ -6,10 +6,8 @@ import Breadcrumb from "@/components/Breadcrumb";
 import ComplianceGuideLinks from "@/components/compliance/ComplianceGuideLinks";
 import FinalCTA from "@/components/FinalCTA";
 import ThreatSpherePlaceholder from "@/components/ThreatSpherePlaceholder";
+import LeadForm from "@/components/LeadForm";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
 import JsonLd from "@/components/JsonLd";
 import { serviceSchema, breadcrumbSchema, organizationSchema } from "@/utils/seoSchemas";
 
@@ -135,29 +133,17 @@ export default function Page() {
           </div>
           <div className="rounded-3xl border border-border bg-card/40 p-8 backdrop-blur-md shadow-xl">
             <h3 className="text-xl font-montserrat font-bold text-foreground mb-6">Financial Institution Inquiry</h3>
-            <form className="space-y-5">
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <Label htmlFor="fs-name">Full Name *</Label>
-                  <Input id="fs-name" required placeholder="Jane Doe" className="mt-1 bg-background/50" />
-                </div>
-                <div>
-                  <Label htmlFor="fs-email">Business Email *</Label>
-                  <Input id="fs-email" type="email" required placeholder="jane@bank.com" className="mt-1 bg-background/50" />
-                </div>
-              </div>
-              <div>
-                <Label htmlFor="fs-institution">Institution Name</Label>
-                <Input id="fs-institution" placeholder="First National Bank" className="mt-1 bg-background/50" />
-              </div>
-              <div>
-                <Label htmlFor="fs-message">Primary Concern</Label>
-                <Textarea id="fs-message" rows={4} placeholder="E.g. card data on dark web, SWIFT credential exposure, executive account monitoring..." className="mt-1 bg-background/50" />
-              </div>
-              <Button type="button" className="hero-button w-full">
-                Request Free Exposure Scan
-              </Button>
-            </form>
+            <LeadForm
+              variant="industry"
+              interest="Financial Services Exposure Scan"
+              submitLabel="Request Free Exposure Scan"
+              fields={[
+                { type: "text", name: "name", id: "fs-name", label: "Full Name *", placeholder: "Jane Doe", required: true, width: "half", bind: "name" },
+                { type: "email", name: "email", id: "fs-email", label: "Business Email *", placeholder: "jane@bank.com", required: true, width: "half", bind: "email" },
+                { type: "text", name: "institution", id: "fs-institution", label: "Institution Name", placeholder: "First National Bank", bind: "company" },
+                { type: "textarea", name: "message", id: "fs-message", label: "Primary Concern", rows: 4, placeholder: "E.g. card data on dark web, SWIFT credential exposure, executive account monitoring...", bind: "message" },
+              ]}
+            />
           </div>
         </div>
       </section>

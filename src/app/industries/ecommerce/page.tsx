@@ -6,10 +6,8 @@ import Breadcrumb from "@/components/Breadcrumb";
 import ComplianceGuideLinks from "@/components/compliance/ComplianceGuideLinks";
 import FinalCTA from "@/components/FinalCTA";
 import ThreatSpherePlaceholder from "@/components/ThreatSpherePlaceholder";
+import LeadForm from "@/components/LeadForm";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
 
 import JsonLd from "@/components/JsonLd";
 
@@ -137,35 +135,18 @@ export default function Page() {
           </div>
           <div className="rounded-3xl border border-border bg-card/40 p-8 backdrop-blur-md shadow-xl">
             <h3 className="text-xl font-montserrat font-bold text-foreground mb-6">E-Commerce Brand Inquiry</h3>
-            <form className="space-y-5">
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <Label htmlFor="retail-name">Full Name *</Label>
-                  <Input id="retail-name" required placeholder="John Doe" className="mt-1 bg-background/50" />
-                </div>
-                <div>
-                  <Label htmlFor="retail-email">Business Email *</Label>
-                  <Input id="retail-email" type="email" required placeholder="john@store.com" className="mt-1 bg-background/50" />
-                </div>
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <Label htmlFor="retail-company">Company Name</Label>
-                  <Input id="retail-company" placeholder="Retail Brand Inc." className="mt-1 bg-background/50" />
-                </div>
-                <div>
-                  <Label htmlFor="retail-platform">E-Commerce Platform</Label>
-                  <Input id="retail-platform" placeholder="E.g., Shopify, Magento, WooCommerce" className="mt-1 bg-background/50" />
-                </div>
-              </div>
-              <div>
-                <Label htmlFor="retail-message">Primary Cybersecurity Concern</Label>
-                <Textarea id="retail-message" rows={4} placeholder="E.g., credential stuffing attacks, gift card fraud, look-alike domain protection..." className="mt-1 bg-background/50" />
-              </div>
-              <Button type="button" className="hero-button w-full">
-                Request Free Brand Scan
-              </Button>
-            </form>
+            <LeadForm
+              variant="industry"
+              interest="E-commerce Brand Scan"
+              submitLabel="Request Free Brand Scan"
+              fields={[
+                { type: "text", name: "name", id: "retail-name", label: "Full Name *", placeholder: "John Doe", required: true, width: "half", bind: "name" },
+                { type: "email", name: "email", id: "retail-email", label: "Business Email *", placeholder: "john@store.com", required: true, width: "half", bind: "email" },
+                { type: "text", name: "company", id: "retail-company", label: "Company Name", placeholder: "Retail Brand Inc.", width: "half", bind: "company" },
+                { type: "text", name: "platform", id: "retail-platform", label: "E-Commerce Platform", placeholder: "E.g., Shopify, Magento, WooCommerce", width: "half", bind: "detail" },
+                { type: "textarea", name: "message", id: "retail-message", label: "Primary Cybersecurity Concern", rows: 4, placeholder: "E.g., credential stuffing attacks, gift card fraud, look-alike domain protection...", bind: "message" },
+              ]}
+            />
           </div>
         </div>
       </section>

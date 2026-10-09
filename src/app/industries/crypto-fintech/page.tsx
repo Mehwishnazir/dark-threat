@@ -6,10 +6,8 @@ import Breadcrumb from "@/components/Breadcrumb";
 import ComplianceGuideLinks from "@/components/compliance/ComplianceGuideLinks";
 import FinalCTA from "@/components/FinalCTA";
 import ThreatSpherePlaceholder from "@/components/ThreatSpherePlaceholder";
+import LeadForm from "@/components/LeadForm";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
 import JsonLd from "@/components/JsonLd";
 import { serviceSchema, breadcrumbSchema, organizationSchema } from "@/utils/seoSchemas";
 
@@ -143,29 +141,17 @@ export default function Page() {
           </div>
           <div className="rounded-3xl border border-border bg-card/40 p-8 backdrop-blur-md shadow-xl">
             <h3 className="text-xl font-montserrat font-bold text-foreground mb-6">Crypto &amp; Fintech Inquiry</h3>
-            <form className="space-y-5">
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <Label htmlFor="cf-name">Full Name *</Label>
-                  <Input id="cf-name" required placeholder="Jane Doe" className="mt-1 bg-background/50" />
-                </div>
-                <div>
-                  <Label htmlFor="cf-email">Business Email *</Label>
-                  <Input id="cf-email" type="email" required placeholder="jane@exchange.com" className="mt-1 bg-background/50" />
-                </div>
-              </div>
-              <div>
-                <Label htmlFor="cf-company">Platform / Company Name</Label>
-                <Input id="cf-company" placeholder="Your exchange, wallet, or fintech" className="mt-1 bg-background/50" />
-              </div>
-              <div>
-                <Label htmlFor="cf-message">Primary Concern</Label>
-                <Textarea id="cf-message" rows={4} placeholder="E.g. wallet key exposure, exchange credential leaks, API key dumps..." className="mt-1 bg-background/50" />
-              </div>
-              <Button type="button" className="hero-button w-full">
-                Request Free Exposure Scan
-              </Button>
-            </form>
+            <LeadForm
+              variant="industry"
+              interest="Crypto & Fintech Exposure Scan"
+              submitLabel="Request Free Exposure Scan"
+              fields={[
+                { type: "text", name: "name", id: "cf-name", label: "Full Name *", placeholder: "Jane Doe", required: true, width: "half", bind: "name" },
+                { type: "email", name: "email", id: "cf-email", label: "Business Email *", placeholder: "jane@exchange.com", required: true, width: "half", bind: "email" },
+                { type: "text", name: "company", id: "cf-company", label: "Platform / Company Name", placeholder: "Your exchange, wallet, or fintech", bind: "company" },
+                { type: "textarea", name: "message", id: "cf-message", label: "Primary Concern", rows: 4, placeholder: "E.g. wallet key exposure, exchange credential leaks, API key dumps...", bind: "message" },
+              ]}
+            />
           </div>
         </div>
       </section>

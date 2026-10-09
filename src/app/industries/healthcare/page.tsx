@@ -6,10 +6,8 @@ import Breadcrumb from "@/components/Breadcrumb";
 import ComplianceGuideLinks from "@/components/compliance/ComplianceGuideLinks";
 import FinalCTA from "@/components/FinalCTA";
 import ThreatSpherePlaceholder from "@/components/ThreatSpherePlaceholder";
+import LeadForm from "@/components/LeadForm";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
 
 import JsonLd from "@/components/JsonLd";
 
@@ -158,44 +156,32 @@ export default function Page() {
           </div>
           <div className="rounded-3xl border border-border bg-card/40 p-8 backdrop-blur-md shadow-xl">
             <h3 className="text-xl font-montserrat font-bold text-foreground mb-6">Healthcare Organization Inquiry</h3>
-            <form className="space-y-5">
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <Label htmlFor="hc-name">Full Name *</Label>
-                  <Input id="hc-name" required placeholder="Dr. Jane Smith" className="mt-1 bg-background/50" />
-                </div>
-                <div>
-                  <Label htmlFor="hc-email">Business Email *</Label>
-                  <Input id="hc-email" type="email" required placeholder="jane@hospitalgroup.com" className="mt-1 bg-background/50" />
-                </div>
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <Label htmlFor="hc-facility">Facility / Organization</Label>
-                  <Input id="hc-facility" placeholder="General Hospital Group" className="mt-1 bg-background/50" />
-                </div>
-                <div>
-                  <Label htmlFor="hc-beds">Organization Size</Label>
-                  <select
-                    id="hc-beds"
-                    className="w-full mt-1 rounded-md border border-border bg-background/50 px-3 py-2.5 text-sm text-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary/50"
-                  >
-                    <option value="">Select size</option>
-                    <option value="clinic">Small Clinic (1–50 staff)</option>
-                    <option value="regional">Regional Hospital (51–500)</option>
-                    <option value="system">Health System (500–5,000)</option>
-                    <option value="enterprise">Enterprise (5,000+)</option>
-                  </select>
-                </div>
-              </div>
-              <div>
-                <Label htmlFor="hc-message">Primary Security Concern</Label>
-                <Textarea id="hc-message" rows={4} placeholder="E.g. patient data on dark web, ransomware pre-attack monitoring, HIPAA breach response..." className="mt-1 bg-background/50" />
-              </div>
-              <Button type="button" className="hero-button w-full">
-                Request Free Exposure Assessment
-              </Button>
-            </form>
+            <LeadForm
+              variant="industry"
+              interest="Healthcare Exposure Assessment"
+              submitLabel="Request Free Exposure Assessment"
+              fields={[
+                { type: "text", name: "name", id: "hc-name", label: "Full Name *", placeholder: "Dr. Jane Smith", required: true, width: "half", bind: "name" },
+                { type: "email", name: "email", id: "hc-email", label: "Business Email *", placeholder: "jane@hospitalgroup.com", required: true, width: "half", bind: "email" },
+                { type: "text", name: "facility", id: "hc-facility", label: "Facility / Organization", placeholder: "General Hospital Group", width: "half", bind: "company" },
+                {
+                  type: "select",
+                  name: "size",
+                  id: "hc-beds",
+                  label: "Organization Size",
+                  width: "half",
+                  bind: "detail",
+                  placeholder: "Select size",
+                  options: [
+                    { value: "clinic", label: "Small Clinic (1–50 staff)" },
+                    { value: "regional", label: "Regional Hospital (51–500)" },
+                    { value: "system", label: "Health System (500–5,000)" },
+                    { value: "enterprise", label: "Enterprise (5,000+)" },
+                  ],
+                },
+                { type: "textarea", name: "message", id: "hc-message", label: "Primary Security Concern", placeholder: "E.g. patient data on dark web, ransomware pre-attack monitoring, HIPAA breach response...", rows: 4, bind: "message" },
+              ]}
+            />
           </div>
         </div>
       </section>

@@ -6,10 +6,8 @@ import Breadcrumb from "@/components/Breadcrumb";
 import ComplianceGuideLinks from "@/components/compliance/ComplianceGuideLinks";
 import FinalCTA from "@/components/FinalCTA";
 import ThreatSpherePlaceholder from "@/components/ThreatSpherePlaceholder";
+import LeadForm from "@/components/LeadForm";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
 
 import JsonLd from "@/components/JsonLd";
 
@@ -137,35 +135,18 @@ export default function Page() {
           </div>
           <div className="rounded-3xl border border-border bg-card/40 p-8 backdrop-blur-md shadow-xl">
             <h3 className="text-xl font-montserrat font-bold text-foreground mb-6">Government Agency Inquiry</h3>
-            <form className="space-y-5">
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <Label htmlFor="gov-name">Full Name *</Label>
-                  <Input id="gov-name" required placeholder="Major John Doe" className="mt-1 bg-background/50" />
-                </div>
-                <div>
-                  <Label htmlFor="gov-email">Official Email *</Label>
-                  <Input id="gov-email" type="email" required placeholder="john.doe@agency.gov" className="mt-1 bg-background/50" />
-                </div>
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <Label htmlFor="gov-agency">Agency / Organization</Label>
-                  <Input id="gov-agency" placeholder="Department of Defense" className="mt-1 bg-background/50" />
-                </div>
-                <div>
-                  <Label htmlFor="gov-region">Jurisdiction / Region</Label>
-                  <Input id="gov-region" placeholder="Federal / State / Local" className="mt-1 bg-background/50" />
-                </div>
-              </div>
-              <div>
-                <Label htmlFor="gov-message">Primary Mission Focus</Label>
-                <Textarea id="gov-message" rows={4} placeholder="E.g., protecting voter files, defense supplier assessments, nation-state activity indicators..." className="mt-1 bg-background/50" />
-              </div>
-              <Button type="button" className="hero-button w-full">
-                Request Agency Scan
-              </Button>
-            </form>
+            <LeadForm
+              variant="industry"
+              interest="Government Agency Scan"
+              submitLabel="Request Agency Scan"
+              fields={[
+                { type: "text", name: "name", id: "gov-name", label: "Full Name *", placeholder: "Major John Doe", required: true, width: "half", bind: "name" },
+                { type: "email", name: "email", id: "gov-email", label: "Official Email *", placeholder: "john.doe@agency.gov", required: true, width: "half", bind: "email" },
+                { type: "text", name: "agency", id: "gov-agency", label: "Agency / Organization", placeholder: "Department of Defense", width: "half", bind: "company" },
+                { type: "text", name: "region", id: "gov-region", label: "Jurisdiction / Region", placeholder: "Federal / State / Local", width: "half", bind: "detail" },
+                { type: "textarea", name: "message", id: "gov-message", label: "Primary Mission Focus", rows: 4, placeholder: "E.g., protecting voter files, defense supplier assessments, nation-state activity indicators...", bind: "message" },
+              ]}
+            />
           </div>
         </div>
       </section>

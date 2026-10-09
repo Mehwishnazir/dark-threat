@@ -6,10 +6,8 @@ import Breadcrumb from "@/components/Breadcrumb";
 import ComplianceGuideLinks from "@/components/compliance/ComplianceGuideLinks";
 import FinalCTA from "@/components/FinalCTA";
 import ThreatSpherePlaceholder from "@/components/ThreatSpherePlaceholder";
+import LeadForm from "@/components/LeadForm";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
 
 import JsonLd from "@/components/JsonLd";
 
@@ -137,35 +135,18 @@ export default function Page() {
           </div>
           <div className="rounded-3xl border border-border bg-card/40 p-8 backdrop-blur-md shadow-xl">
             <h3 className="text-xl font-montserrat font-bold text-foreground mb-6">Confidential Firm Inquiry</h3>
-            <form className="space-y-5">
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <Label htmlFor="legal-name">Full Name *</Label>
-                  <Input id="legal-name" required placeholder="Jane Doe, Esq." className="mt-1 bg-background/50" />
-                </div>
-                <div>
-                  <Label htmlFor="legal-email">Work Email *</Label>
-                  <Input id="legal-email" type="email" required placeholder="jane@lawfirm.com" className="mt-1 bg-background/50" />
-                </div>
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <Label htmlFor="legal-firm">Firm Name</Label>
-                  <Input id="legal-firm" placeholder="Doe & Partners" className="mt-1 bg-background/50" />
-                </div>
-                <div>
-                  <Label htmlFor="legal-size">Firm Size</Label>
-                  <Input id="legal-size" placeholder="E.g., 50+ attorneys" className="mt-1 bg-background/50" />
-                </div>
-              </div>
-              <div>
-                <Label htmlFor="legal-message">Primary Cybersecurity Concern</Label>
-                <Textarea id="legal-message" rows={4} placeholder="E.g., safeguarding client records, partner credential monitoring, third-party vendor risks..." className="mt-1 bg-background/50" />
-              </div>
-              <Button type="button" className="hero-button w-full">
-                Request Free Firm Scan
-              </Button>
-            </form>
+            <LeadForm
+              variant="industry"
+              interest="Legal Firm Scan"
+              submitLabel="Request Free Firm Scan"
+              fields={[
+                { type: "text", name: "name", id: "legal-name", label: "Full Name *", placeholder: "Jane Doe, Esq.", required: true, width: "half", bind: "name" },
+                { type: "email", name: "email", id: "legal-email", label: "Work Email *", placeholder: "jane@lawfirm.com", required: true, width: "half", bind: "email" },
+                { type: "text", name: "firm", id: "legal-firm", label: "Firm Name", placeholder: "Doe & Partners", width: "half", bind: "company" },
+                { type: "text", name: "size", id: "legal-size", label: "Firm Size", placeholder: "E.g., 50+ attorneys", width: "half", bind: "detail" },
+                { type: "textarea", name: "message", id: "legal-message", label: "Primary Cybersecurity Concern", rows: 4, placeholder: "E.g., safeguarding client records, partner credential monitoring, third-party vendor risks...", bind: "message" },
+              ]}
+            />
           </div>
         </div>
       </section>

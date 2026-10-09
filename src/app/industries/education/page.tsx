@@ -6,10 +6,8 @@ import Breadcrumb from "@/components/Breadcrumb";
 import ComplianceGuideLinks from "@/components/compliance/ComplianceGuideLinks";
 import FinalCTA from "@/components/FinalCTA";
 import ThreatSpherePlaceholder from "@/components/ThreatSpherePlaceholder";
+import LeadForm from "@/components/LeadForm";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
 import JsonLd from "@/components/JsonLd";
 import { serviceSchema, breadcrumbSchema, organizationSchema } from "@/utils/seoSchemas";
 
@@ -143,29 +141,17 @@ export default function Page() {
           </div>
           <div className="rounded-3xl border border-border bg-card/40 p-8 backdrop-blur-md shadow-xl">
             <h3 className="text-xl font-montserrat font-bold text-foreground mb-6">Education Inquiry</h3>
-            <form className="space-y-5">
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <Label htmlFor="edu-name">Full Name *</Label>
-                  <Input id="edu-name" required placeholder="Jane Doe" className="mt-1 bg-background/50" />
-                </div>
-                <div>
-                  <Label htmlFor="edu-email">Work Email *</Label>
-                  <Input id="edu-email" type="email" required placeholder="jane@university.edu" className="mt-1 bg-background/50" />
-                </div>
-              </div>
-              <div>
-                <Label htmlFor="edu-institution">Institution Name</Label>
-                <Input id="edu-institution" placeholder="Your school, university, or research org" className="mt-1 bg-background/50" />
-              </div>
-              <div>
-                <Label htmlFor="edu-message">Primary Concern</Label>
-                <Textarea id="edu-message" rows={4} placeholder="E.g. student credential leaks, research data exposure, faculty phishing..." className="mt-1 bg-background/50" />
-              </div>
-              <Button type="button" className="hero-button w-full">
-                Request Free Risk Scan
-              </Button>
-            </form>
+            <LeadForm
+              variant="industry"
+              interest="Education Risk Scan"
+              submitLabel="Request Free Risk Scan"
+              fields={[
+                { type: "text", name: "name", id: "edu-name", label: "Full Name *", placeholder: "Jane Doe", required: true, width: "half", bind: "name" },
+                { type: "email", name: "email", id: "edu-email", label: "Work Email *", placeholder: "jane@university.edu", required: true, width: "half", bind: "email" },
+                { type: "text", name: "institution", id: "edu-institution", label: "Institution Name", placeholder: "Your school, university, or research org", bind: "company" },
+                { type: "textarea", name: "message", id: "edu-message", label: "Primary Concern", rows: 4, placeholder: "E.g. student credential leaks, research data exposure, faculty phishing...", bind: "message" },
+              ]}
+            />
           </div>
         </div>
       </section>

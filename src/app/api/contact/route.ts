@@ -17,6 +17,7 @@ const contactSchema = z
     interest: z.string().trim().min(1).max(100),
     message: z.string().trim().min(10).max(4000),
     website: z.string().max(200).optional().default(""),
+    sourcePage: z.string().trim().max(200).optional().default(""),
   })
   .strict();
 
@@ -87,12 +88,13 @@ export async function POST(request: Request) {
     );
   }
 
-  const { name, email, company, interest, message } = parsed.data;
+  const { name, email, company, interest, message, sourcePage } = parsed.data;
   const safeName = escapeHtml(name);
   const safeEmail = escapeHtml(email);
   const safeCompany = escapeHtml(company || "Not provided");
   const safeInterest = escapeHtml(interest);
   const safeMessage = escapeHtml(message).replace(/\n/g, "<br>");
+  const safeSource = escapeHtml(sourcePage.replace(/[\r\n]/g, " "));
   const submittedAt = new Date().toUTCString();
   const sender = `DarkThreat <${smtp.from}>`;
 
@@ -118,6 +120,7 @@ export async function POST(request: Request) {
     text: [
       "New DarkThreat contact form submission",
       `Submitted: ${submittedAt}`,
+      ...(sourcePage ? [`Submitted from: ${sourcePage.replace(/[\r\n]/g, " ")}`] : []),
       `Name: ${name}`,
       `Email: ${email}`,
       `Company: ${company || "Not provided"}`,
@@ -136,6 +139,7 @@ export async function POST(request: Request) {
         <p style="margin:6px 0 0;color:#94a3b8;font-size:13px">${submittedAt}</p>
       </div>
       <div style="background:#fff;border:1px solid #e2e8f0;border-top:0;padding:24px;border-radius:0 0 12px 12px">
+        ${safeSource ? `<p><strong>Submitted from:</strong> ${safeSource}</p>` : ""}
         <p><strong>Name:</strong> ${safeName}</p>
         <p><strong>Email:</strong> ${safeEmail}</p>
         <p><strong>Company:</strong> ${safeCompany}</p>
