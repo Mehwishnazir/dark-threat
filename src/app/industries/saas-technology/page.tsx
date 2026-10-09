@@ -6,10 +6,8 @@ import Breadcrumb from "@/components/Breadcrumb";
 import ComplianceGuideLinks from "@/components/compliance/ComplianceGuideLinks";
 import FinalCTA from "@/components/FinalCTA";
 import ThreatSpherePlaceholder from "@/components/ThreatSpherePlaceholder";
+import LeadForm from "@/components/LeadForm";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
 
 import JsonLd from "@/components/JsonLd";
 
@@ -232,49 +230,17 @@ export default function Page() {
             <h3 className="text-xl font-montserrat font-bold text-foreground mb-6">
               SaaS & Tech Company Inquiry
             </h3>
-            <form className="space-y-5">
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <Label htmlFor="saas-name">Full Name *</Label>
-                  <Input
-                    id="saas-name"
-                    required
-                    placeholder="Alex Smith"
-                    className="mt-1 bg-background/50"
-                  />
-                </div>
-                <div>
-                  <Label htmlFor="saas-email">Business Email *</Label>
-                  <Input
-                    id="saas-email"
-                    type="email"
-                    required
-                    placeholder="alex@yourapp.io"
-                    className="mt-1 bg-background/50"
-                  />
-                </div>
-              </div>
-              <div>
-                <Label htmlFor="saas-company">Company / Product Name</Label>
-                <Input
-                  id="saas-company"
-                  placeholder="Acme SaaS Inc."
-                  className="mt-1 bg-background/50"
-                />
-              </div>
-              <div>
-                <Label htmlFor="saas-message">Primary Security Concern</Label>
-                <Textarea
-                  id="saas-message"
-                  rows={4}
-                  placeholder="E.g. leaked API keys, source code on paste sites, cloud credential exposure, employee credential compromise..."
-                  className="mt-1 bg-background/50"
-                />
-              </div>
-              <Button type="button" className="hero-button w-full">
-                Request Free Exposure Scan
-              </Button>
-            </form>
+            <LeadForm
+              variant="industry"
+              interest="SaaS & Technology Exposure Scan"
+              submitLabel="Request Free Exposure Scan"
+              fields={[
+                { type: "text", name: "name", id: "saas-name", label: "Full Name *", placeholder: "Alex Smith", required: true, width: "half", bind: "name" },
+                { type: "email", name: "email", id: "saas-email", label: "Business Email *", placeholder: "alex@yourapp.io", required: true, width: "half", bind: "email" },
+                { type: "text", name: "company", id: "saas-company", label: "Company / Product Name", placeholder: "Acme SaaS Inc.", bind: "company" },
+                { type: "textarea", name: "message", id: "saas-message", label: "Primary Security Concern", rows: 4, placeholder: "E.g. leaked API keys, source code on paste sites, cloud credential exposure, employee credential compromise...", bind: "message" },
+              ]}
+            />
           </div>
         </div>
       </section>

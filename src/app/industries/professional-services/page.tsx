@@ -6,10 +6,8 @@ import Breadcrumb from "@/components/Breadcrumb";
 import ComplianceGuideLinks from "@/components/compliance/ComplianceGuideLinks";
 import FinalCTA from "@/components/FinalCTA";
 import ThreatSpherePlaceholder from "@/components/ThreatSpherePlaceholder";
+import LeadForm from "@/components/LeadForm";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
 import JsonLd from "@/components/JsonLd";
 import { serviceSchema, breadcrumbSchema, organizationSchema } from "@/utils/seoSchemas";
 
@@ -147,29 +145,17 @@ export default function Page() {
           </div>
           <div className="rounded-3xl border border-border bg-card/40 p-8 backdrop-blur-md shadow-xl">
             <h3 className="text-xl font-montserrat font-bold text-foreground mb-6">Professional Services Inquiry</h3>
-            <form className="space-y-5">
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <Label htmlFor="ps-name">Full Name *</Label>
-                  <Input id="ps-name" required placeholder="Jane Doe" className="mt-1 bg-background/50" />
-                </div>
-                <div>
-                  <Label htmlFor="ps-email">Work Email *</Label>
-                  <Input id="ps-email" type="email" required placeholder="jane@firm.com" className="mt-1 bg-background/50" />
-                </div>
-              </div>
-              <div>
-                <Label htmlFor="ps-firm">Firm Name</Label>
-                <Input id="ps-firm" placeholder="Your consulting, accounting, or advisory firm" className="mt-1 bg-background/50" />
-              </div>
-              <div>
-                <Label htmlFor="ps-message">Primary Concern</Label>
-                <Textarea id="ps-message" rows={4} placeholder="E.g. partner credential leaks, client data exposure, vendor risks..." className="mt-1 bg-background/50" />
-              </div>
-              <Button type="button" className="hero-button w-full">
-                Request Free Firm Scan
-              </Button>
-            </form>
+            <LeadForm
+              variant="industry"
+              interest="Professional Services Firm Scan"
+              submitLabel="Request Free Firm Scan"
+              fields={[
+                { type: "text", name: "name", id: "ps-name", label: "Full Name *", placeholder: "Jane Doe", required: true, width: "half", bind: "name" },
+                { type: "email", name: "email", id: "ps-email", label: "Work Email *", placeholder: "jane@firm.com", required: true, width: "half", bind: "email" },
+                { type: "text", name: "firm", id: "ps-firm", label: "Firm Name", placeholder: "Your consulting, accounting, or advisory firm", bind: "company" },
+                { type: "textarea", name: "message", id: "ps-message", label: "Primary Concern", rows: 4, placeholder: "E.g. partner credential leaks, client data exposure, vendor risks...", bind: "message" },
+              ]}
+            />
           </div>
         </div>
       </section>

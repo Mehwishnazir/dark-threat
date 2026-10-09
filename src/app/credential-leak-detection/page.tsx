@@ -3,6 +3,8 @@ import { pageSeo } from "@/lib/metadata";
 import Link from "next/link";
 import { Lock, Key, AlertTriangle, Mail, Cookie, ArrowRight, CheckCircle, Shield } from "lucide-react";
 import FinalCTA from "@/components/FinalCTA";
+import LeadForm from "@/components/LeadForm";
+import { assessmentLeadFields } from "@/components/leadFormFields";
 import AvailableInLocations from "@/components/AvailableInLocations";
 
 import JsonLd from "@/components/JsonLd";
@@ -87,79 +89,13 @@ export default function Page() {
                 <span className="text-xs font-semibold uppercase tracking-[0.25em] text-primary">Free Consultation</span>
               </div>
               <h2 className="text-2xl font-montserrat font-bold text-foreground mb-6">Get Your Free Cybersecurity Assessment</h2>
-              <form className="space-y-4">
-                <div className="grid grid-cols-1 gap-4">
-                  <div>
-                    <label className="block text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground mb-2">Full Name *</label>
-                    <input
-                      type="text"
-                      name="name"
-                      required
-                      placeholder="Enter your full name"
-                      className="w-full rounded-xl border border-border/60 bg-background/60 backdrop-blur-sm px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 outline-none transition-all duration-200 focus:border-primary focus:bg-background focus:ring-2 focus:ring-primary/30 hover:border-border"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground mb-2">Work Email *</label>
-                    <input
-                      type="email"
-                      name="email"
-                      required
-                      placeholder="you@company.com"
-                      className="w-full rounded-xl border border-border/60 bg-background/60 backdrop-blur-sm px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 outline-none transition-all duration-200 focus:border-primary focus:bg-background focus:ring-2 focus:ring-primary/30 hover:border-border"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground mb-2">Company Name</label>
-                    <input
-                      type="text"
-                      name="company"
-                      placeholder="Your organization"
-                      className="w-full rounded-xl border border-border/60 bg-background/60 backdrop-blur-sm px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 outline-none transition-all duration-200 focus:border-primary focus:bg-background focus:ring-2 focus:ring-primary/30 hover:border-border"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground mb-2">Phone Number</label>
-                    <input
-                      type="tel"
-                      name="phone"
-                      placeholder="+1 (555) 000-0000"
-                      className="w-full rounded-xl border border-border/60 bg-background/60 backdrop-blur-sm px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 outline-none transition-all duration-200 focus:border-primary focus:bg-background focus:ring-2 focus:ring-primary/30 hover:border-border"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground mb-2">Reason for Contact *</label>
-                    <select
-                      name="interest"
-                      required
-                      className="w-full rounded-xl border border-border/60 bg-background/60 backdrop-blur-sm px-4 py-3 text-sm text-foreground outline-none transition-all duration-200 focus:border-primary focus:bg-background focus:ring-2 focus:ring-primary/30 hover:border-border"
-                    >
-                      <option value="">Select a reason</option>
-                      <option value="General Inquiry">General Inquiry</option>
-                      <option value="Sales Question">Sales Question</option>
-                      <option value="Demo Request">Demo Request</option>
-                      <option value="Technical Support">Technical Support</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label className="block text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground mb-2">How Can We Help? *</label>
-                    <textarea
-                      name="message"
-                      required
-                      rows={3}
-                      placeholder="Describe your security needs or challenges..."
-                      className="w-full rounded-xl border border-border/60 bg-background/60 backdrop-blur-sm px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 outline-none transition-all duration-200 focus:border-primary focus:bg-background focus:ring-2 focus:ring-primary/30 hover:border-border resize-none"
-                    />
-                  </div>
-                </div>
-                <button
-                  type="button"
-                  className="w-full rounded-xl bg-gradient-to-r from-primary to-primary/80 px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition-all duration-200 hover:shadow-primary/40 hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50"
-                >
-                  Request Free Assessment →
-                </button>
-                <p className="text-center text-xs text-muted-foreground/70">By submitting, you agree to our <span className="underline underline-offset-2 hover:text-primary cursor-pointer transition-colors">Privacy Policy</span>.</p>
-              </form>
+              <LeadForm
+                variant="assessment"
+                interest="Credential Leak Detection"
+                submitLabel="Request Free Assessment →"
+                showPrivacyNote
+                fields={assessmentLeadFields("cld")}
+              />
             </div>
           </aside>
         </div>
