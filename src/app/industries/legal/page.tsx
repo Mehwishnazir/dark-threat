@@ -7,9 +7,8 @@ import ComplianceGuideLinks from "@/components/compliance/ComplianceGuideLinks";
 import FinalCTA from "@/components/FinalCTA";
 import ThreatSpherePlaceholder from "@/components/ThreatSpherePlaceholder";
 import LeadForm from "@/components/LeadForm";
-import { Button } from "@/components/ui/button";
-
 import JsonLd from "@/components/JsonLd";
+import { faqPageSchema } from "@/utils/seoSchemas";
 
 export const metadata: Metadata = {
   title: "Law Firm Dark Web Monitoring",
@@ -42,6 +41,45 @@ const steps = [
   { num: '04', title: 'Ethical Compliance Evidence', desc: 'Download structured documentation demonstrating reasonable diligence in safeguarding client confidentiality.' },
 ];
 
+const faqs = [
+  {
+    q: "Does DarkThreat make a law firm compliant with ABA Model Rules 1.1 or 1.6?",
+    a: "No. The Model Rules are professional-conduct rules, and a jurisdiction's adopted version controls. DarkThreat helps a firm notice stolen credentials and leaked files for domains it is asked to watch. The reasonable-efforts judgment stays with the lawyers.",
+  },
+  {
+    q: "Are the ABA Model Rules binding in every state?",
+    a: "No. The ABA publishes model rules. A lawyer is bound by the rules the jurisdiction where the lawyer is admitted has adopted. Those adopted texts can differ from the model.",
+  },
+  {
+    q: "Does every law firm have HIPAA duties?",
+    a: "No. HIPAA business-associate duties apply when a firm creates, receives, maintains, or transmits protected health information for a covered entity or another business associate. A litigation file that never includes that information is outside that rule.",
+  },
+  {
+    q: "Does a DarkThreat alert start a GDPR 72-hour clock?",
+    a: "No. Article 33 runs from when the controller becomes aware of a personal data breach. An alert can be one input. The firm still decides whether a breach occurred and whether notice is required.",
+  },
+  {
+    q: "What can a published plan watch?",
+    a: "The Standard plan is basic breach and credential monitoring for one domain and one user, with email notifications and web UI access. The Enterprise plan adds full domain and hacker chatter feeds, two domains or IPs, and two users. See the pricing page.",
+  },
+];
+
+const sources = [
+  { href: "https://www.americanbar.org/groups/professional_responsibility/publications/model_rules_of_professional_conduct/rule_1_1_competence/comment_on_rule_1_1/", label: "ABA Model Rule 1.1, Comment 8 (technology competence)" },
+  { href: "https://www.americanbar.org/groups/professional_responsibility/publications/model_rules_of_professional_conduct/rule_1_6_confidentiality_of_information/", label: "ABA Model Rule 1.6, Confidentiality of Information" },
+  { href: "https://www.americanbar.org/groups/professional_responsibility/publications/model_rules_of_professional_conduct/rule_1_6_confidentiality_of_information/comment_on_rule_1_6/", label: "ABA Model Rule 1.6, Comment 18" },
+  { href: "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-E/section-164.502", label: "45 CFR 164.502, HIPAA uses and disclosures" },
+  { href: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679", label: "Regulation (EU) 2016/679, the GDPR" },
+  { href: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1798.82", label: "California Civil Code 1798.82, breach disclosure" },
+];
+
+const reading = [
+  { href: "/blog/client-confidentiality-at-risk-law-firm-credential-exposure-on-dark-web", title: "Client Confidentiality at Risk — Law Firm Credential Exposure on Dark Web" },
+  { href: "/blog/how-law-firms-become-dark-web-targets-and-how-to-respond", title: "How Law Firms Become Dark Web Targets — and How to Respond" },
+  { href: "/blog/legal-data-leaks-how-law-firms-detect-privileged-information-exposure", title: "Legal Data Leaks: How Law Firms Detect Privileged Information Exposure" },
+  { href: "/blog/detecting-leaked-legal-documents-and-court-filings", title: "Detecting Leaked Legal Documents and Court Filings" },
+];
+
 export default function Page() {
 
       
@@ -59,7 +97,7 @@ export default function Page() {
   return (
 
     <div className="min-h-screen bg-background">
-      <JsonLd data={schema} />
+      <JsonLd data={[schema, faqPageSchema(faqs)]} />
       
 
       
@@ -73,7 +111,7 @@ export default function Page() {
           <ThreatSpherePlaceholder />
         </div>
         <div className="relative z-10 text-center max-w-5xl mx-auto px-6">
-          <div className="mb-4 inline-flex justify-center">
+          <div className="mb-4 flex justify-center">
             <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Industries', href: '/industries' }, { label: 'Legal' }]} />
           </div>
           <div className="mb-6 inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-semibold text-primary">
@@ -85,11 +123,13 @@ export default function Page() {
           <p className="mx-auto max-w-3xl text-lg text-muted-foreground leading-relaxed">
             Law firms maintain highly sensitive, non-public intellectual property and client communications, making them high-priority targets. DarkThreat continuously monitors the dark web to secure privileged information, attorney credentials, and case files before they are exploited.
           </p>
-          <div className="mt-8 flex flex-wrap gap-4 justify-center">
-            <Button className="hero-button">
+          <div className="mt-8 flex flex-col sm:flex-row flex-wrap gap-4 justify-center items-center">
+            <Link href="#legal-inquiry-form" className="hero-button inline-flex items-center">
               Request Legal Exposure Scan <ArrowRight className="w-4 h-4 ml-2" />
-            </Button>
-            <Link href="/pricing" className="border-primary/30 hover:border-primary">View Pricing</Link>
+            </Link>
+            <Link href="/pricing" className="cta-outline inline-flex items-center justify-center px-8 py-4 min-h-[44px]">
+              View Pricing
+            </Link>
           </div>
         </div>
       </section>
@@ -123,7 +163,7 @@ export default function Page() {
             <span className="inline-flex rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-primary mb-4">Risk Assessment</span>
             <h2 className="text-3xl md:text-4xl font-montserrat font-bold text-foreground mb-4">Request a Confidential Exposure Scan</h2>
             <p className="text-muted-foreground mb-8 leading-relaxed">
-              Find out if your firm's partner credentials or ongoing legal matters have been mentioned in dark web hacker forums, malware logs, or Telegram trade channels.
+              Find out if your firm&apos;s partner credentials or ongoing legal matters have been mentioned in dark web hacker forums, malware logs, or Telegram trade channels.
             </p>
             <ul className="space-y-3 mb-8">
               {['Firm domain & subdomain scan', 'Partner & paralegal credential watch', 'Confidential client document leak search', 'Litigation-related threat intelligence', 'ABA compliance checklist preview'].map(item => (
@@ -216,7 +256,99 @@ export default function Page() {
         </div>
       </section>
 
-      {/* SECTION 7: Final CTA */}
+      <section className="py-24 px-6 bg-background">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="inline-flex rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-primary mb-4">Why this sector</span>
+            <h2 className="text-3xl md:text-4xl font-montserrat font-bold text-foreground mb-4">Why law firms are targeted</h2>
+            <p className="text-lg text-muted-foreground leading-relaxed">A firm file is useful because it is confidential and because it describes a deal, a dispute, or a person. Three patterns show up around that file.</p>
+          </div>
+          <div className="space-y-10 text-muted-foreground leading-relaxed">
+            <div>
+              <h3 className="font-montserrat font-bold text-foreground text-2xl mb-3">Lawyer and staff logins</h3>
+              <p className="mb-6">Email, the document system, and the client portal start with a password. That password often sits in a browser on a laptop that also opens personal mail. Infostealer malware copies the browser. The login can then be tried against the firm without a break of the server room.</p>
+              <p>DarkThreat helps by watching firm domains the firm registers. Access reviews and password resets stay on systems the firm already runs. See <Link href="/blog/client-confidentiality-at-risk-law-firm-credential-exposure-on-dark-web" className="text-primary hover:underline">law firm credential exposure</Link>.</p>
+            </div>
+            <div>
+              <h3 className="font-montserrat font-bold text-foreground text-2xl mb-3">Privileged and deal files</h3>
+              <p className="mb-6">A settlement draft, a board memo, or a set of discovery productions is compact and specific. Once a copy leaves the document system, it can be described on a leak site under the firm or client name. The copy usually starts with a stolen mailbox or a synced folder, not with a dramatic break of the courthouse.</p>
+              <p>DarkThreat helps when a post or a credential matches a domain on the plan. It does not decide privilege, and it does not file anything with a court. Leaked filings are discussed in <Link href="/blog/detecting-leaked-legal-documents-and-court-filings" className="text-primary hover:underline">detecting leaked legal documents</Link>.</p>
+            </div>
+            <div>
+              <h3 className="font-montserrat font-bold text-foreground text-2xl mb-3">Vendors who hold the same matter</h3>
+              <p className="mb-6">Court reporters, e-discovery hosts, and expert firms hold pieces of the same case. A password stolen from a vendor laptop can open a portal the firm issued. DarkThreat can watch a domain the firm is able to register. It cannot see a vendor network the firm does not control. That gap belongs in the engagement letter.</p>
+              <p>Consulting and accounting firms that hold similar client files are covered on the <Link href="/industries/professional-services" className="text-primary hover:underline">professional services page</Link>.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-6 bg-card/20">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-10">
+            <span className="inline-flex rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-primary mb-4">Requirements that apply</span>
+            <h2 className="text-3xl font-montserrat font-bold text-foreground mb-4">ABA Model Rules, HIPAA, and the GDPR</h2>
+            <p className="text-muted-foreground leading-relaxed">These texts apply in defined situations. DarkThreat supports external exposure awareness inside the program the firm already runs. Using DarkThreat does not make a lawyer or a firm compliant.</p>
+          </div>
+          <div className="space-y-8 text-muted-foreground leading-relaxed">
+            <div>
+              <h3 className="font-montserrat font-bold text-foreground text-xl mb-3">ABA Model Rules 1.1 and 1.6</h3>
+              <p className="mb-6">Comment 8 to <a href="https://www.americanbar.org/groups/professional_responsibility/publications/model_rules_of_professional_conduct/rule_1_1_competence/comment_on_rule_1_1/" className="text-primary hover:underline" rel="noopener noreferrer">Model Rule 1.1</a> says that, to maintain competence, a lawyer should keep abreast of changes in the law and its practice, including the benefits and risks associated with relevant technology.</p>
+              <p className="mb-6"><a href="https://www.americanbar.org/groups/professional_responsibility/publications/model_rules_of_professional_conduct/rule_1_6_confidentiality_of_information/" className="text-primary hover:underline" rel="noopener noreferrer">Model Rule 1.6(c)</a> requires a lawyer to make reasonable efforts to prevent the inadvertent or unauthorized disclosure of, or unauthorized access to, information relating to the representation of a client. Comment 18 says unauthorized access is not itself a violation if the lawyer made reasonable efforts. The comment lists factors, including sensitivity, likelihood of disclosure, cost, and difficulty.</p>
+              <p>The model is not the rule in a state until that jurisdiction adopts it, and the adopted text can differ. An external credential or file finding can be one fact in that reasonableness record. DarkThreat does not make the judgment and it does not make a lawyer compliant with Rule 1.1 or Rule 1.6.</p>
+            </div>
+            <div>
+              <h3 className="font-montserrat font-bold text-foreground text-xl mb-3">HIPAA, when the firm is a business associate</h3>
+              <p className="mb-6"><a href="https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-E/section-164.502" className="text-primary hover:underline" rel="noopener noreferrer">45 CFR 164.502</a> limits how a covered entity may use and disclose protected health information. A law firm becomes a business associate when it creates, receives, maintains, or transmits that information for a covered entity or for another business associate. A matter that never includes protected health information is not in that role.</p>
+              <p>DarkThreat helps when credentials or files for a registered domain show up outside the firm. It does not sign a business-associate agreement and it does not make a firm compliant with HIPAA. Health-care clients are also discussed on the <Link href="/industries/healthcare" className="text-primary hover:underline">healthcare page</Link>.</p>
+            </div>
+            <div>
+              <h3 className="font-montserrat font-bold text-foreground text-xl mb-3">GDPR and state breach notice</h3>
+              <p className="mb-6">Article 32 of the <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679" className="text-primary hover:underline" rel="noopener noreferrer">GDPR</a> requires a controller and processor to implement appropriate security. Article 33 requires notice to the supervisory authority without undue delay and, where feasible, within 72 hours of awareness, unless the breach is unlikely to result in a risk to rights and freedoms. The 72 hours run from awareness, not from a vendor email.</p>
+              <p>Where a firm owns or licenses personal information of a California resident, <a href="https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1798.82" className="text-primary hover:underline" rel="noopener noreferrer">Civil Code 1798.82</a> requires disclosure within 30 calendar days of discovery or notification of a breach, with the delay rules in that section. Other states have their own statutes. DarkThreat does not decide that a breach occurred and it does not send the notice.</p>
+              <ComplianceGuideLinks slugs={["gdpr", "hipaa"]} />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-6 bg-background">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl font-montserrat font-bold text-foreground mb-6 text-center">Related reading</h2>
+          <ul className="space-y-3 mb-10">
+            {reading.map((item) => (
+              <li key={item.href}><Link href={item.href} className="text-primary hover:underline">{item.title}</Link></li>
+            ))}
+          </ul>
+          <p className="text-muted-foreground leading-relaxed">Other sector pages: <Link href="/industries/professional-services" className="text-primary hover:underline">professional services</Link>, <Link href="/industries/healthcare" className="text-primary hover:underline">healthcare</Link>, and the <Link href="/industries" className="text-primary hover:underline">industry index</Link>.</p>
+        </div>
+      </section>
+
+      <section className="py-8 px-6">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-4xl font-montserrat font-bold text-foreground text-center mb-10">Frequently Asked Questions</h2>
+          <div className="w-full space-y-3">
+            {faqs.map((f) => (
+              <details key={f.q} className="border border-border rounded-xl px-4">
+                <summary className="text-left font-montserrat font-semibold py-3 cursor-pointer">{f.q}</summary>
+                <p className="text-muted-foreground pb-4">{f.a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 px-6 bg-card/20">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl font-montserrat font-bold text-foreground mb-6 text-center">Sources</h2>
+          <ul className="space-y-3">
+            {sources.map((item) => (
+              <li key={item.href}><a href={item.href} className="text-primary hover:underline" rel="noopener noreferrer">{item.label}</a></li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
       <FinalCTA />
 
       
