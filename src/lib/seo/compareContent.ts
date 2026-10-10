@@ -8,6 +8,29 @@ export type ChecklistItem = { question: string; why: string };
 export type SwitchingNote = { title: string; body: string };
 export type ComparisonFaq = { q: string; a: string };
 
+/**
+ * DarkThreat plan facts for compare pages. Every statement must match /pricing
+ * (PricingPlans and the pricing FAQ); do not add coverage or integration claims.
+ */
+export const DARKTHREAT_OFFERS: { title: string; body: string }[] = [
+  {
+    title: "Published pricing from $288/month",
+    body: "DarkThreat publishes its plans on the pricing page. Plans start at $288/month with monthly or annual billing, and monthly plans can be cancelled anytime.",
+  },
+  {
+    title: "7-day free trial, no credit card",
+    body: "Request a 7-day free trial through our team. No credit card is required to start.",
+  },
+  {
+    title: "Standard and Enterprise plans",
+    body: "The Standard plan covers breach and credential monitoring for 1 domain and 1 user, with email alerts and web UI access. The Enterprise plan adds hacker chatter feeds and a second domain or IP.",
+  },
+  {
+    title: "MSSP white-label plan",
+    body: "Managed security providers can use the MSSP plan, which includes a white-label portal. Contact our team for a quote.",
+  },
+];
+
 export const EVALUATION_CHECKLIST: ChecklistItem[] = [
   {
     question: "Which source types do you cover?",
