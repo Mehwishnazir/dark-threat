@@ -132,7 +132,7 @@ export default function Page() {
           <ThreatSpherePlaceholder />
         </div>
         <div className="relative z-10 text-center max-w-5xl mx-auto px-6">
-          <div className="mb-4 inline-flex justify-center">
+          <div className="mb-4 flex justify-center">
             <Breadcrumb
               items={[
                 { label: 'Home', href: '/' },
@@ -155,10 +155,10 @@ export default function Page() {
           </p>
           <div className="mt-8 flex flex-wrap gap-4 justify-center">
             <Button
-              className="hero-button">
+              className="hero-button h-auto min-h-[44px] text-base">
               Request a Tech Security Scan <ArrowRight className="w-4 h-4 ml-2" />
             </Button>
-            <Link href="/pricing" className="border-primary/30 hover:border-primary">
+            <Link href="/pricing" className="cta-outline inline-flex items-center justify-center gap-2 text-base px-8 py-4 min-h-[44px]">
                 View Pricing
               </Link>
           </div>
