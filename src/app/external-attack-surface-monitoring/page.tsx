@@ -90,7 +90,7 @@ export default function Page() {
               Track your internet-facing digital footprint, shadow IT assets, open ports, cloud exposures, and third-party supply chain vulnerabilities — then correlate that map with dark web intelligence so alerts stay relevant to your real environment.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/contact" className="cta-cyan inline-flex items-center gap-2">Book Demo <ArrowRight className="w-4 h-4" /></Link>
+              <Link href="/contact" className="cta-cyan inline-flex items-center justify-center gap-2 text-base px-8 py-4 min-h-[44px]">Book Demo <ArrowRight className="w-4 h-4" /></Link>
               <Link href="/pricing" className="cta-outline inline-flex items-center gap-2 justify-center">
                 View Pricing
               </Link>
