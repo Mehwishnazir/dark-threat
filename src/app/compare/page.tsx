@@ -10,7 +10,7 @@ import { COMPARE_PAGES } from "@/lib/seo/comparePages";
 export const metadata: Metadata = {
   title: truncateMetaTitle("Compare Dark Web Monitoring Tools"),
   description: truncateMetaDescription(
-    "Compare DarkThreat with DarkOwl, Recorded Future, ZeroFox, Flare, SOCRadar, and Cybersixgill on coverage, pricing, and time-to-value."
+    "Compare DarkThreat with 10 vendors, including Recorded Future, Mandiant, CrowdStrike, SpyCloud and Flashpoint, on dark web coverage, pricing and trials."
   ),
   ...pageSeo("/compare"),
 };
@@ -54,8 +54,8 @@ export default function CompareHubPage() {
             <span className="glow-text">dark web monitoring</span> tools
           </h1>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Side-by-side pages covering coverage, pricing transparency, and time-to-value versus
-            DarkOwl, Recorded Future, ZeroFox, Flare, SOCRadar, and Cybersixgill.
+            Side-by-side pages on coverage, pricing transparency and trial options for 10 vendors: DarkOwl,
+            Recorded Future, ZeroFox, Flare, SOCRadar, Cybersixgill, Mandiant, SpyCloud, Flashpoint and CrowdStrike.
           </p>
         </div>
       </section>

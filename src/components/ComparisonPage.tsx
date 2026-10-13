@@ -17,6 +17,9 @@ export type ComparisonRow = {
   competitor: string | boolean;
 };
 
+export type ComparisonSource = { label: string; url: string };
+export type ComparisonLink = { label: string; href: string };
+
 export type ComparisonPageProps = {
   competitorName: string;
   slug?: string;
@@ -27,12 +30,18 @@ export type ComparisonPageProps = {
   rows: ComparisonRow[];
   pricingNote: string;
   differentiators: { title: string; body: string }[];
+  differentiatorsHeading?: string;
   showBreadcrumb?: boolean;
   showEvaluationChecklist?: boolean;
   showSwitchingNotes?: boolean;
   faqs?: ComparisonFaq[];
   /** ISO date (YYYY-MM-DD). */
   lastReviewed?: string;
+  verificationNote?: string;
+  competitorOverview?: { title: string; body: string }[];
+  betterFit?: string[];
+  sources?: ComparisonSource[];
+  relatedLinks?: ComparisonLink[];
 };
 
 function formatReviewDate(iso: string) {
@@ -62,11 +71,17 @@ export default function ComparisonPage({
   rows,
   pricingNote,
   differentiators,
+  differentiatorsHeading,
   showBreadcrumb = false,
   showEvaluationChecklist = false,
   showSwitchingNotes = false,
   faqs,
   lastReviewed,
+  verificationNote,
+  competitorOverview,
+  betterFit,
+  sources,
+  relatedLinks,
 }: ComparisonPageProps) {
   const pageTitle = title ?? `DarkThreat vs ${competitorName}`;
   const resolvedSlug =
@@ -171,13 +186,32 @@ export default function ComparisonPage({
                 features and pricing change over time; confirm current details with each vendor.
               </p>
             )}
+            {verificationNote && <p className="mt-2 text-sm text-muted-foreground">{verificationNote}</p>}
           </div>
         </section>
+
+        {competitorOverview && competitorOverview.length > 0 && (
+          <section className="px-6 pb-16">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-2xl md:text-3xl font-montserrat font-bold text-foreground mb-8">
+                {competitorName} at a glance
+              </h2>
+              <div className="grid gap-6 md:grid-cols-2">
+                {competitorOverview.map((item) => (
+                  <div key={item.title} className="rounded-2xl border border-border bg-card p-6">
+                    <h3 className="text-lg font-montserrat font-bold text-foreground mb-2">{item.title}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{item.body}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         <section className="px-6 py-16 bg-card/30">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-montserrat font-bold text-foreground mb-8">
-              Why teams choose DarkThreat over {competitorName}
+              {differentiatorsHeading ?? `Why teams choose DarkThreat over ${competitorName}`}
             </h2>
             <div className="grid gap-6 md:grid-cols-2">
               {differentiators.map((d) => (
@@ -189,6 +223,28 @@ export default function ComparisonPage({
             </div>
           </div>
         </section>
+
+        {betterFit && betterFit.length > 0 && (
+          <section className="px-6 py-16">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-2xl md:text-3xl font-montserrat font-bold text-foreground mb-4">
+                Where {competitorName} is the better fit
+              </h2>
+              <p className="text-muted-foreground leading-relaxed mb-6 max-w-3xl">
+                Every tool suits some teams better than others. Based on what {competitorName} publishes about its own
+                products, it may be the stronger choice for:
+              </p>
+              <ul className="space-y-3">
+                {betterFit.map((point) => (
+                  <li key={point} className="flex items-start gap-3 text-sm text-foreground leading-relaxed">
+                    <Check className="w-4 h-4 mt-0.5 shrink-0 text-primary" aria-hidden />
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+        )}
 
         {showEvaluationChecklist && (
           <section className="px-6 py-16">
@@ -265,6 +321,46 @@ export default function ComparisonPage({
                   </details>
                 ))}
               </div>
+            </div>
+          </section>
+        )}
+
+        {((sources && sources.length > 0) || (relatedLinks && relatedLinks.length > 0)) && (
+          <section className="px-6 py-16">
+            <div className="max-w-5xl mx-auto grid gap-10 md:grid-cols-2">
+              {sources && sources.length > 0 && (
+                <div>
+                  <h2 className="text-xl font-montserrat font-bold text-foreground mb-4">Sources</h2>
+                  <ul className="space-y-2 text-sm">
+                    {sources.map((s) => (
+                      <li key={s.url}>
+                        <a
+                          href={s.url}
+                          target="_blank"
+                          rel="nofollow noopener noreferrer"
+                          className="text-primary hover:underline break-words"
+                        >
+                          {s.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+              {relatedLinks && relatedLinks.length > 0 && (
+                <div>
+                  <h2 className="text-xl font-montserrat font-bold text-foreground mb-4">Related reading</h2>
+                  <ul className="space-y-2 text-sm">
+                    {relatedLinks.map((l) => (
+                      <li key={l.href}>
+                        <Link href={l.href} className="text-primary hover:underline">
+                          {l.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
           </section>
         )}

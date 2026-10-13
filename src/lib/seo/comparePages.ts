@@ -49,6 +49,34 @@ export const COMPARE_PAGES: ComparePageMeta[] = [
     competitor: "Cybersixgill",
     summary: "Faster onboarding and transparent plans versus deep/dark web collection built for large SOC teams.",
   },
+  {
+    slug: "darkthreat-vs-mandiant",
+    href: "/compare/darkthreat-vs-mandiant",
+    name: "DarkThreat vs Mandiant",
+    competitor: "Mandiant",
+    summary: "DarkThreat plans and trial terms alongside Google Threat Intelligence and Mandiant Digital Threat Monitoring.",
+  },
+  {
+    slug: "darkthreat-vs-spycloud",
+    href: "/compare/darkthreat-vs-spycloud",
+    name: "DarkThreat vs SpyCloud",
+    competitor: "SpyCloud",
+    summary: "DarkThreat plans and trial terms alongside SpyCloud's identity threat protection built on recaptured data.",
+  },
+  {
+    slug: "darkthreat-vs-flashpoint",
+    href: "/compare/darkthreat-vs-flashpoint",
+    name: "DarkThreat vs Flashpoint",
+    competitor: "Flashpoint",
+    summary: "DarkThreat plans and trial terms alongside Flashpoint Ignite's cyber, vulnerability and physical security intelligence.",
+  },
+  {
+    slug: "darkthreat-vs-crowdstrike",
+    href: "/compare/darkthreat-vs-crowdstrike",
+    name: "DarkThreat vs CrowdStrike",
+    competitor: "CrowdStrike",
+    summary: "DarkThreat plans and trial terms alongside CrowdStrike Falcon Adversary Intelligence and its Recon feature.",
+  },
 ];
 
 export function otherComparePages(currentSlug: string): ComparePageMeta[] {
