@@ -65,7 +65,7 @@ export default function Page() {
           <p className="text-lg md:text-xl text-muted-foreground mb-8">
             Transparent pricing, a 7-day free trial with no credit card required, and AI-curated alerts.
           </p>
-          <Link href="/contact" className="cta-cyan inline-flex items-center gap-2">Book Demo <ArrowRight className="w-4 h-4" /></Link>
+          <Link href="/contact" className="cta-cyan inline-flex items-center justify-center gap-2 text-base px-8 py-4 min-h-[44px]">Book Demo <ArrowRight className="w-4 h-4" /></Link>
         </div>
       </section>
 
