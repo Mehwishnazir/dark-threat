@@ -174,7 +174,7 @@ export default function Page() {
           <ThreatSpherePlaceholder />
         </div>
         <div className="relative z-10 text-center max-w-5xl mx-auto px-6">
-          <div className="mb-4 inline-flex justify-center">
+          <div className="mb-4 flex justify-center">
             <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Industries' }]} />
           </div>
           <div className="mb-6 inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-semibold text-primary">

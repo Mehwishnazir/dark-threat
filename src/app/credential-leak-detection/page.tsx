@@ -74,8 +74,8 @@ export default function Page() {
               DarkThreat detects leaked usernames, passwords, API keys, and session tokens across breach dumps, paste sites, public repos, and stealer logs so you can shut down account takeover before it begins.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/contact" className="cta-cyan inline-flex items-center gap-2">Book Demo <ArrowRight className="w-4 h-4" /></Link>
-              <Link href="/pricing" className="cta-outline inline-flex items-center gap-2 justify-center">
+              <Link href="/contact" className="cta-cyan inline-flex items-center justify-center gap-2 text-base px-8 py-4 min-h-[44px]">Book Demo <ArrowRight className="w-4 h-4" /></Link>
+              <Link href="/pricing" className="cta-outline inline-flex items-center justify-center gap-2 text-base px-8 py-4 min-h-[44px]">
                 View Pricing
               </Link>
             </div>
