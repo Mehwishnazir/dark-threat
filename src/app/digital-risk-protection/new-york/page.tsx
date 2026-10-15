@@ -9,7 +9,7 @@ import ThreatSpherePlaceholder from "@/components/ThreatSpherePlaceholder";
 import JsonLd from "@/components/JsonLd";
 import { serviceSchema, breadcrumbSchema, organizationSchema } from "@/utils/seoSchemas";
 
-const PAGE_DESCRIPTION = "Digital risk protection for New York State organizations outside NYC: brand impersonation, phishing domains and executive exposure for healthcare, education, manufacturing and local government.";
+const PAGE_DESCRIPTION = "New York digital risk protection outside NYC: brand impersonation, phishing domains, executive exposure: healthcare, education, manufacturing, government.";
 
 export const metadata: Metadata = {
   title: "Digital Risk Protection in New York",

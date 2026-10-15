@@ -6,9 +6,9 @@ import { Shield, Twitter, Linkedin, Github } from "lucide-react";
 export default function SiteFooter() {
   return (
     <footer className="relative bg-card border-t border-border py-12 z-10">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-6 gap-8">
-          <div className="md:col-span-2">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-10 lg:grid-cols-4">
+          <div className="col-span-2 lg:col-span-4">
             <div className="flex items-center space-x-2 mb-4">
               <Shield className="w-8 h-8 text-primary" />
               <span className="text-xl font-montserrat font-bold text-foreground">DarkThreat</span>
@@ -90,6 +90,21 @@ export default function SiteFooter() {
               <li>
                 <Link href="/locations" className="text-muted-foreground hover:text-primary">
                   Locations
+                </Link>
+              </li>
+              <li>
+                <Link href="/managed-soc-support" className="text-muted-foreground hover:text-primary">
+                  Managed SOC Support
+                </Link>
+              </li>
+              <li>
+                <Link href="/advanced-threat-search" className="text-muted-foreground hover:text-primary">
+                  Advanced Threat Search
+                </Link>
+              </li>
+              <li>
+                <Link href="/external-attack-surface-monitoring" className="text-muted-foreground hover:text-primary">
+                  External Attack Surface Monitoring
                 </Link>
               </li>
             </ul>
@@ -190,6 +205,211 @@ export default function SiteFooter() {
               <li>
                 <Link href="/contact" className="text-muted-foreground hover:text-primary">
                   Support
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="font-montserrat font-semibold text-foreground mb-4">Industries</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/industries" className="text-muted-foreground hover:text-primary">
+                  All Industries
+                </Link>
+              </li>
+              <li>
+                <Link href="/industries/financial-services" className="text-muted-foreground hover:text-primary">
+                  Financial Services
+                </Link>
+              </li>
+              <li>
+                <Link href="/industries/healthcare" className="text-muted-foreground hover:text-primary">
+                  Healthcare
+                </Link>
+              </li>
+              <li>
+                <Link href="/industries/legal" className="text-muted-foreground hover:text-primary">
+                  Legal
+                </Link>
+              </li>
+              <li>
+                <Link href="/industries/professional-services" className="text-muted-foreground hover:text-primary">
+                  Professional Services
+                </Link>
+              </li>
+              <li>
+                <Link href="/industries/manufacturing" className="text-muted-foreground hover:text-primary">
+                  Manufacturing
+                </Link>
+              </li>
+              <li>
+                <Link href="/industries/insurance" className="text-muted-foreground hover:text-primary">
+                  Insurance
+                </Link>
+              </li>
+              <li>
+                <Link href="/industries/energy-utilities" className="text-muted-foreground hover:text-primary">
+                  Energy & Utilities
+                </Link>
+              </li>
+              <li>
+                <Link href="/industries/msp-mssp" className="text-muted-foreground hover:text-primary">
+                  MSP and MSSP
+                </Link>
+              </li>
+              <li>
+                <Link href="/industries/telecommunications" className="text-muted-foreground hover:text-primary">
+                  Telecommunications
+                </Link>
+              </li>
+              <li>
+                <Link href="/industries/hospitality" className="text-muted-foreground hover:text-primary">
+                  Hospitality
+                </Link>
+              </li>
+              <li>
+                <Link href="/industries/government" className="text-muted-foreground hover:text-primary">
+                  Government
+                </Link>
+              </li>
+              <li>
+                <Link href="/industries/ecommerce" className="text-muted-foreground hover:text-primary">
+                  E-Commerce & Retail
+                </Link>
+              </li>
+              <li>
+                <Link href="/industries/saas-technology" className="text-muted-foreground hover:text-primary">
+                  SaaS & Technology
+                </Link>
+              </li>
+              <li>
+                <Link href="/industries/education" className="text-muted-foreground hover:text-primary">
+                  Education
+                </Link>
+              </li>
+              <li>
+                <Link href="/industries/crypto-fintech" className="text-muted-foreground hover:text-primary">
+                  Crypto & Fintech
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="font-montserrat font-semibold text-foreground mb-4">Compare</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/compare" className="text-muted-foreground hover:text-primary">
+                  Compare
+                </Link>
+              </li>
+              <li>
+                <Link href="/compare/darkthreat-vs-darkowl" className="text-muted-foreground hover:text-primary">
+                  DarkThreat vs DarkOwl
+                </Link>
+              </li>
+              <li>
+                <Link href="/compare/darkthreat-vs-recorded-future" className="text-muted-foreground hover:text-primary">
+                  DarkThreat vs Recorded Future
+                </Link>
+              </li>
+              <li>
+                <Link href="/compare/darkthreat-vs-zerofox" className="text-muted-foreground hover:text-primary">
+                  DarkThreat vs ZeroFox
+                </Link>
+              </li>
+              <li>
+                <Link href="/compare/darkthreat-vs-flare" className="text-muted-foreground hover:text-primary">
+                  DarkThreat vs Flare
+                </Link>
+              </li>
+              <li>
+                <Link href="/compare/darkthreat-vs-socradar" className="text-muted-foreground hover:text-primary">
+                  DarkThreat vs SOCRadar
+                </Link>
+              </li>
+              <li>
+                <Link href="/compare/darkthreat-vs-cybersixgill" className="text-muted-foreground hover:text-primary">
+                  DarkThreat vs Cybersixgill
+                </Link>
+              </li>
+              <li>
+                <Link href="/compare/darkthreat-vs-mandiant" className="text-muted-foreground hover:text-primary">
+                  DarkThreat vs Mandiant
+                </Link>
+              </li>
+              <li>
+                <Link href="/compare/darkthreat-vs-spycloud" className="text-muted-foreground hover:text-primary">
+                  DarkThreat vs SpyCloud
+                </Link>
+              </li>
+              <li>
+                <Link href="/compare/darkthreat-vs-flashpoint" className="text-muted-foreground hover:text-primary">
+                  DarkThreat vs Flashpoint
+                </Link>
+              </li>
+              <li>
+                <Link href="/compare/darkthreat-vs-crowdstrike" className="text-muted-foreground hover:text-primary">
+                  DarkThreat vs CrowdStrike
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="font-montserrat font-semibold text-foreground mb-4">Locations</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/locations" className="text-muted-foreground hover:text-primary">
+                  Locations
+                </Link>
+              </li>
+              <li>
+                <Link href="/dark-web-monitoring/new-york-city" className="text-muted-foreground hover:text-primary">
+                  New York City
+                </Link>
+              </li>
+              <li>
+                <Link href="/digital-risk-protection/new-york" className="text-muted-foreground hover:text-primary">
+                  New York
+                </Link>
+              </li>
+              <li>
+                <Link href="/threat-intelligence/washington-dc" className="text-muted-foreground hover:text-primary">
+                  Washington DC
+                </Link>
+              </li>
+              <li>
+                <Link href="/executive-monitoring/boston" className="text-muted-foreground hover:text-primary">
+                  Boston
+                </Link>
+              </li>
+              <li>
+                <Link href="/dark-web-monitoring/chicago" className="text-muted-foreground hover:text-primary">
+                  Chicago
+                </Link>
+              </li>
+              <li>
+                <Link href="/credential-monitoring/san-francisco" className="text-muted-foreground hover:text-primary">
+                  San Francisco
+                </Link>
+              </li>
+              <li>
+                <Link href="/brand-monitoring/los-angeles" className="text-muted-foreground hover:text-primary">
+                  Los Angeles
+                </Link>
+              </li>
+              <li>
+                <Link href="/data-breach-monitoring/california" className="text-muted-foreground hover:text-primary">
+                  California
+                </Link>
+              </li>
+              <li>
+                <Link href="/attack-surface-monitoring/texas" className="text-muted-foreground hover:text-primary">
+                  Texas
+                </Link>
+              </li>
+              <li>
+                <Link href="/domain-monitoring/austin" className="text-muted-foreground hover:text-primary">
+                  Austin
                 </Link>
               </li>
             </ul>

@@ -9,7 +9,7 @@ import ThreatSpherePlaceholder from "@/components/ThreatSpherePlaceholder";
 import JsonLd from "@/components/JsonLd";
 import { serviceSchema, breadcrumbSchema, organizationSchema } from "@/utils/seoSchemas";
 
-const PAGE_DESCRIPTION = "Attack surface monitoring for Texas organizations, with a plain-English guide to Business & Commerce Code 521.052, 521.053 and the Texas Data Privacy and Security Act.";
+const PAGE_DESCRIPTION = "Attack surface monitoring for Texas organizations, with a guide to Business & Commerce Code 521.052, 521.053 and the Texas Data Privacy and Security Act.";
 
 export const metadata: Metadata = {
   title: "Attack Surface Monitoring in Texas",

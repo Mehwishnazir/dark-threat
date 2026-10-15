@@ -9,7 +9,7 @@ import ThreatSpherePlaceholder from "@/components/ThreatSpherePlaceholder";
 import JsonLd from "@/components/JsonLd";
 import { serviceSchema, breadcrumbSchema, organizationSchema } from "@/utils/seoSchemas";
 
-const PAGE_DESCRIPTION = "Domain monitoring for Austin tech companies and startups: lookalike and typosquatted domains, phishing kits and leaked credentials, plus Texas online impersonation law.";
+const PAGE_DESCRIPTION = "Domain monitoring for Austin tech companies, startups: lookalike and typosquatted domains, phishing kits and leaked credentials, & Texas impersonation law.";
 
 export const metadata: Metadata = {
   title: "Domain Monitoring in Austin",
