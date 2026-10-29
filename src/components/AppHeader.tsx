@@ -35,6 +35,12 @@ const industryLinks = [
   { to: "/industries/government", label: "Government", icon: Building2 },
   { to: "/industries/ecommerce", label: "E-Commerce & Retail", icon: Building2 },
   { to: "/industries/saas-technology", label: "SaaS & Technology", icon: Building2 },
+  { to: "/industries/manufacturing", label: "Manufacturing", icon: Building2 },
+  { to: "/industries/insurance", label: "Insurance", icon: Building2 },
+  { to: "/industries/energy-utilities", label: "Energy & Utilities", icon: Building2 },
+  { to: "/industries/msp-mssp", label: "MSP and MSSP", icon: Building2 },
+  { to: "/industries/telecommunications", label: "Telecommunications", icon: Building2 },
+  { to: "/industries/hospitality", label: "Hospitality", icon: Building2 },
 ];
 
 function isActivePath(pathname: string, href: string, exact = false) {

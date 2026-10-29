@@ -33,6 +33,12 @@ const industryLinks = [
   { to: "/industries/government", label: "Government" },
   { to: "/industries/ecommerce", label: "E-Commerce & Retail" },
   { to: "/industries/saas-technology", label: "SaaS & Technology" },
+  { to: "/industries/manufacturing", label: "Manufacturing" },
+  { to: "/industries/insurance", label: "Insurance" },
+  { to: "/industries/energy-utilities", label: "Energy & Utilities" },
+  { to: "/industries/msp-mssp", label: "MSP and MSSP" },
+  { to: "/industries/telecommunications", label: "Telecommunications" },
+  { to: "/industries/hospitality", label: "Hospitality" },
 ];
 
 function isActivePath(pathname: string, href: string, exact = false) {
@@ -47,13 +53,14 @@ interface SectionProps {
 }
 
 function NavSection({ label, links, onClose }: SectionProps) {
-  const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const hasActive = links.some((item) => isActivePath(pathname, item.to, item.to === "/industries"));
-
-  useEffect(() => {
+  const [open, setOpen] = useState(hasActive);
+  const [trackedActive, setTrackedActive] = useState(hasActive);
+  if (hasActive !== trackedActive) {
+    setTrackedActive(hasActive);
     if (hasActive) setOpen(true);
-  }, [hasActive]);
+  }
 
   return (
     <div className="border-b border-border/40 last:border-0">
@@ -72,7 +79,7 @@ function NavSection({ label, links, onClose }: SectionProps) {
 
       <div
         className={`overflow-hidden transition-all duration-300 ${
-          open ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"
+          open ? "max-h-[800px] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
         <div className="pb-3 px-2">
@@ -103,6 +110,11 @@ function NavSection({ label, links, onClose }: SectionProps) {
 export default function MobileNav() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
+  const [trackedPath, setTrackedPath] = useState(pathname);
+  if (pathname !== trackedPath) {
+    setTrackedPath(pathname);
+    setOpen(false);
+  }
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
@@ -110,10 +122,6 @@ export default function MobileNav() {
       document.body.style.overflow = "";
     };
   }, [open]);
-
-  useEffect(() => {
-    setOpen(false);
-  }, [pathname]);
 
   const close = () => setOpen(false);
 
