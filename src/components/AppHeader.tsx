@@ -35,6 +35,12 @@ const industryLinks = [
   { to: "/industries/government", label: "Government", icon: Building2 },
   { to: "/industries/ecommerce", label: "E-Commerce & Retail", icon: Building2 },
   { to: "/industries/saas-technology", label: "SaaS & Technology", icon: Building2 },
+  { to: "/industries/manufacturing", label: "Manufacturing", icon: Building2 },
+  { to: "/industries/insurance", label: "Insurance", icon: Building2 },
+  { to: "/industries/energy-utilities", label: "Energy & Utilities", icon: Building2 },
+  { to: "/industries/msp-mssp", label: "MSP and MSSP", icon: Building2 },
+  { to: "/industries/telecommunications", label: "Telecommunications", icon: Building2 },
+  { to: "/industries/hospitality", label: "Hospitality", icon: Building2 },
 ];
 
 function isActivePath(pathname: string, href: string, exact = false) {
@@ -50,14 +56,20 @@ function navLinkClass(isActive: boolean) {
 
 function DropdownMenu({
   links,
+  scrollable = false,
 }: {
   links: { to: string; label: string; icon: LucideIcon }[];
+  scrollable?: boolean;
 }) {
   const pathname = usePathname();
 
   return (
     <NavigationMenuContent className=" ">
-      <div className="w-64 p-2 flex flex-col gap-y-1">
+      <div
+        className={`w-64 p-2 flex flex-col gap-y-1${
+          scrollable ? " max-h-[calc(100dvh-5rem)] overflow-y-auto" : ""
+        }`}
+      >
         {links.map(({ to, label, icon: Icon }) => {
           const active = isActivePath(pathname, to);
           return (
@@ -122,7 +134,7 @@ export default function AppHeader() {
 
                 <NavigationMenuItem>
                   <NavigationMenuTrigger className={triggerClass}>Industries</NavigationMenuTrigger>
-                  <DropdownMenu links={industryLinks} />
+                  <DropdownMenu links={industryLinks} scrollable />
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
